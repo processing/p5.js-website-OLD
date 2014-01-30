@@ -1,32 +1,31 @@
 // touch events are very similar to mouse events
 
-var setup = function() {
+function setup() {
   createGraphics(1000, 1600); // set to fit a standard-ish smartphone
   noStroke();
   fill(255, 255, 255);
   background(200, 190, 190);
-};
+}
 
-var draw = function() {
+function draw() {
   // keeps program looping even though it is empty
-};
+}
 
 // define functions used for both touch and mouse
-var drawGreen = function(x, y) {
+function drawGreen(x, y) {
   fill(0, 255, 0);
   ellipse(x, y, 80, 80);
-};
+}
 
-
-var drawRed = function(x, y) {
+function drawRed(x, y) {
   fill(255, 0, 0);
   ellipse(x, y, 80, 80);
-};
+}
 
-var drawBlue = function(x, y) {
+function drawBlue(x, y) {
   fill(0, 0, 255);
   ellipse(x, y, 80, 80);
-};
+}
 
 // hook functions up to touches
 var touchStarted = mousePressed = function() {

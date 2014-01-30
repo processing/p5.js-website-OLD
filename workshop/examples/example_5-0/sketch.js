@@ -1,25 +1,21 @@
+// touch events are very similar to mouse events
 
-// Render two images, sourced locally and externally
-
-var img1;
-var img2;
+var red = 0;
 
 function setup() {
-
-    createGraphics(600, 600);
-    img1 = loadImage("cat.jpg"); // "local" image
-    img2 = loadImage("http://fc06.deviantart.net/fs71/f/2013/023/0/9/fish_png_by_heidyy12-d5sg0z8.png"); // image at another location
-    //img2 = loadImage("http://upload.wikimedia.org/wikipedia/commons/4/4e/Pleiades_large.jpg"); // very large files are slower to load
-    // imageMode(CENTER);
+  createGraphics(1000, 1600); // set to fit a standard-ish smartphone
+  noStroke();
+  fill(255, 255, 255);
 }
 
-
 function draw() {
+  background(red, 0, 255);
+  rect(300, 200, 200, 600); // simulated button
 
-    // First image as background
-    image(img1, 0, 0, width, height);
-
-    // Second image following mouse
-    image(img2, mouseX, mouseY);   // transparent .pngs work, too
+  if((touchX > 300) && (touchX < 500) && (touchY > 200) && (touchY < 800)){ // if touch inside rectangle
+    red = 255;
+  } else {
+    red = 0;
+  }
 
 }
