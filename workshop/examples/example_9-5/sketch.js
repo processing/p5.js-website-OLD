@@ -5,7 +5,7 @@
 var canvas0;
 var canvas1;
 
-var setup = function() {
+function setup() {
 
   // We are still calling createGraphics like before, but now we are storing a pointer to each one.
   canvas0 = createGraphics(200, 200);
@@ -15,10 +15,9 @@ var setup = function() {
   // Use view-source to look at the HTML generated from this code when you load the sketch in your browser.
   canvas0.position(50, 50);
   canvas1.position(300, 50);
-};
+}
 
-
-var draw = function() {
+function draw() {
 
   // Tell the program to draw into canvas0.
   context(canvas0);
@@ -37,4 +36,4 @@ var draw = function() {
   // Tell the program to switch back to drawing into canvas0.
   // context(canvas0);
   // line(0, 0, width, height);
-};
+}

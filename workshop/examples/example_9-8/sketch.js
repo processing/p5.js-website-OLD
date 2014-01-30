@@ -1,7 +1,7 @@
 // Creating other HTML elements, adding style.
 
 
-var setup = function() {
+function setup() {
 
 
   // We are still calling createGraphics like in the past, but now we are storing the result as a variable.
@@ -25,7 +25,7 @@ var setup = function() {
 };
 
 
-var draw = function() {
+function draw() {
 
   // These commands are applied to whichever element was most recently created.
   background(220, 180, 200);

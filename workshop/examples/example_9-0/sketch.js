@@ -1,7 +1,7 @@
 // Creating other HTML elements.
 
 
-var setup = function() {
+function setup() {
 
 
   // We are still calling createGraphics like in the past, but now we are storing the result as a variable.
@@ -21,14 +21,14 @@ var setup = function() {
   canvas.position(300, 50);
   canvas.class("lemon");
 
-};
+}
 
 
-var draw = function() {
+function draw() {
 
   // These commands are applied to whichever element was most recently created.
   background(220, 180, 200);
   ellipse(width/2, height/2, 100, 100);
   ellipse(width/4, height/2, 50, 50);
 
-};
+}

@@ -5,7 +5,7 @@ var canvas0;
 var canvas1;
 var canvas2;
 
-var setup = function() {
+function setup() {
 
   // We are still calling createGraphics like before, but now we are storing a pointer to each one.
   canvas0 = createGraphics(200, 200);
@@ -24,7 +24,7 @@ var setup = function() {
 };
 
 
-var draw = function() {
+function draw() {
 
   // Tell the program to draw into canvas0.
   context(canvas0);
@@ -58,7 +58,7 @@ var drawRectCanvas = function() {
 
 
 // On key press, hide all elements with class donkey.
-var keyPressed = function() {
+function keyPressed() {
   var donkeys = find('donkey');
   for (var i=0; i<donkeys.length; i++) {
     donkeys[i].hide();

@@ -12,7 +12,6 @@ function draw() {
   ellipse(100, 100, funkySize(100), funkySize(100)); // funkySize(100) evaluates to a number just like random(0, 100) does
   ellipse(200, 200, funkySize(200), funkySize(200));
   ellipse(300, 300, funkySize(300), funkySize(300));
-
 }
 
 // This function takes a parameter, n, that it uses in some calculations

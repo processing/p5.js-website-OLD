@@ -4,7 +4,7 @@
 var img;
 var canvas;
 
-var setup = function() {
+function setup() {
 
   // We are still calling createGraphics like before, but now we are storing a pointer to each one.
   canvas = createGraphics(400, 400);
@@ -18,10 +18,10 @@ var setup = function() {
   img.mousePressed(uniHide);
 
   canvas.position(300, 50);
-};
+}
 
 
-var draw = function() {
+function draw() {
 
   // Tell program to draw into canvas since img was last created element.
   context(canvas);
@@ -34,18 +34,18 @@ var draw = function() {
     line(i, 0, i, height);
   }
 
-};
+}
 
 // Create functions for hiding and showing uni image. These will be hooked into mouse events related to canvas above.
-var uniHide = function() {
+function uniHide() {
   img.hide();
-};
+}
 
-var uniShow = function() {
+function uniShow() {
   img.show();
-};
+}
 
 // Define keyPressed behavior. This one doesn't need to be hooked in, it's automatically called on key press.
-var keyPressed = function() {
+function keyPressed() {
   uniShow();
-};
+}

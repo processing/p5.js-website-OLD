@@ -5,7 +5,7 @@
 var img;
 var canvas;
 
-var setup = function() {
+function setup() {
 
   // We are still calling createGraphics like before, but now we are storing a pointer to each one.
   canvas = createGraphics(400, 400);
@@ -17,10 +17,10 @@ var setup = function() {
   img.size(200, AUTO);
 
   canvas.position(300, 50);
-};
+}
 
 
-var draw = function() {
+function draw() {
 
   // Tell program to draw into canvas since img was last created element.
   context(canvas);
@@ -33,4 +33,4 @@ var draw = function() {
     line(i, 0, i, height);
   }
 
-};
+}

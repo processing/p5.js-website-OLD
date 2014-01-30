@@ -5,7 +5,7 @@
 var img;
 var canvas;
 
-var setup = function() {
+function setup() {
 
   // We are still calling createGraphics like before, but now we are storing a pointer to each one.
   canvas = createGraphics(400, 400);
@@ -23,7 +23,7 @@ var setup = function() {
 };
 
 
-var draw = function() {
+function draw() {
 
   // Tell program to draw into canvas since img was last created element.
   context(canvas);
@@ -39,10 +39,11 @@ var draw = function() {
 };
 
 // Create functions for hiding and showing uni image. These will be hooked into mouse events related to canvas above.
-var uniHide = function() {
+function uniHide() {
   img.hide();
-};
+}
 
-var uniShow = function() {
+function uniShow() {
   img.show();
-};
+}
+

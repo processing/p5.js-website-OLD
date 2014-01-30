@@ -18,7 +18,6 @@ function draw() {
 		x++; // add 1 to x
 	}
 	rect(x, 240, 120, 120); // draw a rectangle
-
 }
 
 // Compare to if you change to keyPressed()??
