@@ -9,7 +9,7 @@
  * Adapted by Evelyn Eastmond
  */
 
-function setup()) {          // **change** void setup() to var setup = function()
+function setup() {           // **change** void setup() to var setup = function()
   createGraphics(640, 360);  // **change** size() to createGraphics()
   stroke(255);               // stroke() is the same
   noFill();                  // noFill() is the same

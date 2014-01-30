@@ -95,11 +95,13 @@ body {
   width: 480px;
   float: left;
   margin-right: 24px;
+  margin-bottom: 40px;
 }
 
 #right {
   width: 480px;
   float:left;
+  margin-bottom: 40px;
 }
 
 
