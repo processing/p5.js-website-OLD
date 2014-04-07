@@ -6,20 +6,398 @@
         "url": ""
     },
     "files": {
-        
+        "../src/color/setting.js": {
+            "name": "../src/color/setting.js",
+            "modules": {
+                "color": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/core/core.js": {
+            "name": "../src/core/core.js",
+            "modules": {
+                "core": 1
+            },
+            "classes": {
+                "p5": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/image/filters.js": {
+            "name": "../src/image/filters.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/image/image.js": {
+            "name": "../src/image/image.js",
+            "modules": {
+                "image": 1
+            },
+            "classes": {
+                "PImage": 1
+            },
+            "fors": {
+                "p5": 1,
+                "PImage": 1
+            },
+            "namespaces": {}
+        },
+        "../src/input/mouse.js": {
+            "name": "../src/input/mouse.js",
+            "modules": {
+                "mouse": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/input/touch.js": {
+            "name": "../src/input/touch.js",
+            "modules": {
+                "touch": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
+        "../src/math/noise.js": {
+            "name": "../src/math/noise.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/math/pvector.js": {
+            "name": "../src/math/pvector.js",
+            "modules": {
+                "pvector": 1
+            },
+            "classes": {
+                "PVector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/math/random.js": {
+            "name": "../src/math/random.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/shape/2d_primitives.js": {
+            "name": "../src/shape/2d_primitives.js",
+            "modules": {
+                "2d_primitives": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/shape/curves.js": {
+            "name": "../src/shape/curves.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/var/canvas.js": {
+            "name": "../src/var/canvas.js",
+            "modules": {
+                "canvas": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/var/constants.js": {
+            "name": "../src/var/constants.js",
+            "modules": {
+                "constants": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
+        "../src/var/shim.js": {
+            "name": "../src/var/shim.js",
+            "modules": {
+                "shim": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "../src/p5.js": {
+            "name": "../src/p5.js",
+            "modules": {
+                "p5": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
     },
     "modules": {
-        
+        "color": {
+            "name": "color",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/color/setting.js",
+            "line": 1
+        },
+        "core": {
+            "name": "core",
+            "submodules": {},
+            "classes": {
+                "p5": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/core/core.js",
+            "line": 17,
+            "requires": [
+                "shim",
+                "constants"
+            ]
+        },
+        "image": {
+            "name": "image",
+            "submodules": {},
+            "classes": {
+                "PImage": 1
+            },
+            "fors": {
+                "p5": 1,
+                "PImage": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/image/image.js",
+            "line": 126,
+            "requires": [
+                "core",
+                "canvas",
+                "constants",
+                "filters"
+            ]
+        },
+        "mouse": {
+            "name": "mouse",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/input/mouse.js",
+            "line": 1,
+            "requires": [
+                "core",
+                "constants"
+            ]
+        },
+        "touch": {
+            "name": "touch",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/input/touch.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
+        },
+        "pvector": {
+            "name": "pvector",
+            "submodules": {},
+            "classes": {
+                "PVector": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/math/pvector.js",
+            "line": 8
+        },
+        "2d_primitives": {
+            "name": "2d_primitives",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/shape/2d_primitives.js",
+            "line": 1,
+            "description": "Provides methods to draw 2d primitives."
+        },
+        "canvas": {
+            "name": "canvas",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/var/canvas.js",
+            "line": 1,
+            "requires": [
+                "constants"
+            ]
+        },
+        "constants": {
+            "name": "constants",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/var/constants.js",
+            "line": 1
+        },
+        "shim": {
+            "name": "shim",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/var/shim.js",
+            "line": 1
+        },
+        "p5": {
+            "name": "p5",
+            "submodules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "../src/p5.js",
+            "line": 1
+        }
     },
     "classes": {
+        "p5": {
+            "name": "p5",
+            "shortname": "p5",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "core",
+            "namespace": "",
+            "file": "../src/core/core.js",
+            "line": 17,
+            "description": "The p5 constructor function. If the user has created a global setup function, assume \"beginner mode\" and make everything global.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "node",
+                    "description": "The canvas element. A canvas will be added to the DOM if not provided.",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "sketch",
+                    "description": "The sketch object.",
+                    "type": "Object",
+                    "optional": true
+                }
+            ]
+        },
+        "PImage": {
+            "name": "PImage",
+            "shortname": "PImage",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "image",
+            "namespace": "",
+            "file": "../src/image/image.js",
+            "line": 126,
+            "description": "Creates a new PImage. A PImage is a canvas backed representation of an image.\np5 can display .gif, .jpg and .png images. Images may be displayed in 2D and 3D space. Before an image is used, it must be loaded with the loadImage() function. The PImage class contains fields for the width and height of the image, as well as an array called pixels[] that contains the values for every pixel in the image. The methods described below allow easy access to the image's pixels and alpha channel and simplify the process of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on the image to make sure that the pixel data is properly loaded.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "width",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "pInst",
+                    "description": "An instance of a p5 sketch.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "PVector": {
+            "name": "PVector",
+            "shortname": "PVector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pvector",
+            "namespace": "",
+            "file": "../src/math/pvector.js",
+            "line": 8,
+            "description": "A class to describe a two or three dimensional vector, specifically a Euclidean (also known as geometric) vector. A vector is an entity that has both magnitude and direction. The datatype, however, stores the components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude and direction can be accessed via the methods mag() and heading().\n\nIn many of the Processing examples, you will see PVector used to describe a position, velocity, or acceleration. For example, if you consider a rectangle moving across the screen, at any given instant it has a position (a vector that points from the origin to its location), a velocity (the rate at which the object's position changes per time unit, expressed as a vector), and acceleration (the rate at which the object's velocity changes per time unit, expressed as a vector). Since vectors represent groupings of values, we cannot simply use traditional addition/multiplication/etc. Instead, we'll need to do some \"vector\" math, which is made easy by the methods inside the PVector class.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "x",
+                    "description": "The x component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "The y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "The z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ]
+        }
     },
     "classitems": [
         {
-            "file": "https://github.com/lmccart/p5.js/src/color/setting.js",
+            "file": "../src/color/setting.js",
             "line": 45,
             "description": "For a number of different inputs, returns a color formatted as [r, g, b, a].",
             "itemtype": "method",
-            "name": "getNormalizedCokklor",
+            "name": "getNormalizedColor",
             "params": [
                 {
                     "name": "args",
