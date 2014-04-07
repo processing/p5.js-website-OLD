@@ -1,0 +1,1655 @@
+{
+    "project": {
+        "name": "p5",
+        "description": "p5 starts with the original goal of {@link http://www.processing.org/|Processing}, to make coding accessible for artists, designers, educators, beginners, and reinterpets this for today, for the web. The library is intended to introduce creative coding, web development, and provide a tie between the two.",
+        "version": "0.2.0",
+        "url": ""
+    },
+    "files": {
+        
+    },
+    "modules": {
+        
+    },
+    "classes": {
+    },
+    "classitems": [
+        {
+            "file": "https://github.com/lmccart/p5.js/src/color/setting.js",
+            "line": 45,
+            "description": "For a number of different inputs, returns a color formatted as [r, g, b, a].",
+            "itemtype": "method",
+            "name": "getNormalizedCokklor",
+            "params": [
+                {
+                    "name": "args",
+                    "description": "An 'array-like' object that represents a list of arguments",
+                    "type": "Array-like"
+                }
+            ],
+            "return": {
+                "description": "Returns a color formatted as [r, g, b, a]\n                input        ==> output\n                g            ==> [g, g, g, 255]\n                g,a          ==> [g, g, g, a]\n                r, g, b      ==> [r, g, b, 255]\n                r, g, b, a   ==> [r, g, b, a]\n                [g]          ==> [g, g, g, 255]\n                [g, a]       ==> [g, g, g, a]\n                [r, g, b]    ==> [r, g, b, 255]\n                [r, g, b, a] ==> [r, g, b, a]",
+                "type": "Array"
+            },
+            "class": "p5",
+            "module": "color"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 28,
+            "description": "Keep a reference to when this instance was created (timestamp).",
+            "itemtype": "property",
+            "name": "startTime",
+            "type": "String",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 35,
+            "description": "Asynchronous files preload counter.",
+            "itemtype": "property",
+            "name": "preload_count",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 42,
+            "description": "Whether the instance of p5 is global or not.",
+            "itemtype": "property",
+            "name": "isGlobal",
+            "type": "Boolean",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 50,
+            "description": "Contains the number of frames that have been displayed since the program started. Inside setup() the value is 0, after the first iteration of draw it is 1, etc.",
+            "itemtype": "property",
+            "name": "frameCount",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 57,
+            "description": "Contains the approximate frame rate of a running sketch. The initial value is 10 fps and is updated with each frame. The value is averaged over several frames, and so will only be accurate after the draw function has run 5-10 times.",
+            "itemtype": "property",
+            "name": "_frameRate",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 68,
+            "description": "Confirms if the current canvas is \"focused,\" meaning that it is active and will accept mouse or keyboard input. This variable is \"true\" if it is focused and \"false\" if not.",
+            "itemtype": "property",
+            "name": "focused",
+            "type": "Boolean",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 75,
+            "description": "Variable that stores the width of the entire screen display. This is used to run a full-screen program on any display size.",
+            "itemtype": "property",
+            "name": "displayWidth",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 82,
+            "description": "Variable that stores the height of the entire screen display. This is used to run a full-screen program on any display size.",
+            "itemtype": "property",
+            "name": "displayHeight",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 95,
+            "description": "The variable mouseX always contains the current horizontal coordinate of the mouse.",
+            "itemtype": "property",
+            "name": "mouseX",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 102,
+            "description": "The variable mouseY always contains the current vertical coordinate of the mouse.",
+            "itemtype": "property",
+            "name": "mouseY",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 109,
+            "description": "The variable pmouseY always contains the horizontal position of the mouse in the frame previous to the current frame.",
+            "itemtype": "property",
+            "name": "pmouseX",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/core/core.js",
+            "line": 116,
+            "description": "The variable pmouseY always contains the vertical position of the mouse in the frame previous to the current frame.",
+            "type": "Number",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 5,
+            "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 30,
+            "description": "Returns the pixel buffer for a canvas",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas|ImageData"
+                }
+            ],
+            "return": {
+                "description": "a one-dimensional array containing the data\n                            in thc RGBA order, with integer values between 0 and 255",
+                "type": "Uint8ClampedArray"
+            },
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 47,
+            "description": "Returns a 32 bit number containing ARGB data at ith pixel in the\n1D array containing pixels data.",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "[array returned by _toPixels()]",
+                    "type": "Uint8ClampedArray"
+                },
+                {
+                    "name": "i",
+                    "description": "[index of a 1D Image Array]",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "32 bit integer value representing ARGB value.",
+                "type": "Integer"
+            },
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 65,
+            "description": "Modifies pixels RGBA values to values contained in the data object.",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "pixels",
+                    "description": "[array returned by _toPixels()]",
+                    "type": "Uint8ClampedArray"
+                },
+                {
+                    "name": "data",
+                    "description": "[source 1D array where each value represents ARGB values]",
+                    "type": "Int32Array"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 84,
+            "description": "Returns the ImageData object for a canvas\nhttps://developer.mozilla.org/en-US/docs/Web/API/ImageData",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas|ImageData"
+                }
+            ],
+            "return": {
+                "description": "Holder of pixel data (and width and height)\n                    for a canvas",
+                "type": "ImageData"
+            },
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 102,
+            "description": "Returns a blank ImageData object.",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "height",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "ImageData"
+            },
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 118,
+            "description": "Applys a filter function to a canvas.\n\nThe difference between this and the actual filter functions defined below\nis that the filter functions generally modify the pixel buffer but do\nnot actually put that data back to the canvas (where it would actually\nupdate what is visible). By contrast this method does make the changes actually\nvisible in the canvas.\n\nThe apply method is the method that callers of this module would generally use.\nIt has been separated from the actual filters to support an advanced use case\nof creating a filter chain that executes without actually updating the canvas\nin between everystep.",
+            "params": [
+                {
+                    "name": "func",
+                    "description": "[description]",
+                    "type": "Object"
+                },
+                {
+                    "name": "canvas",
+                    "description": "[description]",
+                    "type": "Object"
+                },
+                {
+                    "name": "level",
+                    "description": "[description]",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "Object"
+            },
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 157,
+            "description": "Converts the image to black and white pixels depending if they are above or\nbelow the threshold defined by the level parameter. The parameter must be\nbetween 0.0 (black) and 1.0 (white). If no level is specified, 0.5 is used.\n\nBorrowed from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas"
+                },
+                {
+                    "name": "level",
+                    "description": "",
+                    "type": "Float"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 192,
+            "description": "Converts any colors in the image to grayscale equivalents. No parameter is used.\n\nBorrowed from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 213,
+            "description": "Sets the alpha channel to entirely opaque. No parameter is used.",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 228,
+            "description": "Sets each pixel to its inverse value. No parameter is used.",
+            "params": [
+                {
+                    "name": "UNKNOWN",
+                    "description": "",
+                    "type": "Invert"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 244,
+            "description": "Limits each channel of the image to the number of colors specified as\nthe parameter. The parameter can be set to values between 2 and 255, but\nresults are most noticeable in the lower ranges.\n\nAdapted from java based processing implementation",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas"
+                },
+                {
+                    "name": "level",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 276,
+            "description": "reduces the bright areas in an image",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/filters.js",
+            "line": 347,
+            "description": "increases the bright areas in an image",
+            "params": [
+                {
+                    "name": "canvas",
+                    "description": "",
+                    "type": "Canvas"
+                }
+            ],
+            "class": "p5",
+            "module": "core"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 10,
+            "description": "This module defines the PImage class and P5 methods for\ndrawing images to the main display canvas.",
+            "class": "p5",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 26,
+            "description": "Create a new empty PImage object.",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "height",
+                    "description": "",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "PImage"
+            },
+            "class": "p5",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 37,
+            "description": "Loads an image from a path and creates a PImage from it.\n\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback.",
+            "itemtype": "method",
+            "name": "loadImage",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Function to be called once the image is loaded. Will be passed the PImage.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "The PImage object.",
+                "type": "PImage"
+            },
+            "class": "p5",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 78,
+            "description": "Draw an image to the main canvas of the p5js sketch",
+            "itemtype": "method",
+            "name": "image",
+            "params": [
+                {
+                    "name": "image",
+                    "description": "",
+                    "type": "PImage"
+                },
+                {
+                    "name": "x",
+                    "description": "",
+                    "type": "[type]"
+                },
+                {
+                    "name": "y",
+                    "description": "",
+                    "type": "[type]"
+                },
+                {
+                    "name": "width",
+                    "description": "",
+                    "type": "[type]"
+                },
+                {
+                    "name": "height",
+                    "description": "",
+                    "type": "[type]"
+                }
+            ],
+            "class": "p5",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 100,
+            "description": "Set image mode. Modifies the location from which images are drawn by changing the way in which parameters given to image() are intepreted.\n\nThe default mode is imageMode(CORNER), which interprets the second and third parameters of image() as the upper-left corner of the image. If two additional parameters are specified, they are used to set the image's width and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image() as the location of one corner, and the fourth and fifth parameters as the opposite corner.\n\nimageMode(CENTER) interprets the second and third parameters of image() as the image's center point. If two additional parameters are specified, they are used to set the image's width and height.\n\nThe parameter must be written in ALL CAPS because Processing is a case-sensitive language.",
+            "itemtype": "method",
+            "name": "imageMode",
+            "params": [
+                {
+                    "name": "m",
+                    "description": "The mode: either CORNER, CORNERS, or CENTER.",
+                    "type": "String"
+                }
+            ],
+            "class": "p5",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 148,
+            "description": "Loads the pixels data for this image into the [pixels] attribute.",
+            "itemtype": "method",
+            "name": "loadPixels",
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 171,
+            "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x offset of the target update area for the\n                              underlying canvas",
+                    "type": "Integer|undefined"
+                },
+                {
+                    "name": "y",
+                    "description": "y offset of the target update area for the\n                              underlying canvas",
+                    "type": "Integer|undefined"
+                },
+                {
+                    "name": "w",
+                    "description": "height of the target update area for the\n                              underlying canvas",
+                    "type": "Integer|undefined"
+                },
+                {
+                    "name": "h",
+                    "description": "height of the target update area for the\n                              underlying canvas",
+                    "type": "Integer|undefined"
+                }
+            ],
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 210,
+            "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a Pimage is\nreturned.\n\nReturns undefined if the region is outside the bounds of the image",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "y",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "w",
+                    "description": "width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "h",
+                    "description": "height",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "pixel [4 element integer] array or a PImage",
+                "type": "[Integer] | PImage | undefined"
+            },
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 267,
+            "description": "Set the color of a single pixel or write an image into\nthis PImage.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "y",
+                    "description": "",
+                    "type": "Integer"
+                },
+                {
+                    "name": "imageData",
+                    "description": "a pImage or an array representing a color.",
+                    "type": "PImage|[Integer]"
+                }
+            ],
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 297,
+            "description": "Resize this PImage.",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "height",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 340,
+            "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image",
+                    "type": "PImage|undefined"
+                },
+                {
+                    "name": "sx",
+                    "description": "X coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sy",
+                    "description": "Y coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sw",
+                    "description": "source image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sh",
+                    "description": "source image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dx",
+                    "description": "X coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dy",
+                    "description": "Y coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dw",
+                    "description": "destination image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dh",
+                    "description": "destination image height",
+                    "type": "Integer"
+                }
+            ],
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 391,
+            "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image\n\nTODO: - Accept an array of alpha values.\n      - Use other channels of an image. p5 uses the\n      blue channel (which feels kind of arbitrary). Note: at the\n      moment this method does not match native processings original\n      functionality exactly.\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
+                    "type": "PImage|undefined"
+                }
+            ],
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 421,
+            "description": "Applies an image filter to a PImage",
+            "params": [
+                {
+                    "name": "operation",
+                    "description": "one of threshold, gray, invert, posterize and opaque\n                           see Filters.js for docs on each available filter",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "Number|undefined"
+                }
+            ],
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 433,
+            "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image",
+                    "type": "PImage|undefined"
+                },
+                {
+                    "name": "sx",
+                    "description": "X coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sy",
+                    "description": "Y coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sw",
+                    "description": "source image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sh",
+                    "description": "source image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dx",
+                    "description": "X coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dy",
+                    "description": "Y coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dw",
+                    "description": "destination image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dh",
+                    "description": "destination image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "blendMode",
+                    "description": "the blend mode\n\nAvailable blend modes are: normal | multiply | screen | overlay | \n           darken | lighten | color-dodge | color-burn | hard-light | \n           soft-light | difference | exclusion | hue | saturation | \n           color | luminosity\n\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
+                    "type": "Integer"
+                }
+            ],
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/image/image.js",
+            "line": 468,
+            "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
+            "params": [
+                {
+                    "name": "extension!~YUIDOC_LINE~!!~YUIDOC_LINE~!TODO:",
+                    "description": "There doesn't seem to be a way to give the force the\nbrowser to download a file *and* give it a name. Which is why \nthis function currently only take an extension parameter.",
+                    "type": "[type]"
+                }
+            ],
+            "class": "PImage",
+            "module": "image"
+        },
+        {
+            "file": "../src/input/touch.js",
+            "line": 11,
+            "description": "Sets touch points.",
+            "itemtype": "event",
+            "name": "setTouchPoints",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The event object.",
+                    "type": "Object"
+                }
+            ],
+            "class": "p5",
+            "module": "touch"
+        },
+        {
+            "file": "../src/input/touch.js",
+            "line": 28,
+            "description": "Listener for the touch start event.",
+            "itemtype": "event",
+            "name": "ontouchstart",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The event object.",
+                    "type": "Object"
+                }
+            ],
+            "class": "p5",
+            "module": "touch"
+        },
+        {
+            "file": "../src/input/touch.js",
+            "line": 45,
+            "description": "Listener for the touch move event.",
+            "itemtype": "event",
+            "name": "ontouchmove",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The event object.",
+                    "type": "Object"
+                }
+            ],
+            "class": "p5",
+            "module": "touch"
+        },
+        {
+            "file": "../src/input/touch.js",
+            "line": 58,
+            "description": "Listener for the touch end event.",
+            "itemtype": "event",
+            "name": "ontouchend",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The event object.",
+                    "type": "Object"
+                }
+            ],
+            "class": "p5",
+            "module": "touch"
+        },
+        {
+            "file": "../src/math/noise.js",
+            "line": 48,
+            "description": "Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. Processing can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
+            "params": [
+                {
+                    "name": "x-coordinate",
+                    "description": "in noise space",
+                    "type": "X"
+                },
+                {
+                    "name": "y-coordinate",
+                    "description": "in noise space",
+                    "type": "Y"
+                },
+                {
+                    "name": "z-coordinate",
+                    "description": "in noise space",
+                    "type": "Z"
+                }
+            ],
+            "return": {
+                "description": "between 0 and 1",
+                "type": "Number"
+            },
+            "class": "PVector",
+            "module": "touch"
+        },
+        {
+            "file": "../src/math/noise.js",
+            "line": 163,
+            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overal intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
+            "params": [
+                {
+                    "name": "number",
+                    "description": "of octaves to be used by the noise",
+                    "type": "Lod"
+                },
+                {
+                    "name": "falloff",
+                    "description": "factor for each octave",
+                    "type": "Falloff"
+                }
+            ],
+            "class": "PVector",
+            "module": "touch"
+        },
+        {
+            "file": "../src/math/noise.js",
+            "line": 188,
+            "description": "NOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
+            "class": "PVector",
+            "module": "touch"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 20,
+            "description": "The x component of the vector",
+            "itemtype": "property",
+            "name": "x",
+            "type": "{Number}",
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 26,
+            "description": "The y component of the vector",
+            "itemtype": "property",
+            "name": "y",
+            "type": "{Number}",
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 32,
+            "description": "The z component of the vector",
+            "itemtype": "property",
+            "name": "z",
+            "type": "{Number}",
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 40,
+            "description": "Sets the x, y, and z component of the vector using three separate variables, the data from a PVector, or the values from a float array.",
+            "itemtype": "method",
+            "name": "set",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "The x component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "The y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "The z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Nothing.",
+                "type": "Void"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 56,
+            "description": "Gets a copy of the vector, returns a PVector object.",
+            "itemtype": "method",
+            "name": "get",
+            "return": {
+                "description": "The PVector object.",
+                "type": "PVector"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 65,
+            "description": "Adds x, y, and z components to a vector, adds one vector to another, or adds two independent vectors together. The version of the method that adds two vectors together is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
+            "itemtype": "method",
+            "name": "add",
+            "chainable": 1,
+            "params": [
+                {
+                    "name": "x",
+                    "description": "The x component of the vector to be added.",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "The y component of the vector to be added.",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "The z component of the vector to be added.",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "The PVector object.",
+                "type": "PVector"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 84,
+            "description": "Subtracts x, y, and z components from a vector, subtracts one vector from another, or subtracts two independent vectors. The version of the method that substracts two vectors is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
+            "itemtype": "method",
+            "name": "sub",
+            "chainable": 1,
+            "params": [
+                {
+                    "name": "x",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "z",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The PVector object.",
+                "type": "PVector"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 126,
+            "description": "Calculates the dot product of two vectors.",
+            "itemtype": "method",
+            "name": "dot",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "z",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Number/mag"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 204,
+            "description": "Make a new 2D unit vector from an angle",
+            "params": [
+                {
+                    "name": "The",
+                    "description": "desired angle.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The new PVector object.",
+                "type": "PVector"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 214,
+            "description": "Make a new 2D unit vector from a random angle",
+            "return": {
+                "description": "The new PVector object.",
+                "type": "PVector"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/pvector.js",
+            "line": 224,
+            "description": "Make a new random 3D unit vector.",
+            "return": {
+                "description": "The new PVector object.",
+                "type": "PVector"
+            },
+            "class": "PVector",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/math/random.js",
+            "line": 18,
+            "description": "Return a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",
+            "params": [
+                {
+                    "name": "min",
+                    "description": "",
+                    "type": "X"
+                },
+                {
+                    "name": "max",
+                    "description": "",
+                    "type": "Y"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "p5",
+            "module": "pvector"
+        },
+        {
+            "file": "../src/shape/2d_primitives.js",
+            "line": 13,
+            "description": "Draw an arc.\n\nIf a,b,c,d,start and stop are the only params provided, draws an\nopen pie.\nIf mode is provided draws the arc either open, chord or pie, dependant on the variable provided.",
+            "itemtype": "method",
+            "name": "arc",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "X-coordinate of the arc's ellipse",
+                    "type": "Number"
+                },
+                {
+                    "name": "b",
+                    "description": "Y-coordinate of the arc's ellipse",
+                    "type": "Number"
+                },
+                {
+                    "name": "c",
+                    "description": "Width of the arc's ellipse by default",
+                    "type": "Number"
+                },
+                {
+                    "name": "d",
+                    "description": "Height of the arc's ellipse by default",
+                    "type": "Number"
+                },
+                {
+                    "name": "start",
+                    "description": "Angle to start the arc, specified in radians",
+                    "type": "Number"
+                },
+                {
+                    "name": "stop",
+                    "description": "Angle to stop the arc, specified in radians",
+                    "type": "Number"
+                },
+                {
+                    "name": "mode",
+                    "description": "Optional parameter to determine the way of drawing the arc",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Returns the p5 object.",
+                "type": "Object"
+            },
+            "example": [
+                " <div><img src=\"http://processing.org/reference/images/arc_.png\">\n<code>arc(50, 55, 50, 50, 0, HALF_PI);\nnoFill();\narc(50, 55, 60, 60, HALF_PI, PI);\narc(50, 55, 70, 70, PI, PI+QUARTER_PI);\narc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_2.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_3.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_4.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n</code></div>"
+            ],
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/shape/2d_primitives.js",
+            "line": 73,
+            "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and height is a circle. By default, the first two parameters set the location, and the third and fourth parameters set the shape's width and height. The origin may be changed with the ellipseMode() function.",
+            "itemtype": "method",
+            "name": "ellipse",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "X-coordinate of the ellipse.",
+                    "type": "Number"
+                },
+                {
+                    "name": "b",
+                    "description": "Y-coordinate of the ellipse.",
+                    "type": "Number"
+                },
+                {
+                    "name": "c",
+                    "description": "Width of the ellipse.",
+                    "type": "Number"
+                },
+                {
+                    "name": "d",
+                    "description": "Height of the ellipse.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "Returns the p5 object.",
+                "type": "P5"
+            },
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/shape/2d_primitives.js",
+            "line": 105,
+            "description": "Draws a line (a direct path between two points) to the screen. The version of line() with four parameters draws the line in 2D. To color a line, use the stroke() function. A line cannot be filled, therefore the fill() function will not affect the color of a line. 2D lines are drawn with a width of one pixel by default, but this can be changed with the strokeWeight() function. The version with six parameters allows the line to be placed anywhere within XYZ space. Drawing this shape in 3D with the z parameter requires the P3D parameter in combination with size() as shown in the above example.",
+            "itemtype": "method",
+            "name": "line",
+            "params": [
+                {
+                    "name": "x1",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "y1",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "x2",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "y2",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "Returns the p5 object.",
+                "type": "P5"
+            },
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/shape/2d_primitives.js",
+            "line": 127,
+            "description": "Draws a point, a coordinate in space at the dimension of one pixel. The first parameter is the horizontal value for the point, the second value is the vertical value for the point, and the optional third value is the depth value. Drawing this shape in 3D with the z parameter requires the P3D parameter in combination with size() as shown in the above example.",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "Returns the p5 object.",
+                "type": "P5"
+            },
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/shape/2d_primitives.js",
+            "line": 155,
+            "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is similar to a rectangle, but the angles between its edges are not constrained to ninety degrees. The first pair of parameters (x1,y1) sets the first vertex and the subsequent pairs should proceed clockwise or counter-clockwise around the defined shape.",
+            "itemtype": "method",
+            "name": "quad",
+            "params": [
+                {
+                    "name": "x1",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "y1",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "x2",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "y2",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "x3",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "y3",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "x4",
+                    "description": "",
+                    "type": "Type"
+                },
+                {
+                    "name": "y4",
+                    "description": "",
+                    "type": "Type"
+                }
+            ],
+            "return": {
+                "description": "Returns the p5 object.",
+                "type": "P5"
+            },
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/shape/curves.js",
+            "line": 45,
+            "description": "Sets the resolution at which curves display.\n\nThe default value is 20.\n\nReturns void",
+            "params": [
+                {
+                    "name": "resolution",
+                    "description": "of the curves",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/shape/curves.js",
+            "line": 60,
+            "description": "Calculate a point on the Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.\n\nReturns float",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "coordinate of first point on the curve",
+                    "type": "Number"
+                },
+                {
+                    "name": "b",
+                    "description": "coordinate of first control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "c",
+                    "description": "coordinate of second control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "d",
+                    "description": "coordinate of second point on the curve",
+                    "type": "Number"
+                },
+                {
+                    "name": "t",
+                    "description": "value between 0 and 1",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/shape/curves.js",
+            "line": 88,
+            "description": "Calculates the tangent of a point on a curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points\n\nReturns float",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "coordinate of first point on the curve",
+                    "type": "Number"
+                },
+                {
+                    "name": "b",
+                    "description": "coordinate of first control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "c",
+                    "description": "coordinate of second control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "d",
+                    "description": "coordinate of second point on the curve",
+                    "type": "Number"
+                },
+                {
+                    "name": "t",
+                    "description": "value between 0 and 1",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5",
+            "module": "2d_primitives"
+        },
+        {
+            "file": "../src/var/constants.js",
+            "line": 19,
+            "itemtype": "property",
+            "name": "HALF_PI",
+            "type": "Number",
+            "final": 1,
+            "class": "p5",
+            "module": "constants"
+        },
+        {
+            "file": "../src/var/constants.js",
+            "line": 26,
+            "itemtype": "property",
+            "name": "PI",
+            "type": "Number",
+            "final": 1,
+            "class": "p5",
+            "module": "constants"
+        },
+        {
+            "file": "../src/var/constants.js",
+            "line": 33,
+            "itemtype": "property",
+            "name": "QUARTER_PI",
+            "type": "Number",
+            "final": 1,
+            "class": "p5",
+            "module": "constants"
+        },
+        {
+            "file": "../src/var/constants.js",
+            "line": 40,
+            "itemtype": "property",
+            "name": "TAU",
+            "type": "Number",
+            "final": 1,
+            "class": "p5",
+            "module": "constants"
+        },
+        {
+            "file": "../src/var/constants.js",
+            "line": 47,
+            "itemtype": "property",
+            "name": "TWO_PI",
+            "type": "Number",
+            "final": 1,
+            "class": "p5",
+            "module": "constants"
+        },
+        {
+            "file": "../src/var/constants.js",
+            "line": 54,
+            "itemtype": "property",
+            "name": "DEGREES",
+            "type": "String",
+            "final": 1,
+            "class": "p5",
+            "module": "constants"
+        },
+        {
+            "file": "../src/var/constants.js",
+            "line": 61,
+            "itemtype": "property",
+            "name": "RADIANS",
+            "type": "String",
+            "final": 1,
+            "class": "p5",
+            "module": "constants"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "param name missing: {Invert}",
+            "line": " ../src/image/filters.js:228"
+        },
+        {
+            "message": "Missing item type\nThe variable pmouseY always contains the vertical position of the mouse in the frame previous to the current frame.",
+            "line": " ../src/core/core.js:116"
+        },
+        {
+            "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
+            "line": " ../src/image/filters.js:5"
+        },
+        {
+            "message": "Missing item type\nReturns the pixel buffer for a canvas",
+            "line": " ../src/image/filters.js:30"
+        },
+        {
+            "message": "Missing item type\nReturns a 32 bit number containing ARGB data at ith pixel in the\n1D array containing pixels data.",
+            "line": " ../src/image/filters.js:47"
+        },
+        {
+            "message": "Missing item type\nModifies pixels RGBA values to values contained in the data object.",
+            "line": " ../src/image/filters.js:65"
+        },
+        {
+            "message": "Missing item type\nReturns the ImageData object for a canvas\nhttps://developer.mozilla.org/en-US/docs/Web/API/ImageData",
+            "line": " ../src/image/filters.js:84"
+        },
+        {
+            "message": "Missing item type\nReturns a blank ImageData object.",
+            "line": " ../src/image/filters.js:102"
+        },
+        {
+            "message": "Missing item type\nApplys a filter function to a canvas.\n\nThe difference between this and the actual filter functions defined below\nis that the filter functions generally modify the pixel buffer but do\nnot actually put that data back to the canvas (where it would actually\nupdate what is visible). By contrast this method does make the changes actually\nvisible in the canvas.\n\nThe apply method is the method that callers of this module would generally use.\nIt has been separated from the actual filters to support an advanced use case\nof creating a filter chain that executes without actually updating the canvas\nin between everystep.",
+            "line": " ../src/image/filters.js:118"
+        },
+        {
+            "message": "Missing item type\nConverts the image to black and white pixels depending if they are above or\nbelow the threshold defined by the level parameter. The parameter must be\nbetween 0.0 (black) and 1.0 (white). If no level is specified, 0.5 is used.\n\nBorrowed from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/",
+            "line": " ../src/image/filters.js:157"
+        },
+        {
+            "message": "Missing item type\nConverts any colors in the image to grayscale equivalents. No parameter is used.\n\nBorrowed from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/",
+            "line": " ../src/image/filters.js:192"
+        },
+        {
+            "message": "Missing item type\nSets the alpha channel to entirely opaque. No parameter is used.",
+            "line": " ../src/image/filters.js:213"
+        },
+        {
+            "message": "Missing item type\nSets each pixel to its inverse value. No parameter is used.",
+            "line": " ../src/image/filters.js:228"
+        },
+        {
+            "message": "Missing item type\nLimits each channel of the image to the number of colors specified as\nthe parameter. The parameter can be set to values between 2 and 255, but\nresults are most noticeable in the lower ranges.\n\nAdapted from java based processing implementation",
+            "line": " ../src/image/filters.js:244"
+        },
+        {
+            "message": "Missing item type\nreduces the bright areas in an image",
+            "line": " ../src/image/filters.js:276"
+        },
+        {
+            "message": "Missing item type\nincreases the bright areas in an image",
+            "line": " ../src/image/filters.js:347"
+        },
+        {
+            "message": "Missing item type\nThis module defines the PImage class and P5 methods for\ndrawing images to the main display canvas.",
+            "line": " ../src/image/image.js:10"
+        },
+        {
+            "message": "Missing item type\nCreate a new empty PImage object.",
+            "line": " ../src/image/image.js:26"
+        },
+        {
+            "message": "Missing item type\nUpdates the backing canvas for this image with the contents of\nthe [pixels] array.",
+            "line": " ../src/image/image.js:171"
+        },
+        {
+            "message": "Missing item type\nGet a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a Pimage is\nreturned.\n\nReturns undefined if the region is outside the bounds of the image",
+            "line": " ../src/image/image.js:210"
+        },
+        {
+            "message": "Missing item type\nSet the color of a single pixel or write an image into\nthis PImage.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
+            "line": " ../src/image/image.js:267"
+        },
+        {
+            "message": "Missing item type\nResize this PImage.",
+            "line": " ../src/image/image.js:297"
+        },
+        {
+            "message": "Missing item type\nCopies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
+            "line": " ../src/image/image.js:340"
+        },
+        {
+            "message": "Missing item type\nMasks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
+            "line": " ../src/image/image.js:391"
+        },
+        {
+            "message": "Missing item type\nApplies an image filter to a PImage",
+            "line": " ../src/image/image.js:421"
+        },
+        {
+            "message": "Missing item type\nCopies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
+            "line": " ../src/image/image.js:433"
+        },
+        {
+            "message": "Missing item type\nSaves the image to a file and forces the browser to download it.\nSupports png and jpg.",
+            "line": " ../src/image/image.js:468"
+        },
+        {
+            "message": "Missing item type\nReturns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. Processing can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
+            "line": " ../src/math/noise.js:48"
+        },
+        {
+            "message": "Missing item type\nAdjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overal intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
+            "line": " ../src/math/noise.js:163"
+        },
+        {
+            "message": "Missing item type\nNOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
+            "line": " ../src/math/noise.js:188"
+        },
+        {
+            "message": "Missing item type\nMake a new 2D unit vector from an angle",
+            "line": " ../src/math/pvector.js:204"
+        },
+        {
+            "message": "Missing item type\nMake a new 2D unit vector from a random angle",
+            "line": " ../src/math/pvector.js:214"
+        },
+        {
+            "message": "Missing item type\nMake a new random 3D unit vector.",
+            "line": " ../src/math/pvector.js:224"
+        },
+        {
+            "message": "Missing item type\nReturn a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",
+            "line": " ../src/math/random.js:18"
+        },
+        {
+            "message": "Missing item type\nDraws a point, a coordinate in space at the dimension of one pixel. The first parameter is the horizontal value for the point, the second value is the vertical value for the point, and the optional third value is the depth value. Drawing this shape in 3D with the z parameter requires the P3D parameter in combination with size() as shown in the above example.",
+            "line": " ../src/shape/2d_primitives.js:127"
+        },
+        {
+            "message": "Missing item type\nSets the resolution at which curves display.\n\nThe default value is 20.\n\nReturns void",
+            "line": " ../src/shape/curves.js:45"
+        },
+        {
+            "message": "Missing item type\nCalculate a point on the Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.\n\nReturns float",
+            "line": " ../src/shape/curves.js:60"
+        },
+        {
+            "message": "Missing item type\nCalculates the tangent of a point on a curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points\n\nReturns float",
+            "line": " ../src/shape/curves.js:88"
+        }
+    ]
+}
