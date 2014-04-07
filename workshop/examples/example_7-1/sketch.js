@@ -2,8 +2,6 @@
 // Using a for loop to draw.
 // Adapted from Getting Started with Processing.
 
-
-
 var images = [];
 var curImage = 0;
 
@@ -12,16 +10,15 @@ function setup() {
   createGraphics(500, 500);
   imageMode(CENTER);
  
-  // Add an image to the array
-  var img = loadImage("flower.png"); 
-  images.push(img);
-  
-  // The two lines above could also be written as
-  // images.push(loadImage("flower.png"));
-
   // Add some more images to the array
-  images.push(loadImage("fish.png")); 
-  images.push(loadImage("burger.png")); 
+
+  var fish = loadImage("fish.png");
+
+  images.push(fish); 
+  
+  var burger = loadImage("burger.png");
+  images.push(burger); 
+  
   images.push(loadImage("chickens.jpg")); 
 
 }

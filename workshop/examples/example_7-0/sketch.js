@@ -4,7 +4,7 @@
 // Adapted from Getting Started with Processing
 
 
-var x = []; 
+var x = [];
 
 function setup() {
 
@@ -14,16 +14,15 @@ function setup() {
 
   for (var i=0; i<100; i++) {
     x.push(random(0, width));
-    // x[i] = random(0, width); // works the same
+    //x[i] = random(0, width); // works the same
   }
-
 }
 
 function draw() {
 
   background(126, 138, 162);
 
-  for (var i=0; i<100; i++) {
+  for (var i=0; i<x.length; i++) {
 
     x[i] = x[i] + 1;
     if (x[i] > width + 5) {

@@ -5,23 +5,29 @@ function setup() {
   noStroke();
   fill(255, 255, 255);
   background(200, 190, 190);
-};
-
-function draw() {
-  // keeps program looping even though it is empty
-};
-
-function touchStarted() {
-  fill(0, 255, 0);
-  ellipse(touchX, touchY, 80, 80);
 }
 
-function touchMoved() {
+var draw = function() {
+  // keeps program looping even though it is empty
+}
+
+// mousePressed
+var touchStarted = mousePressed = function() {
+  var x = touchX || mouseX;
+  var y = touchY || mouseY;
+  fill(0, 255, 0);
+  print('pressed or started');
+  ellipse(x, y, 80, 80);
+};
+
+// mouseDragged
+var touchMoved = function() {
   fill(0, 0, 255);
   ellipse(touchX, touchY, 80, 80);
-}
+};
 
-function touchEnded() {
+// mouseReleased
+var touchEnded = function() {
   fill(255, 0, 0);
   ellipse(touchX, touchY, 80, 80);
-}
+};

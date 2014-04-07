@@ -12,7 +12,7 @@ function setup() {
   // If you create the HTML element second, it doesn't make work to draw background and ellipse into it
   // because drawing only works with graphics elements.
   var text = createHTML("This is an HTML string!");
-  var canvas = createGraphics(600, 400);
+  var canvas = createCanvas(600, 400);
 
   // Here we call methods of each element to set the position and id, try changing these values.
   // Use the inspector to look at the HTML generated from this code when you load the sketch in your browser.

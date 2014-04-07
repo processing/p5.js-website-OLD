@@ -9,6 +9,8 @@ function setup() {
 function draw() {
   background(80, 100, 90);
 
+  makeFillRed();
+
   ellipse(100, 100, funkySize(100), funkySize(100)); // funkySize(100) evaluates to a number just like random(0, 100) does
   ellipse(200, 200, funkySize(200), funkySize(200));
   ellipse(300, 300, funkySize(300), funkySize(300));
@@ -21,4 +23,4 @@ function funkySize(n) {
   var jitter = random(0, 10);
   var size = n + jitter;
   return size;
-}
+};

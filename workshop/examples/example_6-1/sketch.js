@@ -11,14 +11,13 @@
 
 var largeImage;
 
-/*function preload() {
+function preload() {
   	largeImage = loadImage('large.jpg'); // preloading the image guarantees it will be ready by setup()
-};*/
+}
 
 function setup() {
   	createGraphics(1300, 600);
-  	largeImage = loadImage('large.jpg');   // loading the image here is too slow
-	image(largeImage, 0, 0);
+  	image(largeImage, 0, 0);
 }
 
 function draw() {
