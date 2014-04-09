@@ -1312,13 +1312,13 @@
             "description": "Adds two vectors together and returns a new one.",
             "params": [
                 {
-                    "name": "a",
-                    "description": "PVector to add",
+                    "name": "v1",
+                    "description": "a PVector to add",
                     "type": "PVector"
                 },
                 {
-                    "name": "a",
-                    "description": "PVector to add",
+                    "name": "v2",
+                    "description": "a PVector to add",
                     "type": "PVector"
                 }
             ],
@@ -1335,12 +1335,12 @@
             "description": "Subtracts one PVector from another and returns a new one.  The second vector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "params": [
                 {
-                    "name": "UNKNOWN",
+                    "name": "v1",
                     "description": "",
                     "type": "PVector"
                 },
                 {
-                    "name": "UNKNOWN",
+                    "name": "v2",
                     "description": "",
                     "type": "PVector"
                 }
@@ -1358,13 +1358,13 @@
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "params": [
                 {
-                    "name": "the",
-                    "description": "vector to multiply",
+                    "name": "v",
+                    "description": "the vector to multiply",
                     "type": "PVector"
                 },
                 {
-                    "name": "the",
-                    "description": "scalar",
+                    "name": "n",
+                    "description": "the scalar",
                     "type": "Number"
                 }
             ],
@@ -1381,13 +1381,13 @@
             "description": "Divides a vector by a scalar and returns a new vector.",
             "params": [
                 {
-                    "name": "the",
-                    "description": "vector to divide",
+                    "name": "v",
+                    "description": "the vector to divide",
                     "type": "PVector"
                 },
                 {
-                    "name": "the",
-                    "description": "scalar",
+                    "name": "n",
+                    "description": "the scalar",
                     "type": "Number"
                 }
             ],
@@ -1795,14 +1795,6 @@
         {
             "message": "param name missing: {PVector}",
             "line": " src/math/pvector.js:168"
-        },
-        {
-            "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:355"
-        },
-        {
-            "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:355"
         },
         {
             "message": "param name missing: {PVector}",
