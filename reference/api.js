@@ -3,18 +3,26 @@ YUI.add("yuidoc-meta", function(Y) {
     "classes": [
         "2D Primitives",
         "Attributes",
+        "Calculation",
+        "Creating & Reading",
         "Curves",
         "Image",
         "Loading & Displaying",
+        "Noise",
         "PImage",
         "PVector",
-        "Setting"
+        "Random",
+        "Setting",
+        "Structure",
+        "Trigonometry",
+        "Vertex"
     ],
     "modules": [
         "Color",
         "Image",
         "Math",
-        "Shape"
+        "Shape",
+        "Structure"
     ],
     "allModules": [
         {
@@ -32,6 +40,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Shape",
             "name": "Shape"
+        },
+        {
+            "displayName": "Structure",
+            "name": "Structure"
         }
     ]
 } };

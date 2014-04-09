@@ -57,10 +57,13 @@ define([
         // Sort groups by name A-Z
         _.sortBy(self.groups, this.sortByName);
 
-        // // Sort items by name A-Z
-        // _.each(self.groups, function(group) {
-        //   _.sortBy(group.items, this.sortByName);
-        // });
+        // Sort items by name A-Z
+        _.each(self.groups, function(group) {
+          _.sortBy(group.subgroups, this.sortByName);
+          _.each(group.subgroups, function(subgroup) {
+            _.sortBy(subgroup.items, this.sortByName);
+          });
+        });
 
         // Put the <li> items html into the list <ul>
         var listHtml = self.listTpl({
@@ -109,7 +112,7 @@ define([
     },
     
     sortByName: function(a,b) {
-       return a.name > b.name ? 1 : -1;
+      return a.name > b.name ? 1 : -1;
     }
 
   });

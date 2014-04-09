@@ -6,11 +6,20 @@
         "url": ""
     },
     "files": {
-        "src/color/setting.js": {
-            "name": "src/color/setting.js",
+        "src/color/creating_reading.js": {
+            "name": "src/color/creating_reading.js",
             "modules": {
                 "Color": 1
             },
+            "classes": {},
+            "fors": {
+                "Creating & Reading": 1
+            },
+            "namespaces": {}
+        },
+        "src/color/setting.js": {
+            "name": "src/color/setting.js",
+            "modules": {},
             "classes": {},
             "fors": {
                 "Setting": 1
@@ -46,18 +55,29 @@
             },
             "namespaces": {}
         },
+        "src/math/calculation.js": {
+            "name": "src/math/calculation.js",
+            "modules": {
+                "Math": 1
+            },
+            "classes": {},
+            "fors": {
+                "Calculation": 1
+            },
+            "namespaces": {}
+        },
         "src/math/noise.js": {
             "name": "src/math/noise.js",
             "modules": {},
             "classes": {},
-            "fors": {},
+            "fors": {
+                "Noise": 1
+            },
             "namespaces": {}
         },
         "src/math/pvector.js": {
             "name": "src/math/pvector.js",
-            "modules": {
-                "Math": 1
-            },
+            "modules": {},
             "classes": {
                 "PVector": 1
             },
@@ -70,7 +90,18 @@
             "name": "src/math/random.js",
             "modules": {},
             "classes": {},
-            "fors": {},
+            "fors": {
+                "Random": 1
+            },
+            "namespaces": {}
+        },
+        "src/math/trigonometry.js": {
+            "name": "src/math/trigonometry.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Trigonometry": 1
+            },
             "namespaces": {}
         },
         "src/shape/2d_primitives.js": {
@@ -102,6 +133,26 @@
             },
             "namespaces": {}
         },
+        "src/shape/vertex.js": {
+            "name": "src/shape/vertex.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Vertex": 1
+            },
+            "namespaces": {}
+        },
+        "src/structure/structure.js": {
+            "name": "src/structure/structure.js",
+            "modules": {
+                "Structure": 1
+            },
+            "classes": {},
+            "fors": {
+                "Structure": 1
+            },
+            "namespaces": {}
+        },
         "src/app.js": {
             "name": "src/app.js",
             "modules": {},
@@ -115,18 +166,19 @@
             "name": "Color",
             "submodules": {},
             "classes": {
+                "Creating & Reading": 1,
                 "Setting": 1
             },
             "fors": {
+                "Creating & Reading": 1,
                 "Setting": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/color/setting.js",
+            "file": "src/color/creating_reading.js",
             "line": 1,
             "requires": [
-                "core",
-                "constants"
+                "core"
             ]
         },
         "Image": {
@@ -157,15 +209,26 @@
             "name": "Math",
             "submodules": {},
             "classes": {
-                "PVector": 1
+                "Calculation": 1,
+                "Noise": 1,
+                "PVector": 1,
+                "Random": 1,
+                "Trigonometry": 1
             },
             "fors": {
-                "PVector": 1
+                "Calculation": 1,
+                "Noise": 1,
+                "PVector": 1,
+                "Random": 1,
+                "Trigonometry": 1
             },
             "namespaces": {},
             "tag": "module",
             "file": "src/math/pvector.js",
-            "line": 9
+            "line": 9,
+            "requires": [
+                "core"
+            ]
         },
         "Shape": {
             "name": "Shape",
@@ -173,12 +236,14 @@
             "classes": {
                 "2D Primitives": 1,
                 "Attributes": 1,
-                "Curves": 1
+                "Curves": 1,
+                "Vertex": 1
             },
             "fors": {
                 "2D Primitives": 1,
                 "Attributes": 1,
-                "Curves": 1
+                "Curves": 1,
+                "Vertex": 1
             },
             "namespaces": {},
             "tag": "module",
@@ -189,9 +254,37 @@
                 "canvas",
                 "constants"
             ]
+        },
+        "Structure": {
+            "name": "Structure",
+            "submodules": {},
+            "classes": {
+                "Structure": 1
+            },
+            "fors": {
+                "Structure": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/structure/structure.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
         }
     },
     "classes": {
+        "Creating & Reading": {
+            "name": "Creating & Reading",
+            "shortname": "Creating & Reading",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Color",
+            "namespace": ""
+        },
         "Setting": {
             "name": "Setting",
             "shortname": "Setting",
@@ -257,6 +350,28 @@
                 }
             ]
         },
+        "Calculation": {
+            "name": "Calculation",
+            "shortname": "Calculation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
+        "Noise": {
+            "name": "Noise",
+            "shortname": "Noise",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
         "PVector": {
             "name": "PVector",
             "shortname": "PVector",
@@ -292,6 +407,28 @@
                 }
             ]
         },
+        "Random": {
+            "name": "Random",
+            "shortname": "Random",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
+        "Trigonometry": {
+            "name": "Trigonometry",
+            "shortname": "Trigonometry",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
         "2D Primitives": {
             "name": "2D Primitives",
             "shortname": "2D Primitives",
@@ -324,9 +461,211 @@
             "extension_for": [],
             "module": "Shape",
             "namespace": ""
+        },
+        "Vertex": {
+            "name": "Vertex",
+            "shortname": "Vertex",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Shape",
+            "namespace": ""
+        },
+        "Structure": {
+            "name": "Structure",
+            "shortname": "Structure",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Structure",
+            "namespace": ""
         }
     },
     "classitems": [
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 12,
+            "description": "Extracts the alpha value from a color.",
+            "itemtype": "method",
+            "name": "alpha",
+            "params": [
+                {
+                    "name": "rgb",
+                    "description": "an array representing a color",
+                    "type": "Array"
+                }
+            ],
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 26,
+            "description": "Extracts the blue value from a color, scaled to match current colorMode().",
+            "itemtype": "method",
+            "name": "blue",
+            "params": [
+                {
+                    "name": "rgb",
+                    "description": "an array representing a color",
+                    "type": "Array"
+                }
+            ],
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 40,
+            "description": "Extracts the brightness value from a color.",
+            "itemtype": "method",
+            "name": "brightness",
+            "params": [
+                {
+                    "name": "hsv",
+                    "description": "an array representing a color",
+                    "type": "Array"
+                }
+            ],
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 54,
+            "description": "Creates colors for storing in variables of the color datatype. The parameters are interpreted as RGB or HSB values depending on the current colorMode(). The default mode is RGB values from 0 to 255 and, therefore, the function call color(255, 204, 0) will return a bright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted as a grayscale value. Add a second value, and it will be used for alpha transparency. When three values are specified, they are interpreted as either RGB or HSB values. Adding a fourth value applies alpha transparency.\n\nColors are stored as Numbers or Arrays.",
+            "itemtype": "method",
+            "name": "color",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value or red or hue value relative to the current color range",
+                    "type": "Number"
+                },
+                {
+                    "name": "v2",
+                    "description": "gray value or green or saturation value relative to the current color range (or alpha value if first param is gray value)",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "gray value or blue or brightness value relative to the current color range",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "alpha",
+                    "description": "alpha value relative to current color range",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "color",
+                "type": "Array"
+            },
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 72,
+            "description": "Extracts the green value from a color, scaled to match current colorMode().",
+            "itemtype": "method",
+            "name": "green",
+            "params": [
+                {
+                    "name": "rgb",
+                    "description": "an array representing a color",
+                    "type": "Array"
+                }
+            ],
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 86,
+            "description": "Extracts the hue value from a color.",
+            "itemtype": "method",
+            "name": "hue",
+            "params": [
+                {
+                    "name": "hsv",
+                    "description": "an array representing a color",
+                    "type": "Array"
+                }
+            ],
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 100,
+            "description": "Calculates a color or colors between two color at a specific increment. The amt parameter is the amount to interpolate between the two values where 0.0 equal to the first point, 0.1 is very near the first point, 0.5 is halfway in between, etc. An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped at 1. This is different from the behavior of lerp(), but necessary because otherwise numbers outside the range will produce strange and unexpected colors.",
+            "itemtype": "method",
+            "name": "lerpColor",
+            "params": [
+                {
+                    "name": "c1",
+                    "description": "interpolate from this color",
+                    "type": "Array/Number"
+                },
+                {
+                    "name": "c2",
+                    "description": "interpolate to this color",
+                    "type": "Array/Number"
+                },
+                {
+                    "name": "amt",
+                    "description": "number between 0 and 1",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "interpolated color",
+                "type": "Array/Number"
+            },
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 121,
+            "description": "Extracts the red value from a color, scaled to match current colorMode().",
+            "itemtype": "method",
+            "name": "red",
+            "params": [
+                {
+                    "name": "rgb",
+                    "description": "an array representing a color",
+                    "type": "Array"
+                }
+            ],
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/creating_reading.js",
+            "line": 135,
+            "description": "Extracts the saturation value from a color.",
+            "itemtype": "method",
+            "name": "saturation",
+            "params": [
+                {
+                    "name": "hsv",
+                    "description": "an array representing a color",
+                    "type": "Array"
+                }
+            ],
+            "class": "Creating & Reading",
+            "module": "Color"
+        },
         {
             "file": "src/color/setting.js",
             "line": 48,
@@ -1107,58 +1446,134 @@
             "module": "Image"
         },
         {
-            "file": "src/math/noise.js",
-            "line": 48,
-            "description": "Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. Processing can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
+            "file": "src/math/calculation.js",
+            "line": 12,
+            "description": "Calculates the absolute value (magnitude) of a number. The absolute value of a number is always positive.",
+            "itemtype": "method",
+            "name": "abs",
             "params": [
                 {
-                    "name": "x-coordinate",
-                    "description": "in noise space",
-                    "type": "X"
-                },
-                {
-                    "name": "y-coordinate",
-                    "description": "in noise space",
-                    "type": "Y"
-                },
-                {
-                    "name": "z-coordinate",
-                    "description": "in noise space",
-                    "type": "Z"
+                    "name": "n",
+                    "description": "number to compute",
+                    "type": "Number"
                 }
             ],
             "return": {
-                "description": "between 0 and 1",
+                "description": "val absolute value of given number",
                 "type": "Number"
             },
-            "class": "PVector",
-            "module": "Image"
+            "class": "Calculation",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/calculation.js",
+            "line": 21,
+            "description": "Calculates the closest int value that is greater than or equal to the value of the parameter. For example, ceil(9.03) returns the value 10.",
+            "itemtype": "method",
+            "name": "ceil",
+            "params": [
+                {
+                    "name": "n",
+                    "description": "number to round up",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "val rounded up number",
+                "type": "Number"
+            },
+            "class": "Calculation",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/calculation.js",
+            "line": 30,
+            "description": "Constrains a value to not exceed a maximum and minimum value.",
+            "itemtype": "method",
+            "name": "constrain",
+            "params": [
+                {
+                    "name": "amt",
+                    "description": "number to constrain",
+                    "type": "Number"
+                },
+                {
+                    "name": "low",
+                    "description": "minimum limit",
+                    "type": "Number"
+                },
+                {
+                    "name": "high",
+                    "description": "maximum limit",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "val constrained number",
+                "type": "Number"
+            },
+            "class": "Calculation",
+            "module": "Math"
         },
         {
             "file": "src/math/noise.js",
-            "line": 163,
-            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overal intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
+            "line": 52,
+            "description": "Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. p5.js can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
+            "itemtype": "method",
+            "name": "noise",
             "params": [
                 {
-                    "name": "number",
-                    "description": "of octaves to be used by the noise",
-                    "type": "Lod"
+                    "name": "x",
+                    "description": "x-coordinate in noise space",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate in noise space",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "z-coordinate in noise space",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Perlin noise value (between 0 and 1) at specified coordinates",
+                "type": "Number"
+            },
+            "class": "Noise",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/noise.js",
+            "line": 168,
+            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overal intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
+            "itemtype": "method",
+            "name": "noiseDetail",
+            "params": [
+                {
+                    "name": "lod",
+                    "description": "number of octaves to be used by the noise",
+                    "type": "Number"
                 },
                 {
                     "name": "falloff",
-                    "description": "factor for each octave",
-                    "type": "Falloff"
+                    "description": "falloff factor for each octave",
+                    "type": "Number"
                 }
             ],
-            "class": "PVector",
-            "module": "Image"
+            "class": "Noise",
+            "module": "Math"
         },
         {
             "file": "src/math/noise.js",
-            "line": 188,
+            "line": 194,
             "description": "NOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
-            "class": "PVector",
-            "module": "Image"
+            "class": "Noise",
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
@@ -1763,7 +2178,7 @@
         },
         {
             "file": "src/math/random.js",
-            "line": 18,
+            "line": 23,
             "description": "Return a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",
             "params": [
                 {
@@ -1781,7 +2196,208 @@
                 "description": "",
                 "type": "Number"
             },
-            "class": "2D Primitives",
+            "class": "Random",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 16,
+            "description": "The inverse of cos(), returns the arc cosine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range 0 to PI (3.1415927).",
+            "itemtype": "method",
+            "name": "acos",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "the value whose arc cosine is to be returned",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "angle the arc cosine of the given value",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 31,
+            "description": "The inverse of sin(), returns the arc sine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range -PI/2 to PI/2.",
+            "itemtype": "method",
+            "name": "asin",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "the value whose arc sine is to be returned",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "angle the arc sine of the given value",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 46,
+            "description": "The inverse of tan(), returns the arc tangent of a value. This function expects the values in the range of -Infinity to Infinity (exclusive) and values are returned in the range -PI/2 to PI/2.",
+            "itemtype": "method",
+            "name": "atan",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "the value whose arc tangent is to be returned",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "angle the arc tangent of the given value",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 61,
+            "description": "Calculates the angle (in radians) from a specified point to the coordinate origin as measured from the positive x-axis. Values are returned as a float in the range from PI to -PI. The atan2() function is most often used for orienting geometry to the position of the cursor. Note: The y-coordinate of the point is the first parameter, and the x-coordinate is the second parameter, due the the structure of calculating the tangent.",
+            "itemtype": "method",
+            "name": "atan2",
+            "params": [
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the point",
+                    "type": "Number"
+                },
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the point",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "angle the arc tangent of the given point",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 77,
+            "description": "Calculates the cosine of an angle. This function takes into account the current angleMode. Values are returned in the range -1 to 1.",
+            "itemtype": "method",
+            "name": "cos",
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "value the cosine of the angle",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 92,
+            "description": "Calculates the sine of an angle. This function takes into account the current angleMode. Values are returned in the range -1 to 1.",
+            "itemtype": "method",
+            "name": "sin",
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "value the sine of the angle",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 107,
+            "description": "Calculates the tangent of an angle. This function takes into account the current angleMode. Values are returned in the range -1 to 1.",
+            "itemtype": "method",
+            "name": "sin",
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "value the tangent of the angle",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 122,
+            "description": "Converts a radian measurement to its corresponding value in degrees. Radians and degrees are two ways of measuring the same thing. There are 360 degrees in a circle and 2*PI radians in a circle. For example, 90° = PI/2 = 1.5707964.",
+            "itemtype": "method",
+            "name": "degrees",
+            "params": [
+                {
+                    "name": "radians",
+                    "description": "the radians value to convert to degrees",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "value the converted angle",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 133,
+            "description": "Converts a degree measurement to its corresponding value in radians. Radians and degrees are two ways of measuring the same thing. There are 360 degrees in a circle and 2*PI radians in a circle. For example, 90° = PI/2 = 1.5707964.",
+            "itemtype": "method",
+            "name": "radians",
+            "params": [
+                {
+                    "name": "degrees",
+                    "description": "the degree value to convert to radians",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "value the converted angle",
+                "type": "Number"
+            },
+            "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/math/trigonometry.js",
+            "line": 144,
+            "description": "Sets the current mode of p5 to given mode.",
+            "itemtype": "method",
+            "name": "angleMode",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "either RADIANS or DEGREES",
+                    "type": "Number/Constant"
+                }
+            ],
+            "class": "Trigonometry",
             "module": "Math"
         },
         {
@@ -2078,7 +2694,7 @@
                 {
                     "name": "mode",
                     "description": "either CENTER, RADIUS, CORNER, or CORNERS",
-                    "type": "Number/Variable"
+                    "type": "Number/Constant"
                 }
             ],
             "return": {
@@ -2111,7 +2727,7 @@
                 {
                     "name": "mode",
                     "description": "either CORNER, CORNERS, CENTER, or RADIUS",
-                    "type": "Number/Variable"
+                    "type": "Number/Constant"
                 }
             ],
             "return": {
@@ -2144,7 +2760,7 @@
                 {
                     "name": "cap",
                     "description": "either SQUARE, PROJECT, or ROUND",
-                    "type": "Number/Variable"
+                    "type": "Number/Constant"
                 }
             ],
             "return": {
@@ -2164,7 +2780,7 @@
                 {
                     "name": "join",
                     "description": "either MITER, BEVEL, ROUND",
-                    "type": "Number/Variable"
+                    "type": "Number/Constant"
                 }
             ],
             "return": {
@@ -2503,6 +3119,187 @@
             "module": "Shape"
         },
         {
+            "file": "src/shape/vertex.js",
+            "line": 18,
+            "description": "Using the beginShape() and endShape() functions allow creating more complex forms. beginShape() begins recording vertices for a shape and endShape() stops recording. The value of the kind parameter tells it which types of shapes to create from the provided vertices. With no mode specified, the shape can be any irregular polygon. The parameters available for beginShape() are POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the beginShape() function, a series of vertex() commands must follow. To stop drawing the shape, call endShape(). The vertex() function with two parameters specifies a position in 2D and the vertex() function with three parameters specifies a position in 3D. Each shape will be outlined with the current stroke color and filled with the fill color. \n\nTransformations such as translate(), rotate(), and scale() do not work within beginShape(). It is also not possible to use other shapes, such as ellipse() or rect() within beginShape().",
+            "itemtype": "method",
+            "name": "beginShape",
+            "params": [
+                {
+                    "name": "kind",
+                    "description": "either POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, or QUAD_STRIP",
+                    "type": "Number/Constant"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "Object"
+            },
+            "class": "Vertex",
+            "module": "Shape"
+        },
+        {
+            "file": "src/shape/vertex.js",
+            "line": 40,
+            "description": "Specifies vertex coordinates for Bezier curves. Each call to bezierVertex() defines the position of two control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. The first time bezierVertex() is used within a beginShape() call, it must be prefaced with a call to vertex() to set the first anchor point. This function must be used between beginShape() and endShape() and only when there is no MODE parameter specified to beginShape().",
+            "itemtype": "method",
+            "name": "bezierVertex",
+            "params": [
+                {
+                    "name": "x2",
+                    "description": "x-coordinate for the first control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "y2",
+                    "description": "y-coordinate for the first control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "x3",
+                    "description": "x-coordinate for the second control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "y3",
+                    "description": "y-coordinate for the second control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "x4",
+                    "description": "x-coordinate for the anchor point",
+                    "type": "Number"
+                },
+                {
+                    "name": "y4",
+                    "description": "y-coordinate for the anchor point",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "Object"
+            },
+            "class": "Vertex",
+            "module": "Shape"
+        },
+        {
+            "file": "src/shape/vertex.js",
+            "line": 67,
+            "description": "The endShape() function is the companion to beginShape() and may only be called after beginShape(). When endshape() is called, all of image data defined since the previous call to beginShape() is written into the image buffer. The constant CLOSE as the value for the MODE parameter to close the shape (to connect the beginning and the end).",
+            "itemtype": "method",
+            "name": "endShape",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "use CLOSE to close the shape",
+                    "type": "Number/Constant"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "Object"
+            },
+            "class": "Vertex",
+            "module": "Shape"
+        },
+        {
+            "file": "src/shape/vertex.js",
+            "line": 84,
+            "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to quadraticVertex() defines the position of one control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. The first time quadraticVertex() is used within a beginShape() call, it must be prefaced with a call to vertex() to set the first anchor point. This function must be used between beginShape() and endShape() and only when there is no MODE parameter specified to beginShape().",
+            "itemtype": "method",
+            "name": "quadraticVertex",
+            "params": [
+                {
+                    "name": "cx",
+                    "description": "x-coordinate for the control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "cy",
+                    "description": "y-coordinate for the control point",
+                    "type": "Number"
+                },
+                {
+                    "name": "x3",
+                    "description": "x-coordinate for the anchor point",
+                    "type": "Number"
+                },
+                {
+                    "name": "y3",
+                    "description": "y-coordinate for the anchor point",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "Object"
+            },
+            "class": "Vertex",
+            "module": "Shape"
+        },
+        {
+            "file": "src/shape/vertex.js",
+            "line": 100,
+            "description": "All shapes are constructed by connecting a series of vertices. vertex() is used to specify the vertex coordinates for points, lines, triangles, quads, and polygons. It is used exclusively within the beginShape() and endShape() functions.",
+            "itemtype": "method",
+            "name": "vertex",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the vertex",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the vertex",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "Object"
+            },
+            "class": "Vertex",
+            "module": "Shape"
+        },
+        {
+            "file": "src/structure/structure.js",
+            "line": 15,
+            "description": "Stops Processing from continuously executing the code within draw(). If loop() is called, the code in draw() begins to run continuously again. If using noLoop() in setup(), it should be the last line inside the block.\n\nWhen noLoop() is used, it's not possible to manipulate or access the screen inside event handling functions such as mousePressed() or keyPressed(). Instead, use those functions to call redraw() or loop(), which will run draw(), which can update the screen properly. This means that when noLoop() has been called, no drawing can happen, and functions like saveFrame() or loadPixels() may not be used.\n\nNote that if the sketch is resized, redraw() will be called to update the sketch, even after noLoop() has been specified. Otherwise, the sketch would enter an odd state until loop() was called.",
+            "itemtype": "method",
+            "name": "noLoop",
+            "class": "Structure",
+            "module": "Structure"
+        },
+        {
+            "file": "src/structure/structure.js",
+            "line": 28,
+            "description": "By default, Processing loops through draw() continuously, executing the code within it. However, the draw() loop may be stopped by calling noLoop(). In that case, the draw() loop can be resumed with loop().",
+            "itemtype": "method",
+            "name": "loop",
+            "class": "Structure",
+            "module": "Structure"
+        },
+        {
+            "file": "src/structure/structure.js",
+            "line": 37,
+            "description": "The pushStyle() function saves the current style settings and popStyle() restores the prior settings. Note that these functions are always used together. They allow you to change the style settings and later return to what you had. When a new style is started with pushStyle(), it builds on the current style information. The pushStyle() and popStyle() functions can be embedded to provide more control. (See the second example above for a demonstration.)\n\nThe style information controlled by the following functions are included in the style: fill(), stroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), imageMode(), rectMode(), ellipseMode(), shapeMode(), colorMode(), textAlign(), textFont(), textMode(), textSize(), textLeading(), emissive(), specular(), shininess(), ambient()",
+            "itemtype": "method",
+            "name": "pushStyle",
+            "class": "Structure",
+            "module": "Structure"
+        },
+        {
+            "file": "src/structure/structure.js",
+            "line": 66,
+            "description": "The pushStyle() function saves the current style settings and popStyle() restores the prior settings; these functions are always used together. They allow you to change the style settings and later return to what you had. When a new style is started with pushStyle(), it builds on the current style information. The pushStyle() and popStyle() functions can be embedded to provide more control (see the second example above for a demonstration.)",
+            "itemtype": "method",
+            "name": "popStyle",
+            "class": "Structure",
+            "module": "Structure"
+        },
+        {
             "file": "src/app.js",
             "line": 38,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
@@ -2511,7 +3308,7 @@
                 "type": "Undefined"
             },
             "class": "",
-            "module": "Shape"
+            "module": "Structure"
         }
     ],
     "warnings": [
@@ -2640,16 +3437,8 @@
             "line": " src/image/image.js:10"
         },
         {
-            "message": "Missing item type\nReturns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. Processing can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
-            "line": " src/math/noise.js:48"
-        },
-        {
-            "message": "Missing item type\nAdjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overal intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
-            "line": " src/math/noise.js:163"
-        },
-        {
             "message": "Missing item type\nNOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
-            "line": " src/math/noise.js:188"
+            "line": " src/math/noise.js:194"
         },
         {
             "message": "Missing item type\nCalculates the squared magnitude of the vector and returns the result\n as a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\n Faster if the real length is not required in the\n case of comparing vectors, etc.",
@@ -2745,7 +3534,7 @@
         },
         {
             "message": "Missing item type\nReturn a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",
-            "line": " src/math/random.js:18"
+            "line": " src/math/random.js:23"
         },
         {
             "message": "Missing item type\nCalculates the tangent of a point on a Bezier curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
