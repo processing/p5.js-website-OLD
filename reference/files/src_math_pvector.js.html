@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>../src/math/pvector.js - p5.js</title>
+    <title>src/math/pvector.js - p5</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -15,11 +15,11 @@
     <div id="hd" class="yui3-g header">
         <div class="yui3-u-3-4">
             
-                <h1><img src="../assets/css/logo.png" title="p5.js"></h1>
+                <h1><img src="../assets/css/logo.png" title="p5"></h1>
             
         </div>
         <div class="yui3-u-1-4 version">
-            <em>API Docs for: 0.0.1</em>
+            <em>API Docs for: 0.2.5</em>
         </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -41,9 +41,13 @@
         <div id="api-tabview-panel">
             <ul id="api-classes" class="apis classes">
             
+                <li><a href="../classes/PVecotr.html">PVecotr</a></li>
+            
             </ul>
 
             <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/PVector.html">PVector</a></li>
             
             </ul>
         </div>
@@ -80,17 +84,49 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: ../src/math/pvector.js</h1>
+                        <h1 class="file-heading">File: src/math/pvector.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
+/**
+ * @module PVector
+ */
+define(function (require) {
+  // code here
+};
+
 define(function (require) {
 
   &#x27;use strict&#x27;;
-
+  
+  /**
+   * The PVector constructor function.
+   *
+   * A class to describe a two or three dimensional vector, specifically a Euclidean (also known as geometric) vector. A vector is an entity that has both magnitude and direction. The datatype, however, stores the components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude and direction can be accessed via the methods mag() and heading(). In many of the p5.js examples, you will see PVector used to describe a position, velocity, or acceleration. For example, if you consider a rectangle moving across the screen, at any given instant it has a position (a vector that points from the origin to its location), a velocity (the rate at which the object&#x27;s position changes per time unit, expressed as a vector), and acceleration (the rate at which the object&#x27;s velocity changes per time unit, expressed as a vector). Since vectors represent groupings of values, we cannot simply use traditional addition/multiplication/etc. Instead, we&#x27;ll need to do some &quot;vector&quot; math, which is made easy by the methods inside the PVector class.
+   * @class PVecotr
+   * @constructor
+   * @param {Number} [x] x component of the vector
+   * @param {Number} [y] y component of the vector
+   * @param {Number} [z] z component of the vector
+   */
   function PVector(x, y, z) {
+    /**
+     * The x component of the vector
+     * @property x
+     * @type {Number}
+     */
     this.x = x || 0;
+    /**
+     * The y component of the vector
+     * @property y
+     * @type {Number}
+     */
     this.y = y || 0;
+    /**
+     * The z component of the vector
+     * @property z
+     * @type {Number}
+     */
     this.z = z || 0;
   }
 
@@ -99,12 +135,11 @@ define(function (require) {
    *
    * Sets the x, y, and z component of the vector using two or three separate
    * variables, the data from a PVector, or the values from a float array.
-   *
-   * Takes either 1, 2 or 3 arguments.
-   *
-   * @param {number} x component (or PVector or array of 3 numbers)
-   * @param {number} y component 
-   * @param {number} z component 
+   * @method set
+   * 
+   * @param {number} [x] component (or PVector or array of 3 numbers)
+   * @param {number} [y] component 
+   * @param {number} [z] component 
    */
   PVector.prototype.set = function (x, y, z) {
     if (x instanceof PVector) { return this.set(x.x, x.y, x.z); }
@@ -118,23 +153,23 @@ define(function (require) {
    *
    * Gets a copy of the vector, returns a PVector object.
    *
+   * @method get
    * @return {PVector} The copy of the PVector object.
    */
   PVector.prototype.get = function () {
     return new PVector(this.x, this.y, this.z);
   };
 
-  /**
-   *
-   * Adds x, y, and z components to a vector, adds one vector to another. To
-   * add two independent vectors together see the static add method
-   * which returns a new PVector.
-   *
-   * @param {number} x component (or PVector or array of 3 numbers)
-   * @param {number} y component 
-   * @param {number} z component 
 
-   * @return {PVector} A reference to the PVector object (allow chaining)
+  /**
+   * Adds x, y, and z components to a vector, adds one vector to another, or adds two independent vectors together. The version of the method that adds two vectors together is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context. 
+   * 
+   * @method add
+   * @chainable
+   * @param {Number} [x] The x component of the vector to be added.
+   * @param {Number} [y] The y component of the vector to be added.
+   * @param {Number} [z] The z component of the vector to be added.
+   * @return {PVector} The PVector object.
    */
   PVector.prototype.add = function (x, y, z) {
     if (x instanceof PVector) { return this.add(x.x, x.y, x.z); }
@@ -146,16 +181,14 @@ define(function (require) {
   };
 
   /**
-   *
-   * Subtracts x, y, and z components from a vector, subtracts one vector from another. To
-   * subtract two independent vectors together see the static subtract method
-   * which returns a new PVector.   
-   *
-   * @param {number} x component (or PVector or array of 3 numbers)
-   * @param {number} y component 
-   * @param {number} z component 
-
-   * @return {PVector} A reference to the PVector object (allow chaining)
+   * Subtracts x, y, and z components from a vector, subtracts one vector from another, or subtracts two independent vectors. The version of the method that substracts two vectors is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context. 
+   * 
+   * @method sub
+   * @chainable
+   * @param {Number} x
+   * @param {Number} y
+   * @param {Number} z
+   * @return {PVector} The PVector object.
    */
   PVector.prototype.sub = function (x, y, z) {
     if (x instanceof PVector) { return this.sub(x.x, x.y, x.z); }
@@ -170,8 +203,9 @@ define(function (require) {
    *
    * Multiply the vector by a scalar.   
    *
+   * @method mult
+   * @chainable
    * @param {n} the number to multiply with the vector
-   *
    * @return {PVector} A reference to the PVector object (allow chaining)
    */
   PVector.prototype.mult = function (n) {
@@ -185,8 +219,9 @@ define(function (require) {
    *
    * Divide the vector by a scalar.   
    *
+   * @method div
+   * @chainable
    * @param {number} the number to divide the vector by
-   *
    * @return {PVector} A reference to the PVector object (allow chaining)
    */
   PVector.prototype.div = function (n) {
@@ -196,13 +231,15 @@ define(function (require) {
     return this;
   };
 
+
   /**
-   *
-   * Calculates the magnitude (length) of the vector and returns the result
-   * as a float (this is simply the equation &lt;em&gt;sqrt(x*x + y*y + z*z)&lt;/em&gt;.)
-   *
-   * @method mag
-   * @return {number} magnitude (length) of the vector
+   * Calculates the dot product of two vectors. 
+   * 
+   * @method dot
+   * @param {Number} x
+   * @param {Number} y
+   * @param {Number} z
+   * @return {Number/mag}
    */
   PVector.prototype.mag = function () {
     return Math.sqrt(this.magSq());
