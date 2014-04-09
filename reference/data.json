@@ -47,7 +47,7 @@
                 "PVector": 1
             },
             "classes": {
-                "PVecotr": 1
+                "PVector": 1
             },
             "fors": {},
             "namespaces": {}
@@ -86,19 +86,19 @@
             "name": "PVector",
             "submodules": {},
             "classes": {
-                "PVecotr": 1
+                "PVector": 1
             },
             "fors": {},
             "namespaces": {},
             "tag": "module",
             "file": "src/math/pvector.js",
-            "line": 12
+            "line": 8
         }
     },
     "classes": {
-        "PVecotr": {
-            "name": "PVecotr",
-            "shortname": "PVecotr",
+        "PVector": {
+            "name": "PVector",
+            "shortname": "PVector",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -107,7 +107,7 @@
             "module": "PVector",
             "namespace": "",
             "file": "src/math/pvector.js",
-            "line": 12,
+            "line": 8,
             "description": "The PVector constructor function.\n\nA class to describe a two or three dimensional vector, specifically a Euclidean (also known as geometric) vector. A vector is an entity that has both magnitude and direction. The datatype, however, stores the components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude and direction can be accessed via the methods mag() and heading(). In many of the p5.js examples, you will see PVector used to describe a position, velocity, or acceleration. For example, if you consider a rectangle moving across the screen, at any given instant it has a position (a vector that points from the origin to its location), a velocity (the rate at which the object's position changes per time unit, expressed as a vector), and acceleration (the rate at which the object's velocity changes per time unit, expressed as a vector). Since vectors represent groupings of values, we cannot simply use traditional addition/multiplication/etc. Instead, we'll need to do some \"vector\" math, which is made easy by the methods inside the PVector class.",
             "is_constructor": 1,
             "params": [
@@ -148,7 +148,7 @@
                 "description": "returns a color formatted as [r, g, b, a]\n                input        ==> output\n                g            ==> [g, g, g, 255]\n                g,a          ==> [g, g, g, a]\n                r, g, b      ==> [r, g, b, 255]\n                r, g, b, a   ==> [r, g, b, a]\n                [g]          ==> [g, g, g, 255]\n                [g, a]       ==> [g, g, g, a]\n                [r, g, b]    ==> [r, g, b, 255]\n                [r, g, b, a] ==> [r, g, b, a]",
                 "type": "Array"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -170,7 +170,7 @@
                 "description": "",
                 "type": "P5"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -180,7 +180,7 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -190,7 +190,7 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -200,7 +200,7 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -210,7 +210,7 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -220,7 +220,7 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -230,7 +230,7 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/core/core.js",
@@ -240,13 +240,13 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
             "line": 5,
             "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -265,7 +265,7 @@
                 "description": "a one-dimensional array containing the data\n                            in thc RGBA order, with integer values between 0 and 255",
                 "type": "Uint8ClampedArray"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -289,7 +289,7 @@
                 "description": "32 bit integer value representing ARGB value.",
                 "type": "Integer"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -309,7 +309,7 @@
                     "type": "Int32Array"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -328,7 +328,7 @@
                 "description": "Holder of pixel data (and width and height)\n                    for a canvas",
                 "type": "ImageData"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -352,7 +352,7 @@
                 "description": "",
                 "type": "ImageData"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -379,7 +379,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -397,7 +397,7 @@
                     "type": "Float"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -410,7 +410,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -423,7 +423,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -436,7 +436,7 @@
                     "type": "Invert"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -454,7 +454,7 @@
                     "type": "Integer"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -467,7 +467,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/filters.js",
@@ -480,13 +480,13 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
             "line": 3,
             "description": "This module defines the PImage class and P5 methods for\ndrawing images to the main display canvas.",
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -508,7 +508,7 @@
                 "description": "",
                 "type": "PImage"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -530,7 +530,7 @@
                 "description": "",
                 "type": "PImage"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -563,7 +563,7 @@
                     "type": "[type]"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -576,7 +576,7 @@
                     "type": "String"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -594,13 +594,13 @@
                     "type": "Integer"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
             "line": 123,
             "description": "Loads the pixels data for this image into the [pixels] attribute",
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -628,7 +628,7 @@
                     "type": "Integer|undefined"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -660,7 +660,7 @@
                 "description": "pixel [4 element integer] array or a PImage",
                 "type": "[Integer] | PImage | undefined"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -683,7 +683,7 @@
                     "type": "PImage|[Integer]"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -705,7 +705,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -758,7 +758,7 @@
                     "type": "Integer"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -771,7 +771,7 @@
                     "type": "PImage|undefined"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -789,7 +789,7 @@
                     "type": "Number|undefined"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -847,7 +847,7 @@
                     "type": "Integer"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/image/image.js",
@@ -860,7 +860,7 @@
                     "type": "[type]"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/math/noise.js",
@@ -887,7 +887,7 @@
                 "description": "between 0 and 1",
                 "type": "Number"
             },
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/math/noise.js",
@@ -905,47 +905,47 @@
                     "type": "Falloff"
                 }
             ],
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/math/noise.js",
             "line": 188,
             "description": "NOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
-            "class": "PVecotr"
+            "class": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 23,
+            "line": 19,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
             "type": "{Number}",
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 29,
+            "line": 25,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
             "type": "{Number}",
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 35,
+            "line": 31,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
             "type": "{Number}",
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 44,
+            "line": 40,
             "description": "Sets the x, y, and z component of the vector using two or three separate\n variables, the data from a PVector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -969,12 +969,12 @@
                     "optional": true
                 }
             ],
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 62,
+            "line": 58,
             "description": "Gets a copy of the vector, returns a PVector object.",
             "itemtype": "method",
             "name": "get",
@@ -982,12 +982,12 @@
                 "description": "The copy of the PVector object.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 74,
+            "line": 70,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or adds two independent vectors together. The version of the method that adds two vectors together is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "add",
@@ -1016,12 +1016,12 @@
                 "description": "The PVector object.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 93,
+            "line": 89,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from another, or subtracts two independent vectors. The version of the method that substracts two vectors is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -1047,12 +1047,12 @@
                 "description": "The PVector object.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 112,
+            "line": 108,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -1068,12 +1068,12 @@
                 "description": "A reference to the PVector object (allow chaining)",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 128,
+            "line": 124,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -1089,12 +1089,12 @@
                 "description": "A reference to the PVector object (allow chaining)",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 145,
+            "line": 141,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -1119,23 +1119,23 @@
                 "description": "",
                 "type": "Number/mag"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 158,
+            "line": 154,
             "description": "Calculates the squared magnitude of the vector and returns the result\n as a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\n Faster if the real length is not required in the\n case of comparing vectors, etc.",
             "return": {
                 "description": "squared magnitude of the vector",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 172,
+            "line": 168,
             "description": "Calculates the dot product of two vectors.",
             "params": [
                 {
@@ -1148,23 +1148,23 @@
                 "description": "the dot product",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 189,
+            "line": 185,
             "description": "Calculates the cross product of two vectors.",
             "return": {
                 "description": "the cross product",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 202,
+            "line": 198,
             "description": "Calculates the Euclidean distance between two points (considering a\n point as a vector object).",
             "params": [
                 {
@@ -1177,19 +1177,19 @@
                 "description": "the distance",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 216,
+            "line": 212,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 225,
+            "line": 221,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b> parameter.",
             "params": [
                 {
@@ -1198,12 +1198,12 @@
                     "type": "Number"
                 }
             ],
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 240,
+            "line": 236,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b> parameter.",
             "params": [
                 {
@@ -1212,23 +1212,23 @@
                     "type": "Number"
                 }
             ],
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 250,
+            "line": 246,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)\n TODO: deal with AngleMode",
             "return": {
                 "description": "the angle of rotation",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 261,
+            "line": 257,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the same\n TODO: Change to rotate()\n TODO: Deal with angleMode",
             "params": [
                 {
@@ -1237,12 +1237,12 @@
                     "type": "Number"
                 }
             ],
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 277,
+            "line": 273,
             "description": "Linear interpolate the vector to another vector",
             "params": [
                 {
@@ -1256,19 +1256,19 @@
                     "type": "Number"
                 }
             ],
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 294,
+            "line": 290,
             "description": "Return a representation of this vector as a float array. This is only\n for temporary use. If used in any other fashion, the contents should be\n copied by using the <b>PVector.get()</b> method to copy into your own array.\nreturn {Array} an array with the 3 values",
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 310,
+            "line": 306,
             "description": "Make a new 2D unit vector from an angle",
             "params": [
                 {
@@ -1281,34 +1281,34 @@
                 "description": "The new PVector object.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 320,
+            "line": 316,
             "description": "Make a new 2D unit vector from a random angle",
             "return": {
                 "description": "The new PVector object.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 330,
+            "line": 326,
             "description": "Make a new random 3D unit vector.",
             "return": {
                 "description": "The new PVector object.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 345,
+            "line": 341,
             "description": "Adds two vectors together and returns a new one.",
             "params": [
                 {
@@ -1326,12 +1326,12 @@
                 "description": "The resulting new PVector.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 359,
+            "line": 355,
             "description": "Subtracts one PVector from another and returns a new one.  The second vector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "params": [
                 {
@@ -1349,12 +1349,12 @@
                 "description": "The resulting new PVector.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 374,
+            "line": 370,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "params": [
                 {
@@ -1372,12 +1372,12 @@
                 "description": "The resulting new PVector.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 387,
+            "line": 383,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "params": [
                 {
@@ -1395,12 +1395,12 @@
                 "description": "The resulting new PVector.",
                 "type": "PVector"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 401,
+            "line": 397,
             "description": "Calculates the dot product of two vectors.",
             "params": [
                 {
@@ -1418,12 +1418,12 @@
                 "description": "the dot product",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 414,
+            "line": 410,
             "description": "Calculates the cross product of two vectors.",
             "params": [
                 {
@@ -1441,12 +1441,12 @@
                 "description": "the cross product",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 427,
+            "line": 423,
             "description": "Calculates the Euclidean distance between two points (considering a\n point as a vector object).",
             "params": [
                 {
@@ -1464,12 +1464,12 @@
                 "description": "the distance",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 441,
+            "line": 437,
             "description": "Linear interpolate a vector to another vector and return the result as a new vector.",
             "params": [
                 {
@@ -1488,12 +1488,12 @@
                     "type": "Number"
                 }
             ],
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 453,
+            "line": 449,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "params": [
                 {
@@ -1511,7 +1511,7 @@
                 "description": "the angle between\n \n TODO: Needs to account for angleMode",
                 "type": "Number"
             },
-            "class": "PVecotr",
+            "class": "PVector",
             "module": "PVector"
         },
         {
@@ -1794,39 +1794,39 @@
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:172"
+            "line": " src/math/pvector.js:168"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:359"
+            "line": " src/math/pvector.js:355"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:359"
+            "line": " src/math/pvector.js:355"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:401"
+            "line": " src/math/pvector.js:397"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:401"
+            "line": " src/math/pvector.js:397"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:414"
+            "line": " src/math/pvector.js:410"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:414"
+            "line": " src/math/pvector.js:410"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:427"
+            "line": " src/math/pvector.js:423"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:427"
+            "line": " src/math/pvector.js:423"
         },
         {
             "message": "Missing item type\ngetNormalizedColor For a number of different inputs,\n                   returns a color formatted as [r, g, b, a]",
@@ -1998,95 +1998,95 @@
         },
         {
             "message": "Missing item type\nCalculates the squared magnitude of the vector and returns the result\n as a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\n Faster if the real length is not required in the\n case of comparing vectors, etc.",
-            "line": " src/math/pvector.js:158"
+            "line": " src/math/pvector.js:154"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:172"
+            "line": " src/math/pvector.js:168"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:189"
+            "line": " src/math/pvector.js:185"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\n point as a vector object).",
-            "line": " src/math/pvector.js:202"
+            "line": " src/math/pvector.js:198"
         },
         {
             "message": "Missing item type\nNormalize the vector to length 1 (make it a unit vector).",
-            "line": " src/math/pvector.js:216"
+            "line": " src/math/pvector.js:212"
         },
         {
             "message": "Missing item type\nLimit the magnitude of this vector to the value used for the <b>max</b> parameter.",
-            "line": " src/math/pvector.js:225"
+            "line": " src/math/pvector.js:221"
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b> parameter.",
-            "line": " src/math/pvector.js:240"
+            "line": " src/math/pvector.js:236"
         },
         {
             "message": "Missing item type\nCalculate the angle of rotation for this vector (only 2D vectors)\n TODO: deal with AngleMode",
-            "line": " src/math/pvector.js:250"
+            "line": " src/math/pvector.js:246"
         },
         {
             "message": "Missing item type\nRotate the vector by an angle (only 2D vectors), magnitude remains the same\n TODO: Change to rotate()\n TODO: Deal with angleMode",
-            "line": " src/math/pvector.js:261"
+            "line": " src/math/pvector.js:257"
         },
         {
             "message": "Missing item type\nLinear interpolate the vector to another vector",
-            "line": " src/math/pvector.js:277"
+            "line": " src/math/pvector.js:273"
         },
         {
             "message": "Missing item type\nReturn a representation of this vector as a float array. This is only\n for temporary use. If used in any other fashion, the contents should be\n copied by using the <b>PVector.get()</b> method to copy into your own array.\nreturn {Array} an array with the 3 values",
-            "line": " src/math/pvector.js:294"
+            "line": " src/math/pvector.js:290"
         },
         {
             "message": "Missing item type\nMake a new 2D unit vector from an angle",
-            "line": " src/math/pvector.js:310"
+            "line": " src/math/pvector.js:306"
         },
         {
             "message": "Missing item type\nMake a new 2D unit vector from a random angle",
-            "line": " src/math/pvector.js:320"
+            "line": " src/math/pvector.js:316"
         },
         {
             "message": "Missing item type\nMake a new random 3D unit vector.",
-            "line": " src/math/pvector.js:330"
+            "line": " src/math/pvector.js:326"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/pvector.js:345"
+            "line": " src/math/pvector.js:341"
         },
         {
             "message": "Missing item type\nSubtracts one PVector from another and returns a new one.  The second vector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/pvector.js:359"
+            "line": " src/math/pvector.js:355"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:374"
+            "line": " src/math/pvector.js:370"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:387"
+            "line": " src/math/pvector.js:383"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:401"
+            "line": " src/math/pvector.js:397"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:414"
+            "line": " src/math/pvector.js:410"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\n point as a vector object).",
-            "line": " src/math/pvector.js:427"
+            "line": " src/math/pvector.js:423"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a new vector.",
-            "line": " src/math/pvector.js:441"
+            "line": " src/math/pvector.js:437"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/math/pvector.js:453"
+            "line": " src/math/pvector.js:449"
         },
         {
             "message": "Missing item type\nReturn a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",

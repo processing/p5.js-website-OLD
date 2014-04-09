@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         url: '<%= pkg.homepage %>',
         options: {
           paths: '../src/',
+          themedir: 'yuidoc-p5-theme/',
           //helpers: [],
           outdir: 'api/'
         }
