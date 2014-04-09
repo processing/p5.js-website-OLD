@@ -1,31 +1,37 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "2d primitives",
+        "2D Primitives",
+        "Attributes",
+        "Curves",
+        "Image",
+        "Loading & Displaying",
         "PImage",
         "PVector",
-        "attributes",
-        "curves",
-        "image",
-        "loading & displaying"
+        "Setting"
     ],
     "modules": [
-        "PVector",
-        "image",
-        "shape"
+        "Color",
+        "Image",
+        "Math",
+        "Shape"
     ],
     "allModules": [
         {
-            "displayName": "image",
-            "name": "image"
+            "displayName": "Color",
+            "name": "Color"
         },
         {
-            "displayName": "PVector",
-            "name": "PVector"
+            "displayName": "Image",
+            "name": "Image"
         },
         {
-            "displayName": "shape",
-            "name": "shape"
+            "displayName": "Math",
+            "name": "Math"
+        },
+        {
+            "displayName": "Shape",
+            "name": "Shape"
         }
     ]
 } };

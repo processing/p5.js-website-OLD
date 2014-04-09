@@ -8,9 +8,13 @@
     "files": {
         "src/color/setting.js": {
             "name": "src/color/setting.js",
-            "modules": {},
+            "modules": {
+                "Color": 1
+            },
             "classes": {},
-            "fors": {},
+            "fors": {
+                "Setting": 1
+            },
             "namespaces": {}
         },
         "src/core/core.js": {
@@ -30,14 +34,14 @@
         "src/image/image.js": {
             "name": "src/image/image.js",
             "modules": {
-                "image": 1
+                "Image": 1
             },
             "classes": {
                 "PImage": 1
             },
             "fors": {
-                "image": 1,
-                "loading & displaying": 1,
+                "Image": 1,
+                "Loading & Displaying": 1,
                 "PImage": 1
             },
             "namespaces": {}
@@ -52,12 +56,14 @@
         "src/math/pvector.js": {
             "name": "src/math/pvector.js",
             "modules": {
-                "PVector": 1
+                "Math": 1
             },
             "classes": {
                 "PVector": 1
             },
-            "fors": {},
+            "fors": {
+                "PVector": 1
+            },
             "namespaces": {}
         },
         "src/math/random.js": {
@@ -70,11 +76,11 @@
         "src/shape/2d_primitives.js": {
             "name": "src/shape/2d_primitives.js",
             "modules": {
-                "shape": 1
+                "Shape": 1
             },
             "classes": {},
             "fors": {
-                "2d primitives": 1
+                "2D Primitives": 1
             },
             "namespaces": {}
         },
@@ -83,7 +89,7 @@
             "modules": {},
             "classes": {},
             "fors": {
-                "attributes": 1
+                "Attributes": 1
             },
             "namespaces": {}
         },
@@ -92,7 +98,7 @@
             "modules": {},
             "classes": {},
             "fors": {
-                "curves": 1
+                "Curves": 1
             },
             "namespaces": {}
         },
@@ -105,17 +111,35 @@
         }
     },
     "modules": {
-        "image": {
-            "name": "image",
+        "Color": {
+            "name": "Color",
             "submodules": {},
             "classes": {
-                "image": 1,
-                "loading & displaying": 1,
+                "Setting": 1
+            },
+            "fors": {
+                "Setting": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/color/setting.js",
+            "line": 1,
+            "requires": [
+                "core",
+                "constants"
+            ]
+        },
+        "Image": {
+            "name": "Image",
+            "submodules": {},
+            "classes": {
+                "Image": 1,
+                "Loading & Displaying": 1,
                 "PImage": 1
             },
             "fors": {
-                "image": 1,
-                "loading & displaying": 1,
+                "Image": 1,
+                "Loading & Displaying": 1,
                 "PImage": 1
             },
             "namespaces": {},
@@ -129,30 +153,32 @@
                 "filters"
             ]
         },
-        "PVector": {
-            "name": "PVector",
+        "Math": {
+            "name": "Math",
             "submodules": {},
             "classes": {
                 "PVector": 1
             },
-            "fors": {},
+            "fors": {
+                "PVector": 1
+            },
             "namespaces": {},
             "tag": "module",
             "file": "src/math/pvector.js",
-            "line": 8
+            "line": 9
         },
-        "shape": {
-            "name": "shape",
+        "Shape": {
+            "name": "Shape",
             "submodules": {},
             "classes": {
-                "2d primitives": 1,
-                "attributes": 1,
-                "curves": 1
+                "2D Primitives": 1,
+                "Attributes": 1,
+                "Curves": 1
             },
             "fors": {
-                "2d primitives": 1,
-                "attributes": 1,
-                "curves": 1
+                "2D Primitives": 1,
+                "Attributes": 1,
+                "Curves": 1
             },
             "namespaces": {},
             "tag": "module",
@@ -166,26 +192,37 @@
         }
     },
     "classes": {
-        "image": {
-            "name": "image",
-            "shortname": "image",
+        "Setting": {
+            "name": "Setting",
+            "shortname": "Setting",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "image",
+            "module": "Color",
             "namespace": ""
         },
-        "loading & displaying": {
-            "name": "loading & displaying",
-            "shortname": "loading & displaying",
+        "Image": {
+            "name": "Image",
+            "shortname": "Image",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "image",
+            "module": "Image",
+            "namespace": ""
+        },
+        "Loading & Displaying": {
+            "name": "Loading & Displaying",
+            "shortname": "Loading & Displaying",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Image",
             "namespace": ""
         },
         "PImage": {
@@ -196,7 +233,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "image",
+            "module": "Image",
             "namespace": "",
             "file": "src/image/image.js",
             "line": 127,
@@ -228,10 +265,10 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "PVector",
+            "module": "Math",
             "namespace": "",
             "file": "src/math/pvector.js",
-            "line": 8,
+            "line": 9,
             "description": "The PVector constructor function.\n\nA class to describe a two or three dimensional vector, specifically a Euclidean (also known as geometric) vector. A vector is an entity that has both magnitude and direction. The datatype, however, stores the components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude and direction can be accessed via the methods mag() and heading(). In many of the p5.js examples, you will see PVector used to describe a position, velocity, or acceleration. For example, if you consider a rectangle moving across the screen, at any given instant it has a position (a vector that points from the origin to its location), a velocity (the rate at which the object's position changes per time unit, expressed as a vector), and acceleration (the rate at which the object's velocity changes per time unit, expressed as a vector). Since vectors represent groupings of values, we cannot simply use traditional addition/multiplication/etc. Instead, we'll need to do some \"vector\" math, which is made easy by the methods inside the PVector class.",
             "is_constructor": 1,
             "params": [
@@ -255,44 +292,44 @@
                 }
             ]
         },
-        "2d primitives": {
-            "name": "2d primitives",
-            "shortname": "2d primitives",
+        "2D Primitives": {
+            "name": "2D Primitives",
+            "shortname": "2D Primitives",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "shape",
+            "module": "Shape",
             "namespace": ""
         },
-        "attributes": {
-            "name": "attributes",
-            "shortname": "attributes",
+        "Attributes": {
+            "name": "Attributes",
+            "shortname": "Attributes",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "shape",
+            "module": "Shape",
             "namespace": ""
         },
-        "curves": {
-            "name": "curves",
-            "shortname": "curves",
+        "Curves": {
+            "name": "Curves",
+            "shortname": "Curves",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "shape",
+            "module": "Shape",
             "namespace": ""
         }
     },
     "classitems": [
         {
             "file": "src/color/setting.js",
-            "line": 42,
+            "line": 48,
             "description": "For a number of different inputs, returns a color formatted as [r, g, b, a].",
             "itemtype": "method",
             "name": "getNormalizedColor",
@@ -307,7 +344,8 @@
                 "description": "Returns a color formatted as [r, g, b, a]\n                input        ==> output\n                g            ==> [g, g, g, 255]\n                g,a          ==> [g, g, g, a]\n                r, g, b      ==> [r, g, b, 255]\n                r, g, b, a   ==> [r, g, b, a]\n                [g]          ==> [g, g, g, 255]\n                [g, a]       ==> [g, g, g, a]\n                [r, g, b]    ==> [r, g, b, 255]\n                [r, g, b, a] ==> [r, g, b, a]",
                 "type": "Array"
             },
-            "class": "image"
+            "class": "Setting",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -329,7 +367,8 @@
                 "description": "",
                 "type": "P5"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -339,7 +378,8 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -349,7 +389,8 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -359,7 +400,8 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -369,7 +411,8 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -379,7 +422,8 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -389,7 +433,8 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/core/core.js",
@@ -399,13 +444,15 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
             "line": 5,
             "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -424,7 +471,8 @@
                 "description": "a one-dimensional array containing the data\n                            in thc RGBA order, with integer values between 0 and 255",
                 "type": "Uint8ClampedArray"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -448,7 +496,8 @@
                 "description": "32 bit integer value representing ARGB value.",
                 "type": "Integer"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -468,7 +517,8 @@
                     "type": "Int32Array"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -487,7 +537,8 @@
                 "description": "Holder of pixel data (and width and height)\n                    for a canvas",
                 "type": "ImageData"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -511,7 +562,8 @@
                 "description": "",
                 "type": "ImageData"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -538,7 +590,8 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -556,7 +609,8 @@
                     "type": "Float"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -569,7 +623,8 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -582,7 +637,8 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -595,7 +651,8 @@
                     "type": "Invert"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -613,7 +670,8 @@
                     "type": "Integer"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -626,7 +684,8 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/filters.js",
@@ -639,14 +698,15 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "image"
+            "class": "Image",
+            "module": "Color"
         },
         {
             "file": "src/image/image.js",
             "line": 10,
             "description": "This module defines the PImage class and P5 methods for\ndrawing images to the main display canvas.",
-            "class": "image",
-            "module": "image"
+            "class": "Image",
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -670,8 +730,8 @@
                 "description": "the PImage object",
                 "type": "PImage"
             },
-            "class": "image",
-            "module": "image"
+            "class": "Image",
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -695,8 +755,8 @@
                 "description": "the PImage object",
                 "type": "PImage"
             },
-            "class": "loading & displaying",
-            "module": "image"
+            "class": "Loading & Displaying",
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -731,8 +791,8 @@
                     "type": "[type]"
                 }
             ],
-            "class": "loading & displaying",
-            "module": "image"
+            "class": "Loading & Displaying",
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -747,8 +807,8 @@
                     "type": "String"
                 }
             ],
-            "class": "loading & displaying",
-            "module": "image"
+            "class": "Loading & Displaying",
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -757,7 +817,7 @@
             "itemtype": "method",
             "name": "loadPixels",
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -788,7 +848,7 @@
                 }
             ],
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -823,7 +883,7 @@
                 "type": "[Integer] | PImage | undefined"
             },
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -849,7 +909,7 @@
                 }
             ],
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -874,7 +934,7 @@
                 "type": "[type]"
             },
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -930,7 +990,7 @@
                 }
             ],
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -946,7 +1006,7 @@
                 }
             ],
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -967,7 +1027,7 @@
                 }
             ],
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -1028,7 +1088,7 @@
                 }
             ],
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/image/image.js",
@@ -1044,7 +1104,7 @@
                 }
             ],
             "class": "PImage",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/math/noise.js",
@@ -1072,7 +1132,7 @@
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/math/noise.js",
@@ -1091,48 +1151,48 @@
                 }
             ],
             "class": "PVector",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/math/noise.js",
             "line": 188,
             "description": "NOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
             "class": "PVector",
-            "module": "image"
+            "module": "Image"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 19,
+            "line": 20,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
             "type": "{Number}",
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 25,
+            "line": 26,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
             "type": "{Number}",
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 31,
+            "line": 32,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
             "type": "{Number}",
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 40,
+            "line": 41,
             "description": "Sets the x, y, and z component of the vector using two or three separate\n variables, the data from a PVector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -1157,11 +1217,11 @@
                 }
             ],
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 58,
+            "line": 59,
             "description": "Gets a copy of the vector, returns a PVector object.",
             "itemtype": "method",
             "name": "get",
@@ -1170,11 +1230,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 70,
+            "line": 71,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or adds two independent vectors together. The version of the method that adds two vectors together is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "add",
@@ -1204,11 +1264,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 89,
+            "line": 90,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from another, or subtracts two independent vectors. The version of the method that substracts two vectors is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -1235,11 +1295,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 108,
+            "line": 109,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -1256,11 +1316,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 124,
+            "line": 125,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -1277,11 +1337,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 140,
+            "line": 141,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -1307,22 +1367,22 @@
                 "type": "Number/mag"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 153,
+            "line": 154,
             "description": "Calculates the squared magnitude of the vector and returns the result\n as a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\n Faster if the real length is not required in the\n case of comparing vectors, etc.",
             "return": {
                 "description": "squared magnitude of the vector",
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 167,
+            "line": 168,
             "description": "Calculates the dot product of two vectors.",
             "params": [
                 {
@@ -1336,22 +1396,22 @@
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 184,
+            "line": 185,
             "description": "Calculates the cross product of two vectors.",
             "return": {
                 "description": "the cross product",
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 197,
+            "line": 198,
             "description": "Calculates the Euclidean distance between two points (considering a\n point as a vector object).",
             "params": [
                 {
@@ -1365,18 +1425,18 @@
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 211,
+            "line": 212,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 220,
+            "line": 221,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b> parameter.",
             "params": [
                 {
@@ -1386,11 +1446,11 @@
                 }
             ],
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 235,
+            "line": 236,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b> parameter.",
             "params": [
                 {
@@ -1400,22 +1460,22 @@
                 }
             ],
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 245,
+            "line": 246,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)\n TODO: deal with AngleMode",
             "return": {
                 "description": "the angle of rotation",
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 256,
+            "line": 257,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the same\n TODO: Change to rotate()\n TODO: Deal with angleMode",
             "params": [
                 {
@@ -1425,11 +1485,11 @@
                 }
             ],
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 272,
+            "line": 273,
             "description": "Linear interpolate the vector to another vector",
             "params": [
                 {
@@ -1444,18 +1504,18 @@
                 }
             ],
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 289,
+            "line": 290,
             "description": "Return a representation of this vector as a float array. This is only\n for temporary use. If used in any other fashion, the contents should be\n copied by using the <b>PVector.get()</b> method to copy into your own array.\nreturn {Array} an array with the 3 values",
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 305,
+            "line": 306,
             "description": "Make a new 2D unit vector from an angle",
             "params": [
                 {
@@ -1469,33 +1529,33 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 315,
+            "line": 316,
             "description": "Make a new 2D unit vector from a random angle",
             "return": {
                 "description": "The new PVector object.",
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 325,
+            "line": 326,
             "description": "Make a new random 3D unit vector.",
             "return": {
                 "description": "The new PVector object.",
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 340,
+            "line": 341,
             "description": "Adds two vectors together and returns a new one.",
             "params": [
                 {
@@ -1514,11 +1574,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 354,
+            "line": 355,
             "description": "Subtracts one PVector from another and returns a new one.  The second vector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "params": [
                 {
@@ -1537,11 +1597,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 369,
+            "line": 370,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "params": [
                 {
@@ -1560,11 +1620,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 382,
+            "line": 383,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "params": [
                 {
@@ -1583,11 +1643,11 @@
                 "type": "PVector"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 396,
+            "line": 397,
             "description": "Calculates the dot product of two vectors.",
             "params": [
                 {
@@ -1606,11 +1666,11 @@
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 409,
+            "line": 410,
             "description": "Calculates the cross product of two vectors.",
             "params": [
                 {
@@ -1629,11 +1689,11 @@
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 422,
+            "line": 423,
             "description": "Calculates the Euclidean distance between two points (considering a\n point as a vector object).",
             "params": [
                 {
@@ -1652,11 +1712,11 @@
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 436,
+            "line": 437,
             "description": "Linear interpolate a vector to another vector and return the result as a new vector.",
             "params": [
                 {
@@ -1676,11 +1736,11 @@
                 }
             ],
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 448,
+            "line": 449,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "params": [
                 {
@@ -1699,7 +1759,7 @@
                 "type": "Number"
             },
             "class": "PVector",
-            "module": "PVector"
+            "module": "Math"
         },
         {
             "file": "src/math/random.js",
@@ -1721,8 +1781,8 @@
                 "description": "",
                 "type": "Number"
             },
-            "class": "2d primitives",
-            "module": "PVector"
+            "class": "2D Primitives",
+            "module": "Math"
         },
         {
             "file": "src/shape/2d_primitives.js",
@@ -1775,8 +1835,8 @@
             "example": [
                 " <div><img src=\"http://processing.org/reference/images/arc_.png\">\n<code>arc(50, 55, 50, 50, 0, HALF_PI);\nnoFill();\narc(50, 55, 60, 60, HALF_PI, PI);\narc(50, 55, 70, 70, PI, PI+QUARTER_PI);\narc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_2.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_3.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_4.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n</code></div>"
             ],
-            "class": "2d primitives",
-            "module": "shape"
+            "class": "2D Primitives",
+            "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
@@ -1810,8 +1870,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "2d primitives",
-            "module": "shape"
+            "class": "2D Primitives",
+            "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
@@ -1845,8 +1905,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "2d primitives",
-            "module": "shape"
+            "class": "2D Primitives",
+            "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
@@ -1870,8 +1930,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "2d primitives",
-            "module": "shape"
+            "class": "2D Primitives",
+            "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
@@ -1925,8 +1985,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "2d primitives",
-            "module": "shape"
+            "class": "2D Primitives",
+            "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
@@ -1960,8 +2020,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "2d primitives",
-            "module": "shape"
+            "class": "2D Primitives",
+            "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
@@ -2005,8 +2065,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "2d primitives",
-            "module": "shape"
+            "class": "2D Primitives",
+            "module": "Shape"
         },
         {
             "file": "src/shape/attributes.js",
@@ -2025,8 +2085,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "attributes",
-            "module": "shape"
+            "class": "Attributes",
+            "module": "Shape"
         },
         {
             "file": "src/shape/attributes.js",
@@ -2038,8 +2098,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "attributes",
-            "module": "shape"
+            "class": "Attributes",
+            "module": "Shape"
         },
         {
             "file": "src/shape/attributes.js",
@@ -2058,8 +2118,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "attributes",
-            "module": "shape"
+            "class": "Attributes",
+            "module": "Shape"
         },
         {
             "file": "src/shape/attributes.js",
@@ -2071,8 +2131,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "attributes",
-            "module": "shape"
+            "class": "Attributes",
+            "module": "Shape"
         },
         {
             "file": "src/shape/attributes.js",
@@ -2091,8 +2151,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "attributes",
-            "module": "shape"
+            "class": "Attributes",
+            "module": "Shape"
         },
         {
             "file": "src/shape/attributes.js",
@@ -2111,8 +2171,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "attributes",
-            "module": "shape"
+            "class": "Attributes",
+            "module": "Shape"
         },
         {
             "file": "src/shape/attributes.js",
@@ -2131,8 +2191,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "attributes",
-            "module": "shape"
+            "class": "Attributes",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2186,8 +2246,8 @@
                 "description": "the p5 object",
                 "type": "Object"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2206,8 +2266,8 @@
                 "description": "the p5 object",
                 "type": "Object"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2246,8 +2306,8 @@
                 "description": "value the value of the Bezier at point t",
                 "type": "Number"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2284,8 +2344,8 @@
                 "description": "value the tangent at point t",
                 "type": "Number"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2339,8 +2399,8 @@
                 "description": "the p5 object",
                 "type": "Object"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2359,8 +2419,8 @@
                 "description": "the p5 object",
                 "type": "Object"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2399,8 +2459,8 @@
                 "description": "value Bezier value at point t",
                 "type": "Number"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/shape/curves.js",
@@ -2439,8 +2499,8 @@
                 "description": "value the tangent at point t",
                 "type": "Number"
             },
-            "class": "curves",
-            "module": "shape"
+            "class": "Curves",
+            "module": "Shape"
         },
         {
             "file": "src/app.js",
@@ -2451,7 +2511,7 @@
                 "type": "Undefined"
             },
             "class": "",
-            "module": "shape"
+            "module": "Shape"
         }
     ],
     "warnings": [
@@ -2461,31 +2521,31 @@
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:167"
+            "line": " src/math/pvector.js:168"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:396"
+            "line": " src/math/pvector.js:397"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:396"
+            "line": " src/math/pvector.js:397"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:409"
+            "line": " src/math/pvector.js:410"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:409"
+            "line": " src/math/pvector.js:410"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:422"
+            "line": " src/math/pvector.js:423"
         },
         {
             "message": "param name missing: {PVector}",
-            "line": " src/math/pvector.js:422"
+            "line": " src/math/pvector.js:423"
         },
         {
             "message": "Missing item type\np5 instance constructor\n\nA p5 instance....\n\nCan run in \"global\" or \"instance\" mode:\n  \"global\" - \n  \"instance\" - \n\nPublic fields on a p5 instance:",
@@ -2593,95 +2653,95 @@
         },
         {
             "message": "Missing item type\nCalculates the squared magnitude of the vector and returns the result\n as a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\n Faster if the real length is not required in the\n case of comparing vectors, etc.",
-            "line": " src/math/pvector.js:153"
+            "line": " src/math/pvector.js:154"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:167"
+            "line": " src/math/pvector.js:168"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:184"
+            "line": " src/math/pvector.js:185"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\n point as a vector object).",
-            "line": " src/math/pvector.js:197"
+            "line": " src/math/pvector.js:198"
         },
         {
             "message": "Missing item type\nNormalize the vector to length 1 (make it a unit vector).",
-            "line": " src/math/pvector.js:211"
+            "line": " src/math/pvector.js:212"
         },
         {
             "message": "Missing item type\nLimit the magnitude of this vector to the value used for the <b>max</b> parameter.",
-            "line": " src/math/pvector.js:220"
+            "line": " src/math/pvector.js:221"
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b> parameter.",
-            "line": " src/math/pvector.js:235"
+            "line": " src/math/pvector.js:236"
         },
         {
             "message": "Missing item type\nCalculate the angle of rotation for this vector (only 2D vectors)\n TODO: deal with AngleMode",
-            "line": " src/math/pvector.js:245"
+            "line": " src/math/pvector.js:246"
         },
         {
             "message": "Missing item type\nRotate the vector by an angle (only 2D vectors), magnitude remains the same\n TODO: Change to rotate()\n TODO: Deal with angleMode",
-            "line": " src/math/pvector.js:256"
+            "line": " src/math/pvector.js:257"
         },
         {
             "message": "Missing item type\nLinear interpolate the vector to another vector",
-            "line": " src/math/pvector.js:272"
+            "line": " src/math/pvector.js:273"
         },
         {
             "message": "Missing item type\nReturn a representation of this vector as a float array. This is only\n for temporary use. If used in any other fashion, the contents should be\n copied by using the <b>PVector.get()</b> method to copy into your own array.\nreturn {Array} an array with the 3 values",
-            "line": " src/math/pvector.js:289"
+            "line": " src/math/pvector.js:290"
         },
         {
             "message": "Missing item type\nMake a new 2D unit vector from an angle",
-            "line": " src/math/pvector.js:305"
+            "line": " src/math/pvector.js:306"
         },
         {
             "message": "Missing item type\nMake a new 2D unit vector from a random angle",
-            "line": " src/math/pvector.js:315"
+            "line": " src/math/pvector.js:316"
         },
         {
             "message": "Missing item type\nMake a new random 3D unit vector.",
-            "line": " src/math/pvector.js:325"
+            "line": " src/math/pvector.js:326"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/pvector.js:340"
+            "line": " src/math/pvector.js:341"
         },
         {
             "message": "Missing item type\nSubtracts one PVector from another and returns a new one.  The second vector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/pvector.js:354"
+            "line": " src/math/pvector.js:355"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:369"
+            "line": " src/math/pvector.js:370"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:382"
+            "line": " src/math/pvector.js:383"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:396"
+            "line": " src/math/pvector.js:397"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:409"
+            "line": " src/math/pvector.js:410"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\n point as a vector object).",
-            "line": " src/math/pvector.js:422"
+            "line": " src/math/pvector.js:423"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a new vector.",
-            "line": " src/math/pvector.js:436"
+            "line": " src/math/pvector.js:437"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/math/pvector.js:448"
+            "line": " src/math/pvector.js:449"
         },
         {
             "message": "Missing item type\nReturn a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",

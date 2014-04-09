@@ -32,25 +32,35 @@ define([
         _.each(items, function(item, i) {
           var item = items[i];
           var group = item.module || '_';
+          var subgroup = item.class || '_';
           var hash = App.router.getHash(item);
           
-          // Create a groups list
+          // Create a group list
           if (!self.groups[group]) {
             self.groups[group] = {
               name: group.replace('_', '&nbsp;'),
+              subgroups: {}
+            };
+          }
+
+          // Create a subgroup list
+          if (!self.groups[group].subgroups[subgroup]) {
+            self.groups[group].subgroups[subgroup] = {
+              name: subgroup.replace('_', '&nbsp;'),
               items: []
             };
           }
-          self.groups[group].items.push(item);
+
+          self.groups[group].subgroups[subgroup].items.push(item);
         });
 
         // Sort groups by name A-Z
         _.sortBy(self.groups, this.sortByName);
 
-        // Sort items by name A-Z
-        _.each(self.groups, function(group) {
-          _.sortBy(group.items, this.sortByName);
-        });
+        // // Sort items by name A-Z
+        // _.each(self.groups, function(group) {
+        //   _.sortBy(group.items, this.sortByName);
+        // });
 
         // Put the <li> items html into the list <ul>
         var listHtml = self.listTpl({
