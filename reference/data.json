@@ -35,7 +35,9 @@
         },
         "src/environment/environment.js": {
             "name": "src/environment/environment.js",
-            "modules": {},
+            "modules": {
+                "Environment": 1
+            },
             "classes": {},
             "fors": {
                 "Environment": 1
@@ -66,9 +68,7 @@
         },
         "src/image/loading_displaying.js": {
             "name": "src/image/loading_displaying.js",
-            "modules": {
-                "Environment": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "Loading & Displaying": 1
@@ -208,12 +208,11 @@
                 "Environment": 1
             },
             "fors": {
-                "Environment": 1,
-                "Loading & Displaying": 1
+                "Environment": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/image/loading_displaying.js",
+            "file": "src/environment/environment.js",
             "line": 1,
             "requires": [
                 "core",
@@ -1608,7 +1607,7 @@
                 "type": "Array/Color"
             },
             "class": "Loading & Displaying",
-            "module": "Environment"
+            "module": "Image"
         },
         {
             "file": "src/image/loading_displaying.js",
@@ -1617,7 +1616,7 @@
             "itemtype": "method",
             "name": "loadPixels",
             "class": "Loading & Displaying",
-            "module": "Environment"
+            "module": "Image"
         },
         {
             "file": "src/image/loading_displaying.js",
@@ -1626,7 +1625,7 @@
             "itemtype": "method",
             "name": "updatePixels",
             "class": "Loading & Displaying",
-            "module": "Environment"
+            "module": "Image"
         },
         {
             "file": "src/math/calculation.js",
