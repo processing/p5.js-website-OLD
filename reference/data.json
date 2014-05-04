@@ -912,7 +912,25 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 280,
+            "line": 114,
+            "description": "System variable that stores the width of the drawing canvas. This value is set by the first parameter of the createCanvas() function. For example, the function call createCanvas(320, 240) sets the width variable to the value 320. The value of width defaults to 100 if createCanvas() is not used in a program.",
+            "itemtype": "property",
+            "name": "width",
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 122,
+            "description": "System variable that stores the height of the drawing canvas. This value is set by the second parameter of the createCanvas() function. For example, the function call createCanvas(320, 240) sets the height variable to the value 240. The value of height defaults to 100 if createCanvas() is not used in a program.",
+            "itemtype": "property",
+            "name": "height",
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 298,
             "description": "_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
             "return": {
                 "description": "",
@@ -923,7 +941,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 333,
+            "line": 351,
             "description": "_preload\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -934,7 +952,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 353,
+            "line": 371,
             "description": "The setup() function is called once when the program starts. It's used to define initial enviroment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one setup() function for each program and it shouldn't be called again after its initial execution. Note: Variables declared within setup() are not accessible within other functions, including draw().",
             "example": [
                 " <div>\n<code>function setup() {\n createCanvas(200, 200);\n background(0);\n noStroke();\n fill(102);\n}\n\nvar a = 0;\n\nfunction draw() {\n rect(a++%width, 10, 2, 80); \n}</code></div>"
@@ -946,7 +964,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 380,
+            "line": 398,
             "description": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. draw() is called automatically and should never be called explicitly.\nIt should always be controlled with noLoop(), redraw() and loop(). After noLoop() stops the code in draw() from executing, redraw() causes the code inside draw() to execute once, and loop() will cause the code inside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with the frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as mousePressed(). Sometimes, you might have an empty call to draw() in your program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -955,7 +973,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 411,
+            "line": 429,
             "description": "_runFrames\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -966,7 +984,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 427,
+            "line": 445,
             "description": "_applyDefaults\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -977,7 +995,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 440,
+            "line": 458,
             "description": "_setProperty\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -4052,23 +4070,23 @@
         },
         {
             "message": "Missing item type\n_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
-            "line": " src/core/core.js:280"
+            "line": " src/core/core.js:298"
         },
         {
             "message": "Missing item type\n_preload\n\nTODO: ???",
-            "line": " src/core/core.js:333"
+            "line": " src/core/core.js:351"
         },
         {
             "message": "Missing item type\n_runFrames\n\nTODO: ???",
-            "line": " src/core/core.js:411"
+            "line": " src/core/core.js:429"
         },
         {
             "message": "Missing item type\n_applyDefaults\n\nTODO: ???",
-            "line": " src/core/core.js:427"
+            "line": " src/core/core.js:445"
         },
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
-            "line": " src/core/core.js:440"
+            "line": " src/core/core.js:458"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
