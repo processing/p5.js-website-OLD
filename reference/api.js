@@ -4,6 +4,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "2D Primitives",
         "Attributes",
         "Calculation",
+        "Core",
         "Creating & Reading",
         "Curves",
         "Environment",
@@ -21,6 +22,7 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "Color",
+        "Core",
         "Environment",
         "Image",
         "Math",
@@ -32,6 +34,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Color",
             "name": "Color"
+        },
+        {
+            "displayName": "Core",
+            "name": "Core"
         },
         {
             "displayName": "Environment",

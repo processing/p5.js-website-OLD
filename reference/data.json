@@ -28,9 +28,15 @@
         },
         "src/core/core.js": {
             "name": "src/core/core.js",
-            "modules": {},
+            "modules": {
+                "Core": 1
+            },
             "classes": {},
-            "fors": {},
+            "fors": {
+                "Core": 1,
+                "Environment": 1,
+                "Structure": 1
+            },
             "namespaces": {}
         },
         "src/environment/environment.js": {
@@ -221,12 +227,28 @@
                 "core"
             ]
         },
+        "Core": {
+            "name": "Core",
+            "submodules": {},
+            "classes": {
+                "Core": 1,
+                "Environment": 1,
+                "Structure": 1
+            },
+            "fors": {
+                "Core": 1,
+                "Environment": 1,
+                "Structure": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/core/core.js",
+            "line": 1
+        },
         "Environment": {
             "name": "Environment",
             "submodules": {},
-            "classes": {
-                "Environment": 1
-            },
+            "classes": {},
             "fors": {
                 "Environment": 1
             },
@@ -318,9 +340,7 @@
         "Structure": {
             "name": "Structure",
             "submodules": {},
-            "classes": {
-                "Structure": 1
-            },
+            "classes": {},
             "fors": {
                 "Structure": 1
             },
@@ -372,6 +392,17 @@
             "module": "Color",
             "namespace": ""
         },
+        "Core": {
+            "name": "Core",
+            "shortname": "Core",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Core",
+            "namespace": ""
+        },
         "Environment": {
             "name": "Environment",
             "shortname": "Environment",
@@ -380,7 +411,18 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "Environment",
+            "module": "Core",
+            "namespace": ""
+        },
+        "Structure": {
+            "name": "Structure",
+            "shortname": "Structure",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Core",
             "namespace": ""
         },
         "Image": {
@@ -569,17 +611,6 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Shape",
-            "namespace": ""
-        },
-        "Structure": {
-            "name": "Structure",
-            "shortname": "Structure",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Structure",
             "namespace": ""
         }
     },
@@ -786,7 +817,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 12,
+            "line": 15,
             "description": "p5 instance constructor\n\nA p5 instance....\n\nCan run in \"global\" or \"instance\" mode:\n  \"global\" - \n  \"instance\" - \n\nPublic fields on a p5 instance:",
             "params": [
                 {
@@ -804,85 +835,156 @@
                 "description": "",
                 "type": "P5"
             },
-            "class": "Environment",
-            "module": "Color"
+            "class": "Core",
+            "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 208,
+            "line": 37,
+            "description": "The system variable frameCount contains the number of frames that have been displayed since the program started. Inside setup() the value is 0, after the first iteration of draw it is 1, etc.",
+            "itemtype": "property",
+            "name": "frameCount",
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  frameRate(30);\n}\n\nfunction draw() {\n  line(0, 0, width, height);\n  print(frameCount);\n}\n</code></div>"
+            ],
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 56,
+            "description": "Confirms if a p5.js program is \"focused,\" meaning that it is active and will accept mouse or keyboard input. This variable is \"true\" if it is focused and \"false\" if not.",
+            "itemtype": "property",
+            "name": "focused",
+            "example": [
+                "\n<div><code>\nif (focused) {  // or \"if (focused === true)\"\n  ellipse(25, 25, 50, 50);\n} else {\n  line(0, 0, 100, 100);\n  line(100, 0, 0, 100);\n}\n</code></div>"
+            ],
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 73,
+            "description": "System variable that stores the width of the entire screen display. This is used to run a full-screen program on any display size.",
+            "example": [
+                "\n<div><code>size(displayWidth, displayHeight);</code></div>"
+            ],
+            "itemtype": "property",
+            "name": "displayWidth",
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 83,
+            "description": "System variable that stores the height of the entire screen display. This is used to run a full-screen program on any display size.",
+            "example": [
+                "\n<div><code>size(displayWidth, displayHeight);</code></div>"
+            ],
+            "itemtype": "property",
+            "name": "displayHeight",
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 93,
+            "description": "System variable that stores the width of the inner window, it maps to window.innerWidth",
+            "example": [
+                "\n<div><code>size(windowWidth, windowHeight);</code></div>"
+            ],
+            "itemtype": "property",
+            "name": "windowWidth",
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 103,
+            "description": "System variable that stores the height of the inner window, it maps to window.innerHeight",
+            "example": [
+                "\n<div><code>size(windowWidth, windowHeight);</code></div>"
+            ],
+            "itemtype": "property",
+            "name": "windowHeight",
+            "class": "Environment",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 280,
             "description": "_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
             "class": "Environment",
-            "module": "Color"
+            "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 261,
+            "line": 333,
             "description": "_preload\n\nTODO: ???",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
             "class": "Environment",
-            "module": "Color"
+            "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 281,
-            "description": "_setup\n\nTODO: ???",
-            "return": {
-                "description": "",
-                "type": "Undefined"
-            },
-            "class": "Environment",
-            "module": "Color"
+            "line": 353,
+            "description": "The setup() function is called once when the program starts. It's used to define initial enviroment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one setup() function for each program and it shouldn't be called again after its initial execution. Note: Variables declared within setup() are not accessible within other functions, including draw().",
+            "example": [
+                " <div>\n<code>function setup() {\n createCanvas(200, 200);\n background(0);\n noStroke();\n fill(102);\n}\n\nvar a = 0;\n\nfunction draw() {\n rect(a++%width, 10, 2, 80); \n}</code></div>"
+            ],
+            "itemtype": "method",
+            "name": "setup",
+            "class": "Structure",
+            "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 296,
-            "description": "_draw\n\nTODO: ???",
-            "return": {
-                "description": "",
-                "type": "Undefined"
-            },
-            "class": "Environment",
-            "module": "Color"
+            "line": 380,
+            "description": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. draw() is called automatically and should never be called explicitly.\nIt should always be controlled with noLoop(), redraw() and loop(). After noLoop() stops the code in draw() from executing, redraw() causes the code inside draw() to execute once, and loop() will cause the code inside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with the frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as mousePressed(). Sometimes, you might have an empty call to draw() in your program, as shown in the above example.",
+            "itemtype": "method",
+            "name": "draw",
+            "class": "Structure",
+            "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 323,
+            "line": 411,
             "description": "_runFrames\n\nTODO: ???",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "Environment",
-            "module": "Color"
+            "class": "Structure",
+            "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 339,
+            "line": 427,
             "description": "_applyDefaults\n\nTODO: ???",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "Environment",
-            "module": "Color"
+            "class": "Structure",
+            "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 352,
+            "line": 440,
             "description": "_setProperty\n\nTODO: ???",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "Environment",
-            "module": "Color"
+            "class": "Structure",
+            "module": "Core"
         },
         {
             "file": "src/environment/environment.js",
@@ -3740,6 +3842,18 @@
             "module": "Structure"
         },
         {
+            "file": "src/structure/structure.js",
+            "line": 93,
+            "description": "Executes the code within draw() one time. This functions allows the program to update the display window only when necessary, for example when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within events such as mousePressed(). This is because redraw() does not run draw() immediately (it only sets a flag that indicates an update is needed). \n \n The redraw() function does not work properly when called inside draw(). To enable/disable animations, use loop() and noLoop().",
+            "itemtype": "method",
+            "name": "redraw",
+            "example": [
+                "\n<div><code>\nvar x = 0;\n\nfunction setup() {\n  createCanvas(200, 200);\n  noLoop();\n}\n\nfunction draw() {\n  background(204);\n  line(x, 0, x, height); \n}\n\nfunction mousePressed() {\n  x += 1;\n  redraw();\n}\n</code></div>"
+            ],
+            "class": "Structure",
+            "module": "Structure"
+        },
+        {
             "file": "src/typography/attributes.js",
             "line": 13,
             "description": "Sets the current alignment for drawing text. The parameters LEFT, CENTER, and RIGHT set the display characteristics of the letters in relation to the values for the x and y parameters of the text() function.",
@@ -3934,35 +4048,27 @@
         },
         {
             "message": "Missing item type\np5 instance constructor\n\nA p5 instance....\n\nCan run in \"global\" or \"instance\" mode:\n  \"global\" - \n  \"instance\" - \n\nPublic fields on a p5 instance:",
-            "line": " src/core/core.js:12"
+            "line": " src/core/core.js:15"
         },
         {
             "message": "Missing item type\n_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
-            "line": " src/core/core.js:208"
+            "line": " src/core/core.js:280"
         },
         {
             "message": "Missing item type\n_preload\n\nTODO: ???",
-            "line": " src/core/core.js:261"
-        },
-        {
-            "message": "Missing item type\n_setup\n\nTODO: ???",
-            "line": " src/core/core.js:281"
-        },
-        {
-            "message": "Missing item type\n_draw\n\nTODO: ???",
-            "line": " src/core/core.js:296"
+            "line": " src/core/core.js:333"
         },
         {
             "message": "Missing item type\n_runFrames\n\nTODO: ???",
-            "line": " src/core/core.js:323"
+            "line": " src/core/core.js:411"
         },
         {
             "message": "Missing item type\n_applyDefaults\n\nTODO: ???",
-            "line": " src/core/core.js:339"
+            "line": " src/core/core.js:427"
         },
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
-            "line": " src/core/core.js:352"
+            "line": " src/core/core.js:440"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
