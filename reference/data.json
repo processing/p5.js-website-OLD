@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.2.7",
+        "version": "0.2.11",
         "url": ""
     },
     "files": {
@@ -809,7 +809,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 212,
+            "line": 208,
             "description": "_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
             "return": {
                 "description": "",
@@ -820,7 +820,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 260,
+            "line": 261,
             "description": "_preload\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -831,7 +831,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 280,
+            "line": 281,
             "description": "_setup\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -842,7 +842,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 295,
+            "line": 296,
             "description": "_draw\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -853,7 +853,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 322,
+            "line": 323,
             "description": "_runFrames\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -864,7 +864,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 338,
+            "line": 339,
             "description": "_applyDefaults\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -875,7 +875,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 351,
+            "line": 352,
             "description": "_setProperty\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1337,7 +1337,14 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 148,
+            "line": 149,
+            "description": "Helper fxn for sharing pixel methods",
+            "class": "PImage",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 157,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -1346,7 +1353,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 171,
+            "line": 167,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -1377,60 +1384,62 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 213,
+            "line": 187,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a Pimage is\nreturned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
             "params": [
                 {
                     "name": "x",
-                    "description": "",
-                    "type": "Integer"
+                    "description": "x-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
                 },
                 {
                     "name": "y",
-                    "description": "",
-                    "type": "Integer"
+                    "description": "y-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
                 },
                 {
                     "name": "w",
                     "description": "width",
-                    "type": "Integer"
+                    "type": "Number"
                 },
                 {
                     "name": "h",
                     "description": "height",
-                    "type": "Integer"
+                    "type": "Number"
                 }
             ],
             "return": {
-                "description": "pixel [4 element integer] array or a PImage",
-                "type": "[Integer] | PImage | undefined"
+                "description": "color of pixel at x,y in array format [R, G, B, A] or PImage",
+                "type": "Array/Color | PImage"
             },
             "class": "PImage",
             "module": "Image"
         },
         {
             "file": "src/image/image.js",
-            "line": 271,
+            "line": 209,
             "description": "Set the color of a single pixel or write an image into\nthis PImage.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
             "itemtype": "method",
             "name": "set",
             "params": [
                 {
                     "name": "x",
-                    "description": "",
-                    "type": "Integer"
+                    "description": "x-coordinate of the pixel",
+                    "type": "Number"
                 },
                 {
                     "name": "y",
-                    "description": "",
-                    "type": "Integer"
+                    "description": "y-coordinate of the pixel",
+                    "type": "Number"
                 },
                 {
-                    "name": "imageData",
-                    "description": "a pImage or an array representing a color.",
-                    "type": "PImage|[Integer]"
+                    "name": "insert",
+                    "description": "a grayscale value | a color array | image to copy",
+                    "type": "Number|Array|Object"
                 }
             ],
             "class": "PImage",
@@ -1438,7 +1447,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 302,
+            "line": 230,
             "description": "Resize this PImage.",
             "itemtype": "method",
             "name": "resize",
@@ -1463,7 +1472,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 346,
+            "line": 274,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -1519,7 +1528,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 400,
+            "line": 297,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -1535,7 +1544,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 431,
+            "line": 328,
             "description": "Applies an image filter to a PImage",
             "itemtype": "method",
             "name": "filter",
@@ -1556,7 +1565,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 444,
+            "line": 341,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -1617,7 +1626,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 480,
+            "line": 371,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -1633,7 +1642,145 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 38,
+            "line": 24,
+            "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
+            "itemtype": "method",
+            "name": "blend",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image",
+                    "type": "PImage|undefined"
+                },
+                {
+                    "name": "sx",
+                    "description": "X coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sy",
+                    "description": "Y coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sw",
+                    "description": "source image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sh",
+                    "description": "source image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dx",
+                    "description": "X coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dy",
+                    "description": "Y coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dw",
+                    "description": "destination image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dh",
+                    "description": "destination image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "blendMode",
+                    "description": "the blend mode\n\nAvailable blend modes are: normal | multiply | screen | overlay | \n           darken | lighten | color-dodge | color-burn | hard-light | \n           soft-light | difference | exclusion | hue | saturation | \n           color | luminosity\n\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
+                    "type": "Integer"
+                }
+            ],
+            "class": "Pixels",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/pixels.js",
+            "line": 59,
+            "description": "Copies a region of the canvas to another region of the canvas  \nand copies a region of pixels from an image used as the srcImg parameter into the canvas\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
+            "itemtype": "method",
+            "name": "copy",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image",
+                    "type": "PImage|undefined"
+                },
+                {
+                    "name": "sx",
+                    "description": "X coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sy",
+                    "description": "Y coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sw",
+                    "description": "source image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sh",
+                    "description": "source image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dx",
+                    "description": "X coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dy",
+                    "description": "Y coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dw",
+                    "description": "destination image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dh",
+                    "description": "destination image height",
+                    "type": "Integer"
+                }
+            ],
+            "class": "Pixels",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/pixels.js",
+            "line": 110,
+            "description": "Applies a filter to the canvas",
+            "itemtype": "method",
+            "name": "filter",
+            "params": [
+                {
+                    "name": "operation",
+                    "description": "one of threshold, gray, invert, posterize and opaque\n                           see Filters.js for docs on each available filter",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "Number|undefined"
+                }
+            ],
+            "class": "Pixels",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/pixels.js",
+            "line": 122,
             "description": "Reads the color of any pixel or grabs a section of an image. If no parameters are specified, the entire image is returned. Use the x and y parameters to get the value of one pixel. Get a section of the display window by specifying additional w and h parameters. When getting an image, the x and y parameters define the coordinates for the upper-left corner of the image, regardless of the current imageMode().\n\nIf the pixel requested is outside of the image window, black is returned. The numbers returned are scaled according to the current color ranges, but only RGB values are returned by this function. For example, even though you may have drawn a shape with colorMode(HSB), the numbers returned will be in RGB format. \n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast as grabbing the data directly from pixels[]. The equivalent statement to get(x, y) using pixels[] is pixels[y*width+x]. See the reference for pixels[] for more information.",
             "itemtype": "method",
             "name": "get",
@@ -1649,10 +1796,20 @@
                     "description": "y-coordinate of the pixel",
                     "type": "Number",
                     "optional": true
+                },
+                {
+                    "name": "w",
+                    "description": "width",
+                    "type": "Number"
+                },
+                {
+                    "name": "h",
+                    "description": "height",
+                    "type": "Number"
                 }
             ],
             "return": {
-                "description": "color of pixel at x,y in array format [R, G, B, A]",
+                "description": "color of pixel at x,y in array format [R, G, B, A] or PImage",
                 "type": "Array/Color"
             },
             "class": "Pixels",
@@ -1660,7 +1817,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 66,
+            "line": 176,
             "description": "Loads the pixel data for the display window into the pixels[] array. This function must always be called before reading from or writing to pixels[].",
             "itemtype": "method",
             "name": "loadPixels",
@@ -1669,7 +1826,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 81,
+            "line": 192,
             "description": "Changes the color of any pixel, or writes an image directly to the display window.\n\nThe x and y parameters specify the pixel to change and the c parameter specifies the color value. The c parameter is interpreted according to the current color mode. (The default color mode is RGB values from 0 to 255.) When setting an image, the x and y parameters define the coordinates for the upper-left corner of the image, regardless of the current imageMode(). \n\nSetting the color of a single pixel with set(x, y) is easy, but not as fast as putting the data directly into pixels[]. The equivalent statement to set(x, y, #000000) using pixels[] is pixels[y*width+x] = #000000. See the reference for pixels[] for more information.",
             "itemtype": "method",
             "name": "set",
@@ -1695,7 +1852,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 120,
+            "line": 231,
             "description": "Updates the display window with the data in the pixels[] array. Use in conjunction with loadPixels(). If you're only reading pixels from the array, there's no need to call updatePixels() — updating is only necessary to apply changes.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -3781,31 +3938,31 @@
         },
         {
             "message": "Missing item type\n_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
-            "line": " src/core/core.js:212"
+            "line": " src/core/core.js:208"
         },
         {
             "message": "Missing item type\n_preload\n\nTODO: ???",
-            "line": " src/core/core.js:260"
+            "line": " src/core/core.js:261"
         },
         {
             "message": "Missing item type\n_setup\n\nTODO: ???",
-            "line": " src/core/core.js:280"
+            "line": " src/core/core.js:281"
         },
         {
             "message": "Missing item type\n_draw\n\nTODO: ???",
-            "line": " src/core/core.js:295"
+            "line": " src/core/core.js:296"
         },
         {
             "message": "Missing item type\n_runFrames\n\nTODO: ???",
-            "line": " src/core/core.js:322"
+            "line": " src/core/core.js:323"
         },
         {
             "message": "Missing item type\n_applyDefaults\n\nTODO: ???",
-            "line": " src/core/core.js:338"
+            "line": " src/core/core.js:339"
         },
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
-            "line": " src/core/core.js:351"
+            "line": " src/core/core.js:352"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
@@ -3866,6 +4023,10 @@
         {
             "message": "Missing item type\nThis module defines the PImage class and P5 methods for\ndrawing images to the main display canvas.",
             "line": " src/image/image.js:10"
+        },
+        {
+            "message": "Missing item type\nHelper fxn for sharing pixel methods",
+            "line": " src/image/image.js:149"
         },
         {
             "message": "Missing item type\nNOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
