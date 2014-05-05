@@ -2,6 +2,7 @@ YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
         "2D Primitives",
+        "Array Functions",
         "Attributes",
         "Calculation",
         "Core",

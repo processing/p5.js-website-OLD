@@ -39,11 +39,20 @@
             },
             "namespaces": {}
         },
-        "src/data/string_functions.js": {
-            "name": "src/data/string_functions.js",
+        "src/data/array_functions.js": {
+            "name": "src/data/array_functions.js",
             "modules": {
                 "Data": 1
             },
+            "classes": {},
+            "fors": {
+                "Array Functions": 1
+            },
+            "namespaces": {}
+        },
+        "src/data/string_functions.js": {
+            "name": "src/data/string_functions.js",
+            "modules": {},
             "classes": {},
             "fors": {
                 "String Functions": 1
@@ -260,14 +269,16 @@
             "name": "Data",
             "submodules": {},
             "classes": {
+                "Array Functions": 1,
                 "String Functions": 1
             },
             "fors": {
+                "Array Functions": 1,
                 "String Functions": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/data/string_functions.js",
+            "file": "src/data/array_functions.js",
             "line": 1,
             "requires": [
                 "core"
@@ -451,6 +462,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Core",
+            "namespace": ""
+        },
+        "Array Functions": {
+            "name": "Array Functions",
+            "shortname": "Array Functions",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Data",
             "namespace": ""
         },
         "String Functions": {
@@ -1044,11 +1066,207 @@
             "module": "Core"
         },
         {
+            "file": "src/data/array_functions.js",
+            "line": 12,
+            "description": "Adds a value to an Array, maps to Array.push.",
+            "itemtype": "method",
+            "name": "append()",
+            "params": [
+                {
+                    "name": "array",
+                    "description": "Array to append",
+                    "type": "Array"
+                },
+                {
+                    "name": "value",
+                    "description": "value to be added to the Array",
+                    "type": "Any"
+                }
+            ],
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 24,
+            "description": "Copies an array (or part of an array) to another array. The src array is copied to the dst array, beginning at the position specified by srcPosition and into the position specified by dstPosition. The number of elements to copy is determined by length. Note that copying values overwrites existing values in the destination array. To append values instead of overwriting them, use concat().\n\nThe simplified version with only two arguments — arrayCopy(src, dst) — copies an entire array to another of the same size. It is equivalent to arrayCopy(src, 0, dst, 0, src.length).\n\nUsing this function is far more efficient for copying array data than iterating through a for() loop and copying each element individually.",
+            "itemtype": "method",
+            "name": "arrayCopy()",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "the source Array",
+                    "type": "Array"
+                },
+                {
+                    "name": "srcPosition",
+                    "description": "starting position in the source Array",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "dst",
+                    "description": "the destination Array",
+                    "type": "Array"
+                },
+                {
+                    "name": "dstPosition",
+                    "description": "starting position in the destination Array",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "length",
+                    "description": "number of Array elements to be copied",
+                    "type": "Nimber",
+                    "optional": true
+                }
+            ],
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 74,
+            "description": "Concatenates two arrays, maps to Array.concat(). For example, concatenating the array { 1, 2, 3 } and the array { 4, 5, 6 } yields { 1, 2, 3, 4, 5, 6 }.",
+            "itemtype": "method",
+            "name": "concat()",
+            "params": [
+                {
+                    "name": "a",
+                    "description": "first Array to concatenate",
+                    "type": "Array"
+                },
+                {
+                    "name": "b",
+                    "description": "second Array to concatenate",
+                    "type": "Array"
+                }
+            ],
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 85,
+            "description": "Reverses the order of an array, maps to Array.reverse()",
+            "itemtype": "method",
+            "name": "reverse()",
+            "params": [
+                {
+                    "name": "list",
+                    "description": "Array to reverse",
+                    "type": "Array"
+                }
+            ],
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 95,
+            "description": "Decreases an array by one element and returns the shortened array, maps to Array.pop().",
+            "itemtype": "method",
+            "name": "shorten()",
+            "params": [
+                {
+                    "name": "list",
+                    "description": "Array to shorten",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "result shortened Array",
+                "type": "Array"
+            },
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 107,
+            "description": "Sorts an array of numbers from smallest to largest, or puts an array of words in alphabetical order. The original array is not modified; a re-ordered array is returned. The count parameter states the number of elements to sort. For example, if there are 12 elements in an array and count is set to 5, only the first 5 elements in the array will be sorted.",
+            "itemtype": "method",
+            "name": "sort()",
+            "params": [
+                {
+                    "name": "list",
+                    "description": "Array to sort",
+                    "type": "Array"
+                },
+                {
+                    "name": "count",
+                    "description": "number of elements to sort, starting from 0",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 125,
+            "description": "Inserts a value or an array of values into an existing array. The first parameter specifies the intial array to be modified, and the second parameter defines the data to be inserted. The third parameter is an index value which specifies the array position from which to insert data. (Remember that array index numbering starts at zero, so the first position is 0, the second position is 1, and so on.)",
+            "itemtype": "method",
+            "name": "splice()",
+            "params": [
+                {
+                    "name": "list",
+                    "description": "Array to splice into",
+                    "type": "Array"
+                },
+                {
+                    "name": "value",
+                    "description": "value to be spliced in",
+                    "type": "Any"
+                },
+                {
+                    "name": "index",
+                    "description": "position in the array from which to insert data",
+                    "type": "Number"
+                }
+            ],
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 141,
+            "description": "Extracts an array of elements from an existing array. The list parameter defines the array from which the elements will be copied, and the start and count parameters specify which elements to extract. If no count is given, elements will be extracted from the start to the end of the array. When specifying the start, remember that the first array element is 0. This function does not change the source array.",
+            "itemtype": "method",
+            "name": "subset()",
+            "params": [
+                {
+                    "name": "list",
+                    "description": "Array to extract from",
+                    "type": "Array"
+                },
+                {
+                    "name": "start",
+                    "description": "position to begin",
+                    "type": "Number"
+                },
+                {
+                    "name": "count",
+                    "description": "number of values to extract",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "result Array of extracted elements",
+                "type": "Array"
+            },
+            "class": "Array Functions",
+            "module": "Data"
+        },
+        {
             "file": "src/data/string_functions.js",
             "line": 14,
             "description": "Combines an array of Strings into one String, each separated by the character(s) used for the separator parameter. To join arrays of ints or floats, it's necessary to first convert them to Strings using nf() or nfs().",
             "itemtype": "method",
-            "name": "join",
+            "name": "join()",
             "params": [
                 {
                     "name": "list",
@@ -1073,7 +1291,7 @@
             "line": 26,
             "description": "This function is used to apply a regular expression to a piece of text, and return matching groups (elements found inside parentheses) as a String array. If there are no matches, a null value will be returned. If no groups are specified in the regular expression, but the sequence matches, an array of length 1 (with the matched text as the first element of the array) will be returned.\n\nTo use the function, first check to see if the result is null. If the result is null, then the sequence did not match at all. If the sequence did match, an array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular expression, then the contents of each will be returned in the array. Element [0] of a regular expression match returns the entire matching string, and the match groups start at element [1] (the first group is [1], the second [2], and so on).",
             "itemtype": "method",
-            "name": "match",
+            "name": "match()",
             "params": [
                 {
                     "name": "str",
@@ -1098,7 +1316,7 @@
             "line": 42,
             "description": "This function is used to apply a regular expression to a piece of text, and return a list of matching groups (elements found inside parentheses) as a two-dimensional String array. If there are no matches, a null value will be returned. If no groups are specified in the regular expression, but the sequence matches, a two dimensional array is still returned, but the second dimension is only of length one.\n\nTo use the function, first check to see if the result is null. If the result is null, then the sequence did not match at all. If the sequence did match, a 2D array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular expression, then the contents of each will be returned in the array. Assuming a loop with counter variable i, element [i][0] of a regular expression match returns the entire matching string, and the match groups start at element [i][1] (the first group is [i][1], the second [i][2], and so on).",
             "itemtype": "method",
-            "name": "matchAll",
+            "name": "matchAll()",
             "params": [
                 {
                     "name": "str",
@@ -1123,12 +1341,12 @@
             "line": 68,
             "description": "Utility function for formatting numbers into strings. There are two versions: one for formatting floats, and one for formatting ints. The values for the digits, left, and right parameters should always be positive integers.",
             "itemtype": "method",
-            "name": "nf",
+            "name": "nf()",
             "params": [
                 {
                     "name": "num",
                     "description": "the Number to format",
-                    "type": "Number"
+                    "type": "Number|Array"
                 },
                 {
                     "name": "digits",
@@ -1149,6 +1367,184 @@
                     "optional": true
                 }
             ],
+            "return": {
+                "description": "string formatted String",
+                "type": "String|Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 112,
+            "description": "Utility function for formatting numbers into strings and placing appropriate commas to mark units of 1000. There are two versions: one for formatting ints, and one for formatting an array of ints. The value for the right parameter should always be a positive integer.",
+            "itemtype": "method",
+            "name": "nfc()",
+            "params": [
+                {
+                    "name": "num",
+                    "description": "the Number to format",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "right",
+                    "description": "number of digits to the right of the decimal point",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "string formatted String",
+                "type": "String|Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 141,
+            "description": "Utility function for formatting numbers into strings. Similar to nf() but puts a \"+\" in front of positive numbers and a \"-\" in front of negative numbers. There are two versions: one for formatting floats, and one for formatting ints. The values for the digits, left, and right parameters should always be positive integers.",
+            "itemtype": "method",
+            "name": "nfp()",
+            "params": [
+                {
+                    "name": "num",
+                    "description": "the Number to format",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "digits",
+                    "description": "number of digits to pad with zero",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "left",
+                    "description": "number of digits to the left of the decimal point",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "right",
+                    "description": "number of digits to the right of the decimal point",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "string formatted String",
+                "type": "String|Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 164,
+            "description": "Utility function for formatting numbers into strings. Similar to nf() but puts a \"+\" in front of positive numbers and a \"-\" in front of negative numbers. There are two versions: one for formatting floats, and one for formatting ints. The values for the digits, left, and right parameters should always be positive integers.",
+            "itemtype": "method",
+            "name": "nfs()",
+            "params": [
+                {
+                    "name": "num",
+                    "description": "the Number to format",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "digits",
+                    "description": "number of digits to pad with zero",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "left",
+                    "description": "number of digits to the left of the decimal point",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "right",
+                    "description": "number of digits to the right of the decimal point",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "string formatted String",
+                "type": "String|Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 187,
+            "description": "The split() function maps to String.split(), it breaks a String into pieces using a character or string as the delimiter. The delim parameter specifies the character or characters that mark the boundaries between each piece. A String[] array is returned that contains each of the pieces. \n\nThe splitTokens() function works in a similar fashion, except that it splits using a range of characters instead of a specific character or sequence.",
+            "itemtype": "method",
+            "name": "split()",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "the String to be split",
+                    "type": "String"
+                },
+                {
+                    "name": "delim",
+                    "description": "the String used to separate the data",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "strings Array of Strings",
+                "type": "Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 201,
+            "description": "The splitTokens() function splits a String at one or many character delimiters or \"tokens.\" The delim parameter specifies the character or characters to be used as a boundary.\n\nIf no delim characters are specified, any whitespace character is used to split. Whitespace characters include tab (\\t), line feed (\\n), carriage return (\\r), form feed (\\f), and space.",
+            "itemtype": "method",
+            "name": "split()",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "the String to be split",
+                    "type": "String"
+                },
+                {
+                    "name": "delim",
+                    "description": "list of individual Strings that will be used as separators",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "strings Array of Strings",
+                "type": "Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 216,
+            "description": "Removes whitespace characters from the beginning and end of a String. In addition to standard whitespace characters such as space, carriage return, and tab, this function also removes the Unicode \"nbsp\" character.",
+            "itemtype": "method",
+            "name": "trim()",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "a String or Array of Strings to be trimmed",
+                    "type": "String|Array",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "result a trimmed String or Array of Strings",
+                "type": "String|Array"
+            },
             "class": "String Functions",
             "module": "Data"
         },
