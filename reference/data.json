@@ -1055,7 +1055,7 @@
                 " <div>\n<code>function setup() {\n createCanvas(200, 200);\n background(0);\n noStroke();\n fill(102);\n}\n\nvar a = 0;\n\nfunction draw() {\n rect(a++%width, 10, 2, 80); \n}</code></div>"
             ],
             "itemtype": "method",
-            "name": "setup",
+            "name": "setup()",
             "class": "Structure",
             "module": "Core"
         },
@@ -1064,7 +1064,7 @@
             "line": 398,
             "description": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. draw() is called automatically and should never be called explicitly.\nIt should always be controlled with noLoop(), redraw() and loop(). After noLoop() stops the code in draw() from executing, redraw() causes the code inside draw() to execute once, and loop() will cause the code inside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with the frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as mousePressed(). Sometimes, you might have an empty call to draw() in your program, as shown in the above example.",
             "itemtype": "method",
-            "name": "draw",
+            "name": "draw()",
             "class": "Structure",
             "module": "Core"
         },
@@ -1589,7 +1589,7 @@
             "line": 16,
             "description": "Sets the cursor to a predefined symbol or an image, or makes it visible if already hidden. If you are trying to set an image as the cursor, the recommended size is 16x16 or 32x32 pixels. It is not possible to load an image as the cursor if you are exporting your program for the Web, and not all MODES work with all browsers. The values for parameters x and y must be less than the dimensions of the image.",
             "itemtype": "method",
-            "name": "cursor",
+            "name": "cursor()",
             "params": [
                 {
                     "name": "kind",
@@ -1615,9 +1615,9 @@
         {
             "file": "src/environment/environment.js",
             "line": 51,
-            "description": "Specifies the number of frames to be displayed every second. For example, the function call frameRate(30) will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within setup() is recommended. The default rate is 60 frames per second.\nCalling frameRate() with no arguments returns the current framerate.",
+            "description": "Specifies the number of frames to be displayed every second. For example, the function call frameRate(30) will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within setup() is recommended. The default rate is 60 frames per second. This is the same as setFrameRate(val).\nCalling frameRate() with no arguments returns the current framerate. This is the same as getFrameRate().",
             "itemtype": "method",
-            "name": "frameRate",
+            "name": "frameRate()",
             "params": [
                 {
                     "name": "fps",
@@ -1664,7 +1664,7 @@
             "line": 87,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
-            "name": "noCursor",
+            "name": "noCursor()",
             "class": "Environment",
             "module": "Environment"
         },
@@ -4404,7 +4404,7 @@
             "line": 15,
             "description": "Stops Processing from continuously executing the code within draw(). If loop() is called, the code in draw() begins to run continuously again. If using noLoop() in setup(), it should be the last line inside the block.\n\nWhen noLoop() is used, it's not possible to manipulate or access the screen inside event handling functions such as mousePressed() or keyPressed(). Instead, use those functions to call redraw() or loop(), which will run draw(), which can update the screen properly. This means that when noLoop() has been called, no drawing can happen, and functions like saveFrame() or loadPixels() may not be used.\n\nNote that if the sketch is resized, redraw() will be called to update the sketch, even after noLoop() has been specified. Otherwise, the sketch would enter an odd state until loop() was called.",
             "itemtype": "method",
-            "name": "noLoop",
+            "name": "noLoop()",
             "class": "Structure",
             "module": "Structure"
         },
@@ -4413,7 +4413,7 @@
             "line": 28,
             "description": "By default, Processing loops through draw() continuously, executing the code within it. However, the draw() loop may be stopped by calling noLoop(). In that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
-            "name": "loop",
+            "name": "loop()",
             "class": "Structure",
             "module": "Structure"
         },
@@ -4422,7 +4422,7 @@
             "line": 37,
             "description": "The pushStyle() function saves the current style settings and popStyle() restores the prior settings. Note that these functions are always used together. They allow you to change the style settings and later return to what you had. When a new style is started with pushStyle(), it builds on the current style information. The pushStyle() and popStyle() functions can be embedded to provide more control. (See the second example above for a demonstration.)\n\nThe style information controlled by the following functions are included in the style: fill(), stroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), imageMode(), rectMode(), ellipseMode(), shapeMode(), colorMode(), textAlign(), textFont(), textMode(), textSize(), textLeading(), emissive(), specular(), shininess(), ambient()",
             "itemtype": "method",
-            "name": "pushStyle",
+            "name": "pushStyle()",
             "class": "Structure",
             "module": "Structure"
         },
@@ -4431,7 +4431,7 @@
             "line": 66,
             "description": "The pushStyle() function saves the current style settings and popStyle() restores the prior settings; these functions are always used together. They allow you to change the style settings and later return to what you had. When a new style is started with pushStyle(), it builds on the current style information. The pushStyle() and popStyle() functions can be embedded to provide more control (see the second example above for a demonstration.)",
             "itemtype": "method",
-            "name": "popStyle",
+            "name": "popStyle()",
             "class": "Structure",
             "module": "Structure"
         },
@@ -4440,7 +4440,7 @@
             "line": 93,
             "description": "Executes the code within draw() one time. This functions allows the program to update the display window only when necessary, for example when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within events such as mousePressed(). This is because redraw() does not run draw() immediately (it only sets a flag that indicates an update is needed). \n \n The redraw() function does not work properly when called inside draw(). To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
-            "name": "redraw",
+            "name": "redraw()",
             "example": [
                 "\n<div><code>\nvar x = 0;\n\nfunction setup() {\n  createCanvas(200, 200);\n  noLoop();\n}\n\nfunction draw() {\n  background(204);\n  line(x, 0, x, height); \n}\n\nfunction mousePressed() {\n  x += 1;\n  redraw();\n}\n</code></div>"
             ],
