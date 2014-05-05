@@ -5,6 +5,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Array Functions",
         "Attributes",
         "Calculation",
+        "Constants",
         "Core",
         "Creating & Reading",
         "Curves",
@@ -24,6 +25,7 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "Color",
+        "Constants",
         "Core",
         "Data",
         "Environment",
@@ -37,6 +39,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Color",
             "name": "Color"
+        },
+        {
+            "displayName": "Constants",
+            "name": "Constants"
         },
         {
             "displayName": "Core",

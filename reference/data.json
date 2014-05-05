@@ -219,6 +219,17 @@
             },
             "namespaces": {}
         },
+        "src/var/constants.js": {
+            "name": "src/var/constants.js",
+            "modules": {
+                "Constants": 1
+            },
+            "classes": {},
+            "fors": {
+                "Constants": 1
+            },
+            "namespaces": {}
+        },
         "src/app.js": {
             "name": "src/app.js",
             "modules": {},
@@ -406,6 +417,20 @@
             "requires": [
                 "core"
             ]
+        },
+        "Constants": {
+            "name": "Constants",
+            "submodules": {},
+            "classes": {
+                "Constants": 1
+            },
+            "fors": {
+                "Constants": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/var/constants.js",
+            "line": 1
         }
     },
     "classes": {
@@ -672,6 +697,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Shape",
+            "namespace": ""
+        },
+        "Constants": {
+            "name": "Constants",
+            "shortname": "Constants",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Constants",
             "namespace": ""
         }
     },
@@ -3278,7 +3314,7 @@
             "line": 16,
             "description": "The inverse of cos(), returns the arc cosine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range 0 to PI (3.1415927).",
             "itemtype": "method",
-            "name": "acos",
+            "name": "acos()",
             "params": [
                 {
                     "name": "value",
@@ -3298,7 +3334,7 @@
             "line": 31,
             "description": "The inverse of sin(), returns the arc sine of a value. This function expects the values in the range of -1 to 1 and values are returned in the range -PI/2 to PI/2.",
             "itemtype": "method",
-            "name": "asin",
+            "name": "asin()",
             "params": [
                 {
                     "name": "value",
@@ -3318,7 +3354,7 @@
             "line": 46,
             "description": "The inverse of tan(), returns the arc tangent of a value. This function expects the values in the range of -Infinity to Infinity (exclusive) and values are returned in the range -PI/2 to PI/2.",
             "itemtype": "method",
-            "name": "atan",
+            "name": "atan()",
             "params": [
                 {
                     "name": "value",
@@ -3338,7 +3374,7 @@
             "line": 61,
             "description": "Calculates the angle (in radians) from a specified point to the coordinate origin as measured from the positive x-axis. Values are returned as a float in the range from PI to -PI. The atan2() function is most often used for orienting geometry to the position of the cursor. Note: The y-coordinate of the point is the first parameter, and the x-coordinate is the second parameter, due the the structure of calculating the tangent.",
             "itemtype": "method",
-            "name": "atan2",
+            "name": "atan2()",
             "params": [
                 {
                     "name": "y",
@@ -3363,7 +3399,7 @@
             "line": 77,
             "description": "Calculates the cosine of an angle. This function takes into account the current angleMode. Values are returned in the range -1 to 1.",
             "itemtype": "method",
-            "name": "cos",
+            "name": "cos()",
             "params": [
                 {
                     "name": "angle",
@@ -3383,7 +3419,7 @@
             "line": 92,
             "description": "Calculates the sine of an angle. This function takes into account the current angleMode. Values are returned in the range -1 to 1.",
             "itemtype": "method",
-            "name": "sin",
+            "name": "sin()",
             "params": [
                 {
                     "name": "angle",
@@ -3403,7 +3439,7 @@
             "line": 107,
             "description": "Calculates the tangent of an angle. This function takes into account the current angleMode. Values are returned in the range -1 to 1.",
             "itemtype": "method",
-            "name": "sin",
+            "name": "tan()",
             "params": [
                 {
                     "name": "angle",
@@ -3423,7 +3459,7 @@
             "line": 122,
             "description": "Converts a radian measurement to its corresponding value in degrees. Radians and degrees are two ways of measuring the same thing. There are 360 degrees in a circle and 2*PI radians in a circle. For example, 90° = PI/2 = 1.5707964.",
             "itemtype": "method",
-            "name": "degrees",
+            "name": "degrees()",
             "params": [
                 {
                     "name": "radians",
@@ -3443,7 +3479,7 @@
             "line": 133,
             "description": "Converts a degree measurement to its corresponding value in radians. Radians and degrees are two ways of measuring the same thing. There are 360 degrees in a circle and 2*PI radians in a circle. For example, 90° = PI/2 = 1.5707964.",
             "itemtype": "method",
-            "name": "radians",
+            "name": "radians()",
             "params": [
                 {
                     "name": "degrees",
@@ -3463,7 +3499,7 @@
             "line": 144,
             "description": "Sets the current mode of p5 to given mode.",
             "itemtype": "method",
-            "name": "angleMode",
+            "name": "angleMode()",
             "params": [
                 {
                     "name": "mode",
@@ -4560,6 +4596,51 @@
             "module": "Typography"
         },
         {
+            "file": "src/var/constants.js",
+            "line": 21,
+            "description": "HALF_PI is a mathematical constant with the value 1.57079632679489661923. It is half the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "HALF_PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/var/constants.js",
+            "line": 27,
+            "description": "PI is a mathematical constant with the value 3.14159265358979323846. It is the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/var/constants.js",
+            "line": 33,
+            "description": "QUARTER_PI is a mathematical constant with the value 0.7853982. It is one quarter the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "QUARTER_PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/var/constants.js",
+            "line": 39,
+            "description": "TAU is an alias for TWO_PI, a mathematical constant with the value 6.28318530717958647693. It is twice the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "TAU",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/var/constants.js",
+            "line": 45,
+            "description": "TWO_PI is a mathematical constant with the value 6.28318530717958647693. It is twice the ratio of the circumference of a circle to its diameter. It is useful in combination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "TWO_PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
             "file": "src/app.js",
             "line": 38,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
@@ -4568,7 +4649,7 @@
                 "type": "Undefined"
             },
             "class": "",
-            "module": "Typography"
+            "module": "Constants"
         }
     ],
     "warnings": [
