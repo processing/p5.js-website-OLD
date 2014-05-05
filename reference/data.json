@@ -35,6 +35,7 @@
             "fors": {
                 "Core": 1,
                 "Environment": 1,
+                "Pixels": 1,
                 "Structure": 1
             },
             "namespaces": {}
@@ -275,11 +276,13 @@
             "classes": {
                 "Core": 1,
                 "Environment": 1,
+                "Pixels": 1,
                 "Structure": 1
             },
             "fors": {
                 "Core": 1,
                 "Environment": 1,
+                "Pixels": 1,
                 "Structure": 1
             },
             "namespaces": {},
@@ -328,8 +331,7 @@
             "classes": {
                 "Image": 1,
                 "Loading & Displaying": 1,
-                "PImage": 1,
-                "Pixels": 1
+                "PImage": 1
             },
             "fors": {
                 "Image": 1,
@@ -506,6 +508,17 @@
             "module": "Core",
             "namespace": ""
         },
+        "Pixels": {
+            "name": "Pixels",
+            "shortname": "Pixels",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Core",
+            "namespace": ""
+        },
         "Structure": {
             "name": "Structure",
             "shortname": "Structure",
@@ -592,17 +605,6 @@
                     "type": "Object"
                 }
             ]
-        },
-        "Pixels": {
-            "name": "Pixels",
-            "shortname": "Pixels",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Image",
-            "namespace": ""
         },
         "Time & Date": {
             "name": "Time & Date",
@@ -756,7 +758,7 @@
             "line": 12,
             "description": "Extracts the alpha value from a color.",
             "itemtype": "method",
-            "name": "alpha",
+            "name": "alpha()",
             "params": [
                 {
                     "name": "rgb",
@@ -772,7 +774,7 @@
             "line": 26,
             "description": "Extracts the blue value from a color, scaled to match current colorMode().",
             "itemtype": "method",
-            "name": "blue",
+            "name": "blue()",
             "params": [
                 {
                     "name": "rgb",
@@ -788,7 +790,7 @@
             "line": 40,
             "description": "Extracts the brightness value from a color.",
             "itemtype": "method",
-            "name": "brightness",
+            "name": "brightness()",
             "params": [
                 {
                     "name": "hsv",
@@ -804,7 +806,7 @@
             "line": 54,
             "description": "Creates colors for storing in variables of the color datatype. The parameters are interpreted as RGB or HSB values depending on the current colorMode(). The default mode is RGB values from 0 to 255 and, therefore, the function call color(255, 204, 0) will return a bright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted as a grayscale value. Add a second value, and it will be used for alpha transparency. When three values are specified, they are interpreted as either RGB or HSB values. Adding a fourth value applies alpha transparency.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
-            "name": "color",
+            "name": "color()",
             "params": [
                 {
                     "name": "v1",
@@ -842,7 +844,7 @@
             "line": 72,
             "description": "Extracts the green value from a color, scaled to match current colorMode().",
             "itemtype": "method",
-            "name": "green",
+            "name": "green()",
             "params": [
                 {
                     "name": "rgb",
@@ -858,7 +860,7 @@
             "line": 86,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
-            "name": "hue",
+            "name": "hue()",
             "params": [
                 {
                     "name": "hsv",
@@ -874,7 +876,7 @@
             "line": 100,
             "description": "Calculates a color or colors between two color at a specific increment. The amt parameter is the amount to interpolate between the two values where 0.0 equal to the first point, 0.1 is very near the first point, 0.5 is halfway in between, etc. An amount below 0 will be treated as 0. Likewise, amounts above 1 will be capped at 1. This is different from the behavior of lerp(), but necessary because otherwise numbers outside the range will produce strange and unexpected colors.",
             "itemtype": "method",
-            "name": "lerpColor",
+            "name": "lerpColor()",
             "params": [
                 {
                     "name": "c1",
@@ -904,7 +906,7 @@
             "line": 121,
             "description": "Extracts the red value from a color, scaled to match current colorMode().",
             "itemtype": "method",
-            "name": "red",
+            "name": "red()",
             "params": [
                 {
                     "name": "rgb",
@@ -920,7 +922,7 @@
             "line": 135,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
-            "name": "saturation",
+            "name": "saturation()",
             "params": [
                 {
                     "name": "hsv",
@@ -1066,29 +1068,38 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 298,
+            "line": 165,
+            "description": "Array containing the values for all the pixels in the display window. These values are of the color datatype. This array is the size of the display window. For example, if the image is 100x100 pixels, there will be 10000 values and if the window is 200x300 pixels, there will be 60000 values. The index value defines the position of a value within the array. \n Before accessing this array, the data must loaded with the loadPixels() function. After the array data has been modified, the updatePixels() function must be run to update the changes.",
+            "itemtype": "property",
+            "name": "pixels[]",
+            "class": "Pixels",
+            "module": "Core"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 309,
             "description": "_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "Environment",
+            "class": "Pixels",
             "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 351,
+            "line": 362,
             "description": "_preload\n\nTODO: ???",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "Environment",
+            "class": "Pixels",
             "module": "Core"
         },
         {
             "file": "src/core/core.js",
-            "line": 371,
+            "line": 382,
             "description": "The setup() function is called once when the program starts. It's used to define initial enviroment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one setup() function for each program and it shouldn't be called again after its initial execution. Note: Variables declared within setup() are not accessible within other functions, including draw().",
             "example": [
                 " <div>\n<code>function setup() {\n createCanvas(200, 200);\n background(0);\n noStroke();\n fill(102);\n}\n\nvar a = 0;\n\nfunction draw() {\n rect(a++%width, 10, 2, 80); \n}</code></div>"
@@ -1100,7 +1111,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 398,
+            "line": 409,
             "description": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. draw() is called automatically and should never be called explicitly.\nIt should always be controlled with noLoop(), redraw() and loop(). After noLoop() stops the code in draw() from executing, redraw() causes the code inside draw() to execute once, and loop() will cause the code inside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with the frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as mousePressed(). Sometimes, you might have an empty call to draw() in your program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw()",
@@ -1109,7 +1120,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 429,
+            "line": 440,
             "description": "_runFrames\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1120,7 +1131,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 445,
+            "line": 456,
             "description": "_applyDefaults\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1131,7 +1142,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 458,
+            "line": 469,
             "description": "_setProperty\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -2380,7 +2391,7 @@
             "line": 24,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
-            "name": "blend",
+            "name": "blend()",
             "params": [
                 {
                     "name": "srcImage",
@@ -2441,7 +2452,7 @@
             "line": 59,
             "description": "Copies a region of the canvas to another region of the canvas  \nand copies a region of pixels from an image used as the srcImg parameter into the canvas\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
-            "name": "copy",
+            "name": "copy()",
             "params": [
                 {
                     "name": "srcImage",
@@ -2497,7 +2508,7 @@
             "line": 110,
             "description": "Applies a filter to the canvas",
             "itemtype": "method",
-            "name": "filter",
+            "name": "filter()",
             "params": [
                 {
                     "name": "operation",
@@ -2518,7 +2529,7 @@
             "line": 122,
             "description": "Reads the color of any pixel or grabs a section of an image. If no parameters are specified, the entire image is returned. Use the x and y parameters to get the value of one pixel. Get a section of the display window by specifying additional w and h parameters. When getting an image, the x and y parameters define the coordinates for the upper-left corner of the image, regardless of the current imageMode().\n\nIf the pixel requested is outside of the image window, black is returned. The numbers returned are scaled according to the current color ranges, but only RGB values are returned by this function. For example, even though you may have drawn a shape with colorMode(HSB), the numbers returned will be in RGB format. \n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast as grabbing the data directly from pixels[]. The equivalent statement to get(x, y) using pixels[] is pixels[y*width+x]. See the reference for pixels[] for more information.",
             "itemtype": "method",
-            "name": "get",
+            "name": "get()",
             "params": [
                 {
                     "name": "x",
@@ -2555,7 +2566,7 @@
             "line": 176,
             "description": "Loads the pixel data for the display window into the pixels[] array. This function must always be called before reading from or writing to pixels[].",
             "itemtype": "method",
-            "name": "loadPixels",
+            "name": "loadPixels()",
             "class": "Pixels",
             "module": "Image"
         },
@@ -2564,7 +2575,7 @@
             "line": 192,
             "description": "Changes the color of any pixel, or writes an image directly to the display window.\n\nThe x and y parameters specify the pixel to change and the c parameter specifies the color value. The c parameter is interpreted according to the current color mode. (The default color mode is RGB values from 0 to 255.) When setting an image, the x and y parameters define the coordinates for the upper-left corner of the image, regardless of the current imageMode(). \n\nSetting the color of a single pixel with set(x, y) is easy, but not as fast as putting the data directly into pixels[]. The equivalent statement to set(x, y, #000000) using pixels[] is pixels[y*width+x] = #000000. See the reference for pixels[] for more information.",
             "itemtype": "method",
-            "name": "set",
+            "name": "set()",
             "params": [
                 {
                     "name": "x",
@@ -2590,7 +2601,7 @@
             "line": 231,
             "description": "Updates the display window with the data in the pixels[] array. Use in conjunction with loadPixels(). If you're only reading pixels from the array, there's no need to call updatePixels() — updating is only necessary to apply changes.",
             "itemtype": "method",
-            "name": "updatePixels",
+            "name": "updatePixels()",
             "class": "Pixels",
             "module": "Image"
         },
@@ -4932,7 +4943,7 @@
             "line": 13,
             "description": "Sets the current alignment for drawing text. The parameters LEFT, CENTER, and RIGHT set the display characteristics of the letters in relation to the values for the x and y parameters of the text() function.",
             "itemtype": "method",
-            "name": "textAlign",
+            "name": "textAlign()",
             "params": [
                 {
                     "name": "alignX",
@@ -4948,7 +4959,7 @@
             "line": 25,
             "description": "Calculates and returns the height of any character or text string.",
             "itemtype": "method",
-            "name": "textHeight",
+            "name": "textHeight()",
             "params": [
                 {
                     "name": "str",
@@ -4964,7 +4975,7 @@
             "line": 35,
             "description": "Sets the spacing between lines of text in units of pixels. This setting will be used in all subsequent calls to the text() function.",
             "itemtype": "method",
-            "name": "textLeading",
+            "name": "textLeading()",
             "params": [
                 {
                     "name": "leading",
@@ -4980,7 +4991,7 @@
             "line": 45,
             "description": "Sets the current font size. This size will be used in all subsequent calls to the text() function. Font size is measured in units of pixels.",
             "itemtype": "method",
-            "name": "textSize",
+            "name": "textSize()",
             "params": [
                 {
                     "name": "size",
@@ -4996,7 +5007,7 @@
             "line": 55,
             "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is overriden by CSS styling.",
             "itemtype": "method",
-            "name": "textStyle",
+            "name": "textStyle()",
             "params": [
                 {
                     "name": "style",
@@ -5012,7 +5023,7 @@
             "line": 67,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
-            "name": "textWidth",
+            "name": "textWidth()",
             "params": [
                 {
                     "name": "str",
@@ -5028,7 +5039,7 @@
             "line": 13,
             "description": "Draws text to the screen. Displays the information specified in the first parameter on the screen in the position specified by the additional parameters. A default font will be used unless a font is set with the textFont() function and a default size will be used unless a font is set with textSize(). Change the color of the text with the fill() function. The text displays in relation to the textAlign() function, which gives the option to draw to the left, right, and center of the coordinates.\n\nThe x2 and y2 parameters define a rectangular area to display within and may only be used with string data. When these parameters are specified, they are interpreted based on the current rectMode() setting. Text that does not fit completely within the rectangle specified will not be drawn to the screen.",
             "itemtype": "method",
-            "name": "text",
+            "name": "text()",
             "params": [
                 {
                     "name": "str",
@@ -5064,7 +5075,7 @@
             "line": 74,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
-            "name": "textFont",
+            "name": "textFont()",
             "params": [
                 {
                     "name": "font",
@@ -5171,23 +5182,23 @@
         },
         {
             "message": "Missing item type\n_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
-            "line": " src/core/core.js:298"
+            "line": " src/core/core.js:309"
         },
         {
             "message": "Missing item type\n_preload\n\nTODO: ???",
-            "line": " src/core/core.js:351"
+            "line": " src/core/core.js:362"
         },
         {
             "message": "Missing item type\n_runFrames\n\nTODO: ???",
-            "line": " src/core/core.js:429"
+            "line": " src/core/core.js:440"
         },
         {
             "message": "Missing item type\n_applyDefaults\n\nTODO: ???",
-            "line": " src/core/core.js:445"
+            "line": " src/core/core.js:456"
         },
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
-            "line": " src/core/core.js:458"
+            "line": " src/core/core.js:469"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
