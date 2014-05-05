@@ -20,6 +20,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Setting",
         "String Functions",
         "Structure",
+        "Time & Date",
         "Trigonometry",
         "Vertex"
     ],
@@ -30,6 +31,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Data",
         "Environment",
         "Image",
+        "Input",
         "Math",
         "Shape",
         "Structure",
@@ -59,6 +61,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Image",
             "name": "Image"
+        },
+        {
+            "displayName": "Input",
+            "name": "Input"
         },
         {
             "displayName": "Math",

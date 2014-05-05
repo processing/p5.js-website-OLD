@@ -101,6 +101,17 @@
             },
             "namespaces": {}
         },
+        "src/input/time_date.js": {
+            "name": "src/input/time_date.js",
+            "modules": {
+                "Input": 1
+            },
+            "classes": {},
+            "fors": {
+                "Time & Date": 1
+            },
+            "namespaces": {}
+        },
         "src/math/calculation.js": {
             "name": "src/math/calculation.js",
             "modules": {
@@ -335,6 +346,23 @@
                 "canvas",
                 "constants",
                 "filters"
+            ]
+        },
+        "Input": {
+            "name": "Input",
+            "submodules": {},
+            "classes": {
+                "Time & Date": 1
+            },
+            "fors": {
+                "Time & Date": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/input/time_date.js",
+            "line": 1,
+            "requires": [
+                "core"
             ]
         },
         "Math": {
@@ -574,6 +602,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Image",
+            "namespace": ""
+        },
+        "Time & Date": {
+            "name": "Time & Date",
+            "shortname": "Time & Date",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Input",
             "namespace": ""
         },
         "Calculation": {
@@ -2556,6 +2595,97 @@
             "module": "Image"
         },
         {
+            "file": "src/input/time_date.js",
+            "line": 12,
+            "description": "p5.js communicates with the clock on your computer. The day() function returns the current day as a value from 1 - 31.",
+            "itemtype": "method",
+            "name": "day()",
+            "return": {
+                "description": "day the current day",
+                "type": "Number"
+            },
+            "class": "Time & Date",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/time_date.js",
+            "line": 22,
+            "description": "p5.js communicates with the clock on your computer. The hour() function returns the current hour as a value from 0 - 23.",
+            "itemtype": "method",
+            "name": "hour()",
+            "return": {
+                "description": "hour the current hour",
+                "type": "Number"
+            },
+            "class": "Time & Date",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/time_date.js",
+            "line": 32,
+            "description": "p5.js communicates with the clock on your computer. The minute() function returns the current minute as a value from 0 - 59.",
+            "itemtype": "method",
+            "name": "minute()",
+            "return": {
+                "description": "minute the current minute",
+                "type": "Number"
+            },
+            "class": "Time & Date",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/time_date.js",
+            "line": 42,
+            "description": "Returns the number of milliseconds (thousandths of a second) since starting the program. This information is often used for timing events and animation sequences.",
+            "itemtype": "method",
+            "name": "millis()",
+            "return": {
+                "description": "milliseconds the number of milliseconds since starting the program",
+                "type": "Number"
+            },
+            "class": "Time & Date",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/time_date.js",
+            "line": 52,
+            "description": "p5.js communicates with the clock on your computer. The month() function returns the current month as a value from 1 - 12.",
+            "itemtype": "method",
+            "name": "month()",
+            "return": {
+                "description": "month the current month",
+                "type": "Number"
+            },
+            "class": "Time & Date",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/time_date.js",
+            "line": 62,
+            "description": "p5.js communicates with the clock on your computer. The second() function returns the current second as a value from 0 - 59.",
+            "itemtype": "method",
+            "name": "second()",
+            "return": {
+                "description": "second the current second",
+                "type": "Number"
+            },
+            "class": "Time & Date",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/time_date.js",
+            "line": 72,
+            "description": "p5.js communicates with the clock on your computer. The year() function returns the current year as an integer (2014, 2015, 2016, etc).",
+            "itemtype": "method",
+            "name": "year()",
+            "return": {
+                "description": "year the current year",
+                "type": "Number"
+            },
+            "class": "Time & Date",
+            "module": "Input"
+        },
+        {
             "file": "src/math/calculation.js",
             "line": 12,
             "description": "Calculates the absolute value (magnitude) of a number. The absolute value of a number is always positive.",
@@ -3515,7 +3645,7 @@
             "line": 17,
             "description": "Draw an arc.\n\nIf a,b,c,d,start and stop are the only params provided, draws an\nopen pie.\nIf mode is provided draws the arc either open, chord or pie, dependant on the variable provided.",
             "itemtype": "method",
-            "name": "arc",
+            "name": "arc()",
             "params": [
                 {
                     "name": "a",
@@ -3569,7 +3699,7 @@
             "line": 77,
             "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and height is a circle. By default, the first two parameters set the location, and the third and fourth parameters set the shape's width and height. The origin may be changed with the ellipseMode() function.",
             "itemtype": "method",
-            "name": "ellipse",
+            "name": "ellipse()",
             "params": [
                 {
                     "name": "a",
@@ -3604,7 +3734,7 @@
             "line": 108,
             "description": "Draws a line (a direct path between two points) to the screen. The version of line() with four parameters draws the line in 2D. To color a line, use the stroke() function. A line cannot be filled, therefore the fill() function will not affect the color of a line. 2D lines are drawn with a width of one pixel by default, but this can be changed with the strokeWeight() function. The version with six parameters allows the line to be placed anywhere within XYZ space. Drawing this shape in 3D with the z parameter requires the P3D parameter in combination with size() as shown in the above example.",
             "itemtype": "method",
-            "name": "line",
+            "name": "line()",
             "params": [
                 {
                     "name": "x1",
@@ -3639,7 +3769,7 @@
             "line": 130,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel. The first parameter is the horizontal value for the point, the second value is the vertical value for the point, and the optional third value is the depth value. Drawing this shape in 3D with the z parameter requires the P3D parameter in combination with size() as shown in the above example.",
             "itemtype": "method",
-            "name": "point",
+            "name": "point()",
             "params": [
                 {
                     "name": "x",
@@ -3664,7 +3794,7 @@
             "line": 160,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is similar to a rectangle, but the angles between its edges are not constrained to ninety degrees. The first pair of parameters (x1,y1) sets the first vertex and the subsequent pairs should proceed clockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
-            "name": "quad",
+            "name": "quad()",
             "params": [
                 {
                     "name": "x1",
@@ -3719,7 +3849,7 @@
             "line": 187,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. The way these parameters are interpreted, however, may be changed with the rectMode() function.",
             "itemtype": "method",
-            "name": "rect",
+            "name": "rect()",
             "params": [
                 {
                     "name": "a",
@@ -3754,7 +3884,7 @@
             "line": 208,
             "description": "A triangle is a plane created by connecting three points. The first two arguments specify the first point, the middle two arguments specify the second point, and the last two arguments specify the third point.",
             "itemtype": "method",
-            "name": "triangle",
+            "name": "triangle()",
             "params": [
                 {
                     "name": "x1",
@@ -3799,7 +3929,7 @@
             "line": 15,
             "description": "Modifies the location from which ellipses are drawn by changing the way in which parameters given to ellipse() are intepreted.\n\nThe default mode is ellipseMode(CENTER), which interprets the first two parameters of ellipse() as the shape's center point, while the third and fourth parameters are its width and height.\n\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as the shape's center point, but uses the third and fourth parameters to specify half of the shapes's width and height.\n\nellipseMode(CORNER) interprets the first two parameters of ellipse() as the upper-left corner of the shape, while the third and fourth parameters are its width and height.\n\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as the location of one corner of the ellipse's bounding box, and the third and fourth parameters as the location of the opposite corner.\n\nThe parameter must be written in ALL CAPS because Processing is a case-sensitive language.",
             "itemtype": "method",
-            "name": "ellipseMode",
+            "name": "ellipseMode()",
             "params": [
                 {
                     "name": "mode",
@@ -3819,7 +3949,7 @@
             "line": 40,
             "description": "Draws all geometry with jagged (aliased) edges. Note that smooth() is active by default, so it is necessary to call noSmooth() to disable smoothing of geometry, images, and fonts.",
             "itemtype": "method",
-            "name": "noSmooth",
+            "name": "noSmooth()",
             "return": {
                 "description": "the p5 object",
                 "type": "P5"
@@ -3832,7 +3962,7 @@
             "line": 53,
             "description": "Modifies the location from which rectangles are drawn by changing the way in which parameters given to rect() are intepreted.\n\nThe default mode is rectMode(CORNER), which interprets the first two parameters of rect() as the upper-left corner of the shape, while the third and fourth parameters are its width and height.\n\nrectMode(CORNERS) interprets the first two parameters of rect() as the location of one corner, and the third and fourth parameters as the location of the opposite corner.\n\nrectMode(CENTER) interprets the first two parameters of rect() as the shape's center point, while the third and fourth parameters are its width and height.\n\nrectMode(RADIUS) also uses the first two parameters of rect() as the shape's center point, but uses the third and fourth parameters to specify half of the shapes's width and height.\n\nThe parameter must be written in ALL CAPS because Processing is a case-sensitive language.",
             "itemtype": "method",
-            "name": "rectMode",
+            "name": "rectMode()",
             "params": [
                 {
                     "name": "mode",
@@ -3852,7 +3982,7 @@
             "line": 78,
             "description": "Draws all geometry with smooth (anti-aliased) edges. smooth() will also improve image quality of resized images. Note that smooth() is active by default; noSmooth() can be used to disable smoothing of geometry, images, and fonts.",
             "itemtype": "method",
-            "name": "smooth",
+            "name": "smooth()",
             "return": {
                 "description": "the p5 object",
                 "type": "P5"
@@ -3865,7 +3995,7 @@
             "line": 91,
             "description": "Sets the style for rendering line endings. These ends are either squared, extended, or rounded, each of which specified with the corresponding parameters: SQUARE, PROJECT, and ROUND. The default cap is ROUND.",
             "itemtype": "method",
-            "name": "strokeCap",
+            "name": "strokeCap()",
             "params": [
                 {
                     "name": "cap",
@@ -3885,7 +4015,7 @@
             "line": 106,
             "description": "Sets the style of the joints which connect line segments. These joints are either mitered, beveled, or rounded and specified with the corresponding parameters MITER, BEVEL, and ROUND. The default joint is MITER.",
             "itemtype": "method",
-            "name": "strokeJoin",
+            "name": "strokeJoin()",
             "params": [
                 {
                     "name": "join",
@@ -3905,7 +4035,7 @@
             "line": 121,
             "description": "Sets the width of the stroke used for lines, points, and the border around shapes. All widths are set in units of pixels.",
             "itemtype": "method",
-            "name": "strokeWeight",
+            "name": "strokeWeight()",
             "params": [
                 {
                     "name": "weight",
@@ -3925,7 +4055,7 @@
             "line": 13,
             "description": "Draws a Bezier curve on the screen. These curves are defined by a series of anchor and control points. The first two parameters specify the first anchor point and the last two parameters specify the other anchor point. The middle parameters specify the control points which define the shape of the curve. Bezier curves were developed by French engineer Pierre Bezier. Using the 3D version requires rendering with P3D (see the Environment reference for more information).",
             "itemtype": "method",
-            "name": "bezier",
+            "name": "bezier()",
             "params": [
                 {
                     "name": "x1",
@@ -3980,7 +4110,7 @@
             "line": 40,
             "description": "Sets the resolution at which Beziers display.\n\nThe default value is 20.",
             "itemtype": "method",
-            "name": "bezierDetail",
+            "name": "bezierDetail()",
             "params": [
                 {
                     "name": "detail",
@@ -4000,7 +4130,7 @@
             "line": 54,
             "description": "Calculate a point on the Bezier Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a bezier curve at t.",
             "itemtype": "method",
-            "name": "bezierPoint",
+            "name": "bezierPoint()",
             "params": [
                 {
                     "name": "a",
@@ -4039,6 +4169,8 @@
             "file": "src/shape/curves.js",
             "line": 78,
             "description": "Calculates the tangent of a point on a Bezier curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
+            "itemtype": "method",
+            "name": "bezierTangent()",
             "params": [
                 {
                     "name": "a",
@@ -4075,10 +4207,10 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 97,
+            "line": 98,
             "description": "Draws a curved line on the screen. The first and second parameters specify the beginning control point and the last two parameters specify the ending control point. The middle parameters specify the start and stop of the curve. Longer curves can be created by putting a series of curve() functions together or using curveVertex(). An additional function called curveTightness() provides control for the visual quality of the curve. The curve() function is an implementation of Catmull-Rom splines. Using the 3D version requires rendering with P3D (see the Environment reference for more information).",
             "itemtype": "method",
-            "name": "curve",
+            "name": "curve()",
             "params": [
                 {
                     "name": "x1",
@@ -4130,10 +4262,10 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 126,
+            "line": 127,
             "description": "Sets the resolution at which curves display.\n\nThe default value is 20.",
             "itemtype": "method",
-            "name": "curveDetail",
+            "name": "curveDetail()",
             "params": [
                 {
                     "name": "resolution",
@@ -4150,10 +4282,10 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 142,
+            "line": 143,
             "description": "Calculate a point on the Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.",
             "itemtype": "method",
-            "name": "curvePoint",
+            "name": "curvePoint()",
             "params": [
                 {
                     "name": "a",
@@ -4190,10 +4322,10 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 170,
+            "line": 171,
             "description": "Calculates the tangent of a point on a curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
             "itemtype": "method",
-            "name": "curveTangent",
+            "name": "curveTangent()",
             "params": [
                 {
                     "name": "a",
@@ -4233,7 +4365,7 @@
             "line": 14,
             "description": "Use the beginContour() and endContour() function to create negative shapes within shapes. For instance, the center of the letter 'O'. beginContour() begins recording vertices for the shape and endContour() stops recording. These functions can only be within a beginShape()/endShape() pair and they only work with the P2D and P3D renderers.\n\nTransformations such as translate(), rotate(), and scale() do not work within a beginContour()/endContour() pair. It is also not possible to use other shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
-            "name": "beginContour",
+            "name": "beginContour()",
             "return": {
                 "description": "the p5 object",
                 "type": "Object"
@@ -4246,7 +4378,7 @@
             "line": 29,
             "description": "Using the beginShape() and endShape() functions allow creating more complex forms. beginShape() begins recording vertices for a shape and endShape() stops recording. The value of the kind parameter tells it which types of shapes to create from the provided vertices. With no mode specified, the shape can be any irregular polygon. The parameters available for beginShape() are POINTS, LINES, TRIANGLES, TRIANGLE_FAN, TRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the beginShape() function, a series of vertex() commands must follow. To stop drawing the shape, call endShape(). The vertex() function with two parameters specifies a position in 2D and the vertex() function with three parameters specifies a position in 3D. Each shape will be outlined with the current stroke color and filled with the fill color.\n\nTransformations such as translate(), rotate(), and scale() do not work within beginShape(). It is also not possible to use other shapes, such as ellipse() or rect() within beginShape().",
             "itemtype": "method",
-            "name": "beginShape",
+            "name": "beginShape()",
             "params": [
                 {
                     "name": "kind",
@@ -4266,7 +4398,7 @@
             "line": 51,
             "description": "Specifies vertex coordinates for Bezier curves. Each call to bezierVertex() defines the position of two control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. The first time bezierVertex() is used within a beginShape() call, it must be prefaced with a call to vertex() to set the first anchor point. This function must be used between beginShape() and endShape() and only when there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
-            "name": "bezierVertex",
+            "name": "bezierVertex()",
             "params": [
                 {
                     "name": "x2",
@@ -4311,7 +4443,7 @@
             "line": 88,
             "description": "Use the beginContour() and endContour() function to create negative shapes within shapes. For instance, the center of the letter 'O'. beginContour() begins recording vertices for the shape and endContour() stops recording. These functions can only be within a beginShape()/endShape() pair and they only work with the P2D and P3D renderers.",
             "itemtype": "method",
-            "name": "endContour",
+            "name": "endContour()",
             "return": {
                 "description": "the p5 object",
                 "type": "Object"
@@ -4324,7 +4456,7 @@
             "line": 122,
             "description": "The endShape() function is the companion to beginShape() and may only be called after beginShape(). When endshape() is called, all of image data defined since the previous call to beginShape() is written into the image buffer. The constant CLOSE as the value for the MODE parameter to close the shape (to connect the beginning and the end).",
             "itemtype": "method",
-            "name": "endShape",
+            "name": "endShape()",
             "params": [
                 {
                     "name": "mode",
@@ -4344,7 +4476,7 @@
             "line": 139,
             "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to quadraticVertex() defines the position of one control points and one anchor point of a Bezier curve, adding a new segment to a line or shape. The first time quadraticVertex() is used within a beginShape() call, it must be prefaced with a call to vertex() to set the first anchor point. This function must be used between beginShape() and endShape() and only when there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
-            "name": "quadraticVertex",
+            "name": "quadraticVertex()",
             "params": [
                 {
                     "name": "cx",
@@ -4379,7 +4511,7 @@
             "line": 168,
             "description": "All shapes are constructed by connecting a series of vertices. vertex() is used to specify the vertex coordinates for points, lines, triangles, quads, and polygons. It is used exclusively within the beginShape() and endShape() functions.",
             "itemtype": "method",
-            "name": "vertex",
+            "name": "vertex()",
             "params": [
                 {
                     "name": "x",
@@ -4402,7 +4534,7 @@
         {
             "file": "src/structure/structure.js",
             "line": 15,
-            "description": "Stops Processing from continuously executing the code within draw(). If loop() is called, the code in draw() begins to run continuously again. If using noLoop() in setup(), it should be the last line inside the block.\n\nWhen noLoop() is used, it's not possible to manipulate or access the screen inside event handling functions such as mousePressed() or keyPressed(). Instead, use those functions to call redraw() or loop(), which will run draw(), which can update the screen properly. This means that when noLoop() has been called, no drawing can happen, and functions like saveFrame() or loadPixels() may not be used.\n\nNote that if the sketch is resized, redraw() will be called to update the sketch, even after noLoop() has been specified. Otherwise, the sketch would enter an odd state until loop() was called.",
+            "description": "Stops p5.js from continuously executing the code within draw(). If loop() is called, the code in draw() begins to run continuously again. If using noLoop() in setup(), it should be the last line inside the block.\n\nWhen noLoop() is used, it's not possible to manipulate or access the screen inside event handling functions such as mousePressed() or keyPressed(). Instead, use those functions to call redraw() or loop(), which will run draw(), which can update the screen properly. This means that when noLoop() has been called, no drawing can happen, and functions like saveFrame() or loadPixels() may not be used.\n\nNote that if the sketch is resized, redraw() will be called to update the sketch, even after noLoop() has been specified. Otherwise, the sketch would enter an odd state until loop() was called.",
             "itemtype": "method",
             "name": "noLoop()",
             "class": "Structure",
@@ -4411,7 +4543,7 @@
         {
             "file": "src/structure/structure.js",
             "line": 28,
-            "description": "By default, Processing loops through draw() continuously, executing the code within it. However, the draw() loop may be stopped by calling noLoop(). In that case, the draw() loop can be resumed with loop().",
+            "description": "By default, p5.js loops through draw() continuously, executing the code within it. However, the draw() loop may be stopped by calling noLoop(). In that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
             "name": "loop()",
             "class": "Structure",
@@ -4880,10 +5012,6 @@
         {
             "message": "Missing item type\nReturn a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",
             "line": " src/math/random.js:23"
-        },
-        {
-            "message": "Missing item type\nCalculates the tangent of a point on a Bezier curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
-            "line": " src/shape/curves.js:78"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
