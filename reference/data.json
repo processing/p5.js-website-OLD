@@ -39,6 +39,17 @@
             },
             "namespaces": {}
         },
+        "src/data/string_functions.js": {
+            "name": "src/data/string_functions.js",
+            "modules": {
+                "Data": 1
+            },
+            "classes": {},
+            "fors": {
+                "String Functions": 1
+            },
+            "namespaces": {}
+        },
         "src/environment/environment.js": {
             "name": "src/environment/environment.js",
             "modules": {
@@ -245,6 +256,23 @@
             "file": "src/core/core.js",
             "line": 1
         },
+        "Data": {
+            "name": "Data",
+            "submodules": {},
+            "classes": {
+                "String Functions": 1
+            },
+            "fors": {
+                "String Functions": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/data/string_functions.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
+        },
         "Environment": {
             "name": "Environment",
             "submodules": {},
@@ -423,6 +451,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Core",
+            "namespace": ""
+        },
+        "String Functions": {
+            "name": "String Functions",
+            "shortname": "String Functions",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Data",
             "namespace": ""
         },
         "Image": {
@@ -1005,6 +1044,115 @@
             "module": "Core"
         },
         {
+            "file": "src/data/string_functions.js",
+            "line": 14,
+            "description": "Combines an array of Strings into one String, each separated by the character(s) used for the separator parameter. To join arrays of ints or floats, it's necessary to first convert them to Strings using nf() or nfs().",
+            "itemtype": "method",
+            "name": "join",
+            "params": [
+                {
+                    "name": "list",
+                    "description": "array of Strings to be joined",
+                    "type": "Array"
+                },
+                {
+                    "name": "separator",
+                    "description": "String to be placed between each item",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "joined String",
+                "type": "String"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 26,
+            "description": "This function is used to apply a regular expression to a piece of text, and return matching groups (elements found inside parentheses) as a String array. If there are no matches, a null value will be returned. If no groups are specified in the regular expression, but the sequence matches, an array of length 1 (with the matched text as the first element of the array) will be returned.\n\nTo use the function, first check to see if the result is null. If the result is null, then the sequence did not match at all. If the sequence did match, an array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular expression, then the contents of each will be returned in the array. Element [0] of a regular expression match returns the entire matching string, and the match groups start at element [1] (the first group is [1], the second [2], and so on).",
+            "itemtype": "method",
+            "name": "match",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "the String to be searched",
+                    "type": "String"
+                },
+                {
+                    "name": "regexp",
+                    "description": "the regexp to be used for matching",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "strings Array of Strings found",
+                "type": "Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 42,
+            "description": "This function is used to apply a regular expression to a piece of text, and return a list of matching groups (elements found inside parentheses) as a two-dimensional String array. If there are no matches, a null value will be returned. If no groups are specified in the regular expression, but the sequence matches, a two dimensional array is still returned, but the second dimension is only of length one.\n\nTo use the function, first check to see if the result is null. If the result is null, then the sequence did not match at all. If the sequence did match, a 2D array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular expression, then the contents of each will be returned in the array. Assuming a loop with counter variable i, element [i][0] of a regular expression match returns the entire matching string, and the match groups start at element [i][1] (the first group is [i][1], the second [i][2], and so on).",
+            "itemtype": "method",
+            "name": "matchAll",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "the String to be searched",
+                    "type": "String"
+                },
+                {
+                    "name": "regexp",
+                    "description": "the regexp to be used for matching",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "strings 2d Array of Strings found",
+                "type": "Array"
+            },
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/data/string_functions.js",
+            "line": 68,
+            "description": "Utility function for formatting numbers into strings. There are two versions: one for formatting floats, and one for formatting ints. The values for the digits, left, and right parameters should always be positive integers.",
+            "itemtype": "method",
+            "name": "nf",
+            "params": [
+                {
+                    "name": "num",
+                    "description": "the Number to format",
+                    "type": "Number"
+                },
+                {
+                    "name": "digits",
+                    "description": "number of digits to pad with zero",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "left",
+                    "description": "number of digits to the left of the decimal point",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "right",
+                    "description": "number of digits to the right of the decimal point",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "class": "String Functions",
+            "module": "Data"
+        },
+        {
             "file": "src/environment/environment.js",
             "line": 16,
             "description": "Sets the cursor to a predefined symbol or an image, or makes it visible if already hidden. If you are trying to set an image as the cursor, the recommended size is 16x16 or 32x32 pixels. It is not possible to load an image as the cursor if you are exporting your program for the Web, and not all MODES work with all browsers. The values for parameters x and y must be less than the dimensions of the image.",
@@ -1057,8 +1205,6 @@
             "file": "src/environment/environment.js",
             "line": 68,
             "description": "Returns the current framerate.",
-            "itemtype": "method",
-            "name": "getFrameRate",
             "return": {
                 "description": "[frameRate] current frameRate",
                 "type": "Number"
@@ -1068,10 +1214,8 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 78,
+            "line": 77,
             "description": "Specifies the number of frames to be displayed every second. For example, the function call frameRate(30) will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within setup() is recommended. The default rate is 60 frames per second.\nCalling frameRate() with no arguments returns the current framerate.",
-            "itemtype": "method",
-            "name": "setFrameRate",
             "params": [
                 {
                     "name": "fps",
@@ -1085,7 +1229,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 89,
+            "line": 87,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
             "name": "noCursor",
@@ -4087,6 +4231,14 @@
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
             "line": " src/core/core.js:458"
+        },
+        {
+            "message": "Missing item type\nReturns the current framerate.",
+            "line": " src/environment/environment.js:68"
+        },
+        {
+            "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example, the function call frameRate(30) will attempt to refresh 30 times a second. If the processor is not fast enough to maintain the specified rate, the frame rate will not be achieved. Setting the frame rate within setup() is recommended. The default rate is 60 frames per second.\nCalling frameRate() with no arguments returns the current framerate.",
+            "line": " src/environment/environment.js:77"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from http://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",

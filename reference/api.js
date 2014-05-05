@@ -16,6 +16,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Pixels",
         "Random",
         "Setting",
+        "String Functions",
         "Structure",
         "Trigonometry",
         "Vertex"
@@ -23,6 +24,7 @@ YUI.add("yuidoc-meta", function(Y) {
     "modules": [
         "Color",
         "Core",
+        "Data",
         "Environment",
         "Image",
         "Math",
@@ -38,6 +40,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Core",
             "name": "Core"
+        },
+        {
+            "displayName": "Data",
+            "name": "Data"
         },
         {
             "displayName": "Environment",
