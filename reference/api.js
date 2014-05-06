@@ -6,11 +6,12 @@ YUI.add("yuidoc-meta", function(Y) {
         "Attributes",
         "Calculation",
         "Constants",
-        "Core",
         "Creating & Reading",
         "Curves",
         "Environment",
+        "Environment:Environment",
         "Image",
+        "Image:Pixels",
         "Loading & Displaying",
         "Noise",
         "PImage",
@@ -20,14 +21,15 @@ YUI.add("yuidoc-meta", function(Y) {
         "Setting",
         "String Functions",
         "Structure",
+        "Structure:Structure",
         "Time & Date",
         "Trigonometry",
         "Vertex"
     ],
     "modules": [
+        "*",
         "Color",
         "Constants",
-        "Core",
         "Data",
         "Environment",
         "Image",
@@ -39,16 +41,16 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "allModules": [
         {
+            "displayName": "*",
+            "name": "*"
+        },
+        {
             "displayName": "Color",
             "name": "Color"
         },
         {
             "displayName": "Constants",
             "name": "Constants"
-        },
-        {
-            "displayName": "Core",
-            "name": "Core"
         },
         {
             "displayName": "Data",
