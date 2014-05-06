@@ -342,7 +342,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "src/image/image.js",
-            "line": 127,
+            "line": 121,
             "requires": [
                 "core",
                 "canvas",
@@ -587,8 +587,8 @@
             "module": "Image",
             "namespace": "",
             "file": "src/image/image.js",
-            "line": 127,
-            "description": "Creates a new PImage. A PImage is a canvas backed representation of an image.\np5 can display .gif, .jpg and .png images. Images may be displayed in 2D and 3D space. Before an image is used, it must be loaded with the loadImage() function. The PImage class contains fields for the width and height of the image, as well as an array called pixels[] that contains the values for every pixel in the image. The methods described below allow easy access to the image's pixels and alpha channel and simplify the process of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on the image to make sure that the pixel data is properly loaded.",
+            "line": 121,
+            "description": "Creates a new PImage. A PImage is a canvas backed representation of an image.\np5 can display .gif, .jpg and .png images. Images may be displayed in 2D and 3D space. Before an image is used, it must be loaded with the loadImage() function. The PImage class contains fields for the width and height of the image, as well as an array called pixels[] that contains the values for every pixel in the image. The methods described below allow easy access to the image's pixels and alpha channel and simplify the process of compositing.\nBefore using the pixels[] array, be sure to use the loadPixels() method on the image to make sure that the pixel data is properly loaded.",
             "is_constructor": 1,
             "params": [
                 {
@@ -959,7 +959,152 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 48,
+            "line": 13,
+            "description": "The background() function sets the color used for the background of the p5.js canvas. \nThe default background is light gray. This function is typically used within draw() to clear \nthe display window at the beginning of each frame, but it can be used inside setup() to set \nthe background on the first frame of animation or if the backgound need only be set once.",
+            "itemtype": "method",
+            "name": "background",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value, red or hue value (depending on the current color mode), or color Array",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "v2",
+                    "description": "green or saturation value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "blue or brightness value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "opacity of the background",
+                    "type": "Number|Array",
+                    "optional": true
+                }
+            ],
+            "class": "Setting",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/setting.js",
+            "line": 35,
+            "description": "Clears the pixels within a buffer. This function only works on PGraphics objects created with the \ncreateCanvas() function; it won't work with the main display window. Unlike the main graphics context, \npixels in additional graphics areas created with createGraphics() can be entirely or partially \ntransparent. This function clears everything to make all of the pixels 100% transparent.",
+            "itemtype": "method",
+            "name": "clear",
+            "class": "Setting",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/setting.js",
+            "line": 46,
+            "description": "Changes the way p5.js interprets color data. By default, the parameters for fill(), stroke(), \nbackground(), and color() are defined by values between 0 and 255 using the RGB color model. \nThe colorMode() function is used to switch color systems.",
+            "itemtype": "method",
+            "name": "colorMode",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "either RGB or HSB, corresponding to Red/Green/Blue and Hue/Saturation/Brightness",
+                    "type": "Number|Constant"
+                }
+            ],
+            "class": "Setting",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/setting.js",
+            "line": 59,
+            "description": "Sets the color used to fill shapes. For example, if you run fill(204, 102, 0), all subsequent shapes will be \nfilled with orange. This color is either specified in terms of the RGB or HSB color depending on the current \ncolorMode(). (The default color space is RGB, with each value in the range from 0 to 255.)",
+            "itemtype": "method",
+            "name": "fill",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value, red or hue value (depending on the current color mode), or color Array",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "v2",
+                    "description": "green or saturation value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "blue or brightness value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "opacity of the background",
+                    "type": "Number|Array",
+                    "optional": true
+                }
+            ],
+            "class": "Setting",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/setting.js",
+            "line": 74,
+            "description": "Disables filling geometry. If both noStroke() and noFill() are called, nothing will be drawn to the screen.",
+            "itemtype": "method",
+            "name": "noFill",
+            "class": "Setting",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/setting.js",
+            "line": 82,
+            "description": "Disables drawing the stroke (outline). If both noStroke() and noFill() are called, nothing will be drawn to the screen.",
+            "itemtype": "method",
+            "name": "noStroke",
+            "class": "Setting",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/setting.js",
+            "line": 90,
+            "description": "Sets the color used to draw lines and borders around shapes. This color is either specified in terms of the \nRGB or HSB color depending on the current colorMode() (the default color space is RGB, with each value in \nthe range from 0 to 255).",
+            "itemtype": "method",
+            "name": "stroke",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value, red or hue value (depending on the current color mode), or color Array",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "v2",
+                    "description": "green or saturation value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "blue or brightness value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "opacity of the background",
+                    "type": "Number|Array",
+                    "optional": true
+                }
+            ],
+            "class": "Setting",
+            "module": "Color"
+        },
+        {
+            "file": "src/color/setting.js",
+            "line": 107,
             "description": "For a number of different inputs, returns a color formatted as [r, g, b, a].",
             "itemtype": "method",
             "name": "getNormalizedColor",
@@ -2031,7 +2176,7 @@
         {
             "file": "src/image/image.js",
             "line": 38,
-            "description": "Loads an image from a path and creates a PImage from it.\n\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback.",
+            "description": "Loads an image from a path and creates a PImage from it.\n\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback, or place the loadImage() call in preload().",
             "itemtype": "method",
             "name": "loadImage",
             "params": [
@@ -2062,27 +2207,27 @@
             "params": [
                 {
                     "name": "image",
-                    "description": "",
+                    "description": "the image to display",
                     "type": "PImage"
                 },
                 {
                     "name": "x",
-                    "description": "",
+                    "description": "x-coordinate of the image",
                     "type": "[type]"
                 },
                 {
                     "name": "y",
-                    "description": "",
+                    "description": "y-coordinate of the image",
                     "type": "[type]"
                 },
                 {
                     "name": "width",
-                    "description": "",
+                    "description": "width to display the image",
                     "type": "[type]"
                 },
                 {
                     "name": "height",
-                    "description": "",
+                    "description": "height to display the image",
                     "type": "[type]"
                 }
             ],
@@ -2092,7 +2237,7 @@
         {
             "file": "src/image/image.js",
             "line": 101,
-            "description": "Set image mode. Modifies the location from which images are drawn by changing the way in which parameters given to image() are intepreted.\n\nThe default mode is imageMode(CORNER), which interprets the second and third parameters of image() as the upper-left corner of the image. If two additional parameters are specified, they are used to set the image's width and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image() as the location of one corner, and the fourth and fifth parameters as the opposite corner.\n\nimageMode(CENTER) interprets the second and third parameters of image() as the image's center point. If two additional parameters are specified, they are used to set the image's width and height.\n\nThe parameter must be written in ALL CAPS because Processing is a case-sensitive language.",
+            "description": "Set image mode. Modifies the location from which images are drawn by changing the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and third parameters of image() as the upper-left corner of the image. If two additional parameters are specified, they are used to set the image's width and height.\nimageMode(CORNERS) interprets the second and third parameters of image() as the location of one corner, and the fourth and fifth parameters as the opposite corner.\nimageMode(CENTER) interprets the second and third parameters of image() as the image's center point. If two additional parameters are specified, they are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
             "params": [
@@ -2107,14 +2252,41 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 149,
-            "description": "Helper fxn for sharing pixel methods",
+            "line": 133,
+            "description": "Image width.",
+            "itemtype": "property",
+            "name": "width",
+            "class": "PImage",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 139,
+            "description": "Image height.",
+            "itemtype": "property",
+            "name": "height",
+            "class": "PImage",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 148,
+            "description": "Array containing the color of every pixel in the image.",
+            "itemtype": "property",
+            "name": "pixels[]",
             "class": "PImage",
             "module": "Image"
         },
         {
             "file": "src/image/image.js",
             "line": 157,
+            "description": "Helper fxn for sharing pixel methods",
+            "class": "PImage",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 165,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -2123,19 +2295,19 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 167,
+            "line": 175,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
             "params": [
                 {
                     "name": "x",
-                    "description": "x offset of the target update area for the\n                              underlying canvas",
+                    "description": "x-offset of the target update area for the\n                              underlying canvas",
                     "type": "Integer|undefined"
                 },
                 {
                     "name": "y",
-                    "description": "y offset of the target update area for the\n                              underlying canvas",
+                    "description": "y-offset of the target update area for the\n                              underlying canvas",
                     "type": "Integer|undefined"
                 },
                 {
@@ -2154,7 +2326,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 187,
+            "line": 195,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a Pimage is\nreturned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -2174,12 +2346,14 @@
                 {
                     "name": "w",
                     "description": "width",
-                    "type": "Number"
+                    "type": "Number",
+                    "optional": true
                 },
                 {
                     "name": "h",
                     "description": "height",
-                    "type": "Number"
+                    "type": "Number",
+                    "optional": true
                 }
             ],
             "return": {
@@ -2191,7 +2365,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 209,
+            "line": 217,
             "description": "Set the color of a single pixel or write an image into\nthis PImage.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
             "itemtype": "method",
             "name": "set",
@@ -2217,32 +2391,28 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 230,
-            "description": "Resize this PImage.",
+            "line": 238,
+            "description": "Resize the image to a new width and height. To make the image scale proportionally, use 0 as the value for the wide or high parameter. For instance, to make the width of an image 150 pixels, and change the height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
             "params": [
                 {
                     "name": "width",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "the resized image width",
+                    "type": "Number"
                 },
                 {
                     "name": "height",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "the resized image height",
+                    "type": "Number"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
             "class": "PImage",
             "module": "Image"
         },
         {
             "file": "src/image/image.js",
-            "line": 274,
+            "line": 281,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -2298,7 +2468,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 297,
+            "line": 304,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -2314,7 +2484,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 328,
+            "line": 335,
             "description": "Applies an image filter to a PImage",
             "itemtype": "method",
             "name": "filter",
@@ -2335,7 +2505,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 341,
+            "line": 348,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -2396,7 +2566,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 371,
+            "line": 378,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -5348,7 +5518,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/image/image.js:149"
+            "line": " src/image/image.js:157"
         },
         {
             "message": "Missing item type\nNOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
