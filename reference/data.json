@@ -226,6 +226,13 @@
             },
             "namespaces": {}
         },
+        "src/transform/transform.js": {
+            "name": "src/transform/transform.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "src/typography/attributes.js": {
             "name": "src/typography/attributes.js",
             "modules": {
@@ -5291,6 +5298,214 @@
                 "\n   <div><code>\n     var x = 0;\n    function setup() {\n       createCanvas(200, 200);\n       noLoop();\n     }\n    function draw() {\n       background(204);\n       line(x, 0, x, height); \n     }\n    function mousePressed() {\n       x += 1;\n       redraw();\n     }\n   </code></div>"
             ],
             "class": "Structure",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 27,
+            "description": "Multiplies the current matrix by the one specified through the parameters. This is very slow because it will try to calculate the inverse of the transform, so avoid it whenever possible.",
+            "itemtype": "method",
+            "name": "applyMatrix",
+            "params": [
+                {
+                    "name": "n00",
+                    "description": "numbers which define the 3x2 matrix to be multiplied",
+                    "type": "Number"
+                },
+                {
+                    "name": "n01",
+                    "description": "numbers which define the 3x2 matrix to be multiplied",
+                    "type": "Number"
+                },
+                {
+                    "name": "n02",
+                    "description": "numbers which define the 3x2 matrix to be multiplied",
+                    "type": "Number"
+                },
+                {
+                    "name": "n10",
+                    "description": "numbers which define the 3x2 matrix to be multiplied",
+                    "type": "Number"
+                },
+                {
+                    "name": "n11",
+                    "description": "numbers which define the 3x2 matrix to be multiplied",
+                    "type": "Number"
+                },
+                {
+                    "name": "n12",
+                    "description": "numbers which define the 3x2 matrix to be multiplied",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 47,
+            "description": "Pops the current transformation matrix off the matrix stack. Understanding pushing and popping requires understanding the concept of a matrix stack. The pushMatrix() function saves the current coordinate system to the stack and popMatrix() restores the prior coordinate system. pushMatrix() and popMatrix() are used in conjuction with the other transformation functions and may be embedded to control the scope of the transformations.",
+            "itemtype": "method",
+            "name": "popMatrix",
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 60,
+            "description": "Prints the current matrix to the Console.",
+            "itemtype": "method",
+            "name": "printMatrix",
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 71,
+            "description": "Pushes the current transformation matrix onto the matrix stack. Understanding pushMatrix() and popMatrix() requires understanding the concept of a matrix stack. The pushMatrix() function saves the current coordinate system to the stack and popMatrix() restores the prior coordinate system. pushMatrix() and popMatrix() are used in conjuction with the other transformation functions and may be embedded to control the scope of the transformations.",
+            "itemtype": "method",
+            "name": "pushMatrix",
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 84,
+            "description": "Replaces the current matrix with the identity matrix.",
+            "itemtype": "method",
+            "name": "resetMatrix",
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 97,
+            "description": "Rotates a shape the amount specified by the angle parameter. This function accounts for angleMode, so angles can be entered in either RADIANS or DEGREES. \nObjects are always rotated around their relative position to the origin and positive numbers rotate objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling rotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI). All tranformations are reset when draw() begins again. \nTechnically, rotate() multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the pushMatrix() and popMatrix().",
+            "itemtype": "method",
+            "name": "rotate",
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "the angle of rotation, specified in radians or degrees, depending on current angleMode",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 136,
+            "description": "Increases or decreases the size of a shape by expanding and contracting vertices. Objects always scale from their relative origin to the coordinate system. Scale values are specified as decimal percentages. For example, the function call scale(2.0) increases the dimension of a shape by 200%.\nTransformations apply to everything that happens after and subsequent calls to the function multiply the effect. For example, calling scale(2.0) and then scale(1.5) is the same as scale(3.0). If scale() is called within draw(), the transformation is reset when the loop begins again. Using this fuction with the z parameter requires using P3D as a parameter for size(), as shown in the third example above. This function can be further controlled with pushMatrix() and popMatrix().",
+            "itemtype": "method",
+            "name": "scale",
+            "params": [
+                {
+                    "name": "s",
+                    "description": "percentage to scale the object, or percentage to scale the object in the x-axis if multiple arguments are given",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "percentage to scale the object in the y-axis",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 163,
+            "description": "Shears a shape around the x-axis the amount specified by the angle parameter. Angles should be specified in the current angleMode. Objects are always sheared around their relative position to the origin and positive numbers shear objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling shearX(PI/2) and then shearX(PI/2) is the same as shearX(PI). If shearX() is called within the draw(), the transformation is reset when the loop begins again. \nTechnically, shearX() multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the pushMatrix() and popMatrix() functions.",
+            "itemtype": "method",
+            "name": "shearX",
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "angle of shear specified in radians or degrees, depending on current angleMode",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 182,
+            "description": "Shears a shape around the y-axis the amount specified by the angle parameter. Angles should be specified in the current angleMode. Objects are always sheared around their relative position to the origin and positive numbers shear objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling shearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If shearY() is called within the draw(), the transformation is reset when the loop begins again.  \nTechnically, shearY() multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the pushMatrix() and popMatrix() functions.",
+            "itemtype": "method",
+            "name": "shearY",
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "angle of shear specified in radians or degrees, depending on current angleMode",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
+            "module": "Structure"
+        },
+        {
+            "file": "src/transform/transform.js",
+            "line": 201,
+            "description": "Specifies an amount to displace objects within the display window. The x parameter specifies left/right translation, the y parameter specifies up/down translation.\nTransformations are cumulative and apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling translate(50, 0) and then translate(20, 0) is the same as translate(70, 0). If translate() is called within draw(), the transformation is reset when the loop begins again. This function can be further controlled by using pushMatrix() and popMatrix().",
+            "itemtype": "method",
+            "name": "translate",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "left/right translation",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "up/down translation",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "class": "Attributes",
             "module": "Structure"
         },
         {
