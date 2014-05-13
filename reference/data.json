@@ -3165,7 +3165,35 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 24,
+            "line": 15,
+            "description": "The system variable touchX always contains the horizontal position of one finger, relative to (0, 0) of the canvas. This is best used for single touch interactions. For multi-touch interactions, use the touches[] array.",
+            "itemtype": "property",
+            "name": "touchX",
+            "class": "Touch",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/touch.js",
+            "line": 21,
+            "description": "The system variable touchY always contains the horizontal position of one finger, relative to (0, 0) of the canvas. This is best used for single touch interactions. For multi-touch interactions, use the touches[] array.",
+            "itemtype": "property",
+            "name": "touchX",
+            "class": "Touch",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/touch.js",
+            "line": 27,
+            "description": "The system variable touches[] contains an array of the positions of all current touch points, relative to (0, 0) of the canvas. Each element in the array is an object with x and y properties.",
+            "itemtype": "property",
+            "name": "touches[]",
+            "class": "Touch",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/touch.js",
+            "line": 39,
+            "description": "The touchStarted() function is called once after every time a touch is registered.",
             "itemtype": "method",
             "name": "touchStarted",
             "class": "Touch",
@@ -3173,7 +3201,8 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 37,
+            "line": 52,
+            "description": "The touchMoved() function is called every time a touch move is registered.",
             "itemtype": "method",
             "name": "touchMoved",
             "class": "Touch",
@@ -3181,7 +3210,8 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 50,
+            "line": 65,
+            "description": "The touchEnded() function is called every time a touch ends.",
             "itemtype": "method",
             "name": "touchEnded",
             "class": "Touch",
