@@ -59,6 +59,13 @@
             },
             "namespaces": {}
         },
+        "src/dom/manipulate.js": {
+            "name": "src/dom/manipulate.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "src/environment/environment.js": {
             "name": "src/environment/environment.js",
             "modules": {
@@ -109,6 +116,15 @@
             "classes": {},
             "fors": {
                 "Time & Date": 1
+            },
+            "namespaces": {}
+        },
+        "src/input/touch.js": {
+            "name": "src/input/touch.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Touch": 1
             },
             "namespaces": {}
         },
@@ -354,10 +370,12 @@
             "name": "Input",
             "submodules": {},
             "classes": {
-                "Time & Date": 1
+                "Time & Date": 1,
+                "Touch": 1
             },
             "fors": {
-                "Time & Date": 1
+                "Time & Date": 1,
+                "Touch": 1
             },
             "namespaces": {},
             "tag": "module",
@@ -622,6 +640,17 @@
         "Time & Date": {
             "name": "Time & Date",
             "shortname": "Time & Date",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Input",
+            "namespace": ""
+        },
+        "Touch": {
+            "name": "Touch",
+            "shortname": "Touch",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -1246,7 +1275,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 314,
+            "line": 320,
             "description": "_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
             "return": {
                 "description": "",
@@ -1257,7 +1286,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 367,
+            "line": 377,
             "description": "_preload\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1268,7 +1297,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 387,
+            "line": 397,
             "description": "The setup() function is called once when the program starts. It's used to define initial enviroment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one setup() function for each program and it shouldn't be called again after its initial execution. Note: Variables declared within setup() are not accessible within other functions, including draw().",
             "itemtype": "method",
             "name": "setup",
@@ -1280,7 +1309,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 416,
+            "line": 426,
             "description": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. draw() is called automatically and should never be called explicitly.\nIt should always be controlled with noLoop(), redraw() and loop(). After noLoop() stops the code in draw() from executing, redraw() causes the code inside draw() to execute once, and loop() will cause the code inside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with the frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as mousePressed(). Sometimes, you might have an empty call to draw() in your program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -1289,7 +1318,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 447,
+            "line": 457,
             "description": "_runFrames\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1300,7 +1329,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 463,
+            "line": 473,
             "description": "_applyDefaults\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1311,7 +1340,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 476,
+            "line": 486,
             "description": "_setProperty\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1801,6 +1830,36 @@
                 "type": "String|Array"
             },
             "class": "String Functions",
+            "module": "Data"
+        },
+        {
+            "file": "src/dom/manipulate.js",
+            "line": 9,
+            "description": "Creates a canvas element in the document.",
+            "itemtype": "method",
+            "name": "createCanvas",
+            "params": [
+                {
+                    "name": "w",
+                    "description": "width of the canvas",
+                    "type": "Number"
+                },
+                {
+                    "name": "h",
+                    "description": "height of the canvas",
+                    "type": "Number"
+                },
+                {
+                    "name": "isDefault",
+                    "description": "whether the canvas is a default one",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Undefined"
+            },
+            "class": "Environment",
             "module": "Data"
         },
         {
@@ -2891,6 +2950,30 @@
             "module": "Input"
         },
         {
+            "file": "src/input/touch.js",
+            "line": 24,
+            "itemtype": "method",
+            "name": "touchStarted",
+            "class": "Touch",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/touch.js",
+            "line": 37,
+            "itemtype": "method",
+            "name": "touchMoved",
+            "class": "Touch",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/touch.js",
+            "line": 50,
+            "itemtype": "method",
+            "name": "touchEnded",
+            "class": "Touch",
+            "module": "Input"
+        },
+        {
             "file": "src/math/calculation.js",
             "line": 12,
             "description": "Calculates the absolute value (magnitude) of a number. Maps to Math.abs(). The absolute value of a number is always positive.",
@@ -3148,14 +3231,14 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\ncreateCanvas(200, 200);\nvar value = 25;\nvar m = map(value, 0, 100, 0, width);\nellipse(m, 200, 10, 10);\n</code></div>\n\n<div><code>\nfunction setup() {\n createCanvs(200, 200);\n noStroke();\n}\nfunction draw() {\n background(204);\n var x1 = map(mouseX, 0, width, 50, 150);\n ellipse(x1, 75, 50, 50);  \n var x2 = map(mouseX, 0, width, 0, 200);\n ellipse(x2, 125, 50, 50);  \n}\n</code></div>"
+                "\n  <div><code>\n    createCanvas(200, 200);\n    var value = 25;\n    var m = map(value, 0, 100, 0, width);\n    ellipse(m, 200, 10, 10);\n  </code></div>\n\n  <div><code>\n    function setup() {\n      createCanvs(200, 200);\n      noStroke();\n    }\n\n    function draw() {\n      background(204);\n      var x1 = map(mouseX, 0, width, 50, 150);\n      ellipse(x1, 75, 50, 50);  \n      var x2 = map(mouseX, 0, width, 0, 200);\n      ellipse(x2, 125, 50, 50);  \n    }\n  </code></div>"
             ],
             "class": "Calculation",
             "module": "Math"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 148,
+            "line": 149,
             "description": "Determines the largest value in a sequence of numbers, and then returns that value. max() accepts any number of Number parameters, or an Array of any length.",
             "itemtype": "method",
             "name": "max",
@@ -3175,7 +3258,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 163,
+            "line": 164,
             "description": "Determines the smallest value in a sequence of numbers, and then returns that value. min() accepts any number of Number parameters, or an Array of any length.",
             "itemtype": "method",
             "name": "min",
@@ -3195,7 +3278,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 178,
+            "line": 179,
             "description": "Normalizes a number from another range into a value between 0 and 1. Identical to map(value, low, high, 0, 1).\nNumbers outside of the range are not clamped to 0 and 1, because out-of-range values are often intentional and useful. (See the second example above.)",
             "itemtype": "method",
             "name": "norm",
@@ -3225,7 +3308,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 190,
+            "line": 191,
             "description": "Facilitates exponential expressions. The pow() function is an efficient way of multiplying numbers by themselves (or their reciprocals) in large quantities. For example, pow(3, 5) is equivalent to the expression 3*3*3*3*3 and pow(3, -5) is equivalent to 1 / 3*3*3*3*3. Maps to Math.pow().",
             "itemtype": "method",
             "name": "pow",
@@ -3250,7 +3333,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 200,
+            "line": 201,
             "description": "Calculates the integer closest to the n parameter. For example, round(133.8) returns the value 134. Maps to Math.round().",
             "itemtype": "method",
             "name": "constrain",
@@ -3270,7 +3353,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 208,
+            "line": 209,
             "description": "Squares a number (multiplies a number by itself). The result is always a positive number, as multiplying two negative numbers always yields a positive result. For example, -1 * -1 = 1.",
             "itemtype": "method",
             "name": "sq",
@@ -3290,7 +3373,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 217,
+            "line": 218,
             "description": "Calculates the square root of a number. The square root of a number is always positive, even though there may be a valid negative root. The square root s of number a is such that s*s = a. It is the opposite of squaring. Maps to Math.sqrt().",
             "itemtype": "method",
             "name": "sqrt",
@@ -3401,7 +3484,7 @@
         {
             "file": "src/math/pvector.js",
             "line": 41,
-            "description": "Sets the x, y, and z component of the vector using two or three separate\n variables, the data from a PVector, or the values from a float array.",
+            "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a PVector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
             "params": [
@@ -3429,7 +3512,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 60,
+            "line": 59,
             "description": "Gets a copy of the vector, returns a PVector object.",
             "itemtype": "method",
             "name": "get",
@@ -3442,7 +3525,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 72,
+            "line": 70,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or adds two independent vectors together. The version of the method that adds two vectors together is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "add",
@@ -3475,7 +3558,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 91,
+            "line": 89,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from another, or subtracts two independent vectors. The version of the method that substracts two vectors is a static method and returns a PVector, the others have no return value -- they act directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -3508,7 +3591,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 110,
+            "line": 108,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -3529,7 +3612,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 126,
+            "line": 123,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -3550,7 +3633,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 142,
+            "line": 138,
             "description": "Calculates the magnitude (length) of the vector and returns the result as a float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -3563,8 +3646,8 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 152,
-            "description": "Calculates the squared magnitude of the vector and returns the result\n as a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\n Faster if the real length is not required in the\n case of comparing vectors, etc.",
+            "line": 148,
+            "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
             "return": {
@@ -3576,7 +3659,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 167,
+            "line": 162,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -3608,7 +3691,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 186,
+            "line": 180,
             "description": "Calculates and returns a vector composed of the cross product between two vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -3628,8 +3711,8 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 201,
-            "description": "Calculates the Euclidean distance between two points (considering a\n point as a vector object).",
+            "line": 194,
+            "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
             "params": [
@@ -3648,7 +3731,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 215,
+            "line": 207,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -3661,7 +3744,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 226,
+            "line": 217,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b> parameter.",
             "itemtype": "method",
             "name": "limit",
@@ -3681,7 +3764,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 243,
+            "line": 233,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b> parameter.",
             "mtehod": "setMag",
             "params": [
@@ -3700,8 +3783,8 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 255,
-            "description": "Calculate the angle of rotation for this vector (only 2D vectors)\n TODO: deal with AngleMode",
+            "line": 244,
+            "description": "Calculate the angle of rotation for this vector (only 2D vectors)\nTODO: deal with AngleMode",
             "itemtype": "method",
             "name": "heading",
             "return": {
@@ -3713,8 +3796,8 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 267,
-            "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the same\n TODO: Change to rotate()\n TODO: Deal with angleMode",
+            "line": 255,
+            "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the same\nTODO: Change to rotate()\nTODO: Deal with angleMode",
             "itemtype": "method",
             "name": "rotate2D",
             "params": [
@@ -3733,7 +3816,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 285,
+            "line": 272,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -3770,8 +3853,8 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 306,
-            "description": "Return a representation of this vector as a float array. This is only\n for temporary use. If used in any other fashion, the contents should be\n copied by using the <b>PVector.get()</b> method to copy into your own array.",
+            "line": 292,
+            "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>PVector.get()</b> method to copy into your own array.",
             "itemtype": "method",
             "name": "array",
             "return": {
@@ -3783,7 +3866,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 323,
+            "line": 308,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -3804,7 +3887,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 335,
+            "line": 320,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -3818,7 +3901,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 347,
+            "line": 332,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -3832,7 +3915,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 364,
+            "line": 349,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -3856,7 +3939,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 378,
+            "line": 362,
             "description": "Subtracts one PVector from another and returns a new one.  The second vector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -3880,7 +3963,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 393,
+            "line": 376,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -3904,7 +3987,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 406,
+            "line": 388,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -3928,7 +4011,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 420,
+            "line": 401,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -3952,7 +4035,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 433,
+            "line": 413,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -3976,8 +4059,8 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 446,
-            "description": "Calculates the Euclidean distance between two points (considering a\n point as a vector object).",
+            "line": 425,
+            "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
                 {
@@ -4000,7 +4083,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 460,
+            "line": 438,
             "description": "Linear interpolate a vector to another vector and return the result as a new vector.",
             "static": 1,
             "params": [
@@ -4025,7 +4108,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 473,
+            "line": 450,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -4041,7 +4124,7 @@
                 }
             ],
             "return": {
-                "description": "the angle between\n \n TODO: Needs to account for angleMode",
+                "description": "the angle between\n\nTODO: Needs to account for angleMode",
                 "type": "Number"
             },
             "class": "PVector",
@@ -4320,14 +4403,14 @@
                 "type": "Object"
             },
             "example": [
-                " <div><img src=\"http://processing.org/reference/images/arc_.png\">\n<code>arc(50, 55, 50, 50, 0, HALF_PI);\nnoFill();\narc(50, 55, 60, 60, HALF_PI, PI);\narc(50, 55, 70, 70, PI, PI+QUARTER_PI);\narc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_2.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_3.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n</code></div>\n\n<div><img src=\"http://processing.org/reference/images/arc_4.png\">\n<code>arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n</code></div>"
+                "\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_.png\">\n    <code>\n      arc(50, 55, 50, 50, 0, HALF_PI);\n      noFill();\n      arc(50, 55, 60, 60, HALF_PI, PI);\n      arc(50, 55, 70, 70, PI, PI+QUARTER_PI);\n      arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n    </code>\n  </div>\n\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_2.png\">\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n    </code>\n  </div>\n\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_3.png\">\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n    </code>\n  </div>\n\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_4.png\">\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n    </code>\n  </div>"
             ],
             "class": "2D Primitives",
             "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 77,
+            "line": 89,
             "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and height is a circle. By default, the first two parameters set the location, and the third and fourth parameters set the shape's width and height. The origin may be changed with the ellipseMode() function.",
             "itemtype": "method",
             "name": "ellipse",
@@ -4362,7 +4445,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 108,
+            "line": 120,
             "description": "Draws a line (a direct path between two points) to the screen. The version of line() with four parameters draws the line in 2D. To color a line, use the stroke() function. A line cannot be filled, therefore the fill() function will not affect the color of a line. 2D lines are drawn with a width of one pixel by default, but this can be changed with the strokeWeight() function. The version with six parameters allows the line to be placed anywhere within XYZ space. Drawing this shape in 3D with the z parameter requires the P3D parameter in combination with size() as shown in the above example.",
             "itemtype": "method",
             "name": "line",
@@ -4397,7 +4480,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 130,
+            "line": 142,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel. The first parameter is the horizontal value for the point, the second value is the vertical value for the point, and the optional third value is the depth value. Drawing this shape in 3D with the z parameter requires the P3D parameter in combination with size() as shown in the above example.",
             "itemtype": "method",
             "name": "point",
@@ -4422,7 +4505,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 160,
+            "line": 172,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is similar to a rectangle, but the angles between its edges are not constrained to ninety degrees. The first pair of parameters (x1,y1) sets the first vertex and the subsequent pairs should proceed clockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -4477,7 +4560,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 187,
+            "line": 199,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with every angle at ninety degrees. By default, the first two parameters set the location of the upper-left corner, the third sets the width, and the fourth sets the height. The way these parameters are interpreted, however, may be changed with the rectMode() function.",
             "itemtype": "method",
             "name": "rect",
@@ -4512,7 +4595,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 208,
+            "line": 220,
             "description": "A triangle is a plane created by connecting three points. The first two arguments specify the first point, the middle two arguments specify the second point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -4798,7 +4881,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 78,
+            "line": 77,
             "description": "Calculates the tangent of a point on a Bezier curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
             "itemtype": "method",
             "name": "bezierTangent",
@@ -4838,7 +4921,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 98,
+            "line": 97,
             "description": "Draws a curved line on the screen. The first and second parameters specify the beginning control point and the last two parameters specify the ending control point. The middle parameters specify the start and stop of the curve. Longer curves can be created by putting a series of curve() functions together or using curveVertex(). An additional function called curveTightness() provides control for the visual quality of the curve. The curve() function is an implementation of Catmull-Rom splines. Using the 3D version requires rendering with P3D (see the Environment reference for more information).",
             "itemtype": "method",
             "name": "curve",
@@ -4893,7 +4976,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 127,
+            "line": 126,
             "description": "Sets the resolution at which curves display.\n\nThe default value is 20.",
             "itemtype": "method",
             "name": "curveDetail",
@@ -4913,7 +4996,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 143,
+            "line": 141,
             "description": "Calculate a point on the Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.",
             "itemtype": "method",
             "name": "curvePoint",
@@ -4953,7 +5036,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 171,
+            "line": 168,
             "description": "Calculates the tangent of a point on a curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
             "itemtype": "method",
             "name": "curveTangent",
@@ -5205,7 +5288,7 @@
             "itemtype": "method",
             "name": "redraw",
             "example": [
-                "\n<div><code>\nvar x = 0;\n\nfunction setup() {\n  createCanvas(200, 200);\n  noLoop();\n}\n\nfunction draw() {\n  background(204);\n  line(x, 0, x, height); \n}\n\nfunction mousePressed() {\n  x += 1;\n  redraw();\n}\n</code></div>"
+                "\n   <div><code>\n     var x = 0;\n    function setup() {\n       createCanvas(200, 200);\n       noLoop();\n     }\n    function draw() {\n       background(204);\n       line(x, 0, x, height); \n     }\n    function mousePressed() {\n       x += 1;\n       redraw();\n     }\n   </code></div>"
             ],
             "class": "Structure",
             "module": "Structure"
@@ -5422,7 +5505,7 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/math/pvector.js:243"
+            "line": " src/math/pvector.js:233"
         },
         {
             "message": "Missing item type\np5 instance constructor\n\nA p5 instance....\n\nCan run in \"global\" or \"instance\" mode:\n  \"global\" - \n  \"instance\" - \n\nPublic fields on a p5 instance:",
@@ -5430,23 +5513,23 @@
         },
         {
             "message": "Missing item type\n_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
-            "line": " src/core/core.js:314"
+            "line": " src/core/core.js:320"
         },
         {
             "message": "Missing item type\n_preload\n\nTODO: ???",
-            "line": " src/core/core.js:367"
+            "line": " src/core/core.js:377"
         },
         {
             "message": "Missing item type\n_runFrames\n\nTODO: ???",
-            "line": " src/core/core.js:447"
+            "line": " src/core/core.js:457"
         },
         {
             "message": "Missing item type\n_applyDefaults\n\nTODO: ???",
-            "line": " src/core/core.js:463"
+            "line": " src/core/core.js:473"
         },
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
-            "line": " src/core/core.js:476"
+            "line": " src/core/core.js:486"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
@@ -5526,43 +5609,43 @@
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b> parameter.",
-            "line": " src/math/pvector.js:243"
+            "line": " src/math/pvector.js:233"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/pvector.js:364"
+            "line": " src/math/pvector.js:349"
         },
         {
             "message": "Missing item type\nSubtracts one PVector from another and returns a new one.  The second vector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/pvector.js:378"
+            "line": " src/math/pvector.js:362"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:393"
+            "line": " src/math/pvector.js:376"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:406"
+            "line": " src/math/pvector.js:388"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:420"
+            "line": " src/math/pvector.js:401"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:433"
+            "line": " src/math/pvector.js:413"
         },
         {
-            "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\n point as a vector object).",
-            "line": " src/math/pvector.js:446"
+            "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
+            "line": " src/math/pvector.js:425"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a new vector.",
-            "line": " src/math/pvector.js:460"
+            "line": " src/math/pvector.js:438"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/math/pvector.js:473"
+            "line": " src/math/pvector.js:450"
         },
         {
             "message": "Missing item type\nReturn a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them, inclusive.",

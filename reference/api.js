@@ -23,6 +23,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Structure",
         "Structure:Structure",
         "Time & Date",
+        "Touch",
         "Trigonometry",
         "Vertex"
     ],
