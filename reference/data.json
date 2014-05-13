@@ -108,11 +108,20 @@
             },
             "namespaces": {}
         },
-        "src/input/time_date.js": {
-            "name": "src/input/time_date.js",
+        "src/input/mouse.js": {
+            "name": "src/input/mouse.js",
             "modules": {
                 "Input": 1
             },
+            "classes": {},
+            "fors": {
+                "Mouse": 1
+            },
+            "namespaces": {}
+        },
+        "src/input/time_date.js": {
+            "name": "src/input/time_date.js",
+            "modules": {},
             "classes": {},
             "fors": {
                 "Time & Date": 1
@@ -228,9 +237,13 @@
         },
         "src/transform/transform.js": {
             "name": "src/transform/transform.js",
-            "modules": {},
+            "modules": {
+                "Transform": 1
+            },
             "classes": {},
-            "fors": {},
+            "fors": {
+                "Transform": 1
+            },
             "namespaces": {}
         },
         "src/typography/attributes.js": {
@@ -377,19 +390,22 @@
             "name": "Input",
             "submodules": {},
             "classes": {
+                "Mouse": 1,
                 "Time & Date": 1,
                 "Touch": 1
             },
             "fors": {
+                "Mouse": 1,
                 "Time & Date": 1,
                 "Touch": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/input/time_date.js",
+            "file": "src/input/mouse.js",
             "line": 1,
             "requires": [
-                "core"
+                "core",
+                "constants"
             ]
         },
         "Math": {
@@ -457,6 +473,25 @@
             "line": 1,
             "requires": [
                 "core"
+            ]
+        },
+        "Transform": {
+            "name": "Transform",
+            "submodules": {},
+            "classes": {
+                "Transform": 1
+            },
+            "fors": {
+                "Transform": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/transform/transform.js",
+            "line": 1,
+            "requires": [
+                "core",
+                "constants",
+                "linearalgebra"
             ]
         },
         "Typography": {
@@ -644,6 +679,17 @@
             "module": "Image",
             "namespace": ""
         },
+        "Mouse": {
+            "name": "Mouse",
+            "shortname": "Mouse",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Input",
+            "namespace": ""
+        },
         "Time & Date": {
             "name": "Time & Date",
             "shortname": "Time & Date",
@@ -798,6 +844,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Structure",
+            "namespace": ""
+        },
+        "Transform": {
+            "name": "Transform",
+            "shortname": "Transform",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Transform",
             "namespace": ""
         },
         "Constants": {
@@ -2864,6 +2921,156 @@
             "name": "updatePixels",
             "class": "Pixels",
             "module": "Image"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 21,
+            "description": "The system variable pmouseX always contains the horizontal position of the mouse in the frame previous to the current frame, relative to (0, 0) of the canvas.",
+            "itemtype": "property",
+            "name": "pmouseX",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 26,
+            "description": "The system variable pmouseY always contains the vertical position of the mouse in the frame previous to the current frame, relative to (0, 0) of the canvas.",
+            "itemtype": "property",
+            "name": "pmouseY",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 31,
+            "description": "The system variable mouseX always contains the current horizontal position of the mouse, relative to (0, 0) of the canvas.",
+            "itemtype": "property",
+            "name": "mouseX",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 36,
+            "description": "The system variable mouseY always contains the current vertical position of the mouse, relative to (0, 0) of the canvas.",
+            "itemtype": "property",
+            "name": "mouseY",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 42,
+            "description": "The system variable pwinMouseX always contains the horizontal position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window.",
+            "itemtype": "property",
+            "name": "pwinMouseX",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 48,
+            "description": "The system variable pwinMouseY always contains the vertical position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window.",
+            "itemtype": "property",
+            "name": "pwinMouseY",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 54,
+            "description": "The system variable pwinMouseY always contains the current horizontal position of the mouse, relative to (0, 0) of the window.",
+            "itemtype": "property",
+            "name": "winMouseX",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 60,
+            "description": "The system variable winMouseY always contains the current vertical position of the mouse, relative to (0, 0) of the window.",
+            "itemtype": "property",
+            "name": "winMouseY",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 75,
+            "description": "Processing automatically tracks if the mouse button is pressed and which button is pressed. The value of the system variable mouseButton is either LEFT, RIGHT, or CENTER depending on which button is pressed. Browsers are weird, USE AT YOUR OWN RISK FOR NOW!",
+            "itemtype": "property",
+            "name": "mouseButton",
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 89,
+            "description": "The mouseMoved() function is called every time the mouse moves and a mouse button is not pressed.",
+            "itemtype": "method",
+            "name": "mouseMoved",
+            "example": [
+                "\n  <div>\n    <code>\n      // Move the mouse across the image\n      // to change its value\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseMoved() {\n        value = value + 5;\n        if (value > 255) {\n          value = 0;\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 114,
+            "description": "The mouseDragged() function is called once every time the mouse moves and a mouse button is pressed.",
+            "itemtype": "method",
+            "name": "mouseDragged",
+            "example": [
+                "\n  <div>\n    <code>\n      // Move the mouse across the image\n      // to change its value\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseDragged() {\n        value = value + 5;\n        if (value > 255) {\n          value = 0;\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 149,
+            "description": "The mousePressed() function is called once after every time a mouse button is pressed. The mouseButton variable (see the related reference entry) can be used to determine which button has been pressed.",
+            "itemtype": "method",
+            "name": "mousePressed",
+            "example": [
+                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseClicked() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 183,
+            "description": "The mouseReleased() function is called every time a mouse button is released.",
+            "itemtype": "method",
+            "name": "mouseReleased",
+            "example": [
+                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseReleased() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 216,
+            "description": "The mouseClicked() function is called once after a mouse button has been pressed and then released.",
+            "itemtype": "method",
+            "name": "mouseClicked",
+            "example": [
+                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      // after the mouse has been clicked\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseClicked() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Mouse",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/mouse.js",
+            "line": 249,
+            "description": "The event.wheelDelta or event.detail property returns negative values if the mouse wheel if rotated up or away from the user and positive in the other direction. On OS X with \"natural\" scrolling enabled, the values are opposite.\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">mouse wheel event in JS</a>.",
+            "itemtype": "method",
+            "name": "mouseWheel",
+            "class": "Mouse",
+            "module": "Input"
         },
         {
             "file": "src/input/time_date.js",
@@ -5302,7 +5509,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 27,
+            "line": 19,
             "description": "Multiplies the current matrix by the one specified through the parameters. This is very slow because it will try to calculate the inverse of the transform, so avoid it whenever possible.",
             "itemtype": "method",
             "name": "applyMatrix",
@@ -5342,12 +5549,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 47,
+            "line": 39,
             "description": "Pops the current transformation matrix off the matrix stack. Understanding pushing and popping requires understanding the concept of a matrix stack. The pushMatrix() function saves the current coordinate system to the stack and popMatrix() restores the prior coordinate system. pushMatrix() and popMatrix() are used in conjuction with the other transformation functions and may be embedded to control the scope of the transformations.",
             "itemtype": "method",
             "name": "popMatrix",
@@ -5355,12 +5562,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 60,
+            "line": 52,
             "description": "Prints the current matrix to the Console.",
             "itemtype": "method",
             "name": "printMatrix",
@@ -5368,12 +5575,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 71,
+            "line": 63,
             "description": "Pushes the current transformation matrix onto the matrix stack. Understanding pushMatrix() and popMatrix() requires understanding the concept of a matrix stack. The pushMatrix() function saves the current coordinate system to the stack and popMatrix() restores the prior coordinate system. pushMatrix() and popMatrix() are used in conjuction with the other transformation functions and may be embedded to control the scope of the transformations.",
             "itemtype": "method",
             "name": "pushMatrix",
@@ -5381,12 +5588,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 84,
+            "line": 76,
             "description": "Replaces the current matrix with the identity matrix.",
             "itemtype": "method",
             "name": "resetMatrix",
@@ -5394,12 +5601,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 97,
+            "line": 89,
             "description": "Rotates a shape the amount specified by the angle parameter. This function accounts for angleMode, so angles can be entered in either RADIANS or DEGREES. \nObjects are always rotated around their relative position to the origin and positive numbers rotate objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling rotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI). All tranformations are reset when draw() begins again. \nTechnically, rotate() multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the pushMatrix() and popMatrix().",
             "itemtype": "method",
             "name": "rotate",
@@ -5414,12 +5621,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 136,
+            "line": 128,
             "description": "Increases or decreases the size of a shape by expanding and contracting vertices. Objects always scale from their relative origin to the coordinate system. Scale values are specified as decimal percentages. For example, the function call scale(2.0) increases the dimension of a shape by 200%.\nTransformations apply to everything that happens after and subsequent calls to the function multiply the effect. For example, calling scale(2.0) and then scale(1.5) is the same as scale(3.0). If scale() is called within draw(), the transformation is reset when the loop begins again. Using this fuction with the z parameter requires using P3D as a parameter for size(), as shown in the third example above. This function can be further controlled with pushMatrix() and popMatrix().",
             "itemtype": "method",
             "name": "scale",
@@ -5440,12 +5647,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 163,
+            "line": 155,
             "description": "Shears a shape around the x-axis the amount specified by the angle parameter. Angles should be specified in the current angleMode. Objects are always sheared around their relative position to the origin and positive numbers shear objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling shearX(PI/2) and then shearX(PI/2) is the same as shearX(PI). If shearX() is called within the draw(), the transformation is reset when the loop begins again. \nTechnically, shearX() multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the pushMatrix() and popMatrix() functions.",
             "itemtype": "method",
             "name": "shearX",
@@ -5460,12 +5667,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 182,
+            "line": 174,
             "description": "Shears a shape around the y-axis the amount specified by the angle parameter. Angles should be specified in the current angleMode. Objects are always sheared around their relative position to the origin and positive numbers shear objects in a clockwise direction. Transformations apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling shearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If shearY() is called within the draw(), the transformation is reset when the loop begins again.  \nTechnically, shearY() multiplies the current transformation matrix by a rotation matrix. This function can be further controlled by the pushMatrix() and popMatrix() functions.",
             "itemtype": "method",
             "name": "shearY",
@@ -5480,12 +5687,12 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 201,
+            "line": 193,
             "description": "Specifies an amount to displace objects within the display window. The x parameter specifies left/right translation, the y parameter specifies up/down translation.\nTransformations are cumulative and apply to everything that happens after and subsequent calls to the function accumulates the effect. For example, calling translate(50, 0) and then translate(20, 0) is the same as translate(70, 0). If translate() is called within draw(), the transformation is reset when the loop begins again. This function can be further controlled by using pushMatrix() and popMatrix().",
             "itemtype": "method",
             "name": "translate",
@@ -5505,8 +5712,8 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "Attributes",
-            "module": "Structure"
+            "class": "Transform",
+            "module": "Transform"
         },
         {
             "file": "src/typography/attributes.js",

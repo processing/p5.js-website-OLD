@@ -13,6 +13,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Image",
         "Image:Pixels",
         "Loading & Displaying",
+        "Mouse",
         "Noise",
         "PImage",
         "PVector",
@@ -24,6 +25,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Structure:Structure",
         "Time & Date",
         "Touch",
+        "Transform",
         "Trigonometry",
         "Vertex"
     ],
@@ -38,6 +40,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Math",
         "Shape",
         "Structure",
+        "Transform",
         "Typography"
     ],
     "allModules": [
@@ -80,6 +83,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Structure",
             "name": "Structure"
+        },
+        {
+            "displayName": "Transform",
+            "name": "Transform"
         },
         {
             "displayName": "Typography",
