@@ -12,6 +12,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Environment:Environment",
         "Image",
         "Image:Pixels",
+        "Keyboard",
         "Loading & Displaying",
         "Mouse",
         "Noise",
@@ -23,6 +24,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "String Functions",
         "Structure",
         "Structure:Structure",
+        "Text Area",
         "Time & Date",
         "Touch",
         "Transform",
@@ -38,6 +40,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Image",
         "Input",
         "Math",
+        "Output",
         "Shape",
         "Structure",
         "Transform",
@@ -75,6 +78,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Math",
             "name": "Math"
+        },
+        {
+            "displayName": "Output",
+            "name": "Output"
         },
         {
             "displayName": "Shape",

@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.2.11",
+        "version": "0.2.12",
         "url": ""
     },
     "files": {
@@ -108,11 +108,20 @@
             },
             "namespaces": {}
         },
-        "src/input/mouse.js": {
-            "name": "src/input/mouse.js",
+        "src/input/keyboard.js": {
+            "name": "src/input/keyboard.js",
             "modules": {
                 "Input": 1
             },
+            "classes": {},
+            "fors": {
+                "Keyboard": 1
+            },
+            "namespaces": {}
+        },
+        "src/input/mouse.js": {
+            "name": "src/input/mouse.js",
+            "modules": {},
             "classes": {},
             "fors": {
                 "Mouse": 1
@@ -183,6 +192,17 @@
             "classes": {},
             "fors": {
                 "Trigonometry": 1
+            },
+            "namespaces": {}
+        },
+        "src/output/text_area.js": {
+            "name": "src/output/text_area.js",
+            "modules": {
+                "Output": 1
+            },
+            "classes": {},
+            "fors": {
+                "Text Area": 1
             },
             "namespaces": {}
         },
@@ -390,22 +410,23 @@
             "name": "Input",
             "submodules": {},
             "classes": {
+                "Keyboard": 1,
                 "Mouse": 1,
                 "Time & Date": 1,
                 "Touch": 1
             },
             "fors": {
+                "Keyboard": 1,
                 "Mouse": 1,
                 "Time & Date": 1,
                 "Touch": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/input/mouse.js",
+            "file": "src/input/keyboard.js",
             "line": 1,
             "requires": [
-                "core",
-                "constants"
+                "core"
             ]
         },
         "Math": {
@@ -429,6 +450,23 @@
             "tag": "module",
             "file": "src/math/pvector.js",
             "line": 9,
+            "requires": [
+                "core"
+            ]
+        },
+        "Output": {
+            "name": "Output",
+            "submodules": {},
+            "classes": {
+                "Text Area": 1
+            },
+            "fors": {
+                "Text Area": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/output/text_area.js",
+            "line": 1,
             "requires": [
                 "core"
             ]
@@ -679,6 +717,17 @@
             "module": "Image",
             "namespace": ""
         },
+        "Keyboard": {
+            "name": "Keyboard",
+            "shortname": "Keyboard",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Input",
+            "namespace": ""
+        },
         "Mouse": {
             "name": "Mouse",
             "shortname": "Mouse",
@@ -789,6 +838,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Math",
+            "namespace": ""
+        },
+        "Text Area": {
+            "name": "Text Area",
+            "shortname": "Text Area",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Output",
             "namespace": ""
         },
         "2D Primitives": {
@@ -2923,6 +2983,69 @@
             "module": "Image"
         },
         {
+            "file": "src/input/keyboard.js",
+            "line": 12,
+            "description": "The isKeyPressed() function returns a boolean value whether a key is pressed, or not. It is the same as keyIsPressed().",
+            "itemtype": "method",
+            "name": "isKeyPressed",
+            "example": [
+                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        if (isKeyPressed()) {\n          fill(value);\n          rect(25, 25, 50, 50);\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 36,
+            "description": "The keyPressed() function is called once every time a key is pressed.",
+            "itemtype": "method",
+            "name": "keyPressed",
+            "example": [
+                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function keyPressed() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 63,
+            "description": "The variable keyCode is used to detect special keys such as the UP, DOWN, LEFT, RIGHT arrow keys and ALT, CONTROL, SHIFT.",
+            "itemtype": "property",
+            "name": "keyCode",
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 73,
+            "description": "The keyReleased() function is called once every time a key is released. See key and keyReleased for more information. For non-ASCII keys, use the keyCode variable.",
+            "itemtype": "method",
+            "name": "keyReleased",
+            "example": [
+                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function keyReleased() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>\n"
+            ],
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 106,
+            "description": "The keyTyped() function is called once every time a key is pressed, but action keys such as Ctrl, Shift, and Alt are ignored. The most recent key pressed will be stored in the key variable.",
+            "itemtype": "method",
+            "name": "keyTyped",
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 112,
+            "description": "The system variable key always contains the value of the most recent key on the keyboard that was typed. For non-ASCII keys, use the keyCode variable.",
+            "itemtype": "property",
+            "name": "key",
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
             "file": "src/input/mouse.js",
             "line": 21,
             "description": "The system variable pmouseX always contains the horizontal position of the mouse in the frame previous to the current frame, relative to (0, 0) of the canvas.",
@@ -3177,7 +3300,7 @@
             "line": 21,
             "description": "The system variable touchY always contains the horizontal position of one finger, relative to (0, 0) of the canvas. This is best used for single touch interactions. For multi-touch interactions, use the touches[] array.",
             "itemtype": "property",
-            "name": "touchX",
+            "name": "touchY",
             "class": "Touch",
             "module": "Input"
         },
@@ -4597,6 +4720,22 @@
             ],
             "class": "Trigonometry",
             "module": "Math"
+        },
+        {
+            "file": "src/output/text_area.js",
+            "line": 18,
+            "description": "The print() function writes to the console area of your browser, it maps to console.log(). This function is often helpful for looking at the data a program is producing. This function creates a new line of text for each call to the function. More than one parameter can be passed into the function by separating them with commas. Alternatively, individual elements can be separated with quotes (\"\") and joined with the addition operator (+).",
+            "itemtype": "method",
+            "name": "print",
+            "params": [
+                {
+                    "name": "contents",
+                    "description": "any combination of Number, String, Object, Boolean, Array to print",
+                    "type": "Any"
+                }
+            ],
+            "class": "Text Area",
+            "module": "Output"
         },
         {
             "file": "src/shape/2d_primitives.js",
