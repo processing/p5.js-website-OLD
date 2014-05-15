@@ -1390,7 +1390,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 171,
+            "line": 174,
             "description": "Array containing the values for all the pixels in the display window. These values are of the color datatype. This array is the size of the display window. For example, if the image is 100x100 pixels, there will be 10000 values and if the window is 200x300 pixels, there will be 60000 values. The index value defines the position of a value within the array. \nBefore accessing this array, the data must loaded with the loadPixels() function. After the array data has been modified, the updatePixels() function must be run to update the changes.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -1399,7 +1399,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 320,
+            "line": 322,
             "description": "_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
             "return": {
                 "description": "",
@@ -1410,7 +1410,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 377,
+            "line": 379,
             "description": "_preload\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1421,7 +1421,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 397,
+            "line": 399,
             "description": "The setup() function is called once when the program starts. It's used to define initial enviroment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one setup() function for each program and it shouldn't be called again after its initial execution. Note: Variables declared within setup() are not accessible within other functions, including draw().",
             "itemtype": "method",
             "name": "setup",
@@ -1433,7 +1433,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 426,
+            "line": 428,
             "description": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. draw() is called automatically and should never be called explicitly.\nIt should always be controlled with noLoop(), redraw() and loop(). After noLoop() stops the code in draw() from executing, redraw() causes the code inside draw() to execute once, and loop() will cause the code inside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with the frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as mousePressed(). Sometimes, you might have an empty call to draw() in your program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -1442,7 +1442,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 457,
+            "line": 459,
             "description": "_runFrames\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1453,7 +1453,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 473,
+            "line": 475,
             "description": "_applyDefaults\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1464,7 +1464,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 486,
+            "line": 488,
             "description": "_setProperty\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -2985,18 +2985,33 @@
         {
             "file": "src/input/keyboard.js",
             "line": 12,
-            "description": "The isKeyPressed() function returns a boolean value whether a key is pressed, or not. It is the same as keyIsPressed().",
-            "itemtype": "method",
+            "description": "The boolean system variable isKeyPressed is true if any key is pressed and false if no keys are pressed.",
+            "itemtype": "property",
             "name": "isKeyPressed",
-            "example": [
-                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        if (isKeyPressed()) {\n          fill(value);\n          rect(25, 25, 50, 50);\n        }\n      }\n    </code>\n  </div>\n"
-            ],
             "class": "Keyboard",
             "module": "Input"
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 36,
+            "line": 17,
+            "description": "The system variable key always contains the value of the most recent key on the keyboard that was typed. For non-ASCII keys, use the keyCode variable.",
+            "itemtype": "property",
+            "name": "key",
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 22,
+            "description": "The variable keyCode is used to detect special keys such as the UP, DOWN, LEFT, RIGHT arrow keys and ALT, CONTROL, SHIFT.",
+            "itemtype": "property",
+            "name": "keyCode",
+            "class": "Keyboard",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 27,
             "description": "The keyPressed() function is called once every time a key is pressed.",
             "itemtype": "method",
             "name": "keyPressed",
@@ -3008,16 +3023,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 63,
-            "description": "The variable keyCode is used to detect special keys such as the UP, DOWN, LEFT, RIGHT arrow keys and ALT, CONTROL, SHIFT.",
-            "itemtype": "property",
-            "name": "keyCode",
-            "class": "Keyboard",
-            "module": "Input"
-        },
-        {
-            "file": "src/input/keyboard.js",
-            "line": 73,
+            "line": 61,
             "description": "The keyReleased() function is called once every time a key is released. See key and keyReleased for more information. For non-ASCII keys, use the keyCode variable.",
             "itemtype": "method",
             "name": "keyReleased",
@@ -3029,7 +3035,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 106,
+            "line": 95,
             "description": "The keyTyped() function is called once every time a key is pressed, but action keys such as Ctrl, Shift, and Alt are ignored. The most recent key pressed will be stored in the key variable.",
             "itemtype": "method",
             "name": "keyTyped",
@@ -3037,17 +3043,17 @@
             "module": "Input"
         },
         {
-            "file": "src/input/keyboard.js",
-            "line": 112,
-            "description": "The system variable key always contains the value of the most recent key on the keyboard that was typed. For non-ASCII keys, use the keyCode variable.",
+            "file": "src/input/mouse.js",
+            "line": 15,
+            "description": "The boolean system variable isMousePressed is true if the mouse is pressed and false if not.",
             "itemtype": "property",
-            "name": "key",
-            "class": "Keyboard",
+            "name": "isMousePressed",
+            "class": "Mouse",
             "module": "Input"
         },
         {
             "file": "src/input/mouse.js",
-            "line": 21,
+            "line": 22,
             "description": "The system variable pmouseX always contains the horizontal position of the mouse in the frame previous to the current frame, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "pmouseX",
@@ -3056,7 +3062,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 26,
+            "line": 27,
             "description": "The system variable pmouseY always contains the vertical position of the mouse in the frame previous to the current frame, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "pmouseY",
@@ -3065,7 +3071,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 31,
+            "line": 32,
             "description": "The system variable mouseX always contains the current horizontal position of the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseX",
@@ -3074,7 +3080,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 36,
+            "line": 37,
             "description": "The system variable mouseY always contains the current vertical position of the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseY",
@@ -3083,7 +3089,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 42,
+            "line": 43,
             "description": "The system variable pwinMouseX always contains the horizontal position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "pwinMouseX",
@@ -3092,7 +3098,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 48,
+            "line": 49,
             "description": "The system variable pwinMouseY always contains the vertical position of the mouse in the frame previous to the current frame, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "pwinMouseY",
@@ -3101,7 +3107,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 54,
+            "line": 55,
             "description": "The system variable pwinMouseY always contains the current horizontal position of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseX",
@@ -3110,7 +3116,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 60,
+            "line": 61,
             "description": "The system variable winMouseY always contains the current vertical position of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseY",
@@ -3119,7 +3125,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 75,
+            "line": 76,
             "description": "Processing automatically tracks if the mouse button is pressed and which button is pressed. The value of the system variable mouseButton is either LEFT, RIGHT, or CENTER depending on which button is pressed. Browsers are weird, USE AT YOUR OWN RISK FOR NOW!",
             "itemtype": "property",
             "name": "mouseButton",
@@ -3128,7 +3134,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 89,
+            "line": 90,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse button is not pressed.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -3140,7 +3146,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 114,
+            "line": 115,
             "description": "The mouseDragged() function is called once every time the mouse moves and a mouse button is pressed.",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -3152,7 +3158,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 149,
+            "line": 150,
             "description": "The mousePressed() function is called once after every time a mouse button is pressed. The mouseButton variable (see the related reference entry) can be used to determine which button has been pressed.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -3164,7 +3170,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 183,
+            "line": 185,
             "description": "The mouseReleased() function is called every time a mouse button is released.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -3176,7 +3182,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 216,
+            "line": 219,
             "description": "The mouseClicked() function is called once after a mouse button has been pressed and then released.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -3188,7 +3194,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 249,
+            "line": 252,
             "description": "The event.wheelDelta or event.detail property returns negative values if the mouse wheel if rotated up or away from the user and positive in the other direction. On OS X with \"natural\" scrolling enabled, the values are opposite.\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">mouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -6104,23 +6110,23 @@
         },
         {
             "message": "Missing item type\n_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
-            "line": " src/core/core.js:320"
+            "line": " src/core/core.js:322"
         },
         {
             "message": "Missing item type\n_preload\n\nTODO: ???",
-            "line": " src/core/core.js:377"
+            "line": " src/core/core.js:379"
         },
         {
             "message": "Missing item type\n_runFrames\n\nTODO: ???",
-            "line": " src/core/core.js:457"
+            "line": " src/core/core.js:459"
         },
         {
             "message": "Missing item type\n_applyDefaults\n\nTODO: ???",
-            "line": " src/core/core.js:473"
+            "line": " src/core/core.js:475"
         },
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
-            "line": " src/core/core.js:486"
+            "line": " src/core/core.js:488"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
