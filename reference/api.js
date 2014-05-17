@@ -10,6 +10,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Curves",
         "Environment",
         "Environment:Environment",
+        "Files",
         "Image",
         "Image:Pixels",
         "Keyboard",

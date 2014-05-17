@@ -108,11 +108,20 @@
             },
             "namespaces": {}
         },
-        "src/input/keyboard.js": {
-            "name": "src/input/keyboard.js",
+        "src/input/files.js": {
+            "name": "src/input/files.js",
             "modules": {
                 "Input": 1
             },
+            "classes": {},
+            "fors": {
+                "Files": 1
+            },
+            "namespaces": {}
+        },
+        "src/input/keyboard.js": {
+            "name": "src/input/keyboard.js",
+            "modules": {},
             "classes": {},
             "fors": {
                 "Keyboard": 1
@@ -410,12 +419,14 @@
             "name": "Input",
             "submodules": {},
             "classes": {
+                "Files": 1,
                 "Keyboard": 1,
                 "Mouse": 1,
                 "Time & Date": 1,
                 "Touch": 1
             },
             "fors": {
+                "Files": 1,
                 "Keyboard": 1,
                 "Mouse": 1,
                 "Time & Date": 1,
@@ -423,10 +434,11 @@
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/input/keyboard.js",
+            "file": "src/input/files.js",
             "line": 1,
             "requires": [
-                "core"
+                "core",
+                "reqwest"
             ]
         },
         "Math": {
@@ -715,6 +727,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Image",
+            "namespace": ""
+        },
+        "Files": {
+            "name": "Files",
+            "shortname": "Files",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Input",
             "namespace": ""
         },
         "Keyboard": {
@@ -2981,6 +3004,84 @@
             "name": "updatePixels",
             "class": "Pixels",
             "module": "Image"
+        },
+        {
+            "file": "src/input/files.js",
+            "line": 30,
+            "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next line in your sketch is executed, either use preload() to guarantee the file loads before setup() and draw() are called, or supply a callback function that is executed when loadStrings() completes.",
+            "itemtype": "method",
+            "name": "loadJSON",
+            "params": [
+                {
+                    "name": "filename",
+                    "description": "name of the file or url to load",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "function to be executed after loadJSON() completes, Array is passed in as first argument",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "JSON data",
+                "type": "Object|Array"
+            },
+            "class": "Files",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/files.js",
+            "line": 53,
+            "description": "Reads the contents of a file and creates a String array of its individual lines. If the name of the file is used as the parameter, as in the above example, the file must be located in the sketch directory/folder. \nAlternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.\nThis method is asynchronous, meaning it may not finish before the next line in your sketch is executed, either use preload() to guarantee the file loads before setup() and draw() are called, or supply a callback function that is executed when loadStrings() completes.",
+            "itemtype": "method",
+            "name": "loadStrings",
+            "params": [
+                {
+                    "name": "filename",
+                    "description": "name of the file or url to load",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "function to be executed after loadStrings() completes, Array is passed in as first argument",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "Array of Strings",
+                "type": "Array"
+            },
+            "class": "Files",
+            "module": "Input"
+        },
+        {
+            "file": "src/input/files.js",
+            "line": 89,
+            "description": "Reads the contents of a file and creates an XML object with its values. If the name of the file is used as the parameter, as in the above example, the file must be located in the sketch directory/folder. \nAlternatively, the file maybe be loaded from anywhere on the local computer using an absolute path (something that starts with / on Unix and Linux, or a drive letter on Windows), or the filename parameter can be a URL for a file found on a network.\nThis method is asynchronous, meaning it may not finish before the next line in your sketch is executed, either use preload() to guarantee the file loads before setup() and draw() are called, or supply a callback function that is executed when loadXML() completes.",
+            "itemtype": "method",
+            "name": "loadXML",
+            "params": [
+                {
+                    "name": "filename",
+                    "description": "name of the file or URL to load",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "function to be executed after loadXML() completes, XML object is passed in as first argument",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "XML object containing data",
+                "type": "Object"
+            },
+            "class": "Files",
+            "module": "Input"
         },
         {
             "file": "src/input/keyboard.js",
