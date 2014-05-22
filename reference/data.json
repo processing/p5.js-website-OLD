@@ -407,7 +407,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "src/image/image.js",
-            "line": 121,
+            "line": 193,
             "requires": [
                 "core",
                 "canvas",
@@ -697,7 +697,7 @@
             "module": "Image",
             "namespace": "",
             "file": "src/image/image.js",
-            "line": 121,
+            "line": 193,
             "description": "Creates a new PImage. A PImage is a canvas backed representation of an image.\np5 can display .gif, .jpg and .png images. Images may be displayed in 2D and 3D space. Before an image is used, it must be loaded with the loadImage() function. The PImage class contains fields for the width and height of the image, as well as an array called pixels[] that contains the values for every pixel in the image. The methods described below allow easy access to the image's pixels and alpha channel and simplify the process of compositing.\nBefore using the pixels[] array, be sure to use the loadPixels() method on the image to make sure that the pixel data is properly loaded.",
             "is_constructor": 1,
             "params": [
@@ -1422,7 +1422,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 322,
+            "line": 325,
             "description": "_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
             "return": {
                 "description": "",
@@ -1433,7 +1433,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 379,
+            "line": 382,
             "description": "_preload\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1444,7 +1444,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 399,
+            "line": 402,
             "description": "The setup() function is called once when the program starts. It's used to define initial enviroment properties such as screen size and background color and to load media such as images and fonts as the program starts. There can only be one setup() function for each program and it shouldn't be called again after its initial execution. Note: Variables declared within setup() are not accessible within other functions, including draw().",
             "itemtype": "method",
             "name": "setup",
@@ -1456,7 +1456,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 428,
+            "line": 431,
             "description": "Called directly after setup(), the draw() function continuously executes the lines of code contained inside its block until the program is stopped or noLoop() is called. draw() is called automatically and should never be called explicitly.\nIt should always be controlled with noLoop(), redraw() and loop(). After noLoop() stops the code in draw() from executing, redraw() causes the code inside draw() to execute once, and loop() will cause the code inside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with the frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as mousePressed(). Sometimes, you might have an empty call to draw() in your program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -1465,7 +1465,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 459,
+            "line": 462,
             "description": "_runFrames\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1476,7 +1476,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 475,
+            "line": 478,
             "description": "_applyDefaults\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -1487,7 +1487,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 488,
+            "line": 491,
             "description": "_setProperty\n\nTODO: ???",
             "return": {
                 "description": "",
@@ -2442,7 +2442,68 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 101,
+            "line": 106,
+            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use \nwhite as the tint color and specify an alpha value. For instance, \ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()). \n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
+            "itemtype": "method",
+            "name": "tint",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value, red or hue value (depending on the current color mode), or color Array",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "v2",
+                    "description": "green or saturation value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "blue or brightness value (depending on the current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "opacity of the background",
+                    "type": "Number|Array",
+                    "optional": true
+                }
+            ],
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 131,
+            "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
+            "itemtype": "method",
+            "name": "noTint",
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 142,
+            "description": "Apply the current tint color to the input image, return the resulting canvas.",
+            "params": [
+                {
+                    "name": "The",
+                    "description": "image to be tinted",
+                    "type": "PImage"
+                }
+            ],
+            "return": {
+                "description": "The resulting tinted canvas",
+                "type": "Canvas"
+            },
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 173,
             "description": "Set image mode. Modifies the location from which images are drawn by changing the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and third parameters of image() as the upper-left corner of the image. If two additional parameters are specified, they are used to set the image's width and height.\nimageMode(CORNERS) interprets the second and third parameters of image() as the location of one corner, and the fourth and fifth parameters as the opposite corner.\nimageMode(CENTER) interprets the second and third parameters of image() as the image's center point. If two additional parameters are specified, they are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -2458,7 +2519,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 133,
+            "line": 205,
             "description": "Image width.",
             "itemtype": "property",
             "name": "width",
@@ -2467,7 +2528,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 139,
+            "line": 211,
             "description": "Image height.",
             "itemtype": "property",
             "name": "height",
@@ -2476,7 +2537,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 148,
+            "line": 220,
             "description": "Array containing the color of every pixel in the image.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -2485,14 +2546,14 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 157,
+            "line": 229,
             "description": "Helper fxn for sharing pixel methods",
             "class": "PImage",
             "module": "Image"
         },
         {
             "file": "src/image/image.js",
-            "line": 165,
+            "line": 237,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -2501,7 +2562,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 175,
+            "line": 247,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -2532,7 +2593,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 195,
+            "line": 267,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a Pimage is\nreturned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -2571,7 +2632,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 217,
+            "line": 289,
             "description": "Set the color of a single pixel or write an image into\nthis PImage.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
             "itemtype": "method",
             "name": "set",
@@ -2597,7 +2658,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 238,
+            "line": 310,
             "description": "Resize the image to a new width and height. To make the image scale proportionally, use 0 as the value for the wide or high parameter. For instance, to make the width of an image 150 pixels, and change the height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -2618,7 +2679,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 281,
+            "line": 353,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -2674,7 +2735,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 304,
+            "line": 376,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -2690,7 +2751,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 335,
+            "line": 407,
             "description": "Applies an image filter to a PImage",
             "itemtype": "method",
             "name": "filter",
@@ -2711,7 +2772,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 348,
+            "line": 420,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -2772,7 +2833,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 378,
+            "line": 450,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -6211,23 +6272,23 @@
         },
         {
             "message": "Missing item type\n_start\n\nTODO: ???\nlooks for \"preload\" on sketch or on window",
-            "line": " src/core/core.js:322"
+            "line": " src/core/core.js:325"
         },
         {
             "message": "Missing item type\n_preload\n\nTODO: ???",
-            "line": " src/core/core.js:379"
+            "line": " src/core/core.js:382"
         },
         {
             "message": "Missing item type\n_runFrames\n\nTODO: ???",
-            "line": " src/core/core.js:459"
+            "line": " src/core/core.js:462"
         },
         {
             "message": "Missing item type\n_applyDefaults\n\nTODO: ???",
-            "line": " src/core/core.js:475"
+            "line": " src/core/core.js:478"
         },
         {
             "message": "Missing item type\n_setProperty\n\nTODO: ???",
-            "line": " src/core/core.js:488"
+            "line": " src/core/core.js:491"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
@@ -6298,8 +6359,12 @@
             "line": " src/image/image.js:10"
         },
         {
+            "message": "Missing item type\nApply the current tint color to the input image, return the resulting canvas.",
+            "line": " src/image/image.js:142"
+        },
+        {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/image/image.js:157"
+            "line": " src/image/image.js:229"
         },
         {
             "message": "Missing item type\nNOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
