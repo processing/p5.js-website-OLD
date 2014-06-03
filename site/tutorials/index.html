@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Tutorials | p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- when hosted
+        <script type="text/javascript" src="http://fast.fonts.net/jsapi/173b6bc2-616e-4a13-8c9a-6fcf9ae1c69a.js"></script>
+        -->
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- CSS (order matters): normalize across browsers -->
+        <link rel="stylesheet" href="../css/normalize.css">
+
+        <!-- CSS (order matters): Site styles -->
+        <link rel="stylesheet" href="../css/main.css">
+
+        <!-- CSS (order matters): code highlighting -->
+        <link rel="stylesheet" href="../css/prism.css">
+
+        <!-- modernizer (not leveraged, yet) 
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+    </head>
+    <body id="tutorials-page">
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="family">
+
+            <p><a href="http://processing.org">Processing</a> <span class="here">p5.js</span></p> 
+        </div>    
+
+        <div id="container">
+
+        <!-- identity -->
+        <div id="lockup">
+            <object type="image/svg+xml" data="../img/p5js.svg" class="logo">
+             p5js logo <!-- to do: add fallback image in CSS -->
+            </object>
+            <p>the power of Processing times the reach of JavaScript</p>
+        </div>
+
+        
+        <!-- site navigation -->
+        <div class="column-span">
+        <ul id="menu">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="#">Getting&nbsp;started</a></li>
+            <li><a href="#" class="here">Tutorials</a></li>
+            <li><a href="../reference-other-content-types.html">Reference</a></li>
+            <li><a href="#" class="other-link">Download&nbsp;p5.js</a></li> 
+            <li><a href="#" class="other-link">Github</a></li>
+        </ul>
+        <br />
+        </div>
+
+        <!-- content sections -->
+        <div class="column-span">
+        <section id="about">
+            <h2>Tutorials</h2>
+            <p>The homepage has menu, inline links, regular paragraph text, block level code, small text. So this page has the other content types from the Google Doc. </p>
+        </section>
+
+        <section id="getting-started">
+
+            <h2>Highlight text</h2>
+            <p>
+            The longer the highlighted text, the less intense the highlighted color should be. Right now this is 0.15 alpha of the mark color (which is as low as it should go, and .35 is about the max). Download the <a href="https://raw.github.com/lmccart/p5.js/master/dist/p5.js" target="_blank">p5.js file</a> and create a new index.html file and a new sketch.js file. <span class="highlight">You want to link to p5.js and your sketch.js file in the head of the html file. Make sure all three files are in the same folder.</span> You can use any <a href="http://en.wikipedia.org/wiki/Source_code_editor" target="_blank">code editor</a> you like, we recommend <a href="www.sublimetext.com/2" target="_blank">Sublime Text</a>.</p>
+
+            <h2>Inline Code</h2>
+            <p>The home page has block level code examples. Let's try a little inline code in a paragraph such as this one. We will make the amount of code small to see how will this works. So, <code>if (x = 1)</code> and then you want to make sure that if you are going to ask the browser to do something you might want to also give it another option, or else. </p>
+ 
+            <p>Alternatively, you can download the whole project</a> and copy the examples/empty-example folder to any location you like and edit the <code>sketch.js</code> file.</p>
+
+      
+        </section>
+
+        <section id="learning">
+            <h2>Images or video</h2>
+
+            <p>Border, margin, size, caption, some handling:</p>
+
+            <img src="../img/test-image-0.jpg">
+
+            <div class="image-row">
+                <img src="../img/test-image-0.jpg">
+                <img src="../img/test-image-0.jpg">
+            </div>
+
+            <div class="caption">
+                
+                <img src="../img/test-image-1.jpg">
+
+                <p>&#8220;3 in 1&#8221; &#8212;  photo and image by Jerel Johnson</p>
+            </div>
+
+            <iframe class="video" src="http://player.vimeo.com/video/96590688?title=0&amp;byline=0&amp;portrait=0" width="504" height="284" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+        </section>
+
+        <footer>
+
+                        <p>p5.js is currently developed by <a href="http://lauren-mccarthy.com" target="_blank">Lauren McCarthy</a> and <a href="http://evelyneastmond.com" target="_blank">Evelyn Eastmond</a> and other <a href="https://github.com/lmccart/p5.js/graphs/contributors" target="_blank">contributors</a>, with the support of the <a href="http://processing.org/foundation/" target="_blank">Processing Foundation</a>, <a href="http://itp.nyu.edu/itp/" target="_blank">NYU ITP</a>, <a href="http://bocoup.com">Bocoup</a>, and <a href="http://academicaffairs.risd.edu/research/8736-2/funding-opportunities-m-ir/risd-2050-fund/">RISD 2050</a>.</p>
+
+        </footer>
+    </div><!-- end column-span -->
+
+        <!-- outside of column for footer to go across both -->
+
+        <p class="clearfix"> &nbsp; </p>
+
+        </div><!-- end id="container"  -->
+
+        <object type="image/svg+xml" data="../img/thick-asterisk-alone-stroke.svg" id="asterisk-design-element">
+             *<!-- to do: add fallback image in CSS -->
+        </object>
+
+        <!--scripts before close of body element -->
+
+        <!-- prism for code highlighting -->
+        <script src="../js/vendor/prism.js"></script>
+
+        <!-- jquery-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <!-- boilerplate suggestions
+        <script src="../js/plugins.js"></script> -->
+        <script src="../js/main.js"></script>
+        
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+        /*    
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        */
+        </script>
+        -->
+    </body>
+</html>
