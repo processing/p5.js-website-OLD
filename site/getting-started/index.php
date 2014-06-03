@@ -7,13 +7,6 @@
 
     <!-- content sections -->
     <div class="column-span">
-    <section id="about">
-        <h2>About</h2>
-        <p>
-        p5.js is a JavaScript library that starts with the original goal of <a href="http://processing.org">Processing</a>, to make coding accessible for artists, designers, educators, beginners, and reinterpets this for today, for the web. The library is intended to introduce creative coding, introduce web development, and provide a tie between the two. It it important that while this is accessible for beginners, it’s not a sandbox environment and people develop real web development literacy, and the ability to extend and learn new things on their own. The library is not domain specific, it’s useful for general creative coding from drawing, to working with text, images, DOM, etc.</p>
-
-        <p>p5.js is about bringing Processing ideas and community to JavaScript and the web, rather than emulating Processing/Java through JavaScript. We hope to build a strong support community of users for constructive help, with a focus on teaching and learning. We have been focusing on language design, development, and documentation, but a p5.js web IDE is also in the plan.</p>
-    </section>
 
     <section id="getting-started">
 
@@ -34,21 +27,21 @@
     
     <p>Example sketch.js file:</p>
     <pre><code class="language-javascript">function setup() {
-// The createCanvas function tells the computer 
-// to make a 640x360 drawing space.
-createCanvas(640,360);
+  // The createCanvas function tells the computer 
+  // to make a 640x360 drawing space.
+  createCanvas(640,360);
 }
 
 function draw() {
-// This line tells the computer which color to make
-// the background of the drawing space.
-background(204, 153, 0);
+  // This line tells the computer which color to make
+  // the background of the drawing space.
+  background(204, 153, 0);
 
-// This line tells the computer to draw an ellipse,
-// with the center 50 pixells over from the left and 
-// 50 pixles down from the top, with a width and
-// height of 80 pixels.
-ellipse(50, 50, 80, 80);
+  // This line tells the computer to draw an ellipse,
+  // with the center 50 pixells over from the left and 
+  // 50 pixles down from the top, with a width and
+  // height of 80 pixels.
+  ellipse(50, 50, 80, 80);
 }</code></pre>
     
       <p>Alternatively, you can download the <a href="https://github.com/lmccart/p5.js/archive/master.zip" target="_blank">whole project</a> and copy the examples/empty-example folder to any location you like and edit the sketch.js file.</p>

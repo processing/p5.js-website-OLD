@@ -8,7 +8,6 @@
 </div>    
 
 <div id="container">
-
 <!-- identity -->
 <div id="lockup">
   <object type="image/svg+xml" data="<?php echo getRoot(); ?>img/p5js.svg" class="logo">
