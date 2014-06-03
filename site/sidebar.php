@@ -22,7 +22,7 @@
   <li><a href="<?php echo getRoot(); ?>">About</a></li>
   <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;started</a></li>
   <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
-  <li><a href="<?php echo getRoot(); ?>tutorials/">Tutorials</a></li>
+  <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>
   <li><a href="#" class="other-link">Download&nbsp;p5.js</a></li> 
   <li><a href="#" class="other-link">Github</a></li>
 </ul>
