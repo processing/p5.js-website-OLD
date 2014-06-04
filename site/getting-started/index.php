@@ -12,7 +12,7 @@
 
         <h2>Getting Started</h2>
         <p>
-        Download the <a href="https://raw.github.com/lmccart/p5.js/master/dist/p5.js" target="_blank">p5.js file</a> and create a new index.html file and a new sketch.js file. You want to link to p5.js and your sketch.js file in the head of the html file. Make sure all three files are in the same folder. You can use any <a href="http://en.wikipedia.org/wiki/Source_code_editor" target="_blank">code editor</a> you like, we recommend <a href="www.sublimetext.com/2" target="_blank">Sublime Text</a>.</p>
+        Download the <a href="https://raw.github.com/lmccart/p5.js/master/lib/p5.js" target="_blank">p5.js file</a> and create a new index.html file and a new sketch.js file. You want to link to p5.js and your sketch.js file in the head of the html file. Make sure all three files are in the same folder. You can use any <a href="http://en.wikipedia.org/wiki/Source_code_editor" target="_blank">code editor</a> you like, we recommend <a href="www.sublimetext.com/2" target="_blank">Sublime Text</a>.</p>
         <p>Example index.html file:</p>
 
         <pre><code class="language-markup">&lt;!doctype html>
@@ -58,7 +58,7 @@ function draw() {
 
     </div><!-- end id="container"  -->
 
-    <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="asterisk-design-element">
+    <object type="image/svg+xml" data="<?php echo getRoot(); ?>img/thick-asterisk-alone.svg" id="asterisk-design-element">
          *<!-- to do: add fallback image in CSS -->
     </object>
 

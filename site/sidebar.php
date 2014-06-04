@@ -4,7 +4,7 @@
 <![endif]-->
 
 <div id="family">
-  <p><a href="http://processing.org">Processing</a> <span class="here">p5.js</span></p> 
+  <p><a href="http://processing.org">Processing</a> <a class="here" href="<?php echo getRoot(); ?>">p5.js</a></p> 
 </div>    
 
 <div id="container">
@@ -23,8 +23,8 @@
   <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;started</a></li>
   <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>
-  <li><a href="#" class="other-link">Download&nbsp;p5.js</a></li> 
-  <li><a href="#" class="other-link">Github</a></li>
+  <li><a href="#" target=_blank class="other-link">Download</a></li> 
+  <li><a href="http://github.com/lmccart/p5.js" target=_blank class="other-link">Github</a></li>
 </ul>
 <br />
 </div>

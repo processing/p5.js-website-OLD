@@ -203,11 +203,7 @@ a:active, a:hover {
 }
 
 .here {
-    color:#ED225D !important; 
-    text-decoration: none;
-    padding-bottom: 0.1em; 
-    border-bottom: transparent; 
-    border-bottom-color: #ED225D;
+    color:#333 !important;
 }
 
 p { 
@@ -274,7 +270,6 @@ small, .small, footer, #family {
 
 #family span {
     margin: 0.5em;
-    color:#333 !important;
 } 
 
 #family p {
