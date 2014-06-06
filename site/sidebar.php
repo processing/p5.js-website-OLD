@@ -21,7 +21,7 @@
 <ul id="menu">
   <li><a href="<?php echo getRoot(); ?>">About</a></li>
   <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;started</a></li>
-  <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
+  <li><a href="http://p5js.org/reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>
   <li><a href="#" target=_blank class="other-link">Download</a></li> 
   <li><a href="http://github.com/lmccart/p5.js" target=_blank class="other-link">Github</a></li>
