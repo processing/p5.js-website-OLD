@@ -8,6 +8,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "Constants",
         "Creating & Reading",
         "Curves",
+        "DOM:Manipulate",
+        "DOM:PElement",
         "Environment",
         "Environment:Environment",
         "Files",
@@ -15,8 +17,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "Image:Pixels",
         "Keyboard",
         "Loading & Displaying",
+        "Manipulate",
+        "Math",
         "Mouse",
         "Noise",
+        "PElement",
         "PImage",
         "PVector",
         "Pixels",
@@ -30,12 +35,14 @@ YUI.add("yuidoc-meta", function(Y) {
         "Touch",
         "Transform",
         "Trigonometry",
-        "Vertex"
+        "Vertex",
+        "p5.dom:p5.dom"
     ],
     "modules": [
         "*",
         "Color",
         "Constants",
+        "DOM",
         "Data",
         "Environment",
         "Image",
@@ -63,6 +70,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Data",
             "name": "Data"
+        },
+        {
+            "displayName": "DOM",
+            "name": "DOM"
         },
         {
             "displayName": "Environment",
