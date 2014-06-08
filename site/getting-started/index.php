@@ -10,12 +10,48 @@
 
     <section id="getting-started">
 
-        <h2>Getting Started</h2>
-        <p>
-        Download the <a href="https://raw.github.com/lmccart/p5.js/master/lib/p5.js" target="_blank">p5.js file</a> and create a new index.html file and a new sketch.js file. You want to link to p5.js and your sketch.js file in the head of the html file. Make sure all three files are in the same folder. You can use any <a href="http://en.wikipedia.org/wiki/Source_code_editor" target="_blank">code editor</a> you like, we recommend <a href="www.sublimetext.com/2" target="_blank">Sublime Text</a>.</p>
-        <p>Example index.html file:</p>
+      <h2>Getting Started</h2>
 
-        <pre><code class="language-markup">&lt;!doctype html>
+      <h3>Download and File Setup</h3>
+      <p>
+        First, create a new folder that all your files will live inside. Download
+        <a href="https://raw.github.com/lmccart/p5.js/master/lib/p5.js" target="_blank">
+        <code>p5.js</code></a> and create a new <code>index.html</code> file and a new 
+        <code>sketch.js</code> file. <code>sketch.js</code> is where you will write your 
+        p5 code and <code>index.html</code> will bring it all together to be displayed on 
+        a web page.
+      </p>
+
+      <p>
+        Later, as you start to do more to integrate a p5 sketch into a larger web page
+        you can add all sorts of stuff to your html file. For now, all you need to know 
+        is that you should reference <code>sketch.js</code> and <code>p5.js</code> using  
+        the <code>&lt;script></code> tag. A <code>&lt;script></code> tag allows you to  
+        write JavaScript directly into the html file like so:
+
+      </p> 
+
+      <pre><code class="language-markup">
+&lt;script>
+alert("this code will trigger a browser alert");
+&lt;/script>
+      </code></pre>   
+
+      <p>
+        What we'll do instead is reference JavaScript code in separate files 
+        (<code>sketch.js</code> and <code>p5.js</code>).
+      </p>
+
+      <pre><code class="language-markup">
+&lt;script src="p5.js">&lt;/script>
+      </code></pre>   
+
+      <p>
+        A full example index.html file looks like so:
+      </p>
+
+      <pre><code class="language-markup">
+&lt;!doctype html>
 &lt;html>
 &lt;head>
   &lt;script src="p5.js"></script>
@@ -23,31 +59,151 @@
 &lt;/head>
 &lt;body>
 &lt;/body>
-&lt;/html></code></pre>
-    
-    <p>Example sketch.js file:</p>
-    <pre><code class="language-javascript">function setup() {
-  // The createCanvas function tells the computer 
-  // to make a 640x360 drawing space.
-  createCanvas(640,360);
+&lt;/html>
+      </code></pre>
+
+      <p>
+        Note that this assumes that all three files <code>index.html</code>, 
+        <code>sketch.js</code>, and <code>p5.js</code> are in the same directory.
+      </p>
+
+      <p>
+        Alternatively, you can just download the <a href="#">example project</a> and edit
+        that.
+      </p>
+
+      <p>
+        We should also mention that you can reference the <code>p5.js</code> file hosted 
+        online. All versions of <code>p5.js</code> are stored in a CDN ("Content Delivery 
+        Network"). You can see a history of these versions here: <a target="_blank"
+        href="http://cdnjs.com/libraries/p5.js/" >p5.js CDN</a>. In this case you can 
+        simply say:
+      </p>
+
+      <pre><code class="language-markup">
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/VERSION_NUMBER/p5.min.js">&lt;/script>
+      </code></pre>   
+
+      <p>
+        For example:
+      </p>
+
+      <pre><code class="language-markup">
+&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.2.13/p5.min.js">&lt;/script>
+      </code></pre>   
+
+      <h3>Environment</h3>
+
+      <p>
+        You can use the <a href="http://en.wikipedia.org/wiki/Source_code_editor" 
+        target="_blank">code editor</a> of your choice. Instructions for getting set up 
+        with <a href="www.sublimetext.com/2" target="_blank"> Sublime Text 2</a> are  
+        included below.
+      </p>
+
+      <p>
+        <ul>
+          <li>Open Sublime. Go to the File menu and choose Open... and choose the folder 
+          that your html and js files are located in. On the left sidebar, you should now
+           see the folder name at the top, with a list of the files contained in the 
+           folder directly below.</li>
+          <li>Click on your <code>sketch.js</code> file and it will open on the right 
+          where you can edit it.
+          <img src="<?php echo getRoot(); ?>img/sublime.png" /></li>
+          <li>Open a web browser and type <code>localhost/path/to/your/index.html</code> 
+          file in the address bar to view your sketch.</li>
+        </ul>
+      </p>
+
+      <h3>Your First Sketch</h3>
+
+      <p>
+        In your editor, type the following:
+      </p>
+
+      <pre><code class="language-javascript">
+function setup() {
+
 }
 
 function draw() {
-  // This line tells the computer which color to make
-  // the background of the drawing space.
-  background(204, 153, 0);
-
-  // This line tells the computer to draw an ellipse,
-  // with the center 50 pixells over from the left and 
-  // 50 pixles down from the top, with a width and
-  // height of 80 pixels.
   ellipse(50, 50, 80, 80);
-}</code></pre>
-    
-      <p>Alternatively, you can download the <a href="https://github.com/lmccart/p5.js/archive/master.zip" target="_blank">whole project</a> and copy the examples/empty-example folder to any location you like and edit the sketch.js file.</p>
+}
+      </code></pre>  
 
-      <p><strong>Reference</strong>. View the reference <a href="https://github.com/lmccart/p5.js/wiki/Reference" target="_blank">here</a>. The <a href="https://github.com/lmccart/p5.js/blob/master/api.md">API page</a> lists all implemented functions.</p>   
-      <p><strong>Source</strong>. The source code of p5.js is available on <a href="https://github.com/lmccart/p5.js" target="_blank">github</a>.</p>      
+      <p>
+        This line of code means "draw an ellipse, with the center 50 pixels over from the
+        left and 50 pixels down from the top, with a width and height of 80 pixels."
+      </p>
+      <p>
+        Refresh your page view in your browser, if you've typed everything correctly, 
+        you'll see this appear in the display window: 
+      </p>
+      <img src="<?php echo getRoot(); ?>img/first_sketch.png" />
+
+      <p>
+        If you didn't type it correctly, you might not see anything. If this happens, 
+        make sure that you've copied the example code exactly: the numbers should be 
+        contained within parentheses and have commas between each of them, and the line 
+        should end with a semicolon.
+      </p>
+
+      <p>
+        One of the most difficult things about getting started with programming is that 
+        you have to be very specific about the syntax. The browser isn't always smart 
+        enough to know what you mean, and can be quite fussy about the placement of 
+        punctuation. You'll get used to it with a little practice. Depending on the 
+        browser you are using, you can also see errors by looking at the JavaScript 
+        "console". In chrome, for example, this is under View->Developer-JavaScript 
+        Console.
+      </p>
+
+      <p>
+        Next, we'll skip ahead to a sketch that's a little more exciting. Delete the text
+         from the last example, and try this:
+      </p>
+
+      <pre><code class="language-javascript">
+function setup() {
+  createCanvas(480, 120);
+}
+
+function draw() {
+  if (mouseIsPressed) {
+    fill(0);
+  } else {
+    fill(255);
+  }
+  ellipse(mouseX, mouseY, 80, 80);
+}
+      </code></pre>  
+
+      <p>
+        This program creates a window that is 480 pixels wide and 120 pixels high, and 
+        then starts drawing white circles at the position of the mouse. When a mouse 
+        button is pressed, the circle color changes to black. We'll explain more about 
+        the elements of this program in detail later. For now, run the code, move the 
+        mouse, and click to experience it.
+      </p>
+
+      <h3>What Next?</h3>
+      <p>
+        <strong>Getting started for Processing users</strong>. View the 
+        <a href="https://github.com/lmccart/p5.js/wiki/Reference" target="_blank">
+        Processing syntax conversion</a> tutorial to learn how to convert from Processing
+        to p5.js.
+      </p>
+
+      <p>
+        <strong>Reference</strong>. View the <a target="_blank" 
+        href="https://github.com/lmccart/p5.js/wiki/Reference">reference</a>.  
+      </p>
+
+      <p>
+        <strong>Learning</strong>. Check out the <a target="_blank" 
+        href="https://github.com/lmccart/p5.js">learning</a> page for more tutorials and
+        examples.
+      </p>      
     </section>
 
   

@@ -37,10 +37,9 @@
 
     </div><!-- end id="container"  -->
 
-    <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="asterisk-design-element">
+    <object type="image/svg+xml" data="<?php echo getRoot(); ?>img/thick-asterisk-alone.svg" id="asterisk-design-element">
          *<!-- to do: add fallback image in CSS -->
     </object>
-
 
     <?php include('../end.php'); ?>
   </body>
