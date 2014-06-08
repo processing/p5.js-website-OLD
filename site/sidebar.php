@@ -13,7 +13,9 @@
   } else if (strpos($path, "reference") !== false) {
     $tagline = "the intuition of Processing times the extensibility of JavaScript";
   } else if (strpos($path, "learning") !== false) {
-    $tagline = "the creativity of Processing times the power of JavaScript";
+    $tagline = "the creativity of Processing times the dynamism of JavaScript";
+  } else if (strpos($path, "development") !== false) {
+    $tagline = "the community of Processing times the community of JavaScript";
   } else {
     $tagline = "the power of Processing times the reach of JavaScript";
   }
@@ -40,6 +42,7 @@
   <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;started</a></li>
   <li><a href="http://p5js.org/reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>
+  <li><a href="<?php echo getRoot(); ?>development/">Development</a></li>
   <li><a href="#" target=_blank class="other-link">Download</a></li> 
   <li><a href="http://github.com/lmccart/p5.js" target=_blank class="other-link">Github</a></li>
 </ul>
