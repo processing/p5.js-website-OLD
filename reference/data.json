@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.2.14",
+        "version": "0.2.15",
         "url": ""
     },
     "files": {
@@ -72,7 +72,8 @@
             "modules": {},
             "classes": {},
             "fors": {
-                "PElement": 1
+                "PElement": 1,
+                "DOM:PElement": 1
             },
             "namespaces": {}
         },
@@ -365,7 +366,6 @@
             "classes": {
                 "Environment:Environment": 1,
                 "Structure:Structure": 1,
-                "DOM:PElement": 1,
                 "DOM:Manipulate": 1,
                 "p5.dom:p5.dom": 1
             },
@@ -405,11 +405,13 @@
             "submodules": {},
             "classes": {
                 "Manipulate": 1,
-                "PElement": 1
+                "PElement": 1,
+                "DOM:PElement": 1
             },
             "fors": {
                 "Manipulate": 1,
-                "PElement": 1
+                "PElement": 1,
+                "DOM:PElement": 1
             },
             "namespaces": {},
             "tag": "module",
@@ -705,6 +707,17 @@
         "PElement": {
             "name": "PElement",
             "shortname": "PElement",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "DOM",
+            "namespace": ""
+        },
+        "DOM:PElement": {
+            "name": "DOM:PElement",
+            "shortname": "DOM:PElement",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -1031,17 +1044,6 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Constants",
-            "namespace": ""
-        },
-        "DOM:PElement": {
-            "name": "DOM:PElement",
-            "shortname": "DOM:PElement",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "*",
             "namespace": ""
         },
         "DOM:Manipulate": {
@@ -2086,6 +2088,139 @@
                 "type": "Undefined"
             },
             "class": "Manipulate",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 22,
+            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
+            "itemtype": "method",
+            "name": "parent",
+            "params": [
+                {
+                    "name": "parent",
+                    "description": "the ID or node of the parent elt",
+                    "type": "String|Object"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 39,
+            "description": "Sets the inner HTML of the element. Replaces any existing html.",
+            "itemtype": "method",
+            "name": "html",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "the HTML to be placed inside the element",
+                    "type": "String"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 51,
+            "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
+            "itemtype": "method",
+            "name": "position",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-position relative to upper left of window",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-position relative to upper left of window",
+                    "type": "Number"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 73,
+            "description": "Sets the ID of the element",
+            "itemtype": "method",
+            "name": "id",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "ID of the element",
+                    "type": "String"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 85,
+            "description": "Adds given class to the element",
+            "itemtype": "method",
+            "name": "class",
+            "params": [
+                {
+                    "name": "class",
+                    "description": "class to add",
+                    "type": "String"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 97,
+            "description": "The .mousePressed() function is called once after every time a \nmouse button is pressed over the element. This can be used to\nattach an element specific event listeners.",
+            "itemtype": "method",
+            "name": "mousePressed",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   pressed over the element.",
+                    "type": "Function"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 111,
+            "description": "The .mouseOver() function is called once after every time a \nmouse moves onto the element. This can be used to attach an \nelement specific event listener.",
+            "itemtype": "method",
+            "name": "mouseOver",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   moved over the element.",
+                    "type": "Function"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "DOM"
+        },
+        {
+            "file": "src/dom/pelement.js",
+            "line": 125,
+            "description": "The .mouseOut() function is called once after every time a \nmouse moves off the element. This can be used to attach an \nelement specific event listener.",
+            "itemtype": "method",
+            "name": "mouseOut",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   moved off the element.",
+                    "type": "Function"
+                }
+            ],
+            "class": "DOM:PElement",
             "module": "DOM"
         },
         {
@@ -6399,6 +6534,45 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 26,
+            "description": "Shows the current element. Essentially, setting display:block for the style.",
+            "itemtype": "method",
+            "name": "show",
+            "class": "DOM:PElement",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 37,
+            "description": "Hides the current element. Essentially, setting display:none for the style.",
+            "itemtype": "method",
+            "name": "hide",
+            "class": "DOM:PElement",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 47,
+            "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
+            "itemtype": "method",
+            "name": "size",
+            "params": [
+                {
+                    "name": "w",
+                    "description": "width of the element",
+                    "type": "Number"
+                },
+                {
+                    "name": "h",
+                    "description": "height of the element",
+                    "type": "Number"
+                }
+            ],
+            "class": "DOM:PElement",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 87,
             "description": "Searches the page for an element with given ID and returns it as\na PElement. The DOM node itself can be accessed with .elt.\nReturns null if none found.",
             "itemtype": "method",
             "name": "getElement",
@@ -6418,7 +6592,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 45,
+            "line": 106,
             "description": "Searches the page for elements with given class and returns an\narray of PElements. The DOM nodes themselves can be accessed\nwith .elt. Returns an empty array if none found.",
             "itemtype": "method",
             "name": "getElements",
@@ -6438,25 +6612,261 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 103,
+            "line": 129,
+            "description": "Creates a <div></div> element in the DOM with given inner HTML.",
+            "itemtype": "method",
+            "name": "createDiv",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
             "class": "DOM:Manipulate",
             "module": "*"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 137,
+            "line": 139,
+            "description": "Creates a <p></p> element in the DOM with given inner HTML. Used\nfor paragraph length text.",
+            "itemtype": "method",
+            "name": "createP",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
             "class": "DOM:Manipulate",
             "module": "*"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 162,
+            "line": 150,
+            "description": "Creates a <span></span> element in the DOM with given inner HTML.",
+            "itemtype": "method",
+            "name": "createSpan",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
             "class": "DOM:Manipulate",
             "module": "*"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 172,
+            "line": 160,
+            "description": "Creates a <h1></h1> element in the DOM with given inner HTML.\nUsed for headings.",
+            "itemtype": "method",
+            "name": "createH1",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 171,
+            "description": "Creates a <h2></h2> element in the DOM with given inner HTML.\nUsed for headings.",
+            "itemtype": "method",
+            "name": "createH2",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 182,
+            "description": "Creates a <h3></h3> element in the DOM with given inner HTML.\nUsed for headings.",
+            "itemtype": "method",
+            "name": "createH3",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 193,
+            "description": "Creates a <h4></h4> element in the DOM with given inner HTML.\nUsed for headings.",
+            "itemtype": "method",
+            "name": "createH4",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 204,
+            "description": "Creates a <h5></h5> element in the DOM with given inner HTML.\nUsed for headings.",
+            "itemtype": "method",
+            "name": "createH5",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 215,
+            "description": "Creates a <h6></h6> element in the DOM with given inner HTML.\nUsed for headings.",
+            "itemtype": "method",
+            "name": "createH6",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "inner HTML for element created",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 238,
+            "description": "Creates an <img /> element in the DOM with given src and\nalternate text",
+            "itemtype": "method",
+            "name": "createImg",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "src path or url for image",
+                    "type": "String"
+                },
+                {
+                    "name": "alt",
+                    "description": "alternate text to be used if image does not\n                 load",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 263,
+            "description": "Creates an <a></a> element in the DOM for including a hyperlink.",
+            "itemtype": "method",
+            "name": "createA",
+            "params": [
+                {
+                    "name": "href",
+                    "description": "url of page to link to",
+                    "type": "String"
+                },
+                {
+                    "name": "html",
+                    "description": "inner html of link element to display",
+                    "type": "String"
+                },
+                {
+                    "name": "target",
+                    "description": "target where new link should open,\n                          could be _blank, _self, _parent, _top.",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 286,
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 320,
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 345,
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 355,
             "itemtype": "method",
             "name": "createCapture",
             "params": [
@@ -6613,15 +7023,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:103"
+            "line": " lib/addons/p5.dom.js:286"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:137"
+            "line": " lib/addons/p5.dom.js:320"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:162"
+            "line": " lib/addons/p5.dom.js:345"
         }
     ]
 }
