@@ -33,15 +33,20 @@
         Jason Sigal<br>
 
         Esteban Almiron<br>
-        
+
         Dan Shiffman<br>
         Scott Garner<br>
 
-
+        ITP working group?<br>
         Bocoup? Other github contributors?<br>
 
 
-        Casey Reas and Ben Fry<br>
+
+        <br>
+        Organizations:<br>
+        Processing Foundation: Casey Reas, Ben Fry, Dan Shiffman<br>
+        RISD<br>
+        ITP<br>
       </p> 
     </section>
 
