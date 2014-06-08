@@ -1,7 +1,4 @@
-<?php include('functions.php'); 
-
- 
-?>
+<?php include('functions.php'); ?>
 
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,8 +7,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Home | p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing. </title>
-    <meta name="description" content="">
+    <title>p5.js</title>
+    <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
     <meta name="viewport" content="width=device-width">
 
     <!-- when hosted

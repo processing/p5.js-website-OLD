@@ -23,6 +23,26 @@
       <p>
         IRC
       </p> 
+
+      <p>
+        People:<br>
+        Lauren McCarthy<br>
+        Evelyn Eastmond<br>
+
+        Sam Lavigne<br>
+        Jason Sigal<br>
+
+        Esteban Almiron<br>
+        
+        Dan Shiffman<br>
+        Scott Garner<br>
+
+
+        Bocoup? Other github contributors?<br>
+
+
+        Casey Reas and Ben Fry<br>
+      </p> 
     </section>
 
   
