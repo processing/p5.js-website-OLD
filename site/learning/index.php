@@ -10,6 +10,9 @@
 
     <section id="learning">
       <h2>Learning</h2>
+
+
+      <h3>Tutorials</h3>
       <p>
         <ul>
           <li><a href="https://github.com/lmccart/p5.js/wiki/Getting-Started">Getting started</a> - set up your environment and create your first sketch.</li>
@@ -24,11 +27,20 @@
 
           <li><a href="https://github.com/lmccart/p5.js/wiki/Development">Development</a> - getting started and overview for those that want to contribute to development.</li>
 
+       </ul>
+      </p>
+
+
+      <h3>Examples</h3>
+        <ul>
           <li><a href="https://github.com/lmccart/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
 
           <li><a href="http://risd-creative-programming.github.io/fa13-introtocreativeprogramming/examples.html">RISD class examples</a> - examples covering basics of programming with p5.js used in RISD Intro Creative Programming class.</li>
         </ul>
-      </p>
+
+      <h3>FAQ</h3>
+
+
     </section>
     <?php include('../footer.php'); ?>
     <!-- outside of column for footer to go across both -->

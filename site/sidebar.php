@@ -3,6 +3,23 @@
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
+<?php
+
+  $tagline;
+  $path = getcwd();
+
+  if (strpos($path, "getting") !== false) {
+    $tagline = "the simplicity of Processing times the flexibility of JavaScript";
+  } else if (strpos($path, "reference") !== false) {
+    $tagline = "the intuition of Processing times the extensibility of JavaScript";
+  } else if (strpos($path, "learning") !== false) {
+    $tagline = "the creativity of Processing times the power of JavaScript";
+  } else {
+    $tagline = "the power of Processing times the reach of JavaScript";
+  }
+
+?>
+
 <div id="family">
   <p><a href="http://processing.org">Processing</a> <a class="here" href="<?php echo getRoot(); ?>">p5.js</a></p> 
 </div>    
@@ -13,7 +30,7 @@
   <object type="image/svg+xml" data="<?php echo getRoot(); ?>img/p5js.svg" class="logo">
    p5js logo <!-- to do: add fallback image in CSS -->
   </object>
-  <p>the power of Processing times the reach of JavaScript</p>
+  <p><?php echo $tagline; ?></p>
 </div>
 
 <!-- site navigation -->
