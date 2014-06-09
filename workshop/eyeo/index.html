@@ -7,6 +7,7 @@
         margin: 30px;
         font-family: 'Open Sans', sans-serif;
         size: 11pt;
+        width: 800px;
       }
 
       a {
@@ -25,6 +26,7 @@
 
       .code {
         font-family: "Courier New";
+        color: orange;
       }
 
       strong {
@@ -45,11 +47,15 @@
     <br>
 
     <h2>0. Getting Started</h2>
-    <h4>Sign up for <a href="http://codepen.io" target=_blank><img src="codepen.png" align="middle" height="50px"></a></h4>
+    <h4>Did you sign up for a <a href="http://codepen.io" target="_blank"><img src="codepen.png" align="top" height="30px"></a> account yet?</h4>
+    If not, <a href="http://codepen.io" target="_blank">sign up here</a>!
+    <br><br>
+
     <h4>What is p5.js?</h4>
-    Processing.org<br>
-    JavaScript<br>
-    Processingjs.org<br>
+    <a href="p5js.org" target="_blank">p5.js</a> is a JavaScript <strong>creative coding toolkit</strong> which lets you create <strong>generative and interactive art</strong> to run in any modern web browser.  It is based on <a href="www.processing.org" target="_blank">Processing</a> and follows many of the same principles, while extending them into domain of the web.
+    <br>
+    <br>
+    p5.js is not to be confused with <a href="www.processingjs.org" target="_blank">Processing.js</a>, which is a translation engine that lets you run programs written in Processing in a web browser.  p5.js is not a translation engine, but a language itself.
 
     <h2>1. Play with commands!</h2>
     <ol>
@@ -83,7 +89,7 @@
       <li>Change the loop to work 100, 200 times</li>
     </ol>
     A <strong>conditional</strong> is like a question. It lets you decide which command to execute based on the truthiness of something.<br>
-    If (I am hungry), I will eat a hot dog, else, I will drink water.
+    <span style="code">If</span> (I am hungry), I will eat a hot dog, <span style="code">else</span>, I will drink water.
     <ol>
       <li>Go to <a target="_blank" href="http://codepen.io/p5js/pen/lsHEn?editors=001">Conditional Example</a></li>
       <li><strong>Fork</strong> it!</li>
@@ -96,7 +102,7 @@
       <li>Using the basic commands you've learned, and variables, conditionals and for loops, make a portrait of the person sitting next to you!</li>
     </ol>
 
-    <h2 color="rgb(114,51,147)">BREAK (XX Mins)</h2>
+    <h2 color="rgb(114,51,147)">BREAK (20 Mins)</h2>
 
     <h2>3. Interaction</h2>
     <strong>Mouse variables</strong> give you information about the state of the mouse.<br>
@@ -109,7 +115,7 @@
     </ol>
 
     A <strong>mouse event</strong> is a command that is automatically called whenever your mouse is clicked or moved.<br>
-    Different mouse events include mousePressed, mouseClicked, etc.
+    Different mouse events include <span class="code">mousePressed</span>, <span class="code">mouseClicked</span>, etc.
     <ol>
       <li>Go to <a target="_blank" href="http://codepen.io/p5js/pen/gJboG?editors=001">Mouse Events Example</a></li>
       <li><strong>Fork</strong> it!</li>
@@ -122,25 +128,52 @@
       <li>Add commands to draw new lines whenever a key is pressed</li>
     </ol>
     A <strong>touch event</strong> is like a mouse event, but for touches on your touchscreen enabled devices!<br>
-    Different touch events include touchStart, touchEnd, etc.
+    Different touch events include <span class="code">touchStarted</span>, <span class="code">touchEnded</span>, etc.
     <ol>
       <li>Go to <a target="_blank" href="http://codepen.io/p5js/pen/bnKGo?editors=001">Touch Events Example</a></li>
       <li><strong>Fork</strong> it!</li>
       <li>Add commands to draw wherever the screen is touched</li>
     </ol>
     <h3>Try it out: Send a postcard!</h3>
-    Add interactivity to your portrait or Make your own postcard about the eyeo festival<br>
-    Activity: Send postcard sketch to a friend via email or SMS<br>
-    <a target="_blank" href="http://codepen.io/p5js/pen/bLDIg?editors=001">Empty Example</a> to <strong>fork</strong>.<br>
-    Walk around show and tell
-
-
+    <strong>Add interactivity to your portrait</strong> or <strong>Make your own postcard about the eyeo festival</strong><br>
+    Then, send your postcard sketch to a friend via email or SMS<br>
+    <ol>
+      <li>If you need it, <strong>fork</strong> this <a target="_blank" href="http://codepen.io/p5js/pen/bLDIg?editors=001">Empty Example</a>.</li>
+      <li>Click <strong>Share</strong> and send as an <strong>SMS</strong> or email to a friend!</li>
+      <li>Walk around show and tell</li>
+    </ol>
 
     <h2>4. Where to go next?</h2>
-    Where to get help or move on from here.<br>
-    How to do these outside of codepen? (create html file, link to library, etc. What is a library?)<br>
-    When is the release?<br>
-    How to convert from Processing to p5.js and back? just point to tutorial page<br>
-    Various p5.js related website links: site, GitHub, processing forum section if we make it in time
+
+    <h4>Using p5.js without CodePen</h4>
+    <ul>
+      <li>Visit the p5.js <a href="https://github.com/lmccart/p5.js/wiki/Getting-Started" target="_blank">Getting Started page</a> to learn how to use p5.js outside of CodePen!</li>
+    </ul>
+    <br>
+    <h4>When is p5.js getting released?</h4>
+    <ul>
+      <li>Preliminary version later this month!</li>
+      <li>Stay tuned on <a href="http://www.p5js.org" target="_blank">p5js.org</a> for the official release</li>
+    </ul>
+    <br>
+    <h4>Where can I go to get help?</h4>
+    <ul>
+      <li><a href="https://github.com/lmccart/p5.js/wiki/Getting-Started" target="_blank">Getting started tutorial</a></li>
+      <li><a href="http://codepen.io/p5js/" target="_blank">p5.js CodePen account</a> for examples</li>
+      <li><a href="https://github.com/lmccart/p5.js/wiki/Processing-syntax-conversion" target="_blank">Processing <-> p5.js conversion tutorial</a></li>
+      <li>API reference page is coming:<br>
+        <img src="http://i.imgur.com/mrjgc9G.png" height="400px"/>
+      </li>
+    </ul>
+    <br>
+    <h4>How can I contribute?</h4>
+    <ul>
+      <li><a href="http://github.com/lmccart/p5.js" target="_blank">p5.js GitHub page</a></li>
+      <li><a href="https://github.com/lmccart/p5.js/wiki/Development" target="_blank">Development page</a> for library developers</li>
+      <li>Get in touch with us @ <a href="mailto:hello@p5js.org">hello@p5js.org</a> !</li>
+    </ul>
+    <br>
+    <br>
+    <a href="http://giphy.com/search/thank-you/2" target="_blank">Thank you</a> for joining us! <3
   </body>
 </html>
