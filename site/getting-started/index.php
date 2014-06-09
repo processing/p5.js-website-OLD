@@ -31,27 +31,22 @@
 
       </p> 
 
-      <pre><code class="language-markup">
-&lt;script>
+      <pre><code class="language-markup">&lt;script>
 alert("this code will trigger a browser alert");
-&lt;/script>
-      </code></pre>   
+&lt;/script></code></pre>   
 
       <p>
         What we'll do instead is reference JavaScript code in separate files 
         (<code>sketch.js</code> and <code>p5.js</code>).
       </p>
 
-      <pre><code class="language-markup">
-&lt;script src="p5.js">&lt;/script>
-      </code></pre>   
+      <pre><code class="language-markup">&lt;script src="p5.js">&lt;/script></code></pre>   
 
       <p>
         A full example index.html file looks like so:
       </p>
 
-      <pre><code class="language-markup">
-&lt;!doctype html>
+      <pre><code class="language-markup">&lt;!doctype html>
 &lt;html>
 &lt;head>
   &lt;script src="p5.js"></script>
@@ -59,8 +54,7 @@ alert("this code will trigger a browser alert");
 &lt;/head>
 &lt;body>
 &lt;/body>
-&lt;/html>
-      </code></pre>
+&lt;/html></code></pre>
 
       <p>
         Note that this assumes that all three files <code>index.html</code>, 
@@ -80,17 +74,13 @@ alert("this code will trigger a browser alert");
         simply say:
       </p>
 
-      <pre><code class="language-markup">
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/VERSION_NUMBER/p5.min.js">&lt;/script>
-      </code></pre>   
+      <pre><code class="language-markup">&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/VERSION_NUMBER/p5.min.js">&lt;/script></code></pre>   
 
       <p>
         For example:
       </p>
 
-      <pre><code class="language-markup">
-&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.2.13/p5.min.js">&lt;/script>
-      </code></pre>   
+      <pre><code class="language-markup">&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.2.13/p5.min.js">&lt;/script></code></pre>   
 
       <h3>Environment</h3>
 
@@ -121,15 +111,13 @@ alert("this code will trigger a browser alert");
         In your editor, type the following:
       </p>
 
-      <pre><code class="language-javascript">
-function setup() {
+      <pre><code class="language-javascript">function setup() {
 
 }
 
 function draw() {
   ellipse(50, 50, 80, 80);
-}
-      </code></pre>  
+}</code></pre>  
 
       <p>
         This line of code means "draw an ellipse, with the center 50 pixels over from the
@@ -163,8 +151,7 @@ function draw() {
          from the last example, and try this:
       </p>
 
-      <pre><code class="language-javascript">
-function setup() {
+      <pre><code class="language-javascript">function setup() {
   createCanvas(480, 120);
 }
 
@@ -175,8 +162,7 @@ function draw() {
     fill(255);
   }
   ellipse(mouseX, mouseY, 80, 80);
-}
-      </code></pre>  
+}</code></pre>  
 
       <p>
         This program creates a window that is 480 pixels wide and 120 pixels high, and 

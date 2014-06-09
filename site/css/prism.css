@@ -34,8 +34,8 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
   position:relative;
-  padding: 0 1em;
-  margin: .5em 0 0 -0.5em;
+  padding: 0.5em 1em;
+  margin: 0.5em 0 0 -0.5em;
   border-left: 0.5em solid #AFAFAF; /* coy og blue 10px solid  358ccb  */
   background-color: #fff; /* coy og white #fdfdfd  */
   /* lines */
