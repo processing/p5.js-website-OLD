@@ -7,11 +7,17 @@ window.onload = function() {
   var test = document.getElementById("test");
   test.innerHTML = "waiting"
   window.addEventListener("touchstart", setTouched, false);
+  window.addEventListener("mousedown", setClicked, false);
   
   function setTouched() {
     test.innerHTML = "touched";
   }
+  
+  function setClicked() {
+    test.innerHTML = "clicked";
+  }
 }
+
 </script>
 <div id="test"></div>
 
