@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+window.onload = function() {
+  var test = document.getElementById("test");
+  test.innerHTML = "waiting"
+  window.addEventListener("touchstart", setTouched, false);
+  
+  function setTouched() {
+    test.innerHTML = "touched";
+  }
+}
+</script>
+<div id="test"></div>
+
+</html>
