@@ -335,6 +335,7 @@
             "fors": {
                 "DOM:PElement": 1,
                 "DOM:Manipulate": 1,
+                "DOM:Media": 1,
                 "p5.dom:p5.dom": 1
             },
             "namespaces": {}
@@ -367,6 +368,7 @@
                 "Environment:Environment": 1,
                 "Structure:Structure": 1,
                 "DOM:Manipulate": 1,
+                "DOM:Media": 1,
                 "p5.dom:p5.dom": 1
             },
             "fors": {
@@ -374,6 +376,7 @@
                 "Structure:Structure": 1,
                 "DOM:PElement": 1,
                 "DOM:Manipulate": 1,
+                "DOM:Media": 1,
                 "p5.dom:p5.dom": 1
             },
             "namespaces": {},
@@ -1049,6 +1052,17 @@
         "DOM:Manipulate": {
             "name": "DOM:Manipulate",
             "shortname": "DOM:Manipulate",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "*",
+            "namespace": ""
+        },
+        "DOM:Media": {
+            "name": "DOM:Media",
+            "shortname": "DOM:Media",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -2092,7 +2106,7 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 22,
+            "line": 21,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "parent",
@@ -2108,7 +2122,7 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 39,
+            "line": 38,
             "description": "Sets the inner HTML of the element. Replaces any existing html.",
             "itemtype": "method",
             "name": "html",
@@ -2124,7 +2138,7 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 51,
+            "line": 50,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -2145,7 +2159,7 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 73,
+            "line": 72,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -2161,7 +2175,7 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 85,
+            "line": 84,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -2177,8 +2191,8 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 97,
-            "description": "The .mousePressed() function is called once after every time a \nmouse button is pressed over the element. This can be used to\nattach an element specific event listeners.",
+            "line": 96,
+            "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach an element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
             "params": [
@@ -2193,8 +2207,8 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 111,
-            "description": "The .mouseOver() function is called once after every time a \nmouse moves onto the element. This can be used to attach an \nelement specific event listener.",
+            "line": 110,
+            "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
             "params": [
@@ -2209,8 +2223,8 @@
         },
         {
             "file": "src/dom/pelement.js",
-            "line": 125,
-            "description": "The .mouseOut() function is called once after every time a \nmouse moves off the element. This can be used to attach an \nelement specific event listener.",
+            "line": 124,
+            "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
             "params": [
@@ -4571,7 +4585,7 @@
         {
             "file": "src/math/pvector.js",
             "line": 304,
-            "description": "Calculate the angle of rotation for this vector (only 2D vectors)\nTODO: deal with AngleMode // LM gave this a shot, is it right?",
+            "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
             "return": {
@@ -4583,10 +4597,10 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 324,
-            "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame\nTODO: Change to rotate()\nTODO: Deal with angleMode",
+            "line": 323,
+            "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
-            "name": "rotate2D",
+            "name": "rotate",
             "params": [
                 {
                     "name": "angle",
@@ -4603,7 +4617,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 342,
+            "line": 344,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -4640,7 +4654,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 364,
+            "line": 366,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>PVector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -4653,7 +4667,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 381,
+            "line": 383,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -4674,7 +4688,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 393,
+            "line": 400,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -4688,7 +4702,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 405,
+            "line": 423,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -4702,7 +4716,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 422,
+            "line": 446,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -4726,7 +4740,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 435,
+            "line": 459,
             "description": "Subtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -4750,7 +4764,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 450,
+            "line": 474,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -4774,7 +4788,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 462,
+            "line": 486,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -4798,7 +4812,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 475,
+            "line": 499,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -4822,7 +4836,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 487,
+            "line": 511,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -4846,7 +4860,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 499,
+            "line": 523,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -4870,7 +4884,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 512,
+            "line": 536,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -4895,7 +4909,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 527,
+            "line": 551,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -4911,7 +4925,7 @@
                 }
             ],
             "return": {
-                "description": "the angle between\n\nTODO: Needs to account for angleMode",
+                "description": "the angle between",
                 "type": "Number"
             },
             "class": "PVector",
@@ -5881,7 +5895,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 19,
+            "line": 20,
             "description": "Use the beginContour() and endContour() function to create negative shapes\nwithin shapes. For instance, the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThese functions can only be within a beginShape()/endShape() pair and they\nonly work with the P2D and P3D renderers.\n\nTransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "beginContour",
@@ -5894,7 +5908,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 40,
+            "line": 41,
             "description": "Using the beginShape() and endShape() functions allow creating more\ncomplex forms. beginShape() begins recording vertices for a shape and\nendShape() stops recording. The value of the kind parameter tells it which\ntypes of shapes to create from the provided vertices. With no mode\nspecified, the shape can be any irregular polygon. The parameters\navailable for beginShape() are POINTS, LINES, TRIANGLES, TRIANGLE_FAN,\nTRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the beginShape()\nfunction, a series of vertex() commands must follow. To stop drawing the\nshape, call endShape(). The vertex() function with two parameters\nspecifies a position in 2D and the vertex() function with three parameters\nspecifies a position in 3D. Each shape will be outlined with the current\nstroke color and filled with the fill color.\n\nTransformations such as translate(), rotate(), and scale() do not work\nwithin beginShape(). It is also not possible to use other shapes, such as\nellipse() or rect() within beginShape().",
             "itemtype": "method",
             "name": "beginShape",
@@ -5914,7 +5928,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 83,
+            "line": 84,
             "description": "Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape. The first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().",
             "itemtype": "method",
             "name": "bezierVertex",
@@ -5959,7 +5973,32 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 127,
+            "line": 123,
+            "description": "Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape(). The first and\nlast points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.",
+            "itemtype": "method",
+            "name": "curveVertex",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the vertex",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the vertex",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "Object"
+            },
+            "class": "Vertex",
+            "module": "Shape"
+        },
+        {
+            "file": "src/shape/vertex.js",
+            "line": 161,
             "description": "Use the beginContour() and endContour() function to create negative\nshapes within shapes. For instance, the center of the letter 'O'.\nbeginContour() begins recording vertices for the shape and endContour()\nstops recording. These functions can only be within a\nbeginShape()/endShape() pair and they only work with the P2D and P3D\nrenderers.",
             "itemtype": "method",
             "name": "endContour",
@@ -5972,7 +6011,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 170,
+            "line": 204,
             "description": "The endShape() function is the companion to beginShape() and may only be\ncalled after beginShape(). When endshape() is called, all of image data\ndefined since the previous call to beginShape() is written into the image\nbuffer. The constant CLOSE as the value for the MODE parameter to close\nthe shape (to connect the beginning and the end).",
             "itemtype": "method",
             "name": "endShape",
@@ -5992,7 +6031,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 191,
+            "line": 229,
             "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -6027,7 +6066,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 227,
+            "line": 265,
             "description": "All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.",
             "itemtype": "method",
             "name": "vertex",
@@ -6613,7 +6652,7 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 129,
-            "description": "Creates a <div></div> element in the DOM with given inner HTML.",
+            "description": "Creates a <div></div> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createDiv",
             "params": [
@@ -6632,8 +6671,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 139,
-            "description": "Creates a <p></p> element in the DOM with given inner HTML. Used\nfor paragraph length text.",
+            "line": 141,
+            "description": "Creates a <p></p> element in the DOM with given inner HTML. Used\nfor paragraph length text.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createP",
             "params": [
@@ -6652,8 +6691,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 150,
-            "description": "Creates a <span></span> element in the DOM with given inner HTML.",
+            "line": 154,
+            "description": "Creates a <span></span> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createSpan",
             "params": [
@@ -6672,8 +6711,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 160,
-            "description": "Creates a <h1></h1> element in the DOM with given inner HTML.\nUsed for headings.",
+            "line": 166,
+            "description": "Creates a <h1></h1> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.\nUsed for headings.",
             "itemtype": "method",
             "name": "createH1",
             "params": [
@@ -6692,8 +6731,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 171,
-            "description": "Creates a <h2></h2> element in the DOM with given inner HTML.\nUsed for headings.",
+            "line": 179,
+            "description": "Creates a <h2></h2> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.\nUsed for headings.",
             "itemtype": "method",
             "name": "createH2",
             "params": [
@@ -6712,8 +6751,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 182,
-            "description": "Creates a <h3></h3> element in the DOM with given inner HTML.\nUsed for headings.",
+            "line": 192,
+            "description": "Creates a <h3></h3> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.\nUsed for headings.",
             "itemtype": "method",
             "name": "createH3",
             "params": [
@@ -6732,8 +6771,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 193,
-            "description": "Creates a <h4></h4> element in the DOM with given inner HTML.\nUsed for headings.",
+            "line": 205,
+            "description": "Creates a <h4></h4> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.\nUsed for headings.",
             "itemtype": "method",
             "name": "createH4",
             "params": [
@@ -6752,8 +6791,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 204,
-            "description": "Creates a <h5></h5> element in the DOM with given inner HTML.\nUsed for headings.",
+            "line": 218,
+            "description": "Creates a <h5></h5> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.\nUsed for headings.",
             "itemtype": "method",
             "name": "createH5",
             "params": [
@@ -6772,8 +6811,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 215,
-            "description": "Creates a <h6></h6> element in the DOM with given inner HTML.\nUsed for headings.",
+            "line": 231,
+            "description": "Creates a <h6></h6> element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.\nUsed for headings.",
             "itemtype": "method",
             "name": "createH6",
             "params": [
@@ -6792,8 +6831,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 238,
-            "description": "Creates an <img /> element in the DOM with given src and\nalternate text",
+            "line": 256,
+            "description": "Creates an <img /> element in the DOM with given src and\nalternate text. \nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createImg",
             "params": [
@@ -6817,8 +6856,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 263,
-            "description": "Creates an <a></a> element in the DOM for including a hyperlink.",
+            "line": 283,
+            "description": "Creates an <a></a> element in the DOM for including a hyperlink.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createA",
             "params": [
@@ -6848,31 +6887,246 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 286,
+            "line": 308,
             "class": "DOM:Manipulate",
             "module": "*"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 320,
+            "line": 311,
+            "description": "Creates a slider <input></input> element in the DOM.\nUse .size() to set the display length of the slider.\nAppends to the container node if one is specified, otherwise \nappends to body.",
+            "itemtype": "method",
+            "name": "createSlider",
+            "params": [
+                {
+                    "name": "min",
+                    "description": "minimum value of the slider",
+                    "type": "Number"
+                },
+                {
+                    "name": "max",
+                    "description": "maximum value of the slider",
+                    "type": "Number"
+                },
+                {
+                    "name": "value",
+                    "description": "default value of the slider",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
             "class": "DOM:Manipulate",
             "module": "*"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 345,
+            "line": 337,
+            "description": "Creates a <button></button> element in the DOM.\nUse .size() to set the display size of the button.\nUse .mousePressed() to specify behavior on press.\nAppends to the container node if one is specified, otherwise \nappends to body.",
+            "itemtype": "method",
+            "name": "createButton",
+            "params": [
+                {
+                    "name": "label",
+                    "description": "label displayed on the button",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "value of the button",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
             "class": "DOM:Manipulate",
             "module": "*"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 355,
+            "line": 362,
+            "description": "Creates an <input></input> element in the DOM for text input.\nUse .size() to set the display length of the box.\nAppends to the container node if one is specified, otherwise \nappends to body.",
+            "itemtype": "method",
+            "name": "createInput",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "default value of the input box",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to PElement holding created\n                          node",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 384,
+            "class": "DOM:Manipulate",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 386,
+            "description": "Creates an HTML5 <video> element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body.",
+            "itemtype": "method",
+            "name": "createVideo",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "path to a video file",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to video PElement",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 437,
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 439,
+            "description": "Creates a hidden HTML5 <audio> element in the DOM for simple audio \nplayback. Appends to the container node if one is specified, \notherwise appends to body.",
+            "itemtype": "method",
+            "name": "createAudio",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "path to an audio file",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "pointer to audio PElement",
+                "type": "Object/PElement"
+            },
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 450,
+            "description": "Play an HTML5 media element.",
+            "itemtype": "method",
+            "name": "play",
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 457,
+            "description": "Pause an HTML5 media element.",
+            "itemtype": "method",
+            "name": "pause",
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 464,
+            "description": "Stop an HTML5 media element (sets current time to zero).",
+            "itemtype": "method",
+            "name": "stop",
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 471,
+            "description": "Returns the current time of an HTML5 media element.",
+            "itemtype": "method",
+            "name": "currentTime",
+            "return": {
+                "description": "current time (in seconds)",
+                "type": "Number"
+            },
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 479,
+            "description": "Set the current time of an HTML5 media element.",
+            "itemtype": "method",
+            "name": "setCurrentTime",
+            "params": [
+                {
+                    "name": "time",
+                    "description": "to jump to (in seconds)",
+                    "type": "Number"
+                }
+            ],
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 487,
+            "description": "Set 'loop' to true for an HTML5 media element.",
+            "itemtype": "method",
+            "name": "loop",
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 494,
+            "description": "Returns the duration of the HTML5 media element.",
+            "itemtype": "method",
+            "name": "duration",
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 502,
+            "description": "Set volume for this HTML5 media element.",
+            "params": [
+                {
+                    "name": "val",
+                    "description": "volume between 0.0 and 1.0",
+                    "type": "Number"
+                }
+            ],
+            "itemtype": "method",
+            "name": "volume",
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 560,
+            "class": "DOM:Media",
+            "module": "*"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 570,
+            "description": "Creates a new video element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video().",
             "itemtype": "method",
             "name": "createCapture",
             "params": [
                 {
                     "name": "type",
-                    "description": "type of capture, either VIDEO or \n                           AUDIO if none specified, default both",
+                    "description": "type of capture, either VIDEO or \n                          AUDIO if none specified, default both",
                     "type": "String/Constant"
                 }
             ],
@@ -6983,39 +7237,39 @@
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/pvector.js:422"
+            "line": " src/math/pvector.js:446"
         },
         {
             "message": "Missing item type\nSubtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/pvector.js:435"
+            "line": " src/math/pvector.js:459"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:450"
+            "line": " src/math/pvector.js:474"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:462"
+            "line": " src/math/pvector.js:486"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:475"
-        },
-        {
-            "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:487"
-        },
-        {
-            "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "line": " src/math/pvector.js:499"
         },
         {
+            "message": "Missing item type\nCalculates the cross product of two vectors.",
+            "line": " src/math/pvector.js:511"
+        },
+        {
+            "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
+            "line": " src/math/pvector.js:523"
+        },
+        {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/math/pvector.js:512"
+            "line": " src/math/pvector.js:536"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/math/pvector.js:527"
+            "line": " src/math/pvector.js:551"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
@@ -7023,15 +7277,19 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:286"
+            "line": " lib/addons/p5.dom.js:308"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:320"
+            "line": " lib/addons/p5.dom.js:384"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:345"
+            "line": " lib/addons/p5.dom.js:437"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/addons/p5.dom.js:560"
         }
     ]
 }

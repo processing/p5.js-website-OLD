@@ -9,6 +9,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Creating & Reading",
         "Curves",
         "DOM:Manipulate",
+        "DOM:Media",
         "DOM:PElement",
         "Environment",
         "Environment:Environment",
