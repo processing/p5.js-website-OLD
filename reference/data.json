@@ -335,8 +335,7 @@
             "fors": {
                 "DOM:PElement": 1,
                 "DOM:Manipulate": 1,
-                "DOM:Media": 1,
-                "p5.dom:p5.dom": 1
+                "DOM:Media": 1
             },
             "namespaces": {}
         }
@@ -368,16 +367,14 @@
                 "Environment:Environment": 1,
                 "Structure:Structure": 1,
                 "DOM:Manipulate": 1,
-                "DOM:Media": 1,
-                "p5.dom:p5.dom": 1
+                "DOM:Media": 1
             },
             "fors": {
                 "Environment:Environment": 1,
                 "Structure:Structure": 1,
                 "DOM:PElement": 1,
                 "DOM:Manipulate": 1,
-                "DOM:Media": 1,
-                "p5.dom:p5.dom": 1
+                "DOM:Media": 1
             },
             "namespaces": {},
             "tag": "module",
@@ -1063,17 +1060,6 @@
         "DOM:Media": {
             "name": "DOM:Media",
             "shortname": "DOM:Media",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "*",
-            "namespace": ""
-        },
-        "p5.dom:p5.dom": {
-            "name": "p5.dom:p5.dom",
-            "shortname": "p5.dom:p5.dom",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -7134,7 +7120,7 @@
                 "description": "capture video PElement",
                 "type": "Object/PElement"
             },
-            "class": "p5.dom:p5.dom",
+            "class": "DOM:Media",
             "module": "*"
         }
     ],

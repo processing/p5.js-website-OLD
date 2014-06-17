@@ -36,8 +36,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Touch",
         "Transform",
         "Trigonometry",
-        "Vertex",
-        "p5.dom:p5.dom"
+        "Vertex"
     ],
     "modules": [
         "*",
