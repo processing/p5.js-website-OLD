@@ -26,6 +26,17 @@
             },
             "namespaces": {}
         },
+        "src/core/constants.js": {
+            "name": "src/core/constants.js",
+            "modules": {
+                "Constants": 1
+            },
+            "classes": {},
+            "fors": {
+                "Constants": 1
+            },
+            "namespaces": {}
+        },
         "src/core/core.js": {
             "name": "src/core/core.js",
             "modules": {},
@@ -308,15 +319,11 @@
             },
             "namespaces": {}
         },
-        "src/var/constants.js": {
-            "name": "src/var/constants.js",
-            "modules": {
-                "Constants": 1
-            },
+        "src/var/canvas.js": {
+            "name": "src/var/canvas.js",
+            "modules": {},
             "classes": {},
-            "fors": {
-                "Constants": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/app.js": {
@@ -360,6 +367,20 @@
                 "core"
             ]
         },
+        "Constants": {
+            "name": "Constants",
+            "submodules": {},
+            "classes": {
+                "Constants": 1
+            },
+            "fors": {
+                "Constants": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/core/constants.js",
+            "line": 1
+        },
         "*": {
             "name": "*",
             "submodules": {},
@@ -379,7 +400,10 @@
             "namespaces": {},
             "tag": "module",
             "file": "lib/addons/p5.dom.js",
-            "line": 1
+            "line": 1,
+            "requires": [
+                "constants"
+            ]
         },
         "Data": {
             "name": "Data",
@@ -512,7 +536,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "src/math/pvector.js",
-            "line": 31,
+            "line": 32,
             "requires": [
                 "core"
             ]
@@ -591,8 +615,7 @@
             "line": 1,
             "requires": [
                 "core",
-                "constants",
-                "linearalgebra"
+                "constants"
             ]
         },
         "Typography": {
@@ -608,22 +631,9 @@
             "file": "src/typography/attributes.js",
             "line": 1,
             "requires": [
-                "core"
+                "core",
+                "constants"
             ]
-        },
-        "Constants": {
-            "name": "Constants",
-            "submodules": {},
-            "classes": {
-                "Constants": 1
-            },
-            "fors": {
-                "Constants": 1
-            },
-            "namespaces": {},
-            "tag": "module",
-            "file": "src/var/constants.js",
-            "line": 1
         }
     },
     "classes": {
@@ -647,6 +657,17 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Color",
+            "namespace": ""
+        },
+        "Constants": {
+            "name": "Constants",
+            "shortname": "Constants",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Constants",
             "namespace": ""
         },
         "Environment:Environment": {
@@ -901,7 +922,7 @@
             "module": "Math",
             "namespace": "",
             "file": "src/math/pvector.js",
-            "line": 31,
+            "line": 32,
             "description": "The PVector constructor function.\n\nA class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see PVector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the PVector class.",
             "is_constructor": 1,
             "params": [
@@ -1033,17 +1054,6 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Transform",
-            "namespace": ""
-        },
-        "Constants": {
-            "name": "Constants",
-            "shortname": "Constants",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Constants",
             "namespace": ""
         },
         "DOM:Manipulate": {
@@ -1436,8 +1446,53 @@
             "module": "Color"
         },
         {
+            "file": "src/core/constants.js",
+            "line": 21,
+            "description": "HALF_PI is a mathematical constant with the value\n1.57079632679489661923. It is half the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "HALF_PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/core/constants.js",
+            "line": 30,
+            "description": "PI is a mathematical constant with the value\n3.14159265358979323846. It is the ratio of the circumference\nof a circle to its diameter. It is useful in combination with\nthe trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/core/constants.js",
+            "line": 39,
+            "description": "QUARTER_PI is a mathematical constant with the value 0.7853982.\nIt is one quarter the ratio of the circumference of a circle to\nits diameter. It is useful in combination with the trigonometric\nfunctions sin() and cos().",
+            "itemtype": "property",
+            "name": "QUARTER_PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/core/constants.js",
+            "line": 48,
+            "description": "TAU is an alias for TWO_PI, a mathematical constant with the\nvalue 6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "TAU",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
+            "file": "src/core/constants.js",
+            "line": 57,
+            "description": "TWO_PI is a mathematical constant with the value\n6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
+            "itemtype": "property",
+            "name": "TWO_PI",
+            "class": "Constants",
+            "module": "Constants"
+        },
+        {
             "file": "src/core/core.js",
-            "line": 14,
+            "line": 15,
             "description": "p5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
             "params": [
                 {
@@ -1460,7 +1515,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 40,
+            "line": 41,
             "description": "The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.",
             "itemtype": "property",
             "name": "frameCount",
@@ -1472,7 +1527,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 61,
+            "line": 62,
             "description": "Confirms if a p5.js program is \"focused,\" meaning that it is active and\nwill accept mouse or keyboard input. This variable is \"true\" if it is\nfocused and \"false\" if not.",
             "itemtype": "property",
             "name": "focused",
@@ -1484,7 +1539,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 80,
+            "line": 81,
             "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayWidth",
@@ -1496,7 +1551,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 93,
+            "line": 94,
             "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayHeight",
@@ -1508,8 +1563,8 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 106,
-            "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth",
+            "line": 107,
+            "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
             "itemtype": "property",
             "name": "windowWidth",
             "example": [
@@ -1520,8 +1575,8 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 119,
-            "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight",
+            "line": 124,
+            "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
             "example": [
@@ -1532,7 +1587,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 132,
+            "line": 141,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -1541,7 +1596,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 144,
+            "line": 153,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -1550,7 +1605,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 156,
+            "line": 165,
             "description": "The setup() function is called once when the program starts. It's used to\ndefine initial enviroment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
@@ -1562,7 +1617,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 184,
+            "line": 193,
             "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -1571,7 +1626,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 207,
+            "line": 216,
             "itemtype": "method",
             "name": "remove",
             "class": "Structure:Structure",
@@ -4205,13 +4260,13 @@
         {
             "file": "src/math/noise.js",
             "line": 196,
-            "description": "NOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
+            "description": "TODO: NOT IMPLEMENTED YET!\nSets the seed value for <b>noise()</b>. By default, <b>noise()</b>\nproduces different results each time the program is run. Set the\n<b>value</b> parameter to a constant to return the same pseudo-random\nnumbers each time the software is run.",
             "class": "Noise",
             "module": "Math"
         },
         {
             "file": "src/math/pvector.js",
-            "line": 14,
+            "line": 15,
             "description": "Creates a new PVector (the datatype for storing vectors). This provides a\ntwo or three dimensional vector, specifically a Euclidean (also known as \ngeometric) vector. A vector is an entity that has both magnitude and \ndirection.",
             "itemtype": "method",
             "name": "createVector",
@@ -4240,7 +4295,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 63,
+            "line": 64,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
@@ -4250,7 +4305,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 69,
+            "line": 70,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
@@ -4260,7 +4315,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 75,
+            "line": 76,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
@@ -4270,7 +4325,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 84,
+            "line": 85,
             "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a PVector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -4299,7 +4354,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 103,
+            "line": 104,
             "description": "Gets a copy of the vector, returns a PVector object.",
             "itemtype": "method",
             "name": "get",
@@ -4312,7 +4367,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 114,
+            "line": 115,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a PVector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
             "itemtype": "method",
             "name": "add",
@@ -4345,7 +4400,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 140,
+            "line": 141,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a PVector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -4378,7 +4433,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 164,
+            "line": 165,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -4399,7 +4454,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 179,
+            "line": 180,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -4420,7 +4475,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 194,
+            "line": 195,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -4433,7 +4488,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 205,
+            "line": 206,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -4446,7 +4501,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 219,
+            "line": 220,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -4478,7 +4533,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 237,
+            "line": 238,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -4498,7 +4553,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 252,
+            "line": 253,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -4518,7 +4573,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 265,
+            "line": 266,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -4531,7 +4586,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 275,
+            "line": 276,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -4551,7 +4606,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 292,
+            "line": 293,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "mtehod": "setMag",
             "params": [
@@ -4570,7 +4625,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 304,
+            "line": 305,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -4583,7 +4638,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 323,
+            "line": 324,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -4603,7 +4658,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 344,
+            "line": 345,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -4640,7 +4695,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 366,
+            "line": 367,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>PVector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -4653,7 +4708,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 383,
+            "line": 384,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -4674,7 +4729,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 400,
+            "line": 401,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -4688,7 +4743,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 423,
+            "line": 424,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -4702,7 +4757,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 446,
+            "line": 447,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -4726,7 +4781,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 459,
+            "line": 460,
             "description": "Subtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -4750,7 +4805,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 474,
+            "line": 475,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -4774,7 +4829,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 486,
+            "line": 487,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -4798,7 +4853,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 499,
+            "line": 500,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -4822,7 +4877,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 511,
+            "line": 512,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -4846,7 +4901,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 523,
+            "line": 524,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -4870,7 +4925,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 536,
+            "line": 537,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -4895,7 +4950,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 551,
+            "line": 552,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -5208,14 +5263,14 @@
                 "type": "Object"
             },
             "example": [
-                "\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_.png\">\n    <code>\n      arc(50, 55, 50, 50, 0, HALF_PI);\n      noFill();\n      arc(50, 55, 60, 60, HALF_PI, PI);\n      arc(50, 55, 70, 70, PI, PI+QUARTER_PI);\n      arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n    </code>\n  </div>\n\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_2.png\">\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n    </code>\n  </div>\n\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_3.png\">\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n    </code>\n  </div>\n\n  <div>\n    <img src=\"http://processing.org/reference/images/arc_4.png\">\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n    </code>\n  </div>"
+                "\n  <div>\n    <code>\n      arc(50, 55, 50, 50, 0, HALF_PI);\n      noFill();\n      arc(50, 55, 60, 60, HALF_PI, PI);\n      arc(50, 55, 70, 70, PI, PI+QUARTER_PI);\n      arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n    </code>\n  </div>\n\n  <div>\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n    </code>\n  </div>\n\n  <div>\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n    </code>\n  </div>\n\n  <div>\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n    </code>\n  </div>"
             ],
             "class": "2D Primitives",
             "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 101,
+            "line": 97,
             "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape's width and height. The\norigin may be changed with the ellipseMode() function.",
             "itemtype": "method",
             "name": "ellipse",
@@ -5245,6 +5300,9 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
+            "example": [
+                "\n    <code>\n      ellipse(56, 46, 55, 55);\n    </code>"
+            ],
             "class": "2D Primitives",
             "module": "Shape"
         },
@@ -6125,7 +6183,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 21,
+            "line": 19,
             "description": "Multiplies the current matrix by the one specified through the parameters.\nThis is very slow because it will try to calculate the inverse of the\ntransform, so avoid it whenever possible.",
             "itemtype": "method",
             "name": "applyMatrix",
@@ -6170,7 +6228,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 43,
+            "line": 41,
             "description": "Pops the current transformation matrix off the matrix stack. Understanding\npushing and popping requires understanding the concept of a matrix stack.\nThe pushMatrix() function saves the current coordinate system to the stack\nand popMatrix() restores the prior coordinate system. pushMatrix() and\npopMatrix() are used in conjuction with the other transformation functions\nand may be embedded to control the scope of the transformations.",
             "itemtype": "method",
             "name": "popMatrix",
@@ -6183,7 +6241,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 61,
+            "line": 59,
             "description": "Prints the current matrix to the Console.",
             "itemtype": "method",
             "name": "printMatrix",
@@ -6196,7 +6254,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 72,
+            "line": 70,
             "description": "Pushes the current transformation matrix onto the matrix stack.\nUnderstanding pushMatrix() and popMatrix() requires understanding the\nconcept of a matrix stack. The pushMatrix() function saves the current\ncoordinate system to the stack and popMatrix() restores the prior\ncoordinate system. pushMatrix() and popMatrix() are used in conjuction\nwith the other transformation functions and may be embedded to control\nthe scope of the transformations.",
             "itemtype": "method",
             "name": "pushMatrix",
@@ -6209,7 +6267,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 91,
+            "line": 89,
             "description": "Replaces the current matrix with the identity matrix.",
             "itemtype": "method",
             "name": "resetMatrix",
@@ -6222,7 +6280,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 104,
+            "line": 102,
             "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe pushMatrix() and popMatrix().",
             "itemtype": "method",
             "name": "rotate",
@@ -6242,7 +6300,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 155,
+            "line": 153,
             "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with pushMatrix() and popMatrix().",
             "itemtype": "method",
             "name": "scale",
@@ -6268,7 +6326,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 196,
+            "line": 194,
             "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again. \n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npushMatrix() and popMatrix() functions.",
             "itemtype": "method",
             "name": "shearX",
@@ -6288,7 +6346,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 228,
+            "line": 226,
             "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.  \n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npushMatrix() and popMatrix() functions.",
             "itemtype": "method",
             "name": "shearY",
@@ -6308,7 +6366,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 260,
+            "line": 258,
             "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using pushMatrix() and popMatrix().",
             "itemtype": "method",
             "name": "translate",
@@ -6333,7 +6391,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 18,
+            "line": 19,
             "description": "Sets the current alignment for drawing text. The parameters LEFT, CENTER,\nand RIGHT set the display characteristics of the letters in relation to\nthe values for the x and y parameters of the text() function.",
             "itemtype": "method",
             "name": "textAlign",
@@ -6349,7 +6407,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 35,
+            "line": 36,
             "description": "Calculates and returns the height of any character or text string.",
             "itemtype": "method",
             "name": "textHeight",
@@ -6365,7 +6423,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 45,
+            "line": 46,
             "description": "Sets the spacing between lines of text in units of pixels. This\nsetting will be used in all subsequent calls to the text() function.",
             "itemtype": "method",
             "name": "textLeading",
@@ -6381,7 +6439,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 56,
+            "line": 57,
             "description": "Sets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in units of pixels.",
             "itemtype": "method",
             "name": "textSize",
@@ -6397,7 +6455,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 67,
+            "line": 68,
             "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverriden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
@@ -6413,7 +6471,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 83,
+            "line": 84,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
             "name": "textWidth",
@@ -6480,60 +6538,24 @@
             "module": "Typography"
         },
         {
-            "file": "src/var/constants.js",
-            "line": 21,
-            "description": "HALF_PI is a mathematical constant with the value\n1.57079632679489661923. It is half the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
-            "itemtype": "property",
-            "name": "HALF_PI",
-            "class": "Constants",
-            "module": "Constants"
-        },
-        {
-            "file": "src/var/constants.js",
-            "line": 30,
-            "description": "PI is a mathematical constant with the value\n3.14159265358979323846. It is the ratio of the circumference\nof a circle to its diameter. It is useful in combination with\nthe trigonometric functions sin() and cos().",
-            "itemtype": "property",
-            "name": "PI",
-            "class": "Constants",
-            "module": "Constants"
-        },
-        {
-            "file": "src/var/constants.js",
-            "line": 39,
-            "description": "QUARTER_PI is a mathematical constant with the value 0.7853982.\nIt is one quarter the ratio of the circumference of a circle to\nits diameter. It is useful in combination with the trigonometric\nfunctions sin() and cos().",
-            "itemtype": "property",
-            "name": "QUARTER_PI",
-            "class": "Constants",
-            "module": "Constants"
-        },
-        {
-            "file": "src/var/constants.js",
-            "line": 48,
-            "description": "TAU is an alias for TWO_PI, a mathematical constant with the\nvalue 6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
-            "itemtype": "property",
-            "name": "TAU",
-            "class": "Constants",
-            "module": "Constants"
-        },
-        {
-            "file": "src/var/constants.js",
-            "line": 57,
-            "description": "TWO_PI is a mathematical constant with the value\n6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
-            "itemtype": "property",
-            "name": "TWO_PI",
-            "class": "Constants",
-            "module": "Constants"
+            "file": "src/var/canvas.js",
+            "line": 1,
+            "requires": [
+                "constants"
+            ],
+            "class": "DOM:PElement",
+            "module": "Typography"
         },
         {
             "file": "src/app.js",
-            "line": 38,
+            "line": 39,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
             "class": "DOM:PElement",
-            "module": "Constants"
+            "module": "Typography"
         },
         {
             "file": "lib/addons/p5.dom.js",
@@ -7131,11 +7153,11 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/math/pvector.js:292"
+            "line": " src/math/pvector.js:293"
         },
         {
             "message": "Missing item type\np5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
-            "line": " src/core/core.js:14"
+            "line": " src/core/core.js:15"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
@@ -7214,52 +7236,56 @@
             "line": " src/image/image.js:269"
         },
         {
-            "message": "Missing item type\nNOT IMPLEMENTED YET!\n Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\n produces different results each time the program is run. Set the\n <b>value</b> parameter to a constant to return the same pseudo-random\n numbers each time the software is run.",
+            "message": "Missing item type\nTODO: NOT IMPLEMENTED YET!\nSets the seed value for <b>noise()</b>. By default, <b>noise()</b>\nproduces different results each time the program is run. Set the\n<b>value</b> parameter to a constant to return the same pseudo-random\nnumbers each time the software is run.",
             "line": " src/math/noise.js:196"
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/math/pvector.js:292"
+            "line": " src/math/pvector.js:293"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/pvector.js:446"
+            "line": " src/math/pvector.js:447"
         },
         {
             "message": "Missing item type\nSubtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/pvector.js:459"
+            "line": " src/math/pvector.js:460"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:474"
+            "line": " src/math/pvector.js:475"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:486"
+            "line": " src/math/pvector.js:487"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:499"
+            "line": " src/math/pvector.js:500"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:511"
+            "line": " src/math/pvector.js:512"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/math/pvector.js:523"
+            "line": " src/math/pvector.js:524"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/math/pvector.js:536"
+            "line": " src/math/pvector.js:537"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/math/pvector.js:551"
+            "line": " src/math/pvector.js:552"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/var/canvas.js:1"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:38"
+            "line": " src/app.js:39"
         },
         {
             "message": "Missing item type",
