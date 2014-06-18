@@ -4295,7 +4295,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 64,
+            "line": 72,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
@@ -4305,7 +4305,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 70,
+            "line": 78,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
@@ -4315,7 +4315,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 76,
+            "line": 84,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
@@ -4325,7 +4325,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 85,
+            "line": 93,
             "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a PVector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -4354,7 +4354,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 104,
+            "line": 112,
             "description": "Gets a copy of the vector, returns a PVector object.",
             "itemtype": "method",
             "name": "get",
@@ -4367,7 +4367,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 115,
+            "line": 123,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a PVector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
             "itemtype": "method",
             "name": "add",
@@ -4400,7 +4400,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 141,
+            "line": 149,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a PVector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -4433,7 +4433,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 165,
+            "line": 173,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -4454,7 +4454,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 180,
+            "line": 188,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -4475,7 +4475,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 195,
+            "line": 203,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -4488,7 +4488,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 206,
+            "line": 214,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -4501,7 +4501,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 220,
+            "line": 228,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -4533,7 +4533,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 238,
+            "line": 246,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -4553,7 +4553,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 253,
+            "line": 261,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -4573,7 +4573,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 266,
+            "line": 274,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -4586,7 +4586,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 276,
+            "line": 284,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -4606,7 +4606,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 293,
+            "line": 301,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "mtehod": "setMag",
             "params": [
@@ -4625,7 +4625,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 305,
+            "line": 313,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -4638,7 +4638,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 324,
+            "line": 332,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -4658,7 +4658,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 345,
+            "line": 353,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -4695,7 +4695,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 367,
+            "line": 375,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>PVector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -4708,7 +4708,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 384,
+            "line": 392,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -4729,7 +4729,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 401,
+            "line": 409,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -4743,7 +4743,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 424,
+            "line": 432,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -4757,7 +4757,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 447,
+            "line": 455,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -4781,7 +4781,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 460,
+            "line": 468,
             "description": "Subtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -4805,7 +4805,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 475,
+            "line": 483,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -4829,7 +4829,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 487,
+            "line": 495,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -4853,7 +4853,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 500,
+            "line": 508,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -4877,7 +4877,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 512,
+            "line": 520,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -4901,7 +4901,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 524,
+            "line": 532,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -4925,7 +4925,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 537,
+            "line": 545,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -4950,7 +4950,7 @@
         },
         {
             "file": "src/math/pvector.js",
-            "line": 552,
+            "line": 560,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -7153,7 +7153,7 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/math/pvector.js:293"
+            "line": " src/math/pvector.js:301"
         },
         {
             "message": "Missing item type\np5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
@@ -7241,43 +7241,43 @@
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/math/pvector.js:293"
+            "line": " src/math/pvector.js:301"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/pvector.js:447"
+            "line": " src/math/pvector.js:455"
         },
         {
             "message": "Missing item type\nSubtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/pvector.js:460"
+            "line": " src/math/pvector.js:468"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:475"
+            "line": " src/math/pvector.js:483"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:487"
+            "line": " src/math/pvector.js:495"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:500"
+            "line": " src/math/pvector.js:508"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:512"
+            "line": " src/math/pvector.js:520"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/math/pvector.js:524"
+            "line": " src/math/pvector.js:532"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/math/pvector.js:537"
+            "line": " src/math/pvector.js:545"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/math/pvector.js:552"
+            "line": " src/math/pvector.js:560"
         },
         {
             "message": "Missing item type",
