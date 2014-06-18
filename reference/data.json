@@ -3603,7 +3603,7 @@
             "itemtype": "method",
             "name": "mousePressed",
             "example": [
-                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseClicked() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mousePressed() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
             ],
             "class": "Mouse",
             "module": "Input"
