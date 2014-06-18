@@ -3108,7 +3108,7 @@
             "name": "save",
             "params": [
                 {
-                    "name": "extension!~YUIDOC_LINE~!!~YUIDOC_LINE~!TODO:",
+                    "name": "extension\n\nTODO:",
                     "description": "There doesn't seem to be a way to give the force the\nbrowser to download a file *and* give it a name. Which is why \nthis function currently only take an extension parameter.",
                     "type": "[type]"
                 }
@@ -3579,7 +3579,7 @@
             "itemtype": "method",
             "name": "mouseMoved",
             "example": [
-                "\n  <div>\n    <code>\n      // Move the mouse across the image\n      // to change its value\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseMoved() {\n        value = value + 5;\n        if (value > 255) {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n<div>\n<code>\n// Move the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>"
             ],
             "class": "Mouse",
             "module": "Input"
@@ -3591,7 +3591,7 @@
             "itemtype": "method",
             "name": "mouseDragged",
             "example": [
-                "\n  <div>\n    <code>\n      // Move the mouse across the image\n      // to change its value\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseDragged() {\n        value = value + 5;\n        if (value > 255) {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n<div>\n<code>\n// Drag the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseDragged() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>"
             ],
             "class": "Mouse",
             "module": "Input"
@@ -3603,38 +3603,38 @@
             "itemtype": "method",
             "name": "mousePressed",
             "example": [
-                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mousePressed() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mousePressed() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
             ],
             "class": "Mouse",
             "module": "Input"
         },
         {
             "file": "src/input/mouse.js",
-            "line": 232,
+            "line": 233,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased.",
             "itemtype": "method",
             "name": "mouseReleased",
             "example": [
-                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseReleased() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseReleased() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
             ],
             "class": "Mouse",
             "module": "Input"
         },
         {
             "file": "src/input/mouse.js",
-            "line": 267,
+            "line": 269,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.",
             "itemtype": "method",
             "name": "mouseClicked",
             "example": [
-                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      // after the mouse has been clicked\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function mouseClicked() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseClicked() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
             ],
             "class": "Mouse",
             "module": "Input"
         },
         {
             "file": "src/input/mouse.js",
-            "line": 301,
+            "line": 303,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5263,7 +5263,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n  <div>\n    <code>\n      arc(50, 55, 50, 50, 0, HALF_PI);\n      noFill();\n      arc(50, 55, 60, 60, HALF_PI, PI);\n      arc(50, 55, 70, 70, PI, PI+QUARTER_PI);\n      arc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n    </code>\n  </div>\n\n  <div>\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n    </code>\n  </div>\n\n  <div>\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n    </code>\n  </div>\n\n  <div>\n    <code>\n      arc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n    </code>\n  </div>"
+                "\n<div>\n<code>\narc(50, 55, 50, 50, 0, HALF_PI);\nnoFill();\narc(50, 55, 60, 60, HALF_PI, PI);\narc(50, 55, 70, 70, PI, PI+QUARTER_PI);\narc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n</code>\n</div>"
             ],
             "class": "2D Primitives",
             "module": "Shape"
@@ -5301,14 +5301,14 @@
                 "type": "P5"
             },
             "example": [
-                "\n    <code>\n      ellipse(56, 46, 55, 55);\n    </code>"
+                "\n<div>\n<code>\nellipse(56, 46, 55, 55);\n</code>\n</div>"
             ],
             "class": "2D Primitives",
             "module": "Shape"
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 162,
+            "line": 164,
             "description": "Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function. The version with six parameters allows the line\nto be placed anywhere within XYZ space. Drawing this shape in 3D with the\nz parameter requires the P3D parameter in combination with size() as shown\nin the above example.",
             "itemtype": "method",
             "name": "line",
@@ -5343,7 +5343,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 192,
+            "line": 194,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point, and the optional third value is\nthe depth value. Drawing this shape in 3D with the z parameter requires\nthe P3D parameter in combination with size() as shown in the above\nexample.",
             "itemtype": "method",
             "name": "point",
@@ -5368,7 +5368,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 234,
+            "line": 236,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -5423,7 +5423,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 265,
+            "line": 267,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.",
             "itemtype": "method",
             "name": "rect",
@@ -5458,7 +5458,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 290,
+            "line": 292,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
