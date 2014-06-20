@@ -40,7 +40,8 @@
 <!-- site navigation -->
 <div class="column-span">
 <ul id="menu">
-  <li><a href="<?php echo getRoot(); ?>">About</a></li>
+  <li><a href="<?php echo getRoot(); ?>">Home</a></li>
+  <li><a href="<?php echo getRoot(); ?>about/">About</a></li>
   <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;started</a></li>
   <li><a href="http://p5js.org/reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>

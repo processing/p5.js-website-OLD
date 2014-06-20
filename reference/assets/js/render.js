@@ -1,29 +1,32 @@
-function renderCode() {
+function renderCode(parentId) {
   var examples = document.getElementsByClassName('example');
   if (examples.length > 0) {
 
     var sketches = examples[0].getElementsByTagName('code');
     var sketches_array = Array.prototype.slice.call(sketches);
     sketches_array.forEach(function(s) {
-      setupCode(s);
-      runCode(s);
+      setupCode(s, parentId);
+      runCode(s, parentId);
     });
   }
 
-  function setupCode(sketch) {
+  function setupCode(sketch, parentId) {
 
     // remove start and end lines
-    sketch.innerText = sketch.innerText.replace(/^\s+|\s+$/g, '');
+    // sketch.innerText = sketch.innerText.replace(/^\s+|\s+$/g, '');
     var runnable = sketch.innerText;
     var rows = sketch.innerText.split('\n').length;
 
     // sketch
-    sketch.style.position = 'absolute';
-    sketch.style.top = 0;
-    sketch.style.left = '150px';
-    sketch.parentNode.style.position = 'relative';
-    var h = Math.max(sketch.offsetHeight, 100) + 25;
-    sketch.parentNode.style.height = h+'px';
+    var parent = document.getElementById(parentId) || sketch.parentNode;
+    if (!parentId) {
+      sketch.style.position = 'absolute';
+      sketch.style.top = 0;
+      sketch.style.left = '150px';
+      parent.style.position = 'relative';
+      var h = Math.max(sketch.offsetHeight, 100) + 25;
+      parent.style.height = h+'px';
+    }
 
     // store original sketch
     var orig_sketch = document.createElement('div');
@@ -33,15 +36,21 @@ function renderCode() {
     var cnv = document.createElement('div');
     cnv.className = 'cnv_div';
     cnv.style.position = 'absolute';
-    sketch.parentNode.insertBefore(cnv, sketch);
+    parent.appendChild(cnv);
 
 
     // create edit space
     var edit_space = document.createElement('div');
-    edit_space.style.position = 'absolute';
-    edit_space.style.top = '-20px';
-    edit_space.style.left = '150px';
-    sketch.parentNode.appendChild(edit_space);
+    parent.appendChild(edit_space);
+    if (!parentId) {
+      edit_space.style.position = 'absolute';
+      edit_space.style.top = '-20px';
+      edit_space.style.left = '150px';
+    } else {
+      edit_space.style.position = 'absolute';
+      edit_space.style.top = cnv.style.height;
+    }
+    
 
     //add buttons
     var edit_button = document.createElement('button');
@@ -83,15 +92,16 @@ function renderCode() {
         edit_button.innerHTML = 'edit';
         edit_area.style.display = 'none';
         sketch.innerHTML = edit_area.value;
-        runCode(sketch);
+        runCode(sketch, parent);
       }
     }
   }
 
-  function runCode(sketch) {
+  function runCode(sketch, parentId) {
 
+    var parent = document.getElementById(parentId) || sketch.parentNode;
     var runnable = sketch.innerText;
-    var cnv = sketch.parentNode.getElementsByClassName('cnv_div')[0];
+    var cnv = parent.getElementsByClassName('cnv_div')[0];
     cnv.innerHTML = '';
 
     var s = function( p ) {
@@ -132,7 +142,7 @@ function renderCode() {
       }
     };
 
-    prettyPrint();
+    //prettyPrint();
 
     setTimeout(function() { var myp5 = new p5(s, cnv); }, 100);
   }
