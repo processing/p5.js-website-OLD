@@ -10,7 +10,6 @@
       <section id="about">
         <h2>Welcome!</h2>
         <p>
-        <div id="demo" style="height:300px; width:100%"></div>
         <div class="example">
       <pre><code class="language-javascript">function setup() {
   createCanvas(720, 300);

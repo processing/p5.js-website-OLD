@@ -1,32 +1,26 @@
-function renderCode(parentId) {
+function renderCode() {
   var examples = document.getElementsByClassName('example');
   if (examples.length > 0) {
 
     var sketches = examples[0].getElementsByTagName('code');
     var sketches_array = Array.prototype.slice.call(sketches);
     sketches_array.forEach(function(s) {
-      setupCode(s, parentId);
-      runCode(s, parentId);
+      setupCode(s);
+      runCode(s);
     });
   }
 
-  function setupCode(sketch, parentId) {
+  function setupCode(sketch) {
+
+    var sketchNode = (sketch.parentNode.tagName === 'PRE') ? sketch.parentNode : sketch;
+    var parent = sketchNode.parentNode;
 
     // remove start and end lines
-    // sketch.innerText = sketch.innerText.replace(/^\s+|\s+$/g, '');
+    sketch.innerText = sketch.innerText.replace(/^\s+|\s+$/g, '');
     var runnable = sketch.innerText;
     var rows = sketch.innerText.split('\n').length;
 
-    // sketch
-    var parent = document.getElementById(parentId) || sketch.parentNode;
-    if (!parentId) {
-      sketch.style.position = 'absolute';
-      sketch.style.top = 0;
-      sketch.style.left = '150px';
-      parent.style.position = 'relative';
-      var h = Math.max(sketch.offsetHeight, 100) + 25;
-      parent.style.height = h+'px';
-    }
+    // var h = Math.max(sketch.offsetHeight, 100) + 25;
 
     // store original sketch
     var orig_sketch = document.createElement('div');
@@ -35,22 +29,13 @@ function renderCode(parentId) {
     // create canvas
     var cnv = document.createElement('div');
     cnv.className = 'cnv_div';
-    cnv.style.position = 'absolute';
-    parent.appendChild(cnv);
+    parent.insertBefore(cnv, sketchNode);
 
 
     // create edit space
     var edit_space = document.createElement('div');
+    edit_space.className = 'edit_space';
     parent.appendChild(edit_space);
-    if (!parentId) {
-      edit_space.style.position = 'absolute';
-      edit_space.style.top = '-20px';
-      edit_space.style.left = '150px';
-    } else {
-      edit_space.style.position = 'absolute';
-      edit_space.style.top = cnv.style.height;
-    }
-    
 
     //add buttons
     var edit_button = document.createElement('button');
@@ -79,7 +64,7 @@ function renderCode(parentId) {
     edit_area.value = runnable;
     edit_area.rows = rows;
     edit_area.cols = 80;
-    edit_area.position = 'absolute'
+    // edit_area.position = 'absolute'
     edit_space.appendChild(edit_area);
     edit_area.style.display = 'none';
 
@@ -92,14 +77,16 @@ function renderCode(parentId) {
         edit_button.innerHTML = 'edit';
         edit_area.style.display = 'none';
         sketch.innerHTML = edit_area.value;
-        runCode(sketch, parent);
+        runCode(sketch);
       }
     }
   }
 
-  function runCode(sketch, parentId) {
+  function runCode(sketch) {
 
-    var parent = document.getElementById(parentId) || sketch.parentNode;
+    var parent = (sketch.parentNode.tagName === 'PRE') ? sketch.parentNode.parentNode : sketch.parentNode;
+  
+
     var runnable = sketch.innerText;
     var cnv = parent.getElementsByClassName('cnv_div')[0];
     cnv.innerHTML = '';
@@ -142,7 +129,7 @@ function renderCode(parentId) {
       }
     };
 
-    //prettyPrint();
+    if (typeof prettyPrint !== 'undefined') prettyPrint();
 
     setTimeout(function() { var myp5 = new p5(s, cnv); }, 100);
   }

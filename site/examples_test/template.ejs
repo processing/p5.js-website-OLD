@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+  <?php include('../header.php'); ?>
+  <body id="home-page">
+
+    <?php include('../sidebar.php'); ?>
+
+    <!-- content sections -->
+    <div class="column-span">
+      <section id="about">
+          <h2>{{=name}}</h2>
+          <p>
+          <div class="example">
+          <pre><code class="language-javascript">{{=js}}</code></pre>
+          </div>
+          </p>
+          <p>{{=desc}}</p>
+      </section>
+
+      <?php include('../footer.php'); ?>
+    </div><!-- end column-span -->
+
+    <!-- outside of column for footer to go across both -->
+
+    <p class="clearfix"> &nbsp; </p>
+
+    <object type="image/svg+xml" data="../img/thick-asterisk-alone.svg" id="asterisk-design-element">
+         *<!-- to do: add fallback image in CSS -->
+    </object>
+
+
+    <?php include('../end.php'); ?>
+  </body>
+</html>
