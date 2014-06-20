@@ -29,10 +29,8 @@
 <div id="container">
 <!-- identity -->
 <div id="lockup">
-  <a href="<?php echo getRoot(); ?>"><span>
-    <object type="image/svg+xml" data="<?php echo getRoot(); ?>img/p5js.svg" class="logo">
-     p5js logo <!-- to do: add fallback image in CSS -->
-    </object></span>
+  <a href="<?php echo getRoot(); ?>">
+    <img type="image/svg+xml" src="<?php echo getRoot(); ?>img/p5js.svg" class="logo" />
   </a>
   <p><?php echo $tagline; ?></p>
 </div>

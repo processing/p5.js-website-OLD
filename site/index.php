@@ -11,7 +11,7 @@
         <h2>Welcome!</h2>
         <p>
         <div class="example">
-      <pre><code class="language-javascript">function setup() {
+      <pre style="display:none"><code class="language-javascript">function setup() {
   createCanvas(720, 300);
   background(100, 20, 100);
 }
