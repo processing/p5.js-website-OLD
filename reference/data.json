@@ -2951,7 +2951,7 @@
         {
             "file": "src/input/mouse.js",
             "line": 159,
-            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed.",
+            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.",
             "itemtype": "method",
             "name": "mouseDragged",
             "example": [
@@ -2962,8 +2962,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 195,
-            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed.",
+            "line": 200,
+            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "mousePressed",
             "example": [
@@ -2974,8 +2974,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 233,
-            "description": "The mouseReleased() function is called every time a mouse button is\nreleased.",
+            "line": 242,
+            "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "mouseReleased",
             "example": [
@@ -2986,7 +2986,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 269,
+            "line": 281,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -2998,7 +2998,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 303,
+            "line": 315,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -3126,7 +3126,7 @@
         {
             "file": "src/input/touch.js",
             "line": 53,
-            "description": "The touchStarted() function is called once after every time a touch is\nregistered.",
+            "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "touchStarted",
             "class": "Touch",
@@ -3134,8 +3134,8 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 68,
-            "description": "The touchMoved() function is called every time a touch move is registered.",
+            "line": 71,
+            "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined.",
             "itemtype": "method",
             "name": "touchMoved",
             "class": "Touch",
@@ -3143,8 +3143,8 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 82,
-            "description": "The touchEnded() function is called every time a touch ends.",
+            "line": 89,
+            "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "touchEnded",
             "class": "Touch",
@@ -4590,7 +4590,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 123,
+            "line": 127,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
             "itemtype": "method",
             "name": "add",
@@ -4623,7 +4623,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 149,
+            "line": 153,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a p5.Vector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -4656,7 +4656,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 173,
+            "line": 177,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -4677,7 +4677,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 188,
+            "line": 192,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -4698,7 +4698,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 203,
+            "line": 207,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -4711,7 +4711,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 214,
+            "line": 218,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -4724,7 +4724,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 228,
+            "line": 232,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -4756,7 +4756,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 246,
+            "line": 250,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -4776,7 +4776,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 261,
+            "line": 269,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -4796,7 +4796,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 274,
+            "line": 282,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -4809,7 +4809,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 284,
+            "line": 292,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -4829,7 +4829,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 301,
+            "line": 309,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "mtehod": "setMag",
             "params": [
@@ -4848,7 +4848,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 313,
+            "line": 321,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -4861,7 +4861,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 332,
+            "line": 340,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -4881,7 +4881,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 353,
+            "line": 361,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -4918,7 +4918,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 375,
+            "line": 383,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -4931,7 +4931,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 392,
+            "line": 400,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -4952,7 +4952,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 409,
+            "line": 421,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -4966,7 +4966,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 432,
+            "line": 444,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -4980,7 +4980,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 455,
+            "line": 471,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -5004,7 +5004,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 468,
+            "line": 484,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -5028,7 +5028,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 483,
+            "line": 499,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5052,7 +5052,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 495,
+            "line": 511,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5076,7 +5076,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 508,
+            "line": 524,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -5100,7 +5100,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 520,
+            "line": 536,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -5124,7 +5124,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 532,
+            "line": 548,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -5148,7 +5148,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 545,
+            "line": 561,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -5173,7 +5173,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 560,
+            "line": 576,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -7150,7 +7150,7 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/objects/p5.Vector.js:301"
+            "line": " src/objects/p5.Vector.js:309"
         },
         {
             "message": "Missing item type\np5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
@@ -7238,43 +7238,43 @@
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/objects/p5.Vector.js:301"
+            "line": " src/objects/p5.Vector.js:309"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/objects/p5.Vector.js:455"
+            "line": " src/objects/p5.Vector.js:471"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/objects/p5.Vector.js:468"
+            "line": " src/objects/p5.Vector.js:484"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:483"
+            "line": " src/objects/p5.Vector.js:499"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:495"
+            "line": " src/objects/p5.Vector.js:511"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/objects/p5.Vector.js:508"
+            "line": " src/objects/p5.Vector.js:524"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/objects/p5.Vector.js:520"
+            "line": " src/objects/p5.Vector.js:536"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/objects/p5.Vector.js:532"
+            "line": " src/objects/p5.Vector.js:548"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/objects/p5.Vector.js:545"
+            "line": " src/objects/p5.Vector.js:561"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/objects/p5.Vector.js:560"
+            "line": " src/objects/p5.Vector.js:576"
         },
         {
             "message": "Missing item type",
