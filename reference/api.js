@@ -10,7 +10,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Curves",
         "DOM:Manipulate",
         "DOM:Media",
-        "DOM:PElement",
+        "DOM:p5.Element",
         "Environment",
         "Environment:Environment",
         "Files",
@@ -22,9 +22,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "Math",
         "Mouse",
         "Noise",
-        "PElement",
-        "PImage",
-        "PVector",
         "Pixels",
         "Random",
         "Setting",
@@ -36,7 +33,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "Touch",
         "Transform",
         "Trigonometry",
-        "Vertex"
+        "Vertex",
+        "p5.Element",
+        "p5.Image",
+        "p5.Vector"
     ],
     "modules": [
         "*",

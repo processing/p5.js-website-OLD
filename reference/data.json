@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.2.15",
+        "version": "0.2.16",
         "url": ""
     },
     "files": {
@@ -69,22 +69,10 @@
         },
         "src/dom/manipulate.js": {
             "name": "src/dom/manipulate.js",
-            "modules": {
-                "DOM": 1
-            },
-            "classes": {},
-            "fors": {
-                "Manipulate": 1
-            },
-            "namespaces": {}
-        },
-        "src/dom/pelement.js": {
-            "name": "src/dom/pelement.js",
             "modules": {},
             "classes": {},
             "fors": {
-                "PElement": 1,
-                "DOM:PElement": 1
+                "Manipulate": 1
             },
             "namespaces": {}
         },
@@ -104,21 +92,6 @@
             "modules": {},
             "classes": {},
             "fors": {},
-            "namespaces": {}
-        },
-        "src/image/image.js": {
-            "name": "src/image/image.js",
-            "modules": {
-                "Image": 1
-            },
-            "classes": {
-                "PImage": 1
-            },
-            "fors": {
-                "Image": 1,
-                "Loading & Displaying": 1,
-                "PImage": 1
-            },
             "namespaces": {}
         },
         "src/image/pixels.js": {
@@ -180,9 +153,7 @@
         },
         "src/math/calculation.js": {
             "name": "src/math/calculation.js",
-            "modules": {
-                "Math": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "Calculation": 1
@@ -195,18 +166,6 @@
             "classes": {},
             "fors": {
                 "Noise": 1
-            },
-            "namespaces": {}
-        },
-        "src/math/pvector.js": {
-            "name": "src/math/pvector.js",
-            "modules": {},
-            "classes": {
-                "PVector": 1
-            },
-            "fors": {
-                "PVector": 1,
-                "Math": 1
             },
             "namespaces": {}
         },
@@ -225,6 +184,47 @@
             "classes": {},
             "fors": {
                 "Trigonometry": 1
+            },
+            "namespaces": {}
+        },
+        "src/objects/p5.Element.js": {
+            "name": "src/objects/p5.Element.js",
+            "modules": {
+                "DOM": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5.Element": 1,
+                "DOM:p5.Element": 1
+            },
+            "namespaces": {}
+        },
+        "src/objects/p5.Image.js": {
+            "name": "src/objects/p5.Image.js",
+            "modules": {
+                "Image": 1
+            },
+            "classes": {
+                "p5.Image": 1
+            },
+            "fors": {
+                "Image": 1,
+                "Loading & Displaying": 1,
+                "p5.Image": 1
+            },
+            "namespaces": {}
+        },
+        "src/objects/p5.Vector.js": {
+            "name": "src/objects/p5.Vector.js",
+            "modules": {
+                "Math": 1
+            },
+            "classes": {
+                "p5.Vector": 1
+            },
+            "fors": {
+                "p5.Vector": 1,
+                "Math": 1
             },
             "namespaces": {}
         },
@@ -340,7 +340,7 @@
             },
             "classes": {},
             "fors": {
-                "DOM:PElement": 1,
+                "DOM:p5.Element": 1,
                 "DOM:Manipulate": 1,
                 "DOM:Media": 1
             },
@@ -393,7 +393,7 @@
             "fors": {
                 "Environment:Environment": 1,
                 "Structure:Structure": 1,
-                "DOM:PElement": 1,
+                "DOM:p5.Element": 1,
                 "DOM:Manipulate": 1,
                 "DOM:Media": 1
             },
@@ -429,17 +429,17 @@
             "submodules": {},
             "classes": {
                 "Manipulate": 1,
-                "PElement": 1,
-                "DOM:PElement": 1
+                "p5.Element": 1,
+                "DOM:p5.Element": 1
             },
             "fors": {
                 "Manipulate": 1,
-                "PElement": 1,
-                "DOM:PElement": 1
+                "p5.Element": 1,
+                "DOM:p5.Element": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/dom/manipulate.js",
+            "file": "src/objects/p5.Element.js",
             "line": 1
         },
         "Environment": {
@@ -464,28 +464,25 @@
             "name": "Image",
             "submodules": {},
             "classes": {
+                "Pixels": 1,
+                "Image:Pixels": 1,
                 "Image": 1,
                 "Loading & Displaying": 1,
-                "PImage": 1,
-                "Pixels": 1,
-                "Image:Pixels": 1
+                "p5.Image": 1
             },
             "fors": {
+                "Pixels": 1,
+                "Image:Pixels": 1,
                 "Image": 1,
                 "Loading & Displaying": 1,
-                "PImage": 1,
-                "Pixels": 1,
-                "Image:Pixels": 1
+                "p5.Image": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/image/image.js",
+            "file": "src/objects/p5.Image.js",
             "line": 225,
             "requires": [
-                "core",
-                "canvas",
-                "constants",
-                "filters"
+                "core"
             ]
         },
         "Input": {
@@ -520,22 +517,22 @@
             "classes": {
                 "Calculation": 1,
                 "Noise": 1,
-                "PVector": 1,
-                "Math": 1,
                 "Random": 1,
-                "Trigonometry": 1
+                "Trigonometry": 1,
+                "p5.Vector": 1,
+                "Math": 1
             },
             "fors": {
                 "Calculation": 1,
                 "Noise": 1,
-                "PVector": 1,
-                "Math": 1,
                 "Random": 1,
-                "Trigonometry": 1
+                "Trigonometry": 1,
+                "p5.Vector": 1,
+                "Math": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "src/math/pvector.js",
+            "file": "src/objects/p5.Vector.js",
             "line": 32,
             "requires": [
                 "core"
@@ -725,28 +722,6 @@
             "module": "DOM",
             "namespace": ""
         },
-        "PElement": {
-            "name": "PElement",
-            "shortname": "PElement",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "DOM",
-            "namespace": ""
-        },
-        "DOM:PElement": {
-            "name": "DOM:PElement",
-            "shortname": "DOM:PElement",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "DOM",
-            "namespace": ""
-        },
         "Environment": {
             "name": "Environment",
             "shortname": "Environment",
@@ -757,60 +732,6 @@
             "extension_for": [],
             "module": "Environment",
             "namespace": ""
-        },
-        "Image": {
-            "name": "Image",
-            "shortname": "Image",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Image",
-            "namespace": ""
-        },
-        "Loading & Displaying": {
-            "name": "Loading & Displaying",
-            "shortname": "Loading & Displaying",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Image",
-            "namespace": ""
-        },
-        "PImage": {
-            "name": "PImage",
-            "shortname": "PImage",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Image",
-            "namespace": "",
-            "file": "src/image/image.js",
-            "line": 225,
-            "description": "Creates a new PImage. A PImage is a canvas backed representation of an\nimage. p5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The PImage class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image. The methods described below allow\neasy access to the image's pixels and alpha channel and simplify the\nprocess of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded.",
-            "is_constructor": 1,
-            "params": [
-                {
-                    "name": "width",
-                    "description": "",
-                    "type": "Number"
-                },
-                {
-                    "name": "height",
-                    "description": "",
-                    "type": "Number"
-                },
-                {
-                    "name": "pInst",
-                    "description": "An instance of a p5 sketch.",
-                    "type": "Object"
-                }
-            ]
         },
         "Pixels": {
             "name": "Pixels",
@@ -911,9 +832,107 @@
             "module": "Math",
             "namespace": ""
         },
-        "PVector": {
-            "name": "PVector",
-            "shortname": "PVector",
+        "Random": {
+            "name": "Random",
+            "shortname": "Random",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
+        "Trigonometry": {
+            "name": "Trigonometry",
+            "shortname": "Trigonometry",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
+        "p5.Element": {
+            "name": "p5.Element",
+            "shortname": "p5.Element",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "DOM",
+            "namespace": ""
+        },
+        "DOM:p5.Element": {
+            "name": "DOM:p5.Element",
+            "shortname": "DOM:p5.Element",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "DOM",
+            "namespace": ""
+        },
+        "Image": {
+            "name": "Image",
+            "shortname": "Image",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Image",
+            "namespace": ""
+        },
+        "Loading & Displaying": {
+            "name": "Loading & Displaying",
+            "shortname": "Loading & Displaying",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Image",
+            "namespace": ""
+        },
+        "p5.Image": {
+            "name": "p5.Image",
+            "shortname": "p5.Image",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Image",
+            "namespace": "",
+            "file": "src/objects/p5.Image.js",
+            "line": 225,
+            "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage. p5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image. The methods described below allow\neasy access to the image's pixels and alpha channel and simplify the\nprocess of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "width",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "",
+                    "type": "Number"
+                },
+                {
+                    "name": "pInst",
+                    "description": "An instance of a p5 sketch.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "p5.Vector": {
+            "name": "p5.Vector",
+            "shortname": "p5.Vector",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -921,9 +940,9 @@
             "extension_for": [],
             "module": "Math",
             "namespace": "",
-            "file": "src/math/pvector.js",
+            "file": "src/objects/p5.Vector.js",
             "line": 32,
-            "description": "The PVector constructor function.\n\nA class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see PVector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the PVector class.",
+            "description": "The p5.Vector constructor function.\n\nA class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class.",
             "is_constructor": 1,
             "params": [
                 {
@@ -949,28 +968,6 @@
         "Math": {
             "name": "Math",
             "shortname": "Math",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Math",
-            "namespace": ""
-        },
-        "Random": {
-            "name": "Random",
-            "shortname": "Random",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Math",
-            "namespace": ""
-        },
-        "Trigonometry": {
-            "name": "Trigonometry",
-            "shortname": "Trigonometry",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -2146,139 +2143,6 @@
             "module": "DOM"
         },
         {
-            "file": "src/dom/pelement.js",
-            "line": 21,
-            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
-            "itemtype": "method",
-            "name": "parent",
-            "params": [
-                {
-                    "name": "parent",
-                    "description": "the ID or node of the parent elt",
-                    "type": "String|Object"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
-            "file": "src/dom/pelement.js",
-            "line": 38,
-            "description": "Sets the inner HTML of the element. Replaces any existing html.",
-            "itemtype": "method",
-            "name": "html",
-            "params": [
-                {
-                    "name": "html",
-                    "description": "the HTML to be placed inside the element",
-                    "type": "String"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
-            "file": "src/dom/pelement.js",
-            "line": 50,
-            "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
-            "itemtype": "method",
-            "name": "position",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x-position relative to upper left of window",
-                    "type": "Number"
-                },
-                {
-                    "name": "y",
-                    "description": "y-position relative to upper left of window",
-                    "type": "Number"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
-            "file": "src/dom/pelement.js",
-            "line": 72,
-            "description": "Sets the ID of the element",
-            "itemtype": "method",
-            "name": "id",
-            "params": [
-                {
-                    "name": "id",
-                    "description": "ID of the element",
-                    "type": "String"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
-            "file": "src/dom/pelement.js",
-            "line": 84,
-            "description": "Adds given class to the element",
-            "itemtype": "method",
-            "name": "class",
-            "params": [
-                {
-                    "name": "class",
-                    "description": "class to add",
-                    "type": "String"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
-            "file": "src/dom/pelement.js",
-            "line": 96,
-            "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach an element specific event listeners.",
-            "itemtype": "method",
-            "name": "mousePressed",
-            "params": [
-                {
-                    "name": "fxn",
-                    "description": "function to be fired when mouse is\n                   pressed over the element.",
-                    "type": "Function"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
-            "file": "src/dom/pelement.js",
-            "line": 110,
-            "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
-            "itemtype": "method",
-            "name": "mouseOver",
-            "params": [
-                {
-                    "name": "fxn",
-                    "description": "function to be fired when mouse is\n                   moved over the element.",
-                    "type": "Function"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
-            "file": "src/dom/pelement.js",
-            "line": 124,
-            "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
-            "itemtype": "method",
-            "name": "mouseOut",
-            "params": [
-                {
-                    "name": "fxn",
-                    "description": "function to be fired when mouse is\n                   moved off the element.",
-                    "type": "Function"
-                }
-            ],
-            "class": "DOM:PElement",
-            "module": "DOM"
-        },
-        {
             "file": "src/environment/environment.js",
             "line": 20,
             "description": "Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.",
@@ -2366,7 +2230,7 @@
             "file": "src/image/filters.js",
             "line": 5,
             "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2386,7 +2250,7 @@
                 "description": "a one-dimensional array containing\n                                  the data in thc RGBA order, with integer\n                                  values between 0 and 255",
                 "type": "Uint8ClampedArray"
             },
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2411,7 +2275,7 @@
                 "description": "32 bit integer value representing\n                                 ARGB value.",
                 "type": "Integer"
             },
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2432,7 +2296,7 @@
                     "type": "Int32Array"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2452,7 +2316,7 @@
                 "description": "Holder of pixel data (and width and\n                                  height) for a canvas",
                 "type": "ImageData"
             },
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2477,7 +2341,7 @@
                 "description": "",
                 "type": "ImageData"
             },
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2505,7 +2369,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2524,7 +2388,7 @@
                     "type": "Float"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2538,7 +2402,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2552,7 +2416,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2566,7 +2430,7 @@
                     "type": "Invert"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2585,7 +2449,7 @@
                     "type": "Integer"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2599,7 +2463,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
         },
         {
@@ -2613,508 +2477,8 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Image",
+            "class": "Pixels",
             "module": "Environment"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 10,
-            "description": "This module defines the PImage class and P5 methods for\ndrawing images to the main display canvas.",
-            "class": "Image",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 29,
-            "description": "Creates a new PImage (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.",
-            "itemtype": "method",
-            "name": "createImage",
-            "params": [
-                {
-                    "name": "width",
-                    "description": "width in pixels",
-                    "type": "Integer"
-                },
-                {
-                    "name": "height",
-                    "description": "height in pixels",
-                    "type": "Integer"
-                }
-            ],
-            "return": {
-                "description": "the PImage object",
-                "type": "PImage"
-            },
-            "class": "Image",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 44,
-            "description": "Loads an image from a path and creates a PImage from it.\n\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback, or place the loadImage() call in preload().",
-            "itemtype": "method",
-            "name": "loadImage",
-            "params": [
-                {
-                    "name": "path",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "callback",
-                    "description": "Function to be called once the image is\n                            loaded. Will be passed the PImage.",
-                    "type": "Function"
-                }
-            ],
-            "return": {
-                "description": "the PImage object",
-                "type": "PImage"
-            },
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 86,
-            "description": "Draw an image to the main canvas of the p5js sketch",
-            "itemtype": "method",
-            "name": "image",
-            "params": [
-                {
-                    "name": "image",
-                    "description": "the image to display",
-                    "type": "PImage"
-                },
-                {
-                    "name": "x",
-                    "description": "x-coordinate of the image",
-                    "type": "[type]"
-                },
-                {
-                    "name": "y",
-                    "description": "y-coordinate of the image",
-                    "type": "[type]"
-                },
-                {
-                    "name": "width",
-                    "description": "width to display the image",
-                    "type": "[type]"
-                },
-                {
-                    "name": "height",
-                    "description": "height to display the image",
-                    "type": "[type]"
-                }
-            ],
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 123,
-            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use \nwhite as the tint color and specify an alpha value. For instance, \ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()). \n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
-            "itemtype": "method",
-            "name": "tint",
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "gray value, red or hue value (depending on the\n                           current color mode), or color Array",
-                    "type": "Number|Array"
-                },
-                {
-                    "name": "v2",
-                    "description": "green or saturation value (depending on the\n                           current color mode)",
-                    "type": "Number|Array",
-                    "optional": true
-                },
-                {
-                    "name": "v3",
-                    "description": "blue or brightness value (depending on the\n                           current color mode)",
-                    "type": "Number|Array",
-                    "optional": true
-                },
-                {
-                    "name": "a",
-                    "description": "opacity of the background",
-                    "type": "Number|Array",
-                    "optional": true
-                }
-            ],
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 151,
-            "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
-            "itemtype": "method",
-            "name": "noTint",
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 162,
-            "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
-            "params": [
-                {
-                    "name": "The",
-                    "description": "image to be tinted",
-                    "type": "PImage"
-                }
-            ],
-            "return": {
-                "description": "The resulting tinted canvas",
-                "type": "Canvas"
-            },
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 194,
-            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
-            "itemtype": "method",
-            "name": "imageMode",
-            "params": [
-                {
-                    "name": "m",
-                    "description": "The mode: either CORNER, CORNERS, or CENTER.",
-                    "type": "String"
-                }
-            ],
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 245,
-            "description": "Image width.",
-            "itemtype": "property",
-            "name": "width",
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 251,
-            "description": "Image height.",
-            "itemtype": "property",
-            "name": "height",
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 260,
-            "description": "Array containing the color of every pixel in the image.",
-            "itemtype": "property",
-            "name": "pixels[]",
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 269,
-            "description": "Helper fxn for sharing pixel methods",
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 277,
-            "description": "Loads the pixels data for this image into the [pixels] attribute.",
-            "itemtype": "method",
-            "name": "loadPixels",
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 287,
-            "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
-            "itemtype": "method",
-            "name": "updatePixels",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x-offset of the target update area for the\n                             underlying canvas",
-                    "type": "Integer|undefined"
-                },
-                {
-                    "name": "y",
-                    "description": "y-offset of the target update area for the\n                             underlying canvas",
-                    "type": "Integer|undefined"
-                },
-                {
-                    "name": "w",
-                    "description": "height of the target update area for the\n                             underlying canvas",
-                    "type": "Integer|undefined"
-                },
-                {
-                    "name": "h",
-                    "description": "height of the target update area for the\n                             underlying canvas",
-                    "type": "Integer|undefined"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 306,
-            "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a Pimage is\nreturned.\n\nReturns undefined if the region is outside the bounds of the image",
-            "itemtype": "method",
-            "name": "get",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x-coordinate of the pixel",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "y",
-                    "description": "y-coordinate of the pixel",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "w",
-                    "description": "width",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "h",
-                    "description": "height",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "color of pixel at x,y in array format\n                                   [R, G, B, A] or PImage",
-                "type": "Array/Color | PImage"
-            },
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 329,
-            "description": "Set the color of a single pixel or write an image into\nthis PImage.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
-            "itemtype": "method",
-            "name": "set",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x-coordinate of the pixel",
-                    "type": "Number"
-                },
-                {
-                    "name": "y",
-                    "description": "y-coordinate of the pixel",
-                    "type": "Number"
-                },
-                {
-                    "name": "insert",
-                    "description": "a grayscale value |\n                               a color array | image to copy",
-                    "type": "Number|Array|Object"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 351,
-            "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
-            "itemtype": "method",
-            "name": "resize",
-            "params": [
-                {
-                    "name": "width",
-                    "description": "the resized image width",
-                    "type": "Number"
-                },
-                {
-                    "name": "height",
-                    "description": "the resized image height",
-                    "type": "Number"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 399,
-            "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
-            "itemtype": "method",
-            "name": "copy",
-            "params": [
-                {
-                    "name": "srcImage",
-                    "description": "source image",
-                    "type": "PImage|undefined"
-                },
-                {
-                    "name": "sx",
-                    "description": "X coordinate of the source's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "sy",
-                    "description": "Y coordinate of the source's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "sw",
-                    "description": "source image width",
-                    "type": "Integer"
-                },
-                {
-                    "name": "sh",
-                    "description": "source image height",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dx",
-                    "description": "X coordinate of the destination's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dy",
-                    "description": "Y coordinate of the destination's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dw",
-                    "description": "destination image width",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dh",
-                    "description": "destination image height",
-                    "type": "Integer"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 422,
-            "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
-            "itemtype": "method",
-            "name": "mask",
-            "params": [
-                {
-                    "name": "srcImage",
-                    "description": "source image\n\nTODO: - Accept an array of alpha values.\n      - Use other channels of an image. p5 uses the\n      blue channel (which feels kind of arbitrary). Note: at the\n      moment this method does not match native processings original\n      functionality exactly.\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
-                    "type": "PImage|undefined"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 463,
-            "description": "Applies an image filter to a PImage",
-            "itemtype": "method",
-            "name": "filter",
-            "params": [
-                {
-                    "name": "operation",
-                    "description": "one of threshold, gray, invert, posterize and \n                          opaque see Filters.js for docs on each available\n                          filter",
-                    "type": "String"
-                },
-                {
-                    "name": "value",
-                    "description": "",
-                    "type": "Number|undefined"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 477,
-            "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
-            "itemtype": "method",
-            "name": "blend",
-            "params": [
-                {
-                    "name": "srcImage",
-                    "description": "source image",
-                    "type": "PImage|undefined"
-                },
-                {
-                    "name": "sx",
-                    "description": "X coordinate of the source's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "sy",
-                    "description": "Y coordinate of the source's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "sw",
-                    "description": "source image width",
-                    "type": "Integer"
-                },
-                {
-                    "name": "sh",
-                    "description": "source image height",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dx",
-                    "description": "X coordinate of the destination's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dy",
-                    "description": "Y coordinate of the destination's upper left corner",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dw",
-                    "description": "destination image width",
-                    "type": "Integer"
-                },
-                {
-                    "name": "dh",
-                    "description": "destination image height",
-                    "type": "Integer"
-                },
-                {
-                    "name": "blendMode",
-                    "description": "the blend mode\n\nAvailable blend modes are: normal | multiply | screen | overlay | \n           darken | lighten | color-dodge | color-burn | hard-light | \n           soft-light | difference | exclusion | hue | saturation | \n           color | luminosity\n\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
-                    "type": "Integer"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
-        },
-        {
-            "file": "src/image/image.js",
-            "line": 507,
-            "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
-            "itemtype": "method",
-            "name": "save",
-            "params": [
-                {
-                    "name": "extension\n\nTODO:",
-                    "description": "There doesn't seem to be a way to give the force the\nbrowser to download a file *and* give it a name. Which is why \nthis function currently only take an extension parameter.",
-                    "type": "[type]"
-                }
-            ],
-            "class": "PImage",
-            "module": "Image"
         },
         {
             "file": "src/image/pixels.js",
@@ -3135,7 +2499,7 @@
                 {
                     "name": "srcImage",
                     "description": "source image",
-                    "type": "PImage|undefined"
+                    "type": "p5.Image|undefined"
                 },
                 {
                     "name": "sx",
@@ -3196,7 +2560,7 @@
                 {
                     "name": "srcImage",
                     "description": "source image",
-                    "type": "PImage|undefined"
+                    "type": "p5.Image|undefined"
                 },
                 {
                     "name": "sx",
@@ -3294,7 +2658,7 @@
                 }
             ],
             "return": {
-                "description": "color of pixel at x,y in array format\n                          [R, G, B, A] or PImage",
+                "description": "color of pixel at x,y in array format\n                          [R, G, B, A] or p5.Image",
                 "type": "Array/Color"
             },
             "class": "Image:Pixels",
@@ -4265,714 +3629,6 @@
             "module": "Math"
         },
         {
-            "file": "src/math/pvector.js",
-            "line": 15,
-            "description": "Creates a new PVector (the datatype for storing vectors). This provides a\ntwo or three dimensional vector, specifically a Euclidean (also known as \ngeometric) vector. A vector is an entity that has both magnitude and \ndirection.",
-            "itemtype": "method",
-            "name": "createVector",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "y",
-                    "description": "y component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "z component of the vector",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "class": "Math",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 72,
-            "description": "The x component of the vector",
-            "itemtype": "property",
-            "name": "x",
-            "type": "{Number}",
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 78,
-            "description": "The y component of the vector",
-            "itemtype": "property",
-            "name": "y",
-            "type": "{Number}",
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 84,
-            "description": "The z component of the vector",
-            "itemtype": "property",
-            "name": "z",
-            "type": "{Number}",
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 93,
-            "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a PVector, or the values from a float array.",
-            "itemtype": "method",
-            "name": "set",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "the x component of the vector or a\n                                  PVector or an Array",
-                    "type": "Number|PVector|Array",
-                    "optional": true
-                },
-                {
-                    "name": "y",
-                    "description": "the y component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "the z component of the vector",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 112,
-            "description": "Gets a copy of the vector, returns a PVector object.",
-            "itemtype": "method",
-            "name": "get",
-            "return": {
-                "description": "the copy of the PVector object",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 123,
-            "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a PVector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
-            "itemtype": "method",
-            "name": "add",
-            "chainable": 1,
-            "params": [
-                {
-                    "name": "x",
-                    "description": "the x component of the vector to be\n                                   added or a PVector or an Array",
-                    "type": "Number|PVector|Array"
-                },
-                {
-                    "name": "y",
-                    "description": "the y component of the vector to be\n                                   added",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "the z component of the vector to be\n                                   added",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "the PVector object.",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 149,
-            "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a PVector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
-            "itemtype": "method",
-            "name": "sub",
-            "chainable": 1,
-            "params": [
-                {
-                    "name": "x",
-                    "description": "the x component of the vector or a\n                                   PVector or an Array",
-                    "type": "Number|PVector|Array"
-                },
-                {
-                    "name": "y",
-                    "description": "the y component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "the z component of the vector",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "PVector object.",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 173,
-            "description": "Multiply the vector by a scalar.",
-            "itemtype": "method",
-            "name": "mult",
-            "chainable": 1,
-            "params": [
-                {
-                    "name": "n",
-                    "description": "the number to multiply with the vector",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "a reference to the PVector object (allow chaining)",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 188,
-            "description": "Divide the vector by a scalar.",
-            "itemtype": "method",
-            "name": "div",
-            "chainable": 1,
-            "params": [
-                {
-                    "name": "n",
-                    "description": "the number to divide the vector by",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "a reference to the PVector object (allow chaining)",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 203,
-            "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
-            "itemtype": "method",
-            "name": "mag",
-            "return": {
-                "description": "magnitude of the vector",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 214,
-            "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
-            "itemtype": "method",
-            "name": "magSq",
-            "return": {
-                "description": "squared magnitude of the vector",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 228,
-            "description": "Calculates the dot product of two vectors.",
-            "itemtype": "method",
-            "name": "dot",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x component of the vector or a PVector",
-                    "type": "Number|PVector"
-                },
-                {
-                    "name": "y",
-                    "description": "y component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "z component of the vector",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "the dot product",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 246,
-            "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
-            "itemtype": "method",
-            "name": "cross",
-            "params": [
-                {
-                    "name": "v",
-                    "description": "PVector to be crossed",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "PVector composed of cross product",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 261,
-            "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "itemtype": "method",
-            "name": "dist",
-            "params": [
-                {
-                    "name": "v",
-                    "description": "the x, y, and z coordinates of a PVector",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "the distance",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 274,
-            "description": "Normalize the vector to length 1 (make it a unit vector).",
-            "itemtype": "method",
-            "name": "normalize",
-            "return": {
-                "description": "normalized PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 284,
-            "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
-            "itemtype": "method",
-            "name": "limit",
-            "params": [
-                {
-                    "name": "max",
-                    "description": "the maximum magnitude for the vector",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the modified PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 301,
-            "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "mtehod": "setMag",
-            "params": [
-                {
-                    "name": "len",
-                    "description": "the new length for this vector",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the modified PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 313,
-            "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
-            "itemtype": "method",
-            "name": "heading",
-            "return": {
-                "description": "the angle of rotation",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 332,
-            "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
-            "itemtype": "method",
-            "name": "rotate",
-            "params": [
-                {
-                    "name": "angle",
-                    "description": "the angle of rotation",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the modified PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 353,
-            "description": "Linear interpolate the vector to another vector",
-            "itemtype": "method",
-            "name": "lerp",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "the x component or the PVector to lerp to",
-                    "type": "PVector"
-                },
-                {
-                    "name": "y",
-                    "description": "y the y component",
-                    "type": "PVector",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "z the z component",
-                    "type": "PVector",
-                    "optional": true
-                },
-                {
-                    "name": "amt",
-                    "description": "the amount of interpolation; some value between 0.0\n                      (old vector) and 1.0 (new vector). 0.1 is very near\n                      the new vector. 0.5 is halfway in between.",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the modified PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 375,
-            "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>PVector.get()</b> method to copy into your own\narray.",
-            "itemtype": "method",
-            "name": "array",
-            "return": {
-                "description": "an Array with the 3 values",
-                "type": "Array"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 392,
-            "description": "Make a new 2D unit vector from an angle",
-            "itemtype": "method",
-            "name": "fromAngle",
-            "static": 1,
-            "params": [
-                {
-                    "name": "angle",
-                    "description": "the desired angle",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the new PVector object",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 409,
-            "description": "Make a new 2D unit vector from a random angle",
-            "itemtype": "method",
-            "name": "random2D",
-            "static": 1,
-            "return": {
-                "description": "the new PVector object",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 432,
-            "description": "Make a new random 3D unit vector.",
-            "itemtype": "method",
-            "name": "random3D",
-            "static": 1,
-            "return": {
-                "description": "the new PVector object",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 455,
-            "description": "Adds two vectors together and returns a new one.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "a PVector to add",
-                    "type": "PVector"
-                },
-                {
-                    "name": "v2",
-                    "description": "a PVector to add",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "the resulting new PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 468,
-            "description": "Subtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "a PVector to subtract from",
-                    "type": "PVector"
-                },
-                {
-                    "name": "v2",
-                    "description": "a PVector to subtract",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "the resulting new PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 483,
-            "description": "Multiplies a vector by a scalar and returns a new vector.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v",
-                    "description": "the PVector to multiply",
-                    "type": "PVector"
-                },
-                {
-                    "name": "n",
-                    "description": "the scalar",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the resulting new PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 495,
-            "description": "Divides a vector by a scalar and returns a new vector.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v",
-                    "description": "the PVector to divide",
-                    "type": "PVector"
-                },
-                {
-                    "name": "n",
-                    "description": "the scalar",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the resulting new PVector",
-                "type": "PVector"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 508,
-            "description": "Calculates the dot product of two vectors.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "the first PVector",
-                    "type": "PVector"
-                },
-                {
-                    "name": "v2",
-                    "description": "the second PVector",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "the dot product",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 520,
-            "description": "Calculates the cross product of two vectors.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "the first PVector",
-                    "type": "PVector"
-                },
-                {
-                    "name": "v2",
-                    "description": "the second PVector",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "the cross product",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 532,
-            "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "the first PVector",
-                    "type": "PVector"
-                },
-                {
-                    "name": "v2",
-                    "description": "the second PVector",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "the distance",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 545,
-            "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "a starting PVector",
-                    "type": "PVector"
-                },
-                {
-                    "name": "v2",
-                    "description": "the PVector to lerp to",
-                    "type": "PVector"
-                },
-                {
-                    "name": "the",
-                    "description": "amount of interpolation; some value between 0.0\n                    (old vector) and 1.0 (new vector). 0.1 is very near\n                    the new vector. 0.5 is halfway in between.",
-                    "type": "Number"
-                }
-            ],
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
-            "file": "src/math/pvector.js",
-            "line": 560,
-            "description": "Calculates and returns the angle (in radians) between two vectors.",
-            "static": 1,
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "the x, y, and z components of a PVector",
-                    "type": "PVector"
-                },
-                {
-                    "name": "v2",
-                    "description": "the x, y, and z components of a PVector",
-                    "type": "PVector"
-                }
-            ],
-            "return": {
-                "description": "the angle between",
-                "type": "Number"
-            },
-            "class": "PVector",
-            "module": "Math"
-        },
-        {
             "file": "src/math/random.js",
             "line": 23,
             "description": "Return a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them,\ninclusive.",
@@ -5196,6 +3852,1347 @@
                 }
             ],
             "class": "Trigonometry",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 21,
+            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
+            "itemtype": "method",
+            "name": "parent",
+            "params": [
+                {
+                    "name": "parent",
+                    "description": "the ID or node of the parent elt",
+                    "type": "String|Object"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 38,
+            "description": "Sets the inner HTML of the element. Replaces any existing html.",
+            "itemtype": "method",
+            "name": "html",
+            "params": [
+                {
+                    "name": "html",
+                    "description": "the HTML to be placed inside the element",
+                    "type": "String"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 50,
+            "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
+            "itemtype": "method",
+            "name": "position",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-position relative to upper left of window",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-position relative to upper left of window",
+                    "type": "Number"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 72,
+            "description": "Sets the ID of the element",
+            "itemtype": "method",
+            "name": "id",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "ID of the element",
+                    "type": "String"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 84,
+            "description": "Adds given class to the element",
+            "itemtype": "method",
+            "name": "class",
+            "params": [
+                {
+                    "name": "class",
+                    "description": "class to add",
+                    "type": "String"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 96,
+            "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach an element specific event listeners.",
+            "itemtype": "method",
+            "name": "mousePressed",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   pressed over the element.",
+                    "type": "Function"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 110,
+            "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
+            "itemtype": "method",
+            "name": "mouseOver",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   moved over the element.",
+                    "type": "Function"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 124,
+            "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
+            "itemtype": "method",
+            "name": "mouseOut",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   moved off the element.",
+                    "type": "Function"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 10,
+            "description": "This module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
+            "class": "Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 29,
+            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.",
+            "itemtype": "method",
+            "name": "createImage",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "width in pixels",
+                    "type": "Integer"
+                },
+                {
+                    "name": "height",
+                    "description": "height in pixels",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "the p5.Image object",
+                "type": "p5.Image"
+            },
+            "class": "Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 44,
+            "description": "Loads an image from a path and creates a p5.Image from it.\n\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback, or place the loadImage() call in preload().",
+            "itemtype": "method",
+            "name": "loadImage",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Function to be called once the image is\n                            loaded. Will be passed the p5.Image.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "the p5.Image object",
+                "type": "p5.Image"
+            },
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 86,
+            "description": "Draw an image to the main canvas of the p5js sketch",
+            "itemtype": "method",
+            "name": "image",
+            "params": [
+                {
+                    "name": "image",
+                    "description": "the image to display",
+                    "type": "p5.Image"
+                },
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the image",
+                    "type": "[type]"
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the image",
+                    "type": "[type]"
+                },
+                {
+                    "name": "width",
+                    "description": "width to display the image",
+                    "type": "[type]"
+                },
+                {
+                    "name": "height",
+                    "description": "height to display the image",
+                    "type": "[type]"
+                }
+            ],
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 123,
+            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use \nwhite as the tint color and specify an alpha value. For instance, \ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()). \n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
+            "itemtype": "method",
+            "name": "tint",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value, red or hue value (depending on the\n                           current color mode), or color Array",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "v2",
+                    "description": "green or saturation value (depending on the\n                           current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "blue or brightness value (depending on the\n                           current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "opacity of the background",
+                    "type": "Number|Array",
+                    "optional": true
+                }
+            ],
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 151,
+            "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
+            "itemtype": "method",
+            "name": "noTint",
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 162,
+            "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
+            "params": [
+                {
+                    "name": "The",
+                    "description": "image to be tinted",
+                    "type": "p5.Image"
+                }
+            ],
+            "return": {
+                "description": "The resulting tinted canvas",
+                "type": "Canvas"
+            },
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 194,
+            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
+            "itemtype": "method",
+            "name": "imageMode",
+            "params": [
+                {
+                    "name": "m",
+                    "description": "The mode: either CORNER, CORNERS, or CENTER.",
+                    "type": "String"
+                }
+            ],
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 245,
+            "description": "Image width.",
+            "itemtype": "property",
+            "name": "width",
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 251,
+            "description": "Image height.",
+            "itemtype": "property",
+            "name": "height",
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 260,
+            "description": "Array containing the color of every pixel in the image.",
+            "itemtype": "property",
+            "name": "pixels[]",
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 268,
+            "description": "Helper fxn for sharing pixel methods",
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 276,
+            "description": "Loads the pixels data for this image into the [pixels] attribute.",
+            "itemtype": "method",
+            "name": "loadPixels",
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 286,
+            "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
+            "itemtype": "method",
+            "name": "updatePixels",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-offset of the target update area for the\n                             underlying canvas",
+                    "type": "Integer|undefined"
+                },
+                {
+                    "name": "y",
+                    "description": "y-offset of the target update area for the\n                             underlying canvas",
+                    "type": "Integer|undefined"
+                },
+                {
+                    "name": "w",
+                    "description": "height of the target update area for the\n                             underlying canvas",
+                    "type": "Integer|undefined"
+                },
+                {
+                    "name": "h",
+                    "description": "height of the target update area for the\n                             underlying canvas",
+                    "type": "Integer|undefined"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 305,
+            "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "w",
+                    "description": "width",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "h",
+                    "description": "height",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "color of pixel at x,y in array format\n                                   [R, G, B, A] or p5.Image",
+                "type": "Array/Color | p5.Image"
+            },
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 328,
+            "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
+            "itemtype": "method",
+            "name": "set",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the pixel",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the pixel",
+                    "type": "Number"
+                },
+                {
+                    "name": "insert",
+                    "description": "a grayscale value |\n                               a color array | image to copy",
+                    "type": "Number|Array|Object"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 350,
+            "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
+            "itemtype": "method",
+            "name": "resize",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "the resized image width",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "the resized image height",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 398,
+            "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
+            "itemtype": "method",
+            "name": "copy",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image",
+                    "type": "p5.Image|undefined"
+                },
+                {
+                    "name": "sx",
+                    "description": "X coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sy",
+                    "description": "Y coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sw",
+                    "description": "source image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sh",
+                    "description": "source image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dx",
+                    "description": "X coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dy",
+                    "description": "Y coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dw",
+                    "description": "destination image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dh",
+                    "description": "destination image height",
+                    "type": "Integer"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 421,
+            "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
+            "itemtype": "method",
+            "name": "mask",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image\n\nTODO: - Accept an array of alpha values.\n      - Use other channels of an image. p5 uses the\n      blue channel (which feels kind of arbitrary). Note: at the\n      moment this method does not match native processings original\n      functionality exactly.\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
+                    "type": "p5.Image|undefined"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 462,
+            "description": "Applies an image filter to a p5.Image",
+            "itemtype": "method",
+            "name": "filter",
+            "params": [
+                {
+                    "name": "operation",
+                    "description": "one of threshold, gray, invert, posterize and \n                          opaque see Filters.js for docs on each available\n                          filter",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "Number|undefined"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 476,
+            "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
+            "itemtype": "method",
+            "name": "blend",
+            "params": [
+                {
+                    "name": "srcImage",
+                    "description": "source image",
+                    "type": "p5.Image|undefined"
+                },
+                {
+                    "name": "sx",
+                    "description": "X coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sy",
+                    "description": "Y coordinate of the source's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sw",
+                    "description": "source image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "sh",
+                    "description": "source image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dx",
+                    "description": "X coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dy",
+                    "description": "Y coordinate of the destination's upper left corner",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dw",
+                    "description": "destination image width",
+                    "type": "Integer"
+                },
+                {
+                    "name": "dh",
+                    "description": "destination image height",
+                    "type": "Integer"
+                },
+                {
+                    "name": "blendMode",
+                    "description": "the blend mode\n\nAvailable blend modes are: normal | multiply | screen | overlay | \n           darken | lighten | color-dodge | color-burn | hard-light | \n           soft-light | difference | exclusion | hue | saturation | \n           color | luminosity\n\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
+                    "type": "Integer"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 506,
+            "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
+            "itemtype": "method",
+            "name": "save",
+            "params": [
+                {
+                    "name": "extension\n\nTODO:",
+                    "description": "There doesn't seem to be a way to give the force the\nbrowser to download a file *and* give it a name. Which is why \nthis function currently only take an extension parameter.",
+                    "type": "[type]"
+                }
+            ],
+            "class": "p5.Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 15,
+            "description": "Creates a new p5.Vector (the datatype for storing vectors). This provides a\ntwo or three dimensional vector, specifically a Euclidean (also known as \ngeometric) vector. A vector is an entity that has both magnitude and \ndirection.",
+            "itemtype": "method",
+            "name": "createVector",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "class": "Math",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 72,
+            "description": "The x component of the vector",
+            "itemtype": "property",
+            "name": "x",
+            "type": "{Number}",
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 78,
+            "description": "The y component of the vector",
+            "itemtype": "property",
+            "name": "y",
+            "type": "{Number}",
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 84,
+            "description": "The z component of the vector",
+            "itemtype": "property",
+            "name": "z",
+            "type": "{Number}",
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 93,
+            "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Vector, or the values from a float array.",
+            "itemtype": "method",
+            "name": "set",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "the x component of the vector or a\n                                    p5.Vector or an Array",
+                    "type": "Number|p5.Vector|Array",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "the y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "the z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 112,
+            "description": "Gets a copy of the vector, returns a p5.Vector object.",
+            "itemtype": "method",
+            "name": "get",
+            "return": {
+                "description": "the copy of the p5.Vector object",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 123,
+            "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
+            "itemtype": "method",
+            "name": "add",
+            "chainable": 1,
+            "params": [
+                {
+                    "name": "x",
+                    "description": "the x component of the vector to be\n                                     added or a p5.Vector or an Array",
+                    "type": "Number|p5.Vector|Array"
+                },
+                {
+                    "name": "y",
+                    "description": "the y component of the vector to be\n                                     added",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "the z component of the vector to be\n                                     added",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5.Vector object.",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 149,
+            "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a p5.Vector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
+            "itemtype": "method",
+            "name": "sub",
+            "chainable": 1,
+            "params": [
+                {
+                    "name": "x",
+                    "description": "the x component of the vector or a\n                                     p5.Vector or an Array",
+                    "type": "Number|p5.Vector|Array"
+                },
+                {
+                    "name": "y",
+                    "description": "the y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "the z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "p5.Vector object.",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 173,
+            "description": "Multiply the vector by a scalar.",
+            "itemtype": "method",
+            "name": "mult",
+            "chainable": 1,
+            "params": [
+                {
+                    "name": "n",
+                    "description": "the number to multiply with the vector",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "a reference to the p5.Vector object (allow chaining)",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 188,
+            "description": "Divide the vector by a scalar.",
+            "itemtype": "method",
+            "name": "div",
+            "chainable": 1,
+            "params": [
+                {
+                    "name": "n",
+                    "description": "the number to divide the vector by",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "a reference to the p5.Vector object (allow chaining)",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 203,
+            "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
+            "itemtype": "method",
+            "name": "mag",
+            "return": {
+                "description": "magnitude of the vector",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 214,
+            "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
+            "itemtype": "method",
+            "name": "magSq",
+            "return": {
+                "description": "squared magnitude of the vector",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 228,
+            "description": "Calculates the dot product of two vectors.",
+            "itemtype": "method",
+            "name": "dot",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x component of the vector or a p5.Vector",
+                    "type": "Number|p5.Vector"
+                },
+                {
+                    "name": "y",
+                    "description": "y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the dot product",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 246,
+            "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
+            "itemtype": "method",
+            "name": "cross",
+            "params": [
+                {
+                    "name": "v",
+                    "description": "p5.Vector to be crossed",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "p5.Vector composed of cross product",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 261,
+            "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
+            "itemtype": "method",
+            "name": "dist",
+            "params": [
+                {
+                    "name": "v",
+                    "description": "the x, y, and z coordinates of a p5.Vector",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "the distance",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 274,
+            "description": "Normalize the vector to length 1 (make it a unit vector).",
+            "itemtype": "method",
+            "name": "normalize",
+            "return": {
+                "description": "normalized p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 284,
+            "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
+            "itemtype": "method",
+            "name": "limit",
+            "params": [
+                {
+                    "name": "max",
+                    "description": "the maximum magnitude for the vector",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the modified p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 301,
+            "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
+            "mtehod": "setMag",
+            "params": [
+                {
+                    "name": "len",
+                    "description": "the new length for this vector",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the modified p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 313,
+            "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
+            "itemtype": "method",
+            "name": "heading",
+            "return": {
+                "description": "the angle of rotation",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 332,
+            "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
+            "itemtype": "method",
+            "name": "rotate",
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "the angle of rotation",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the modified p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 353,
+            "description": "Linear interpolate the vector to another vector",
+            "itemtype": "method",
+            "name": "lerp",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "the x component or the p5.Vector to lerp to",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "y",
+                    "description": "y the y component",
+                    "type": "p5.Vector",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "z the z component",
+                    "type": "p5.Vector",
+                    "optional": true
+                },
+                {
+                    "name": "amt",
+                    "description": "the amount of interpolation; some value between 0.0\n                        (old vector) and 1.0 (new vector). 0.1 is very near\n                        the new vector. 0.5 is halfway in between.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the modified p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 375,
+            "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.get()</b> method to copy into your own\narray.",
+            "itemtype": "method",
+            "name": "array",
+            "return": {
+                "description": "an Array with the 3 values",
+                "type": "Array"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 392,
+            "description": "Make a new 2D unit vector from an angle",
+            "itemtype": "method",
+            "name": "fromAngle",
+            "static": 1,
+            "params": [
+                {
+                    "name": "angle",
+                    "description": "the desired angle",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the new p5.Vector object",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 409,
+            "description": "Make a new 2D unit vector from a random angle",
+            "itemtype": "method",
+            "name": "random2D",
+            "static": 1,
+            "return": {
+                "description": "the new p5.Vector object",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 432,
+            "description": "Make a new random 3D unit vector.",
+            "itemtype": "method",
+            "name": "random3D",
+            "static": 1,
+            "return": {
+                "description": "the new p5.Vector object",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 455,
+            "description": "Adds two vectors together and returns a new one.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "a p5.Vector to add",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "v2",
+                    "description": "a p5.Vector to add",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "the resulting new p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 468,
+            "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "a p5.Vector to subtract from",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "v2",
+                    "description": "a p5.Vector to subtract",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "the resulting new p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 483,
+            "description": "Multiplies a vector by a scalar and returns a new vector.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v",
+                    "description": "the p5.Vector to multiply",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "n",
+                    "description": "the scalar",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the resulting new p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 495,
+            "description": "Divides a vector by a scalar and returns a new vector.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v",
+                    "description": "the p5.Vector to divide",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "n",
+                    "description": "the scalar",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the resulting new p5.Vector",
+                "type": "p5.Vector"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 508,
+            "description": "Calculates the dot product of two vectors.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "the first p5.Vector",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "v2",
+                    "description": "the second p5.Vector",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "the dot product",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 520,
+            "description": "Calculates the cross product of two vectors.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "the first p5.Vector",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "v2",
+                    "description": "the second p5.Vector",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "the cross product",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 532,
+            "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "the first p5.Vector",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "v2",
+                    "description": "the second p5.Vector",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "the distance",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 545,
+            "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "a starting p5.Vector",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "v2",
+                    "description": "the p5.Vector to lerp to",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "the",
+                    "description": "amount of interpolation; some value between 0.0\n                      (old vector) and 1.0 (new vector). 0.1 is very near\n                      the new vector. 0.5 is halfway in between.",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5.Vector",
+            "module": "Math"
+        },
+        {
+            "file": "src/objects/p5.Vector.js",
+            "line": 560,
+            "description": "Calculates and returns the angle (in radians) between two vectors.",
+            "static": 1,
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "the x, y, and z components of a p5.Vector",
+                    "type": "p5.Vector"
+                },
+                {
+                    "name": "v2",
+                    "description": "the x, y, and z components of a p5.Vector",
+                    "type": "p5.Vector"
+                }
+            ],
+            "return": {
+                "description": "the angle between",
+                "type": "Number"
+            },
+            "class": "p5.Vector",
             "module": "Math"
         },
         {
@@ -6543,18 +6540,18 @@
             "requires": [
                 "constants"
             ],
-            "class": "DOM:PElement",
+            "class": "DOM:p5.Element",
             "module": "Typography"
         },
         {
             "file": "src/app.js",
-            "line": 39,
+            "line": 40,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "DOM:PElement",
+            "class": "DOM:p5.Element",
             "module": "Typography"
         },
         {
@@ -6575,7 +6572,7 @@
                 "description": "",
                 "type": "String|Number"
             },
-            "class": "DOM:PElement",
+            "class": "DOM:p5.Element",
             "module": "*"
         },
         {
@@ -6584,7 +6581,7 @@
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
-            "class": "DOM:PElement",
+            "class": "DOM:p5.Element",
             "module": "*"
         },
         {
@@ -6593,7 +6590,7 @@
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
-            "class": "DOM:PElement",
+            "class": "DOM:p5.Element",
             "module": "*"
         },
         {
@@ -6614,13 +6611,13 @@
                     "type": "Number"
                 }
             ],
-            "class": "DOM:PElement",
+            "class": "DOM:p5.Element",
             "module": "*"
         },
         {
             "file": "lib/addons/p5.dom.js",
             "line": 87,
-            "description": "Searches the page for an element with given ID and returns it as\na PElement. The DOM node itself can be accessed with .elt.\nReturns null if none found.",
+            "description": "Searches the page for an element with given ID and returns it as\na p5.Element. The DOM node itself can be accessed with .elt.\nReturns null if none found.",
             "itemtype": "method",
             "name": "getElement",
             "params": [
@@ -6631,8 +6628,8 @@
                 }
             ],
             "return": {
-                "description": "PElement containing node found",
-                "type": "Object/PElement|Null"
+                "description": "p5.Element containing node found",
+                "type": "Object/p5.Element|Null"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6640,7 +6637,7 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 106,
-            "description": "Searches the page for elements with given class and returns an\narray of PElements. The DOM nodes themselves can be accessed\nwith .elt. Returns an empty array if none found.",
+            "description": "Searches the page for elements with given class and returns an\narray of p5.Elements. The DOM nodes themselves can be accessed\nwith .elt. Returns an empty array if none found.",
             "itemtype": "method",
             "name": "getElements",
             "params": [
@@ -6651,7 +6648,7 @@
                 }
             ],
             "return": {
-                "description": "array of PElement wrapped nodes found",
+                "description": "array of p5.Element wrapped nodes found",
                 "type": "Array"
             },
             "class": "DOM:Manipulate",
@@ -6671,8 +6668,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6691,8 +6688,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6711,8 +6708,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6731,8 +6728,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6751,8 +6748,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6771,8 +6768,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6791,8 +6788,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6811,8 +6808,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6831,8 +6828,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6856,8 +6853,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6881,14 +6878,14 @@
                 },
                 {
                     "name": "target",
-                    "description": "target where new link should open,\n                          could be _blank, _self, _parent, _top.",
+                    "description": "target where new link should open,\n                            could be _blank, _self, _parent, _top.",
                     "type": "String",
                     "optional": true
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6924,8 +6921,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6950,8 +6947,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6971,8 +6968,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to PElement holding created\n                          node",
-                "type": "Object/PElement"
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Manipulate",
             "module": "*"
@@ -6997,8 +6994,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to video PElement",
-                "type": "Object/PElement"
+                "description": "pointer to video p5.Element",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Media",
             "module": "*"
@@ -7023,8 +7020,8 @@
                 }
             ],
             "return": {
-                "description": "pointer to audio PElement",
-                "type": "Object/PElement"
+                "description": "pointer to audio p5.Element",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Media",
             "module": "*"
@@ -7134,13 +7131,13 @@
             "params": [
                 {
                     "name": "type",
-                    "description": "type of capture, either VIDEO or \n                          AUDIO if none specified, default both",
+                    "description": "type of capture, either VIDEO or \n                            AUDIO if none specified, default both",
                     "type": "String/Constant"
                 }
             ],
             "return": {
-                "description": "capture video PElement",
-                "type": "Object/PElement"
+                "description": "capture video p5.Element",
+                "type": "Object/p5.Element"
             },
             "class": "DOM:Media",
             "module": "*"
@@ -7153,7 +7150,7 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/math/pvector.js:301"
+            "line": " src/objects/p5.Vector.js:301"
         },
         {
             "message": "Missing item type\np5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
@@ -7224,60 +7221,60 @@
             "line": " src/image/filters.js:374"
         },
         {
-            "message": "Missing item type\nThis module defines the PImage class and P5 methods for\ndrawing images to the main display canvas.",
-            "line": " src/image/image.js:10"
-        },
-        {
-            "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/image.js:162"
-        },
-        {
-            "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/image/image.js:269"
-        },
-        {
             "message": "Missing item type\nTODO: NOT IMPLEMENTED YET!\nSets the seed value for <b>noise()</b>. By default, <b>noise()</b>\nproduces different results each time the program is run. Set the\n<b>value</b> parameter to a constant to return the same pseudo-random\nnumbers each time the software is run.",
             "line": " src/math/noise.js:196"
         },
         {
+            "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
+            "line": " src/objects/p5.Image.js:10"
+        },
+        {
+            "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
+            "line": " src/objects/p5.Image.js:162"
+        },
+        {
+            "message": "Missing item type\nHelper fxn for sharing pixel methods",
+            "line": " src/objects/p5.Image.js:268"
+        },
+        {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/math/pvector.js:301"
+            "line": " src/objects/p5.Vector.js:301"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/pvector.js:455"
+            "line": " src/objects/p5.Vector.js:455"
         },
         {
-            "message": "Missing item type\nSubtracts one PVector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/pvector.js:468"
+            "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
+            "line": " src/objects/p5.Vector.js:468"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:483"
+            "line": " src/objects/p5.Vector.js:483"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/pvector.js:495"
+            "line": " src/objects/p5.Vector.js:495"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/pvector.js:508"
+            "line": " src/objects/p5.Vector.js:508"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/pvector.js:520"
+            "line": " src/objects/p5.Vector.js:520"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/math/pvector.js:532"
+            "line": " src/objects/p5.Vector.js:532"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/math/pvector.js:545"
+            "line": " src/objects/p5.Vector.js:545"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/math/pvector.js:560"
+            "line": " src/objects/p5.Vector.js:560"
         },
         {
             "message": "Missing item type",
@@ -7285,7 +7282,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:39"
+            "line": " src/app.js:40"
         },
         {
             "message": "Missing item type",
