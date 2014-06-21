@@ -8,7 +8,7 @@
     <!-- content sections -->
     <div class="column-span">
       <section id="about">
-          <h2>noLoop</h2>
+          <h2>No Loop</h2>
           <p>
           <div class="example">
           <pre><code class="language-javascript">

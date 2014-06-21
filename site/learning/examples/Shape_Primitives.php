@@ -8,46 +8,41 @@
     <!-- content sections -->
     <div class="column-span">
       <section id="about">
-          <h2>Points and Lines</h2>
+          <h2>Shape Primitives</h2>
           <p>
           <div class="example">
           <pre><code class="language-javascript">
 function setup() {
-  
-  var d = 70;
-  var p1 = d;
-  var p2 = p1+d;
-  var p3 = p2+d;
-  var p4 = p3+d;
 
   // Sets the screen to be 720 pixels wide and 400 pixels high
   createCanvas(720, 400);
   background(0);
-  noSmooth();
+  noStroke();
 
-  translate(140, 0);
+  fill(204);
+  triangle(18, 18, 18, 360, 81, 360);
 
-  // Draw gray box
-  stroke(153);
-  line(p3, p3, p2, p3);
-  line(p2, p3, p2, p2);
-  line(p2, p2, p3, p2);
-  line(p3, p2, p3, p3);
+  fill(102);
+  rect(81, 81, 63, 63);
 
-  // Draw white points
-  stroke(255);
-  point(p1, p1);
-  point(p1, p3); 
-  point(p2, p4);
-  point(p3, p1); 
-  point(p4, p2);
-  point(p4, p4);
+  fill(204);
+  quad(189, 18, 216, 18, 216, 360, 144, 360);
+
+  fill(255);
+  ellipse(252, 144, 72, 72);
+
+  fill(204);
+  triangle(288, 18, 351, 360, 288, 360); 
+
+  fill(255);
+  arc(479, 300, 280, 280, PI, TWO_PI);
 }</code></pre>
           </div>
           </p>
-          <p>Points and lines can be used to draw basic geometry. 
- Change the value of the variable 'd' to scale the form. The four 
- variables set the positions based on the value of 'd'.
+          <p>The basic shape primitive functions are triangle(), 
+ rect(), quad(), ellipse(), and arc(). Squares are made with rect() 
+ and circles are made with ellipse(). Each of these functions requires 
+ a number of parameters to determine the shape's position and size.
  </p>
       </section>
 

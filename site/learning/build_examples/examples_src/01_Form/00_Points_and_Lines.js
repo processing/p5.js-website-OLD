@@ -12,7 +12,7 @@ function setup() {
   var p3 = p2+d;
   var p4 = p3+d;
 
-  // Sets the screen to be 640 pixels wide and 360 pixels high
+  // Sets the screen to be 720 pixels wide and 400 pixels high
   createCanvas(720, 400);
   background(0);
   noSmooth();

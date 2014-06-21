@@ -30,10 +30,10 @@ var all = {};
 rimraf(outputRoot, function() {
   fs.mkdirSync(outputRoot);
   async.forEachSeries(inputFolders, function(folder, cb0) {
-    console.log(folder);
     if (fs.statSync(inputRoot+folder).isDirectory()) {
 
-      all[folder] = [];
+      folderName = folder.substring(3);
+      all[folderName] = [];
 
       var inputFiles = fs.readdirSync(inputRoot+folder);
       
@@ -62,7 +62,7 @@ rimraf(outputRoot, function() {
             var outputFile = outputRoot+name.replace(spaceReg, '_')+'.php';
             console.log(outputFile);
 
-            all[folder].push([name, outputFile.substring(3)]);
+            all[folderName].push([name, outputFile.substring(3)]);
 
             fs.writeFile(outputFile, content, 'utf8');
 

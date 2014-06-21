@@ -8,46 +8,36 @@
     <!-- content sections -->
     <div class="column-span">
       <section id="about">
-          <h2>Points and Lines</h2>
+          <h2>Pie Chart</h2>
           <p>
           <div class="example">
           <pre><code class="language-javascript">
+var angles = [ 30, 10, 45, 35, 60, 38, 75, 67 ];
+
 function setup() {
-  
-  var d = 70;
-  var p1 = d;
-  var p2 = p1+d;
-  var p3 = p2+d;
-  var p4 = p3+d;
-
-  // Sets the screen to be 720 pixels wide and 400 pixels high
   createCanvas(720, 400);
-  background(0);
-  noSmooth();
+  noStroke();
+  noLoop();  // Run once and stop
+}
 
-  translate(140, 0);
+function draw() {
+  background(100);
+  pieChart(300, angles);
+}
 
-  // Draw gray box
-  stroke(153);
-  line(p3, p3, p2, p3);
-  line(p2, p3, p2, p2);
-  line(p2, p2, p3, p2);
-  line(p3, p2, p3, p3);
-
-  // Draw white points
-  stroke(255);
-  point(p1, p1);
-  point(p1, p3); 
-  point(p2, p4);
-  point(p3, p1); 
-  point(p4, p2);
-  point(p4, p4);
+function pieChart(diameter, data) {
+  var lastAngle = 0;
+  for (var i = 0; i &lt; data.length; i++) {
+    var gray = map(i, 0, data.length, 0, 255);
+    fill(gray);
+    arc(width/2, height/2, diameter, diameter, lastAngle, lastAngle+radians(angles[i]));
+    lastAngle += radians(angles[i]);
+  }
 }</code></pre>
           </div>
           </p>
-          <p>Points and lines can be used to draw basic geometry. 
- Change the value of the variable 'd' to scale the form. The four 
- variables set the positions based on the value of 'd'.
+          <p>Uses the arc() function to generate a pie chart from the data 
+ stored in an array.
  </p>
       </section>
 
