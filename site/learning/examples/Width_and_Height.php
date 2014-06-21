@@ -8,7 +8,7 @@
     <!-- content sections -->
     <div class="column-span">
       <section id="about">
-          <h2>basic1</h2>
+          <h2>Width and Height</h2>
           <p>
           <div class="example">
           <pre><code class="language-javascript">
@@ -17,14 +17,21 @@ function setup() {
 }
 
 function draw() {
-  background(142, 169, 217);
-
-  fill(242, 228, 21);
-  rect(300,100,150,150);
+  background(127);
+  noStroke();
+  for (var i = 0; i &lt; height; i += 20) {
+    fill(129, 206, 15);
+    rect(0, i, width, 10);
+    fill(255);
+    rect(i, 0, 10, height);
+  }
 }</code></pre>
           </div>
           </p>
-          <p>This is a basic example.</p>
+          <p>The 'width' and 'height' variables contain the 
+ width and height of the display window as defined in the size() 
+ function.
+ </p>
       </section>
 
       <?php include('../../footer.php'); ?>

@@ -8,26 +8,47 @@
     <!-- content sections -->
     <div class="column-span">
       <section id="about">
-          <h2>basic0</h2>
+          <h2>Points and Lines</h2>
           <p>
           <div class="example">
           <pre><code class="language-javascript">
 function setup() {
+  
+  var d = 70;
+  var p1 = d;
+  var p2 = p1+d;
+  var p3 = p2+d;
+  var p4 = p3+d;
+
+  // Sets the screen to be 640 pixels wide and 360 pixels high
   createCanvas(720, 400);
-}
+  background(0);
+  noSmooth();
 
-function draw() {
-  background(42, 169, 217);
+  translate(140, 0);
 
-  fill(242, 228, 21);
-  ellipse(100,100,100,100);
+  // Draw gray box
+  stroke(153);
+  line(p3, p3, p2, p3);
+  line(p2, p3, p2, p2);
+  line(p2, p2, p3, p2);
+  line(p3, p2, p3, p3);
 
-  fill(162,217, 39);
-  rect(300,100,150,150);
+  // Draw white points
+  stroke(255);
+  point(p1, p1);
+  point(p1, p3); 
+  point(p2, p4);
+  point(p3, p1); 
+  point(p4, p2);
+  point(p4, p4);
 }</code></pre>
           </div>
           </p>
-          <p>This is a basic example.</p>
+          <p>Points and lines can be used to draw basic geometry. 
+ Change the value of the variable 'd' to scale the form. The four 
+ variables set the positions based on the value of 'd'.
+ </p>
       </section>
 
       <?php include('../../footer.php'); ?>

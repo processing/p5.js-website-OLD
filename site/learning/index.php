@@ -60,11 +60,33 @@
 
       <h3>Examples</h3>
         <ul>
-        
-           <li><a href="examples/basic0.php">basic0</a> ok</li>
-         
-           <li><a href="examples/basic1.php">basic1</a> ok</li>
-         
+          
+            <li>
+              Form
+              <ul>
+              
+                <li><a href="examples/Points_and_Lines.php">Points and Lines</a></li>
+              
+              </ul>
+            </li>
+          
+            <li>
+              Structure
+              <ul>
+              
+                <li><a href="examples/Coordinates.php">Coordinates</a></li>
+              
+                <li><a href="examples/Setup_and_Draw.php">Setup and Draw</a></li>
+              
+                <li><a href="examples/Width_and_Height.php">Width and Height</a></li>
+              
+                <li><a href="examples/Loop.php">Loop</a></li>
+              
+                <li><a href="examples/noLoop.php">noLoop</a></li>
+              
+              </ul>
+            </li>
+          
           <li><a href="https://github.com/lmccart/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
 
           <li><a href="http://risd-creative-programming.github.io/fa13-introtocreativeprogramming/examples.html">RISD class examples</a> - examples covering basics of programming with p5.js used in RISD Intro Creative Programming class.</li>
