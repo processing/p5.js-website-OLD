@@ -12,7 +12,7 @@
       <h2>Learning</h2>
 
 
-      <h3>Tutorials</h3>
+      <a href="#tutorials" class="anchor"><h3>Tutorials</h3></a>
       <div class="left-column">
         <img src="../img/test-image-1.jpg">
         <p><a href="https://github.com/lmccart/p5.js/wiki/Getting-Started">Getting
@@ -58,7 +58,7 @@
 
       <div class="spacer"></div>
 
-      <h3>Examples</h3>
+      <a href="#examples" class="anchor"><h3>Examples</h3></a>
           <p>
           
             <strong>Structure</strong><br>            
