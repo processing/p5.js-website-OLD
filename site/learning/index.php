@@ -89,6 +89,18 @@
             
               <a href="examples/Triangle_Strip.php">Triangle Strip</a><br>
             
+              <a href="examples/Bezier.php">Bezier</a><br>
+            
+            <br>
+          
+            <strong>Data</strong><br>            
+            
+              <a href="examples/Variables.php">Variables</a><br>
+            
+              <a href="examples/True_and_False.php">True and False</a><br>
+            
+              <a href="examples/Variable_Scope.php">Variable Scope</a><br>
+            
             <br>
           
           </p>

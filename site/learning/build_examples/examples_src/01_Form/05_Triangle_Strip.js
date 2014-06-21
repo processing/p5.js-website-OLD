@@ -1,8 +1,8 @@
 /*
  * @name Triangle Strip
- * @description Generate a closed ring using the vertex() function and 
- * beginShape(TRIANGLE_STRIP) mode. The outsideRadius and insideRadius 
- * variables control ring's radii respectively.
+ * @description Example by Ira Greenberg. Generate a closed ring using the 
+ * vertex() function and beginShape(TRIANGLE_STRIP) mode. The outsideRadius 
+ * and insideRadius variables control ring's radii respectively.
  */
 var x;
 var y;

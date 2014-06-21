@@ -47,9 +47,9 @@ function draw() {
 </code></pre>
           </div>
           </p>
-          <p>Generate a closed ring using the vertex() function and 
- beginShape(TRIANGLE_STRIP) mode. The outsideRadius and insideRadius 
- variables control ring's radii respectively.
+          <p>Example by Ira Greenberg. Generate a closed ring using the 
+ vertex() function and beginShape(TRIANGLE_STRIP) mode. The outsideRadius 
+ and insideRadius variables control ring's radii respectively.
  </p>
       </section>
 
