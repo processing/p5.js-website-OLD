@@ -18,6 +18,7 @@ textarea {
     color: #222;
 }
 
+
 body {
     font-size: 1em;
     line-height: 1.4;
@@ -174,6 +175,10 @@ a:active, a:hover {
     border-bottom: 0.1em dashed; 
     border-bottom-color: #ED225D;
     transition: border-bottom 30ms linear; 
+}
+
+.anchor {
+    color: #222 !important;
 }
 
 .here {
