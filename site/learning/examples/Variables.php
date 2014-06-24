@@ -11,6 +11,7 @@
           <h2>Variables</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
 
@@ -45,6 +46,7 @@ function setup() {
   line(a, b+20, a+c, b+20);
   line(a, b+30, a+c, b+30);
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>Variables are used for storing values. In this example, change 

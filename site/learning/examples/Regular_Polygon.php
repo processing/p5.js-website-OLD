@@ -11,6 +11,7 @@
           <h2>Regular Polygon</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
   createCanvas(720, 400);
@@ -48,6 +49,7 @@ function polygon(x, y, radius, npoints) {
   }
   endShape(CLOSE);
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>What is your favorite? Pentagon? Hexagon? Heptagon? No? 

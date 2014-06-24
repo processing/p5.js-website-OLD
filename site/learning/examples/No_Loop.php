@@ -11,6 +11,7 @@
           <h2>No Loop</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 var y;
 
@@ -38,6 +39,7 @@ function draw()
   line(0, y, width, y);  
 } 
 </code></pre>
+          </div>
           </div>
           </p>
           <p>The noLoop() function causes draw() to only execute once. 

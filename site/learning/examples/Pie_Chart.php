@@ -11,6 +11,7 @@
           <h2>Pie Chart</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 var angles = [ 30, 10, 45, 35, 60, 38, 75, 67 ];
 
@@ -34,6 +35,7 @@ function pieChart(diameter, data) {
     lastAngle += radians(angles[i]);
   }
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>Uses the arc() function to generate a pie chart from the data 

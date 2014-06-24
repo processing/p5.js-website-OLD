@@ -11,7 +11,8 @@
         <h2>Welcome!</h2>
         <p>
         <div class="example">
-      <pre style="display:none"><code class="language-javascript">function setup() {
+          <div>
+<pre style=""><code class="language-javascript">function setup() {
   createCanvas(720, 300);
   background(100, 20, 100);
 }
@@ -24,6 +25,7 @@ function draw() {
   }
   ellipse(mouseX, mouseY, 80, 80);
 }</code></pre>  
+          </div>
         </div>
         </p>
 

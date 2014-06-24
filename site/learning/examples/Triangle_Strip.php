@@ -11,6 +11,7 @@
           <h2>Triangle Strip</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 var x;
 var y;
@@ -45,6 +46,7 @@ function draw() {
   endShape();
 }
 </code></pre>
+          </div>
           </div>
           </p>
           <p>Example by Ira Greenberg. Generate a closed ring using the 

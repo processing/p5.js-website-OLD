@@ -11,6 +11,7 @@
           <h2>Shape Primitives</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
 
@@ -37,6 +38,7 @@ function setup() {
   fill(255);
   arc(479, 300, 280, 280, PI, TWO_PI);
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>The basic shape primitive functions are triangle(), 

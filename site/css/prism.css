@@ -9,7 +9,8 @@
 */
 
 code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"],
+textarea {
   color: #222;
   font-family: 
       inconsolatamedium, 

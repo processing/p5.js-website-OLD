@@ -11,6 +11,7 @@
           <h2>Bezier</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
   createCanvas(720, 400);
@@ -25,6 +26,7 @@ function draw() {
   }
 }
 </code></pre>
+          </div>
           </div>
           </p>
           <p>The first two parameters for the bezier() function specify the 

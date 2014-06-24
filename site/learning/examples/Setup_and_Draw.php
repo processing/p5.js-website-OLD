@@ -11,6 +11,7 @@
           <h2>Setup and Draw</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 var y = 100;
 
@@ -34,6 +35,7 @@ function draw() {
   } 
   line(0, y, width, y);  
 } </code></pre>
+          </div>
           </div>
           </p>
           <p>The code inside the draw() function runs continuously from top 

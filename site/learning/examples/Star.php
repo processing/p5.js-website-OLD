@@ -11,6 +11,7 @@
           <h2>Star</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
   createCanvas(720, 400);
@@ -52,6 +53,7 @@ function star(x, y, radius1, radius2, npoints) {
   }
   endShape(CLOSE);
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>The star() function created for this example is capable of 

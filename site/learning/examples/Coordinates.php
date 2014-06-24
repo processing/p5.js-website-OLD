@@ -11,6 +11,7 @@
           <h2>Coordinates</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
   // Sets the screen to be 640 pixels wide and 360 pixels high
@@ -43,6 +44,7 @@ function draw() {
   stroke(255, 153, 0);
   rect(width*0.25, height*0.1, width * 0.5, height * 0.8);
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>All shapes drawn to the screen have a position that is 

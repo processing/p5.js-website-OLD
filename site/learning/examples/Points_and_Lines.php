@@ -11,6 +11,7 @@
           <h2>Points and Lines</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
   
@@ -43,6 +44,7 @@ function setup() {
   point(p4, p2);
   point(p4, p4);
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>Points and lines can be used to draw basic geometry. 

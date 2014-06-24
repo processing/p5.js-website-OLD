@@ -11,6 +11,7 @@
           <h2>Variable Scope</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 var a = 80;  // Create a global variable &quot;a&quot;
 
@@ -55,6 +56,7 @@ function drawYetAnotherLine() {
   // variable &quot;a&quot; which is set to the value 20.
   line(a+3, 0, a+3, height);
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>Variables have a global or local &quot;scope&quot;. For example, 

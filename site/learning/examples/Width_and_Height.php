@@ -11,6 +11,7 @@
           <h2>Width and Height</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
   createCanvas(720, 400);
@@ -26,6 +27,7 @@ function draw() {
     rect(i, 0, 10, height);
   }
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>The 'width' and 'height' variables contain the 

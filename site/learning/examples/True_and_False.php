@@ -11,6 +11,7 @@
           <h2>True and False</h2>
           <p>
           <div class="example">
+          <div>
           <pre><code class="language-javascript">
 function setup() {
 
@@ -41,6 +42,7 @@ function setup() {
     }
   }
 }</code></pre>
+          </div>
           </div>
           </p>
           <p>A Boolean variable has only two possible values: true or false. 
