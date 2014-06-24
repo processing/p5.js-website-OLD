@@ -21,5 +21,5 @@ $(window).scroll(function(){
 });
 
 window.onload = function() {
-  renderCode('demo');
+  //renderCode('demo');
 }
