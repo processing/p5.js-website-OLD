@@ -41,7 +41,7 @@
   <li><a href="<?php echo getRoot(); ?>">Home</a></li>
   <li><a href="<?php echo getRoot(); ?>about/">About</a></li>
   <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;started</a></li>
-  <li><a href="http://p5js.org/reference/">Reference</a></li>
+  <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>
   <li><a href="<?php echo getRoot(); ?>development/">Development</a></li>
   <li><a href="#" target=_blank class="other-link">Download</a></li> 

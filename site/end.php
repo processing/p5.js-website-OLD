@@ -12,6 +12,9 @@
 <script src="<?php echo getRoot(); ?>js/main.js"></script>
 <script src="<?php echo getRoot(); ?>../reference/assets/js/p5.js"></script>
 <script src="<?php echo getRoot(); ?>../reference/assets/js/render.js"></script>
+<script>
+renderCode();
+</script>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 

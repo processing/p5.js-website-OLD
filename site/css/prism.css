@@ -30,6 +30,7 @@ textarea {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  font-size: 1em !important;
 }
 
 /* Code blocks */
@@ -171,42 +172,42 @@ pre[class*="language-"]:after {
 }
 
 pre.line-numbers {
-	position: relative;
-	padding-left: 3.8em;
-	counter-reset: linenumber;
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
 }
 
 pre.line-numbers > code {
-	position: relative;
+  position: relative;
 }
 
 .line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 0;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
   font-size: 100%;
-	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
-	letter-spacing: -1px;
-	border-right: 1px solid #999;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
 }
 
 .line-numbers-rows > span {
-	pointer-events: none;
-	display: block;
-	counter-increment: linenumber;
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
 }
 
 .line-numbers-rows > span:before {
-	content: counter(linenumber);
-	color: #999;
-	display: block;
-	padding-right: 0.8em;
-	text-align: right;
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
 }
