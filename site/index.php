@@ -5,21 +5,33 @@
 
 <div id="bg">
 <div class="bg_code">
-<pre style="display:none"><code class="language-javascript">//@TODO placeholder sketch
+<pre style="display:none"><code class="language-javascript">
 var init = false;
+
 function setup() {
   createCanvas(windowWidth, 1.2*windowHeight);
-  noStroke();
 }
 
 function draw() {
-  var r = 127*sin(frameCount*0.01)+127;
   background(255, 50);
-  fill(map(mouseX, 0, width, 0, 255), 100, 50);
-  var x = init ? mouseX : width/2;
-  var y = init ? mouseY : height/2;
-  ellipse(x+random(-7, 7), y+random(-7, 7), 80, 80);
+  var x = init ? mouseX : -width;
+  var y = init ? mouseY : -height;
+  translate(x, y);
+  stroke(0);
+  noFill();
+  strokeWeight(1);
+
+  beginShape();
+  var n = random(4, 10);
+  var radius = random(10, 120);
+  var thetaOffset = random(0, TWO_PI);
+  for(var i = 0; i < n; i++) {
+    var theta = thetaOffset + map(i, 0, n - 1, 0, TWO_PI);
+    vertex(cos(theta) * radius, sin(theta) * radius);
+  }
+  endShape();
 }
+
 function mouseMoved() {
   init = true;
 }
@@ -36,21 +48,32 @@ function mouseMoved() {
         <p>
         <div class="example">
           <div>
-<pre style="display:none"><code class="language-javascript">//@TODO placeholder sketch
+<pre style="display:none"><code class="language-javascript">
 var init = false;
+
 function setup() {
   createCanvas(720, 300);
-  background(100, 20, 100);
-  noStroke();
 }
 
 function draw() {
   var r = 127*sin(frameCount*0.01)+127;
   background(r, 20, 100, 5);
-  var x = init ? mouseX : width/2;
-  var y = init ? mouseY : height/2;
+  var x = init ? mouseX : width / 2;
+  var y = init ? mouseY : height / 2;
+  translate(x, y);
   fill(map(x, 0, width, 0, 255), 100, 50);
-  ellipse(x+random(-7, 7), y+random(-7, 7), 80, 80);
+  stroke(255);
+  strokeWeight(random(1, 50));
+
+  beginShape();
+  var n = random(4, 10);
+  var radius = random(10, 120);
+  var thetaOffset = random(0, TWO_PI);
+  for(var i = 0; i < n; i++) {
+    var theta = thetaOffset + map(i, 0, n - 1, 0, TWO_PI);
+    vertex(cos(theta) * radius, sin(theta) * radius);
+  }
+  endShape();
 }
 
 function mouseMoved() {
