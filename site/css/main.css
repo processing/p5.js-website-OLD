@@ -28,7 +28,8 @@
     left: 0;
     z-index: -10;
 }
-#bg .edit_area, #bg button {
+#bg .edit_area, #bg button,
+#home .edit_area, #home button {
     display: none;
 }
 

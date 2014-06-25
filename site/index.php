@@ -24,7 +24,7 @@ function draw() {
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section id="home">
         <h2>Welcome!</h2>
         <p>
         <div class="example">

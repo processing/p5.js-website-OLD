@@ -77,11 +77,6 @@ function renderCode(sel) {
       setMode(sketch, 'run');
     };
 
-    if (sketchNode.style.display === 'none') {
-      edit_button.style.display = 'none';
-      reset_button.style.display = 'none';
-    }
-
     var edit_area = document.createElement('textarea');
     edit_area.value = runnable;
     edit_area.rows = rows;
