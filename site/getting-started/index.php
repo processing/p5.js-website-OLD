@@ -19,31 +19,7 @@
         <code>p5.js</code></a> and create a new <code>index.html</code> file and a new 
         <code>sketch.js</code> file. <code>sketch.js</code> is where you will write your 
         p5 code and <code>index.html</code> will bring it all together to be displayed on 
-        a web page.
-      </p>
-
-      <p>
-        Later, as you start to do more to integrate a p5 sketch into a larger web page
-        you can add all sorts of stuff to your html file. For now, all you need to know 
-        is that you should reference <code>sketch.js</code> and <code>p5.js</code> using  
-        the <code>&lt;script></code> tag. A <code>&lt;script></code> tag allows you to  
-        write JavaScript directly into the html file like so:
-
-      </p> 
-
-      <pre><code class="language-markup">&lt;script>
-alert("this code will trigger a browser alert");
-&lt;/script></code></pre>   
-
-      <p>
-        What we'll do instead is reference JavaScript code in separate files 
-        (<code>sketch.js</code> and <code>p5.js</code>).
-      </p>
-
-      <pre><code class="language-markup">&lt;script src="p5.js">&lt;/script></code></pre>   
-
-      <p>
-        A full example index.html file looks like so:
+        a web page. A full example index.html file looks like so:
       </p>
 
       <pre><code class="language-markup">&lt;!doctype html>
@@ -55,11 +31,6 @@ alert("this code will trigger a browser alert");
 &lt;body>
 &lt;/body>
 &lt;/html></code></pre>
-
-      <p>
-        Note that this assumes that all three files <code>index.html</code>, 
-        <code>sketch.js</code>, and <code>p5.js</code> are in the same directory.
-      </p>
 
       <p>
         Alternatively, you can just download the <a href="#">example project</a> and edit
