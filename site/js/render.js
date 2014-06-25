@@ -161,7 +161,7 @@ function renderCode(sel) {
           $this = $( this );
           var pre = $this.find('pre')[0];
           if (pre) {
-            $this.height( Math.max($(pre).height()*1.1, 100) + 20 );
+            $this.height( Math.max($(pre).height()*2, 100) + 20 );
           }
       });
     });

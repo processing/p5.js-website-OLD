@@ -765,7 +765,7 @@ footer {
 /* constants for the asterisk */
     #asterisk-design-element {
         position:fixed;
-        z-index: -100;
+        z-index: -1 !important;
         opacity: 0.6;
     }
 
