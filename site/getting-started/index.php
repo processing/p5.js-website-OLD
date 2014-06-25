@@ -152,8 +152,7 @@ function draw() {
       </p>
 
       <p>
-        <strong>Reference</strong>. View the <a target="_blank" 
-        href="https://github.com/lmccart/p5.js/wiki/Reference">reference</a>.  
+        <strong>Reference</strong>. View the <a href="../reference/">reference</a>.  
       </p>
 
       <p>
