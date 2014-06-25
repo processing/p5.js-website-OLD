@@ -62,7 +62,7 @@ function draw() {
   var y = init ? mouseY : height / 2;
   translate(x, y);
   fill(map(x, 0, width, 0, 255), 100, 50);
-  stroke(255);
+  stroke(255, 100);
   strokeWeight(random(1, 50));
 
   beginShape();
