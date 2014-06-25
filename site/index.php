@@ -9,7 +9,7 @@
 var init = false;
 
 function setup() {
-  createCanvas(windowWidth, 1.2*windowHeight);
+  createCanvas(windowWidth, 2*windowHeight);
 }
 
 function draw() {
