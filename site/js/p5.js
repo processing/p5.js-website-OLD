@@ -102,7 +102,7 @@ var core = function (require, shim, constants) {
                     elt.parentNode.removeChild(elt);
                 }
             };
-            this._pixelDensity = 2;//window.devicePixelRatio || 1;
+            this._pixelDensity = window.devicePixelRatio || 1;
             this._startTime = new Date().getTime();
             this._userNode = node;
             this._curElement = null;
