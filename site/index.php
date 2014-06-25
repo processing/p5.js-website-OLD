@@ -56,8 +56,8 @@ function setup() {
 }
 
 function draw() {
-  var r = 127*sin(frameCount*0.01)+127;
-  background(50, r, 100, 5);
+  var r = 100*sin(frameCount*0.007)+127;
+  background(50, r, 150, 5);
   var x = init ? mouseX : width / 2;
   var y = init ? mouseY : height / 2;
   translate(x, y);
