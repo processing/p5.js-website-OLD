@@ -19,7 +19,3 @@ $(window).scroll(function(){
     $('#menu').css({'position':'static'});
   }    
 });
-
-window.onload = function() {
-  //renderCode('demo');
-}

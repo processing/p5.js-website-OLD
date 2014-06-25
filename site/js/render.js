@@ -1,6 +1,10 @@
-function renderCode() {
-  console.log('render')
-  var examples = document.getElementsByClassName('example');
+
+  console.log('hi')
+function renderCode(sel) {
+  console.log('render '+sel)
+
+  var selector = sel || 'example'
+  var examples = document.getElementsByClassName(selector);
   if (examples.length > 0) {
 
     var sketches = examples[0].getElementsByTagName('code');

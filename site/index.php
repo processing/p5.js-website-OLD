@@ -3,6 +3,23 @@
   <?php include('header.php'); ?>
   <body id="home-page">
 
+<div id="bg">
+<div class="bg_code">
+<pre style="display:none"><code class="language-javascript">//@TODO placeholder sketch
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noStroke();
+}
+
+function draw() {
+  var r = 127*sin(frameCount*0.01)+127;
+  background(255, 50);
+  fill(map(mouseX, 0, width, 0, 255), 100, 50);
+  ellipse(mouseX+random(-7, 7), mouseY+random(-7, 7), 80, 80);
+}</code></pre>  
+</div>
+</div>
+
     <?php include('sidebar.php'); ?>
 
     <!-- content sections -->

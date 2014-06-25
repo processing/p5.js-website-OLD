@@ -9,10 +9,11 @@
 
 <!-- boilerplate suggestions
 <script src="js/plugins.js"></script> -->
-<script src="<?php echo getRoot(); ?>js/main.js"></script>
 <script src="<?php echo getRoot(); ?>../reference/assets/js/p5.js"></script>
-<script src="<?php echo getRoot(); ?>../reference/assets/js/render.js"></script>
+<script src="<?php echo getRoot(); ?>js/render.js"></script>
+<script src="<?php echo getRoot(); ?>js/main.js"></script>
 <script>
+renderCode('bg_code');
 renderCode();
 </script>
 
