@@ -102,7 +102,7 @@ var core = function (require, shim, constants) {
                     elt.parentNode.removeChild(elt);
                 }
             };
-            this._pixelDensity = window.devicePixelRatio;
+            this._pixelDensity = window.devicePixelRatio || 1;
             this._startTime = new Date().getTime();
             this._userNode = node;
             this._curElement = null;
@@ -183,12 +183,12 @@ var core = function (require, shim, constants) {
             this._setup = function () {
                 var userSetup = this.setup || window.setup;
                 if (typeof userSetup === 'function') {
-                    this.pushMatrix();
                     userSetup();
                     this.popMatrix();
                 }
             }.bind(this);
             this._draw = function () {
+                var userSetup = this.setup || window.setup;
                 var now = new Date().getTime();
                 this._frameRate = 1000 / (now - this._lastFrameTime);
                 this._lastFrameTime = now;
@@ -200,11 +200,10 @@ var core = function (require, shim, constants) {
                 }
                 if (typeof userDraw === 'function') {
                     this.pushMatrix();
-                    this.pushStyle();
-                    this.scale(this._pixelDensity, this._pixelDensity);
+                    if (typeof userSetup === 'undefined') {
+                        this.scale(this._pixelDensity, this._pixelDensity);
+                    }
                     userDraw();
-                    this.popMatrix();
-                    this.popStyle();
                 }
                 this._curElement.context.setTransform(1, 0, 0, 1, 0, 0);
             }.bind(this);
@@ -1728,11 +1727,9 @@ var dommanipulate = function (require, core, inputmouse, inputtouch) {
         var p5 = core;
         p5.prototype.createCanvas = function (w, h, isDefault) {
             var c = document.createElement('canvas');
-            c.setAttribute('width', w*this._pixelDensity);
-            c.setAttribute('height', h*this._pixelDensity);
-            //c.style.width = w;
-            //c.style.height = h;
-            c.setAttribute('style', 'width:'+w+'px !important; height:'+h+'px !important;');
+            c.setAttribute('width', w * this._pixelDensity);
+            c.setAttribute('height', h * this._pixelDensity);
+            c.setAttribute('style', 'width:' + w + 'px !important; height:' + h + 'px !important;');
             if (isDefault) {
                 c.id = 'defaultCanvas';
             } else {
@@ -2884,6 +2881,25 @@ var outputimage = function (require, core) {
         var p5 = core;
         p5.prototype.save = function () {
             window.open(this._curElement.elt.toDataURL('image/png'));
+        };
+        p5.prototype.testRender = function (file, callback) {
+            this.loadPixels();
+            var p = this.pixels;
+            var ctx = this;
+            this.clear();
+            this.loadImage(file, function (img) {
+                ctx.image(img, 0, 0, 100, 100);
+                ctx.loadPixels();
+                var n = 0;
+                for (var i = 0; i < p.length; i++) {
+                    for (var j = 0; j < 4; j++) {
+                        var diff = Math.abs(p[i][j] - ctx.pixels[i][j]);
+                        n += diff;
+                    }
+                }
+                var same = n / (256 * 4 * p.length) < 0.015;
+                callback(same);
+            });
         };
         return p5;
     }({}, core);

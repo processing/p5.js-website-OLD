@@ -1,6 +1,4 @@
 function renderCode(sel) {
-  console.log('render '+sel)
-
   var selector = sel || 'example'
   var examples = document.getElementsByClassName(selector);
   if (examples.length > 0) {
@@ -69,7 +67,6 @@ function renderCode(sel) {
       }
     }
 
-
     var reset_button = document.createElement('button');
     reset_button.value = 'reset';
     reset_button.innerHTML = 'reset';
@@ -79,6 +76,11 @@ function renderCode(sel) {
       edit_area.value = orig_sketch.innerText;
       setMode(sketch, 'run');
     };
+
+    if (sketchNode.style.display === 'none') {
+      edit_button.style.display = 'none';
+      reset_button.style.display = 'none';
+    }
 
     var edit_area = document.createElement('textarea');
     edit_area.value = runnable;
@@ -114,7 +116,6 @@ function renderCode(sel) {
     if (isRef) {
       cnv = sketchContainer.getElementsByClassName('cnv_div')[0];
     } else {
-      console.log(sketchNode.className);
       cnv = parent.parentNode.getElementsByClassName('cnv_div')[0];
     }
     cnv.innerHTML = '';
