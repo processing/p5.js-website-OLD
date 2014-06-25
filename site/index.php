@@ -15,15 +15,14 @@
 <pre style=""><code class="language-javascript">function setup() {
   createCanvas(720, 300);
   background(100, 20, 100);
+  noStroke();
 }
 
 function draw() {
-  if (mouseIsPressed) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  ellipse(mouseX, mouseY, 80, 80);
+  var r = 127*sin(frameCount*0.01)+127;
+  background(r, 20, 100, 5);
+  fill(map(mouseX, 0, width, 0, 255), 100, 50);
+  ellipse(mouseX+random(-7, 7), mouseY+random(-7, 7), 80, 80);
 }</code></pre>  
           </div>
         </div>
