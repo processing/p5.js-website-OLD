@@ -102,7 +102,7 @@ var core = function (require, shim, constants) {
                     elt.parentNode.removeChild(elt);
                 }
             };
-            this._pixelDensity = window.devicePixelRatio || 1;
+            this._pixelDensity = 2;//window.devicePixelRatio || 1;
             this._startTime = new Date().getTime();
             this._userNode = node;
             this._curElement = null;
@@ -184,7 +184,6 @@ var core = function (require, shim, constants) {
                 var userSetup = this.setup || window.setup;
                 if (typeof userSetup === 'function') {
                     userSetup();
-                    this.popMatrix();
                 }
             }.bind(this);
             this._draw = function () {
@@ -204,8 +203,8 @@ var core = function (require, shim, constants) {
                         this.scale(this._pixelDensity, this._pixelDensity);
                     }
                     userDraw();
+                    this.popMatrix();
                 }
-                this._curElement.context.setTransform(1, 0, 0, 1, 0, 0);
             }.bind(this);
             this._runFrames = function () {
                 if (this._updateInterval) {
