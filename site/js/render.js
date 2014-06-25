@@ -1,5 +1,3 @@
-
-  console.log('hi')
 function renderCode(sel) {
   console.log('render '+sel)
 
