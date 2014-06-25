@@ -12,7 +12,7 @@
         <p>
         <div class="example">
           <div>
-<pre style=""><code class="language-javascript">//PEND @TODO
+<pre style=""><code class="language-javascript">//@TODO placeholder sketch
 function setup() {
   createCanvas(720, 300);
   background(100, 20, 100);
