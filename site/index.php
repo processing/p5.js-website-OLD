@@ -7,7 +7,7 @@
 <div class="bg_code">
 <pre style="display:none"><code class="language-javascript">//@TODO placeholder sketch
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, 1.2*windowHeight);
   noStroke();
 }
 
@@ -61,7 +61,6 @@ function draw() {
     <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="asterisk-design-element">
       *<!-- to do: add fallback image in CSS -->
     </object>
-
 
     <?php include('end.php'); ?>
   </body>

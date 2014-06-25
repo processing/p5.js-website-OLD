@@ -26,7 +26,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -10;
 }
 #bg .edit_area, #bg button {
     display: none;
@@ -530,16 +530,20 @@ p+img {
     margin:4.25em 1.25em 1.25em 1.25em;
 }
 
-#lockup object, .logo {
+#lockup object {
     margin:0;
     padding:0; 
-    height:4.5em;
-    width:9.75em; 
     border: none;
 }
 
+
 .logo {
+    margin:0;
+    padding:0; 
+    border: none;
     margin-bottom: 0.4em;
+    height:4.5em;
+    width:9.75em; 
 }
 
 #lockup p {
