@@ -70,9 +70,9 @@
 
         <br>
         Organizations:<br>
-        Processing Foundation<br>
-        ITP<br>
-        RISD<br>
+        <a href="http://processing.org">Processing Foundation</a><br>
+        <a href="http://itp.nyu.edu">ITP</a><br>
+        <a href="http://risd.edu">RISD</a><br>
       </p> 
     </section>
 
