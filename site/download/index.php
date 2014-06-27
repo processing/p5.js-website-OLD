@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-  <body id="home-page">
+  <body id="download-page">
 
     <?php include('../sidebar.php'); ?>
 

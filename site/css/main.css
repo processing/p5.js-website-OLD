@@ -779,7 +779,8 @@ footer {
         opacity: 1;
     }
 
-    #about-page #asterisk-design-element {
+    #about-page #asterisk-design-element,
+    #development-page #asterisk-design-element {
         bottom:-14%;
         left:-20%;
         height:25em;
@@ -804,7 +805,7 @@ footer {
         transform: rotate(2deg);
     }
 
-    #tutorials-page #asterisk-design-element {
+    #learning-page #asterisk-design-element {
 
         top:-30%;
         right:-40%;
@@ -818,7 +819,8 @@ footer {
 
     }
 
-    #reference-page #asterisk-design-element, 
+    #reference-page #asterisk-design-element,
+    #download-page #asterisk-design-element, 
     #other-content-types-page #asterisk-design-element
     {
         top:7%;

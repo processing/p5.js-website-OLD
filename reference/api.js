@@ -44,7 +44,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.sound:Oscillator",
         "p5.sound:Oscillator:Pulse",
         "p5.sound:SoundFile",
-        "p5Sound"
+        "p5Sound",
+        "p5Sound:SoundFile"
     ],
     "modules": [
         "*",

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-  <body id="home-page">
+  <body id="about-page">
 
     <?php include('../sidebar.php'); ?>
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>About</h2>
           <p>
           p5.js is a JavaScript library that starts with the original goal of 

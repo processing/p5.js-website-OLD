@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-  <body id="home-page">
+  <body id="development-page">
 
     <?php include('../sidebar.php'); ?>
 
     <!-- content sections -->
     <div class="column-span">
 
-    <section id="getting-started">
+    <section>
 
       <h2>Development</h2>
 
