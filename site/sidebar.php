@@ -8,7 +8,9 @@
   $tagline;
   $path = getcwd();
 
-  if (strpos($path, "getting") !== false) {
+  if (strpos($path, "download") !== false) {
+    $tagline = "the fun of Processing times the quirkiness of JavaScript";
+  } else if (strpos($path, "getting") !== false) {
     $tagline = "the simplicity of Processing times the flexibility of JavaScript";
   } else if (strpos($path, "reference") !== false) {
     $tagline = "the intuition of Processing times the extensibility of JavaScript";
@@ -41,7 +43,7 @@
   <li><a href="<?php echo getRoot(); ?>">Home</a></li>
   <li><a href="<?php echo getRoot(); ?>about/">About</a></li>
   <li><a href="<?php echo getRoot(); ?>download/">Download</a></li> 
-  <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;started</a></li>
+  <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;Started</a></li>
   <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>
   <li><a href="<?php echo getRoot(); ?>development/">Development</a></li>
