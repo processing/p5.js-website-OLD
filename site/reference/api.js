@@ -36,7 +36,15 @@ YUI.add("yuidoc-meta", function(Y) {
         "Vertex",
         "p5.Element",
         "p5.Image",
-        "p5.Vector"
+        "p5.Vector",
+        "p5.sound",
+        "p5.sound:Amplitude",
+        "p5.sound:AudioIn",
+        "p5.sound:FFT",
+        "p5.sound:Oscillator",
+        "p5.sound:Oscillator:Pulse",
+        "p5.sound:SoundFile",
+        "p5Sound"
     ],
     "modules": [
         "*",
@@ -52,7 +60,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "Shape",
         "Structure",
         "Transform",
-        "Typography"
+        "Typography",
+        "p5.sound"
     ],
     "allModules": [
         {
@@ -94,6 +103,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Output",
             "name": "Output"
+        },
+        {
+            "displayName": "p5.sound",
+            "name": "p5.sound"
         },
         {
             "displayName": "Shape",

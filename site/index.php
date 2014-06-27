@@ -84,7 +84,7 @@ function mouseMoved() {
         </div>
         </p>
 
-        <p><a href="#"><strong>> Download p5.js</strong></a></p>
+        <p><a href="<?php echo getRoot(); ?>download/"><strong>> Download p5.js</strong></a></p>
         <p><a href="<?php echo getRoot(); ?>learning/#examples"><strong>> Try examples</strong></a></p>
         <p>p5.js is a JavaScript library that brings the original goals of Processing to the web. It supports canvas drawing, and a lot more.</p>
         <p>p5.js is a JavaScript library that brings the original goals of Processing to the web. It supports canvas drawing, and a lot more.</p>
