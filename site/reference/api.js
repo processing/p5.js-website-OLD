@@ -25,6 +25,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Pixels",
         "Random",
         "Setting",
+        "SoundFile",
         "String Functions",
         "Structure",
         "Structure:Structure",
@@ -43,9 +44,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.sound:FFT",
         "p5.sound:Oscillator",
         "p5.sound:Oscillator:Pulse",
-        "p5.sound:SoundFile",
-        "p5Sound",
-        "p5Sound:SoundFile"
+        "p5.sound:SoundFile"
     ],
     "modules": [
         "*",
@@ -107,7 +106,8 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "p5.sound",
-            "name": "p5.sound"
+            "name": "p5.sound",
+            "description": "Version .0003\n\np5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.\n\nThis is an addon for p5.js that extends p5 with the following classes:\n  SoundOut\n  SoundFile\n  Amplitude\n  FFT\n  Oscillator (SinOsc, SqrOsc, SawOsc, TriOsc, Pulse)\n  AudioIn\n   ... more soon!\n \nIncorporates elements from:\n  - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n  - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n  - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n  - wavesurfer.js\n  - recorder.js (hopefully soon!)\n  - Wilm Thoben's Sound library for Processing"
         },
         {
             "displayName": "Shape",

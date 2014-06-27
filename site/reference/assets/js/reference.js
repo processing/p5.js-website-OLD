@@ -5123,28 +5123,31 @@ define('listView',[
         // module === group
         this.groups = {};
         _.each(items, function (item, i) {
-          var item = items[i];
-          var group = item.module || '_';
-          var subgroup = item.class || '_';
-          var hash = App.router.getHash(item);
+          if (item.file.indexOf('addons') === -1) { //addons don't get displayed on main page
 
-          // Create a group list
-          if (!self.groups[group]) {
-            self.groups[group] = {
-              name: group.replace('_', '&nbsp;'),
-              subgroups: {}
-            };
+            var item = items[i];
+            var group = item.module || '_';
+            var subgroup = item.class || '_';
+            var hash = App.router.getHash(item);
+
+            // Create a group list
+            if (!self.groups[group]) {
+              self.groups[group] = {
+                name: group.replace('_', '&nbsp;'),
+                subgroups: {}
+              };
+            }
+
+            // Create a subgroup list
+            if (!self.groups[group].subgroups[subgroup]) {
+              self.groups[group].subgroups[subgroup] = {
+                name: subgroup.replace('_', '&nbsp;'),
+                items: []
+              };
+            }
+
+            self.groups[group].subgroups[subgroup].items.push(item);
           }
-
-          // Create a subgroup list
-          if (!self.groups[group].subgroups[subgroup]) {
-            self.groups[group].subgroups[subgroup] = {
-              name: subgroup.replace('_', '&nbsp;'),
-              items: []
-            };
-          }
-
-          self.groups[group].subgroups[subgroup].items.push(item);
         });
 
         // Sort groups by name A-Z
@@ -9943,6 +9946,113 @@ define('menuView',[
   return menuView;
 
 });
+
+define('text!tpl/library.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<h3><%= module.name %></h3>\n\n\n<p><%= module.description %></p>\n\n\n<% _.each(groups, function(group){ %>\n  <div>\n  <% if (group.name !== module.name) { %>\n    <strong><%=group.name%></strong> \n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <br>\n    <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n  <% }); %>\n  <br><br>\n  </div>\n<% }); %>\n';});
+
+define('libraryView',[
+  'underscore',
+  'backbone',
+  'App',
+  // Templates
+  'text!tpl/library.html'
+], function (_, Backbone, App, libraryTpl) {
+
+  var libraryView = Backbone.View.extend({
+    el: '#list',
+    events: {},
+    /**
+     * Init.
+     */
+    init: function () {
+      this.libraryTpl = _.template(libraryTpl);
+
+      return this;
+    },
+    /**
+     * Render the list.
+     */
+    render: function (m, listCollection) {
+      if (m && listCollection) {
+        var self = this;
+
+        // Render items and group them by module
+        // module === group
+        this.groups = {};
+        _.each(m.items, function (item, i) {
+          var module = item.module || '_';
+          var group = item.class || '_';
+          var hash = App.router.getHash(item);
+
+          // Create a group list
+          if (!self.groups[group]) {
+            self.groups[group] = {
+              name: group.replace('_', '&nbsp;'),
+              items: []
+            };
+          }
+
+
+          self.groups[group].items.push(item);
+        });
+
+        // Sort groups by name A-Z
+        _.sortBy(self.groups, this.sortByName);
+
+        // Put the <li> items html into the list <ul>
+        var libraryHtml = self.libraryTpl({
+          'title': self.capitalizeFirst(listCollection),
+          'module': m.module,
+          'groups': self.groups
+        });
+
+        // Render the view
+        this.$el.html(libraryHtml);
+      }
+
+      return this;
+    },
+    /**
+     * Show a list of items.
+     * @param {array} items Array of item objects.
+     * @returns {object} This view.
+     */
+    show: function (listGroup) {
+      if (App[listGroup]) {
+        this.render(App[listGroup], listGroup);
+      }
+      App.pageView.hideContentViews();
+
+      this.$el.show();
+
+      return this;
+    },
+    /**
+     * Helper method to capitalize the first letter of a string
+     * @param {string} str
+     * @returns {string} Returns the string.
+     */
+    capitalizeFirst: function (str) {
+      return str.substr(0, 1).toUpperCase() + str.substr(1);
+    },
+    /**
+     * Sort function (for the Array.prototype.sort() native method): from A to Z.
+     * @param {string} a
+     * @param {string} b
+     * @returns {Array} Returns an array with elements sorted from A to Z.
+     */
+    sortAZ: function (a, b) {
+      return a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase() ? 1 : -1;
+    },
+
+    sortByName: function (a, b) {
+      return a.name > b.name ? 1 : -1;
+    }
+
+  });
+
+  return libraryView;
+
+});
 define('pageView',[
   'underscore',
   'backbone',
@@ -9953,8 +10063,9 @@ define('pageView',[
   'listView',
   'itemView',
   'fileView',
-  'menuView'
-], function(_, Backbone, App, searchView, listView, itemView, fileView, menuView) {
+  'menuView',
+  'libraryView'
+], function(_, Backbone, App, searchView, listView, itemView, fileView, menuView, libraryView) {
 
   var pageView = Backbone.View.extend({
     el: 'body',
@@ -10002,6 +10113,14 @@ define('pageView',[
         App.contentViews.push(App.listView);
       }
       
+      // List view
+      if (!App.libraryView) {
+        App.libraryView = new libraryView();
+        App.libraryView.init().render();
+        // Add the list view to the views array
+        App.contentViews.push(App.libraryView);
+      }
+      
       // Search
       if (!App.searchView) {
         App.searchView = new searchView();
@@ -10044,7 +10163,8 @@ define('router',[
       'list:group': 'list',
       'search': 'search',
       'file/:filepath/:line': 'file',
-      'get/:searchClass(/:searchItem)': 'get'
+      'get/:searchClass(/:searchItem)': 'get',
+      'libraries/:lib': 'library'
     },
     /**
      * Whether the json API data was loaded.
@@ -10161,6 +10281,18 @@ define('router',[
       });
     },
     /**
+     * List items in a library.
+     * @param {string} collection The name of the collection to list.
+     */
+    library: function(collection) {
+
+
+      this.init(function() {
+        App.menuView.update(collection);
+        App.libraryView.show(collection);
+      });
+    },
+    /**
      * Close all content views.
      */
     search: function() {
@@ -10231,7 +10363,7 @@ require([
   'App'], function(_, Backbone, App) {
   
   // Set collections
-  App.collections = ['allItems', 'classes', 'events', 'methods', 'properties'];
+  App.collections = ['allItems', 'classes', 'events', 'methods', 'properties', 'sound'];
 
   // Get json API data
   $.getJSON("data.json", function(data) {
@@ -10241,7 +10373,19 @@ require([
     App.properties = [];
     App.events = [];
     App.allItems = [];
+    App.sound = { items: [] };
     App.project = data.project;
+
+
+    var modules = data.modules;
+
+    // Get class items (methods, properties, events)
+    _.each(modules, function(m, idx, array) {
+      if (m.name == "p5.sound") {
+        App.sound.module = m;
+      }
+    });
+
 
     var items = data.classitems;
     var classes = data.classes;
@@ -10264,6 +10408,11 @@ require([
         } else if (el.itemtype === "event") {
           App.events.push(el);
           App.allItems.push(el);
+        } 
+
+        // libraries
+        if (el.module === "p5.sound") {
+          App.sound.items.push(el);
         }
       }
     });
