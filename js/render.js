@@ -1,5 +1,6 @@
-function renderCode() {
-  var examples = document.getElementsByClassName('example');
+function renderCode(sel) {
+  var selector = sel || 'example'
+  var examples = document.getElementsByClassName(selector);
   if (examples.length > 0) {
 
     var sketches = examples[0].getElementsByTagName('code');
@@ -9,14 +10,23 @@ function renderCode() {
       runCode(s);
     });
   }
-  var edit_area;
 
   function setupCode(sketch) {
 
-    var sketchNode = (sketch.parentNode.tagName === 'PRE') ? sketch.parentNode : sketch;
+    var isRef = sketch.parentNode.tagName !== 'PRE';
+
+    var sketchNode =  isRef ? sketch : sketch.parentNode;
     var sketchContainer = sketchNode.parentNode;
+
+    if (isRef) {
+      var pre = document.createElement('pre');
+      pre.className = 'ref';
+      pre.appendChild(sketchNode);
+      sketchContainer.appendChild(pre);
+      sketch.className = 'language-javascript';
+    }
+
     sketchContainer.style.height = sketchNode.offsetHeight;
-    var parent = sketchContainer.parentNode;
 
     // remove start and end lines
     sketch.innerText = sketch.innerText.replace(/^\s+|\s+$/g, '');
@@ -32,7 +42,11 @@ function renderCode() {
     // create canvas
     var cnv = document.createElement('div');
     cnv.className = 'cnv_div';
-    parent.insertBefore(cnv, sketchContainer);
+    if (isRef) {
+      sketchContainer.appendChild(cnv);
+    } else {
+      sketchContainer.parentNode.insertBefore(cnv, sketchContainer);
+    }
 
 
     // create edit space
@@ -52,7 +66,6 @@ function renderCode() {
         setMode(sketch, 'run');
       }
     }
-
 
     var reset_button = document.createElement('button');
     reset_button.value = 'reset';
@@ -88,12 +101,18 @@ function renderCode() {
 
   function runCode(sketch) {
 
-    var sketchNode = (sketch.parentNode.tagName === 'PRE') ? sketch.parentNode : sketch;
+    var sketchNode = sketch.parentNode;
+    var isRef = sketchNode.className.indexOf('ref') !== -1;
     var sketchContainer = sketchNode.parentNode;
     var parent = sketchContainer.parentNode;
 
     var runnable = sketch.innerText;
-    var cnv = parent.parentNode.getElementsByClassName('cnv_div')[0];
+    var cnv;
+    if (isRef) {
+      cnv = sketchContainer.getElementsByClassName('cnv_div')[0];
+    } else {
+      cnv = parent.parentNode.getElementsByClassName('cnv_div')[0];
+    }
     cnv.innerHTML = '';
 
     var s = function( p ) {
@@ -134,12 +153,22 @@ function renderCode() {
       }
     };
 
-    if (typeof prettyPrint !== 'undefined') prettyPrint();
-    if (Prism) Prism.highlightAll();
+    //if (typeof prettyPrint !== 'undefined') prettyPrint();
+    if (typeof Prism !== 'undefined') Prism.highlightAll();
 
-    setTimeout(function() { 
-      var myp5 = new p5(s, cnv); 
-    }, 100);
+    $( document ).ready(function() {
+      $( ".example-content" ).find('div').each(function() {
+          $this = $( this );
+          var pre = $this.find('pre')[0];
+          if (pre) {
+            $this.height( Math.max($(pre).height()*1.1, 100) + 20 );
+          }
+      });
+    });
+
+    setTimeout(function() {
+      var myp5 = new p5(s, cnv);
+    }); 
   }
 
 }
