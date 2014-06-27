@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>Coordinates</h2>
           <p>
           <div class="example">
@@ -53,6 +53,7 @@ function draw() {
  upper left of the window and the coordinate in the lower right is [width-1, 
  height-1].
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>

@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>Pie Chart</h2>
           <p>
           <div class="example">
@@ -41,6 +41,7 @@ function pieChart(diameter, data) {
           <p>Uses the arc() function to generate a pie chart from the data 
  stored in an array.
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>

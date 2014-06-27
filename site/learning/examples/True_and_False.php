@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>True and False</h2>
           <p>
           <div class="example">
@@ -51,6 +51,7 @@ function setup() {
  black lines are drawn and when the boolean value &quot;x&quot; is false, horizontal 
  gray lines are drawn.
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>

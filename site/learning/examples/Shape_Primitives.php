@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>Shape Primitives</h2>
           <p>
           <div class="example">
@@ -46,6 +46,7 @@ function setup() {
  and circles are made with ellipse(). Each of these functions requires 
  a number of parameters to determine the shape's position and size.
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>

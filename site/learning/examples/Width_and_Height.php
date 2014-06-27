@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>Width and Height</h2>
           <p>
           <div class="example">
@@ -34,6 +34,7 @@ function draw() {
  width and height of the display window as defined in the size() 
  function.
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>

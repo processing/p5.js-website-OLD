@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>Triangle Strip</h2>
           <p>
           <div class="example">
@@ -53,6 +53,7 @@ function draw() {
  vertex() function and beginShape(TRIANGLE_STRIP) mode. The outsideRadius 
  and insideRadius variables control ring's radii respectively.
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>

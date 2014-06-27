@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>Points and Lines</h2>
           <p>
           <div class="example">
@@ -51,6 +51,7 @@ function setup() {
  Change the value of the variable 'd' to scale the form. The four 
  variables set the positions based on the value of 'd'.
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>

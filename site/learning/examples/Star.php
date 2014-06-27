@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section id="about">
+      <section>
           <h2>Star</h2>
           <p>
           <div class="example">
@@ -60,6 +60,7 @@ function star(x, y, radius1, radius2, npoints) {
  drawing a wide range of different forms. Try placing different numbers 
  into the star() function calls within draw() to explore.
  </p>
+          <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
       <?php include('../../footer.php'); ?>
