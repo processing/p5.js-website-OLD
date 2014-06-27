@@ -355,8 +355,6 @@
             "fors": {
                 "p5.sound": 1,
                 "p5.sound:SoundFile": 1,
-                "p5Sound:SoundFile": 1,
-                "p5Sound": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
                 "p5.sound:Oscillator": 1,
@@ -657,8 +655,6 @@
             "classes": {
                 "p5.sound": 1,
                 "p5.sound:SoundFile": 1,
-                "p5Sound:SoundFile": 1,
-                "p5Sound": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
                 "p5.sound:Oscillator": 1,
@@ -668,8 +664,6 @@
             "fors": {
                 "p5.sound": 1,
                 "p5.sound:SoundFile": 1,
-                "p5Sound:SoundFile": 1,
-                "p5Sound": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
                 "p5.sound:Oscillator": 1,
@@ -1138,28 +1132,6 @@
         "p5.sound:SoundFile": {
             "name": "p5.sound:SoundFile",
             "shortname": "p5.sound:SoundFile",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "p5.sound",
-            "namespace": ""
-        },
-        "p5Sound:SoundFile": {
-            "name": "p5Sound:SoundFile",
-            "shortname": "p5Sound:SoundFile",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "p5.sound",
-            "namespace": ""
-        },
-        "p5Sound": {
-            "name": "p5Sound",
-            "shortname": "p5Sound",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -7352,7 +7324,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5Sound:SoundFile",
+            "class": "p5.sound:SoundFile",
             "module": "p5.sound"
         },
         {
@@ -7655,7 +7627,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5Sound",
+            "class": "p5.sound",
             "module": "p5.sound"
         },
         {
@@ -7668,7 +7640,7 @@
                 "description": "Returns the stereo pan setting of the Oscillator\n                         as a number between -1.0 (left) and 1.0 (right).\n                         0.0 is center and default.",
                 "type": "Number"
             },
-            "class": "p5Sound",
+            "class": "p5.sound",
             "module": "p5.sound"
         },
         {
@@ -7684,7 +7656,7 @@
                     "type": "[object]"
                 }
             ],
-            "class": "p5Sound",
+            "class": "p5.sound",
             "module": "p5.sound"
         },
         {
@@ -7699,7 +7671,7 @@
                     "description": ""
                 }
             ],
-            "class": "p5Sound",
+            "class": "p5.sound",
             "module": "p5.sound"
         },
         {
