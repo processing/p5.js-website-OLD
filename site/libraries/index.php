@@ -21,7 +21,7 @@
 
       <div class="left-column">
         <img src="../img/test-image-1.jpg">
-        <p><a href="<?php echo getRoot(); ?>reference/#libraries/sound">p5.sound</a><br>Description goes here.</p>
+        <p><a href="<?php echo getRoot(); ?>reference/#/libraries/sound">p5.sound</a><br>Description goes here.</p>
       </div>
 
       <div class="spacer"></div>
