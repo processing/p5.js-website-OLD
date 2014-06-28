@@ -49,7 +49,7 @@
 
 
       <h3>Contributors @TODO</h3>
-
+<!--
         Some people to include...<br>
         Lauren McCarthy<br>
         Evelyn Eastmond<br>
@@ -65,8 +65,7 @@
 
         ITP working group?<br>
         Bocoup? Other github contributors?<br>
-
-
+-->
 
         <br>
         Organizations:<br>
