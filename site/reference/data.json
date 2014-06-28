@@ -178,6 +178,15 @@
             },
             "namespaces": {}
         },
+        "src/math/math.js": {
+            "name": "src/math/math.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Math": 1
+            },
+            "namespaces": {}
+        },
         "src/math/noise.js": {
             "name": "src/math/noise.js",
             "modules": {},
@@ -239,8 +248,7 @@
                 "p5.Vector": 1
             },
             "fors": {
-                "p5.Vector": 1,
-                "Math": 1
+                "p5.Vector": 1
             },
             "namespaces": {}
         },
@@ -372,6 +380,7 @@
             },
             "fors": {
                 "p5.sound": 1,
+                "SoundFile": 1,
                 "p5.sound:SoundFile": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
@@ -551,24 +560,24 @@
             "submodules": {},
             "classes": {
                 "Calculation": 1,
+                "Math": 1,
                 "Noise": 1,
                 "Random": 1,
                 "Trigonometry": 1,
-                "p5.Vector": 1,
-                "Math": 1
+                "p5.Vector": 1
             },
             "fors": {
                 "Calculation": 1,
+                "Math": 1,
                 "Noise": 1,
                 "Random": 1,
                 "Trigonometry": 1,
-                "p5.Vector": 1,
-                "Math": 1
+                "p5.Vector": 1
             },
             "namespaces": {},
             "tag": "module",
             "file": "src/objects/p5.Vector.js",
-            "line": 32,
+            "line": 14,
             "requires": [
                 "core"
             ]
@@ -682,6 +691,7 @@
             },
             "fors": {
                 "p5.sound": 1,
+                "SoundFile": 1,
                 "p5.sound:SoundFile": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
@@ -907,6 +917,17 @@
             "module": "Math",
             "namespace": ""
         },
+        "Math": {
+            "name": "Math",
+            "shortname": "Math",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
         "Noise": {
             "name": "Noise",
             "shortname": "Noise",
@@ -1005,7 +1026,7 @@
             "module": "Math",
             "namespace": "",
             "file": "src/objects/p5.Vector.js",
-            "line": 32,
+            "line": 14,
             "description": "The p5.Vector constructor function.\n\nA class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class.",
             "is_constructor": 1,
             "params": [
@@ -1028,17 +1049,6 @@
                     "optional": true
                 }
             ]
-        },
-        "Math": {
-            "name": "Math",
-            "shortname": "Math",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Math",
-            "namespace": ""
         },
         "Text Area": {
             "name": "Text Area",
@@ -3915,6 +3925,35 @@
             "module": "Math"
         },
         {
+            "file": "src/math/math.js",
+            "line": 13,
+            "description": "Creates a new p5.Vector (the datatype for storing vectors). This provides a\ntwo or three dimensional vector, specifically a Euclidean (also known as \ngeometric) vector. A vector is an entity that has both magnitude and \ndirection.",
+            "itemtype": "method",
+            "name": "createVector",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "class": "Math",
+            "module": "Math"
+        },
+        {
             "file": "src/math/noise.js",
             "line": 53,
             "description": "Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. p5.js can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
@@ -4679,36 +4718,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 15,
-            "description": "Creates a new p5.Vector (the datatype for storing vectors). This provides a\ntwo or three dimensional vector, specifically a Euclidean (also known as \ngeometric) vector. A vector is an entity that has both magnitude and \ndirection.",
-            "itemtype": "method",
-            "name": "createVector",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "y",
-                    "description": "y component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "z component of the vector",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "class": "Math",
-            "module": "Math"
-        },
-        {
-            "file": "src/objects/p5.Vector.js",
-            "line": 72,
+            "line": 54,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
@@ -4718,7 +4728,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 78,
+            "line": 60,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
@@ -4728,7 +4738,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 84,
+            "line": 66,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
@@ -4738,7 +4748,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 93,
+            "line": 75,
             "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Vector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -4767,7 +4777,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 112,
+            "line": 94,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
             "name": "get",
@@ -4780,7 +4790,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 127,
+            "line": 109,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
             "itemtype": "method",
             "name": "add",
@@ -4813,7 +4823,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 153,
+            "line": 135,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a p5.Vector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -4846,7 +4856,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 177,
+            "line": 159,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -4867,7 +4877,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 192,
+            "line": 174,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -4888,7 +4898,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 207,
+            "line": 189,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -4901,7 +4911,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 218,
+            "line": 200,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -4914,7 +4924,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 232,
+            "line": 214,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -4946,7 +4956,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 250,
+            "line": 232,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -4966,7 +4976,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 269,
+            "line": 251,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -4986,7 +4996,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 282,
+            "line": 264,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -4999,7 +5009,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 292,
+            "line": 274,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -5019,7 +5029,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 309,
+            "line": 291,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "mtehod": "setMag",
             "params": [
@@ -5038,7 +5048,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 321,
+            "line": 303,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -5051,7 +5061,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 340,
+            "line": 322,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -5071,7 +5081,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 361,
+            "line": 343,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -5108,7 +5118,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 383,
+            "line": 365,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -5121,7 +5131,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 400,
+            "line": 382,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -5142,7 +5152,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 421,
+            "line": 403,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -5156,7 +5166,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 444,
+            "line": 426,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -5170,7 +5180,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 471,
+            "line": 453,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -5194,7 +5204,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 484,
+            "line": 466,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -5218,7 +5228,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 499,
+            "line": 481,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5242,7 +5252,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 511,
+            "line": 493,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5266,7 +5276,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 524,
+            "line": 506,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -5290,7 +5300,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 536,
+            "line": 518,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -5314,7 +5324,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 548,
+            "line": 530,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -5338,7 +5348,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 561,
+            "line": 543,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -5363,7 +5373,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 576,
+            "line": 558,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -6735,7 +6745,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 42,
+            "line": 43,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -7296,7 +7306,7 @@
             "description": "The output volume (amplitude) of a sound file\nbetween 0.0 (silence) and 1.0 (full volume).\nAmplitudes over 1.0 may cause digital distortion.",
             "itemtype": "property",
             "name": "volume",
-            "class": "p5.sound:SoundFile",
+            "class": "SoundFile",
             "module": "p5.sound"
         },
         {
@@ -7325,7 +7335,7 @@
             "example": [
                 " \n<div><code>\nfunction preload() {\n  mySound = loadSound(['mySound.mp3', 'mySound.ogg']);\n}\n\nfunction setup() {\n  mySound.loop();\n}\n</code></div>"
             ],
-            "class": "p5.sound:SoundFile",
+            "class": "SoundFile",
             "module": "p5.sound"
         },
         {
@@ -7344,7 +7354,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5.sound:SoundFile",
+            "class": "SoundFile",
             "module": "p5.sound"
         },
         {
@@ -7799,7 +7809,7 @@
             "line": 1215,
             "description": "Create an analyser node with optional variables for smoothing, \nfft size, min/max decibels. Decibels are in dBFS (0 is loudest),\nand will impact the range of your results.",
             "itemtype": "method",
-            "name": "new FFT",
+            "name": "FFT",
             "params": [
                 {
                     "name": "smoothing",
@@ -8112,7 +8122,7 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/objects/p5.Vector.js:309"
+            "line": " src/objects/p5.Vector.js:291"
         },
         {
             "message": "replacing incorrect tag: params with param",
@@ -8220,43 +8230,43 @@
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/objects/p5.Vector.js:309"
+            "line": " src/objects/p5.Vector.js:291"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/objects/p5.Vector.js:471"
+            "line": " src/objects/p5.Vector.js:453"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/objects/p5.Vector.js:484"
+            "line": " src/objects/p5.Vector.js:466"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:499"
+            "line": " src/objects/p5.Vector.js:481"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:511"
+            "line": " src/objects/p5.Vector.js:493"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/objects/p5.Vector.js:524"
+            "line": " src/objects/p5.Vector.js:506"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/objects/p5.Vector.js:536"
+            "line": " src/objects/p5.Vector.js:518"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/objects/p5.Vector.js:548"
+            "line": " src/objects/p5.Vector.js:530"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/objects/p5.Vector.js:561"
+            "line": " src/objects/p5.Vector.js:543"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/objects/p5.Vector.js:576"
+            "line": " src/objects/p5.Vector.js:558"
         },
         {
             "message": "Missing item type",
@@ -8264,7 +8274,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:42"
+            "line": " src/app.js:43"
         },
         {
             "message": "Missing item type",
