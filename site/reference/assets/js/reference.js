@@ -10310,7 +10310,7 @@ define('router',[
           App.itemView.show(item);
         } else {
           //App.itemView.nothingFound();
-          
+
           self.list();
         }
 
@@ -10412,7 +10412,7 @@ define('router',[
       if (!item.hash) {
         var hash = '#/';
         var isClass = item.hasOwnProperty('classitems');
-        var c = (item.file.indexOf('objects') === -1) ? 'p5' : item.class;
+        var c = (item.file.indexOf('objects') === -1 && item.file.indexOf('addons') === -1 ) ? 'p5' : item.class;
         // Create hash for links
         if (isClass) {
           hash += item.name;
