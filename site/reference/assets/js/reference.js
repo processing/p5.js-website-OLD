@@ -5091,7 +5091,7 @@ define('searchView',[
 });
 
 
-define('text!tpl/list.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<% var i=0; %>\n\n<% _.each(groups, function(group){ %>\n  <div class="column_<%= i%3 %>">\n  <h3 class="group-name"><%=group.name%></h3>\n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <% if (subgroup.name !== group.name) { %>\n      <% if (subgroup.hash) { %>\n        <a href="<%=subgroup.hash%>"><strong><%=subgroup.name%></strong></a>\n      <% } else { %>\n        <strong><%=subgroup.name%></strong>\n      <% } %>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n      <br>\n      <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n    <% }); %>\n    <br><br>\n  <% }); %>\n  </div>\n  <% i++; %>\n<% }); %>\n';});
+define('text!tpl/list.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<% _.each(groups, function(group){ %>\n  <div class="reference-group clearfix">  \n  <h4 class="group-name" id="group-<%=group.name%>"><%=group.name%></h4>\n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <dl>\n    <% if (subgroup.name !== group.name) { %>\n      <% if (subgroup.hash) { %>\n        <dt class="subgroup-<%=subgroup.name%>"><a href="<%=subgroup.hash%>"><%=subgroup.name%></a></dt>\n      <% } else { %>\n        <dt class="subgroup-<%=subgroup.name%>"><%=subgroup.name%></dt>\n      <% } %>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n      <dd><a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></dd>\n    <% }); %>\n    </dl>\n  <% }); %>\n  </div>\n<% }); %>\n\n\n\n                \n                  ';});
 
 define('listView',[
   'underscore',
@@ -5125,7 +5125,6 @@ define('listView',[
         _.each(items, function (item, i) {
           if (item.file.indexOf('addons') === -1) { //addons don't get displayed on main page
 
-            var item = items[i];
             var group = item.module || '_';
             var subgroup = item.class || '_';
             var hash = App.router.getHash(item);
@@ -7993,7 +7992,7 @@ define('text!tpl/event.handlebars',[],function () { return '\n<div id="event_{{n
 define('text!tpl/property.handlebars',[],function () { return '\n<div id="property_{{name}}" class="property item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extended_from}} inherited{{/if}}">\n  \n\n  <div class="description"> \n    {{#if description}}\n    <!--<h4>Description:</h4>-->\n    <p>{{{description}}}</p>\n    {{else}}\n    <p>No description given.</p>\n    {{/if}}\n  </div>\n\n\n  <div class="meta">Class: <strong><a href=\'#get/{{class}}\'>{{class}}</a></strong> | File: <strong><a href=\'#file/{{urlencodedfile}}/{{line}}\'>{{file}}:{{line}}</a></strong></div>\n\n  {{#if deprecated}}\n  <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>\n  {{/if}}\n\n\n  {{#if access}}\n  <span class="flag {{access}}">{{access}}</span>\n  {{/if}}\n\n  {{#if static}}\n  <span class="flag static">static</span>\n  {{/if}}\n\n  <div class="meta">\n    {{#if overwritten_from}}\n    <p>Inherited from\n      <a href="#">\n        {{overwritten_from/class}}\n      </a>\n      {{#if foundAt}}\n      but overwritten in\n      {{/if}}\n      {{else}}\n      {{#if extended_from}}\n    <p>Inherited from\n      <a href="#">{{extended_from}}</a>:\n      {{else}}\n      {{#providedBy}}\n    <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n    {{/providedBy}}\n    <p>\n      {{#if foundAt}}\n      Defined in\n      {{/if}}\n      {{/if}}\n      {{/if}}\n      {{#if foundAt}}\n      <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n      {{/if}}\n    </p>\n\n    {{#if deprecationMessage}}\n    <p>Deprecated: {{deprecationMessage}}</p>\n    {{/if}}\n\n\n    {{#if since}}\n    <p>Available since {{since}}</p>\n    {{/if}}\n  </div>\n\n\n  {{#if default}}\n  <p><strong>Default:</strong> {{default}}</p>\n  {{/if}}\n\n  {{#example}}\n  <div class="example">\n    <h4>Example:</h4>\n\n    <div class="example-content">\n      {{{.}}}\n    </div>\n  </div>\n  {{/example}}\n\n  {{#if subprops}}\n  <h4>Sub-properties:</h4>\n\n  <ul class="params-list">\n    {{#subprops}}\n    <li class="param">\n      {{#if optional}}\n      <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n      <span class="flag optional" title="This property is optional.">optional</span>\n      {{else}}\n      <code class="param-name">{{name}}</code>\n\n      {{/if}}\n\n      <div class="param-description">\n        {{{description}}}\n      </div>\n\n      {{#if subprops}}\n      <ul class="params-list">\n        {{#subprops}}\n        <li class="param">\n          {{#if optional}}\n          <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n          <span class="flag optional" title="This property is optional.">optional</span>\n          {{else}}\n          <code class="param-name">{{name}}</code>\n\n          {{/if}}\n\n          <div class="param-description">\n            {{{description}}}\n          </div>\n        </li>\n        {{/subprops}}\n      </ul>\n      {{/if}}\n    </li>\n    {{/subprops}}\n  </ul>\n  {{/if}}\n</div>\n';});
 
 
-define('text!tpl/itemEnd.handlebars',[],function () { return '\n\n  <div class="meta">\n    {{#if class}}\n    Class: \n    <strong><a href=\'#get/{{class}}\'>{{class}}</a></strong>\n    |\n    {{/if}}\n    File: \n    <strong><a href=\'#file/{{urlencodedfile}}/{{line}}\'>{{file}}:{{line}}</a></strong> \n  </div>\n\n\n\n  <a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a>';});
+define('text!tpl/itemEnd.handlebars',[],function () { return '<p>\n\n  <div class="meta">\n    {{#if class}}\n    Class: \n    <strong><a href=\'#get/{{class}}\'>{{class}}</a></strong>\n    |\n    {{/if}}\n    File: \n    <strong><a href=\'#file/{{urlencodedfile}}/{{line}}\'>{{file}}:{{line}}</a></strong> \n  </div>\n\n\n\n  <a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a>\n\n</p>';});
 
 // Copyright (C) 2006 Google Inc.
 //
@@ -9922,21 +9921,24 @@ define('fileView',[
   return fileView;
 
 });
+
+define('text!tpl/menu.html',[],function () { return '\n<% var i=0; %>\n<% var max=Math.ceil(groups.length/4); %>\n\n<% _.each(groups, function(group){ %>\n  <% if (i%max === 0) { %>\n    <dl>\n  <% } %>\n  <dd><a href="#group-<%=group%>"><%=group%></a></dd>\n  <% if (i%max === 3) { %>\n    </dl>\n  <% } %>\n  <% i++ %>\n<% }); %>';});
+
 define('menuView',[
   'underscore',
   'backbone',
-  'App'
-], function(_, Backbone, App) {
+  'App',
+  'text!tpl/menu.html'
+], function(_, Backbone, App, menuTpl) {
 
   var menuView = Backbone.View.extend({
-    el: '#menu',
+    el: '#collection-list-nav',
     /**
      * Init.
      * @returns {object} This view.
      */
     init: function() {
-      this.$menuItems = this.$el.find('li');
-
+      this.menuTpl = _.template(menuTpl);
       return this;
     },
     /**
@@ -9944,18 +9946,75 @@ define('menuView',[
      * @returns {object} This view.
      */
     render: function() {
-      
+    
+      var groups = [];
+      _.each(App.modules, function (item, i) {
+        if (item.file.indexOf('addons') === -1) { //addons don't get displayed on main page
+          groups.push(item.name);
+        }
+      });
 
-      return this;
+      // Sort groups by name A-Z
+      _.sortBy(self.groups, this.sortByName);
+
+      var menuHtml = this.menuTpl({
+        'groups': groups
+      });
+
+      // Render the view
+      this.$el.html(menuHtml);
     },
+
+    hide: function() {
+      this.$el.hide();
+    },
+
+    show: function() {
+      this.$el.show();
+    },
+
     /**
      * Update the menu.
      * @param {string} el The name of the current route.
      */
     update: function(menuItem) {
       //console.log(menuItem);
-      this.$menuItems.removeClass('active');
-      this.$menuItems.find('a[href=#'+menuItem+']').parent().addClass('active');
+      // this.$menuItems.removeClass('active');
+      // this.$menuItems.find('a[href=#'+menuItem+']').parent().addClass('active');
+
+
+          // <dl>
+          //     <dt>A&#8211;E</dt>
+          //     <dd><a href="#group-color">Color</a></dd>
+          //     <dd><a href="#group-constants">Constants</a></dd>
+          //     <dd><a href="#group-data">Data</a></dd>
+          //     <dd><a href="#group-environment">Environment</a></dd>
+          // </dl>    
+
+          // <dl>
+          //     <dt>I&#8211;O</dt>
+          //     <dd><a href="#group-image">Image</a></dd>
+          //     <dd><a href="#group-input">Input</a></dd>
+          //     <dd><a href="#group-math">Math</a></dd>
+          //     <dd><a href="#group-output">Output</a></dd>
+          // </dl>
+
+          // <dl>
+          //     <dt>S&#8211;T</dt>
+          //     <dd><a href="#group-shape">Shape</a></dd>
+          //     <dd><a href="#group-structure">Structure</a></dd>
+          //     <dd><a href="#group-transform">Transform</a></dd>
+          //     <dd><a href="#group-typography">Typography</a></dd>
+          // </dl>
+
+          // <dl>
+          //     <dt>U&#8211;Z</dt>
+          //     <dd><a href="#group-shape">Uber Test</a></dd>
+          //     <dd><a href="#group-shape">Viability test</a></dd>
+          //     <dd><a href="#group-shape">W/4 columns</a></dd>
+          //     <dd><a href="#group-shape">Zoinks!</a></dd>
+          // </dl>
+
     }
 
   });
@@ -10230,6 +10289,8 @@ define('router',[
       this.init(function() {
         var item = self.getItem(searchClass, searchItem);
 
+        App.menuView.hide();
+
         if (item) {
           App.itemView.show(item);
         } else {
@@ -10289,6 +10350,7 @@ define('router',[
       }
 
       this.init(function() {
+        App.menuView.show(collection);
         App.menuView.update(collection);
         App.listView.show(collection);
       });
@@ -10299,7 +10361,7 @@ define('router',[
      */
     library: function(collection) {
       this.init(function() {
-        App.menuView.update(collection);
+        App.menuView.hide();
         App.libraryView.show(collection);
       });
     },
@@ -10308,6 +10370,7 @@ define('router',[
      */
     search: function() {
       this.init(function() {
+        App.menuView.hide();
         App.pageView.hideContentViews();
       });
     },
@@ -10318,6 +10381,7 @@ define('router',[
      */
     file: function(filepath, line) {
       this.init(function() {
+        App.menuView.hide();
         App.fileView.show(filepath, line);
       });
     },
@@ -10385,6 +10449,7 @@ require([
     App.events = [];
     App.allItems = [];
     App.sound = { items: [] };
+    App.modules = [];
     App.project = data.project;
 
 
@@ -10392,6 +10457,7 @@ require([
 
     // Get class items (methods, properties, events)
     _.each(modules, function(m, idx, array) {
+      App.modules.push(m);
       if (m.name == "p5.sound") {
         App.sound.module = m;
       }
