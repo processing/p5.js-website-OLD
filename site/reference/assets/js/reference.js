@@ -5091,7 +5091,7 @@ define('searchView',[
 });
 
 
-define('text!tpl/list.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<% var i=0; %>\n\n<% _.each(groups, function(group){ %>\n  <div class="column_<%= i%3 %>">\n  <h3 class="group-name"><%=group.name%></h3>\n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <% if (subgroup.name !== group.name) { %>\n      <strong><%=subgroup.name%></strong>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n      <br>\n      <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n    <% }); %>\n    <br><br>\n  <% }); %>\n  </div>\n  <% i++; %>\n<% }); %>\n';});
+define('text!tpl/list.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<% var i=0; %>\n\n<% _.each(groups, function(group){ %>\n  <div class="column_<%= i%3 %>">\n  <h3 class="group-name"><%=group.name%></h3>\n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <% if (subgroup.name !== group.name) { %>\n      <% if (subgroup.hash) { %>\n        <a href="<%=subgroup.hash%>"><strong><%=subgroup.name%></strong></a>\n      <% } else { %>\n        <strong><%=subgroup.name%></strong>\n      <% } %>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n      <br>\n      <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n    <% }); %>\n    <br><br>\n  <% }); %>\n  </div>\n  <% i++; %>\n<% }); %>\n';});
 
 define('listView',[
   'underscore',
@@ -5146,7 +5146,14 @@ define('listView',[
               };
             }
 
-            self.groups[group].subgroups[subgroup].items.push(item);
+            if (item.file.indexOf('objects') === -1) {
+              self.groups[group].subgroups[subgroup].items.push(item);
+            } else {
+              var hash = item.hash;
+              var ind = hash.lastIndexOf('/');
+              hash = hash.substring(0, ind);
+              self.groups[group].subgroups[subgroup].hash = hash;
+            }
           }
         });
 
@@ -7974,16 +7981,19 @@ return Handlebars;
 define('text!tpl/item.html',[],function () { return '<p>\n\t<strong>Name</strong><br>\n\t<%=name%><% if (isMethod) { %>()<% } %>\n  \n\n  <div>\n  <% if (isConstant) { %>\n    <span class="label label-warning final">Constant</span>\n  <% } %>\n  </div>\n</p>\n\n\n';});
 
 
-define('text!tpl/class.html',[],function () { return '<!--  <div class="description"> \n    <%=description%>\n  </div>\n  \n<div class="meta">File: <strong><a href=\'#file/<%=urlencodedfile%>/<%=line%>\'><%=file%>:<%=line%></a></strong></div>-->\n\n  <% if (isConstructor) { %>\n  <div class="constructor">\n    <!--<h2>Constructor</h2>--> \n    <%=constructor%>\n  </div>\n  <% } %>\n';});
+define('text!tpl/class.html',[],function () { return '\n<% if (isConstructor) { %>\n<div class="constructor">\n  <!--<h2>Constructor</h2>--> \n  <%=constructor%>\n</div>\n<% } %>\n\n\n<p>\n  <strong>Fields</strong><br>\n  <% var fields = _.filter(things, function(item) { return item.itemtype === \'property\' }); %>\n  <% _.each(fields, function(item) { %>\n    <a href="<%=item.hash%>"><%=item.name%></a>: <%= item.description %>\n    <br>\n  <% }); %>\n</p>\n\n<p>\n  <strong>Methods</strong><br>\n  <% var methods = _.filter(things, function(item) { return item.itemtype === \'method\' }); %>\n  <% _.each(methods, function(item) { %>\n    <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>: <%= item.description %>\n    <br>\n  <% }); %>\n</p>';});
 
 
-define('text!tpl/method.handlebars',[],function () { return '\n  {{#example}}\n  <div class="example">\n    <p><strong>Example</strong></p>\n\n    <div class="example-content">\n      {{{.}}}\n    </div>\n  </div>\n  {{/example}}\n\n\n  <p class="description">\n    <strong>Description</strong><br>\n    {{{description}}}\n  </p>\n\n\n\n  <p>\n    <strong>Syntax</strong><br>\n<pre><code class="language-javascript">{{#if isConstructor}}new {{/if}}{{name}}({{#if params}}{{#foreach params}}{{#if optional}}[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]{{else}}{{name}}{{/if}}{{#unless $last}}, {{/unless}}{{/foreach}}{{/if}})</code></pre>\n  </p>\n\n\n\n\n\n\n\n  {{#if return}}\n  <span class="returns-inline">\n    <span class="type"></span>\n  </span>\n  {{/if}}\n\n  {{#if deprecated}}\n  <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>\n  {{/if}}\n\n  {{#if access}}\n  <span class="flag {{access}}">{{access}}</span>\n  {{/if}}\n\n  {{#if final}}\n  <span class="flag final">final</span>\n  {{/if}}\n\n  {{#if static}}\n  <span class="flag static">static</span>\n  {{/if}}\n\n  {{#if chainable}}\n  <span class="label label-success chainable">chainable</span>\n  {{/if}}\n\n  {{#if async}}\n  <span class="flag async">async</span>\n  {{/if}}\n\n  <!--  <div class="meta">\n      {{#if overwritten_from}}\n      <p>Inherited from\n        <a href="#">\n          {{overwritten_from/class}}\n        </a>\n        {{#if foundAt}}\n        but overwritten in\n        {{/if}}\n        {{else}}\n        {{#if extended_from}}\n      <p>Inherited from\n        <a href="#">{{extended_from}}</a>:\n        {{else}}\n        {{#providedBy}}\n      <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n      {{/providedBy}}\n      <p>\n        {{#if foundAt}}\n        Defined in\n        {{/if}}\n        {{/if}}\n        {{/if}}\n        {{#if foundAt}}\n        <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n        {{/if}}\n      </p>\n  \n      {{#if deprecationMessage}}\n      <p>Deprecated: {{deprecationMessage}}</p>\n      {{/if}}\n  \n      {{#if since}}\n      <p>Available since {{since}}</p>\n      {{/if}}\n    </div>-->\n\n\n  {{#if params}}\n  <p class="params">\n    <strong>Parameters</strong><br>\n\n      {{#params}}\n\n        {{#if optional}}\n        <code  class="language-javascript">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n        {{else}}\n        <code  class="language-javascript">{{name}}</code>\n\n        {{/if}}\n\n        {{#if type}}\n          <span class="param-type label label-info">{{type}}</span>: {{{description}}}</span> \n        {{/if}}\n\n        {{#if multiple}}\n        <span class="flag multiple" title="This argument may occur one or more times.">multiple</span>\n        {{/if}}\n\n\n        {{#if props}}\n          {{#props}}\n            {{#if optional}}\n            <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n            <span class="flag optional" title="This parameter is optional.">optional</span>\n            {{else}}\n            <code class="param-name">{{name}}</code>\n\n            {{/if}}\n\n            {{{description}}}\n            \n          {{/props}}\n        {{/if}}\n        <br>\n      {{/params}}\n  </p>\n  {{/if}}\n\n  {{#return}}\n  <p>\n    <strong>Returns</strong><br>\n\n      {{#if type}}\n        <span class="param-type label label-info">{{type}}</span>: {{{description}}}\n      {{/if}}\n\n  </p>\n  {{/return}}\n\n\n  <div class="meta">\n    {{#if class}}\n    Class: \n    <strong><a href=\'#get/{{class}}\'>{{class}}</a></strong>\n    |\n    {{/if}}\n    File: \n    <strong><a href=\'#file/{{urlencodedfile}}/{{line}}\'>{{file}}:{{line}}</a></strong> \n  </div>\n\n\n\n  <a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a>\n';});
+define('text!tpl/method.handlebars',[],function () { return '\n  {{#example}}\n  <div class="example">\n    <p><strong>Example</strong></p>\n\n    <div class="example-content">\n      {{{.}}}\n    </div>\n  </div>\n  {{/example}}\n\n\n  <p class="description">\n    <strong>Description</strong><br>\n    {{{description}}}\n  </p>\n\n\n\n  <p>\n    <strong>Syntax</strong><br>\n<pre><code class="language-javascript">{{#if isConstructor}}new {{/if}}{{name}}({{#if params}}{{#foreach params}}{{#if optional}}[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]{{else}}{{name}}{{/if}}{{#unless $last}}, {{/unless}}{{/foreach}}{{/if}})</code></pre>\n  </p>\n\n\n\n\n\n\n\n  {{#if return}}\n  <span class="returns-inline">\n    <span class="type"></span>\n  </span>\n  {{/if}}\n\n  {{#if deprecated}}\n  <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>\n  {{/if}}\n\n  {{#if access}}\n  <span class="flag {{access}}">{{access}}</span>\n  {{/if}}\n\n  {{#if final}}\n  <span class="flag final">final</span>\n  {{/if}}\n\n  {{#if static}}\n  <span class="flag static">static</span>\n  {{/if}}\n\n  {{#if chainable}}\n  <span class="label label-success chainable">chainable</span>\n  {{/if}}\n\n  {{#if async}}\n  <span class="flag async">async</span>\n  {{/if}}\n\n  <!--  <div class="meta">\n      {{#if overwritten_from}}\n      <p>Inherited from\n        <a href="#">\n          {{overwritten_from/class}}\n        </a>\n        {{#if foundAt}}\n        but overwritten in\n        {{/if}}\n        {{else}}\n        {{#if extended_from}}\n      <p>Inherited from\n        <a href="#">{{extended_from}}</a>:\n        {{else}}\n        {{#providedBy}}\n      <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n      {{/providedBy}}\n      <p>\n        {{#if foundAt}}\n        Defined in\n        {{/if}}\n        {{/if}}\n        {{/if}}\n        {{#if foundAt}}\n        <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n        {{/if}}\n      </p>\n  \n      {{#if deprecationMessage}}\n      <p>Deprecated: {{deprecationMessage}}</p>\n      {{/if}}\n  \n      {{#if since}}\n      <p>Available since {{since}}</p>\n      {{/if}}\n    </div>-->\n\n\n  {{#if params}}\n  <p class="params">\n    <strong>Parameters</strong><br>\n\n      {{#params}}\n\n        {{#if optional}}\n        <code  class="language-javascript">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n        {{else}}\n        <code  class="language-javascript">{{name}}</code>\n\n        {{/if}}\n\n        {{#if type}}\n          <span class="param-type label label-info">{{type}}</span>: {{{description}}}</span> \n        {{/if}}\n\n        {{#if multiple}}\n        <span class="flag multiple" title="This argument may occur one or more times.">multiple</span>\n        {{/if}}\n\n\n        {{#if props}}\n          {{#props}}\n            {{#if optional}}\n            <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n            <span class="flag optional" title="This parameter is optional.">optional</span>\n            {{else}}\n            <code class="param-name">{{name}}</code>\n\n            {{/if}}\n\n            {{{description}}}\n            \n          {{/props}}\n        {{/if}}\n        <br>\n      {{/params}}\n  </p>\n  {{/if}}\n\n  {{#return}}\n  <p>\n    <strong>Returns</strong><br>\n\n      {{#if type}}\n        <span class="param-type label label-info">{{type}}</span>: {{{description}}}\n      {{/if}}\n\n  </p>\n  {{/return}}\n\n';});
 
 
 define('text!tpl/event.handlebars',[],function () { return '\n<div id="event_{{name}}" class="events item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extended_from}} inherited{{/if}}">\n  <!--<h3 class="name"><code>{{name}}</code></h3>-->\n\n  <div class="description">\n    <!--<h4>Description:</h4>-->\n    <p>{{{description}}}</p>\n  </div>\n\n  {{#if deprecated}}\n  <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>\n  {{/if}}\n\n  {{#if access}}\n  <span class="flag {{access}}">{{access}}</span>\n  {{/if}}\n\n  {{#if final}}\n  <span class="flag final">final</span>\n  {{/if}}\n\n  {{#if static}}\n  <span class="flag static">static</span>\n  {{/if}}\n\n<!--  <div class="meta">\n    {{#if overwritten_from}}\n    <p>Inherited from\n      <a href="#">\n        {{overwritten_from/class}}\n      </a>\n      {{#if foundAt}}\n      but overwritten in\n      {{/if}}\n      {{else}}\n      {{#if extended_from}}\n    <p>Inherited from\n      <a href="#">{{extended_from}}</a>:\n      {{else}}\n      {{#providedBy}}\n    <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n    {{/providedBy}}\n    <p>\n      {{#if foundAt}}\n      Defined in\n      {{/if}}\n      {{/if}}\n      {{/if}}\n      {{#if foundAt}}\n      <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n      {{/if}}\n    </p>\n\n    {{#if deprecationMessage}}\n    <p>Deprecated: {{deprecationMessage}}</p>\n    {{/if}}\n\n    {{#if since}}\n    <p>Available since {{since}}</p>\n    {{/if}}\n  </div>-->\n\n\n\n  {{#if params}}\n  <div class="params">\n    <h4>Event Payload:</h4>\n\n    <ul class="params-list">\n      {{#params}}\n      <li class="param">\n        {{#if optional}}\n        <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n        <span class="flag optional" title="This parameter is optional.">optional</span>\n        {{else}}\n        <code class="param-name">{{name}}</code>\n\n        {{/if}}\n\n        {{#if multiple}}\n        <span class="flag multiple" title="This parameter may occur one or more times.">Multiple</span>\n        {{/if}}\n\n        <div class="param-description">\n          {{{description}}}\n        </div>\n\n        {{#if props}}\n        <ul class="params-list">\n          {{#props}}\n          <li class="param">\n            {{#if optional}}\n            <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n            <span class="flag optional" title="This parameter is optional.">optional</span>\n            {{else}}\n            <code class="param-name">{{name}}</code>\n\n            {{/if}}\n\n            <div class="param-description">\n              {{{description}}}\n            </div>\n\n            {{#if props}}\n            <ul class="params-list">\n              {{#props}}\n              <li class="param">\n                <code class="param-name">{{name}}</code>\n\n\n                <div class="param-description">\n                  {{{description}}}\n                </div>\n              </li>\n              {{/props}}\n            </ul>\n            {{/if}}\n          </li>\n          {{/props}}\n        </ul>\n        {{/if}}\n      </li>\n      {{/params}}\n    </ul>\n  </div>\n  {{/if}}\n\n\n  {{#example}}\n  <div class="example">\n    <h4>Example:</h4>\n\n    <div class="example-content">\n      {{{.}}}\n    </div>\n  </div>\n  {{/example}}\n\n\n\n  <div class="meta">\n    {{#if class}}\n    Class: \n    <strong><a href=\'#get/{{class}}\'>{{class}}</a></strong>\n    |\n    {{/if}}\n    File: \n    <strong><a href=\'#file/{{urlencodedfile}}/{{line}}\'>{{file}}:{{line}}</a></strong> \n  </div>\n\n\n</div>\n';});
 
 
 define('text!tpl/property.handlebars',[],function () { return '\n<div id="property_{{name}}" class="property item{{#if access}} {{access}}{{/if}}{{#if deprecated}} deprecated{{/if}}{{#if extended_from}} inherited{{/if}}">\n  \n\n  <div class="description"> \n    {{#if description}}\n    <!--<h4>Description:</h4>-->\n    <p>{{{description}}}</p>\n    {{else}}\n    <p>No description given.</p>\n    {{/if}}\n  </div>\n\n\n  <div class="meta">Class: <strong><a href=\'#get/{{class}}\'>{{class}}</a></strong> | File: <strong><a href=\'#file/{{urlencodedfile}}/{{line}}\'>{{file}}:{{line}}</a></strong></div>\n\n  {{#if deprecated}}\n  <span class="flag deprecated"{{#if deprecationMessage}} title="{{deprecationMessage}}"{{/if}}>deprecated</span>\n  {{/if}}\n\n\n  {{#if access}}\n  <span class="flag {{access}}">{{access}}</span>\n  {{/if}}\n\n  {{#if static}}\n  <span class="flag static">static</span>\n  {{/if}}\n\n  <div class="meta">\n    {{#if overwritten_from}}\n    <p>Inherited from\n      <a href="#">\n        {{overwritten_from/class}}\n      </a>\n      {{#if foundAt}}\n      but overwritten in\n      {{/if}}\n      {{else}}\n      {{#if extended_from}}\n    <p>Inherited from\n      <a href="#">{{extended_from}}</a>:\n      {{else}}\n      {{#providedBy}}\n    <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n    {{/providedBy}}\n    <p>\n      {{#if foundAt}}\n      Defined in\n      {{/if}}\n      {{/if}}\n      {{/if}}\n      {{#if foundAt}}\n      <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n      {{/if}}\n    </p>\n\n    {{#if deprecationMessage}}\n    <p>Deprecated: {{deprecationMessage}}</p>\n    {{/if}}\n\n\n    {{#if since}}\n    <p>Available since {{since}}</p>\n    {{/if}}\n  </div>\n\n\n  {{#if default}}\n  <p><strong>Default:</strong> {{default}}</p>\n  {{/if}}\n\n  {{#example}}\n  <div class="example">\n    <h4>Example:</h4>\n\n    <div class="example-content">\n      {{{.}}}\n    </div>\n  </div>\n  {{/example}}\n\n  {{#if subprops}}\n  <h4>Sub-properties:</h4>\n\n  <ul class="params-list">\n    {{#subprops}}\n    <li class="param">\n      {{#if optional}}\n      <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n      <span class="flag optional" title="This property is optional.">optional</span>\n      {{else}}\n      <code class="param-name">{{name}}</code>\n\n      {{/if}}\n\n      <div class="param-description">\n        {{{description}}}\n      </div>\n\n      {{#if subprops}}\n      <ul class="params-list">\n        {{#subprops}}\n        <li class="param">\n          {{#if optional}}\n          <code class="param-name optional">[{{name}}{{#if optdefault}}={{optdefault}}{{/if}}]</code>\n\n          <span class="flag optional" title="This property is optional.">optional</span>\n          {{else}}\n          <code class="param-name">{{name}}</code>\n\n          {{/if}}\n\n          <div class="param-description">\n            {{{description}}}\n          </div>\n        </li>\n        {{/subprops}}\n      </ul>\n      {{/if}}\n    </li>\n    {{/subprops}}\n  </ul>\n  {{/if}}\n</div>\n';});
+
+
+define('text!tpl/itemEnd.handlebars',[],function () { return '\n\n  <div class="meta">\n    {{#if class}}\n    Class: \n    <strong><a href=\'#get/{{class}}\'>{{class}}</a></strong>\n    |\n    {{/if}}\n    File: \n    <strong><a href=\'#file/{{urlencodedfile}}/{{line}}\'>{{file}}:{{line}}</a></strong> \n  </div>\n\n\n\n  <a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a>';});
 
 // Copyright (C) 2006 Google Inc.
 //
@@ -9656,10 +9666,11 @@ define('itemView',[
   'text!tpl/method.handlebars',
   'text!tpl/event.handlebars',
   'text!tpl/property.handlebars',
+  'text!tpl/itemEnd.handlebars',
   //'text!tpl/class.handlebars',
   // Tools
   'prettify'
-], function (_, Backbone, App, Handlebars, itemTpl, classTpl, methodTpl, eventTpl, propertyTpl) {
+], function (_, Backbone, App, Handlebars, itemTpl, classTpl, methodTpl, eventTpl, propertyTpl, endTpl) {
 
   
 
@@ -9687,7 +9698,7 @@ define('itemView',[
       this.methodTpl = Handlebars.compile(methodTpl);
       this.eventTpl = Handlebars.compile(eventTpl);
       this.propertyTpl = Handlebars.compile(propertyTpl);
-      //this.classTpl = Handlebars.compile(classTpl);
+      this.endTpl = Handlebars.compile(endTpl);
 
       return this;
     },
@@ -9718,6 +9729,10 @@ define('itemView',[
             var constructor = this.methodTpl(cleanItem);
             cleanItem.constructor = constructor;
           }
+
+          var contents = _.find(App.classes, function(c){ return c.name === cleanItem.name; });
+          cleanItem.things = contents.items;
+
           itemHtml += this.classTpl(cleanItem);
         } else if (item.itemtype === 'method') {
           itemHtml += this.methodTpl(cleanItem);
@@ -9726,6 +9741,8 @@ define('itemView',[
         } else if (item.itemtype === 'property') {
           itemHtml += this.propertyTpl(cleanItem);
         }
+
+        itemHtml += this.endTpl(cleanItem);
 
         // Insert the view in the dom
         this.$el.html(itemHtml);
@@ -10096,7 +10113,7 @@ define('pageView',[
         // Add the item view to the views array
         App.contentViews.push(App.itemView);
       }
-      
+
       // File view
       if (!App.fileView) {
         App.fileView = new fileView();
@@ -10113,7 +10130,7 @@ define('pageView',[
         App.contentViews.push(App.listView);
       }
       
-      // List view
+      // Libary view
       if (!App.libraryView) {
         App.libraryView = new libraryView();
         App.libraryView.init().render();
@@ -10157,10 +10174,6 @@ define('router',[
     routes: {
       '': 'list',
       'classes': 'list',
-      'methods': 'list',
-      'properties': 'list',
-      'events': 'list',
-      'list:group': 'list',
       'search': 'search',
       'file/:filepath/:line': 'file',
       'get/:searchClass(/:searchItem)': 'get',
@@ -10281,12 +10294,10 @@ define('router',[
       });
     },
     /**
-     * List items in a library.
+     * Display information for a library.
      * @param {string} collection The name of the collection to list.
      */
     library: function(collection) {
-
-
       this.init(function() {
         App.menuView.update(collection);
         App.libraryView.show(collection);
@@ -10390,6 +10401,11 @@ require([
     var items = data.classitems;
     var classes = data.classes;
 
+    // Get classes
+    _.each(classes, function(el, idx, array) {
+      App.classes.push(el);
+    });
+
     // Get class items (methods, properties, events)
     _.each(items, function(el, idx, array) {
 
@@ -10417,14 +10433,10 @@ require([
       }
     });
 
-    //console.log(App.data);
-
-    // Get classes
-    _.each(classes, function(el, idx, array) {
-      App.classes.push(el);
-      // App.allItems.push(el);
+    _.each(App.classes, function(c, idx) {
+      c.items = _.filter(App.allItems, function(it){ return it.class === c.name; });
     });
-    
+
     require(['router']);
   });
 });
