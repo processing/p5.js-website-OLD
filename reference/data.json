@@ -382,6 +382,7 @@
                 "Amplitude": 1,
                 "FFT": 1,
                 "Oscillator": 1,
+                "Pulse": 1,
                 "AudioIn": 1
             },
             "fors": {
@@ -390,7 +391,7 @@
                 "Amplitude": 1,
                 "FFT": 1,
                 "Oscillator": 1,
-                "Oscillator:Pulse": 1,
+                "Pulse": 1,
                 "AudioIn": 1
             },
             "namespaces": {}
@@ -686,7 +687,7 @@
                 "Amplitude": 1,
                 "FFT": 1,
                 "Oscillator": 1,
-                "Oscillator:Pulse": 1,
+                "Pulse": 1,
                 "AudioIn": 1
             },
             "fors": {
@@ -695,7 +696,7 @@
                 "Amplitude": 1,
                 "FFT": 1,
                 "Oscillator": 1,
-                "Oscillator:Pulse": 1,
+                "Pulse": 1,
                 "AudioIn": 1
             },
             "namespaces": {},
@@ -1298,16 +1299,32 @@
                 }
             ]
         },
-        "Oscillator:Pulse": {
-            "name": "Oscillator:Pulse",
-            "shortname": "Oscillator:Pulse",
+        "Pulse": {
+            "name": "Pulse",
+            "shortname": "Pulse",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "p5.sound",
-            "namespace": ""
+            "namespace": "",
+            "file": "lib/addons/p5.sound.js",
+            "line": 1568,
+            "description": "Creates a Pulse object, an oscillator that implements\nPulse Width Modulation.\nThe pulse is created with two oscillators.\nAccepts a parameter for frequency, and to set the\nwidth between the pulses.\n\nInspired by <a href=\"\nhttp://www.musicdsp.org/showone.php?id=8\">musicdsp.org\"</a>",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "freq",
+                    "description": "Frequency in oscillations per second (Hz)",
+                    "type": "[Number]"
+                },
+                {
+                    "name": "w",
+                    "description": "Width between the pulses (0 to 1.0,\n                       defaults to 0)",
+                    "type": "[Number]"
+                }
+            ]
         },
         "AudioIn": {
             "name": "AudioIn",
@@ -8049,27 +8066,6 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1568,
-            "description": "Creates a Pulse object, an oscillator that implements\nPulse Width Modulation.\nThe pulse is created with two oscillators.\nAccepts a parameter for frequency, and to set the\nwidth between the pulses.\n\nInspired by <a href=\"\nhttp://www.musicdsp.org/showone.php?id=8\">musicdsp.org\"</a>",
-            "itemtype": "method",
-            "name": "new Pulse",
-            "params": [
-                {
-                    "name": "freq",
-                    "description": "Frequency in oscillations per second (Hz)",
-                    "type": "[Number]"
-                },
-                {
-                    "name": "w",
-                    "description": "Width between the pulses (0 to 1.0,\n                       defaults to 0)",
-                    "type": "[Number]"
-                }
-            ],
-            "class": "Oscillator",
-            "module": "p5.sound"
-        },
-        {
-            "file": "lib/addons/p5.sound.js",
             "line": 1607,
             "description": "Set the width of a Pulse object (an oscillator that implements\nPulse Width Modulation).",
             "itemtype": "method",
@@ -8081,7 +8077,7 @@
                     "type": "[Number]"
                 }
             ],
-            "class": "Oscillator:Pulse",
+            "class": "Pulse",
             "module": "p5.sound"
         },
         {
