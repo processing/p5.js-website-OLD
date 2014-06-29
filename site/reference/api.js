@@ -8,7 +8,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Constants",
         "Creating & Reading",
         "Curves",
-        "DOM:Manipulate",
+        "DOM",
         "DOM:Media",
         "DOM:p5.Element",
         "Environment",
@@ -18,7 +18,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "Image:Pixels",
         "Keyboard",
         "Loading & Displaying",
-        "Manipulate",
         "Math",
         "Mouse",
         "Noise",
@@ -28,7 +27,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "SoundFile",
         "String Functions",
         "Structure",
-        "Structure:Structure",
         "Text Area",
         "Time & Date",
         "Touch",
@@ -38,6 +36,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Element",
         "p5.Image",
         "p5.Vector",
+        "p5.dom",
         "p5.sound",
         "p5.sound:Amplitude",
         "p5.sound:AudioIn",
@@ -47,7 +46,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.sound:SoundFile"
     ],
     "modules": [
-        "*",
         "Color",
         "Constants",
         "DOM",
@@ -61,13 +59,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "Structure",
         "Transform",
         "Typography",
+        "p5.dom",
         "p5.sound"
     ],
     "allModules": [
-        {
-            "displayName": "*",
-            "name": "*"
-        },
         {
             "displayName": "Color",
             "name": "Color"
@@ -103,6 +98,11 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Output",
             "name": "Output"
+        },
+        {
+            "displayName": "p5.dom",
+            "name": "p5.dom",
+            "description": "This is the p5.dom library."
         },
         {
             "displayName": "p5.sound",

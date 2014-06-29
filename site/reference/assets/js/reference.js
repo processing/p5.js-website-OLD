@@ -5007,6 +5007,7 @@ define('searchView',[
         'placeholder': placeholder,
         'className': className
       });
+      this.items = App.classes.concat(App.allItems);
 
       return this;
     },
@@ -5034,7 +5035,7 @@ define('searchView',[
         'displayKey': 'name',
         'minLength': 2,
         //'highlight': true,
-        'source': self.substringMatcher(App.classesAndItems),
+        'source': self.substringMatcher(this.items),
         'templates': {
           'empty': '<p class="empty-message">Unable to find any item that match the current query</p>',
           'suggestion': _.template(suggestionTpl)
@@ -5046,7 +5047,7 @@ define('searchView',[
      */
     typeaheadEvents: function($input) {
       $input.on('typeahead:selected', function(e, item, datasetName) {
-        var selectedItem = App.allItems[item.idx];
+        var selectedItem = this.items[item.idx];
         var hash = App.router.getHash(selectedItem).replace('#', '');
         App.router.navigate(hash, {'trigger': true});
       });
@@ -5168,14 +5169,6 @@ define('listView',[
           }
         });
 
-        // Sort groups by name A-Z
-        _.sortBy(self.groups, this.sortByName);
-
-        // Sort items by name A-Z
-        _.each(self.groups, function (group) {
-          _.sortBy(group.subgroups, this.sortByName);
-        });
-
         // Put the <li> items html into the list <ul>
         var listHtml = self.listTpl({
           'title': self.capitalizeFirst(listCollection),
@@ -5211,20 +5204,9 @@ define('listView',[
      */
     capitalizeFirst: function (str) {
       return str.substr(0, 1).toUpperCase() + str.substr(1);
-    },
-    /**
-     * Sort function (for the Array.prototype.sort() native method): from A to Z.
-     * @param {string} a
-     * @param {string} b
-     * @returns {Array} Returns an array with elements sorted from A to Z.
-     */
-    sortAZ: function (a, b) {
-      return a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase() ? 1 : -1;
-    },
-
-    sortByName: function (a, b) {
-      return a.name > b.name ? 1 : -1;
     }
+
+
 
   });
 
@@ -9931,7 +9913,7 @@ define('fileView',[
 
 });
 
-define('text!tpl/menu.html',[],function () { return '\n<% var i=0; %>\n<% var max=Math.ceil(groups.length/4); %>\n\n<% _.each(groups, function(group){ %>\n  <% if (i%max === 0) { %>\n    <dl>\n  <% } %>\n  <dd><a href="#group-<%=group%>"><%=group%></a></dd>\n  <% if (i%max === 3) { %>\n    </dl>\n  <% } %>\n  <% i++ %>\n<% }); %>';});
+define('text!tpl/menu.html',[],function () { return '\n<% var i=0; %>\n<% var max=Math.floor(groups.length/4); %>\n<% var rem=groups.length%max; %>\n\n<% _.each(groups, function(group){ %>\n  <% var m = rem > 0 ? 1 : 0 %>\n  <% if (i === 0) { %>\n    <dl>\n  <% } %>\n  <dd><a href="#group-<%=group%>"><%=group%></a></dd>\n  <% if (i === (max+m-1)) { %>\n    </dl>\n  \t<% rem-- %>\n  \t<% i=0 %>\n  <% } else { %>\n  \t<% i++ %>\n  <% } %>\n<% }); %>';});
 
 define('menuView',[
   'underscore',
@@ -9964,7 +9946,7 @@ define('menuView',[
       });
 
       // Sort groups by name A-Z
-      _.sortBy(self.groups, this.sortByName);
+      groups.sort();
 
       var menuHtml = this.menuTpl({
         'groups': groups
@@ -9991,48 +9973,14 @@ define('menuView',[
       // this.$menuItems.removeClass('active');
       // this.$menuItems.find('a[href=#'+menuItem+']').parent().addClass('active');
 
-
-          // <dl>
-          //     <dt>A&#8211;E</dt>
-          //     <dd><a href="#group-color">Color</a></dd>
-          //     <dd><a href="#group-constants">Constants</a></dd>
-          //     <dd><a href="#group-data">Data</a></dd>
-          //     <dd><a href="#group-environment">Environment</a></dd>
-          // </dl>    
-
-          // <dl>
-          //     <dt>I&#8211;O</dt>
-          //     <dd><a href="#group-image">Image</a></dd>
-          //     <dd><a href="#group-input">Input</a></dd>
-          //     <dd><a href="#group-math">Math</a></dd>
-          //     <dd><a href="#group-output">Output</a></dd>
-          // </dl>
-
-          // <dl>
-          //     <dt>S&#8211;T</dt>
-          //     <dd><a href="#group-shape">Shape</a></dd>
-          //     <dd><a href="#group-structure">Structure</a></dd>
-          //     <dd><a href="#group-transform">Transform</a></dd>
-          //     <dd><a href="#group-typography">Typography</a></dd>
-          // </dl>
-
-          // <dl>
-          //     <dt>U&#8211;Z</dt>
-          //     <dd><a href="#group-shape">Uber Test</a></dd>
-          //     <dd><a href="#group-shape">Viability test</a></dd>
-          //     <dd><a href="#group-shape">W/4 columns</a></dd>
-          //     <dd><a href="#group-shape">Zoinks!</a></dd>
-          // </dl>
-
     }
-
   });
 
   return menuView;
 
 });
 
-define('text!tpl/library.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<h3><%= module.name %></h3>\n\n\n<p><%= module.description %></p>\n\n\n<% _.each(groups, function(group){ %>\n  <div>\n  <% if (group.name !== module.name) { %>\n    <a href="<%=group.hash%>"><strong><%=group.name%>()</strong></a>\n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <br>\n    <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n  <% }); %>\n  <br><br>\n  </div>\n<% }); %>\n';});
+define('text!tpl/library.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<h3><%= module.name %></h3>\n\n\n<p><%= module.description %></p>\n\n<% _.each(groups, function(group){ %>\n  <div>\n<p>const:<%= group.is_constructor %></p>\n\n  <% if (group.name !== module.name) { %>\n    <a href="<%=group.hash%>"><strong><%=group.name%>()</strong></a>\n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <br>\n    <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n  <% }); %>\n  <br><br>\n  </div>\n<% }); %>\n';});
 
 define('libraryView',[
   'underscore',
@@ -10457,7 +10405,7 @@ require([
   'App'], function(_, Backbone, App) {
   
   // Set collections
-  App.collections = ['allItems', 'classes', 'events', 'methods', 'properties', 'sound'];
+  App.collections = ['allItems', 'classes', 'events', 'methods', 'properties', 'sound', 'dom'];
 
   // Get json API data
   $.getJSON("data.json", function(data) {
@@ -10468,9 +10416,9 @@ require([
     App.events = [];
     App.allItems = [];
     App.sound = { items: [] };
+    App.dom = { items: [] };
     App.modules = [];
     App.project = data.project;
-    App.classesAndItems = [];
 
 
     var modules = data.modules;
@@ -10481,6 +10429,9 @@ require([
       if (m.name == "p5.sound") {
         App.sound.module = m;
       }
+      else if (m.name == "p5.dom") {
+        App.dom.module = m;
+      }
     });
 
 
@@ -10488,8 +10439,10 @@ require([
     var classes = data.classes;
 
     // Get classes
-    _.each(classes, function(el, idx, array) {
-      App.classes.push(el);
+    _.each(classes, function(c, idx, array) {
+      if (c.module === 'p5.sound' || c.module === 'p5.dom' || c.name.indexOf('p5') !== -1) {
+        App.classes.push(c);
+      }
     });
 
     // Get class items (methods, properties, events)
@@ -10516,18 +10469,14 @@ require([
         if (el.module === "p5.sound") {
           App.sound.items.push(el);
         }
-        App.classesAndItems.push(el);
+        else if (el.module === "p5.dom" || el.module === 'DOM') {
+          App.dom.items.push(el);
+        }
       }
     });
 
     _.each(App.classes, function(c, idx) {
       c.items = _.filter(App.allItems, function(it){ return it.class === c.name; });
-    });
-
-    _.each(App.classes, function(c, idx) {
-      if (c.module == 'p5.sound' || c.name.indexOf('p5') !== -1) {
-        App.classesAndItems.push(c);
-      }
     });
 
 
