@@ -10,7 +10,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5",
         "p5.Element",
         "p5.Image",
+        "p5.MediaElement",
         "p5.Vector",
+        "p5.dom",
         "p5.sound"
     ],
     "modules": [
