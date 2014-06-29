@@ -1,6 +1,6 @@
-function renderCode(sel) {
-  var selector = sel || 'example'
-  var examples = document.getElementsByClassName(selector);
+function renderCode() {
+  console.log('render')
+  var examples = document.getElementsByClassName('example');
   if (examples.length > 0) {
 
     var sketches = examples[0].getElementsByTagName('code');
@@ -29,7 +29,7 @@ function renderCode(sel) {
     sketchContainer.style.height = sketchNode.offsetHeight;
 
     // remove start and end lines
-    var runnable = sketch.innerText;
+    var runnable = sketch.innerText.replace(/^\s+|\s+$/g, '');
     var rows = sketch.innerText.split('\n').length;
 
     // var h = Math.max(sketch.offsetHeight, 100) + 25;
@@ -65,6 +65,7 @@ function renderCode(sel) {
         setMode(sketch, 'run');
       }
     }
+
 
     var reset_button = document.createElement('button');
     reset_button.value = 'reset';
@@ -110,6 +111,7 @@ function renderCode(sel) {
     if (isRef) {
       cnv = sketchContainer.getElementsByClassName('cnv_div')[0];
     } else {
+      console.log(sketchNode.className);
       cnv = parent.parentNode.getElementsByClassName('cnv_div')[0];
     }
     cnv.innerHTML = '';
@@ -156,18 +158,19 @@ function renderCode(sel) {
     if (typeof Prism !== 'undefined') Prism.highlightAll();
 
     $( document ).ready(function() {
-      $( ".example-content" ).find('div').each(function() {
+      setTimeout(function() {
+        var myp5 = new p5(s, cnv);      
+        $( ".example-content" ).find('div').each(function() {
           $this = $( this );
           var pre = $this.find('pre')[0];
           if (pre) {
             $this.height( Math.max($(pre).height()*1.1, 100) + 20 );
           }
-      });
+        });
+      }, 100); 
+
     });
 
-    setTimeout(function() {
-      var myp5 = new p5(s, cnv);
-    }); 
   }
 
 }
