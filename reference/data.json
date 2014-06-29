@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.2.19",
+        "version": "0.2.20",
         "url": ""
     },
     "files": {
@@ -42,8 +42,7 @@
             "modules": {},
             "classes": {},
             "fors": {
-                "Environment:Environment": 1,
-                "Structure:Structure": 1
+                "Structure": 1
             },
             "namespaces": {}
         },
@@ -67,12 +66,12 @@
             },
             "namespaces": {}
         },
-        "src/dom/manipulate.js": {
-            "name": "src/dom/manipulate.js",
+        "src/dom/dom.js": {
+            "name": "src/dom/dom.js",
             "modules": {},
             "classes": {},
             "fors": {
-                "Manipulate": 1
+                "DOM": 1
             },
             "namespaces": {}
         },
@@ -83,7 +82,8 @@
             },
             "classes": {},
             "fors": {
-                "Environment": 1
+                "Environment": 1,
+                "Environment:Environment": 1
             },
             "namespaces": {}
         },
@@ -92,6 +92,24 @@
             "modules": {},
             "classes": {},
             "fors": {},
+            "namespaces": {}
+        },
+        "src/image/image.js": {
+            "name": "src/image/image.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Image": 1
+            },
+            "namespaces": {}
+        },
+        "src/image/loading_displaying.js": {
+            "name": "src/image/loading_displaying.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Loading & Displaying": 1
+            },
             "namespaces": {}
         },
         "src/image/pixels.js": {
@@ -160,6 +178,15 @@
             },
             "namespaces": {}
         },
+        "src/math/math.js": {
+            "name": "src/math/math.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Math": 1
+            },
+            "namespaces": {}
+        },
         "src/math/noise.js": {
             "name": "src/math/noise.js",
             "modules": {},
@@ -192,9 +219,11 @@
             "modules": {
                 "DOM": 1
             },
-            "classes": {},
+            "classes": {
+                "p5.Element": 1
+            },
             "fors": {
-                "p5.Element": 1,
+                "DOM": 1,
                 "DOM:p5.Element": 1
             },
             "namespaces": {}
@@ -208,8 +237,6 @@
                 "p5.Image": 1
             },
             "fors": {
-                "Image": 1,
-                "Loading & Displaying": 1,
                 "p5.Image": 1
             },
             "namespaces": {}
@@ -223,8 +250,7 @@
                 "p5.Vector": 1
             },
             "fors": {
-                "p5.Vector": 1,
-                "Math": 1
+                "p5.Vector": 1
             },
             "namespaces": {}
         },
@@ -336,12 +362,12 @@
         "lib/addons/p5.dom.js": {
             "name": "lib/addons/p5.dom.js",
             "modules": {
-                "*": 1
+                "p5.dom": 1
             },
             "classes": {},
             "fors": {
-                "DOM:p5.Element": 1,
-                "DOM:Manipulate": 1,
+                "p5.Element": 1,
+                "p5.dom": 1,
                 "DOM:Media": 1
             },
             "namespaces": {}
@@ -351,9 +377,12 @@
             "modules": {
                 "p5.sound": 1
             },
-            "classes": {},
+            "classes": {
+                "SoundFile": 1
+            },
             "fors": {
                 "p5.sound": 1,
+                "SoundFile": 1,
                 "p5.sound:SoundFile": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
@@ -398,25 +427,18 @@
             "file": "src/core/constants.js",
             "line": 1
         },
-        "*": {
-            "name": "*",
+        "Structure": {
+            "name": "Structure",
             "submodules": {},
             "classes": {
-                "Environment:Environment": 1,
-                "Structure:Structure": 1,
-                "DOM:Manipulate": 1,
-                "DOM:Media": 1
+                "Structure": 1
             },
             "fors": {
-                "Environment:Environment": 1,
-                "Structure:Structure": 1,
-                "DOM:p5.Element": 1,
-                "DOM:Manipulate": 1,
-                "DOM:Media": 1
+                "Structure": 1
             },
             "namespaces": {},
             "tag": "module",
-            "file": "lib/addons/p5.dom.js",
+            "file": "src/structure/structure.js",
             "line": 1,
             "requires": [
                 "constants"
@@ -445,28 +467,29 @@
             "name": "DOM",
             "submodules": {},
             "classes": {
-                "Manipulate": 1,
+                "DOM": 1,
                 "p5.Element": 1,
                 "DOM:p5.Element": 1
             },
             "fors": {
-                "Manipulate": 1,
-                "p5.Element": 1,
+                "DOM": 1,
                 "DOM:p5.Element": 1
             },
             "namespaces": {},
             "tag": "module",
             "file": "src/objects/p5.Element.js",
-            "line": 1
+            "line": 9
         },
         "Environment": {
             "name": "Environment",
             "submodules": {},
             "classes": {
-                "Environment": 1
+                "Environment": 1,
+                "Environment:Environment": 1
             },
             "fors": {
-                "Environment": 1
+                "Environment": 1,
+                "Environment:Environment": 1
             },
             "namespaces": {},
             "tag": "module",
@@ -481,23 +504,23 @@
             "name": "Image",
             "submodules": {},
             "classes": {
-                "Pixels": 1,
-                "Image:Pixels": 1,
                 "Image": 1,
                 "Loading & Displaying": 1,
+                "Pixels": 1,
+                "Image:Pixels": 1,
                 "p5.Image": 1
             },
             "fors": {
-                "Pixels": 1,
-                "Image:Pixels": 1,
                 "Image": 1,
                 "Loading & Displaying": 1,
+                "Pixels": 1,
+                "Image:Pixels": 1,
                 "p5.Image": 1
             },
             "namespaces": {},
             "tag": "module",
             "file": "src/objects/p5.Image.js",
-            "line": 225,
+            "line": 23,
             "requires": [
                 "core"
             ]
@@ -533,24 +556,24 @@
             "submodules": {},
             "classes": {
                 "Calculation": 1,
+                "Math": 1,
                 "Noise": 1,
                 "Random": 1,
                 "Trigonometry": 1,
-                "p5.Vector": 1,
-                "Math": 1
+                "p5.Vector": 1
             },
             "fors": {
                 "Calculation": 1,
+                "Math": 1,
                 "Noise": 1,
                 "Random": 1,
                 "Trigonometry": 1,
-                "p5.Vector": 1,
-                "Math": 1
+                "p5.Vector": 1
             },
             "namespaces": {},
             "tag": "module",
             "file": "src/objects/p5.Vector.js",
-            "line": 32,
+            "line": 14,
             "requires": [
                 "core"
             ]
@@ -597,23 +620,6 @@
                 "constants"
             ]
         },
-        "Structure": {
-            "name": "Structure",
-            "submodules": {},
-            "classes": {
-                "Structure": 1
-            },
-            "fors": {
-                "Structure": 1
-            },
-            "namespaces": {},
-            "tag": "module",
-            "file": "src/structure/structure.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
         "Transform": {
             "name": "Transform",
             "submodules": {},
@@ -649,11 +655,31 @@
                 "constants"
             ]
         },
+        "p5.dom": {
+            "name": "p5.dom",
+            "submodules": {},
+            "classes": {
+                "p5.dom": 1,
+                "DOM:Media": 1
+            },
+            "fors": {
+                "p5.Element": 1,
+                "p5.dom": 1,
+                "DOM:Media": 1
+            },
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/addons/p5.dom.js",
+            "line": 2,
+            "description": "This is the p5.dom library.",
+            "itemtype": "main"
+        },
         "p5.sound": {
             "name": "p5.sound",
             "submodules": {},
             "classes": {
                 "p5.sound": 1,
+                "SoundFile": 1,
                 "p5.sound:SoundFile": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
@@ -663,6 +689,7 @@
             },
             "fors": {
                 "p5.sound": 1,
+                "SoundFile": 1,
                 "p5.sound:SoundFile": 1,
                 "p5.sound:Amplitude": 1,
                 "p5.sound:FFT": 1,
@@ -673,7 +700,9 @@
             "namespaces": {},
             "tag": "module",
             "file": "lib/addons/p5.sound.js",
-            "line": 27
+            "line": 220,
+            "description": "Version .0003\n\np5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.\n\nThis is an addon for p5.js that extends p5 with the following classes:\n  SoundOut\n  SoundFile\n  Amplitude\n  FFT\n  Oscillator (SinOsc, SqrOsc, SawOsc, TriOsc, Pulse)\n  AudioIn\n   ... more soon!\n \nIncorporates elements from:\n  - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n  - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n  - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n  - wavesurfer.js\n  - recorder.js (hopefully soon!)\n  - Wilm Thoben's Sound library for Processing",
+            "itemtype": "main"
         }
     },
     "classes": {
@@ -710,26 +739,15 @@
             "module": "Constants",
             "namespace": ""
         },
-        "Environment:Environment": {
-            "name": "Environment:Environment",
-            "shortname": "Environment:Environment",
+        "Structure": {
+            "name": "Structure",
+            "shortname": "Structure",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "*",
-            "namespace": ""
-        },
-        "Structure:Structure": {
-            "name": "Structure:Structure",
-            "shortname": "Structure:Structure",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "*",
+            "module": "Structure",
             "namespace": ""
         },
         "Array Functions": {
@@ -754,9 +772,9 @@
             "module": "Data",
             "namespace": ""
         },
-        "Manipulate": {
-            "name": "Manipulate",
-            "shortname": "Manipulate",
+        "DOM": {
+            "name": "DOM",
+            "shortname": "DOM",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -774,6 +792,39 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Environment",
+            "namespace": ""
+        },
+        "Environment:Environment": {
+            "name": "Environment:Environment",
+            "shortname": "Environment:Environment",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Environment",
+            "namespace": ""
+        },
+        "Image": {
+            "name": "Image",
+            "shortname": "Image",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Image",
+            "namespace": ""
+        },
+        "Loading & Displaying": {
+            "name": "Loading & Displaying",
+            "shortname": "Loading & Displaying",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Image",
             "namespace": ""
         },
         "Pixels": {
@@ -864,6 +915,17 @@
             "module": "Math",
             "namespace": ""
         },
+        "Math": {
+            "name": "Math",
+            "shortname": "Math",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Math",
+            "namespace": ""
+        },
         "Noise": {
             "name": "Noise",
             "shortname": "Noise",
@@ -906,7 +968,24 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "DOM",
-            "namespace": ""
+            "namespace": "",
+            "file": "src/objects/p5.Element.js",
+            "line": 9,
+            "description": "A class to describe...",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "elt",
+                    "description": "DOM node that is wrapped",
+                    "type": "String"
+                },
+                {
+                    "name": "pInst",
+                    "description": "pointer to p5 instance",
+                    "type": "Object",
+                    "optional": true
+                }
+            ]
         },
         "DOM:p5.Element": {
             "name": "DOM:p5.Element",
@@ -917,28 +996,6 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "DOM",
-            "namespace": ""
-        },
-        "Image": {
-            "name": "Image",
-            "shortname": "Image",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Image",
-            "namespace": ""
-        },
-        "Loading & Displaying": {
-            "name": "Loading & Displaying",
-            "shortname": "Loading & Displaying",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Image",
             "namespace": ""
         },
         "p5.Image": {
@@ -952,7 +1009,7 @@
             "module": "Image",
             "namespace": "",
             "file": "src/objects/p5.Image.js",
-            "line": 225,
+            "line": 23,
             "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage. p5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image. The methods described below allow\neasy access to the image's pixels and alpha channel and simplify the\nprocess of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded.",
             "is_constructor": 1,
             "params": [
@@ -984,8 +1041,8 @@
             "module": "Math",
             "namespace": "",
             "file": "src/objects/p5.Vector.js",
-            "line": 32,
-            "description": "The p5.Vector constructor function.\n\nA class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class.",
+            "line": 14,
+            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class.",
             "is_constructor": 1,
             "params": [
                 {
@@ -1007,17 +1064,6 @@
                     "optional": true
                 }
             ]
-        },
-        "Math": {
-            "name": "Math",
-            "shortname": "Math",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Math",
-            "namespace": ""
         },
         "Text Area": {
             "name": "Text Area",
@@ -1074,17 +1120,6 @@
             "module": "Shape",
             "namespace": ""
         },
-        "Structure": {
-            "name": "Structure",
-            "shortname": "Structure",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Structure",
-            "namespace": ""
-        },
         "Transform": {
             "name": "Transform",
             "shortname": "Transform",
@@ -1096,15 +1131,15 @@
             "module": "Transform",
             "namespace": ""
         },
-        "DOM:Manipulate": {
-            "name": "DOM:Manipulate",
-            "shortname": "DOM:Manipulate",
+        "p5.dom": {
+            "name": "p5.dom",
+            "shortname": "p5.dom",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "*",
+            "module": "p5.dom",
             "namespace": ""
         },
         "DOM:Media": {
@@ -1115,7 +1150,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "*",
+            "module": "p5.dom",
             "namespace": ""
         },
         "p5.sound": {
@@ -1128,6 +1163,41 @@
             "extension_for": [],
             "module": "p5.sound",
             "namespace": ""
+        },
+        "SoundFile": {
+            "name": "SoundFile",
+            "shortname": "SoundFile",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "p5.sound",
+            "namespace": "",
+            "file": "lib/addons/p5.sound.js",
+            "line": 220,
+            "description": "<p>Create a SoundFile object with a path to a file.</p>\n\n<p>The SoundFile may not be available immediately because\nit loads the file information asynchronously.</p>\n\n<p>To do something with the sound as soon as it loads\npass the name of a function as the second parameter.</p>\n\n<p>Only one file path is required. However, audio file formats \n(i.e. mp3, ogg, wav and m4a/aac) are not supported by all\nweb browsers. If you want to ensure compatability, instead of a single\nfile path, you may include an Array of filepaths, and the browser will\nchoose a format that works.</p>",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "path",
+                    "description": "path to a sound file (String). Optionally,\n                             you may include multiple file formats in\n                             an array.",
+                    "type": "String/Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "Name of a function to call once file loads",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "SoundFile Object",
+                "type": "Object"
+            },
+            "example": [
+                " \n<div><code>\nfunction setup() {\n  mySound = new SoundFile(['mySound.mp3', 'mySound.ogg'], onload);\n}\n\nfunction onload() {\n  mySound.play();\n}\n</code></div>"
+            ]
         },
         "p5.sound:SoundFile": {
             "name": "p5.sound:SoundFile",
@@ -1609,7 +1679,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 15,
+            "line": 16,
             "description": "p5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
             "params": [
                 {
@@ -1627,127 +1697,37 @@
                 "description": "a p5 instance",
                 "type": "P5"
             },
-            "class": "Environment:Environment",
-            "module": "*"
+            "class": "Structure",
+            "module": "Structure"
         },
         {
             "file": "src/core/core.js",
-            "line": 41,
-            "description": "The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.",
-            "itemtype": "property",
-            "name": "frameCount",
-            "example": [
-                "\n  <div><code>\n    function setup() {\n      frameRate(30);\n    }\n\n    function draw() {\n      line(0, 0, width, height);\n      print(frameCount);\n    }\n  </code></div>"
-            ],
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 62,
-            "description": "Confirms if a p5.js program is \"focused,\" meaning that it is active and\nwill accept mouse or keyboard input. This variable is \"true\" if it is\nfocused and \"false\" if not.",
-            "itemtype": "property",
-            "name": "focused",
-            "example": [
-                "\n  <div><code>\n    if (focused) {  // or \"if (focused === true)\"\n      ellipse(25, 25, 50, 50);\n    } else {\n      line(0, 0, 100, 100);\n      line(100, 0, 0, 100);\n    }\n  </code></div>"
-            ],
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 81,
-            "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
-            "itemtype": "property",
-            "name": "displayWidth",
-            "example": [
-                "\n  <div><code>\n    size(displayWidth, displayHeight);\n  </code></div>"
-            ],
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 94,
-            "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
-            "itemtype": "property",
-            "name": "displayHeight",
-            "example": [
-                "\n  <div><code>\n    size(displayWidth, displayHeight);\n  </code></div>"
-            ],
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 107,
-            "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
-            "itemtype": "property",
-            "name": "windowWidth",
-            "example": [
-                "\n  <div><code>\n    size(windowWidth, windowHeight);\n  </code></div>"
-            ],
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 124,
-            "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
-            "itemtype": "property",
-            "name": "windowHeight",
-            "example": [
-                "\n  <div><code>\n    size(windowWidth, windowHeight);\n  </code></div>"
-            ],
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 141,
-            "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
-            "itemtype": "property",
-            "name": "width",
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 153,
-            "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
-            "itemtype": "property",
-            "name": "height",
-            "class": "Environment:Environment",
-            "module": "*"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 165,
+            "line": 43,
             "description": "The setup() function is called once when the program starts. It's used to\ndefine initial enviroment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
             "example": [
                 "\n  <div><code>\n    var a = 0;\n\n    function setup() {\n      createCanvas(200, 200);\n      background(0);\n      noStroke();\n      fill(102);\n    }\n\n    function draw() {\n      rect(a++%width, 10, 2, 80); \n    }\n  </code></div>"
             ],
-            "class": "Structure:Structure",
-            "module": "*"
+            "class": "Structure",
+            "module": "Structure"
         },
         {
             "file": "src/core/core.js",
-            "line": 193,
+            "line": 70,
             "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
-            "class": "Structure:Structure",
-            "module": "*"
+            "class": "Structure",
+            "module": "Structure"
         },
         {
             "file": "src/core/core.js",
-            "line": 216,
+            "line": 92,
             "itemtype": "method",
             "name": "remove",
-            "class": "Structure:Structure",
-            "module": "*"
+            "class": "Structure",
+            "module": "Structure"
         },
         {
             "file": "src/data/array_functions.js",
@@ -2233,8 +2213,8 @@
             "module": "Data"
         },
         {
-            "file": "src/dom/manipulate.js",
-            "line": 13,
+            "file": "src/dom/dom.js",
+            "line": 11,
             "description": "Creates a canvas element in the document.",
             "itemtype": "method",
             "name": "createCanvas",
@@ -2259,12 +2239,36 @@
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "Manipulate",
+            "class": "DOM",
             "module": "DOM"
         },
         {
             "file": "src/environment/environment.js",
             "line": 20,
+            "description": "The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.",
+            "itemtype": "property",
+            "name": "frameCount",
+            "example": [
+                "\n  <div><code>\n    function setup() {\n      frameRate(30);\n    }\n\n    function draw() {\n      line(0, 0, width, height);\n      print(frameCount);\n    }\n  </code></div>"
+            ],
+            "class": "Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 40,
+            "description": "Confirms if a p5.js program is \"focused,\" meaning that it is active and\nwill accept mouse or keyboard input. This variable is \"true\" if it is\nfocused and \"false\" if not.",
+            "itemtype": "property",
+            "name": "focused",
+            "example": [
+                "\n  <div><code>\n    if (focused) {  // or \"if (focused === true)\"\n      ellipse(25, 25, 50, 50);\n    } else {\n      line(0, 0, 100, 100);\n      line(100, 0, 0, 100);\n    }\n  </code></div>"
+            ],
+            "class": "Environment:Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 59,
             "description": "Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.",
             "itemtype": "method",
             "name": "cursor",
@@ -2287,12 +2291,12 @@
                     "optional": true
                 }
             ],
-            "class": "Environment",
+            "class": "Environment:Environment",
             "module": "Environment"
         },
         {
             "file": "src/environment/environment.js",
-            "line": 61,
+            "line": 100,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().",
             "itemtype": "method",
             "name": "frameRate",
@@ -2308,23 +2312,23 @@
                 "description": "current frameRate",
                 "type": "Number"
             },
-            "class": "Environment",
+            "class": "Environment:Environment",
             "module": "Environment"
         },
         {
             "file": "src/environment/environment.js",
-            "line": 85,
+            "line": 124,
             "description": "Returns the current framerate.",
             "return": {
                 "description": "current frameRate",
                 "type": "Number"
             },
-            "class": "Environment",
+            "class": "Environment:Environment",
             "module": "Environment"
         },
         {
             "file": "src/environment/environment.js",
-            "line": 94,
+            "line": 133,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
             "params": [
                 {
@@ -2334,23 +2338,89 @@
                     "optional": true
                 }
             ],
-            "class": "Environment",
+            "class": "Environment:Environment",
             "module": "Environment"
         },
         {
             "file": "src/environment/environment.js",
-            "line": 109,
+            "line": 148,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
             "name": "noCursor",
-            "class": "Environment",
+            "class": "Environment:Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 158,
+            "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
+            "itemtype": "property",
+            "name": "displayWidth",
+            "example": [
+                "\n  <div><code>\n    size(displayWidth, displayHeight);\n  </code></div>"
+            ],
+            "class": "Environment:Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 170,
+            "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
+            "itemtype": "property",
+            "name": "displayHeight",
+            "example": [
+                "\n  <div><code>\n    size(displayWidth, displayHeight);\n  </code></div>"
+            ],
+            "class": "Environment:Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 182,
+            "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
+            "itemtype": "property",
+            "name": "windowWidth",
+            "example": [
+                "\n  <div><code>\n    size(windowWidth, windowHeight);\n  </code></div>"
+            ],
+            "class": "Environment:Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 198,
+            "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
+            "itemtype": "property",
+            "name": "windowHeight",
+            "example": [
+                "\n  <div><code>\n    size(windowWidth, windowHeight);\n  </code></div>"
+            ],
+            "class": "Environment:Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 214,
+            "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
+            "itemtype": "property",
+            "name": "width",
+            "class": "Environment:Environment",
+            "module": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 225,
+            "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
+            "itemtype": "property",
+            "name": "height",
+            "class": "Environment:Environment",
             "module": "Environment"
         },
         {
             "file": "src/image/filters.js",
             "line": 5,
             "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2370,7 +2440,7 @@
                 "description": "a one-dimensional array containing\n                                  the data in thc RGBA order, with integer\n                                  values between 0 and 255",
                 "type": "Uint8ClampedArray"
             },
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2395,7 +2465,7 @@
                 "description": "32 bit integer value representing\n                                 ARGB value.",
                 "type": "Integer"
             },
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2416,7 +2486,7 @@
                     "type": "Int32Array"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2436,7 +2506,7 @@
                 "description": "Holder of pixel data (and width and\n                                  height) for a canvas",
                 "type": "ImageData"
             },
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2461,7 +2531,7 @@
                 "description": "",
                 "type": "ImageData"
             },
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2489,7 +2559,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2508,7 +2578,7 @@
                     "type": "Float"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2522,7 +2592,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2536,7 +2606,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2550,7 +2620,7 @@
                     "type": "Invert"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2569,7 +2639,7 @@
                     "type": "Integer"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2583,7 +2653,7 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
         },
         {
@@ -2597,8 +2667,178 @@
                     "type": "Canvas"
                 }
             ],
-            "class": "Pixels",
+            "class": "Image",
             "module": "Environment"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 8,
+            "description": "This module defines the p5 methods for the p5.Image class\nfor drawing images to the main display canvas.",
+            "class": "Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/image.js",
+            "line": 22,
+            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.",
+            "itemtype": "method",
+            "name": "createImage",
+            "params": [
+                {
+                    "name": "width",
+                    "description": "width in pixels",
+                    "type": "Integer"
+                },
+                {
+                    "name": "height",
+                    "description": "height in pixels",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "the p5.Image object",
+                "type": "p5.Image"
+            },
+            "class": "Image",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/loading_displaying.js",
+            "line": 15,
+            "description": "Loads an image from a path and creates a p5.Image from it.\n\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback, or place the loadImage() call in preload().",
+            "itemtype": "method",
+            "name": "loadImage",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "Function to be called once the image is\n                            loaded. Will be passed the p5.Image.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "the p5.Image object",
+                "type": "p5.Image"
+            },
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/loading_displaying.js",
+            "line": 56,
+            "description": "Draw an image to the main canvas of the p5js sketch",
+            "itemtype": "method",
+            "name": "image",
+            "params": [
+                {
+                    "name": "image",
+                    "description": "the image to display",
+                    "type": "p5.Image"
+                },
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the image",
+                    "type": "[type]"
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the image",
+                    "type": "[type]"
+                },
+                {
+                    "name": "width",
+                    "description": "width to display the image",
+                    "type": "[type]"
+                },
+                {
+                    "name": "height",
+                    "description": "height to display the image",
+                    "type": "[type]"
+                }
+            ],
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/loading_displaying.js",
+            "line": 92,
+            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use \nwhite as the tint color and specify an alpha value. For instance, \ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()). \n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
+            "itemtype": "method",
+            "name": "tint",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value, red or hue value (depending on the\n                           current color mode), or color Array",
+                    "type": "Number|Array"
+                },
+                {
+                    "name": "v2",
+                    "description": "green or saturation value (depending on the\n                           current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "blue or brightness value (depending on the\n                           current color mode)",
+                    "type": "Number|Array",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "opacity of the background",
+                    "type": "Number|Array",
+                    "optional": true
+                }
+            ],
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/loading_displaying.js",
+            "line": 119,
+            "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
+            "itemtype": "method",
+            "name": "noTint",
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/loading_displaying.js",
+            "line": 129,
+            "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
+            "params": [
+                {
+                    "name": "The",
+                    "description": "image to be tinted",
+                    "type": "p5.Image"
+                }
+            ],
+            "return": {
+                "description": "The resulting tinted canvas",
+                "type": "Canvas"
+            },
+            "class": "Loading & Displaying",
+            "module": "Image"
+        },
+        {
+            "file": "src/image/loading_displaying.js",
+            "line": 161,
+            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
+            "itemtype": "method",
+            "name": "imageMode",
+            "params": [
+                {
+                    "name": "m",
+                    "description": "The mode: either CORNER, CORNERS, or CENTER.",
+                    "type": "String"
+                }
+            ],
+            "class": "Loading & Displaying",
+            "module": "Image"
         },
         {
             "file": "src/image/pixels.js",
@@ -3689,6 +3929,35 @@
             "module": "Math"
         },
         {
+            "file": "src/math/math.js",
+            "line": 13,
+            "description": "Creates a new p5.Vector (the datatype for storing vectors). This provides a\ntwo or three dimensional vector, specifically a Euclidean (also known as \ngeometric) vector. A vector is an entity that has both magnitude and \ndirection.",
+            "itemtype": "method",
+            "name": "createVector",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "y component of the vector",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "z component of the vector",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "class": "Math",
+            "module": "Math"
+        },
+        {
             "file": "src/math/noise.js",
             "line": 53,
             "description": "Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. p5.js can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
@@ -3976,7 +4245,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 21,
+            "line": 30,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "parent",
@@ -3992,7 +4261,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 38,
+            "line": 47,
             "description": "Sets the inner HTML of the element. Replaces any existing html.",
             "itemtype": "method",
             "name": "html",
@@ -4008,7 +4277,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 50,
+            "line": 59,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -4029,7 +4298,28 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 72,
+            "line": 76,
+            "description": "Sets the given style (css) property of the element with the given value.",
+            "itemtype": "method",
+            "name": "style",
+            "params": [
+                {
+                    "name": "property",
+                    "description": "property to be set",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "value to assign to property",
+                    "type": "String"
+                }
+            ],
+            "class": "DOM:p5.Element",
+            "module": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 89,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -4045,7 +4335,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 84,
+            "line": 101,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -4061,7 +4351,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 96,
+            "line": 113,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach an element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -4077,7 +4367,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 110,
+            "line": 127,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -4093,7 +4383,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 124,
+            "line": 141,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -4109,184 +4399,21 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 148,
+            "line": 163,
             "description": "Helper fxn for sharing pixel methods",
             "class": "DOM:p5.Element",
             "module": "DOM"
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 10,
+            "line": 9,
             "description": "This module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
-            "class": "Image",
+            "class": "p5.Image",
             "module": "Image"
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 29,
-            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.",
-            "itemtype": "method",
-            "name": "createImage",
-            "params": [
-                {
-                    "name": "width",
-                    "description": "width in pixels",
-                    "type": "Integer"
-                },
-                {
-                    "name": "height",
-                    "description": "height in pixels",
-                    "type": "Integer"
-                }
-            ],
-            "return": {
-                "description": "the p5.Image object",
-                "type": "p5.Image"
-            },
-            "class": "Image",
-            "module": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 44,
-            "description": "Loads an image from a path and creates a p5.Image from it.\n\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback, or place the loadImage() call in preload().",
-            "itemtype": "method",
-            "name": "loadImage",
-            "params": [
-                {
-                    "name": "path",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "callback",
-                    "description": "Function to be called once the image is\n                            loaded. Will be passed the p5.Image.",
-                    "type": "Function"
-                }
-            ],
-            "return": {
-                "description": "the p5.Image object",
-                "type": "p5.Image"
-            },
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 86,
-            "description": "Draw an image to the main canvas of the p5js sketch",
-            "itemtype": "method",
-            "name": "image",
-            "params": [
-                {
-                    "name": "image",
-                    "description": "the image to display",
-                    "type": "p5.Image"
-                },
-                {
-                    "name": "x",
-                    "description": "x-coordinate of the image",
-                    "type": "[type]"
-                },
-                {
-                    "name": "y",
-                    "description": "y-coordinate of the image",
-                    "type": "[type]"
-                },
-                {
-                    "name": "width",
-                    "description": "width to display the image",
-                    "type": "[type]"
-                },
-                {
-                    "name": "height",
-                    "description": "height to display the image",
-                    "type": "[type]"
-                }
-            ],
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 123,
-            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use \nwhite as the tint color and specify an alpha value. For instance, \ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()). \n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
-            "itemtype": "method",
-            "name": "tint",
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "gray value, red or hue value (depending on the\n                           current color mode), or color Array",
-                    "type": "Number|Array"
-                },
-                {
-                    "name": "v2",
-                    "description": "green or saturation value (depending on the\n                           current color mode)",
-                    "type": "Number|Array",
-                    "optional": true
-                },
-                {
-                    "name": "v3",
-                    "description": "blue or brightness value (depending on the\n                           current color mode)",
-                    "type": "Number|Array",
-                    "optional": true
-                },
-                {
-                    "name": "a",
-                    "description": "opacity of the background",
-                    "type": "Number|Array",
-                    "optional": true
-                }
-            ],
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 151,
-            "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
-            "itemtype": "method",
-            "name": "noTint",
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 162,
-            "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
-            "params": [
-                {
-                    "name": "The",
-                    "description": "image to be tinted",
-                    "type": "p5.Image"
-                }
-            ],
-            "return": {
-                "description": "The resulting tinted canvas",
-                "type": "Canvas"
-            },
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 194,
-            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
-            "itemtype": "method",
-            "name": "imageMode",
-            "params": [
-                {
-                    "name": "m",
-                    "description": "The mode: either CORNER, CORNERS, or CENTER.",
-                    "type": "String"
-                }
-            ],
-            "class": "Loading & Displaying",
-            "module": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 245,
+            "line": 43,
             "description": "Image width.",
             "itemtype": "property",
             "name": "width",
@@ -4295,7 +4422,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 251,
+            "line": 49,
             "description": "Image height.",
             "itemtype": "property",
             "name": "height",
@@ -4304,7 +4431,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 260,
+            "line": 58,
             "description": "Array containing the color of every pixel in the image.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -4313,14 +4440,14 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 268,
+            "line": 66,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Image",
             "module": "Image"
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 276,
+            "line": 74,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -4329,7 +4456,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 286,
+            "line": 84,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -4360,7 +4487,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 305,
+            "line": 103,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -4399,7 +4526,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 328,
+            "line": 126,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
             "itemtype": "method",
             "name": "set",
@@ -4425,7 +4552,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 350,
+            "line": 148,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -4446,7 +4573,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 398,
+            "line": 196,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -4502,7 +4629,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 421,
+            "line": 219,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -4518,7 +4645,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 462,
+            "line": 260,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -4539,7 +4666,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 476,
+            "line": 274,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -4600,7 +4727,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 506,
+            "line": 304,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -4616,36 +4743,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 15,
-            "description": "Creates a new p5.Vector (the datatype for storing vectors). This provides a\ntwo or three dimensional vector, specifically a Euclidean (also known as \ngeometric) vector. A vector is an entity that has both magnitude and \ndirection.",
-            "itemtype": "method",
-            "name": "createVector",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "y",
-                    "description": "y component of the vector",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "z component of the vector",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "class": "Math",
-            "module": "Math"
-        },
-        {
-            "file": "src/objects/p5.Vector.js",
-            "line": 72,
+            "line": 52,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
@@ -4655,7 +4753,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 78,
+            "line": 58,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
@@ -4665,7 +4763,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 84,
+            "line": 64,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
@@ -4675,7 +4773,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 93,
+            "line": 73,
             "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Vector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -4704,7 +4802,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 112,
+            "line": 92,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
             "name": "get",
@@ -4717,7 +4815,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 127,
+            "line": 107,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
             "itemtype": "method",
             "name": "add",
@@ -4750,7 +4848,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 153,
+            "line": 133,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a p5.Vector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -4783,7 +4881,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 177,
+            "line": 157,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -4804,7 +4902,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 192,
+            "line": 172,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -4825,7 +4923,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 207,
+            "line": 187,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -4838,7 +4936,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 218,
+            "line": 198,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -4851,7 +4949,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 232,
+            "line": 212,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -4883,7 +4981,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 250,
+            "line": 230,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -4903,7 +5001,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 269,
+            "line": 249,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -4923,7 +5021,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 282,
+            "line": 262,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -4936,7 +5034,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 292,
+            "line": 272,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -4956,7 +5054,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 309,
+            "line": 289,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "mtehod": "setMag",
             "params": [
@@ -4975,7 +5073,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 321,
+            "line": 301,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -4988,7 +5086,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 340,
+            "line": 320,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -5008,7 +5106,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 361,
+            "line": 341,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -5045,7 +5143,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 383,
+            "line": 363,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -5058,7 +5156,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 400,
+            "line": 380,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -5079,7 +5177,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 421,
+            "line": 401,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -5093,7 +5191,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 444,
+            "line": 424,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -5107,7 +5205,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 471,
+            "line": 451,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -5131,7 +5229,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 484,
+            "line": 464,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -5155,7 +5253,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 499,
+            "line": 479,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5179,7 +5277,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 511,
+            "line": 491,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5203,7 +5301,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 524,
+            "line": 504,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -5227,7 +5325,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 536,
+            "line": 516,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -5251,7 +5349,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 548,
+            "line": 528,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -5275,7 +5373,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 561,
+            "line": 541,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -5300,7 +5398,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 576,
+            "line": 556,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -6667,23 +6765,23 @@
             "requires": [
                 "constants"
             ],
-            "class": "DOM:p5.Element",
+            "class": "p5.Element",
             "module": "Typography"
         },
         {
             "file": "src/app.js",
-            "line": 40,
+            "line": 43,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
-            "class": "DOM:p5.Element",
+            "class": "p5.Element",
             "module": "Typography"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 6,
+            "line": 13,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -6699,30 +6797,30 @@
                 "description": "",
                 "type": "String|Number"
             },
-            "class": "DOM:p5.Element",
-            "module": "*"
+            "class": "p5.Element",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 26,
+            "line": 34,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
-            "class": "DOM:p5.Element",
-            "module": "*"
+            "class": "p5.Element",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 37,
+            "line": 45,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
-            "class": "DOM:p5.Element",
-            "module": "*"
+            "class": "p5.Element",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 47,
+            "line": 55,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -6738,12 +6836,21 @@
                     "type": "Number"
                 }
             ],
-            "class": "DOM:p5.Element",
-            "module": "*"
+            "class": "p5.Element",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 87,
+            "line": 96,
+            "description": "Removes the element and deregisters all listeners.",
+            "itemtype": "method",
+            "name": "remove",
+            "class": "p5.Element",
+            "module": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 111,
             "description": "Searches the page for an element with given ID and returns it as\na p5.Element. The DOM node itself can be accessed with .elt.\nReturns null if none found.",
             "itemtype": "method",
             "name": "getElement",
@@ -6758,12 +6865,12 @@
                 "description": "p5.Element containing node found",
                 "type": "Object/p5.Element|Null"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 106,
+            "line": 130,
             "description": "Searches the page for elements with given class and returns an\narray of p5.Elements. The DOM nodes themselves can be accessed\nwith .elt. Returns an empty array if none found.",
             "itemtype": "method",
             "name": "getElements",
@@ -6778,12 +6885,28 @@
                 "description": "array of p5.Element wrapped nodes found",
                 "type": "Array"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 129,
+            "line": 152,
+            "description": "Removes all elements created by p5, except the original canvas.\nEvent handlers are removed, and element is removed from the DOM.",
+            "itemtype": "method",
+            "name": "removeElements",
+            "class": "p5.dom",
+            "module": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 165,
+            "description": "Helper for create methods.",
+            "class": "p5.dom",
+            "module": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 176,
             "description": "Creates a &lt;div&gt;&lt;/div&gt; element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createDiv",
@@ -6798,12 +6921,12 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 141,
+            "line": 188,
             "description": "Creates a &lt;p&gt;&lt;/p&gt; element in the DOM with given inner HTML. Used\nfor paragraph length text.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createP",
@@ -6818,12 +6941,12 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 154,
+            "line": 201,
             "description": "Creates a &lt;span&gt;&lt;/span&gt; element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createSpan",
@@ -6838,12 +6961,12 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 178,
+            "line": 222,
             "description": "Creates an &lt;img /&gt; element in the DOM with given src and\nalternate text. \nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createImg",
@@ -6863,12 +6986,12 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 205,
+            "line": 246,
             "description": "Creates an &lt;a&gt;&lt;/a&gt; element in the DOM for including a hyperlink.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createA",
@@ -6894,18 +7017,18 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 230,
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "line": 268,
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 233,
+            "line": 271,
             "description": "Creates a slider &lt;input&gt;&lt;/input&gt; element in the DOM.\nUse .size() to set the display length of the slider.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createSlider",
@@ -6931,12 +7054,12 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 259,
+            "line": 294,
             "description": "Creates a &lt;button&gt;&lt;/button&gt; element in the DOM.\nUse .size() to set the display size of the button.\nUse .mousePressed() to specify behavior on press.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createButton",
@@ -6957,12 +7080,12 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 284,
+            "line": 316,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM for text input.\nUse .size() to set the display length of the box.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createInput",
@@ -6978,18 +7101,18 @@
                 "description": "pointer to p5.Element holding created\n                          node",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 306,
-            "class": "DOM:Manipulate",
-            "module": "*"
+            "line": 335,
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 308,
+            "line": 337,
             "description": "Creates an HTML5 &lt;video&gt; element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body.",
             "itemtype": "method",
             "name": "createVideo",
@@ -7010,18 +7133,18 @@
                 "description": "pointer to video p5.Element",
                 "type": "Object/p5.Element"
             },
-            "class": "DOM:Media",
-            "module": "*"
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 391,
-            "class": "DOM:Media",
-            "module": "*"
+            "line": 418,
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 393,
+            "line": 420,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio \nplayback. Appends to the container node if one is specified, \notherwise appends to body.",
             "itemtype": "method",
             "name": "createAudio",
@@ -7043,38 +7166,38 @@
                 "type": "Object/p5.Element"
             },
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 406,
+            "line": 433,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 413,
+            "line": 440,
             "description": "Pause an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 420,
+            "line": 447,
             "description": "Stop an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 427,
+            "line": 454,
             "description": "Returns the current time of an HTML5 media element.",
             "itemtype": "method",
             "name": "currentTime",
@@ -7083,11 +7206,11 @@
                 "type": "Number"
             },
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 435,
+            "line": 462,
             "description": "Set the current time of an HTML5 media element.",
             "itemtype": "method",
             "name": "setCurrentTime",
@@ -7099,29 +7222,29 @@
                 }
             ],
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 443,
+            "line": 470,
             "description": "Set 'loop' to true for an HTML5 media element.",
             "itemtype": "method",
             "name": "loop",
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 450,
+            "line": 477,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 458,
+            "line": 485,
             "description": "Set volume for this HTML5 media element.",
             "params": [
                 {
@@ -7133,17 +7256,17 @@
             "itemtype": "method",
             "name": "volume",
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 523,
+            "line": 548,
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 533,
+            "line": 558,
             "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video().",
             "itemtype": "method",
             "name": "createCapture",
@@ -7159,47 +7282,59 @@
                 "type": "Object/p5.Element"
             },
             "class": "DOM:Media",
-            "module": "*"
+            "module": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 592,
+            "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise \nappends to body.",
+            "itemtype": "method",
+            "name": "createElement",
+            "params": [
+                {
+                    "name": "tag",
+                    "description": "tag for the new element",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "html content to be inserted into the element",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to p5.Element holding created\n                          node",
+                "type": "Object/p5.Element"
+            },
+            "class": "p5.dom",
+            "module": "p5.dom"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2,
-            "description": "Version .0003\n\np5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.\n\nThis is an addon for p5.js that extends p5 with the following classes:\n  SoundOut\n  SoundFile\n  Amplitude\n  FFT\n  Oscillator (SinOsc, SqrOsc, SawOsc, TriOsc, Pulse)\n  AudioIn\n   ... more soon!\n \nIncorporates elements from:\n  - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n  - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n  - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n  - wavesurfer.js\n  - recorder.js (hopefully soon!)\n  - Wilm Thoben's Sound library for Processing",
-            "class": "p5.sound",
-            "module": "*"
-        },
-        {
-            "file": "lib/addons/p5.sound.js",
-            "line": 38,
+            "line": 36,
             "description": "Web Audio SHIMS and helper functions to ensure compatability across browsers",
             "class": "p5.sound",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 77,
+            "line": 75,
             "description": "Determine which filetypes are supported (inspired by buzz.js)\nThe audio element (el) will only be used to test browser support for various audio formats",
             "class": "p5.sound",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 120,
-            "description": "Private callbacks to be used for soundfile playback & loading.\nThese may not be necessary since loadSound works in\npreload and with callbacks.",
-            "class": "p5.sound",
-            "module": "p5.sound"
-        },
-        {
-            "file": "lib/addons/p5.sound.js",
-            "line": 214,
+            "line": 118,
             "description": "Master contains AudioContext and the master sound output.",
             "class": "p5.sound",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 250,
-            "description": "<p>Set the master amplitude (volume) for sound in this sketch.</p>\n\n<p>Note that values greater than 1.0 may lead to digital distortion.</p>\n\n<p><b>How This Works</b>: When you load the p5Sound module, it\ncreates a single instance of p5sound. All sound objects in this\nmodule output to p5sound before reaching your computer's output.\nSo if you change the amplitude of p5sound, it impacts all of the\nsound in this module.</p>",
+            "line": 154,
+            "description": "<p>Set the master amplitude (volume) for sound in this sketch.</p>\n\n<p>Note that values greater than 1.0 may lead to digital distortion.</p>\n \n<p><b>How This Works</b>: When you load the p5Sound module, it\ncreates a single instance of p5sound. All sound objects in this\nmodule output to p5sound before reaching your computer's output.\nSo if you change the amplitude of p5sound, it impacts all of the\nsound in this module.</p>",
             "itemtype": "method",
             "name": "masterVolume",
             "params": [
@@ -7210,14 +7345,14 @@
                 }
             ],
             "example": [
-                "\n  <div><code>\n  masterVolume(.5);\n  </code></div>\n  "
+                "\n<div><code>\nmasterVolume(.5);\n</code></div>\n "
             ],
             "class": "p5.sound",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 278,
+            "line": 182,
             "description": "Returns a number representing the sample rate, in samples per second,\nof all sound objects in this audio context. It is determined by the\nsampling rate of your operating system's sound card, and it is not\ncurrently possile to change.\nIt is often 44100, or twice the range of human hearing.",
             "itemtype": "method",
             "name": "sampleRate",
@@ -7230,7 +7365,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 298,
+            "line": 202,
             "description": "<p>Returns the Audio Context for this sketch. Useful for users\nwho would like to dig deeper into the <a target='_blank' href=\n'http://webaudio.github.io/web-audio-api/'>Web Audio API\n</a>.</p>",
             "itemtype": "method",
             "name": "getAudioContext",
@@ -7243,45 +7378,16 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 316,
-            "description": "<p>Create a SoundFile object with a path to a file.</p>\n\n<p>The SoundFile may not be available immediately because\nit loads the file information asynchronously.</p>\n\n<p>To do something with the sound as soon as it loads\npass the name of a function as the second parameter.</p>\n\n<p>Only one file path is required. However, audio file formats \n(i.e. mp3, ogg, wav and m4a/aac) are not supported by all\nweb browsers. If you want to ensure compatability, instead of a single\nfile path, you may include an Array of filepaths, and the browser will\nchoose a format that works.</p>",
-            "itemtype": "method",
-            "name": "new SoundFile",
-            "params": [
-                {
-                    "name": "path",
-                    "description": "path to a sound file (String). Optionally,\n                             you may include multiple file formats in\n                             an array.",
-                    "type": "String/Array"
-                },
-                {
-                    "name": "callback",
-                    "description": "Name of a function to call once file loads",
-                    "type": "Function",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "SoundFile Object",
-                "type": "Object"
-            },
-            "example": [
-                " \n  <div><code>\n    function setup() {\n      mySound = new SoundFile(['mySound.mp3', 'mySound.ogg'], onload);\n    }\n\n    function onload() {\n      mySound.play();\n    }\n  </code></div>"
-            ],
-            "class": "p5.sound:SoundFile",
-            "module": "p5.sound"
-        },
-        {
-            "file": "lib/addons/p5.sound.js",
-            "line": 386,
+            "line": 290,
             "description": "The output volume (amplitude) of a sound file\nbetween 0.0 (silence) and 1.0 (full volume).\nAmplitudes over 1.0 may cause digital distortion.",
             "itemtype": "property",
             "name": "volume",
-            "class": "p5.sound:SoundFile",
+            "class": "SoundFile",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 437,
+            "line": 333,
             "description": "loadSound() should be used if you want to create a SoundFile \nduring preload. It returns a new SoundFile from a specified\npath, or an array of paths. If used outside of preload, it \naccepts a callback as the second parameter.",
             "itemtype": "method",
             "name": "loadSound",
@@ -7305,12 +7411,12 @@
             "example": [
                 " \n<div><code>\nfunction preload() {\n  mySound = loadSound(['mySound.mp3', 'mySound.ogg']);\n}\n\nfunction setup() {\n  mySound.loop();\n}\n</code></div>"
             ],
-            "class": "p5.sound:SoundFile",
+            "class": "SoundFile",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 466,
+            "line": 362,
             "description": "<p>This is a helper function that the SoundFile calls to load\nitself. Accepts a callback (the name of another function)\nas an optional parameter.</p>",
             "itemtype": "method",
             "name": "load",
@@ -7324,12 +7430,12 @@
                     "optional": true
                 }
             ],
-            "class": "p5.sound:SoundFile",
+            "class": "SoundFile",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 500,
+            "line": 396,
             "description": "Returns true if the sound file has finished loading.",
             "itemtype": "method",
             "name": "isLoaded",
@@ -7342,7 +7448,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 515,
+            "line": 411,
             "description": "Play the SoundFile",
             "itemtype": "method",
             "name": "play",
@@ -7365,7 +7471,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 585,
+            "line": 480,
             "description": "SoundFile has two play modes: monophonic ('mono') and\npolyphonic ('poly' is the default). In polyphonic mode,\na soundFile's buffer can play multiple times without stopping\nplayback of the buffer that is currently playing. In monophonic\nmode, each SoundFile can only trigger one buffer at a time, so\ncalling .play() will stop playback and start it again.",
             "itemtype": "method",
             "name": "playMode",
@@ -7381,7 +7487,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 614,
+            "line": 509,
             "description": "Toggle whether a sound file is playing or paused.\n\nPauses a file that is currently playing,\nand unpauses (plays) a file that is currently paused.\n\nThe pauseTime and loop state are preserved\nso playback can resume from the same spot in the sound file.",
             "itemtype": "method",
             "name": "pause",
@@ -7390,7 +7496,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 646,
+            "line": 541,
             "description": "Loop the SoundFile. \n\nWill be able to accept the following parameters (not yet implemented):\nrate\nrate, amp\nrate, pos, amp\nrate, pos, amp, add\nrate, pos, amp, add, cue",
             "itemtype": "method",
             "name": "loop",
@@ -7413,7 +7519,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 666,
+            "line": 561,
             "description": "Set a SoundFile's looping flag to true or false. If the sound\nis currently playing, this change will take effect when it\nreaches the end of the current playback.",
             "itemtype": "method",
             "name": "setLoop",
@@ -7429,7 +7535,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 690,
+            "line": 585,
             "description": "Returns 'true' if a SoundFile is looping, 'false' if not.",
             "itemtype": "method",
             "name": "isLooping",
@@ -7442,7 +7548,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 707,
+            "line": 602,
             "description": "Returns 'true' if a SoundFile is playing, 'false' if not.",
             "itemtype": "method",
             "name": "isPlaying",
@@ -7455,7 +7561,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 727,
+            "line": 622,
             "description": "Returns true if a SoundFile is paused, 'false' if not.",
             "itemtype": "method",
             "name": "isPaused",
@@ -7468,7 +7574,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 741,
+            "line": 636,
             "description": "Stop soundfile playback.",
             "itemtype": "method",
             "name": "stop",
@@ -7477,7 +7583,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 755,
+            "line": 650,
             "description": "Stop playback on all of this soundfile's sources.\nThis may soon be replaced by different playModes for the player.",
             "itemtype": "method",
             "name": "stopAll",
@@ -7486,7 +7592,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 771,
+            "line": 666,
             "description": "Set the playback rate of a sound file. Will change the speed and the pitch.\nValues less than zero will reverse the audio buffer before playback.",
             "itemtype": "method",
             "name": "rate",
@@ -7503,7 +7609,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 806,
+            "line": 701,
             "description": "Return the number of channels in a sound file.\nFor example, Mono = 1, Stereo = 2.",
             "itemtype": "method",
             "name": "channels",
@@ -7516,7 +7622,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 818,
+            "line": 713,
             "description": "Return the sample rate of the sound file.",
             "itemtype": "method",
             "name": "sampleRate",
@@ -7529,7 +7635,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 829,
+            "line": 724,
             "description": "Return the number of samples in a sound file.\nEqual to sampleRate * duration.",
             "itemtype": "method",
             "name": "frames",
@@ -7542,7 +7648,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 841,
+            "line": 736,
             "description": "Returns the duration of a sound file.",
             "itemtype": "method",
             "name": "duration",
@@ -7555,7 +7661,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 857,
+            "line": 752,
             "description": "Return the current position of the playhead in the song, in seconds",
             "itemtype": "method",
             "name": "currentTime",
@@ -7568,7 +7674,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 883,
+            "line": 778,
             "description": "Move the playhead of the song to a position, in seconds",
             "itemtype": "method",
             "name": "jump",
@@ -7584,7 +7690,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 903,
+            "line": 798,
             "description": "Returns an array of amplitude peaks in a SoundFile that can be\nused to draw a static waveform. Scans through the SoundFile's\naudio buffer to find the greatest amplitudes. Accepts one\nparameter, 'length', which determines size of the array.\nLarger arrays result in more precise waveform visualizations.\n\nInspired by Wavesurfer.js.",
             "itemtype": "method",
             "name": "getPeaks",
@@ -7592,8 +7698,7 @@
                 {
                     "name": "length",
                     "description": "length is the size of the returned array.\n                         Larger length results in more precision.\n                         Defaults to 5*width of the browser window.",
-                    "type": "Number",
-                    "optional": true
+                    "type": "[Number]"
                 }
             ],
             "return": {
@@ -7605,8 +7710,10 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 962,
+            "line": 856,
             "description": "Reverses the SoundFile's buffer source.\nPlayback must be handled separately (see example).",
+            "itemtype": "method",
+            "name": "reverseBuffer",
             "example": [
                 "\n<div><code>\ns = new SoundFile('beat.mp3');\ns.reverseBuffer();\ns.play();\n</code>\n</div>"
             ],
@@ -7615,7 +7722,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1008,
+            "line": 903,
             "description": "Set the stereo panning of a p5Sound object to\na floating point number between -1.0 (left) and 1.0 (right).\nDefault is 0.0 (center).",
             "itemtype": "method",
             "name": "pan",
@@ -7632,7 +7739,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1030,
+            "line": 925,
             "description": "Returns the current stereo pan position (-1.0 to 1.0)",
             "itemtype": "method",
             "name": "getPan",
@@ -7645,7 +7752,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1043,
+            "line": 938,
             "description": "<p>Connects the output of a p5sound object to input of another\np5Sound object. For example, you may connect a SoundFile to an\nEffect.</p>\n\n<p>If no parameter is given, this object will connect\nto the master output.</p>\n\n<p>Most p5sound objects connect to the master output when they\nare created, so you can hear them without ever using this\nfunction. AudioIn is the only exception: you will not hear \nthe AudioIn unless you explicitly tell it to connect.\nThis is because connecting a microphone input through your\nspeakers can cause feedback</p>",
             "itemtype": "method",
             "name": "connect",
@@ -7661,7 +7768,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1076,
+            "line": 971,
             "description": "Disconnects the output of this p5sound object.",
             "itemtype": "method",
             "name": "disconnect",
@@ -7676,14 +7783,14 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1091,
+            "line": 986,
             "description": "Create an Amplitude object, which measures amplitude (volume)\nbetween 0.0 and 1.0. Accepts an optional smoothing value,\nwhich defaults to 0. Reads global p5sound output by default,\nor use setInput() to listen to a specific sound source.",
             "itemtype": "method",
             "name": "new Amplitude",
             "params": [
                 {
                     "name": "smoothing",
-                    "description": "between 0.0 and .999 to smooth\n                            amplitude readings (defaults to 0)",
+                    "description": "between 0.0 and .999 to smooth\n                           amplitude readings (defaults to 0)",
                     "type": "Number",
                     "optional": true
                 }
@@ -7693,14 +7800,14 @@
                 "type": "Object"
             },
             "example": [
-                "\n   <div><code>\n     function setup() { \n        mic = new AudioIn();\n        mic.on();\n        amplitude = new Amplitude();\n        amplitude.setInput(mic);\n     }\n     function draw() {\n        micLevel = amplitude.analyze();\n        ellipse(width/2, height - micLevel*height, 10, 10);\n     }\n  </code></div>"
+                "\n<div><code>\nfunction setup() { \n  mic = new AudioIn();\n  mic.on();\n  amplitude = new Amplitude();\n  amplitude.setInput(mic);\n}\nfunction draw() {\n  micLevel = amplitude.analyze();\n  ellipse(width/2, height - micLevel*height, 10, 10);\n}\n</code></div>"
             ],
             "class": "p5.sound:Amplitude",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1150,
+            "line": 1045,
             "description": "Connects to the p5sound instance (master output) by default.\nOptionally, you can pass in a specific source (i.e. a soundfile).",
             "itemtype": "method",
             "name": "setInput",
@@ -7719,14 +7826,14 @@
                 }
             ],
             "example": [
-                "\n <div><code>\n  function setup() {\n    mic = new AudioIn().on();\n    amplitude = new Amplitude();\n\n    // don't send mic to master output\n    mic.disconnect();\n\n    // only send to the Amplitude reader, so we can see it but not hear it.\n    amplitude.setInput(mic);\n  }\n  </code></div>"
+                "\n<div><code>\nfunction preload(){\n  soundFile = loadSound('mySound.mp3');\n}\nfunction setup(){\n  amplitude = new Amplitude();\n  amplitude.setInput(soundFile);\n}\n</code></div>"
             ],
             "class": "p5.sound:Amplitude",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1265,
+            "line": 1147,
             "description": "Returns a single Amplitude reading at the moment it is called.\nFor continuous readings, run in the draw loop.",
             "itemtype": "method",
             "name": "getLevel",
@@ -7735,14 +7842,14 @@
                 "type": "Number"
             },
             "example": [
-                "\n  <div><code>\n     function setup() { \n        amplitude = new Amplitude();\n     }\n     function draw() {\n        volume = amplitude.getLevel();\n     }\n  </code></div>"
+                "\n<div><code>\nfunction setup() { \n  amplitude = new Amplitude();\n}\nfunction draw() {\n  volume = amplitude.getLevel();\n}\n</code></div>"
             ],
             "class": "p5.sound:Amplitude",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1291,
+            "line": 1173,
             "description": "Determines whether the results of Amplitude.process() will be Normalized.\nTo normalize, Amplitude finds the difference the loudest reading it has processed\nand the maximum amplitude of 1.0. Amplitude adds this difference to all values to produce\nresults that will reliably map between 0.0 and 1.0. \nHowever, if a louder moment occurs, the amount that Normalize adds to all the values will change.\n\nAccepts an optional boolean parameter (true or false).\nNormalizing is off by default.",
             "itemtype": "method",
             "name": "toggleNormalize",
@@ -7759,7 +7866,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1314,
+            "line": 1196,
             "description": "Determines whether the results of Amplitude.process() will be Smoothed.",
             "itemtype": "method",
             "name": "smooth",
@@ -7775,10 +7882,10 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1333,
+            "line": 1215,
             "description": "Create an analyser node with optional variables for smoothing, \nfft size, min/max decibels. Decibels are in dBFS (0 is loudest),\nand will impact the range of your results.",
             "itemtype": "method",
-            "name": "new FFT",
+            "name": "FFT",
             "params": [
                 {
                     "name": "smoothing",
@@ -7810,7 +7917,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1372,
+            "line": 1254,
             "description": "<p>This method tells the FFT to processes the frequency spectrum.</p>\n \n<p>Returns an array of amplitude values between 0 and 255. The array\nstarts with the lowest pitched frequencies, and ends with the \nhighest.</p>\n\n<p>Length will be equal to 1/2 fftSize (default: 1024 / 512).</p>",
             "itemtype": "method",
             "name": "processFreq",
@@ -7823,7 +7930,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1393,
+            "line": 1275,
             "description": "Returns an array of amplitude values (between 0-255) that represent\na snapshot of amplitude readings in a single buffer.\n \nLength will be 1/2 size of FFT buffer (default is 2048 / 1024).\n\nCan be used to draw the waveform of a sound.",
             "itemtype": "method",
             "name": "waveform",
@@ -7836,7 +7943,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1420,
+            "line": 1302,
             "description": "<p>Returns the amount of energy (volume) at a specific\nfrequency, or the average amount of energy between two\ngiven frequencies.</p>\n\n<p>To get accurate results, processFreq() must be\ncalled prior to getFreq(). This is because procesFreq()\ntells the FFT to update its array of frequency data, which\ngetFreq() uses to determine the value at a specific frequency\nor range of frequencies.</p>",
             "itemtype": "method",
             "name": "getFreq",
@@ -7862,7 +7969,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1486,
+            "line": 1368,
             "description": "<p>Creates a signal that oscillates between -1.0 and 1.0.\nBy default, the oscillation takes the form of a sinusoidal\nshape ('sine'). Additional types include 'triangle',\n'sawtooth' and 'square'. The frequency defaults to\n440 oscillations per second (440Hz, equal to the pitch of an\n'A' note).</p> \n\n<p>Set the type of oscillation  setType(), or by creating a\nspecific oscillator.</p> For example:\n<code>new SinOsc(freq)</code>\n<code>new TriOsc(freq)</code>\n<code>new SqrOsc(freq)</code>\n<code>new SawOsc(freq)</code>.\n</p>",
             "itemtype": "method",
             "name": "new Oscillator",
@@ -7883,7 +7990,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1539,
+            "line": 1421,
             "description": "Start an oscillator. Accepts an optional parameter to\ndetermine how long (in seconds from now) until the\noscillator starts.",
             "itemtype": "method",
             "name": "start",
@@ -7899,7 +8006,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1564,
+            "line": 1446,
             "description": "Stop an oscillator. Accepts an optional parameter\nto determine how long (in seconds from now) until the\noscillator stops.",
             "itemtype": "method",
             "name": "stop",
@@ -7915,7 +8022,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1581,
+            "line": 1463,
             "description": "Set amplitude (volume) of an oscillator between 0 and 1.0",
             "itemtype": "method",
             "name": "amp",
@@ -7931,7 +8038,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1596,
+            "line": 1478,
             "description": "Set frequency of an oscillator.",
             "itemtype": "method",
             "name": "freq",
@@ -7956,7 +8063,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1692,
+            "line": 1574,
             "description": "Creates a Pulse object, an oscillator that implements\nPulse Width Modulation.\nThe pulse is created with two oscillators.\nAccepts a parameter for frequency, and to set the\nwidth between the pulses.\n\nInspired by <a href=\"\nhttp://www.musicdsp.org/showone.php?id=8\">musicdsp.org\"</a>",
             "itemtype": "method",
             "name": "new Pulse",
@@ -7977,7 +8084,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1731,
+            "line": 1613,
             "description": "Set the width of a Pulse object (an oscillator that implements\nPulse Width Modulation).",
             "itemtype": "method",
             "name": "width",
@@ -7993,7 +8100,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1799,
+            "line": 1681,
             "description": "Similar to p5.dom createCapture() but for audio, without\ncreating a DOM element.",
             "itemtype": "method",
             "name": "new AudioIn",
@@ -8002,14 +8109,14 @@
                 "type": "Object"
             },
             "example": [
-                "\n <div>\n   <code>\n     mic = new AudioIn()\n     mic.on();\n   </code>\n  </div>"
+                "\n<div><code>\nmic = new AudioIn()\nmic.on();\n</code></div>"
             ],
             "class": "p5.sound:AudioIn",
             "module": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1858,
+            "line": 1738,
             "description": "Returns a list of available input sources.",
             "itemtype": "method",
             "name": "listSources",
@@ -8022,7 +8129,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1875,
+            "line": 1755,
             "description": "Set the input source. Accepts a number representing a\nposition in the array returned by listSources().\nThis is only supported in browsers that support \nMediaStreamTrack.getSources(). Instead, some browsers\ngive users the option to set their own media source.",
             "itemtype": "method",
             "name": "setSource",
@@ -8038,7 +8145,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1904,
+            "line": 1784,
             "description": "<p>Read the Amplitude (volume level) of an AudioIn. The AudioIn\nclass contains its own instance of the Amplitude class to help\nmake it easy to get a microphone's volume level.</p>\n\n<p>Accepts an optional smoothing value (0.0 < 1.0).</p>\n\n<p>AudioIn must be .on() before using .getLevel().</p>",
             "itemtype": "method",
             "name": "getLevel",
@@ -8058,7 +8165,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1926,
+            "line": 1806,
             "description": "Turn the AudioIn on. This enables the use of other AudioIn\nmethods like getLevel().",
             "itemtype": "method",
             "name": "on",
@@ -8067,7 +8174,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1974,
+            "line": 1854,
             "description": "Turn the AudioIn off. If the AudioIn is off, it cannot getLevel().",
             "itemtype": "method",
             "name": "off",
@@ -8076,7 +8183,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1986,
+            "line": 1866,
             "description": "Add input sources to the list of available sources.",
             "access": "private",
             "tagname": "",
@@ -8091,31 +8198,31 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/objects/p5.Vector.js:309"
+            "line": " src/objects/p5.Vector.js:289"
         },
         {
             "message": "replacing incorrect tag: params with param",
-            "line": " lib/addons/p5.sound.js:903"
+            "line": " lib/addons/p5.sound.js:798"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " lib/addons/p5.sound.js:903"
+            "line": " lib/addons/p5.sound.js:798"
         },
         {
             "message": "param name missing: {}",
-            "line": " lib/addons/p5.sound.js:1076"
+            "line": " lib/addons/p5.sound.js:971"
         },
         {
             "message": "Missing item type\np5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
-            "line": " src/core/core.js:15"
+            "line": " src/core/core.js:16"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/environment/environment.js:85"
+            "line": " src/environment/environment.js:124"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/environment/environment.js:94"
+            "line": " src/environment/environment.js:133"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
@@ -8174,64 +8281,68 @@
             "line": " src/image/filters.js:371"
         },
         {
+            "message": "Missing item type\nThis module defines the p5 methods for the p5.Image class\nfor drawing images to the main display canvas.",
+            "line": " src/image/image.js:8"
+        },
+        {
+            "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
+            "line": " src/image/loading_displaying.js:129"
+        },
+        {
             "message": "Missing item type\nTODO: NOT IMPLEMENTED YET!\nSets the seed value for <b>noise()</b>. By default, <b>noise()</b>\nproduces different results each time the program is run. Set the\n<b>value</b> parameter to a constant to return the same pseudo-random\nnumbers each time the software is run.",
             "line": " src/math/noise.js:196"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:148"
+            "line": " src/objects/p5.Element.js:163"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
-            "line": " src/objects/p5.Image.js:10"
-        },
-        {
-            "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/objects/p5.Image.js:162"
+            "line": " src/objects/p5.Image.js:9"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Image.js:268"
+            "line": " src/objects/p5.Image.js:66"
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/objects/p5.Vector.js:309"
+            "line": " src/objects/p5.Vector.js:289"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/objects/p5.Vector.js:471"
+            "line": " src/objects/p5.Vector.js:451"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/objects/p5.Vector.js:484"
+            "line": " src/objects/p5.Vector.js:464"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:499"
+            "line": " src/objects/p5.Vector.js:479"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:511"
+            "line": " src/objects/p5.Vector.js:491"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/objects/p5.Vector.js:524"
+            "line": " src/objects/p5.Vector.js:504"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/objects/p5.Vector.js:536"
+            "line": " src/objects/p5.Vector.js:516"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/objects/p5.Vector.js:548"
+            "line": " src/objects/p5.Vector.js:528"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/objects/p5.Vector.js:561"
+            "line": " src/objects/p5.Vector.js:541"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/objects/p5.Vector.js:576"
+            "line": " src/objects/p5.Vector.js:556"
         },
         {
             "message": "Missing item type",
@@ -8239,51 +8350,43 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:40"
+            "line": " src/app.js:43"
+        },
+        {
+            "message": "Missing item type\nHelper for create methods.",
+            "line": " lib/addons/p5.dom.js:165"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:230"
+            "line": " lib/addons/p5.dom.js:268"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:306"
+            "line": " lib/addons/p5.dom.js:335"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:391"
+            "line": " lib/addons/p5.dom.js:418"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:523"
-        },
-        {
-            "message": "Missing item type\nVersion .0003\n\np5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.\n\nThis is an addon for p5.js that extends p5 with the following classes:\n  SoundOut\n  SoundFile\n  Amplitude\n  FFT\n  Oscillator (SinOsc, SqrOsc, SawOsc, TriOsc, Pulse)\n  AudioIn\n   ... more soon!\n \nIncorporates elements from:\n  - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n  - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n  - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n  - wavesurfer.js\n  - recorder.js (hopefully soon!)\n  - Wilm Thoben's Sound library for Processing",
-            "line": " lib/addons/p5.sound.js:2"
+            "line": " lib/addons/p5.dom.js:548"
         },
         {
             "message": "Missing item type\nWeb Audio SHIMS and helper functions to ensure compatability across browsers",
-            "line": " lib/addons/p5.sound.js:38"
+            "line": " lib/addons/p5.sound.js:36"
         },
         {
             "message": "Missing item type\nDetermine which filetypes are supported (inspired by buzz.js)\nThe audio element (el) will only be used to test browser support for various audio formats",
-            "line": " lib/addons/p5.sound.js:77"
-        },
-        {
-            "message": "Missing item type\nPrivate callbacks to be used for soundfile playback & loading.\nThese may not be necessary since loadSound works in\npreload and with callbacks.",
-            "line": " lib/addons/p5.sound.js:120"
+            "line": " lib/addons/p5.sound.js:75"
         },
         {
             "message": "Missing item type\nMaster contains AudioContext and the master sound output.",
-            "line": " lib/addons/p5.sound.js:214"
-        },
-        {
-            "message": "Missing item type\nReverses the SoundFile's buffer source.\nPlayback must be handled separately (see example).",
-            "line": " lib/addons/p5.sound.js:962"
+            "line": " lib/addons/p5.sound.js:118"
         },
         {
             "message": "Missing item type\nAdd input sources to the list of available sources.",
-            "line": " lib/addons/p5.sound.js:1986"
+            "line": " lib/addons/p5.sound.js:1866"
         }
     ]
 }
