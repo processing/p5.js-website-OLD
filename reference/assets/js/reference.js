@@ -5127,9 +5127,8 @@ define('listView',[
           if (item.file.indexOf('addons') === -1) { //addons don't get displayed on main page
 
             var group = item.module || '_';
-            var subgroup = item.class || '_';
-            if (item.file.indexOf('objects') !== -1 ||
-              group === subgroup) {
+            var subgroup = item.submodule || '_';
+            if (group === subgroup) {
               subgroup = '0';
             }
             var hash = App.router.getHash(item);
@@ -9940,9 +9939,12 @@ define('menuView',[
     
       var groups = [];
       _.each(App.modules, function (item, i) {
-        if (item.file.indexOf('addons') === -1) { //addons don't get displayed on main page
-          groups.push(item.name);
+        if (!item.is_submodule) {
+          if (!item.file || item.file.indexOf('addons') === -1) { //addons don't get displayed on main page
+            groups.push(item.name);
+          }
         }
+        //}
       });
 
       // Sort groups by name A-Z
@@ -10440,19 +10442,14 @@ require([
 
     // Get classes
     _.each(classes, function(c, idx, array) {
-      if (c.module === 'p5.sound' || c.module === 'p5.dom' || c.name.indexOf('p5') !== -1) {
+      //if (c.module === 'p5.sound' || c.module === 'p5.dom' || c.name.indexOf('p5') !== -1) {
         App.classes.push(c);
-      }
+      //}
     });
 
     // Get class items (methods, properties, events)
     _.each(items, function(el, idx, array) {
 
-      var pieces = el.class.split(':');
-      if (pieces.length > 1) {
-        el.module = pieces[0];
-        el.class = pieces[1];
-      }
       if (el.itemtype) {
         if (el.itemtype === "method") {
           App.methods.push(el);
