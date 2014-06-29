@@ -85,6 +85,7 @@ function renderCode() {
     edit_space.appendChild(edit_area);
     edit_area.style.display = 'none';
 
+    enableTab(edit_area);
 
     function setMode(sketch, m) {
       if (m === 'edit') {
@@ -97,6 +98,25 @@ function renderCode() {
         runCode(sketch);
       }
     }
+
+    function enableTab(el) {
+      el.onkeydown = function(e) {
+        if (e.keyCode === 9) { // tab was pressed
+          // get caret position/selection
+          var val = this.value,
+              start = this.selectionStart,
+              end = this.selectionEnd;
+          // set textarea value to: text before caret + tab + text after caret
+          this.value = val.substring(0, start) + '  ' + val.substring(end);
+          // put caret at right position again
+          this.selectionStart = this.selectionEnd = start + 2;
+          // prevent the focus lose
+          return false;
+
+        }
+      };
+    }
+
   }
 
   function runCode(sketch) {
