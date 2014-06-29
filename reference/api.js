@@ -2,8 +2,10 @@ YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
         "2D Primitives",
+        "Amplitude",
         "Array Functions",
         "Attributes",
+        "AudioIn",
         "Calculation",
         "Constants",
         "Creating & Reading",
@@ -13,6 +15,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "DOM:p5.Element",
         "Environment",
         "Environment:Environment",
+        "FFT",
         "Files",
         "Image",
         "Image:Pixels",
@@ -21,6 +24,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "Math",
         "Mouse",
         "Noise",
+        "Oscillator",
+        "Oscillator:Pulse",
         "Pixels",
         "Random",
         "Setting",
@@ -37,13 +42,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Image",
         "p5.Vector",
         "p5.dom",
-        "p5.sound",
-        "p5.sound:Amplitude",
-        "p5.sound:AudioIn",
-        "p5.sound:FFT",
-        "p5.sound:Oscillator",
-        "p5.sound:Oscillator:Pulse",
-        "p5.sound:SoundFile"
+        "p5.sound"
     ],
     "modules": [
         "Color",
@@ -107,7 +106,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "p5.sound",
             "name": "p5.sound",
-            "description": "Version .0003\n\np5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.\n\nThis is an addon for p5.js that extends p5 with the following classes:\n  SoundOut\n  SoundFile\n  Amplitude\n  FFT\n  Oscillator (SinOsc, SqrOsc, SawOsc, TriOsc, Pulse)\n  AudioIn\n   ... more soon!\n \nIncorporates elements from:\n  - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n  - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n  - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n  - wavesurfer.js\n  - recorder.js (hopefully soon!)\n  - Wilm Thoben's Sound library for Processing"
+            "description": "<h1>Version .0003</h1>\n\n<p>p5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.</p>\n\n<p>This is an addon that extends p5 to work with sound.<br>\n<a href=\"https://github.com/therewasaguy/p5.js/blob/p5sound/lib/addons/p5.sound.js\">DOWNLOAD HERE.</a></p>\n \n<p>Incorporates elements from:<br>\n  - <a href=\"https://github.com/TONEnoTONE/Tone.js\">TONE.js</a> (c) Yotam Mann, 2014. Licensed under The MIT License (MIT).<br />\n  - <a href=\"http://buzz.jaysalvat.com/\">buzz.js</a> (c) Jay Salvat, 2013. Licensed under The MIT License (MIT).<br />\n  - <a href=\"http://www.apache.org/licenses/LICENSE-2.0\">Boris Smus Web Audio API book</a>, 2013. Licensed under the Apache License<br />\n  - <a href=\"https://github.com/katspaugh/wavesurfer.js\">wavesurfer.js</a><br />\n  - <a href=\"https://github.com/wirsing/processingsound\">Wilm Thoben's Sound library for Processing</a>"
         },
         {
             "displayName": "Shape",

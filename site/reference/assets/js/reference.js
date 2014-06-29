@@ -9980,7 +9980,7 @@ define('menuView',[
 
 });
 
-define('text!tpl/library.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<h3><%= module.name %></h3>\n\n\n<p><%= module.description %></p>\n\n<% _.each(groups, function(group){ %>\n  <div>\n<p>const:<%= group.is_constructor %></p>\n\n  <% if (group.name !== module.name) { %>\n    <a href="<%=group.hash%>"><strong><%=group.name%>()</strong></a>\n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <br>\n    <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n  <% }); %>\n  <br><br>\n  </div>\n<% }); %>\n';});
+define('text!tpl/library.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<h3><%= module.name %></h3>\n\n\n<p><%= module.description %></p>\n\n<% _.each(groups, function(group){ %>\n  <div>\n  <% if (group.name !== module.name) { %>\n    <a href="<%=group.hash%>"><strong><%=group.name%>()</strong></a>\n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <br>\n    <a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n  <% }); %>\n  <br><br>\n  </div>\n<% }); %>\n';});
 
 define('libraryView',[
   'underscore',
