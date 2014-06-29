@@ -29,7 +29,6 @@ function renderCode(sel) {
     sketchContainer.style.height = sketchNode.offsetHeight;
 
     // remove start and end lines
-    sketch.innerText = sketch.innerText.replace(/^\s+|\s+$/g, '');
     var runnable = sketch.innerText;
     var rows = sketch.innerText.split('\n').length;
 
