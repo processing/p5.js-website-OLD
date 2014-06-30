@@ -48,7 +48,7 @@
 
 
 
-      <h3>Contributors @TODO</h3>
+      <a name="contributors" class="anchor"><h3>Contributors @TODO</h3></a>
 <!--
         Some people to include...<br>
         Lauren McCarthy<br>
