@@ -1,6 +1,6 @@
-function renderCode() {
-  console.log('render')
-  var examples = document.getElementsByClassName('example');
+function renderCode(sel) {
+  var selector = sel || 'example'
+  var examples = document.getElementsByClassName(selector);
   if (examples.length > 0) {
 
     var sketches = examples[0].getElementsByTagName('code');
@@ -66,7 +66,6 @@ function renderCode() {
       }
     }
 
-
     var reset_button = document.createElement('button');
     reset_button.value = 'reset';
     reset_button.innerHTML = 'reset';
@@ -116,7 +115,6 @@ function renderCode() {
         }
       };
     }
-
   }
 
   function runCode(sketch) {
@@ -126,12 +124,11 @@ function renderCode() {
     var sketchContainer = sketchNode.parentNode;
     var parent = sketchContainer.parentNode;
 
-    var runnable = sketch.innerText;
+    var runnable = sketch.innerText.replace(/^\s+|\s+$/g, '');
     var cnv;
     if (isRef) {
       cnv = sketchContainer.getElementsByClassName('cnv_div')[0];
     } else {
-      console.log(sketchNode.className);
       cnv = parent.parentNode.getElementsByClassName('cnv_div')[0];
     }
     cnv.innerHTML = '';
