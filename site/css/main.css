@@ -420,6 +420,11 @@ a:active, a:hover, #reference a:hover {
     transition: border-bottom 30ms linear; 
 }
 
+
+a.nounderline {
+    border: none !important;
+}
+
 .anchor {
     color: #222 !important;
 }

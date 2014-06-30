@@ -13,16 +13,19 @@
 
       <a name="included" class="anchor"><h3>Included</h3></a>
 
-      <div class="right-column">
-        <img src="../img/test-image-1.jpg">
-        <p><a href="<?php echo getRoot(); ?>reference/#/libraries/dom">p5.dom</a>
-        <br>Description goes here.</p> 
-      </div>
 
       <div class="left-column">
-        <img src="../img/test-image-1.jpg">
-        <p><a href="<?php echo getRoot(); ?>reference/#/libraries/sound">p5.sound</a>
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/sound">
+        <img src="../img/test-image-1.jpg"></a>
+        <a href="<?php echo getRoot(); ?>reference/#/libraries/sound"><p>p5.sound</a>
         <br>Description goes here.</p>
+      </div>
+
+      <div class="right-column">
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/dom">
+        <img src="../img/test-image-1.jpg"></a>
+        <a href="<?php echo getRoot(); ?>reference/#/libraries/dom"><p>p5.dom</a>
+        <br>Description goes here.</p> 
       </div>
 
       <div class="spacer"></div>
