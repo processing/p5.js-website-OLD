@@ -5109,7 +5109,7 @@ define('searchView',[
 });
 
 
-define('text!tpl/list.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<% _.each(groups, function(group){ %>\n  <div class="reference-group clearfix">  \n  <h4 class="group-name" id="group-<%=group.name%>"><%=group.name%></h4>\n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <dl>\n    <% if (subgroup.name !== \'0\') { %>\n        <dt class="subgroup-<%=subgroup.name%>"><%=subgroup.name%></dt>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n      <dd><a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></dd>\n    <% }); %>\n    </dl>\n  <% }); %>\n  </div>\n<% }); %>\n\n\n\n                \n                  ';});
+define('text!tpl/list.html',[],function () { return '<!-- <div class="page-header">\n  <h1>\n    <%=title%>\n  </h1>\n</div> -->\n\n<% _.each(groups, function(group){ %>\n  <h4 class="group-name" id="group-<%=group.name%>"><%=group.name%></h4>\n  <div class="reference-group clearfix main-ref-page">  \n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <dl>\n    <% if (subgroup.name !== \'0\') { %>\n        <dt class="subgroup-<%=subgroup.name%>"><%=subgroup.name%></dt>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n      <dd><a href="<%=item.hash%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></dd>\n    <% }); %>\n    </dl>\n  <% }); %>\n  </div>\n<% }); %>\n\n\n\n                \n                  ';});
 
 define('listView',[
   'underscore',
@@ -7129,7 +7129,7 @@ define('menuView',[
 
 });
 
-define('text!tpl/library.html',[],function () { return '<h3><%= module.name %></h3>\n\n<p><%= module.description %></p>\n\n<% _.each(groups, function(group){ %>\n  <% if (group.name !== module.name) { %>\n    <a href="<%=group.hash%>" <% if (group.module !== module.name) { %>class="core"<% } %>><h4><%=group.name%>()</h4></a>\n  <% } %>\n  <p>\n  <% _.each(group.items, function(item) { %>\n    <br>\n    <a href="<%=item.hash%>" <% if (item.module !== module.name) { %>class="core"<% } %>><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a>\n  <% }); %>\n  </p>\n<% }); %>\n';});
+define('text!tpl/library.html',[],function () { return '<h3><%= module.name %></h3>\n\n<p><%= module.description %></p>\n\n<div class="reference-group clearfix">  \n\n<% _.each(groups, function(group){ %>\n  <dl>\n  <% if (group.name !== module.name) { %>\n    <dt><a href="<%=group.hash%>" <% if (group.module !== module.name) { %>class="core"<% } %>><h4><%=group.name%>()</h4></a></dt>\n  <% } %>\n  <p>\n  <% _.each(group.items, function(item) { %>\n    <dd><a href="<%=item.hash%>" <% if (item.module !== module.name) { %>class="core"<% } %>><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></dd>\n  <% }); %>\n  </p>\n  </dl>\n<% }); %>\n</div>';});
 
 define('libraryView',[
   'underscore',
@@ -7569,9 +7569,9 @@ require([
 
     // Get classes
     _.each(classes, function(c, idx, array) {
-      //if (c.module === 'p5.sound' || c.module === 'p5.dom' || c.name.indexOf('p5') !== -1) {
+      if (c.is_constructor) {
         App.classes.push(c);
-      //}
+      }
     });
 
     // Get class items (methods, properties, events)

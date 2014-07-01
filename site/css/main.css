@@ -168,7 +168,7 @@ color: #666;  }
 
 #collection-list-nav {
     width:100%;
-    height:8.25em;
+    height:6.75em;
     list-style-type: none;
     font-family: "AvenirNextLTW01-Medium";
     clear:both;
@@ -188,14 +188,18 @@ color: #666;  }
     margin:0 1.75em 0 0;
 }
 
+
 #collection-list-nav dl:nth-child(4), 
-    .reference-group dl:nth-child(4) {
+    .reference-group dl:nth-child(4),
+    .reference-group.main-ref-page dl:nth-child(5) {
     margin-right:0;
 }
 
+
 .reference-group dl:nth-child(n+5) {
- margin-bottom:1em;
+ margin-top:1em;
 }
+
 
 #collection-list-nav dd, 
     .reference-group dd {
@@ -420,11 +424,6 @@ a:active, a:hover, #reference a:hover {
     transition: border-bottom 30ms linear; 
 }
 
-
-a.nounderline {
-    border: none !important;
-}
-
 .anchor {
     color: #222 !important;
 }
@@ -560,9 +559,6 @@ li {
     margin: 0 0 1em 0;
 }
 
-.image-row img {
-    width:48%;
-}
 
 .image-row img+img {
     float:right;
@@ -879,8 +875,7 @@ footer {
         transform: rotate(2deg);
     }
 
-    #learning-page #asterisk-design-element,
-    #download-page #asterisk-design-element {
+    #learning-page #asterisk-design-element {
 
         top:-30%;
         right:-40%;
@@ -895,6 +890,7 @@ footer {
     }
 
     #reference-page #asterisk-design-element,
+    #download-page #asterisk-design-element, 
     #other-content-types-page #asterisk-design-element
     {
         top:7%;

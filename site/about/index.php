@@ -7,7 +7,7 @@
 
     <!-- content sections -->
     <div class="column-span">
-      <section>
+      <section id="about">
           <h2>About</h2>
           <p>
           p5.js is a JavaScript library that starts with the original goal of 
@@ -40,5 +40,6 @@
 
 
     <?php include('../end.php'); ?>
+
   </body>
 </html>
