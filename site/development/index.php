@@ -30,15 +30,15 @@
       </p>
 
       <ul>
-        <li><strong>Develop</strong> — Follow along on <a href="https://github.com/lmccart/p5.js">github</a>
+        <li><h4>Develop</h4>Follow along on <a href="https://github.com/lmccart/p5.js">github</a>
         and check out the <a href="https://github.com/lmccart/p5.js/wiki/Development">
         development tutorial</a> to get started.</li>
-        <li><strong>Create documentation</strong> — Everyone loves documentation. Help is needed <a href="#">
+        <li><h4>Create documentation</h4>Everyone loves documentation. Help is needed <a href="#">
         creating tutorials</a>, <a href="#">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
         adding documentation</a>.</li>
-        <li><strong>Teach</strong> — Check out the <a href="#">education page</a> on the wiki to view
+        <li><h4>Teach</h4>Check out the <a href="#">education page</a> on the wiki to view
         resources from past classes, workshops, and events. Add your own links!</li>
-        <li><strong>Something else?</strong> — p5.js is looking for designers, artists, writers, organizers,
+        <li><h4>Something else?</h4>p5.js is looking for designers, artists, writers, organizers,
         and any other role you can think of. Get in touch at <a href="mailto:hello@p5js.org">hello@p5js.org</a>.</li>
       </ul>
 
