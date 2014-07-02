@@ -974,7 +974,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 557,
+            "line": 580,
             "description": "This is the p5.dom library.",
             "tag": "main",
             "itemtype": "main"
@@ -1138,7 +1138,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 557,
+            "line": 580,
             "description": "A class to describe...",
             "is_constructor": 1,
             "params": [
@@ -3319,14 +3319,17 @@
             "description": "The boolean system variable isKeyPressed is true if any key is pressed\nand false if no keys are pressed.",
             "itemtype": "property",
             "name": "isKeyPressed",
+            "example": [
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  if (isKeyPressed === true) {\n    fill(0);\n  } else {\n    fill(255);\n  }\n  rect(25, 25, 50, 50);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Keyboard"
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 22,
-            "description": "The system variable key always contains the value of the most recent\nkey on the keyboard that was typed. For non-ASCII keys, use the keyCode\nvariable.",
+            "line": 36,
+            "description": "The system variable key always contains the value of the most recent\nkey on the keyboard that was typed. To get the proper capitalization, it\nis best to use it within keyTyped(). For non-ASCII keys, use the keyCode\nvariable.",
             "itemtype": "property",
             "name": "key",
             "class": "p5",
@@ -3335,8 +3338,8 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 31,
-            "description": "The variable keyCode is used to detect special keys such as the UP,\nDOWN, LEFT, RIGHT arrow keys and ALT, CONTROL, SHIFT.",
+            "line": 46,
+            "description": "The variable keyCode is used to detect special keys such as BACKSPACE,\nDELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, OPTION, ALT, UP_ARROW,\nDOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.",
             "itemtype": "property",
             "name": "keyCode",
             "class": "p5",
@@ -3345,12 +3348,12 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 39,
-            "description": "The keyPressed() function is called once every time a key is pressed.",
+            "line": 55,
+            "description": "The keyPressed() function is called once every time a key is pressed. The\nkeyCode for the key that was pressed is stored in the keyCode variable. \n<br><br>\nFor non-ASCII keys, use the keyCode variable. You can check if the keyCode\nequals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, \nOPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.\n<br><br>\nFor ASCII keys that was pressed is stored in the key variable. However, it\ndoes not distinguish between uppercase and lowercase. For this reason, it\nis recommended to use keyTyped() to read the key variable, in which the\ncase of the variable will be distinguished.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key \nmay cause multiple calls to keyTyped() (and keyReleased() as well). The \nrate of repeat is set by the operating system and how each computer is \nconfigured.",
             "itemtype": "method",
             "name": "keyPressed",
             "example": [
-                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function keyPressed() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (keyCode === LEFT_ARROW) {\n    value = 255;\n  } else if (keyCode === RIGHT_ARROW) {\n    value = 0;\n  }\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -3358,12 +3361,12 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 72,
-            "description": "The keyReleased() function is called once every time a key is released.\nSee key and keyReleased for more information. For non-ASCII keys, use\nthe keyCode variable.",
+            "line": 122,
+            "description": "The keyReleased() function is called once every time a key is released.\nSee key and keyCode for more information.",
             "itemtype": "method",
             "name": "keyReleased",
             "example": [
-                "\n  <div>\n    <code>\n      // Click within the image to change \n      // the value of the rectangle\n      \n      var value = 0;\n      function draw() {\n        fill(value);\n        rect(25, 25, 50, 50);\n      }\n      function keyReleased() {\n        if (value == 0) {\n          value = 255;\n        } else {\n          value = 0;\n        }\n      }\n    </code>\n  </div>"
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyReleased() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -3371,10 +3374,13 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 108,
-            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.",
+            "line": 154,
+            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key \nwill cause multiple calls to keyTyped(), the rate is set by the operating \nsystem and how each computer is configured.",
             "itemtype": "method",
             "name": "keyTyped",
+            "example": [
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyTyped() {\n  if (key === 'a') {\n    value = 255;\n  } else if (key === 'b') {\n    value = 0;\n  }\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Keyboard"
@@ -3507,7 +3513,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 201,
+            "line": 209,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -3520,7 +3526,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 243,
+            "line": 253,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -3533,7 +3539,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 282,
+            "line": 294,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -3546,7 +3552,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 316,
+            "line": 329,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -3694,7 +3700,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 72,
+            "line": 73,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -3704,7 +3710,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 90,
+            "line": 92,
             "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -4242,7 +4248,7 @@
         },
         {
             "file": "src/math/random.js",
-            "line": 24,
+            "line": 49,
             "description": "Return a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them,\ninclusive.",
             "itemtype": "method",
             "name": "random",
@@ -4256,6 +4262,32 @@
                     "name": "max",
                     "description": "the upper bound",
                     "type": "Y"
+                }
+            ],
+            "return": {
+                "description": "the random number",
+                "type": "Number"
+            },
+            "class": "p5",
+            "module": "Math",
+            "submodule": "Random"
+        },
+        {
+            "file": "src/math/random.js",
+            "line": 90,
+            "description": "Returns a random number fitting a Gaussian, or\n normal, distribution. There is theoretically no minimum or maximum\n value that <b>randomGaussian()</b> might return. Rather, there is\n just a very low probability that values far from the mean will be\n returned; and a higher probability that numbers near the mean will\n be returned.   \n Takes either 0, 1 or 2 arguments.\n If no args, returns a mean of 0 and standard deviation of 1\n If one arg, that arg is the mean (standard deviation is 1)\n If two args, first is mean, second is standard deviation",
+            "itemtype": "method",
+            "name": "randomGaussian",
+            "params": [
+                {
+                    "name": "mean",
+                    "description": "",
+                    "type": "Mean"
+                },
+                {
+                    "name": "standard",
+                    "description": "deviation",
+                    "type": "Sd"
                 }
             ],
             "return": {
@@ -7468,7 +7500,41 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 372,
+            "line": 365,
+            "description": "Adds specified class to the element.",
+            "itemtype": "method",
+            "name": "addClass",
+            "params": [
+                {
+                    "name": "class",
+                    "description": "name of class to add",
+                    "type": "String"
+                }
+            ],
+            "class": "p5.dom",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 382,
+            "description": "Removes specified class from the element.",
+            "itemtype": "method",
+            "name": "removeClass",
+            "params": [
+                {
+                    "name": "class",
+                    "description": "name of class to remove",
+                    "type": "String"
+                }
+            ],
+            "class": "p5.dom",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 395,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "child",
@@ -7485,7 +7551,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 389,
+            "line": 412,
             "description": "Sets the inner HTML of the element. Replaces any existing html.",
             "itemtype": "method",
             "name": "html",
@@ -7502,7 +7568,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 401,
+            "line": 424,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -7524,7 +7590,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 417,
+            "line": 440,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property, \n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -7550,7 +7616,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 437,
+            "line": 460,
             "description": "Adds a new attribute or changes the value of an existing attribute \n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -7577,7 +7643,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 457,
+            "line": 480,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -7599,7 +7665,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 477,
+            "line": 500,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -7609,7 +7675,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 487,
+            "line": 510,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -7619,7 +7685,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 496,
+            "line": 519,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -7641,7 +7707,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 536,
+            "line": 559,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -7651,7 +7717,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 573,
+            "line": 596,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -7661,7 +7727,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 585,
+            "line": 608,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -7671,7 +7737,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 595,
+            "line": 618,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -7681,7 +7747,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 604,
+            "line": 627,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -7691,7 +7757,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 613,
+            "line": 636,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -7701,7 +7767,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 624,
+            "line": 647,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -7718,7 +7784,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 634,
+            "line": 657,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume;",
             "params": [
                 {
@@ -7740,7 +7806,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 650,
+            "line": 673,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -7762,7 +7828,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 666,
+            "line": 689,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
