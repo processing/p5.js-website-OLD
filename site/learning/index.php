@@ -103,6 +103,12 @@
             
             <br>
           
+            <strong>Image</strong><br>            
+            
+              <a href="examples/Load_and_Display_Image.php">Load and Display Image</a><br>
+            
+            <br>
+          
           </p>
           <!--<li><a href="https://github.com/lmccart/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
 
