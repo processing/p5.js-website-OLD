@@ -32,7 +32,8 @@
       <ul>
         <li><h4>Develop</h4>Follow along on <a href="https://github.com/lmccart/p5.js">github</a>
         and check out the <a href="https://github.com/lmccart/p5.js/wiki/Development">
-        development tutorial</a> to get started.</li>
+        development tutorial</a> to get started, or <a href="http://localhost/p5js.org/site/libraries/#create_libraries">
+        create your own library.</a></li>
         <li><h4>Create documentation</h4>Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
         adding documentation</a>, and creating tutorials.</li>
         <li><h4>Teach</h4>Check out the <a href="#">education page</a> on the wiki to view

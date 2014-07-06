@@ -46,10 +46,32 @@
       <div class="spacer"></div>
 
 
+      <h3>Using a library</h3>
 
-      <a name="contributed" class="anchor"><h3>Create Your Own</h3></a>
+      <p>A p5.js library can be any JavaScript code that extends or adds to the p5.js core functionality. 
+      There are two categories of libraries. Core libraries (<a href="<?php echo getRoot(); ?>reference/#/libraries/dom">p5.dom</a> 
+      and <a href="<?php echo getRoot(); ?>reference/#/libraries/sound">p5.sound</a>) are part of the p5.js 
+      distribution, while contributed libraries are developed, owned, and maintained by members of the p5.js 
+      community.</p>
 
-      <p>Some info about how to do this.</p>
+      <p>To include a library in your sketch, link it into your HTML file, after you have linked in p5.js. 
+      An example HTML file might look like this:</p>
+      <pre><code class="language-markup">&lt;!doctype html>
+&lt;html>
+&lt;head>
+  &lt;script src="p5.js"></script>
+  &lt;script src="p5.sound.js"></script>
+  &lt;script src="sketch.js"></script>
+&lt;/head>
+&lt;body>
+&lt;/body>
+&lt;/html></code></pre>
+
+      <a name="create_libraries" class="anchor"><h3>Create Your Own</h3></a>
+
+      <p>p5.js welcomes libraries contributed by others! Check out the 
+      <a href="https://github.com/lmccart/p5.js/wiki/Libraries">libraries tutorial</a> for more
+      specifics about how to create one.</p>
 
     </section>
     <?php include('../footer.php'); ?>
