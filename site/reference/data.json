@@ -2565,6 +2565,31 @@
             "submodule": "Environment"
         },
         {
+            "file": "src/environment/environment.js",
+            "line": 236,
+            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state.",
+            "itemtype": "method",
+            "name": "fullscreen",
+            "params": [
+                {
+                    "name": "val",
+                    "description": "whether the sketch should be fullscreened or not",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "current fullscreen state",
+                "type": "Boolean"
+            },
+            "example": [
+                "\n<div>\n<code>\n// Clicking the mouse toggles fullscreen on and off.\nfunction setup() {\n  background(200);\n}\nfunction mousePressed() {\n  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {\n    var fs = fullscreen();\n    fullscreen(!fs);\n  }\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Environment",
+            "submodule": "Environment"
+        },
+        {
             "file": "src/image/filters.js",
             "line": 5,
             "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
@@ -4623,7 +4648,24 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 121,
+            "line": 113,
+            "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
+            "itemtype": "method",
+            "name": "mouseMoved",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   moved over the element.",
+                    "type": "Function"
+                }
+            ],
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 134,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -8758,7 +8800,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:121"
+            "line": " src/objects/p5.Element.js:134"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
