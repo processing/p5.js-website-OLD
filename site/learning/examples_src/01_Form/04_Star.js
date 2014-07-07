@@ -5,7 +5,7 @@
  * into the star() function calls within draw() to explore.
  */
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
 }
 
 function draw() {

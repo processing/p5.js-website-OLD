@@ -5,7 +5,7 @@
  * function.
  */
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
 }
 
 function draw() {

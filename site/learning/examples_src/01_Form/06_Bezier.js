@@ -6,7 +6,7 @@
  * curve.
  */
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   stroke(255);
   noFill();
 }

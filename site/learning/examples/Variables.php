@@ -15,7 +15,7 @@
           <pre><code class="language-javascript">
 function setup() {
 
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   background(0);
   stroke(153);
   strokeWeight(4);

@@ -14,7 +14,7 @@
           <div>
           <pre><code class="language-javascript">
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
 }
 
 function draw() {
