@@ -15,16 +15,16 @@
 
 
       <div class="left-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/sound">
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
         <img src="../img/test-image-1.jpg"></a>
-        <a href="<?php echo getRoot(); ?>reference/#/libraries/sound"><p>p5.sound</a>
+        <a href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound"><p>p5.sound</a>
         <br>Description goes here.</p>
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/dom">
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
         <img src="../img/test-image-1.jpg"></a>
-        <a href="<?php echo getRoot(); ?>reference/#/libraries/dom"><p>p5.dom</a>
+        <a href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><p>p5.dom</a>
         <br>Description goes here.</p> 
       </div>
 
