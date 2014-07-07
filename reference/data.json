@@ -7390,9 +7390,9 @@
             "name": "createVideo",
             "params": [
                 {
-                    "name": "srcs",
+                    "name": "src",
                     "description": "path to a video file, or array of paths for\n                            supporting different browsers",
-                    "type": "String"
+                    "type": "String|Array"
                 },
                 {
                     "name": "callback",
@@ -7424,9 +7424,9 @@
             "name": "createAudio",
             "params": [
                 {
-                    "name": "srcs",
+                    "name": "src",
                     "description": "path to an audio file, or array of paths for\n                            supporting different browsers",
-                    "type": "String"
+                    "type": "String|Array"
                 },
                 {
                     "name": "callback",
