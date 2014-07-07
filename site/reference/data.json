@@ -974,7 +974,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 580,
+            "line": 590,
             "description": "This is the p5.dom library.",
             "tag": "main",
             "itemtype": "main"
@@ -1138,7 +1138,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 580,
+            "line": 590,
             "description": "A class to describe...",
             "is_constructor": 1,
             "params": [
@@ -7390,14 +7390,14 @@
             "name": "createVideo",
             "params": [
                 {
-                    "name": "src",
-                    "description": "path to a video file",
+                    "name": "srcs",
+                    "description": "path to a video file, or array of paths for\n                            supporting different browsers",
                     "type": "String"
                 },
                 {
-                    "name": "src",
-                    "description": "path to another format of same file \n                            (optional, to ensure compatability)",
-                    "type": "String",
+                    "name": "callback",
+                    "description": "callback function to be called upon \n                            'canplaythrough' event fire, that is, when the\n                            browser can play the media, and estimates that \n                            enough data has been loaded to play the media \n                            up to its end without having to stop for \n                            further buffering of content",
+                    "type": "Object",
                     "optional": true
                 }
             ],
@@ -7411,27 +7411,27 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 269,
+            "line": 283,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 271,
+            "line": 285,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio \nplayback. Appends to the container node if one is specified, \notherwise appends to body.",
             "itemtype": "method",
             "name": "createAudio",
             "params": [
                 {
-                    "name": "src",
-                    "description": "path to an audio file",
+                    "name": "srcs",
+                    "description": "path to an audio file, or array of paths for\n                            supporting different browsers",
                     "type": "String"
                 },
                 {
-                    "name": "src",
-                    "description": "path to another format of same file \n                            (optional, to ensure compatability)",
-                    "type": "String",
+                    "name": "callback",
+                    "description": "callback function to be called upon \n                            'canplaythrough' event fire, that is, when the\n                            browser can play the media, and estimates that \n                            enough data has been loaded to play the media \n                            up to its end without having to stop for \n                            further buffering of content",
+                    "type": "Object",
                     "optional": true
                 }
             ],
@@ -7445,14 +7445,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 298,
+            "line": 307,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 308,
+            "line": 317,
             "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video().",
             "itemtype": "method",
             "name": "createCapture",
@@ -7473,7 +7473,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 341,
+            "line": 350,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -7500,7 +7500,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 365,
+            "line": 373,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -7517,7 +7517,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 382,
+            "line": 392,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -7534,7 +7534,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 395,
+            "line": 405,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "child",
@@ -7551,7 +7551,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 412,
+            "line": 422,
             "description": "Sets the inner HTML of the element. Replaces any existing html.",
             "itemtype": "method",
             "name": "html",
@@ -7568,7 +7568,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 424,
+            "line": 434,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -7590,7 +7590,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 440,
+            "line": 450,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property, \n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -7616,7 +7616,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 460,
+            "line": 470,
             "description": "Adds a new attribute or changes the value of an existing attribute \n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -7643,7 +7643,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 480,
+            "line": 490,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -7665,7 +7665,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 500,
+            "line": 510,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -7675,7 +7675,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 510,
+            "line": 520,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -7685,7 +7685,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 519,
+            "line": 529,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -7707,7 +7707,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 559,
+            "line": 569,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -7717,7 +7717,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 596,
+            "line": 606,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -7727,7 +7727,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 608,
+            "line": 618,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -7737,7 +7737,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 618,
+            "line": 628,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -7747,7 +7747,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 627,
+            "line": 637,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -7757,7 +7757,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 636,
+            "line": 646,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -7767,7 +7767,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 647,
+            "line": 657,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -7784,7 +7784,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 657,
+            "line": 667,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume;",
             "params": [
                 {
@@ -7806,7 +7806,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 673,
+            "line": 683,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -7828,7 +7828,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 689,
+            "line": 699,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -8830,11 +8830,11 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:269"
+            "line": " lib/addons/p5.dom.js:283"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:298"
+            "line": " lib/addons/p5.dom.js:307"
         },
         {
             "message": "Missing item type\nWeb Audio SHIMS and helper functions to ensure compatability across browsers",
