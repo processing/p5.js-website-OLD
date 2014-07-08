@@ -9,6 +9,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "SoundFile",
         "p5",
         "p5.Element",
+        "p5.Graphics",
         "p5.Image",
         "p5.MediaElement",
         "p5.Vector",
@@ -38,6 +39,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Output",
         "Pixels",
         "Random",
+        "Rendering",
         "Setting",
         "Shape",
         "String Functions",
@@ -153,6 +155,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Random",
             "name": "Random"
+        },
+        {
+            "displayName": "Rendering",
+            "name": "Rendering"
         },
         {
             "displayName": "Setting",
