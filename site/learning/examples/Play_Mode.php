@@ -16,23 +16,18 @@
           <pre><code class="language-javascript">
 
 var playMode = 'sustain';
-var sample1, sample2, button;
+var sample;
 
 function setup() {
-  createCanvas(0,0);
-  sample1 = loadSound( ['assets/Damscray_-_Dancing_Tiger_01.ogg', 'assets/Damscray_-_Dancing_Tiger_01.mp3'] );
-  sample2 = loadSound( ['assets/Damscray_-_Dancing_Tiger_02.ogg', 'assets/Damscray_-_Dancing_Tiger_02.mp3'] );
-
-  createP('Press &quot;a&quot; and &quot;s&quot; on your keyboard to play two different samples.&lt;br&gt; Trigger lots of sounds at once! Change mode to hear the difference');
-
-  button = createButton('Current Play Mode: ');
+  createCanvas(700,50);
+  sample = loadSound( ['assets/Damscray_-_Dancing_Tiger_02.ogg', 'assets/Damscray_-_Dancing_Tiger_02.mp3'] );
 }
 
 function draw() {
-  button.html('Current Play Mode: ' + playMode);
+  background(255);
+  text('Current Play Mode: ' + playMode + '. Press z to change mode, and a to trigger sound', 10, height/2);
 }
 
-// alternate between 'sustain' and 'restart', and set playMode of both samples
 function togglePlayMode(){
   if (playMode == 'sustain'){
     playMode = 'restart';
@@ -40,30 +35,23 @@ function togglePlayMode(){
   else {
     playMode = 'sustain';
   }
-  sample1.playMode(playMode);
-  sample2.playMode(playMode);
+  sample.playMode(playMode);
 }
 
 function keyPressed(k) {
   if (k.keyCode == 65) {
-    sample1.play(.6);
-
-    // Get even more monophonic by only letting one sample play at a time
-    if ( playMode =='restart' &amp;&amp; sample2.isPlaying() ){
-      sample2.stopAll();
-    }
+    sample.play(.6);
   }
-  if (k.keyCode == 83) {
-    if ( playMode =='restart' &amp;&amp; sample1.isPlaying() ){
-      sample1.stopAll();
-    }
-    sample2.play(.6);
+  if (k.keyCode == 90) {
+    togglePlayMode();
   }
-}</code></pre>
+}
+</code></pre>
           </div>
           </div>
           </p>
-          <p>Change the Play Mode with a button
+          <p>Press &quot;a&quot; on your keyboard to play a sound file. Trigger lots of sounds at once! &quot;z&quot; to change playmode. In 'sustain' mode, the sound will overlap with itself. In 'restart' mode it will stop and then start again.
+
  </p>
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
