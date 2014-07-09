@@ -3,7 +3,9 @@ YUI.add("yuidoc-meta", function(Y) {
     "classes": [
         "Amplitude",
         "AudioIn",
+        "Env",
         "FFT",
+        "Noise",
         "Oscillator",
         "Pulse",
         "SoundFile",
