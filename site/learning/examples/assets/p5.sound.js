@@ -23,10 +23,14 @@
 
 'use strict';
 
+console.log('i am here');
 var p5SOUND = (function(){
 
   // register preload handling of loadSound
   p5.prototype._registerPreloadFunc('loadSound');
+
+  // register removeSound to dispose of p5sound SoundFiles and Oscillators when sketch ends
+  p5.prototype._registerRemoveFunc('disposeSound');
 
   /**
    * Web Audio SHIMS and helper functions to ensure compatability across browsers
@@ -149,7 +153,6 @@ var p5SOUND = (function(){
   // Will this be useful to access?
   // p5.prototype.SoundOut = p5sound;
 
-
   /**
    *  <p>Set the master amplitude (volume) for sound in this sketch.</p>
    *
@@ -263,6 +266,17 @@ var p5SOUND = (function(){
     return s;
   }
 
+  // an array of all sounds in the sketch
+  var soundArray = [];
+
+  p5.prototype.disposeSound = function(){
+    for (var i = 0; i < soundArray.length; i++){
+      console.log(soundArray[i]);
+      soundArray[i].dispose();
+      console.log(soundArray[i]);
+    }
+  };
+
 // =============================================================================
 //                                  SoundFile Class
 // =============================================================================
@@ -350,7 +364,7 @@ var p5SOUND = (function(){
     this.paused = null;
 
     // "restart" would stop playback before retriggering
-    this.mode = "restart";
+    this.mode = "sustain";
 
     // time that playback was started, in millis
     this.startMillis = null;
@@ -368,6 +382,9 @@ var p5SOUND = (function(){
     this.panner.connect(this.p5s.input);
 
     this.load(onload);
+
+    // add this SoundFile to the soundArray
+    soundArray.push(this);
   };
 
   /**
@@ -936,6 +953,21 @@ var p5SOUND = (function(){
     // TO DO
   };
 
+  p5.prototype.SoundFile.prototype.dispose = function() {
+    if (this.buffer && this.source) {
+      for (var i = 0; i < this.sources.length; i++){
+        this.sources[i].stop();
+        this.sources[i].disconnect();
+        this.sources[i] = null;
+      }
+    this.output.disconnect();
+    this.panner.disconnect();
+    this.disconnect();
+    this.output = null;
+    this.panner = null;
+    }
+  };
+
 // =============================================================================
 //                 SoundFile Methods Shared With Other Classes
 // =============================================================================
@@ -1449,6 +1481,10 @@ var p5SOUND = (function(){
     this.oscillator.connect(this.output);
     this.output.connect(this.panner);
     this.panner.connect(this.p5s.input);
+
+    // add to the soundArray so we can dispose of the osc later
+    soundArray.push(this);
+    console.log(soundArray);
   };
 
   /**
@@ -1468,7 +1504,7 @@ var p5SOUND = (function(){
       var type = this.oscillator.type;
       // var detune = this.oscillator.frequency.value;
       this.oscillator = this.p5s.audiocontext.createOscillator();
-      this.oscillator.frequency.exponentialRampToValueAtTime(Math.abs(freq), this.p5s.audiocontext.currentTime);
+      this.oscillator.frequency.exponentialRampToValueAtTime(abs(freq), this.p5s.audiocontext.currentTime);
       this.oscillator.type = type;
       // this.oscillator.detune.value = detune;
       this.oscillator.connect(this.output);
@@ -1599,6 +1635,23 @@ var p5SOUND = (function(){
 
   p5.prototype.Oscillator.prototype.getPan = function() {
     return this.panPosition;
+  };
+
+  // get rid of the oscillator
+  p5.prototype.Oscillator.prototype.dispose = function() {
+    console.log('do we oscillator?');
+    if (this.oscillator){
+      this.stop();
+      this.disconnect();
+      this.oscillator.disconnect();
+      this.panner = null;
+      this.oscillator = null;
+      console.log('dispose!');
+    }
+    // if it is a Pulse
+    if (this.osc2) {
+      this.osc2.dispose();
+    }
   };
 
   /**
@@ -1880,6 +1933,9 @@ var p5SOUND = (function(){
 
     this.output.connect(this.panner);
     // this.panner.connect(this.p5s.input);  // maybe not connected to output default
+
+    // add to soundArray so we can dispose on close
+    soundArray.push(this);
   };
 
   // generate noise buffers
@@ -2028,6 +2084,17 @@ var p5SOUND = (function(){
     }
   };
 
+  p5.prototype.Noise.prototype.dispose = function(){
+    this.stop();
+    this.output.disconnect();
+    this.panner.disconnect();
+    this.output = null;
+    this.panner = null;
+    this.buffer = null;
+    this.noise.disconnect();
+    this.noise = null;
+  };
+
 // =============================================================================
 //                              AudioIn Class
 // =============================================================================
@@ -2069,6 +2136,9 @@ var p5SOUND = (function(){
     } else {
       // Firefox lhas no getSources() but lets user choose their input
     }
+
+    // add to soundArray so we can dispose on close
+    soundArray.push(this);
   };
 
 
@@ -2246,6 +2316,14 @@ var p5SOUND = (function(){
       this.output.gain.setValueAtTime(vol, this.p5s.audiocontext.currentTime);
     }
   };
+
+  p5.prototype.AudioIn.prototype.dispose = function(){
+    this.off();
+    this.output.disconnect();
+    this.amplitude.disconnect();
+    this.amplitude = null;
+    this.output = null;
+  }
 
 // =============================================================================
 //                              Env Class
