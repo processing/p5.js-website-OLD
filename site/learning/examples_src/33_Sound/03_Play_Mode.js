@@ -1,7 +1,9 @@
 /*
  * @name Play Mode
- * @description Press "a" on your keyboard to play a sound file. Trigger lots of sounds at once! "z" to change playmode. In 'sustain' mode, the sound will overlap with itself. In 'restart' mode it will stop and then start again.
-
+ * @description Press "a" on your keyboard to play a sound file.
+ * Trigger lots of sounds at once! "z" to change playmode.
+ * In 'sustain' mode, the sound will overlap with itself.
+ * In 'restart' mode it will stop and then start again.
  */
 
 var playMode = 'sustain';

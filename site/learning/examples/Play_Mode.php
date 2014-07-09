@@ -50,8 +50,10 @@ function keyPressed(k) {
           </div>
           </div>
           </p>
-          <p>Press &quot;a&quot; on your keyboard to play a sound file. Trigger lots of sounds at once! &quot;z&quot; to change playmode. In 'sustain' mode, the sound will overlap with itself. In 'restart' mode it will stop and then start again.
-
+          <p>Press &quot;a&quot; on your keyboard to play a sound file.
+ Trigger lots of sounds at once! &quot;z&quot; to change playmode.
+ In 'sustain' mode, the sound will overlap with itself.
+ In 'restart' mode it will stop and then start again.
  </p>
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
