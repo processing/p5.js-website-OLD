@@ -251,7 +251,9 @@
             "modules": {
                 "Rendering": 1
             },
-            "classes": {},
+            "classes": {
+                "p5.Graphics": 1
+            },
             "fors": {
                 "p5.Graphics": 1
             },
@@ -842,7 +844,8 @@
             "namespaces": {},
             "module": "Rendering",
             "file": "src/objects/p5.Graphics.js",
-            "line": 1
+            "line": 10,
+            "description": "Main graphics and rendering context, as well as the base API \nimplementation for p5.js \"core\". Use this class if you need to draw into \nan off-screen graphics buffer. A p5.Graphics object can be constructed \nwith the <code>createGraphics()</code> function. The fields and methods \nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         "Output": {
             "name": "Output",
@@ -1080,7 +1083,28 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
-            "namespace": ""
+            "namespace": "",
+            "file": "src/objects/p5.Graphics.js",
+            "line": 10,
+            "description": "Main graphics and rendering context, as well as the base API \nimplementation for p5.js \"core\". Use this class if you need to draw into \nan off-screen graphics buffer. A p5.Graphics object can be constructed \nwith the <code>createGraphics()</code> function. The fields and methods \nfor this class are extensive, but mirror the normal drawing API for p5.",
+            "is_constructor": 1,
+            "extends": "p5.Element",
+            "params": [
+                {
+                    "name": "elt",
+                    "description": "DOM node that is wrapped",
+                    "type": "String"
+                },
+                {
+                    "name": "pInst",
+                    "description": "pointer to p5 instance",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "example": [
+                "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(40, 40);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width/2, pg.height/2, 50, 50);\n  image(pg, 9, 30); \n  image(pg, 51, 30);\n}\n</code>\n</div>"
+            ]
         },
         "p5.Image": {
             "name": "p5.Image",
@@ -1829,7 +1853,7 @@
         {
             "file": "src/core/core.js",
             "line": 17,
-            "description": "p5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
+            "description": "This is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
             "params": [
                 {
                     "name": "sketch",
@@ -1852,7 +1876,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 44,
+            "line": 42,
             "description": "The setup() function is called once when the program starts. It's used to\ndefine initial enviroment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
@@ -1865,19 +1889,10 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 71,
+            "line": 69,
             "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
-            "class": "p5",
-            "module": "Structure",
-            "submodule": "Structure"
-        },
-        {
-            "file": "src/core/core.js",
-            "line": 93,
-            "itemtype": "method",
-            "name": "remove",
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
@@ -5774,16 +5789,11 @@
                     "name": "h",
                     "description": "height of the canvas",
                     "type": "Number"
-                },
-                {
-                    "name": "isDefault",
-                    "description": "whether the canvas is a default one",
-                    "type": "Boolean"
                 }
             ],
             "return": {
-                "description": "",
-                "type": "Undefined"
+                "description": "canvas generated",
+                "type": "Object"
             },
             "class": "p5",
             "module": "Rendering",
@@ -5792,14 +5802,35 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 61,
-            "description": "Creates a p5.Graphics object.",
+            "description": "Creates and returns a new p5.Graphics object. Use this class if you need \nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
+            "itemtype": "method",
+            "name": "createGraphics",
+            "params": [
+                {
+                    "name": "w",
+                    "description": "width of the offscreen graphics buffer",
+                    "type": "Number"
+                },
+                {
+                    "name": "h",
+                    "description": "height of the offscreen graphics buffer",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "offscreen graphics buffer",
+                "type": "Object"
+            },
+            "example": [
+                "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(100, 100);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width/2, pg.height/2, 50, 50);\n  image(pg, 50, 50); \n  image(pg, 0, 0, 50, 50);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Rendering",
             "submodule": "Rendering"
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 87,
+            "line": 112,
             "description": "Blends the pixels in the display window according to the defined mode. \nThere is a choice of the following modes to blend the source pixels (A) \nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C = \nA*factor + B. This is the default blending mode.</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C = \nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C = \nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be \ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the \ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% \ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and \n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast, \nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -5807,7 +5838,7 @@
                 {
                     "name": "mode",
                     "description": "blend mode to set for canvas",
-                    "type": "Number/Constant"
+                    "type": "String/Constant"
                 }
             ],
             "example": [
@@ -6815,6 +6846,15 @@
             "example": [
                 "\n   <div><code>\n     var x = 0;\n    function setup() {\n       createCanvas(200, 200);\n       noLoop();\n     }\n    function draw() {\n       background(204);\n       line(x, 0, x, height); \n     }\n    function mousePressed() {\n       x += 1;\n       redraw();\n     }\n   </code></div>"
             ],
+            "class": "p5",
+            "module": "Structure",
+            "submodule": "Structure"
+        },
+        {
+            "file": "src/structure/structure.js",
+            "line": 167,
+            "itemtype": "method",
+            "name": "remove",
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
@@ -8784,7 +8824,7 @@
             "line": " lib/addons/p5.sound.js:938"
         },
         {
-            "message": "Missing item type\np5\n\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
+            "message": "Missing item type\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
             "line": " src/core/core.js:17"
         },
         {
@@ -8914,10 +8954,6 @@
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
             "line": " src/objects/p5.Vector.js:556"
-        },
-        {
-            "message": "Missing item type\nCreates a p5.Graphics object.",
-            "line": " src/rendering/rendering.js:61"
         },
         {
             "message": "Missing item type",

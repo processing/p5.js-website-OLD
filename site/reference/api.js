@@ -158,7 +158,8 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Rendering",
-            "name": "Rendering"
+            "name": "Rendering",
+            "description": "Main graphics and rendering context, as well as the base API \nimplementation for p5.js \"core\". Use this class if you need to draw into \nan off-screen graphics buffer. A p5.Graphics object can be constructed \nwith the <code>createGraphics()</code> function. The fields and methods \nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         {
             "displayName": "Setting",
