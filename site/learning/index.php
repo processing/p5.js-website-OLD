@@ -109,6 +109,20 @@
             
             <br>
           
+            <strong>Sound</strong><br>            
+            
+              <a href="examples/Load_and_Play_Sound.php">Load and Play Sound</a><br>
+            
+              <a href="examples/Pan_Sound.php">Pan Sound</a><br>
+            
+              <a href="examples/Oscillator.php">Oscillator</a><br>
+            
+              <a href="examples/Play_Mode.php">Play Mode</a><br>
+            
+              <a href="examples/Envelope.php">Envelope</a><br>
+            
+            <br>
+          
           </p>
           <!--<li><a href="https://github.com/lmccart/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
 
