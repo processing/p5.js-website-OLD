@@ -119,8 +119,6 @@
             
               <a href="examples/Play_Mode.php">Play Mode</a><br>
             
-              <a href="examples/Envelope.php">Envelope</a><br>
-            
             <br>
           
           </p>

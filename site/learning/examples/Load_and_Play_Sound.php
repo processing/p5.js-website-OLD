@@ -18,11 +18,13 @@
 var soundFile;  // Declare variable 'soundFile'.
 
 function preload() {
-  soundFile = loadSound( ['assets/beatbox.ogg', 'assets/beatbox.mp3'] );   // create a SoundFile
+	// create a SoundFile
+  soundFile = loadSound( ['assets/beatbox.ogg', 
+  												'assets/beatbox.mp3'] );
 }
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(710, 400);
   background(0);
 }
 
