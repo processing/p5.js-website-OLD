@@ -38,7 +38,7 @@ function draw() {
   panning = map(ball.x, 0., width,-1.0, 1.0);
 }
 
-function mouseClicked(){
+function mousePressed(){
   soundFile.pan(panning);
   // play the sound
   soundFile.play();
