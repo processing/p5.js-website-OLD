@@ -9,11 +9,12 @@ var soundFile;
 var panning;
 
 function preload() {
-  soundFile = loadSound( ['assets/beatbox.ogg', 'assets/beatbox.wav'] );
+  soundFile = loadSound( ['assets/beatbox.ogg', 
+                          'assets/beatbox.wav'] );
 }
 
 function setup() {
-  createCanvas(700, 100);
+  createCanvas(710, 100);
 }
 
 function draw() {
@@ -21,7 +22,8 @@ function draw() {
   ball.x = constrain(mouseX, 0, width);
   ellipse(ball.x, height/2, 100, 100)
 
-  // map the ball's x location to a panning degree (float between -1.0 and 1.0)
+  // map the ball's x location to a panning degree 
+  // (float between -1.0 and 1.0)
   panning = map(ball.x, 0., width,-1.0, 1.0);
 }
 

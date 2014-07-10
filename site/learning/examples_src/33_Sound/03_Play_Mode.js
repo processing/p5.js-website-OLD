@@ -10,13 +10,15 @@ var playMode = 'sustain';
 var sample;
 
 function setup() {
-  createCanvas(700,50);
-  sample = loadSound( ['assets/Damscray_-_Dancing_Tiger_02.ogg', 'assets/Damscray_-_Dancing_Tiger_02.mp3'] );
+  createCanvas(710,50);
+  sample = loadSound( ['assets/Damscray_-_Dancing_Tiger_02.ogg', 
+                       'assets/Damscray_-_Dancing_Tiger_02.mp3'] );
 }
 
 function draw() {
   background(255);
-  text('Current Play Mode: ' + playMode + '. Press z to change mode, and a to trigger sound', 10, height/2);
+  text('Current Play Mode: ' + playMode + '. Press z to change mode,
+    and a to trigger sound', 10, height/2);
 }
 
 function togglePlayMode(){
