@@ -7126,26 +7126,32 @@
         {
             "file": "src/structure/structure.js",
             "line": 49,
-            "description": "The pushStyle() function saves the current style settings and popStyle()\nrestores the prior settings. Note that these functions are always used\ntogether. They allow you to change the style settings and later return to\nwhat you had. When a new style is started with pushStyle(), it builds on\nthe current style information. The pushStyle() and popStyle() functions\ncan be embedded to provide more control. (See the second example above\nfor a demonstration.)\n\nThe style information controlled by the following functions are included\nin the style: fill(), stroke(), tint(), strokeWeight(), strokeCap(),\nstrokeJoin(), imageMode(), rectMode(), ellipseMode(), shapeMode(),\ncolorMode(), textAlign(), textFont(), textMode(), textSize(),\ntextLeading(), emissive(), specular(), shininess(), ambient()",
+            "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
-            "name": "pushStyle",
+            "name": "push",
+            "example": [
+                "\n<div>\n<code>\nellipse(0, 50, 33, 33);  // Left circle\n\npush();  // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\ntranslate(50, 0);\nellipse(0, 50, 33, 33);  // Middle circle\npop();  // Restore original state\n\nellipse(100, 50, 33, 33);  // Right circle\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33);  // Left circle\n\npush();  // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33);  // Left-middle circle\n\npush();  // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33);  // Right-middle circle\npop();  // Restore previous state\n\npop();  // Restore original state\n\nellipse(100, 50, 33, 33);  // Right circle\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
         },
         {
             "file": "src/structure/structure.js",
-            "line": 88,
-            "description": "The pushStyle() function saves the current style settings and popStyle()\nrestores the prior settings; these functions are always used together.\nThey allow you to change the style settings and later return to what you\nhad. When a new style is started with pushStyle(), it builds on the\ncurrent style information. The pushStyle() and popStyle() functions can\nbe embedded to provide more control (see the second example above for\na demonstration.)",
+            "line": 124,
+            "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
-            "name": "popStyle",
+            "name": "pop",
+            "example": [
+                "\n<div>\n<code>\nellipse(0, 50, 33, 33);  // Left circle\n\npush();  // Start a new drawing state\ntranslate(50, 0);\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(0, 50, 33, 33);  // Middle circle\npop();  // Restore original state\n\nellipse(100, 50, 33, 33);  // Right circle\n</code>\n</div>\n<div>\n<code>\nellipse(0, 50, 33, 33);  // Left circle\n\npush();  // Start a new drawing state\nstrokeWeight(10);\nfill(204, 153, 0);\nellipse(33, 50, 33, 33);  // Left-middle circle\n\npush();  // Start another new drawing state\nstroke(0, 102, 153);\nellipse(66, 50, 33, 33);  // Right-middle circle\npop();  // Restore previous state\n\npop();  // Restore original state\n\nellipse(100, 50, 33, 33);  // Right circle\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
         },
         {
             "file": "src/structure/structure.js",
-            "line": 121,
+            "line": 207,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -7204,21 +7210,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 42,
-            "description": "Pops the current transformation matrix off the matrix stack. Understanding\npushing and popping requires understanding the concept of a matrix stack.\nThe pushMatrix() function saves the current coordinate system to the stack\nand popMatrix() restores the prior coordinate system. pushMatrix() and\npopMatrix() are used in conjuction with the other transformation functions\nand may be embedded to control the scope of the transformations.",
-            "itemtype": "method",
-            "name": "popMatrix",
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
-            "class": "p5",
-            "module": "Transform",
-            "submodule": "Transform"
-        },
-        {
-            "file": "src/transform/transform.js",
-            "line": 60,
+            "line": 46,
             "description": "Prints the current matrix to the Console.",
             "itemtype": "method",
             "name": "printMatrix",
@@ -7232,21 +7224,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 71,
-            "description": "Pushes the current transformation matrix onto the matrix stack.\nUnderstanding pushMatrix() and popMatrix() requires understanding the\nconcept of a matrix stack. The pushMatrix() function saves the current\ncoordinate system to the stack and popMatrix() restores the prior\ncoordinate system. pushMatrix() and popMatrix() are used in conjuction\nwith the other transformation functions and may be embedded to control\nthe scope of the transformations.",
-            "itemtype": "method",
-            "name": "pushMatrix",
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
-            "class": "p5",
-            "module": "Transform",
-            "submodule": "Transform"
-        },
-        {
-            "file": "src/transform/transform.js",
-            "line": 90,
+            "line": 60,
             "description": "Replaces the current matrix with the identity matrix.",
             "itemtype": "method",
             "name": "resetMatrix",
@@ -7260,8 +7238,8 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 103,
-            "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe pushMatrix() and popMatrix().",
+            "line": 73,
+            "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe push() and pop().",
             "itemtype": "method",
             "name": "rotate",
             "params": [
@@ -7281,8 +7259,8 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 154,
-            "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with pushMatrix() and popMatrix().",
+            "line": 124,
+            "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with push() and pop().",
             "itemtype": "method",
             "name": "scale",
             "params": [
@@ -7308,8 +7286,8 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 195,
-            "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again. \n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npushMatrix() and popMatrix() functions.",
+            "line": 165,
+            "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again. \n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearX",
             "params": [
@@ -7329,8 +7307,8 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 227,
-            "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.  \n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npushMatrix() and popMatrix() functions.",
+            "line": 197,
+            "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.  \n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearY",
             "params": [
@@ -7350,8 +7328,8 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 259,
-            "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using pushMatrix() and popMatrix().",
+            "line": 229,
+            "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().",
             "itemtype": "method",
             "name": "translate",
             "params": [
