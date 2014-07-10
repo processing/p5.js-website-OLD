@@ -21,23 +21,23 @@ function setup() {
 function draw() {
   background(102);
   
-  pushMatrix();
+  push();
   translate(width*0.2, height*0.5);
   rotate(frameCount / 200.0);
   star(0, 0, 5, 70, 3); 
-  popMatrix();
+  pop();
   
-  pushMatrix();
+  push();
   translate(width*0.5, height*0.5);
   rotate(frameCount / 50.0);
   star(0, 0, 80, 100, 40); 
-  popMatrix();
+  pop();
   
-  pushMatrix();
+  push();
   translate(width*0.8, height*0.5);
   rotate(frameCount / -100.0);
   star(0, 0, 30, 70, 5); 
-  popMatrix();
+  pop();
 }
 
 function star(x, y, radius1, radius2, npoints) {
