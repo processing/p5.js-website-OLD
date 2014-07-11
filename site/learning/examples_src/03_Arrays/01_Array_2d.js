@@ -12,9 +12,9 @@ var spacer;
 function setup() {
   createCanvas(710, 360);
   maxDistance = dist(width/2, height/2, width, height);
-  for (int x = 0; x < width; x++) {
+  for (var x = 0; x < width; x++) {
     distances[x] = []; // create nested array
-    for (int y = 0; y < height; y++) {
+    for (var y = 0; y < height; y++) {
       var distance = dist(width/2, height/2, x, y);
       distances[x][y] = distance/maxDistance * 255;
     }
