@@ -330,17 +330,6 @@
             },
             "namespaces": {}
         },
-        "src/shape/shape.js": {
-            "name": "src/shape/shape.js",
-            "modules": {
-                "Shape": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
         "src/shape/vertex.js": {
             "name": "src/shape/vertex.js",
             "modules": {
@@ -900,13 +889,7 @@
             "fors": {
                 "p5": 1
             },
-            "namespaces": {},
-            "module": "Shape",
-            "file": "src/shape/shape.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
+            "namespaces": {}
         },
         "2D Primitives": {
             "name": "2D Primitives",
@@ -1022,7 +1005,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 605,
+            "line": 587,
             "description": "This is the p5.dom library.",
             "tag": "main",
             "itemtype": "main"
@@ -1222,7 +1205,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 605,
+            "line": 587,
             "description": "A class to describe...",
             "is_constructor": 1,
             "params": [
@@ -1519,7 +1502,7 @@
     "classitems": [
         {
             "file": "src/color/creating_reading.js",
-            "line": 13,
+            "line": 14,
             "description": "Extracts the alpha value from a color.",
             "itemtype": "method",
             "name": "alpha",
@@ -1536,7 +1519,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 27,
+            "line": 28,
             "description": "Extracts the blue value from a color, scaled to match current colorMode().",
             "itemtype": "method",
             "name": "blue",
@@ -1553,7 +1536,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 41,
+            "line": 42,
             "description": "Extracts the brightness value from a color.",
             "itemtype": "method",
             "name": "brightness",
@@ -1570,7 +1553,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 55,
+            "line": 56,
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
@@ -1609,7 +1592,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 85,
+            "line": 106,
             "description": "Extracts the green value from a color, scaled to match current\ncolorMode().",
             "itemtype": "method",
             "name": "green",
@@ -1626,7 +1609,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 100,
+            "line": 121,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -1643,7 +1626,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 114,
+            "line": 135,
             "description": "Calculates a color or colors between two color at a specific increment.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -1674,7 +1657,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 141,
+            "line": 162,
             "description": "Extracts the red value from a color, scaled to match current colorMode().",
             "itemtype": "method",
             "name": "red",
@@ -1691,7 +1674,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 155,
+            "line": 176,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -1708,7 +1691,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 21,
+            "line": 19,
             "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the backgound need only be set once.",
             "itemtype": "method",
             "name": "background",
@@ -1743,7 +1726,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 48,
+            "line": 46,
             "description": "Clears the pixels within a buffer. This function only works on PGraphics\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
@@ -1753,7 +1736,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 62,
+            "line": 60,
             "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems.",
             "itemtype": "method",
             "name": "colorMode",
@@ -1790,7 +1773,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 98,
+            "line": 100,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.)",
             "itemtype": "method",
             "name": "fill",
@@ -1825,7 +1808,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 119,
+            "line": 121,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -1835,7 +1818,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 129,
+            "line": 131,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -1845,7 +1828,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 139,
+            "line": 141,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).",
             "itemtype": "method",
             "name": "stroke",
@@ -1880,7 +1863,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 159,
+            "line": 161,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "itemtype": "method",
             "name": "getNormalizedColor",
@@ -3073,7 +3056,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 93,
+            "line": 94,
             "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use \nwhite as the tint color and specify an alpha value. For instance, \ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()). \n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
             "itemtype": "method",
             "name": "tint",
@@ -3108,7 +3091,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 120,
+            "line": 121,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -3118,7 +3101,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 130,
+            "line": 131,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -3137,7 +3120,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 162,
+            "line": 166,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -6813,69 +6796,6 @@
             "submodule": "Curves"
         },
         {
-            "file": "src/shape/shape.js",
-            "line": 17,
-            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.",
-            "itemtype": "method",
-            "name": "createImage",
-            "params": [
-                {
-                    "name": "width",
-                    "description": "width in pixels",
-                    "type": "Integer"
-                },
-                {
-                    "name": "height",
-                    "description": "height in pixels",
-                    "type": "Integer"
-                }
-            ],
-            "return": {
-                "description": "the p5.Image object",
-                "type": "p5.Image"
-            },
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "Shape"
-        },
-        {
-            "file": "src/shape/shape.js",
-            "line": 31,
-            "description": "Draw an image to the main canvas of the p5js sketch",
-            "itemtype": "method",
-            "name": "shape",
-            "params": [
-                {
-                    "name": "shape",
-                    "description": "the shape to display",
-                    "type": "p5.Shape"
-                },
-                {
-                    "name": "x",
-                    "description": "x-coordinate of the shape",
-                    "type": "[type]"
-                },
-                {
-                    "name": "y",
-                    "description": "y-coordinate of the shape",
-                    "type": "[type]"
-                },
-                {
-                    "name": "width",
-                    "description": "width to display the image",
-                    "type": "[type]"
-                },
-                {
-                    "name": "height",
-                    "description": "height to display the image",
-                    "type": "[type]"
-                }
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "Shape"
-        },
-        {
             "file": "src/shape/vertex.js",
             "line": 21,
             "description": "Use the beginContour() and endContour() function to create negative shapes\nwithin shapes. For instance, the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThese functions can only be within a beginShape()/endShape() pair.\n\nTransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
@@ -7806,7 +7726,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 234,
+            "line": 261,
             "description": "Creates an HTML5 &lt;video&gt; element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body.",
             "itemtype": "method",
             "name": "createVideo",
@@ -7833,14 +7753,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 299,
+            "line": 282,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 301,
+            "line": 284,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio \nplayback. Appends to the container node if one is specified, \notherwise appends to body.",
             "itemtype": "method",
             "name": "createAudio",
@@ -7867,14 +7787,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 323,
+            "line": 305,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 333,
+            "line": 315,
             "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video().",
             "itemtype": "method",
             "name": "createCapture",
@@ -7895,7 +7815,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 366,
+            "line": 348,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -7922,7 +7842,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 389,
+            "line": 371,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -7939,7 +7859,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 408,
+            "line": 390,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -7956,7 +7876,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 421,
+            "line": 403,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "child",
@@ -7973,7 +7893,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 438,
+            "line": 420,
             "description": "Sets the inner HTML of the element. Replaces any existing html.",
             "itemtype": "method",
             "name": "html",
@@ -7990,7 +7910,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 450,
+            "line": 432,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -8012,7 +7932,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 466,
+            "line": 448,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property, \n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -8038,7 +7958,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 486,
+            "line": 468,
             "description": "Adds a new attribute or changes the value of an existing attribute \n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -8065,7 +7985,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 506,
+            "line": 488,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -8087,7 +8007,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 525,
+            "line": 507,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -8097,7 +8017,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 535,
+            "line": 517,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -8107,7 +8027,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 544,
+            "line": 526,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -8129,7 +8049,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 584,
+            "line": 566,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -8139,7 +8059,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 621,
+            "line": 603,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -8149,7 +8069,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 633,
+            "line": 615,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -8159,7 +8079,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 643,
+            "line": 625,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -8169,7 +8089,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 652,
+            "line": 634,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -8179,7 +8099,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 661,
+            "line": 643,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -8189,7 +8109,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 672,
+            "line": 654,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -8206,7 +8126,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 682,
+            "line": 664,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume;",
             "params": [
                 {
@@ -8228,7 +8148,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 698,
+            "line": 680,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -8250,7 +8170,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 714,
+            "line": 696,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -9426,7 +9346,7 @@
         },
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:130"
+            "line": " src/image/loading_displaying.js:131"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
@@ -9506,11 +9426,11 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:299"
+            "line": " lib/addons/p5.dom.js:282"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:323"
+            "line": " lib/addons/p5.dom.js:305"
         },
         {
             "message": "Missing item type\nWeb Audio SHIMS and helper functions to ensure compatability across browsers",
