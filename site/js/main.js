@@ -11,22 +11,11 @@ TO DO:
 
 var elementPosition = $('#menu').offset();
 
-$(window).load(function() {
-  window.loaded = true;
-  handleScroll();   
-});
-
 $(window).scroll(function(){
-  if (window.loaded) {
-    handleScroll();   
-  }
-});
-
-function handleScroll() {
   if($(window).scrollTop() > elementPosition.top){
-    $('#menu').css({'position':'fixed','top':'0', 'z-index': '9999'});
-        
+    var top = Math.round($(window).scrollTop()-elementPosition.top);
+    $('#menu').css({'margin-top': top});
   } else {
-    $('#menu').css({'position':'static'});
-  } 
-}
+    $('#menu').css({'margin-top': 0});
+  }    
+});
