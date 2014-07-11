@@ -12,23 +12,23 @@ function setup() {
 function draw() {
   background(102);
   
-  pushMatrix();
+  push();
   translate(width*0.2, height*0.5);
   rotate(frameCount / 200.0);
   polygon(0, 0, 82, 3); 
-  popMatrix();
+  pop();
   
-  pushMatrix();
+  push();
   translate(width*0.5, height*0.5);
   rotate(frameCount / 50.0);
   polygon(0, 0, 80, 20); 
-  popMatrix();
+  pop();
   
-  pushMatrix();
+  push();
   translate(width*0.8, height*0.5);
   rotate(frameCount / -100.0);
   polygon(0, 0, 70, 7); 
-  popMatrix();
+  pop();
 }
 
 function polygon(x, y, radius, npoints) {

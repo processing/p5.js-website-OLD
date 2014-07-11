@@ -1073,9 +1073,10 @@ var p5Vector = function (require, core, polargeometry, constants) {
         };
         return p5.Vector;
     }({}, core, polargeometry, constants);
-var colorcreating_reading = function (require, core) {
+var colorcreating_reading = function (require, core, constants) {
         'use strict';
         var p5 = core;
+        var constants = constants;
         p5.prototype.alpha = function (rgb) {
             if (rgb.length > 3) {
                 return rgb[3];
@@ -1098,7 +1099,30 @@ var colorcreating_reading = function (require, core) {
             }
         };
         p5.prototype.color = function () {
-            return this.getNormalizedColor(arguments);
+            var args = arguments;
+            var isRGB = this._colorMode === constants.RGB;
+            var maxArr = isRGB ? this._maxRGB : this._maxHSB;
+            var r, g, b, a;
+            if (args.length >= 3) {
+                r = args[0];
+                g = args[1];
+                b = args[2];
+                a = typeof args[3] === 'number' ? args[3] : maxArr[3];
+            } else {
+                if (isRGB) {
+                    r = g = b = args[0];
+                } else {
+                    r = b = args[0];
+                    g = 0;
+                }
+                a = typeof args[1] === 'number' ? args[1] : maxArr[3];
+            }
+            return [
+                r,
+                g,
+                b,
+                a
+            ];
         };
         p5.prototype.green = function (rgb) {
             if (rgb.length > 2) {
@@ -1115,7 +1139,7 @@ var colorcreating_reading = function (require, core) {
             }
         };
         p5.prototype.lerpColor = function (c1, c2, amt) {
-            if (typeof c1 === 'Array') {
+            if (typeof c1 === 'object') {
                 var c = [];
                 for (var i = 0; i < c1.length; i++) {
                     c.push(p5.prototype.lerp(c1[i], c2[i], amt));
@@ -1140,16 +1164,24 @@ var colorcreating_reading = function (require, core) {
             }
         };
         return p5;
-    }({}, core);
+    }({}, core, constants);
 var colorsetting = function (require, core, constants) {
         'use strict';
         var p5 = core;
         var constants = constants;
         p5.prototype._colorMode = constants.RGB;
-        p5.prototype._maxC0 = 255;
-        p5.prototype._maxC1 = 255;
-        p5.prototype._maxC2 = 255;
-        p5.prototype._maxA = 255;
+        p5.prototype._maxRGB = [
+            255,
+            255,
+            255,
+            255
+        ];
+        p5.prototype._maxHSB = [
+            255,
+            255,
+            255,
+            255
+        ];
         p5.prototype.background = function () {
             var c = this.getNormalizedColor(arguments);
             var curFill = this.canvas.getContext('2d').fillStyle;
@@ -1163,18 +1195,20 @@ var colorsetting = function (require, core, constants) {
         p5.prototype.colorMode = function () {
             if (arguments[0] === constants.RGB || arguments[0] === constants.HSB) {
                 this._colorMode = arguments[0];
-            }
-            if (arguments.length === 2) {
-                this._maxC0 = arguments[1];
-                this._maxC1 = arguments[1];
-                this._maxC2 = arguments[1];
-            } else if (arguments.length > 2) {
-                this._maxC0 = arguments[1];
-                this._maxC1 = arguments[2];
-                this._maxC2 = arguments[3];
-            }
-            if (arguments.length === 5) {
-                this._maxA = arguments[4];
+                var isRGB = this._colorMode === constants.RGB;
+                var maxArr = isRGB ? this._maxRGB : this._maxHSB;
+                if (arguments.length === 2) {
+                    maxArr[0] = arguments[1];
+                    maxArr[1] = arguments[1];
+                    maxArr[2] = arguments[1];
+                } else if (arguments.length > 2) {
+                    maxArr[0] = arguments[1];
+                    maxArr[1] = arguments[2];
+                    maxArr[2] = arguments[3];
+                }
+                if (arguments.length === 5) {
+                    maxArr[3] = arguments[4];
+                }
             }
         };
         p5.prototype.fill = function () {
@@ -1192,8 +1226,9 @@ var colorsetting = function (require, core, constants) {
             this.canvas.getContext('2d').strokeStyle = this.getCSSRGBAColor(c);
         };
         p5.prototype.getNormalizedColor = function (args) {
+            var isRGB = this._colorMode === constants.RGB;
             if (args[0] instanceof Array) {
-                return args[0];
+                args = args[0];
             }
             var r, g, b, a, rgba;
             if (args.length >= 3) {
@@ -1202,13 +1237,19 @@ var colorsetting = function (require, core, constants) {
                 b = args[2];
                 a = typeof args[3] === 'number' ? args[3] : this._maxA;
             } else {
-                r = g = b = args[0];
+                if (isRGB) {
+                    r = g = b = args[0];
+                } else {
+                    r = b = args[0];
+                    g = 0;
+                }
                 a = typeof args[1] === 'number' ? args[1] : this._maxA;
             }
-            r *= 255 / this._maxC0;
-            g *= 255 / this._maxC1;
-            b *= 255 / this._maxC2;
-            a *= 255 / this._maxA;
+            var maxArr = isRGB ? this._maxRGB : this._maxHSB;
+            r *= 255 / maxArr[0];
+            g *= 255 / maxArr[1];
+            b *= 255 / maxArr[2];
+            a *= 255 / maxArr[3];
             if (this._colorMode === constants.HSB) {
                 rgba = hsv2rgb(r, g, b).concat(a);
             } else {
@@ -1559,6 +1600,7 @@ var environment = function (require, core, constants) {
             } else if (element.mozRequestFullScreen) {
                 element.mozRequestFullScreen();
             } else if (element.webkitRequestFullscreen) {
+                console.log(element)
                 element.webkitRequestFullscreen();
             } else if (element.msRequestFullscreen) {
                 element.msRequestFullscreen();
@@ -1675,6 +1717,7 @@ var imageloading_displaying = function (require, core, filters, canvas, constant
             return pImg;
         };
         p5.prototype.image = function (img, x, y, width, height) {
+            var frame = img.canvas ? img.canvas : img.elt;
             if (width === undefined) {
                 width = img.width;
             }
@@ -1683,9 +1726,9 @@ var imageloading_displaying = function (require, core, filters, canvas, constant
             }
             var vals = canvas.modeAdjust(x, y, width, height, this._imageMode);
             if (this._tint) {
-                this.canvas.getContext('2d').drawImage(this._getTintedImageCanvas(img), vals.x, vals.y, vals.w, vals.h);
+                this.canvas.getContext('2d').drawImage(this._getTintedImageCanvas(frame), vals.x, vals.y, vals.w, vals.h);
             } else {
-                this.canvas.getContext('2d').drawImage(img.canvas, vals.x, vals.y, vals.w, vals.h);
+                this.canvas.getContext('2d').drawImage(frame, vals.x, vals.y, vals.w, vals.h);
             }
         };
         p5.prototype.tint = function () {
@@ -1695,13 +1738,16 @@ var imageloading_displaying = function (require, core, filters, canvas, constant
         p5.prototype.noTint = function () {
             this._tint = null;
         };
-        p5.prototype._getTintedImageCanvas = function (image) {
-            var pixels = Filters._toPixels(image.canvas);
+        p5.prototype._getTintedImageCanvas = function (img) {
+            if (!img.canvas) {
+                return img;
+            }
+            var pixels = Filters._toPixels(img.canvas);
             var tmpCanvas = document.createElement('canvas');
-            tmpCanvas.width = image.canvas.width;
-            tmpCanvas.height = image.canvas.height;
+            tmpCanvas.width = img.canvas.width;
+            tmpCanvas.height = img.canvas.height;
             var tmpCtx = tmpCanvas.getContext('2d');
-            var id = tmpCtx.createImageData(image.canvas.width, image.canvas.height);
+            var id = tmpCtx.createImageData(img.canvas.width, img.canvas.height);
             var newPixels = id.data;
             for (var i = 0; i < pixels.length; i += 4) {
                 var r = pixels[i];

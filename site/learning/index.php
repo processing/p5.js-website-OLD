@@ -103,9 +103,33 @@
             
             <br>
           
+            <strong>Arrays</strong><br>            
+            
+              <a href="examples/Array.php">Array</a><br>
+            
+              <a href="examples/Array_2D.php">Array 2D</a><br>
+            
+              <a href="examples/.php"></a><br>
+            
+            <br>
+          
+            <strong>Control</strong><br>            
+            
+              <a href="examples/Iteration.php">Iteration</a><br>
+            
+            <br>
+          
             <strong>Image</strong><br>            
             
               <a href="examples/Load_and_Display_Image.php">Load and Display Image</a><br>
+            
+              <a href="examples/Embedded_Iteration.php">Embedded Iteration</a><br>
+            
+              <a href="examples/Conditionals_1.php">Conditionals 1</a><br>
+            
+              <a href="examples/Conditionals_2.php">Conditionals 2</a><br>
+            
+              <a href="examples/Logical_Operators.php">Logical Operators</a><br>
             
             <br>
           
