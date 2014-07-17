@@ -1031,7 +1031,7 @@
             "namespaces": {},
             "module": "p5.sound",
             "file": "lib/addons/p5.sound.js",
-            "line": 2264,
+            "line": 2266,
             "description": "<h1>Version .0003</h1>\n\n<p>p5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.</p>\n\n<p>This is an addon that extends p5 to work with sound.<br>\n<a href=\"https://github.com/therewasaguy/p5.js/blob/p5sound/lib/addons/p5.sound.js\">DOWNLOAD HERE.</a></p>\n \n<p>Incorporates elements from:<br>\n  - <a href=\"https://github.com/TONEnoTONE/Tone.js\">TONE.js</a> (c) Yotam Mann, 2014. Licensed under The MIT License (MIT).<br />\n  - <a href=\"http://buzz.jaysalvat.com/\">buzz.js</a> (c) Jay Salvat, 2013. Licensed under The MIT License (MIT).<br />\n  - <a href=\"http://www.apache.org/licenses/LICENSE-2.0\">Boris Smus Web Audio API book</a>, 2013. Licensed under the Apache License<br />\n  - <a href=\"https://github.com/katspaugh/wavesurfer.js\">wavesurfer.js</a><br />\n  - <a href=\"https://github.com/wirsing/processingsound\">Wilm Thoben's Sound library for Processing</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1457,7 +1457,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 2264,
+            "line": 2266,
             "description": "Envelopes are pre-defined amplitude distribution over time. \nTypically, envelopes are used to control the output volume\nof an object. This is the default behavior. However,\nEnvelopes can also be used to control any Web Audio Param.",
             "is_constructor": 1,
             "params": [
@@ -1513,13 +1513,16 @@
                     "type": "Array"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nnoStroke();\nc = color(0, 126, 255, 102);\nfill(c);\nrect(15, 15, 35, 70);\nvalue = alpha(c);  // Sets 'value' to 102\nfill(value);\nrect(50, 15, 35, 70);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 28,
+            "line": 40,
             "description": "Extracts the blue value from a color, scaled to match current colorMode().",
             "itemtype": "method",
             "name": "blue",
@@ -1530,13 +1533,16 @@
                     "type": "Array"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nc = color(175, 100, 220);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nblueValue = blue(c);  // Get blue in 'c'\nprintln(blueValue);  // Prints \"220.0\"\nfill(0, 0, blueValue);  // Use 'blueValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle   \n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 42,
+            "line": 67,
             "description": "Extracts the brightness value from a color.",
             "itemtype": "method",
             "name": "brightness",
@@ -1547,13 +1553,16 @@
                     "type": "Array"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 255);\nc = color(0, 126, 255);\nfill(c);\nrect(15, 20, 35, 60);\nvalue = brightness(c);  // Sets 'value' to 255\nfill(value);\nrect(50, 20, 35, 60);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 56,
+            "line": 94,
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
@@ -1586,13 +1595,16 @@
                 "description": "resulting color",
                 "type": "Array"
             },
+            "example": [
+                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(30, 20, 55, 55);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80);  // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nc = color(65);  // Update 'c' with grayscale value\nfill(c);  // Use updated 'c' as fill color\nellipse(75, 75, 80, 80);  // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();  // Don't draw a stroke around shapes\n\n// if switching from RGB to HSB both modes must be declared\ncolorMode(RGB, 255);  // Use RGB with scale of 0-255\nc = color(50, 55, 100);  // Create a color for 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(0, 10, 45, 80);  // Draw left rect\n\ncolorMode(HSB, 100);  // Use HSB with scale of 0-100\nc = color(50, 55, 100);  // Update 'c' with new color\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw right rect\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 106,
+            "line": 185,
             "description": "Extracts the green value from a color, scaled to match current\ncolorMode().",
             "itemtype": "method",
             "name": "green",
@@ -1603,13 +1615,16 @@
                     "type": "Array"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nc = color(20, 75, 200);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\ngreenValue = green(c);  // Get green in 'c'\nprintln(greenValue);  // Print \"75.0\"\nfill(0, greenValue, 0);  // Use 'greenValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 121,
+            "line": 213,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -1620,13 +1635,16 @@
                     "type": "Array"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 255);\nc = color(0, 126, 255);\nfill(c);\nrect(15, 20, 35, 60);\nvalue = hue(c);  // Sets 'value' to \"0\"\nfill(value);\nrect(50, 20, 35, 60);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 135,
+            "line": 240,
             "description": "Calculates a color or colors between two color at a specific increment.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -1651,13 +1669,16 @@
                 "description": "interpolated color",
                 "type": "Array/Number"
             },
+            "example": [
+                "\n<div>\n<code>\nstroke(255);\nbackground(51);\nfrom = color(204, 102, 0);\nto = color(0, 102, 153);\ninterA = lerpColor(from, to, .33);\ninterB = lerpColor(from, to, .66);\nfill(from);\nrect(10, 20, 20, 60);\nfill(interA);\nrect(30, 20, 20, 60);\nfill(interB);\nrect(50, 20, 20, 60);\nfill(to);\nrect(70, 20, 20, 60);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 162,
+            "line": 286,
             "description": "Extracts the red value from a color, scaled to match current colorMode().",
             "itemtype": "method",
             "name": "red",
@@ -1668,13 +1689,16 @@
                     "type": "Array"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nredValue = red(c);  // Get red in 'c'\nprintln(redValue);  // Print \"255.0\"\nfill(redValue, 0, 0);  // Use 'redValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 176,
+            "line": 313,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -1684,6 +1708,9 @@
                     "description": "array representing a color",
                     "type": "Array"
                 }
+            ],
+            "example": [
+                "\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 255);\nc = color(0, 126, 255);\nfill(c);\nrect(15, 20, 35, 60);\nvalue = saturation(c);  // Sets 'value' to 126\nfill(value);\nrect(50, 20, 35, 60);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -1720,23 +1747,29 @@
                     "optional": true
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nbackground(51);   \n</code>\n</div>\n\n<div>\n<code>\nbackground(255, 204, 0);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 46,
+            "line": 58,
             "description": "Clears the pixels within a buffer. This function only works on PGraphics\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
+            "example": [
+                "\n<div>\n<code>\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 60,
+            "line": 77,
             "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems.",
             "itemtype": "method",
             "name": "colorMode",
@@ -1767,13 +1800,16 @@
                     "type": "Number|Constant"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nnoStroke();\ncolorMode(RGB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 0);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 100);\n    point(i, j);\n  }\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 100,
+            "line": 143,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.)",
             "itemtype": "method",
             "name": "fill",
@@ -1802,33 +1838,42 @@
                     "optional": true
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nfill(153);\nrect(30, 20, 55, 55);   \n</code>\n</div>\n\n<div>\n<code>\nfill(204, 102, 0);\nrect(30, 20, 55, 55);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 121,
+            "line": 178,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
+            "example": [
+                "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(30, 20, 55, 55);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 131,
+            "line": 196,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
+            "example": [
+                "\n<div>\n<code>\nnoStroke();\nrect(30, 20, 55, 55);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 141,
+            "line": 213,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).",
             "itemtype": "method",
             "name": "stroke",
@@ -1857,13 +1902,16 @@
                     "optional": true
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nstroke(153);\nrect(30, 20, 55, 55);   \n</code>\n</div>\n\n<div>\n<code>\nstroke(204, 102, 0);\nrect(30, 20, 55, 55);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 161,
+            "line": 247,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "itemtype": "method",
             "name": "getNormalizedColor",
@@ -1878,6 +1926,9 @@
                 "description": "a color formatted as [r, g, b, a]\n                         Example:\n                         input        ==> output\n                         g            ==> [g, g, g, 255]\n                         g,a          ==> [g, g, g, a]\n                         r, g, b      ==> [r, g, b, 255]\n                         r, g, b, a   ==> [r, g, b, a]\n                         [g]          ==> [g, g, g, 255]\n                         [g, a]       ==> [g, g, g, a]\n                         [r, g, b]    ==> [r, g, b, 255]\n                         [r, g, b, a] ==> [r, g, b, a]",
                 "type": "Array"
             },
+            "example": [
+                "\n<div>\n<code>\n// todo\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
@@ -5966,7 +6017,7 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 120,
-            "description": "Blends the pixels in the display window according to the defined mode. \nThere is a choice of the following modes to blend the source pixels (A) \nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C = \nA*factor + B. This is the default blending mode.</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C = \nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C = \nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be \ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the \ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% \ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and \n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast, \nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
+            "description": "Blends the pixels in the display window according to the defined mode. \nThere is a choice of the following modes to blend the source pixels (A) \nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C = \nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C = \nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C = \nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be \ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the \ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% \ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and \n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast, \nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
             "params": [
@@ -6830,7 +6881,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working   \nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15); \nvertex(92, 50); \nvertex(57.5, 85); \nvertex(22, 50); \nvertex(57.5, 15); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\n// currently not working   \nbeginShape(QUAD_STRIP); \nvertex(30, 20); \nvertex(30, 75); \nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20); \nvertex(65, 75); \nvertex(85, 20);\nvertex(85, 75); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>"
+                "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working   \nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15); \nvertex(92, 50); \nvertex(57.5, 85); \nvertex(22, 50); \nvertex(57.5, 15); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>  \nbeginShape(QUAD_STRIP); \nvertex(30, 20); \nvertex(30, 75); \nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20); \nvertex(65, 75); \nvertex(85, 20);\nvertex(85, 75); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -6838,7 +6889,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 250,
+            "line": 244,
             "description": "Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape. The first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().",
             "itemtype": "method",
             "name": "bezierVertex",
@@ -6887,7 +6938,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 309,
+            "line": 303,
             "description": "Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape(). The first and\nlast points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.",
             "itemtype": "method",
             "name": "curveVertex",
@@ -6908,7 +6959,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\n// Uncaught not yet implemented\nnoFill();\nbeginShape();\ncurveVertex(84,  91);\ncurveVertex(84,  91);\ncurveVertex(68,  19);\ncurveVertex(21,  17);\ncurveVertex(32, 100);\ncurveVertex(32, 100);\nendShape();\n</code>\n</div>"
+                "\n<div>\n<code>\nnoFill();\nbeginShape();\ncurveVertex(84,  91);\ncurveVertex(84,  91);\ncurveVertex(68,  19);\ncurveVertex(21,  17);\ncurveVertex(32, 100);\ncurveVertex(32, 100);\nendShape();\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -6916,7 +6967,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 362,
+            "line": 355,
             "description": "Use the beginContour() and endContour() function to create negative\nshapes within shapes. For instance, the center of the letter 'O'.\nbeginContour() begins recording vertices for the shape and endContour()\nstops recording. These functions can only be within a\nbeginShape()/endShape() pair.",
             "itemtype": "method",
             "name": "endContour",
@@ -6933,7 +6984,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 427,
+            "line": 420,
             "description": "The endShape() function is the companion to beginShape() and may only be\ncalled after beginShape(). When endshape() is called, all of image data\ndefined since the previous call to beginShape() is written into the image\nbuffer. The constant CLOSE as the value for the MODE parameter to close\nthe shape (to connect the beginning and the end).",
             "itemtype": "method",
             "name": "endShape",
@@ -6957,7 +7008,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 470,
+            "line": 463,
             "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -6996,7 +7047,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 530,
+            "line": 523,
             "description": "All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.",
             "itemtype": "method",
             "name": "vertex",
@@ -7017,7 +7068,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\n// currently not working\nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>"
+                "\n<div>\n<code>\nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -9067,7 +9118,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2092,
+            "line": 2094,
             "description": "Returns a list of available input sources.",
             "itemtype": "method",
             "name": "listSources",
@@ -9081,7 +9132,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2108,
+            "line": 2110,
             "description": "Set the input source. Accepts a number representing a\nposition in the array returned by listSources().\nThis is only supported in browsers that support \nMediaStreamTrack.getSources(). Instead, some browsers\ngive users the option to set their own media source.",
             "itemtype": "method",
             "name": "setSource",
@@ -9098,7 +9149,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2136,
+            "line": 2138,
             "description": "<p>Read the Amplitude (volume level) of an AudioIn. The AudioIn\nclass contains its own instance of the Amplitude class to help\nmake it easy to get a microphone's volume level.</p>\n\n<p>Accepts an optional smoothing value (0.0 < 1.0).</p>\n\n<p>AudioIn must be .on() before using .getLevel().</p>",
             "itemtype": "method",
             "name": "getLevel",
@@ -9119,7 +9170,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2157,
+            "line": 2159,
             "description": "Turn the AudioIn on. This enables the use of other AudioIn\nmethods like getLevel().",
             "itemtype": "method",
             "name": "on",
@@ -9129,7 +9180,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2204,
+            "line": 2206,
             "description": "Turn the AudioIn off. If the AudioIn is off, it cannot getLevel().",
             "itemtype": "method",
             "name": "off",
@@ -9139,7 +9190,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2215,
+            "line": 2217,
             "description": "Add input sources to the list of available sources.",
             "access": "private",
             "tagname": "",
@@ -9149,7 +9200,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2230,
+            "line": 2232,
             "description": "Set amplitude (volume) of a mic input between 0 and 1.0",
             "itemtype": "method",
             "name": "amp",
@@ -9172,7 +9223,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2288,
+            "line": 2290,
             "itemtype": "property",
             "name": "attackTime",
             "class": "Env",
@@ -9181,7 +9232,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2292,
+            "line": 2294,
             "itemtype": "property",
             "name": "attackLevel",
             "class": "Env",
@@ -9190,7 +9241,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2296,
+            "line": 2298,
             "itemtype": "property",
             "name": "decayTime",
             "class": "Env",
@@ -9199,7 +9250,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2300,
+            "line": 2302,
             "itemtype": "property",
             "name": "sustainTime",
             "class": "Env",
@@ -9208,7 +9259,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2304,
+            "line": 2306,
             "itemtype": "property",
             "name": "sustainLevel",
             "class": "Env",
@@ -9217,7 +9268,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2308,
+            "line": 2310,
             "description": "Time between level = sustainLevel and level = releaseLevel (or 0)",
             "itemtype": "property",
             "name": "releaseTime",
@@ -9227,7 +9278,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2313,
+            "line": 2315,
             "description": "Release level defaults to 0 (silence)",
             "itemtype": "property",
             "name": "releaseLevel",
@@ -9237,7 +9288,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2320,
+            "line": 2322,
             "description": "Play tells the envelope to start acting on a given input.\nIf the input is a p5Sound object (i.e. AudioIn, Oscillator,\nSoundFile), then Env will control its output volume.\nEnvelopes can also be used to control any Web Audio Param.",
             "params": [
                 {
@@ -9458,11 +9509,11 @@
         },
         {
             "message": "Missing item type\nAdd input sources to the list of available sources.",
-            "line": " lib/addons/p5.sound.js:2215"
+            "line": " lib/addons/p5.sound.js:2217"
         },
         {
             "message": "Missing item type\nPlay tells the envelope to start acting on a given input.\nIf the input is a p5Sound object (i.e. AudioIn, Oscillator,\nSoundFile), then Env will control its output volume.\nEnvelopes can also be used to control any Web Audio Param.",
-            "line": " lib/addons/p5.sound.js:2320"
+            "line": " lib/addons/p5.sound.js:2322"
         }
     ]
 }
