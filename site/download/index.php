@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
-  <?php include('../header.php'); ?>
+<?php $version = "80"; ?>  <?php include('../header.php'); ?>
   <body id="download-page">
 
     <?php include('../sidebar.php'); ?>
+    <?php include('package.php'); ?>
 
     <!-- content sections -->
     <div class="column-span">
@@ -12,7 +13,7 @@
         <a href="#"><h3>> Download p5.js</h3></a>
         <p>Includes <code>p5.js</code>, <a href="../reference/#/libraries/dom"><code>p5.dom.js</code></a>, 
         <a href="../reference/#/libraries/sound"><code>p5.sound.js</code></a>, and an empty example.
-        <br>Version 0.2.20 (July 1, 2014)</p>
+        <br>Version <?php echo $version; ?> (<?php echo $date; ?>)</p>
         <a href="#" class="anchor"><h3>Single Files</h3></a>
         <ul>
           <li><a href="#">Download p5.js</a> - Full, uncompressed version.</li>
