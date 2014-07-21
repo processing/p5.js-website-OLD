@@ -45,7 +45,7 @@ function mouseMoved() {
     <div class="column-span">
       <section id="home">
         <h2>Welcome!</h2>
-        <p>
+<!--         <p>
         <div class="example">
           <div>
 <pre style="display:none"><code class="language-javascript">
@@ -82,7 +82,7 @@ function mouseMoved() {
 </code></pre>  
           </div>
         </div>
-        </p>
+        </p> -->
 
         <h4><a href="<?php echo getRoot(); ?>download/">> Download p5.js</a></h4>
         <h4><a href="<?php echo getRoot(); ?>learning/#examples">> Try examples</a></h4>
