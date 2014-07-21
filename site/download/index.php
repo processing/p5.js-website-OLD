@@ -4,7 +4,7 @@
   <body id="download-page">
 
     <?php include('../sidebar.php'); ?>
-    <?php include('package.php'); ?>
+    <?php include('version.php'); ?>
 
     <!-- content sections -->
     <div class="column-span">
