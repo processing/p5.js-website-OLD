@@ -50,3 +50,5 @@ function updateVersion() {
 if ($_GET['f'] == 'update_version') {
   updateVersion();
 }
+
+?>
