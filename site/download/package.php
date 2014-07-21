@@ -59,8 +59,11 @@ function updateVersions() {
 
   // download new files
   mkdir('./builds/latest');
-  download('https://raw.githubusercontent.com/lmccart/p5.js/master/lib/p5.js', './builds/latest/p5.js');
-  download('https://raw.githubusercontent.com/lmccart/p5.js/master/lib/p5.min.js', './builds/latest/p5.min.js');
+  $r = 'https://raw.githubusercontent.com/lmccart/p5.js/master/';
+  download($r.'lib/p5.js', './builds/latest/p5.js');
+  download($r.'lib/p5.min.js', './builds/latest/p5.min.js');
+  download($r.'lib/addons/p5.dom.js', './builds/latest/p5.dom.js');
+  download($r.'lib/addons/p5.sound.js', './builds/latest/p5.sound.js');
 
   // create zip file
   $zip = new ZipArchive();
@@ -72,6 +75,8 @@ function updateVersions() {
 
   $zip->addFile('./builds/latest/p5.js',"p5.js");
   $zip->addFile('./builds/latest/p5.min.js',"p5.min.js");
+  $zip->addFile('./builds/latest/p5.dom.js',"p5.dom.js");
+  $zip->addFile('./builds/latest/p5.sound.js',"p5.sound.js");
   $zip->close();
 }
 

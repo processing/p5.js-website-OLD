@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.2.21",
+        "version": "0.2.22",
         "url": ""
     },
     "files": {
@@ -3036,6 +3036,9 @@
                 "description": "the p5.Image object",
                 "type": "p5.Image"
             },
+            "example": [
+                "\n<div>\n<code>\nimg = createImage(66, 66, RGB);\nimg.loadPixels();\nfor (i = 0; i < img.pixels.length; i++) {\n  img.pixels[i] = color(0, 90, 102); \n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>\n\n<div>\n<code>\nimg = createImage(66, 66, RGB);\nimg.loadPixels();\nfor (i = 0; i < img.pixels.length; i++) {\n  img.pixels[i] = color(0, 90, 102, i % img.width * 2); \n}\nimg.updatePixels();\nimage(img, 17, 17);\nimage(img, 34, 34);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Image",
             "submodule": "Image"
@@ -7086,7 +7089,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 38,
+            "line": 40,
             "description": "By default, p5.js loops through draw() continuously, executing the code\nwithin it. However, the draw() loop may be stopped by calling noLoop().\nIn that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
             "name": "loop",
@@ -7096,7 +7099,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 49,
+            "line": 52,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "push",
@@ -7109,7 +7112,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 124,
+            "line": 127,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -7122,7 +7125,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 207,
+            "line": 210,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -7175,20 +7178,9 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
-            "class": "p5",
-            "module": "Transform",
-            "submodule": "Transform"
-        },
-        {
-            "file": "src/transform/transform.js",
-            "line": 46,
-            "description": "Prints the current matrix to the Console.",
-            "itemtype": "method",
-            "name": "printMatrix",
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
+            "example": [
+                "\n<div>\n<code>\n// Example in the works.\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
@@ -7203,13 +7195,16 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
+            "example": [
+                "\n<div>\n<code>\n// Example in the works.\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 73,
+            "line": 79,
             "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe push() and pop().",
             "itemtype": "method",
             "name": "rotate",
@@ -7224,13 +7219,16 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
+            "example": [
+                "\n<div>\n<code>\ntranslate(width/2, height/2);\nrotate(PI/3.0);\nrect(-26, -26, 52, 52);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 124,
+            "line": 138,
             "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with push() and pop().",
             "itemtype": "method",
             "name": "scale",
@@ -7251,13 +7249,16 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
+            "example": [
+                "\n<div>\n<code>\ntranslate(width/2, height/2);\nrotate(PI/3.0);\nrect(-26, -26, 52, 52);\n</code>\n</div>\n\n<div>\n<code>\nrect(30, 20, 50, 50);\nscale(0.5, 1.3);\nrect(30, 20, 50, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 165,
+            "line": 195,
             "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again. \n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearX",
@@ -7272,13 +7273,16 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
+            "example": [
+                "\n<div>\n<code>\ntranslate(width/4, height/4);\nshearX(PI/4.0);\nrect(0, 0, 30, 30);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 197,
+            "line": 235,
             "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.  \n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearY",
@@ -7293,13 +7297,16 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
+            "example": [
+                "\n<div>\n<code>\ntranslate(width/4, height/4);\nshearY(PI/4.0);\nrect(0, 0, 30, 30);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
         },
         {
             "file": "src/transform/transform.js",
-            "line": 229,
+            "line": 275,
             "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().",
             "itemtype": "method",
             "name": "translate",
@@ -7319,6 +7326,9 @@
                 "description": "the p5 object",
                 "type": "P5"
             },
+            "example": [
+                "\n<div>\n<code>\ntranslate(30, 20);\nrect(0, 0, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\nrect(0, 0, 55, 55);  // Draw rect at original 0,0\ntranslate(30, 20);\nrect(0, 0, 55, 55);  // Draw rect at new 0,0\ntranslate(14, 14);\nrect(0, 0, 55, 55);  // Draw rect at new 0,0\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
@@ -7336,13 +7346,16 @@
                     "type": "Number/Constant"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\ntextSize(16);\ntextAlign(RIGHT);\ntext(\"ABCD\", 50, 30);\ntextAlign(CENTER);\ntext(\"EFGH\", 50, 50);\ntextAlign(LEFT);\ntext(\"IJKL\", 50, 70);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 37,
+            "line": 49,
             "description": "Calculates and returns the height of any character or text string.",
             "itemtype": "method",
             "name": "textHeight",
@@ -7353,13 +7366,16 @@
                     "type": "String"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(14);\ns = \"String.\";\ntext(s, 10, 23);\nconsole.log(textHeight(s));\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 47,
+            "line": 70,
             "description": "Sets the spacing between lines of text in units of pixels. This\nsetting will be used in all subsequent calls to the text() function.",
             "itemtype": "method",
             "name": "textLeading",
@@ -7370,13 +7386,16 @@
                     "type": "Number"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\n// Text to display. The \"\\n\" is a \"new line\" character\nlines = \"L1\\nL2\\nL3\";\ntextSize(12);\nfill(0);  // Set fill to black\n\ntextLeading(10);  // Set leading to 10\ntext(lines, 10, 25);\n\ntextLeading(20);  // Set leading to 20\ntext(lines, 40, 25);\n\ntextLeading(30);  // Set leading to 30\ntext(lines, 70, 25);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 58,
+            "line": 99,
             "description": "Sets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in units of pixels.",
             "itemtype": "method",
             "name": "textSize",
@@ -7387,13 +7406,16 @@
                     "type": "Number"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(26); \ntext(\"WORD\", 10, 50); \ntextSize(14);\ntext(\"WORD\", 10, 70);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 69,
+            "line": 121,
             "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverriden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
@@ -7404,13 +7426,16 @@
                     "type": "Number/Constant"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextStyle(NORMAL);\ntextSize(14);\ntext(\"WORD\", 10, 23);\ntextStyle(ITALIC);\ntextSize(14);\ntext(\"WORD\", 10, 45);\ntextStyle(BOLD);\ntextSize(14);\ntext(\"WORD\", 10, 67);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 85,
+            "line": 153,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
             "name": "textWidth",
@@ -7420,6 +7445,9 @@
                     "description": "the String of characters to measure",
                     "type": "String"
                 }
+            ],
+            "example": [
+                "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(14);\ns = \"String.\";\ntext(s, 10, 23);\nconsole.log(textWidth(s));\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
@@ -7458,13 +7486,16 @@
                     "type": "Number"
                 }
             ],
+            "example": [
+                "\n<div>\n<code>\ntextSize(32);\ntext(\"word\", 10, 30); \nfill(0, 102, 153);\ntext(\"word\", 10, 60);\nfill(0, 102, 153, 51);\ntext(\"word\", 10, 90); \n</code>\n</div>\n<div>\n<code>\ns = \"The quick brown fox jumped over the lazy dog.\";\nfill(50);\ntext(s, 10, 10, 70, 80); // Text wraps within text box\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Typography",
             "submodule": "Loading & Displaying"
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 105,
+            "line": 123,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
@@ -7474,6 +7505,9 @@
                     "description": "name of font",
                     "type": "String"
                 }
+            ],
+            "example": [
+                "\n<div>\n<code>\nfill(0);\ntextSize(36);\ntextFont(\"Georgia\");\ntext(\"Georgia\", 12, 40);\ntextFont(\"Helvetica\");\ntext(\"Helvetica\", 12, 90);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
