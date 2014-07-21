@@ -522,9 +522,7 @@ small, .small, footer, #family {
     width: 0;
     margin: 0;
     color:#333; 
-    outline-color:#3796D1;
-    outline-width: 1px;
-    outline-style: solid;
+    border: 1px solid #3796D1;
     font-family: times !important;
     font-weight: 400;
     font-size: 1em;
@@ -533,7 +531,9 @@ small, .small, footer, #family {
 #family form input[type="submit"] {
     background: url('../img/search.png') center center no-repeat;
     border: none;
+    outline: none;
 }
+
 
 .code-snippet {
     margin:0 0 0 1em;
