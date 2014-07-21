@@ -31,7 +31,7 @@ function getVersion($f) {
   $v = $matches[1];
   preg_match('/v[^ ]* (.*) \*\//', $line, $matches);
   $d = $matches[1];
-  return [$v, $d];
+  return new Array($v, $d);
   fclose($handle);
 }
 
