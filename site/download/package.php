@@ -73,10 +73,13 @@ function updateVersions() {
       exit("cannot open <$filename>\n");
   }
 
-  $zip->addFile('./builds/latest/p5.js',"p5.js");
-  $zip->addFile('./builds/latest/p5.min.js',"p5.min.js");
-  $zip->addFile('./builds/latest/p5.dom.js',"p5.dom.js");
-  $zip->addFile('./builds/latest/p5.sound.js',"p5.sound.js");
+  $zip->addFile('./builds/latest/p5.js','p5.js');
+  $zip->addFile('./builds/latest/p5.min.js','p5.min.js');
+  $zip->addFile('./builds/latest/p5.dom.js','p5.dom.js');
+  $zip->addFile('./builds/latest/p5.sound.js','p5.sound.js');
+  $zip->addEmptyDir('empty-example/');
+  $zip->addFile('./empty-example/index.html','empty-example/index.html');
+  $zip->addFile('./empty-example/sketch.js','empty-example/sketch.js');
   $zip->close();
 }
 
