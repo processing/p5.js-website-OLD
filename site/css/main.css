@@ -463,12 +463,47 @@ h2 {
 }
 
 h3 {
-    font-size: 1.777em;
+    font-size: 1.333em; /* 1.777em */
+    margin: 1em 0 0 0;
 }
 
-h4 {
-    font-size: 1.333em;
+#item h3 {
+    margin: 0.777em 0 0 0;
+    font-size: 1.444em;
+    font-weight: inherit;
+    /*line-height: 1.2;*/
+    font-family: inconsolatamedium, consolas, monospace;
+    color: #00A1D3; /* 2D7BB6, 4A90E2 */
 }
+
+/* probably needs to be more specific, like with a class selector, in case there are other links inside #item that are not code (or those exceptions could just be handled with a class of .notcode */
+#item a {
+    font-family: inconsolatamedium, consolas, monospace;
+}
+
+#backlink {
+    margin: 1.2em 0.444em 0 0;
+    font: 1em AvenirNextLTW01-Medium;
+    float:right;
+}
+
+#backlink a {
+    color:#AFAFAF;
+}
+
+#backlink a:hover {
+    color:#ED225D;
+    border-bottom:none;
+}
+
+
+h4 {
+    font-size: 1.33em;
+    margin: 1em 0 0 0;
+}
+
+h4 + p {display: inline;}
+
 
 small, .small, footer, #family {
     font-size: 0.9em;
@@ -560,6 +595,28 @@ ul {
 
 li {
     margin: 0 0 1em 0;
+}
+
+section li {
+    margin: 0 0 1em 0.04em;
+}
+
+ul.nobullet, div.params ul {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+div.params ul li {
+    margin-left: -0.23em;
+}
+
+ul.inside {
+    margin:0 0 0 2em;
+    padding: 0;
+    list-style: disc;
+    list-style-position: inside;
 }
 
 .image-row img {
