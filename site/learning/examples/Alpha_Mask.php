@@ -9,43 +9,37 @@
     <div class="column-span">
       <section>
           <a href="../#examples"><p>< Back to Examples</p></a>
-          <h2></h2>
+          <h2>Alpha Mask</h2>
           <p>
           <div class="example">
           <div>
-          <pre><code class="language-javascript">unction Module(_xOff, _yOff, _x, _y, _speed, _unit) {
-  this.xOff = _xOff;
-  this.yOffset = _yOff;
-  this.x = _x;
-  this.y = _y;
-  this.speed = _speed;
-  this.unit = _unit;
+          <pre><code class="language-javascript">
+var img;
+var imgMask;
+
+function preload() {
+  img = loadImage(&quot;assets/moonwalk.jpg&quot;);
+  imgMask = loadImage(&quot;assets/mask.png&quot;);
 }
 
-  // Custom method for updating the variables
-Module.prototype.update = function() {
-  this.x = this.x + (this.speed * this.xDirection);
-  if (x &gt;= unit || x &lt;= 0) {
-    xDirection *= -1;
-    x = x + (1 * xDirection);
-    y = y + (1 * yDirection);
-  }
-  if (y &gt;= unit || y &lt;= 0) {
-    yDirection *= -1;
-    y = y + (1 * yDirection);
-  }
+function setup() {
+  createCanvas(710, 400);
+  img.mask(imgMask);
+  imageMode(CENTER);
 }
-  
-  // Custom method for drawing the object
-  void draw() {
-    fill(255);
-    ellipse(xOffset + x, yOffset + y, 6, 6);
-  }
+
+function draw() {
+  background(0, 102, 153);
+  image(img, width/2, height/2);
+  image(img, mouseX, mouseY);
 }</code></pre>
           </div>
           </div>
           </p>
-          <p></p>
+          <p>Loads a &quot;mask&quot; for an image to specify the transparency in 
+ different parts of the image. The two images are blended together using 
+ the mask() method of p5.Image.
+ </p>
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 

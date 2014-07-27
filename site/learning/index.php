@@ -109,19 +109,13 @@
             
               <a href="examples/Array_2D.php">Array 2D</a><br>
             
-              <a href="examples/.php"></a><br>
+              <a href="examples/Array_Objects.php">Array Objects</a><br>
             
             <br>
           
             <strong>Control</strong><br>            
             
               <a href="examples/Iteration.php">Iteration</a><br>
-            
-            <br>
-          
-            <strong>Image</strong><br>            
-            
-              <a href="examples/Load_and_Display_Image.php">Load and Display Image</a><br>
             
               <a href="examples/Embedded_Iteration.php">Embedded Iteration</a><br>
             
@@ -130,6 +124,22 @@
               <a href="examples/Conditionals_2.php">Conditionals 2</a><br>
             
               <a href="examples/Logical_Operators.php">Logical Operators</a><br>
+            
+            <br>
+          
+            <strong>Image</strong><br>            
+            
+              <a href="examples/Load_and_Display_Image.php">Load and Display Image</a><br>
+            
+              <a href="examples/Background_Image.php">Background Image</a><br>
+            
+              <a href="examples/Transparency.php">Transparency</a><br>
+            
+              <a href="examples/Alpha_Mask.php">Alpha Mask</a><br>
+            
+              <a href="examples/Create_Image.php">Create Image</a><br>
+            
+              <a href="examples/Pointillism.php">Pointillism</a><br>
             
             <br>
           
