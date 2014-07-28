@@ -7195,7 +7195,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 20,
+            "line": 22,
             "description": "Multiplies the current matrix by the one specified through the parameters.\nThis is very slow because it will try to calculate the inverse of the\ntransform, so avoid it whenever possible.",
             "itemtype": "method",
             "name": "applyMatrix",
@@ -7236,7 +7236,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n// Example in the works.\n</code>\n</div>"
+                "\n<div>\n<code>\n// Example in the works. \n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Transform",
@@ -7244,7 +7244,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 60,
+            "line": 62,
             "description": "Replaces the current matrix with the identity matrix.",
             "itemtype": "method",
             "name": "resetMatrix",
@@ -7261,7 +7261,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 79,
+            "line": 81,
             "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe push() and pop().",
             "itemtype": "method",
             "name": "rotate",
@@ -7285,7 +7285,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 138,
+            "line": 140,
             "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with push() and pop().",
             "itemtype": "method",
             "name": "scale",
@@ -7315,8 +7315,8 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 195,
-            "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again. \n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
+            "line": 198,
+            "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearX",
             "params": [
@@ -7339,8 +7339,8 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 235,
-            "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.  \n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
+            "line": 238,
+            "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearY",
             "params": [
@@ -7363,7 +7363,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 275,
+            "line": 278,
             "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().",
             "itemtype": "method",
             "name": "translate",
