@@ -9,11 +9,9 @@ function setup() {
   createCanvas(710, 400); 
   img = createImage(230, 230);
   img.loadPixels();
-  for(var x = 0; x < img.width; x++) {
-    for(var y = 0; y < img.height; y++) {
-      var a = map(y, 0, img.height, 255, 0);
-      img.set(x, y, [0, 153, 204, a]); 
-    }
+  for(var i = 0; i < img.pixels.length; i++) {
+    var a = map(i, 0, img.pixels.length, 255, 0);
+    img.pixels[i] = [0, 153, 204, a]; 
   }
   img.updatePixels();
 }
