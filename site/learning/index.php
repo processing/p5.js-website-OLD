@@ -143,6 +143,26 @@
             
             <br>
           
+            <strong>Color</strong><br>            
+            
+              <a href="examples/Hue.php">Hue</a><br>
+            
+              <a href="examples/Saturation.php">Saturation</a><br>
+            
+              <a href="examples/Brightness.php">Brightness</a><br>
+            
+              <a href="examples/Alpha_Mask.php">Alpha Mask</a><br>
+            
+              <a href="examples/Create_Image.php">Create Image</a><br>
+            
+              <a href="examples/Pointillism.php">Pointillism</a><br>
+            
+              <a href="examples/Pointillism.php">Pointillism</a><br>
+            
+              <a href="examples/Pointillism.php">Pointillism</a><br>
+            
+            <br>
+          
             <strong>Sound</strong><br>            
             
               <a href="examples/Load_and_Play_Sound.php">Load and Play Sound</a><br>
