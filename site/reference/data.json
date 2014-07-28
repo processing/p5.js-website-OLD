@@ -1523,13 +1523,13 @@
         {
             "file": "src/color/creating_reading.js",
             "line": 14,
-            "description": "Extracts the alpha value from a color.",
+            "description": "Extracts the alpha value from a color or pixel array.",
             "itemtype": "method",
             "name": "alpha",
             "params": [
                 {
-                    "name": "color",
-                    "description": "p5.Color object",
+                    "name": "obj",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -1542,14 +1542,14 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 39,
-            "description": "Extracts the blue value from a color, scaled to match current colorMode().",
+            "line": 42,
+            "description": "Extracts the blue value from a color or a pixel array.",
             "itemtype": "method",
             "name": "blue",
             "params": [
                 {
-                    "name": "color",
-                    "description": "p5.Color object",
+                    "name": "obj",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -1562,7 +1562,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 65,
+            "line": 71,
             "description": "Extracts the brightness value from a color.",
             "itemtype": "method",
             "name": "brightness",
@@ -1582,7 +1582,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 94,
+            "line": 101,
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
@@ -1624,8 +1624,8 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 165,
-            "description": "Extracts the green value from a color, scaled to match current\ncolorMode().",
+            "line": 172,
+            "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
             "params": [
@@ -1644,7 +1644,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 192,
+            "line": 201,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -1664,7 +1664,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 221,
+            "line": 231,
             "description": "Calculates a color or colors between two color at a specific increment.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -1698,14 +1698,14 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 267,
-            "description": "Extracts the red value from a color, scaled to match current colorMode().",
+            "line": 277,
+            "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
             "params": [
                 {
-                    "name": "color",
-                    "description": "p5.Color object",
+                    "name": "obj",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -1718,7 +1718,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 293,
+            "line": 306,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -1738,7 +1738,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 21,
+            "line": 22,
             "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the backgound need only be set once.",
             "itemtype": "method",
             "name": "background",
@@ -1776,7 +1776,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 63,
+            "line": 65,
             "description": "Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
@@ -1789,7 +1789,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 82,
+            "line": 84,
             "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems.",
             "itemtype": "method",
             "name": "colorMode",
@@ -1829,7 +1829,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 148,
+            "line": 150,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.)",
             "itemtype": "method",
             "name": "fill",
@@ -1867,7 +1867,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 183,
+            "line": 186,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -1880,7 +1880,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 201,
+            "line": 204,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -1893,7 +1893,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 218,
+            "line": 221,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).",
             "itemtype": "method",
             "name": "stroke",
@@ -1924,30 +1924,6 @@
             ],
             "example": [
                 "\n<div>\n<code>\nstroke(153);\nrect(30, 20, 55, 55);   \n</code>\n</div>\n\n<div>\n<code>\nstroke(204, 102, 0);\nrect(30, 20, 55, 55);\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Color",
-            "submodule": "Setting"
-        },
-        {
-            "file": "src/color/setting.js",
-            "line": 252,
-            "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
-            "itemtype": "method",
-            "name": "getNormalizedColor",
-            "params": [
-                {
-                    "name": "args",
-                    "description": "An 'array-like' object that represents a list of\n                         arguments",
-                    "type": "Array-like"
-                }
-            ],
-            "return": {
-                "description": "a color formatted as [r, g, b, a]\n                         Example:\n                         input        ==> output\n                         g            ==> [g, g, g, 255]\n                         g,a          ==> [g, g, g, a]\n                         r, g, b      ==> [r, g, b, 255]\n                         r, g, b, a   ==> [r, g, b, a]\n                         [g]          ==> [g, g, g, 255]\n                         [g, a]       ==> [g, g, g, a]\n                         [r, g, b]    ==> [r, g, b, 255]\n                         [r, g, b, a] ==> [r, g, b, a]",
-                "type": "Array"
-            },
-            "example": [
-                "\n<div>\n<code>\n// todo\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -3214,17 +3190,20 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 14,
-            "description": "Array containing the values for all the pixels in the display window.\nThese values are of the color datatype. This array is the size of the\ndisplay window. For example, if the image is 100x100 pixels, there will\nbe 10000 values and if the window is 200x300 pixels, there will be 60000\nvalues. The index value defines the position of a value within the\narray.\n\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
+            "line": 16,
+            "description": "Array containing the values for all the pixels in the display window.\nThese values are numbers. This array is the size of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from \nleft to right across each row, then down each column. For example, \nif the image is 100x100 pixels, there will be 40000. The first four values\n(indices 0-3) in the array will be the R, G, B, A values of the pixel at \n(0, 0). The second four values (indices 4-7) will contain the R, G, B, A\nvalues of the pixel at (1, 0). More generally, to set values for a pixel\nat (x, y): \n<code>pixels[y*width+x] = r; \npixels[y*width+x+1] = g;\npixels[y*width+x+2] = b;\npixels[y*width+x+3] = a;</code>\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "property",
             "name": "pixels[]",
+            "example": [
+                "\n<div>\n<code>\nvar pink = color(255, 102, 204);\nloadPixels();\nfor (var i = 0; i < 4*(width*height/2); i+=4) {\n  pixels[i] = red(pink);\n  pixels[i+1] = green(pink);\n  pixels[i+2] = blue(pink);\n  pixels[i+3] = alpha(pink);\n}\nupdatePixels();\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Image",
             "submodule": "Pixels"
         },
         {
             "file": "src/image/pixels.js",
-            "line": 41,
+            "line": 53,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -3286,7 +3265,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 80,
+            "line": 92,
             "description": "Copies a region of the canvas to another region of the canvas  \nand copies a region of pixels from an image used as the srcImg parameter\ninto the canvas srcImage is specified this is used as the source. If\nthe source and destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -3343,7 +3322,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 131,
+            "line": 143,
             "description": "Applies a filter to the canvas",
             "itemtype": "method",
             "name": "filter",
@@ -3365,8 +3344,8 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 144,
-            "description": "Reads the color of any pixel or grabs a section of an image. If no\nparameters are specified, the entire image is returned. Use the x and y\nparameters to get the value of one pixel. Get a section of the display\nwindow by specifying additional w and h parameters. When getting an image,\nthe x and y parameters define the coordinates for the upper-left corner of\nthe image, regardless of the current imageMode().\n\nIf the pixel requested is outside of the image window, black is returned.\nThe numbers returned are scaled according to the current color ranges, but\nonly RGB values are returned by this function. For example, even though\nyou may have drawn a shape with colorMode(HSB), the numbers returned will\nbe in RGB format. \n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] is pixels[y*width+x]. See the reference for\npixels[] for more information.",
+            "line": 156,
+            "description": "Returns an array of [R,G,B,A] values for any pixel or grabs a section of\nan image. If no parameters are specified, the entire image is returned. \nUse the x and y parameters to get the value of one pixel. Get a section of\nthe display window by specifying additional w and h parameters. When \ngetting an image, the x and y parameters define the coordinates for the \nupper-left corner of the image, regardless of the current imageMode().\n\nIf the pixel requested is outside of the image window, [0,0,0,255] is \nreturned. To get the numbers scaled according to the current color ranges\nand taking into account colorMode, use getColor instead of get.\n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] is [ pixels[y*width+x], pixels[y*width+x+1], \npixels[y*width+x+2], pixels[y*width+3] ]. See the reference for\npixels[] for more information.",
             "itemtype": "method",
             "name": "get",
             "params": [
@@ -3385,36 +3364,87 @@
                 {
                     "name": "w",
                     "description": "width",
-                    "type": "Number"
+                    "type": "Number",
+                    "optional": true
                 },
                 {
                     "name": "h",
                     "description": "height",
-                    "type": "Number"
+                    "type": "Number",
+                    "optional": true
                 }
             ],
             "return": {
-                "description": "color of pixel at x,y in array format\n                          [R, G, B, A] or p5.Image",
-                "type": "Array/Color"
+                "description": "values of pixel at x,y in array format\n                             [R, G, B, A] or p5.Image",
+                "type": "Array|p5.Image"
             },
+            "example": [
+                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n  var c = get();\n  image(c, width/2, 0);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n  var c = get(50, 90);\n  fill(c);\n  noStroke();\n  rect(25, 25, 50, 50);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Image",
             "submodule": "Pixels"
         },
         {
             "file": "src/image/pixels.js",
-            "line": 211,
+            "line": 252,
+            "description": "Returns a p5.Color object for any pixel, scaled based on colorMode.\n\nIf the pixel requested is outside of the image window, p5.Color(0) is \nreturned.\n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] is [ pixels[y*width+x], pixels[y*width+x+1], \npixels[y*width+x+2], pixels[y*width+3] ]. See the reference for\npixels[] for more information.",
+            "itemtype": "method",
+            "name": "getColor",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "w",
+                    "description": "width",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "h",
+                    "description": "height",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "values of pixel at x,y in array format\n                             [R, G, B, A] or p5.Image",
+                "type": "Array|p5.Image"
+            },
+            "example": [
+                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\nfunction setup() {\n  colorMode(HSB);\n  noStroke();\n  image(img, 0, 0);\n\n  var p = get(50, 90);\n  // incorrectly interprets p as HSB color\n  fill(c);\n  rect(25, 25, 25, 50);\n\n  var c = getColor(50, 90);\n  fill(c);\n  rect(50, 25, 25, 50);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Image",
+            "submodule": "Pixels"
+        },
+        {
+            "file": "src/image/pixels.js",
+            "line": 299,
             "description": "Loads the pixel data for the display window into the pixels[] array. This\nfunction must always be called before reading from or writing to pixels[].",
             "itemtype": "method",
             "name": "loadPixels",
+            "example": [
+                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  image(img, 0, 0);\n  var halfImage = 4 * img.width * img.height/2;\n  loadPixels();\n  for (var i = 0; i < halfImage; i++) {\n    pixels[i+halfImage] = pixels[i];\n  }\n  updatePixels();\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Image",
             "submodule": "Pixels"
         },
         {
             "file": "src/image/pixels.js",
-            "line": 233,
-            "description": "Changes the color of any pixel, or writes an image directly to the display\nwindow.\n\nThe x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. The c parameter is interpreted according to the\ncurrent color mode. (The default color mode is RGB values from 0 to 255.)\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode(). \n\nSetting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, #000000) using pixels[] is pixels[y*width+x] = #000000.\nSee the reference for pixels[] for more information.",
+            "line": 336,
+            "description": "<p>Changes the color of any pixel, or writes an image directly to the \ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, [100, 50, 10, 255]) using pixels[] is:</p>\n<pre><code class=\"language-markup\">pixels[4*(y*width+x)] = 100;\npixels[4*(y*width+x)+1] = 50;\npixels[4*(y*width+x)+2] = 10;\npixels[4*(y*width+x)+3] = 255;</code></pre>\n<p>See the reference for pixels[] for more information.</p>",
             "itemtype": "method",
             "name": "set",
             "params": [
@@ -3429,10 +3459,13 @@
                     "type": "Number"
                 },
                 {
-                    "name": "insert",
-                    "description": "a grayscale value | a color array |\n                               image to copy",
+                    "name": "c",
+                    "description": "insert a grayscale value | a pixel array |\n                               a p5.Color object | a p5.Image to copy",
                     "type": "Number|Array|Object"
                 }
+            ],
+            "example": [
+                "\n<div>\n<code>\nvar black = color(0);\nset(30, 20, black);\nset(85, 20, black);\nset(85, 75, black);\nset(30, 75, black);\nupdatePixels();\n</code>\n</div> \n\n<div>\n<code>\nfor (var i = 30; i < width-15; i++) {\n  for (var j = 20; j < height-25; j++) {\n    var c = color(204-j, 153-i, 0);\n    set(i, j, c);\n  }\n}\nupdatePixels();\n</code>\n</div> \n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  set(0, 0, img);\n  updatePixels();\n  line(0, 0, width, height);\n  line(0, height, width, 0);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Image",
@@ -3440,10 +3473,39 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 281,
-            "description": "Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you're only reading pixels from\nthe array, there's no need to call updatePixels() — updating is only\nnecessary to apply changes.",
+            "line": 439,
+            "description": "Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you're only reading pixels from\nthe array, there's no need to call updatePixels() — updating is only\nnecessary to apply changes. updatePixels() should be called anytime the \npixels array is manipulated or set() is called.",
             "itemtype": "method",
             "name": "updatePixels",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the upper-left corner of region \n                        to update",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the upper-left corner of region \n                        to update",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "w",
+                    "description": "width of region to update",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "w",
+                    "description": "height of region to update",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "example": [
+                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  image(img, 0, 0);\n  var halfImage = 4 * img.width * img.height/2;\n  loadPixels();\n  for (var i = 0; i < halfImage; i++) {\n    pixels[i+halfImage] = pixels[i];\n  }\n  updatePixels();\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Image",
             "submodule": "Pixels"
@@ -4045,7 +4107,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 63,
+            "line": 61,
             "description": "Returns Euler's number e (2.71828...) raised to the power of the n\nparameter. Maps to Math.exp().",
             "itemtype": "method",
             "name": "exp",
@@ -4066,7 +4128,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 73,
+            "line": 71,
             "description": "Calculates the closest int value that is less than or equal to the\nvalue of the parameter. Maps to Math.floor().",
             "itemtype": "method",
             "name": "floor",
@@ -4087,7 +4149,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 83,
+            "line": 81,
             "description": "Calculates a number between two numbers at a specific increment. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first point, 0.1 is very near the first point, 0.5 is\nhalf-way in between, etc. The lerp function is convenient for creating\nmotion along a straight path and for drawing dotted lines.",
             "itemtype": "method",
             "name": "lerp",
@@ -4118,7 +4180,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 100,
+            "line": 98,
             "description": "Calculates the natural logarithm (the base-e logarithm) of a number. This\nfunction expects the n parameter to be a value greater than 0.0. Maps to\nMath.log().",
             "itemtype": "method",
             "name": "log",
@@ -4139,7 +4201,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 111,
+            "line": 109,
             "description": "Calculates the magnitude (or length) of a vector. A vector is a direction\nin space commonly used in computer graphics and linear algebra. Because it\nhas no \"start\" position, the magnitude of a vector can be thought of as\nthe distance from the coordinate 0,0 to its x,y value. Therefore, mag() is\na shortcut for writing dist(0, 0, x, y).",
             "itemtype": "method",
             "name": "mag",
@@ -4165,7 +4227,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 127,
+            "line": 125,
             "description": "Re-maps a number from one range to another.\nIn the first example above, the number 25 is converted from a value in the\nrange of 0 to 100 into a value that ranges from the left edge of the\nwindow (0) to the right edge (width).",
             "itemtype": "method",
             "name": "map",
@@ -4209,7 +4271,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 167,
+            "line": 165,
             "description": "Determines the largest value in a sequence of numbers, and then returns\nthat value. max() accepts any number of Number parameters, or an Array\nof any length.",
             "itemtype": "method",
             "name": "max",
@@ -4230,7 +4292,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 184,
+            "line": 182,
             "description": "Determines the smallest value in a sequence of numbers, and then returns\nthat value. min() accepts any number of Number parameters, or an Array\nof any length.",
             "itemtype": "method",
             "name": "min",
@@ -4251,7 +4313,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 201,
+            "line": 199,
             "description": "Normalizes a number from another range into a value between 0 and 1.\nIdentical to map(value, low, high, 0, 1).\nNumbers outside of the range are not clamped to 0 and 1, because\nout-of-range values are often intentional and useful. (See the second\nexample above.)",
             "itemtype": "method",
             "name": "norm",
@@ -4282,7 +4344,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 218,
+            "line": 216,
             "description": "Facilitates exponential expressions. The pow() function is an efficient\nway of multiplying numbers by themselves (or their reciprocals) in large\nquantities. For example, pow(3, 5) is equivalent to the expression\n3*3*3*3*3 and pow(3, -5) is equivalent to 1 / 3*3*3*3*3. Maps to\nMath.pow().",
             "itemtype": "method",
             "name": "pow",
@@ -4308,7 +4370,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 232,
+            "line": 230,
             "description": "Calculates the integer closest to the n parameter. For example,\nround(133.8) returns the value 134. Maps to Math.round().",
             "itemtype": "method",
             "name": "constrain",
@@ -4329,7 +4391,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 242,
+            "line": 240,
             "description": "Squares a number (multiplies a number by itself). The result is always a\npositive number, as multiplying two negative numbers always yields a\npositive result. For example, -1 * -1 = 1.",
             "itemtype": "method",
             "name": "sq",
@@ -4350,7 +4412,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 253,
+            "line": 251,
             "description": "Calculates the square root of a number. The square root of a number is\nalways positive, even though there may be a valid negative root. The\nsquare root s of number a is such that s*s = a. It is the opposite of\nsquaring. Maps to Math.sqrt().",
             "itemtype": "method",
             "name": "sqrt",
@@ -4768,6 +4830,30 @@
             "submodule": "Trigonometry"
         },
         {
+            "file": "src/objects/p5.Color.js",
+            "line": 32,
+            "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
+            "itemtype": "method",
+            "name": "getNormalizedColor",
+            "params": [
+                {
+                    "name": "args",
+                    "description": "An 'array-like' object that represents a list of\n                         arguments",
+                    "type": "Array-like"
+                }
+            ],
+            "return": {
+                "description": "a color formatted as [r, g, b, a]\n                         Example:\n                         input        ==> output\n                         g            ==> [g, g, g, 255]\n                         g,a          ==> [g, g, g, a]\n                         r, g, b      ==> [r, g, b, 255]\n                         r, g, b, a   ==> [r, g, b, a]\n                         [g]          ==> [g, g, g, 255]\n                         [g, a]       ==> [g, g, g, a]\n                         [r, g, b]    ==> [r, g, b, 255]\n                         [r, g, b, a] ==> [r, g, b, a]",
+                "type": "Array"
+            },
+            "example": [
+                "\n<div>\n<code>\n// todo\n</code>\n</div>"
+            ],
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
             "file": "src/objects/p5.Element.js",
             "line": 19,
             "description": "Underlying HTML element. All normal HTML methods can be called on this.",
@@ -5068,8 +5154,48 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 121,
-            "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()\n\nTODO: Should me make the update operation toggleable?",
+            "line": 122,
+            "description": "Get a p5.Color object representing a single pixel in an image.",
+            "itemtype": "method",
+            "name": "getColor",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "y",
+                    "description": "y-coordinate of the pixel",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "w",
+                    "description": "width",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "h",
+                    "description": "height",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "color of pixel at x,y in array format\n                                   [R, G, B, A] or p5.Image",
+                "type": "Array/Color | p5.Image"
+            },
+            "class": "p5.Image",
+            "module": "Image",
+            "submodule": "Image"
+        },
+        {
+            "file": "src/objects/p5.Image.js",
+            "line": 137,
+            "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()",
             "itemtype": "method",
             "name": "set",
             "params": [
@@ -5084,8 +5210,8 @@
                     "type": "Number"
                 },
                 {
-                    "name": "insert",
-                    "description": "a grayscale value |\n                               a color array | image to copy",
+                    "name": "a",
+                    "description": "grayscale value | pixel array |\n                               a p5.Color | image to copy",
                     "type": "Number|Array|Object"
                 }
             ],
@@ -5095,7 +5221,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 142,
+            "line": 155,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -5117,7 +5243,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 189,
+            "line": 202,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -5174,7 +5300,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 211,
+            "line": 224,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -5191,7 +5317,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 251,
+            "line": 264,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5213,7 +5339,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 264,
+            "line": 277,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5275,7 +5401,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 293,
+            "line": 306,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -5355,7 +5481,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 92,
+            "line": 102,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
             "name": "get",
@@ -5369,7 +5495,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 107,
+            "line": 117,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
             "itemtype": "method",
             "name": "add",
@@ -5403,7 +5529,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 133,
+            "line": 153,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a p5.Vector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -5437,7 +5563,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 157,
+            "line": 187,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -5459,7 +5585,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 172,
+            "line": 202,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -5481,7 +5607,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 187,
+            "line": 217,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -5495,7 +5621,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 198,
+            "line": 228,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -5509,7 +5635,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 212,
+            "line": 242,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -5542,7 +5668,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 230,
+            "line": 260,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -5563,7 +5689,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 249,
+            "line": 279,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -5584,7 +5710,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 262,
+            "line": 292,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -5598,7 +5724,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 272,
+            "line": 302,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -5619,7 +5745,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 289,
+            "line": 319,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "mtehod": "setMag",
             "params": [
@@ -5639,7 +5765,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 301,
+            "line": 331,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -5653,7 +5779,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 320,
+            "line": 350,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -5674,7 +5800,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 341,
+            "line": 371,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -5712,7 +5838,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 363,
+            "line": 393,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -5726,7 +5852,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 380,
+            "line": 410,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -5748,7 +5874,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 401,
+            "line": 431,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -5763,7 +5889,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 424,
+            "line": 454,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -5778,7 +5904,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 451,
+            "line": 481,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -5803,7 +5929,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 464,
+            "line": 494,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -5828,7 +5954,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 479,
+            "line": 509,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5853,7 +5979,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 491,
+            "line": 521,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -5878,7 +6004,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 504,
+            "line": 534,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -5903,7 +6029,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 516,
+            "line": 546,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -5928,7 +6054,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 528,
+            "line": 558,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -5953,7 +6079,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 541,
+            "line": 571,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -5979,7 +6105,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 556,
+            "line": 586,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -9460,7 +9586,7 @@
         },
         {
             "message": "unknown tag: mtehod",
-            "line": " src/objects/p5.Vector.js:289"
+            "line": " src/objects/p5.Vector.js:319"
         },
         {
             "message": "replacing incorrect tag: params with param",
@@ -9560,43 +9686,43 @@
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/objects/p5.Vector.js:289"
+            "line": " src/objects/p5.Vector.js:319"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/objects/p5.Vector.js:451"
+            "line": " src/objects/p5.Vector.js:481"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/objects/p5.Vector.js:464"
+            "line": " src/objects/p5.Vector.js:494"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:479"
+            "line": " src/objects/p5.Vector.js:509"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:491"
+            "line": " src/objects/p5.Vector.js:521"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/objects/p5.Vector.js:504"
+            "line": " src/objects/p5.Vector.js:534"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/objects/p5.Vector.js:516"
+            "line": " src/objects/p5.Vector.js:546"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/objects/p5.Vector.js:528"
+            "line": " src/objects/p5.Vector.js:558"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/objects/p5.Vector.js:541"
+            "line": " src/objects/p5.Vector.js:571"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/objects/p5.Vector.js:556"
+            "line": " src/objects/p5.Vector.js:586"
         },
         {
             "message": "Missing item type",
