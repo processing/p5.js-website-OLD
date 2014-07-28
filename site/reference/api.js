@@ -10,6 +10,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Pulse",
         "SoundFile",
         "p5",
+        "p5.Color",
         "p5.Element",
         "p5.Graphics",
         "p5.Image",
@@ -148,7 +149,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "p5.sound",
             "name": "p5.sound",
-            "description": "<h1>Version .0003</h1>\n\n<p>p5.sound by Jason Sigal (jasonsigal.cc) for the\nProcessing Foundation & Google Summer of Code 2014.</p>\n\n<p>This is an addon that extends p5 to work with sound.<br>\n<a href=\"https://github.com/therewasaguy/p5.js/blob/p5sound/lib/addons/p5.sound.js\">DOWNLOAD HERE.</a></p>\n \n<p>Incorporates elements from:<br>\n  - <a href=\"https://github.com/TONEnoTONE/Tone.js\">TONE.js</a> (c) Yotam Mann, 2014. Licensed under The MIT License (MIT).<br />\n  - <a href=\"http://buzz.jaysalvat.com/\">buzz.js</a> (c) Jay Salvat, 2013. Licensed under The MIT License (MIT).<br />\n  - <a href=\"http://www.apache.org/licenses/LICENSE-2.0\">Boris Smus Web Audio API book</a>, 2013. Licensed under the Apache License<br />\n  - <a href=\"https://github.com/katspaugh/wavesurfer.js\">wavesurfer.js</a><br />\n  - <a href=\"https://github.com/wirsing/processingsound\">Wilm Thoben's Sound library for Processing</a>"
+            "description": "<p>Create a SoundFile object with a path to a file.</p>\n\n<p>The SoundFile may not be available immediately because\nit loads the file information asynchronously.</p>\n\n<p>To do something with the sound as soon as it loads\npass the name of a function as the second parameter.</p>\n\n<p>Only one file path is required. However, audio file formats \n(i.e. mp3, ogg, wav and m4a/aac) are not supported by all\nweb browsers. If you want to ensure compatability, instead of a single\nfile path, you may include an Array of filepaths, and the browser will\nchoose a format that works.</p>"
         },
         {
             "displayName": "Pixels",
