@@ -188,6 +188,7 @@ section#reference h2 {
 }
 
 .example_container {
+    width: 39em;
     border-top: 0.09em dashed; 
     border-top-color: #333;
     padding-top: 0.5em;
