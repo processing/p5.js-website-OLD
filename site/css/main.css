@@ -47,35 +47,6 @@
     display: inline;
 }
 
-/* EXAMPLES */
-.example .edit_space {
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.example pre {
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.example div {
-    position: relative;
-}
-
-.example button {
-    position: absolute;
-    top: 0;
-    left: 400px;
-}
-
-.example #right_button {
-    left: 450px;
-}
-
-
-
 /* 
   //////////////////////////////////////////////////
     DOWNLOAD PAGE 
@@ -157,17 +128,11 @@ section#reference h2 {
 }
 
 /* EXAMPLES IN REF */
-.example-content .cnv_div {
-    position: absolute !important;
-    top: 0px;
-    left: 0px;
-}
 
 .example-content .edit_space, 
 .example-content pre {
     position: absolute !important;
-    width: 100%;
-    top: 0 !important;
+    top: 0.5em !important;
     left: 120px !important;
     padding-top: 0 !important;
     border: none !important;
@@ -176,12 +141,59 @@ section#reference h2 {
 .example-content pre {
 
     margin-top: 0 !important;
+    width: 33.5em !important;
 }
 
 .example-content .edit_space {
-
     margin: -0.5em 0 0 -0.5em !important;
 }
+
+.example .edit_space {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+
+.example pre {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.example div {
+    position: relative;
+}
+
+.example button {
+    position: absolute;
+    top: 0.25em;
+    font-family: "AvenirNextLTW01-Medium";
+    font-size: 1em;
+    color: #ccc;
+    border: 1px solid rgba(200, 200, 200, .15);
+    background: transparent;
+    outline: none;
+}
+
+.example button:hover {
+    color: #2D7BB6;
+    border-color: rgba(45,123,182, .25);
+}
+
+.edit_button {
+    left: 27.5em;
+}
+
+.reset_button {
+    left: 30.5em !important;
+}
+
+.example_container {
+    border-top: 0.09em dashed; 
+    border-top-color: #333;
+    padding-top: 0.5em;
+    margin-top: 1em;
+}
+
 
 .column_0, .column_1, .column_2 {
     float: left;
@@ -353,10 +365,12 @@ select {
 
 textarea {
     line-height: 1.45em;
-    margin: -0.1em 0 0 -0.1em;
     padding: 0.5em 1em 0.5em 1em;
-    border:0.1em solid;
-    border-color:rgba(51,51,51,.5);
+    border:none;
+}
+
+textarea:focus {
+    outline: none;
 }
 
 body {
