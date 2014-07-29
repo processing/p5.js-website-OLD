@@ -11,21 +11,24 @@
     <section>
       <h2>Libraries</h2>
 
-      <a name="included" class="anchor"><h3>Included</h3></a>
-
+      <h3></h3>
 
       <div class="left-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
-        <img src="../img/test-image-1.jpg"></a>
-        <a href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound"><p>p5.sound</a>
-        <br>Description goes here.</p>
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><h4>p5.dom</h4></a>
+        </div>
+        <p>Description of p5.dom library would go here. You can imagine that the text would run at least 2-3 lines.</p> 
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
-        <img src="../img/test-image-1.jpg"></a>
-        <a href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><p>p5.dom</a>
-        <br>Description goes here.</p> 
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound"><h4>p5.sound</h4></a>
+        </div>
+        <p>Description of p5.sound library would go here. You can imagine that the text would run at least 2-3 lines.</p> 
       </div>
 
       <div class="spacer"></div>
@@ -33,14 +36,21 @@
       <a name="contributed" class="anchor"><h3>Contributed</h3></a>
 
       <div class="left-column">
-        <img src="../img/test-image-1.jpg">
-        <p><a href="#">
-        p5.xxx</a><br>Description goes here.</p> 
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="#"><h4>p5.xxx</h4></a>
+        </div>
+        <p>Description of p5.xxx library would go here. You can imagine that the text would run at least 2-3 lines.</p> 
       </div>
+
       <div class="right-column">
-        <img src="../img/test-image-1.jpg">
-        <p><a href="#">
-        p5.xxx</a><br>Description goes here.</p> 
+        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="#"><h4>p5.xxx</h4></a>
+        </div>
+        <p>Description of p5.xxx library would go here. You can imagine that the text would run at least 2-3 lines.</p> 
       </div>
 
       <div class="spacer"></div>
