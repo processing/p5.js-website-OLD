@@ -10,7 +10,12 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-/* HOMEPAGE */
+
+/* 
+  //////////////////////////////////////////////////
+    HOMEPAGE 
+  //////////////////////////////////////////////////
+*/
 
 #bg {
     position: absolute;
@@ -51,6 +56,63 @@
 }
 
 
+
+/* 
+  //////////////////////////////////////////////////
+    DOWNLOAD PAGE 
+  //////////////////////////////////////////////////
+*/
+.download_box {
+    border: 1px solid #ED225D;
+    padding: 0.4em;
+    margin: 1em 1.75em 0.75em 0;
+    width: 18.65em;
+    color: #333 !important;
+    height:7.45em;
+    position: relative;
+}
+
+.download_box:hover {
+    border: 1px solid #ED225D;
+    background: #ED225D;
+    color: #FFF !important;
+}
+
+.download_box.half_box {
+    width:8.45em;
+    float: left;
+}
+
+
+.download_box h4 {
+    font-size: 1em;
+    -webkit-text-stroke-width: 0.03em;
+    -webkit-text-stroke-color: #333;
+    margin: 0;
+    padding-bottom: 0.3em;
+    border-bottom: 0.09em dashed; 
+    border-bottom-color: #ED225D;
+}
+
+.download_box:hover h4 {
+    -webkit-text-stroke-width: 0;
+    border-bottom-color: #FFF;
+}
+
+.download_box p {
+    font-size: 0.65em;
+    margin: 0;
+    position:absolute; 
+    bottom:1em;
+}
+
+.download_box object {
+    color: #333;
+    height:0.65em;
+    width:0.65em;
+}
+
+.download_box h4 + p {display: block;}
 
 /* 
   //////////////////////////////////////////////////
@@ -400,13 +462,6 @@ body {
     blue #2D7BB6 (a lighter Processing blue â€” it's our take on it) */
 }
 
-#menu li a:active, #menu li a:hover {
-    color:#FF276F; /* FF276F */
-    padding-bottom: 0.11em; 
-    border-bottom: 0.11em dashed; 
-    border-bottom-color: #FF276F;
-    transition: border-bottom 30ms linear; 
-}
 
 /* body links  */
 a:link, a:visited { 
@@ -417,8 +472,8 @@ a:link, a:visited {
 a:active, a:hover, #reference a:hover { 
     color:#ED225D; 
     text-decoration: none;
-    padding-bottom: 0.1em; 
-    border-bottom: 0.1em dashed; 
+    padding-bottom: 0.11em; 
+    border-bottom: 0.11em dashed; 
     border-bottom-color: #ED225D;
     transition: border-bottom 30ms linear; 
 }
@@ -854,7 +909,7 @@ footer {
         margin:0 0 0 8.5em; /* the 7.5em  */
     }
     section {
-        width:36em; /* 36-38 em for about 10-14 words at this size  */
+        /*width:36em; /* 36-38 em for about 10-14 words at this size  */
 
     }
 
