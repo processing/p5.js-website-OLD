@@ -9,8 +9,9 @@
 <script src="<?php echo getRoot(); ?>js/p5.dom.js"></script>
 <script src="<?php echo getRoot(); ?>js/p5.sound.js"></script>
 <script src="<?php echo getRoot(); ?>js/render.js"></script>
+<script src="<?php echo getRoot(); ?>js/main.js"></script>
 <script>
-renderCode('bg_code');
+<!--renderCode('bg_code');-->
 renderCode();
 </script>
 

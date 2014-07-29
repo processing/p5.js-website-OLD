@@ -1624,7 +1624,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 172,
+            "line": 175,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
@@ -1644,7 +1644,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 201,
+            "line": 204,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -1664,7 +1664,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 231,
+            "line": 233,
             "description": "Calculates a color or colors between two color at a specific increment.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -1698,7 +1698,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 277,
+            "line": 279,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -1718,7 +1718,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 306,
+            "line": 308,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -3190,7 +3190,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 16,
+            "line": 15,
             "description": "Array containing the values for all the pixels in the display window.\nThese values are numbers. This array is the size of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from \nleft to right across each row, then down each column. For example, \nif the image is 100x100 pixels, there will be 40000. The first four values\n(indices 0-3) in the array will be the R, G, B, A values of the pixel at \n(0, 0). The second four values (indices 4-7) will contain the R, G, B, A\nvalues of the pixel at (1, 0). More generally, to set values for a pixel\nat (x, y): \n<code>pixels[y*width+x] = r; \npixels[y*width+x+1] = g;\npixels[y*width+x+2] = b;\npixels[y*width+x+3] = a;</code>\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -3203,7 +3203,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 53,
+            "line": 52,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -3265,7 +3265,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 92,
+            "line": 91,
             "description": "Copies a region of the canvas to another region of the canvas  \nand copies a region of pixels from an image used as the srcImg parameter\ninto the canvas srcImage is specified this is used as the source. If\nthe source and destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -3322,7 +3322,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 143,
+            "line": 142,
             "description": "Applies a filter to the canvas",
             "itemtype": "method",
             "name": "filter",
@@ -3344,7 +3344,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 156,
+            "line": 155,
             "description": "Returns an array of [R,G,B,A] values for any pixel or grabs a section of\nan image. If no parameters are specified, the entire image is returned. \nUse the x and y parameters to get the value of one pixel. Get a section of\nthe display window by specifying additional w and h parameters. When \ngetting an image, the x and y parameters define the coordinates for the \nupper-left corner of the image, regardless of the current imageMode().\n\nIf the pixel requested is outside of the image window, [0,0,0,255] is \nreturned. To get the numbers scaled according to the current color ranges\nand taking into account colorMode, use getColor instead of get.\n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] is [ pixels[y*width+x], pixels[y*width+x+1], \npixels[y*width+x+2], pixels[y*width+3] ]. See the reference for\npixels[] for more information.",
             "itemtype": "method",
             "name": "get",
@@ -3387,50 +3387,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 252,
-            "description": "Returns a p5.Color object for any pixel, scaled based on colorMode.\n\nIf the pixel requested is outside of the image window, p5.Color(0) is \nreturned.\n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] is [ pixels[y*width+x], pixels[y*width+x+1], \npixels[y*width+x+2], pixels[y*width+3] ]. See the reference for\npixels[] for more information.",
-            "itemtype": "method",
-            "name": "getColor",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x-coordinate of the pixel",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "y",
-                    "description": "y-coordinate of the pixel",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "w",
-                    "description": "width",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "h",
-                    "description": "height",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "values of pixel at x,y in array format\n                             [R, G, B, A] or p5.Image",
-                "type": "Array|p5.Image"
-            },
-            "example": [
-                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\nfunction setup() {\n  colorMode(HSB);\n  noStroke();\n  image(img, 0, 0);\n\n  var p = get(50, 90);\n  // incorrectly interprets p as HSB color\n  fill(c);\n  rect(25, 25, 25, 50);\n\n  var c = getColor(50, 90);\n  fill(c);\n  rect(50, 25, 25, 50);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Image",
-            "submodule": "Pixels"
-        },
-        {
-            "file": "src/image/pixels.js",
-            "line": 299,
+            "line": 251,
             "description": "Loads the pixel data for the display window into the pixels[] array. This\nfunction must always be called before reading from or writing to pixels[].",
             "itemtype": "method",
             "name": "loadPixels",
@@ -3443,7 +3400,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 336,
+            "line": 288,
             "description": "<p>Changes the color of any pixel, or writes an image directly to the \ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, [100, 50, 10, 255]) using pixels[] is:</p>\n<pre><code class=\"language-markup\">pixels[4*(y*width+x)] = 100;\npixels[4*(y*width+x)+1] = 50;\npixels[4*(y*width+x)+2] = 10;\npixels[4*(y*width+x)+3] = 255;</code></pre>\n<p>See the reference for pixels[] for more information.</p>",
             "itemtype": "method",
             "name": "set",
@@ -3473,7 +3430,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 439,
+            "line": 391,
             "description": "Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you're only reading pixels from\nthe array, there's no need to call updatePixels() — updating is only\nnecessary to apply changes. updatePixels() should be called anytime the \npixels array is manipulated or set() is called.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -4831,7 +4788,7 @@
         },
         {
             "file": "src/objects/p5.Color.js",
-            "line": 32,
+            "line": 30,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "itemtype": "method",
             "name": "getNormalizedColor",
@@ -5154,47 +5111,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 122,
-            "description": "Get a p5.Color object representing a single pixel in an image.",
-            "itemtype": "method",
-            "name": "getColor",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x-coordinate of the pixel",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "y",
-                    "description": "y-coordinate of the pixel",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "w",
-                    "description": "width",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "h",
-                    "description": "height",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "color of pixel at x,y in array format\n                                   [R, G, B, A] or p5.Image",
-                "type": "Array/Color | p5.Image"
-            },
-            "class": "p5.Image",
-            "module": "Image",
-            "submodule": "Image"
-        },
-        {
-            "file": "src/objects/p5.Image.js",
-            "line": 137,
+            "line": 121,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()",
             "itemtype": "method",
             "name": "set",
@@ -5221,7 +5138,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 155,
+            "line": 139,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -5243,7 +5160,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 202,
+            "line": 186,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -5300,7 +5217,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 224,
+            "line": 208,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -5317,7 +5234,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 264,
+            "line": 248,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5339,7 +5256,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 277,
+            "line": 261,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5401,7 +5318,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 306,
+            "line": 290,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",

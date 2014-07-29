@@ -41,4 +41,4 @@
 <br />
 </div>
 
-<script src="<?php echo getRoot(); ?>js/main.js"></script>
+<script src="<?php echo getRoot(); ?>js/scroll.js"></script>

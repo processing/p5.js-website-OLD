@@ -148,13 +148,13 @@ section#reference h2 {
     margin: -0.5em 0 0 -0.5em !important;
 }
 
-.example .edit_space {
+.example_container .edit_space {
     position: absolute !important;
     top: 0;
     left: 0;
 }
 
-.example pre {
+.example_container pre {
     top: 0;
     left: 0;
     width: 100%;
@@ -163,7 +163,7 @@ section#reference h2 {
     position: relative;
 }
 
-.example button {
+.example_container button {
     position: absolute;
     top: 0.25em;
     font-family: "AvenirNextLTW01-Medium";
@@ -174,7 +174,7 @@ section#reference h2 {
     outline: none;
 }
 
-.example button:hover {
+.example_container button:hover, .example_container.editing button {
     color: #2D7BB6;
     border-color: rgba(45,123,182, .25);
 }

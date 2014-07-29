@@ -12,7 +12,7 @@
 <!-- identity -->
 <div id="lockup">
   <a href="<?php echo getRoot(); ?>">
-    <img type="image/svg+xml" src="<?php echo getRoot(); ?>img/p5js.svg" class="logo" />
+    <img type="image/svg+xml" src="<?php echo getRoot(); ?>img/p5js-beta.svg" class="logo" />
   </a>
-  <p><?php echo $tagline; ?></p>
+  <?php if ($tagline) { echo '<p>'.$tagline.'</p>'; } ?>
 </div>

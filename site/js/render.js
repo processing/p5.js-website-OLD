@@ -93,10 +93,21 @@ function renderCode(sel) {
 
       function setMode(sketch, m) {
         if (m === 'edit') {
+          $('.example_container').each(function(ind, con) {
+            if (ind !== i) {
+              $(con).css('opacity', 0.25);
+            } else {
+              $(con).addClass('editing');
+            }
+          });
           edit_button.innerHTML = 'run';
           edit_area.style.display = 'block';
           edit_area.focus();
         } else {
+          $('.example_container').each(function(ind, con) {
+            $(con).css('opacity', 1.0);
+            $(con).removeClass('editing');
+          });
           edit_button.innerHTML = 'edit';
           edit_area.style.display = 'none';
           sketch.innerHTML = edit_area.value;
