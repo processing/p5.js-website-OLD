@@ -37,9 +37,10 @@
     list-style: none;
     font-family: "AvenirNextLTW01-Medium";
     width:100%;
-    margin: 0;
+    margin: 0 0 1em 0;
     padding: 0;
     height: 100%;
+    font-size: 1.1em;
 }
 
 #menu.top_menu li {
@@ -930,7 +931,7 @@ footer {
         margin:0 0 0 8.5em; /* the 7.5em  */
     }
     section {
-        width:36em; /* 36-38 em for about 10-14 words at this size   */
+        width:39em; /* 36-38 em for about 10-14 words at this size   */
     }
 
     small, .small, footer, #family {
@@ -982,6 +983,13 @@ footer {
     }
 
 /* constants for the asterisk */
+
+    #separator-design-element {
+        width: 0.4em;
+        margin: 0 0.34em 0.25em 0.34em;
+    }
+
+
     #asterisk-design-element {
         position:fixed;
         z-index: -1 !important;

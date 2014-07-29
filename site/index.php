@@ -10,12 +10,17 @@
     <section id="home">
 
       <ul id="menu" class="top_menu">
-        <li><a href="<?php echo getRoot(); ?>download/">Download</a></li> 
-        <li><a href="<?php echo getRoot(); ?>get-started/">Get&nbsp;Started</a></li>
+        <li><a href="<?php echo getRoot(); ?>download/">Download</a></li>
+        <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
+        <li><a href="<?php echo getRoot(); ?>get-started/">Start</a></li>
+        <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
         <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
+        <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
         <li><a href="<?php echo getRoot(); ?>libraries/">Libraries</a></li>
+        <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
         <li><a href="<?php echo getRoot(); ?>learn/">Learn</a></li>
-        <li><a href="<?php echo getRoot(); ?>contribute/">Develop</a></li>
+        <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
+        <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
       </ul>
 
       <p>p5.js is a JavaScript library that starts with the original goal of 
