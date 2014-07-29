@@ -1,3 +1,4 @@
+<?php include('version.php'); ?>
 <?php
 
 function download($url, $path) {
@@ -24,25 +25,36 @@ function download($url, $path) {
   if (filesize($path) > 0) return true;
 }
 
-function getVersion($f) {
+function getLibVersion($f) {
   $handle = fopen($f, 'r');
   $line = fgets($handle);
+  fclose($handle);
   preg_match('/v([^ ]*)/', $line, $matches);
   $v = $matches[1];
   preg_match('/v[^ ]* (.*) \*\//', $line, $matches);
   $d = $matches[1];
   return array($v, $d);
-  fclose($handle);
 }
 
-function updateVersion() {
+function getPackageVersion($f) {
+  $handle = fopen($f, 'r');
+  $line = "";
+  while(!strpos($line, 'version')) {
+    $line = fgets($handle);
+  }
+  fclose($handle);
+  preg_match('/"version": "(.*)".*/', $line, $matches);
+  return $matches[1];
+}
+
+function updateLib($jside_v) {
 
   $r = 'https://raw.githubusercontent.com/lmccart/p5.js/master/';
   download($r.'lib/p5.min.js', 'p5.min.js');
-  $v = getVersion('p5.min.js');
-  unlink('p5.min.js');
+  $v = getLibVersion('p5.min.js');
+  //unlink('p5.min.js');
 
-  $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; ?>';
+  $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $jside_version = "'.$jside_v.'"; ?>';
 
   file_put_contents('version.php', $contents);
 }
@@ -51,4 +63,21 @@ if ($_GET['f'] == 'update_version') {
   updateVersion();
 }
 
+
+function updateJSIDE($lib_v, $lib_d) {
+
+  $r = 'https://raw.githubusercontent.com/antiboredom/jside/master/';
+  download($r.'package.json', 'package.json');
+  $v = getPackageVersion('package.json');
+  unlink('package.json');
+  $contents = '<?php $version = "'.$lib_v.'"; $date = "'.$lib_d.'"; $jside_version = "'.$v.'"; ?>';
+  file_put_contents('version.php', $contents);
+}
+
+if ($_GET['f'] == 'update_lib') {
+  updateLib($jside_version);
+}
+else if ($_GET['f'] == 'update_jside') {
+  updateJSIDE($version, $date);
+}
 ?>

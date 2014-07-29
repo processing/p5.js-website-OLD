@@ -84,7 +84,7 @@
 .download_box {
     border: 1px solid #ED225D;
     padding: 0.4em;
-    margin: 1em 1.75em 0.75em 0;
+    margin: 1em 1.75em 0 0;
     width: 18.65em;
     color: #333 !important;
     height:7.45em;
@@ -101,7 +101,6 @@
     width:8.45em;
     float: left;
 }
-
 
 .download_box h4 {
     font-size: 1em;
@@ -125,16 +124,26 @@
     bottom:1em;
 }
 
-.download_box object {
-    color: #333;
+.download_box svg {
     height:0.65em;
     width:0.65em;
+    position: absolute;
+    bottom: 3.5em;
+}
+
+.download_box:hover svg {
+    fill: white;
 }
 
 .download_box h4 + p {display: block;}
 
 #download-page .link_group {
     width: 100%;
+    margin-bottom: 3em;
+}
+
+#download-page p {
+    margin-bottom: 0;
 }
 
 /* 
