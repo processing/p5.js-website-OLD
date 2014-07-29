@@ -8,7 +8,7 @@
     <!-- content sections -->
     <div class="column-span">
       <section>
-          <a href="../#examples"><p>< Back to Examples</p></a>
+          <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Pointillism</h2>
           <p>
           <div class="example">
