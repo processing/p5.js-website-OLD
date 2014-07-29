@@ -3,17 +3,12 @@
 <!-- prism for code highlighting -->
 <script src="<?php echo getRoot(); ?>js/vendor/prism.js"></script>
 
-<!-- jquery-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?php echo getRoot(); ?>js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-
 <!-- boilerplate suggestions
 <script src="js/plugins.js"></script> -->
 <script src="<?php echo getRoot(); ?>js/p5.js"></script>
 <script src="<?php echo getRoot(); ?>js/p5.dom.js"></script>
 <script src="<?php echo getRoot(); ?>js/p5.sound.js"></script>
 <script src="<?php echo getRoot(); ?>js/render.js"></script>
-<script src="<?php echo getRoot(); ?>js/main.js"></script>
 <script>
 renderCode('bg_code');
 renderCode();

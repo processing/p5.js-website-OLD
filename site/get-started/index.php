@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-  <body id="getting-started-page">
+  <body id="get-started-page">
 
     <?php include('../sidebar.php'); ?>
 
@@ -10,7 +10,7 @@
 
     <section>
 
-      <h2>Getting Started</h2>
+      <h2>Get Started</h2>
 
       <h3>Download and File Setup</h3>
       <p>
@@ -156,8 +156,8 @@ function draw() {
       </p>
 
       <p>
-        <strong>Learning</strong>. Check out the <a target="_blank" 
-        href="https://github.com/lmccart/p5.js">learning</a> page for more tutorials and
+        <strong>Learn</strong>. Check out the <a target="_blank" 
+        href="https://github.com/lmccart/p5.js">learn</a> page for more tutorials and
         examples.
       </p>      
     </section>

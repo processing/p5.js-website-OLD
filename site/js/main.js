@@ -20,7 +20,6 @@ $(window).scroll(function(){
   }    
 });
 
-
 $('#family form').hover(
   function() {
     $('#search_field').css('visibility', 'visible');
@@ -38,7 +37,6 @@ $('#family form').focusout(function() {
 });
 
 function closeSearch() {
-
   $('#search_field').css('width', '0em');
   $('#search_field').css('visibility', 'hidden');
   console.log($('#search_field').attr('width'));

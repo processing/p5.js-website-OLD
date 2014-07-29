@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-  <body id="development-page">
+  <body id="contribute-page">
 
     <?php include('../sidebar.php'); ?>
 
@@ -10,7 +10,7 @@
 
     <section>
 
-      <h2>Development</h2> 
+      <h2>Contribute</h2> 
 
       <p>
         p5.js is a collaborative project created by many individuals. 

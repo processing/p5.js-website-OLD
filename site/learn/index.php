@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-  <body id="learning-page">
+  <body id="learn-page">
 
     <?php include('../sidebar.php'); ?>
 
@@ -9,7 +9,7 @@
     <div class="column-span">
 
     <section>
-      <h2>Learning</h2>
+      <h2>Learn</h2>
 
 
       <a name="tutorials" class="anchor"><h3>Tutorials</h3></a>
