@@ -16,7 +16,7 @@
       <div class="left-column">
         <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
         <div class="label">
-        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <img src="../img/learn/dom.jpg"></a>
         <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><h4>Beyond the canvas</h4></a>
         </div>
         <p>Creating and manipulating elements on the page 
