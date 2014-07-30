@@ -9,29 +9,43 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Load and Display Image</h2>
+          <h2>Load &amp; Play Sound</h2>
           <p>
           <div class="example">
           <div>
           <pre><code class="language-javascript">
-var img;  // Declare variable 'img'.
+
+var soundFile;  // Declare variable 'soundFile'.
+
+function preload() {
+  // create a SoundFile
+  soundFile = loadSound( ['assets/beatbox.ogg', 
+                          'assets/beatbox.mp3'] );
+}
 
 function setup() {
   createCanvas(780, 440);
-  img = loadImage(&quot;assets/moonwalk.jpg&quot;);  // Load the image 
+  background(0);
 }
 
-function draw() {
-  // Displays the image at its actual size at point (0,0)
-  image(img, 0, 0);
-  // Displays the image at point (0, height/2) at half size
-  image(img, 0, height/2, img.width/2, img.height/2);
+// when a key is pressed...
+function keyPressed() {
+
+  // play the sound file
+  soundFile.play(1,1);
+
+  // also make the background yellow
+  background(255, 255, 0);
+}
+
+function keyReleased() {
+  // make the background black again when the key is released
+  background(0);
 }</code></pre>
           </div>
           </div>
           </p>
-          <p>Images can be loaded and displayed to the screen at their 
- actual size or any other size.
+          <p>Load sound during preload(). Play a sound when key is pressed.
  </p>
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>

@@ -60,7 +60,7 @@
         <p>The p5.js editor is currently in development, try out an alpha version of it now. Help out by posting
         <a href="https://github.com/antiboredom/jside/issues">feedback and bugs</a>. Support for Windows and Linux
         coming soon, along with more <a href="https://github.com/antiboredom/jside/issues">features</a>.</p>
-        <a href="https://github.com/antiboredom/jside/releases/download/<?php echo $jside_version; ?>/jside.zip">
+        <a href="https://github.com/antiboredom/jside/releases/download/<?php echo $jside_version; ?>/p5.zip">
         <div class="download_box half_box">
         <h4>Mac OS X</h4>
         <p>p5 Editor<br>Version <?php echo $jside_version; ?></p>
@@ -68,14 +68,14 @@
         </a>
 
         <!--
-        <a href="https://github.com/antiboredom/jside/releases/download/<?php echo $jside_version; ?>/jside.zip">
+        <a href="https://github.com/antiboredom/jside/releases/download/<?php echo $jside_version; ?>/p5.zip">
         <div class="download_box half_box">
         <h4>Windows</h4>
         <p>p5 Development Environment</p>
         </div>
         </a>
 
-        <a href="https://github.com/antiboredom/jside/releases/download/<?php echo $jside_version; ?>/jside.zip">
+        <a href="https://github.com/antiboredom/jside/releases/download/<?php echo $jside_version; ?>/p5.zip">
         <div class="download_box half_box">
         <h4>Linux</h4>
         <p>p5 Development Environment</p>

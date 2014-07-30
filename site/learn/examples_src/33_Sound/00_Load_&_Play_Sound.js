@@ -1,14 +1,14 @@
 /*
- * @name Load and Play Sound
+ * @name Load & Play Sound
  * @description Load sound during preload(). Play a sound when key is pressed.
  */
 
 var soundFile;  // Declare variable 'soundFile'.
 
 function preload() {
-	// create a SoundFile
+  // create a SoundFile
   soundFile = loadSound( ['assets/beatbox.ogg', 
-  												'assets/beatbox.mp3'] );
+                          'assets/beatbox.mp3'] );
 }
 
 function setup() {

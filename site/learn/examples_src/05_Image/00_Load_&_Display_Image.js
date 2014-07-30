@@ -1,5 +1,5 @@
 /*
- * @name Load and Display Image
+ * @name Load & Display Image
  * @description Images can be loaded and displayed to the screen at their 
  * actual size or any other size.
  */

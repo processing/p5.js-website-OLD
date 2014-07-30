@@ -26,6 +26,7 @@ var example_template = ejs.compile(fs.readFileSync("example_template.ejs", 'utf8
 var learn_template = ejs.compile(fs.readFileSync("learn_template.ejs", 'utf8'));
  
 var all = {};
+var total = 0;
 
 var f = fs.readdirSync(outputRoot);
 f.forEach(function(file) {
@@ -73,6 +74,7 @@ async.forEachSeries(inputFolders, function(folder, cb0) {
           fs.writeFile(outputFile, content, 'utf8');
 
           console.log('d')
+          total++;
           cb1();
 
         });
@@ -89,7 +91,7 @@ async.forEachSeries(inputFolders, function(folder, cb0) {
 }, function(callback) {
   console.log(all);
   // write main page
-  fs.writeFile('../index.php', learn_template({'all':all}), 'utf8');
+  fs.writeFile('../index.php', learn_template({'all':all, 'total':total}), 'utf8');
 
 });
 

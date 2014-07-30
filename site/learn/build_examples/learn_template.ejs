@@ -58,13 +58,21 @@
 
       <a name="examples" class="anchor"><h3>Examples</h3></a>
           <p>
-          {{ for(var topic in all) { }}
-            <strong>{{=topic}}</strong><br>            
+          <div class="column_0">
+          {{ var t = 0; var col=0; for(var topic in all) { }}
+            <p>
+            <strong>{{=topic}}</strong><br>
             {{ for(var i=0; i<all[topic].length; i++) { }}
               <a href="{{=all[topic][i][1]}}">{{= all[topic][i][0] }}</a><br>
+              {{ t++ }}
             {{ } }}
-            <br>
+            </p>
+            {{ if (t >= total/3) { }}
+              </div>
+              <div class="column_{{=col}}">
+            {{ col++; t=0; } }}
           {{ } }}
+          </div>
           </p>
           <!--<li><a href="https://github.com/lmccart/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
 

@@ -201,6 +201,10 @@ section#reference h2 {
     width: 12em;
 }
 
+.column_0, .column_1 {
+    margin-right: 1.0em;
+}
+
 
 #search {
     float:right;

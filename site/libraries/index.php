@@ -16,7 +16,7 @@
       <div class="left-column">
         <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
         <div class="label">
-        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <img src="../img/libraries/dom.jpg"></a>
         <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><h4>p5.dom</h4></a>
         </div>
         <p>Description of p5.dom library would go here. You can imagine that the text would run at least 2-3 lines.</p> 
