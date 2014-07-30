@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -18,7 +18,7 @@ var barWidth = 20;
 var lastBar = -1;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   colorMode(HSB, height, height, height);  
   noStroke();
   background(0);

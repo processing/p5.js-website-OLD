@@ -13,7 +13,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   img.mask(imgMask);
   imageMode(CENTER);
 }

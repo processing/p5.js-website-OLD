@@ -10,7 +10,7 @@ var y;
 function setup() 
 {
   // createCanvas should be the first statement
-  createCanvas(710, 400);  
+  createCanvas(780, 440);  
   stroke(255);     // Set line drawing color to white
   noLoop();
   

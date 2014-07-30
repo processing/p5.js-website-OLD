@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -19,7 +19,7 @@ var maxDistance;
 var spacer;
 
 function setup() {
-  createCanvas(710, 360);
+  createCanvas(780, 395);
   maxDistance = dist(width/2, height/2, width, height);
   for (var x = 0; x &lt; width; x++) {
     distances[x] = []; // create nested array

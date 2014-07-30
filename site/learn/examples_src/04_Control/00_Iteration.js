@@ -7,7 +7,7 @@ var num = 14;
 
 function setup() {
 
-  createCanvas(710, 360);
+  createCanvas(780, 395);
   background(102);
   noStroke();
      

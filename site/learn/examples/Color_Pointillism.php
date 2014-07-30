@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -18,7 +18,7 @@ var img;
 var smallPoint, largePoint;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   img = loadImage(&quot;assets/moonwalk.jpg&quot;);
   smallPoint = 4;
   largePoint = 40;

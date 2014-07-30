@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -25,7 +25,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(710, 100);
+  createCanvas(780, 100);
 }
 
 function draw() {

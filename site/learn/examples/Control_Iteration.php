@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -19,7 +19,7 @@ var num = 14;
 
 function setup() {
 
-  createCanvas(710, 360);
+  createCanvas(780, 395);
   background(102);
   noStroke();
      

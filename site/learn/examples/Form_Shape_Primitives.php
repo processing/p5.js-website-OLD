@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -17,7 +17,7 @@
 function setup() {
 
   // Sets the screen to be 720 pixels wide and 400 pixels high
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   background(0);
   noStroke();
 

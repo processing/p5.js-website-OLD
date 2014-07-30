@@ -6,7 +6,7 @@
 var img;  // Declare variable 'img'.
 
 function setup() {
-  createCanvas(710, 400); 
+  createCanvas(780, 440); 
   img = createImage(230, 230);
   img.loadPixels();
   for(var x = 0; x < img.width; x++) {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -17,7 +17,7 @@
 var img;  // Declare variable 'img'.
 
 function setup() {
-  createCanvas(710, 400); 
+  createCanvas(780, 440); 
   img = createImage(230, 230);
   img.loadPixels();
   for(var x = 0; x &lt; img.width; x++) {

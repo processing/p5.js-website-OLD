@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -20,7 +20,7 @@ var outsideRadius = 150;
 var insideRadius = 100;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   background(204);
   x = width/2;
   y = height/2;

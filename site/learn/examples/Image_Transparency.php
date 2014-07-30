@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -19,7 +19,7 @@ var offset = 0;
 var easing = 0.05;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   img = loadImage(&quot;assets/moonwalk.jpg&quot;);  // Load an image into the program 
 }
 

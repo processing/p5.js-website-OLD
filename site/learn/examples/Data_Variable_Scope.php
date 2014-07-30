@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -17,7 +17,7 @@
 var a = 80;  // Create a global variable &quot;a&quot;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   background(0);
   stroke(255);
   noLoop();

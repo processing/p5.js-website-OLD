@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -17,7 +17,7 @@
 var osc, fft;
 
 function setup() {
-  createCanvas(710,400);
+  createCanvas(780, 440);
   osc = new Oscillator(220, 'triangle'); // set frequency and type
   osc.amp(.5);
   fft = new FFT();

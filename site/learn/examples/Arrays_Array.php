@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -18,7 +18,7 @@ var coswave = [];
 
 function setup() {
 
-  createCanvas(710, 360);
+  createCanvas(780, 395);
   for (var i = 0; i &lt; width; i++) {
     var amount = map(i, 0, width, 0, PI);
     coswave[i] = abs(cos(amount));

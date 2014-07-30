@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -17,7 +17,7 @@
 var angles = [ 30, 10, 45, 35, 60, 38, 75, 67 ];
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   noStroke();
   noLoop();  // Run once and stop
 }

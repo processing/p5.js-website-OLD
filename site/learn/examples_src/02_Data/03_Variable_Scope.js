@@ -12,7 +12,7 @@
 var a = 80;  // Create a global variable "a"
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   background(0);
   stroke(255);
   noLoop();

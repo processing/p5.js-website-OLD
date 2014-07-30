@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -20,7 +20,7 @@ var y = 100;
 // execute once when the program begins
 function setup() {
 	// createCanvas must be the first statement
-  createCanvas(710, 400);  
+  createCanvas(780, 440);  
   stroke(255);     // Set line drawing color to white
   frameRate(30);
 }

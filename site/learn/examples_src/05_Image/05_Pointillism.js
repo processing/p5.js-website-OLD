@@ -8,7 +8,7 @@ var img;
 var smallPoint, largePoint;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(780, 440);
   img = loadImage("assets/moonwalk.jpg");
   smallPoint = 4;
   largePoint = 40;

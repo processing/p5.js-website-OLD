@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="home-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
 
@@ -22,7 +22,7 @@ function setup() {
   // into the size() method. In this program, the size of the image
   // is 710x400 pixels.
   bg = loadImage(&quot;assets/moonwalk.jpg&quot;);
-  createCanvas(710, 400);
+  createCanvas(780, 440);
 }
 
 function draw() {
