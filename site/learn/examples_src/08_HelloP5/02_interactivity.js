@@ -1,6 +1,6 @@
 /*
  * @name Interactivity
- * @frame 720,420
+ * @frame 720,425
  * @description The circle changes color when you click on it.
  */
 var col;
