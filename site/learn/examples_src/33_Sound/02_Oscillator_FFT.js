@@ -5,7 +5,7 @@
 var osc, fft;
 
 function setup() {
-  createCanvas(780, 440);
+  createCanvas(720, 400);
   osc = new Oscillator(220, 'triangle'); // set frequency and type
   osc.amp(.5);
   fft = new FFT();

@@ -135,7 +135,7 @@
             </p>
             
               </div>
-              <div class="column_0">
+              <div class="column_1">
             
           
             <p>
@@ -213,7 +213,7 @@
             </p>
             
               </div>
-              <div class="column_1">
+              <div class="column_2">
             
           
             <p>

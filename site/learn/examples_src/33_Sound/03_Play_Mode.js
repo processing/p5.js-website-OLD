@@ -10,7 +10,7 @@ var playMode = 'sustain';
 var sample;
 
 function setup() {
-  createCanvas(780,50);
+  createCanvas(720,50);
   sample = loadSound( ['assets/Damscray_-_Dancing_Tiger_02.ogg', 
                        'assets/Damscray_-_Dancing_Tiger_02.mp3'] );
 }

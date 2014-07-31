@@ -9,7 +9,7 @@ var barWidth = 20;
 var lastBar = -1;
 
 function setup() {
-  createCanvas(780, 440);
+  createCanvas(720, 400);
   colorMode(HSB, width, height, 100); 
   noStroke();
 }
