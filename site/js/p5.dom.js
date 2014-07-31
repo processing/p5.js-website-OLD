@@ -14,9 +14,6 @@ var p5DOM = (function(){
 //                         p5 additions
 // =============================================================================
 
-
-  p5.prototype._elements = [];
-
   /**
    * Searches the page for an element with given ID and returns it as
    * a p5.Element. The DOM node itself can be accessed with .elt.
@@ -57,25 +54,28 @@ var p5DOM = (function(){
   };
 
   /**
-   * Removes all elements created by p5, except the original canvas.
+   * Removes all elements created by p5, except any canvas / graphics
+   * elements created by createCanvas or createGraphics.
    * Event handlers are removed, and element is removed from the DOM.
    *
    * @method removeElements
    */
   p5.prototype.removeElements = function (e) {
     for (var i=0; i<this._elements.length; i++) {
-      this._elements[i].remove();
+      if (!(this._elements[i].elt instanceof HTMLCanvasElement)) {
+        this._elements[i].remove();
+      }
     }
   };
 
   /**
    * Helpers for create methods.
    */  
-  function addElement(elt, media) {
-    var node = this._userNode ? this._userNode : document.body;
+  function addElement(elt, pInst, media) {
+    var node = pInst._userNode ? pInst._userNode : document.body;
     node.appendChild(elt);
     var c = media ? new p5.MediaElement(elt) : new p5.Element(elt);
-    this._elements.push(c);
+    pInst._elements.push(c);
     return c;
   }
 
@@ -118,7 +118,7 @@ var p5DOM = (function(){
     p5.prototype[method] = function(html) {
       var elt = document.createElement(tag);
       elt.innerHTML = html;
-      return addElement(elt);
+      return addElement(elt, this);
     }
   });
 
@@ -141,7 +141,7 @@ var p5DOM = (function(){
     if (typeof alt !== 'undefined') {
       elt.alt = alt;
     }
-    return addElement(elt);
+    return addElement(elt, this);
   };
 
 
@@ -163,7 +163,7 @@ var p5DOM = (function(){
     elt.href = href;
     elt.innerHTML = html;
     if (target) elt.target = target;
-    return addElement(elt);
+    return addElement(elt, this);
   };
 
   /** INPUT **/
@@ -188,7 +188,7 @@ var p5DOM = (function(){
     elt.min = min;
     elt.max = max;
     if (value) elt.value = value;
-    return addElement(elt);
+    return addElement(elt, this);
   };
 
   /**
@@ -209,7 +209,7 @@ var p5DOM = (function(){
     elt.innerHTML = label;
     elt.value = value;
     if (value) elt.value = value;
-    return addElement(elt);
+    return addElement(elt, this);
   };
 
   /**
@@ -227,11 +227,38 @@ var p5DOM = (function(){
     var elt = document.createElement('input');
     elt.type = 'text';
     if (value) elt.value = value;
-    return addElement(elt);
+    return addElement(elt, this);
   };
 
   /** VIDEO STUFF **/
 
+  function createMedia(pInst, type, src, callback) {
+    var elt = document.createElement(type);
+    if (typeof src === 'string') {
+      src = [src];
+    }
+    for (var i=0; i<src.length; i++) {
+      var source = document.createElement('source');
+      source.src = src[i];
+      elt.appendChild(source);
+    }
+    if (typeof callback !== 'undefined') {
+      elt.addEventListener('canplaythrough', function() {
+        callback();
+      });
+    }
+
+    var c = addElement(elt, pInst, true);
+    c.loadedmetadata = false;
+    // set width and height onload metadata
+    elt.addEventListener('loadedmetadata', function() {
+      c.width = elt.videoWidth;
+      c.height = elt.videoHeight;
+      c.loadedmetadata = true;
+    });
+    
+    return c;  
+  }
   /**
    * Creates an HTML5 &lt;video&gt; element in the DOM for simple playback
    * of audio/video. Shown by default, can be hidden with .hide()
@@ -249,53 +276,9 @@ var p5DOM = (function(){
    *                             further buffering of content
    * @return {Object/p5.Element} pointer to video p5.Element
    */
-
-  function createMedia(type, src, callback) {
-    var elt = document.createElement(type);
-    if (typeof src === 'string') {
-      src = [src];
-    }
-    for (var i=0; i<src.length; i++) {
-      var source = document.createElement('source');
-      source.src = src[i];
-      elt.appendChild(source);
-    }
-    if (typeof callback !== 'undefined') {
-      elt.addEventListener('canplaythrough', function() {
-        callback();
-      });
-    }
-
-    var c = addElement(elt, true);
-    c.loadedmetadata = false;
-    // set width and height onload metadata
-    elt.addEventListener('loadedmetadata', function() {
-      c.width = elt.videoWidth;
-      c.height = elt.videoHeight;
-      c.loadedmetadata = true;
-    });
-    
-    return c;  
-  }
-
   p5.prototype.createVideo = function(src, callback) {
-    return createMedia('video', src, callback);
+    return createMedia(this, 'video', src, callback);
   };
-
-  p5.prototype.video = function(v, x, y, w, h) {
-    var frame;
-    if (v.canvas){
-      frame = v.canvas;
-      w = w || frame.width;
-      h = h || frame.height;
-    } else {
-      frame = v.elt;
-      w = w || v.width;
-      h = h || v.height;
-    }
-    this._curElement.context.drawImage(frame, x, y, w, h);
-  };
-
 
   /** AUDIO STUFF **/
 
@@ -315,9 +298,8 @@ var p5DOM = (function(){
    *                             further buffering of content
    * @return {Object/p5.Element} pointer to audio p5.Element
    */
-
   p5.prototype.createAudio = function(src, callback) {
-    return createMedia('audio', src, callback);
+    return createMedia(this, 'audio', src, callback);
   };
 
 
@@ -341,7 +323,6 @@ var p5DOM = (function(){
    * @return {Object/p5.Element} capture video p5.Element
    */
   p5.prototype.createCapture = function(type) {
-    console.log(type)
     var useVideo, useAudio;
     if (!type) {
       useVideo = true;
@@ -361,7 +342,7 @@ var p5DOM = (function(){
     } else {
       throw 'getUserMedia not supported in this browser';
     }
-    return addElement(elt);
+    return addElement(elt, this);
   };
 
   /**
@@ -380,7 +361,7 @@ var p5DOM = (function(){
     if (typeof content !== 'undefined') {
       elt.innerHTML = content;
     }
-    return addElement(elt);
+    return addElement(elt, this);
   };
 
 
@@ -427,7 +408,7 @@ var p5DOM = (function(){
    *
    * @method child
    * @param  {String|Object} child the ID or node to add to the current element
-   */
+   */ 
   p5.Element.prototype.child = function(c) {
     if (typeof c === 'string') {
       c = document.getElementById(c);
@@ -592,7 +573,9 @@ var p5DOM = (function(){
     for (var ev in this._events) {
       this.elt.removeEventListener(ev, this._events[ev]);
     }
-    this.elt.parentNode.removeChild(this.elt);
+    if (this.elt.parentNode) {
+      this.elt.parentNode.removeChild(this.elt);
+    }
     delete(this);
   };
 

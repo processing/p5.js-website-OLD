@@ -43,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/05_Image/00_Load_&amp;_Display_Image.js');
+          examples.init('../examples_src/05_Image/00_Load_and_Display_Image.js');
       });
     </script>
   </body>

@@ -42,7 +42,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/00_Load_&amp;_Play_Sound.js');
+          examples.init('../examples_src/33_Sound/00_Load_and_Play_Sound.js');
       });
     </script>
   </body>
