@@ -1,3 +1,8 @@
+/*
+ * @name Simple Shapes
+ * @description This examples includes a circle, square, triangle, and a flower.
+ */
+
 function setup() {
 	createCanvas(480, 480);
 

@@ -1,4 +1,9 @@
-// We're going to store the temperature
+/*
+ * @name Weather
+ * @description This example grabs JSON weather data from openweathermap.org.
+ */
+
+ // We're going to store the temperature
 var temperature = 0;
 // We're going to store text about the weather
 var weather = "";

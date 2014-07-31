@@ -1,3 +1,7 @@
+/*
+ * @name Drawing
+ * @description A simple drawing program.
+ */
 
 var points = [];
 
@@ -11,6 +15,8 @@ function draw() {
   beginShape();
   for (var i = 0; i < points.length; i++) {
     vertex(points[i].x, points[i].y);
+    points[i].x += random(-1,1);
+    points[i].y += random(-1,1);
   }
   endShape();
 

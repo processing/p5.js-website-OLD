@@ -1,3 +1,7 @@
+/*
+ * @name Animation
+ * @description The circle moves.
+ */
 
 var x;
 var y;

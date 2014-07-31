@@ -1,4 +1,9 @@
-var particles = [];
+/*
+ * @name Particle System
+ * @description A basic particle system.
+ */
+
+ var particles = [];
 
 function setup() {
   createCanvas(480, 480);
