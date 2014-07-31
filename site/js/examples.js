@@ -6,7 +6,7 @@ var examples = {
     examples.editor = ace.edit('exampleEditor');
     //examples.editor.setTheme('ace/theme/monokai'); 
     examples.editor.getSession().setMode('ace/mode/javascript');
-    examples.editor.getSession().setTabSize(2);examples.editor.getSession().setUseWorker(false); 
+    examples.editor.getSession().setTabSize(2); 
 
     examples.dims = [];
 
