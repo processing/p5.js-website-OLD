@@ -1,12 +1,14 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
+/*
+ * @name Particle System
+ * @description This is a basic Particle System.
+ * from (from <a href="http://natureofcode.com">natureofcode.com</a>
+ */
+
 
 var ps;
 
 function setup() {
   createCanvas(640, 360);
-  setFrameRate(60);
   ps = new ParticleSystem(createVector(width/2, 50));
 }
 
@@ -15,12 +17,6 @@ function draw() {
   ps.addParticle();
   ps.run();
 }
-
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// Simple Particle System
 
 // A simple Particle class
 
@@ -60,9 +56,6 @@ Particle.prototype.isDead = function(){
   }
 };
 
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
 
 var ParticleSystem = function(position) {
   this.origin = position.get();

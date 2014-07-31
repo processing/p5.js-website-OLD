@@ -1,107 +1,95 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// A basic implementation of John Conway's Game of Life CA
-// how could this be improved to use object oriented programming?
-// think of it as similar to our particle system, with a "cell" class
-// to describe each individual cell and a "cellular automata" class
-// to describe a collection of cells
+/*
+ * @name Game of Life
+ * @description A basic implementation of John Conway's Game of Life CA
+ * from (from <a href="http://natureofcode.com">natureofcode.com</a>
+ */
 
 var gol;
+var w;
+var columns;
+var rows;
+var board;
+var next;
 
 function setup() {
-    createCanvas(640, 360);
-    gol = new GOL();
+  createCanvas(640, 360);
+  w = 16;
+  columns = floor(width/w);
+  rows = floor(height/w);
+  board = new Array(columns);
+  for (var i = 0; i < columns; i++) {
+    board[i] = new Array(rows);
+  } 
+  // Going to use multiple 2D arrays and swap them
+  next = new Array(columns);
+  for (i = 0; i < columns; i++) {
+    next[i] = new Array(rows);
+  }
+  init();
 }
 
 function draw() {
-    background(255);
-    gol.generate();
-    gol.display();
-};
+  background(255);
+  generate();
+  for ( var i = 0; i < columns;i++) {
+    for ( var j = 0; j < rows;j++) {
+      if ((board[i][j] == 1)) fill(0);
+      else fill(255); 
+      stroke(0);
+      rect(i*w, j*w, w, w);
+    }
+  }
+
+}
 
 // reset board when mouse is pressed
 function mousePressed() {
-    gol.init();
-};
-
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-function GOL() {
-
-  this.w = 8;
-  this.columns = width/this.w;
-  this.rows = height/this.w;
-  this.board = new Array(this.columns);
-  for (var i = 0; i < this.columns; i++) {
-    this.board[i] = new Array(this.rows);
-  } 
-  // Going to use multiple 2D arrays and swap them
-  this.next = new Array(this.columns);
-  for (var i = 0; i < this.columns; i++) {
-    this.next[i] = new Array(this.rows);
-  }
-  this.init();
+  init();
 }
 
-GOL.prototype.init = function() {
-  for (var i =0;i < this.columns;i++) {
-    for (var j =0;j < this.rows;j++) {
+function init() {
+  for (var i =0;i < columns;i++) {
+    for (var j =0;j < rows;j++) {
       // Lining the edges with 0s
-      if (i == 0 || j == 0 || i == this.columns-1 || j == this.rows-1) this.board[i][j] = 0;
+      if (i == 0 || j == 0 || i == columns-1 || j == rows-1) board[i][j] = 0;
       // Filling the rest randomly
-      else this.board[i][j] = Math.floor(random(2));
-      this.next[i][j] = 0;
+      else board[i][j] = Math.floor(random(2));
+      next[i][j] = 0;
     }
   }
 }
 
 // The process of creating the new generation
-GOL.prototype.generate = function() {
+function generate() {
 
 
   // Loop through every spot in our 2D array and check spots neighbors
-  for (var x = 1; x < this.columns-1; x++) {
-    for (var y = 1; y < this.rows-1; y++) {
+  for (var x = 1; x < columns-1; x++) {
+    for (var y = 1; y < rows-1; y++) {
       // Add up all the states in a 3x3 surrounding grid
       var neighbors = 0;
 
       for (var i = -1; i <= 1; i++) {
         for (var j = -1; j <= 1; j++) {
-          neighbors += this.board[x+i][y+j];
+          neighbors += board[x+i][y+j];
         }
       }
 
       // A little trick to subtract the current cell's state since
       // we added it in the above loop
-      neighbors -= this.board[x][y];
+      neighbors -= board[x][y];
 
       // Rules of Life
-      if      ((this.board[x][y] == 1) && (neighbors <  2)) this.next[x][y] = 0;           // Loneliness
-      else if ((this.board[x][y] == 1) && (neighbors >  3)) this.next[x][y] = 0;           // Overpopulation
-      else if ((this.board[x][y] == 0) && (neighbors == 3)) this.next[x][y] = 1;           // Reproduction
-      else                                            this.next[x][y] = this.board[x][y];  // Stasis
+      if      ((board[x][y] == 1) && (neighbors <  2)) next[x][y] = 0;           // Loneliness
+      else if ((board[x][y] == 1) && (neighbors >  3)) next[x][y] = 0;           // Overpopulation
+      else if ((board[x][y] == 0) && (neighbors == 3)) next[x][y] = 1;           // Reproduction
+      else                                            next[x][y] = board[x][y];  // Stasis
     }
   }
 
   // Swap!
-  var temp = this.board;
-  this.board = this.next;
-  this.next = temp;
-}
-
-// This is the easy part, just draw the cells, fill 255 for '1', fill 0 for '0'
-GOL.prototype.display = function() {
-  for ( var i = 0; i < this.columns;i++) {
-    for ( var j = 0; j < this.rows;j++) {
-      if ((this.board[i][j] == 1)) fill(0);
-      else fill(255); 
-      stroke(0);
-      rect(i*this.w, j*this.w, this.w, this.w);
-    }
-  }
+  var temp = board;
+  board = next;
+  next = temp;
 }
 

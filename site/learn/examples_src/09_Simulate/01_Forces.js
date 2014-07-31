@@ -16,7 +16,7 @@ var liquid;
 
 function setup() {
   // Must be before createGraphics
-  // var text = createHTML("click mouse to reset");
+  var text = createP("click mouse to reset");
 
   createCanvas(640, 360);
   reset();
@@ -24,7 +24,7 @@ function setup() {
   liquid = new Liquid(0, height/2, width, height/2, 0.1);
 
   // Here we call methods of each element to set the position and id, try changing these values.
-  // text.position(10, 365);
+  text.position(10, 365);
 
 }
 
