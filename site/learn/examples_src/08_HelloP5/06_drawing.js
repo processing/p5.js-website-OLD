@@ -6,11 +6,11 @@
 var points = [];
 
 function setup() {
-  createCanvas(480, 480);
+  createCanvas(780, 440);
 }
 
 function draw() {
-  background(255);
+  background(200);
   noFill();
   beginShape();
   for (var i = 0; i < points.length; i++) {

@@ -7,13 +7,13 @@ var x;
 var y;
 
 function setup() {
-  createCanvas(480, 480);
+  createCanvas(780, 440);
   x = 240;
   y = 240;
 }
 
 function draw() {
-  background(255);
+  background(200);
   
   stroke(50);
   fill(100);

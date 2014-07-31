@@ -6,12 +6,12 @@
 var col;
 
 function setup() {
-  createCanvas(480, 480);
+  createCanvas(780, 440);
   col = color(random(255), random(255), random(255));
 }
 
 function draw() {
-  background(255);
+  background(200);
   stroke(51);
   fill(col);
   ellipse(240,240,200,200);

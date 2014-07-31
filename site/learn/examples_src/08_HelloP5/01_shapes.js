@@ -4,7 +4,8 @@
  */
 
 function setup() {
-	createCanvas(480, 480);
+  createCanvas(780, 440);
+  background(200);
 
 	fill(204, 101, 192, 127);
 	stroke(127, 63, 120);
@@ -13,7 +14,7 @@ function setup() {
 	ellipse(240, 240, 80, 80);
 	triangle(300, 100, 320, 100, 310, 80);
 
-	translate(280, 400);
+	translate(580, 200);
 	for (var i = 0; i < 10; i ++) {
 	  ellipse(0, 30, 20, 80);
 	  rotate(PI/5);
