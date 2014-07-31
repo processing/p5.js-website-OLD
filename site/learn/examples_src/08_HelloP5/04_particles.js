@@ -2,8 +2,7 @@
  * @name Particle System
  * @description A basic particle system.
  */
-
- var particles = [];
+var particles = [];
 
 function setup() {
   createCanvas(780, 440);

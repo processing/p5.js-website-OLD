@@ -2,7 +2,6 @@
  * @name Drawing
  * @description A simple drawing program.
  */
-
 var points = [];
 
 function setup() {

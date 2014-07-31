@@ -2,7 +2,6 @@
  * @name Interactivity
  * @description The circle changes color when you click on it.
  */
-
 var col;
 
 function setup() {
