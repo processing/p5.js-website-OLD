@@ -28,6 +28,10 @@ var examples = {
           exampleCode += ' new p5();';
         }
 
+        var re = /createCanvas.*,(.*)\)/g;
+        var arr = exampleCode.split(re);
+        $('#exampleFrame').height(arr[1]+'px');
+
         var userScript = $('#exampleFrame')[0].contentWindow.document.createElement('script');
         userScript.type = 'text/javascript';
         userScript.text = exampleCode;
