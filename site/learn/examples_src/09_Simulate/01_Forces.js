@@ -45,7 +45,7 @@ function draw() {
     }
 
     // Gravity is scaled by mass here!
-    var gravity = new PVector(0, 0.1*movers[i].mass);
+    var gravity = createVector(0, 0.1*movers[i].mass);
     // Apply gravity
     movers[i].applyForce(gravity);
    
@@ -110,9 +110,9 @@ Liquid.prototype.display = function() {
 
 function Mover(m,x,y) {
   this.mass = m;
-  this.position = new PVector(x,y);
-  this.velocity = new PVector(0,0);
-  this.acceleration = new PVector(0,0);
+  this.position = createVector(x,y);
+  this.velocity = createVector(0,0);
+  this.acceleration = createVector(0,0);
 }
 
 // Newton's 2nd law: F = M * A
