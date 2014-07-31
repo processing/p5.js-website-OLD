@@ -56,7 +56,7 @@
       <div class="spacer"></div>
 
 
-      <h3>Using a library</h3>
+      <a name="using-a-library" class="anchor"><h3>Using a library</h3></a>
 
       <p>A p5.js library can be any JavaScript code that extends or adds to the p5.js core functionality. 
       There are two categories of libraries. Core libraries (<a href="<?php echo getRoot(); ?>reference/#/libraries/dom">p5.dom</a> 

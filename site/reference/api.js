@@ -144,12 +144,12 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "p5.dom",
             "name": "p5.dom",
-            "description": "This is the p5.dom library."
+            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact \nwith other HTML5 objects, including text, hyperlink, image, input, video, \naudio, and webcam.</p>\n<p>There are a set of creation methods, and some other stuff... @TODO.</p>\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>"
         },
         {
             "displayName": "p5.sound",
             "name": "p5.sound",
-            "description": "<p>Create a SoundFile object with a path to a file.</p>\n\n<p>The SoundFile may not be available immediately because\nit loads the file information asynchronously.</p>\n\n<p>To do something with the sound as soon as it loads\npass the name of a function as the second parameter.</p>\n\n<p>Only one file path is required. However, audio file formats \n(i.e. mp3, ogg, wav and m4a/aac) are not supported by all\nweb browsers. If you want to ensure compatability, instead of a single\nfile path, you may include an Array of filepaths, and the browser will\nchoose a format that works.</p>"
+            "description": "This is the p5.sound library. Description goes here."
         },
         {
             "displayName": "Pixels",

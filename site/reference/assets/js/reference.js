@@ -7129,7 +7129,7 @@ define('menuView',[
 
 });
 
-define('text!tpl/library.html',[],function () { return '<h3><%= module.name %></h3>\n\n<p><%= module.description %></p>\n\n<div class="reference-group clearfix">  \n\n<% _.each(groups, function(group){ %>\n  <dl>\n  <% if (group.name !== module.name) { %>\n    <dt><a href="<%=group.hash%>" <% if (group.module !== module.name) { %>class="core"<% } %>><h4><%=group.name%>()</h4></a></dt>\n  <% } %>\n  <p>\n  <% _.each(group.items, function(item) { %>\n    <dd><a href="<%=item.hash%>" <% if (item.module !== module.name) { %>class="core"<% } %>><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></dd>\n  <% }); %>\n  </p>\n  </dl>\n<% }); %>\n</div>';});
+define('text!tpl/library.html',[],function () { return '<h3><%= module.name %> library</h3>\n\n<p><%= module.description %></p>\n\n<div id="library-page" class="reference-group clearfix">  \n\n<% var t = 0; col = 0; %>\n\n<% _.each(groups, function(group){ %>\n  <% if (t == 0) { %> \n    <div class="column col_<%=col%>">\n  <% } %>\n  <% if (group.name !== module.name && group.name !== \'p5\') { %>\n    <a href="<%=group.hash%>" <% if (group.module !== module.name) { %>class="core"<% } %>><h4 class="group-name <% if (t == 0) { %> first<%}%>"><%=group.name%>()</h4></a>\n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <a href="<%=item.hash%>" <% if (item.module !== module.name) { %>class="core"<% } %>><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a><br>\n    <% t++; %>\n  <% }); %>\n  <% if (t >= totalItems/4) { col++; t = 0; %>\n    </div>\n  <% } %>\n<% }); %>\n</div>';});
 
 define('libraryView',[
   'underscore',
@@ -7183,12 +7183,13 @@ define('libraryView',[
         });
 
         // Sort groups by name A-Z
-        _.sortBy(self.groups, this.sortByName);
+        self.groups = _.sortBy(self.groups, this.sortByName);
 
         // Put the <li> items html into the list <ul>
         var libraryHtml = self.libraryTpl({
           'title': self.capitalizeFirst(listCollection),
           'module': m.module,
+          'totalItems': m.items.length,
           'groups': self.groups
         });
 
@@ -7232,7 +7233,8 @@ define('libraryView',[
     },
 
     sortByName: function (a, b) {
-      return a.name > b.name ? 1 : -1;
+      if (a.name === 'p5') return -1;
+      else return 0;
     }
 
   });
@@ -7438,7 +7440,7 @@ define('router',[
         // Search for a class item
       } else if (className && itemName) {
         for (var i = 0; i < itemsCount; i++) {
-          if ((className == 'p5' || items[i].class.toLowerCase() === className) && 
+          if (items[i].class.toLowerCase() === className && 
             items[i].name.toLowerCase() === itemName) {
             found = items[i];
             break;
@@ -7600,14 +7602,14 @@ require([
           App.sound.items.push(el);
         }
         else if (el.module === "p5.dom" || el.module === 'DOM') {
-          if (el.class === 'p5') {
-            el.class = 'p5.dom';
+          if (el.class === 'p5.dom') {
+            el.class = 'p5';
           }
           App.dom.items.push(el);
         }
       }
     });
-
+    
     _.each(App.classes, function(c, idx) {
       c.items = _.filter(App.allItems, function(it){ return it.class === c.name; });
     });
