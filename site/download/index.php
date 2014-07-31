@@ -12,7 +12,7 @@
         <h3>Complete Library</h3>
 
         <div class="link_group">
-        <a href="https://github.com/lmccart/p5.js/releases/download/<?php echo $version; ?>/p5.js.zip">
+        <a href="https://github.com/lmccart/p5.js/releases/download/<?php echo $version; ?>/p5.zip">
         <div class="download_box">
         <h4>p5.js complete</h4>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

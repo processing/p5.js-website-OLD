@@ -10,7 +10,7 @@ var maxDistance;
 var spacer;
 
 function setup() {
-  createCanvas(780, 395);
+  createCanvas(720, 360);
   maxDistance = dist(width/2, height/2, width, height);
   for (var x = 0; x < width; x++) {
     distances[x] = []; // create nested array

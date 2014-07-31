@@ -1,12 +1,12 @@
 /*
- * @name Load & Display Image
+ * @name Load and Display Image
  * @description Images can be loaded and displayed to the screen at their 
  * actual size or any other size.
  */
 var img;  // Declare variable 'img'.
 
 function setup() {
-  createCanvas(780, 440);
+  createCanvas(720, 400);
   img = loadImage("assets/moonwalk.jpg");  // Load the image 
 }
 

@@ -7,7 +7,7 @@ var count;
 var mods = [];
 
 function setup() {
-  createCanvas(780, 395);
+  createCanvas(720, 360);
   noStroke();
   var wideCount = width / unit;
   var highCount = height / unit;

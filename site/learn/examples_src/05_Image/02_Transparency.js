@@ -9,7 +9,7 @@ var offset = 0;
 var easing = 0.05;
 
 function setup() {
-  createCanvas(780, 440);
+  createCanvas(720, 400);
   img = loadImage("assets/moonwalk.jpg");  // Load an image into the program 
 }
 

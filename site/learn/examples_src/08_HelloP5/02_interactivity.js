@@ -5,7 +5,7 @@
 var col;
 
 function setup() {
-  createCanvas(780, 440);
+  createCanvas(720, 400);
   col = color(random(255), random(255), random(255));
   createP("test");
 }

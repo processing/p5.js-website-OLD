@@ -7624,7 +7624,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 46,
+            "line": 47,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -9651,7 +9651,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:46"
+            "line": " src/app.js:47"
         },
         {
             "message": "Missing item type\nHelpers for create methods.",

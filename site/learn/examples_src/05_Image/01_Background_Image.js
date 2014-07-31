@@ -12,7 +12,7 @@ function setup() {
   // into the size() method. In this program, the size of the image
   // is 710x400 pixels.
   bg = loadImage("assets/moonwalk.jpg");
-  createCanvas(780, 440);
+  createCanvas(720, 400);
 }
 
 function draw() {
