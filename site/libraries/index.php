@@ -25,7 +25,7 @@
       <div class="right-column">
         <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
         <div class="label">
-        <img src="../img/learn/sound.jpg"></a>
+        <img src="../img/libraries/sound.jpg"></a>
         <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound"><h4>p5.sound</h4></a>
         </div>
         <p>p5.sound extends p5 with <a href="http://www.w3.org/TR/webaudio/">Web Audio</a> functionality including audio input, playback, analysis and synthesis.</p> 
