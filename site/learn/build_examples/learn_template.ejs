@@ -17,7 +17,7 @@
         <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries"><h4>Including other libraries</h4></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries"><h4>Adding libraries</h4></a>
         </div>
         <p>Finding, adding, and integrating other JS libraries.</p> 
       </div>
