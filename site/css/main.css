@@ -75,8 +75,6 @@
 
 .download_box h4 {
     font-size: 1em;
-    -webkit-text-stroke-width: 0.03em;
-    -webkit-text-stroke-color: #333;
     margin: 0;
     padding-bottom: 0.3em;
     border-bottom: 0.09em dashed; 
