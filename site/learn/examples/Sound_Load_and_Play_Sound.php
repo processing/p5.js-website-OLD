@@ -9,7 +9,7 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Load &amp; Play Sound</h2>
+          <h2>Load and Play Sound</h2>
           <p>Load sound during preload(). Play a sound when key is pressed.
  </p>
 
@@ -42,7 +42,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/00_Load_&amp;_Play_Sound.js');
+          examples.init('../examples_src/33_Sound/00_Load_and_Play_Sound.js');
       });
     </script>
   </body>

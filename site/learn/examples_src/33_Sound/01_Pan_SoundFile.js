@@ -3,7 +3,6 @@
  * @description Ball position follows mouse and correlates to panning of sound.
  * Click mouse to play
  */
-
 var ball = {};
 var soundFile;
 var panning;
@@ -14,7 +13,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(780, 100);
+  createCanvas(720, 100);
 }
 
 function draw() {

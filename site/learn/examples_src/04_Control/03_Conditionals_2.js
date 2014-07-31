@@ -7,7 +7,7 @@
  */
 function setup() {
 
-  createCanvas(780, 395); 
+  createCanvas(720, 360); 
   background(0);
 
   for(var i = 2; i < width-2; i += 4) {

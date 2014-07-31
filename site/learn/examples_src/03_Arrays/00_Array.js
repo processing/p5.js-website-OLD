@@ -12,7 +12,7 @@ var coswave = [];
 
 function setup() {
 
-  createCanvas(780, 395);
+  createCanvas(720, 360);
   for (var i = 0; i < width; i++) {
     var amount = map(i, 0, width, 0, PI);
     coswave[i] = abs(cos(amount));

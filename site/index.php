@@ -9,7 +9,7 @@
   <div class="column-span">
     <section id="home">
 
-      <ul id="menu" class="top_menu">
+      <ul id="menu" class="top_menu" >
         <li><a href="<?php echo getRoot(); ?>download/">Download</a></li>
         <object type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
         <li><a href="<?php echo getRoot(); ?>get-started/">Start</a></li>

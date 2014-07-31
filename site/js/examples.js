@@ -3,43 +3,45 @@ var examples = {
 
     // Editor
     
-    examples.editor = ace.edit("exampleEditor");
-    //examples.editor.setTheme("ace/theme/monokai"); 
-    examples.editor.getSession().setMode("ace/mode/javascript");
+    examples.editor = ace.edit('exampleEditor');
+    //examples.editor.setTheme('ace/theme/monokai'); 
+    examples.editor.getSession().setMode('ace/mode/javascript');
     examples.editor.getSession().setTabSize(2);
 
     // Button
 
-    $("#runButton").click( function() { 
+    $('#runButton').click( function() { 
     examples.runExample();        
     });
-    $("#resetButton").click( function() { 
+    $('#resetButton').click( function() { 
     examples.resetExample();        
     });
 
     // Example Frame
     
-    $("#exampleFrame").load(function() {
+    $('#exampleFrame').load(function() {
     var exampleCode = examples.editor.getSession().getValue();
 
       try {       
 
-        var p5Script = $("#exampleFrame")[0].contentWindow.document.createElement("script");
-        p5Script.type = "text/javascript";
-        p5Script.src = "../../js/p5.js";
-        p5Script.async = false;
-        $("#exampleFrame")[0].contentWindow.document.body.appendChild(p5Script);
+        if (exampleCode.indexOf('new p5') === -1) {
+          exampleCode += ' new p5();';
+        }
 
-        var userScript = $("#exampleFrame")[0].contentWindow.document.createElement("script");
-        userScript.type = "text/javascript";
+        var re = /createCanvas.*,(.*)\)/g;
+        var arr = exampleCode.split(re);
+        $('#exampleFrame').height(arr[1]+'px');
+
+        var userScript = $('#exampleFrame')[0].contentWindow.document.createElement('script');
+        userScript.type = 'text/javascript';
         userScript.text = exampleCode;
         userScript.async = false;
-        $("#exampleFrame")[0].contentWindow.document.body.appendChild(userScript);
+        $('#exampleFrame')[0].contentWindow.document.body.appendChild(userScript);
 
         //resize height of editor
         var rows = examples.editor.getSession().$rowLengthCache.length;
         var lineH = examples.editor.renderer.lineHeight;
-        $("#exampleEditor").height(rows*lineH+'px');
+        $('#exampleEditor').height(rows*lineH+'px');
       } catch (e) {
         console.log(e.message);
       }
@@ -52,7 +54,7 @@ var examples = {
       dataType: 'text'
     })
     .done(function (data) {
-      $("#exampleSelector").hide();
+      $('#exampleSelector').hide();
       // strip description 
       var ind = data.indexOf('*/');
       data = data.substring(ind+3);
@@ -63,7 +65,7 @@ var examples = {
   showExample: function() {         
     examples.editor.getSession().setValue(examples.resetData); 
     examples.runExample();
-    $("#exampleDisplay").show();
+    $('#exampleDisplay').show();
   },
   runExample: function() {
     $('#exampleFrame').attr('src', $('#exampleFrame').attr('src'));

@@ -8,7 +8,7 @@ var temperature = 0;
 var weather = "";
 
 function setup() {
-  createCanvas(780, 440);
+  createCanvas(720, 400);
 
   // The URL for the JSON data (replace "imperial" with "metric" for celsius)
   var url = "http://api.openweathermap.org/data/2.5/weather?q=New%20York&units=imperial";

@@ -6,7 +6,7 @@ var x;
 var y;
 
 function setup() {
-  createCanvas(780, 440);
+  createCanvas(720, 400);
   x = 240;
   y = 240;
 }

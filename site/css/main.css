@@ -47,6 +47,13 @@
     display: inline;
 }
 
+#separator-design-element {
+    width: 0.35em;
+    margin: 0 0.09em 0.25em 0.09em;
+}
+
+
+
 /* 
   //////////////////////////////////////////////////
     DOWNLOAD PAGE 
@@ -181,15 +188,15 @@ section#reference h2 {
 }
 
 .edit_button {
-    left: 27.5em;
+    left: 24.5em;
 }
 
 .reset_button {
-    left: 30.5em !important;
+    left: 27.5em;
 }
 
 .example_container {
-    width: 39em;
+    width: 36em;
     border-top: 0.09em dashed; 
     border-top-color: #333;
     padding-top: 0.5em;
@@ -199,7 +206,7 @@ section#reference h2 {
 
 .column_0, .column_1, .column_2 {
     float: left;
-    width: 12em;
+    width: 11.333em;
 }
 
 .column_0, .column_1 {
@@ -459,7 +466,7 @@ textarea {
 }
 
 #exampleDisplay, #exampleFrame, #exampleEditor {
-    width: 39em;
+    width: 36em;
     border: none;
 }
 
@@ -469,6 +476,21 @@ textarea {
     float: right;
     margin: 0.5em 0 0 0.5em;
     background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+#exampleDisplay .edit_button {
+    left: 29.55em;
+}
+
+#exampleDisplay .reset_button {
+    left: 32.55em;
+}
+
+#exampleDisplay .edit_space {
+    position: relative;
 }
 
 #exampleFrame {
@@ -477,10 +499,97 @@ textarea {
 
 #exampleEditor {
     height: 500em;
+    width: 720px;
     overflow: hidden;
-    margin-top: 1em;
+    margin-top: 0.5em;
+    color: #222;
+    font-family: 
+      inconsolatamedium, 
+      Consolas, 
+      Monaco, 
+      'Andale Mono', 
+      monospace;
+    font-size: 1em !important;
+    background-color: #FFF;
+    line-height: 1em;
 }
 
+.ace_numeric {
+    color: #DC3787 !important;
+}
+
+.ace_type {
+    color: #704F21 !important;
+}
+
+.ace_function, .ace_keyword {
+    color: #00A1D3 !important;
+}
+
+.ace_support {
+    color: #71A845 !important;
+}
+
+.ace_operator {
+    color: #333 !important;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  position:relative;
+  padding: 0.5em 1em;
+  margin: 0.5em 0 0 -0.5em;
+  border-left: 0.5em solid #AFAFAF; /* coy og blue 10px solid  358ccb  */
+  background-color: #fff; /* coy og white #fdfdfd  */
+  /* lines */
+  background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.06) 50%);
+  background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.06) 50%);
+  background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.06) 50%);
+  background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.06) 50%);
+  background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.06) 50%);
+  background-size: 2.9em 2.9em; /* adjusts height of alternating lines */
+  background-origin:content-box;
+  /* set overflow to just let the code roll  */
+  overflow:auto;
+  /* or uncomment this to let an inner vertical scroll be triggered, 
+    but be generous as to when  
+  max-height:36em; */
+}
+
+
+.ace-gutter {
+    color: #333 !important;
+}
+
+.ace-gutter-layer {
+    color: #333 !important;
+}
+
+.ace_folding-enabled {
+    width: 10px !important;
+    color: #333 !important;
+
+}
+.ace_gutter-cell {
+  background-image: none !important;
+  padding-left: 10px !important;
+  overflow: hidden !important;
+  background-color: #AFAFAF !important;
+}
+
+.ace_info {
+  background-color: #D7E5F5 !important;
+}
+
+.ace_warning {
+  background-color: #FFD700 !important;
+  color: #ffffff !important;
+}
+
+.ace_error {
+  background-color: #FF6347 !important;
+  color: #ffffff !important;
+}
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
@@ -989,7 +1098,8 @@ footer {
 
     #container {
         margin:2em auto;
-        width:52em;
+        width:49em;
+        padding:0;
         height: auto;
         min-height: 100%;
         background-color: rgba(51,51,51,0.0);
@@ -1000,7 +1110,7 @@ footer {
         margin:0 0 0 8.5em; /* the 7.5em  */
     }
     section {
-        width:39em; /* 36-38 em for about 10-14 words at this size   */
+        width:36em; /* 36-38 em for about 10-14 words at this size   */
     }
 
     small, .small, footer, #family {
@@ -1010,7 +1120,7 @@ footer {
     footer {
         clear:both;
         /*margin: 4em 0 2em -.75em;*/
-        width:52em;
+        width:48em;
     }
 
     #menu {
@@ -1052,12 +1162,6 @@ footer {
     }
 
 /* constants for the asterisk */
-
-    #separator-design-element {
-        width: 0.4em;
-        margin: 0 0.34em 0.25em 0.34em;
-    }
-
 
     #asterisk-design-element {
         position:fixed;

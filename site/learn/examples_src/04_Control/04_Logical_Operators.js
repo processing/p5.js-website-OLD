@@ -8,7 +8,7 @@ var test = false;
 
 function setup() {
 
-  createCanvas(780, 395); 
+  createCanvas(720, 360); 
   background(126);
 
   for (var i = 5; i <= height; i += 5) {

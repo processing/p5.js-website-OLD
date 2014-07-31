@@ -17,7 +17,7 @@
         <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries"><h4>Including other libraries</h4></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries"><h4>Adding libraries</h4></a>
         </div>
         <p>Finding, adding, and integrating other JS libraries.</p> 
       </div>
@@ -63,10 +63,10 @@
               <a href="examples/Structure_Coordinates.php">Coordinates</a><br>
               
             
-              <a href="examples/Structure_Width_and_Height.php">Width and Height</a><br>
+              <a href="examples/Structure_Width_and_Height.php">Width/Height</a><br>
               
             
-              <a href="examples/Structure_Setup_and_Draw.php">Setup and Draw</a><br>
+              <a href="examples/Structure_Setup_and_Draw.php">Setup/Draw</a><br>
               
             
               <a href="examples/Structure_No_Loop.php">No Loop</a><br>
@@ -81,7 +81,7 @@
             <p>
             <strong>Form</strong><br>
             
-              <a href="examples/Form_Points_and_Lines.php">Points and Lines</a><br>
+              <a href="examples/Form_Points_and_Lines.php">Points/Lines</a><br>
               
             
               <a href="examples/Form_Shape_Primitives.php">Shape Primitives</a><br>
@@ -111,7 +111,7 @@
               <a href="examples/Data_Variables.php">Variables</a><br>
               
             
-              <a href="examples/Data_True_and_False.php">True and False</a><br>
+              <a href="examples/Data_True_and_False.php">True/False</a><br>
               
             
               <a href="examples/Data_Variable_Scope.php">Variable Scope</a><br>
@@ -135,7 +135,7 @@
             </p>
             
               </div>
-              <div class="column_0">
+              <div class="column_1">
             
           
             <p>
@@ -162,7 +162,7 @@
             <p>
             <strong>Image</strong><br>
             
-              <a href="examples/Image_Load_&amp;_Display_Image.php">Load &amp; Display Image</a><br>
+              <a href="examples/Image_Load_and_Display_Image.php">Load/Display Image</a><br>
               
             
               <a href="examples/Image_Background_Image.php">Background Image</a><br>
@@ -213,7 +213,7 @@
             </p>
             
               </div>
-              <div class="column_1">
+              <div class="column_2">
             
           
             <p>
@@ -243,7 +243,7 @@
             <p>
             <strong>Sound</strong><br>
             
-              <a href="examples/Sound_Load_&amp;_Play_Sound.php">Load &amp; Play Sound</a><br>
+              <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>
               
             
               <a href="examples/Sound_Pan_Sound.php">Pan Sound</a><br>
