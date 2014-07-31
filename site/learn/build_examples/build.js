@@ -65,7 +65,7 @@ async.forEachSeries(inputFolders, function(folder, cb0) {
 
           var code = data.substring(endDesc+2);
 
-          var content = example_template({'name':name, 'desc':desc, 'js':code});
+          var content = example_template({'name':name, 'desc':desc, 'js':code, 'file':inputRoot+folder+'/'+file});
           var outputFile = outputRoot+folderName+'_'+name.replace(spaceReg, '_')+'.php';
           console.log(outputFile);
 

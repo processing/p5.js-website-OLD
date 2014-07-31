@@ -10,49 +10,21 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Array 2D</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var distances = [];
-var maxDistance;
-var spacer;
-
-function setup() {
-  createCanvas(780, 395);
-  maxDistance = dist(width/2, height/2, width, height);
-  for (var x = 0; x &lt; width; x++) {
-    distances[x] = []; // create nested array
-    for (var y = 0; y &lt; height; y++) {
-      var distance = dist(width/2, height/2, x, y);
-      distances[x][y] = distance/maxDistance * 255;
-    }
-  }
-  spacer = 10;
-  noLoop();  // Run once and stop
-}
-
-function draw() {
-  background(0);
-  // This embedded loop skips over values in the arrays based on
-  // the spacer variable, so there are more values in the array
-  // than are drawn here. Change the value of the spacer variable
-  // to change the density of the points
-  for (var x = 0; x &lt; width; x += spacer) {
-    for (var y = 0; y &lt; height; y += spacer) {
-      stroke(distances[x][y]);
-      point(x + spacer/2, y + spacer/2);
-    }
-  }
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>Demonstrates the syntax for creating a two-dimensional (2D)
  array. Values in a 2D array are accessed through two index values.  
  2D arrays are useful for storing images. In this example, each dot 
  is colored in relation to its distance from the center of the image. 
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -67,7 +39,14 @@ function draw() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/03_Arrays/01_Array_2d.js');
+      });
+    </script>
   </body>
 </html>

@@ -10,53 +10,18 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Iteration</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var y;
-var num = 14;
-
-function setup() {
-
-  createCanvas(780, 395);
-  background(102);
-  noStroke();
-     
-  // Draw white bars 
-  fill(255);
-  y = 60;
-  for(var i = 0; i &lt; num/3; i++) {
-    rect(50, y, 475, 10);
-    y+=20;
-  }
-
-  // Gray bars
-  fill(51);
-  y = 40;
-  for(var i = 0; i &lt; num; i++) {
-    rect(405, y, 30, 10);
-    y += 20;
-  }
-  y = 50;
-  for(var i = 0; i &lt; num; i++) {
-    rect(425, y, 30, 10);
-    y += 20;
-  }
-    
-  // Thin lines
-  y = 45;
-  fill(0);
-  for(var i = 0; i &lt; num-1; i++) {
-    rect(120, y, 40, 1);
-    y+= 20;
-  }
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>Iteration with a &quot;for&quot; structure to construct repetitive forms.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -71,7 +36,14 @@ function setup() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/04_Control/00_Iteration.js');
+      });
+    </script>
   </body>
 </html>

@@ -10,48 +10,22 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>True and False</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-function setup() {
-
-  createCanvas(780, 440);
-  background(0);
-  stroke(255);
-
-  var b = false;
-  var d = 20;
-  var middle = width/2;;
-
-  for (var i = d; i &lt;= width; i += d) {
-    
-    if (i &lt; middle) {
-      b = true;
-    } else {
-      b = false;
-    }
-    
-    if (b == true) {
-      // Vertical line
-      line(i, d, i, height-d);
-    }
-    
-    if (b == false) {
-      // Horizontal line
-      line(middle, i - middle + d, width-d, i - middle + d);
-    }
-  }
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>A Boolean variable has only two possible values: true or false. 
  It is common to use Booleans with control statements to determine the flow 
  of a program. In this example, when the boolean value &quot;x&quot; is true, vertical 
  black lines are drawn and when the boolean value &quot;x&quot; is false, horizontal 
  gray lines are drawn.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -66,7 +40,14 @@ function setup() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/02_Data/01_True_and_False.js');
+      });
+    </script>
   </body>
 </html>

@@ -10,56 +10,6 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Variable Scope</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var a = 80;  // Create a global variable &quot;a&quot;
-
-function setup() {
-  createCanvas(780, 440);
-  background(0);
-  stroke(255);
-  noLoop();
-}
-
-function draw() {
-  // Draw a line using the global variable &quot;a&quot;
-  line(a, 0, a, height);
-  
-  // Create a new variable &quot;a&quot; local to the for() statement 
-  for (var a = 120; a &lt; 200; a += 3) {
-    line(a, 0, a, height);
-  }
-  
-  // Create a new variable &quot;a&quot; local to the draw() function
-  var a = 300;
-  // Draw a line using the new local variable &quot;a&quot;
-  line(a, 0, a, height);  
-  
-  // Make a call to the custom function drawAnotherLine()
-  drawAnotherLine();
-  
-  // Make a call to the custom function setYetAnotherLine()
-  drawYetAnotherLine();
-}
-
-function drawAnotherLine() {
-  // Create a new variable &quot;a&quot; local to this method
-  var a = 320;
-  // Draw a line using the local variable &quot;a&quot;
-  line(a, 0, a, height);
-}
-
-function drawYetAnotherLine() {
-  // Because no new local variable &quot;a&quot; is set, 
-  // this lines draws using the original global
-  // variable &quot;a&quot; which is set to the value 20.
-  line(a+3, 0, a+3, height);
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>Variables have a global or local &quot;scope&quot;. For example, 
  variables declared within either the setup() or draw() functions may be 
  only used in these functions. Global variables, variables declared outside 
@@ -69,6 +19,16 @@ function drawYetAnotherLine() {
  scope. Variables are localized within each block, the space between a { 
  and }.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -83,7 +43,14 @@ function drawYetAnotherLine() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/02_Data/03_Variable_Scope.js');
+      });
+    </script>
   </body>
 </html>

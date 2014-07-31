@@ -10,48 +10,6 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Array</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var coswave = [];
-
-function setup() {
-
-  createCanvas(780, 395);
-  for (var i = 0; i &lt; width; i++) {
-    var amount = map(i, 0, width, 0, PI);
-    coswave[i] = abs(cos(amount));
-  }
-  background(255);
-  noLoop();
-}
-
-function draw() {
-  var y1 = 0;
-  var y2 = height/3;
-  for (var i = 0; i &lt; width; i+=3) {
-    stroke(coswave[i]*255);
-    line(i, y1, i, y2);
-  }
-
-  y1 = y2;
-  y2 = y1 + y1;
-  for (var i = 0; i &lt; width; i+=3) {
-    stroke(coswave[i]*255 / 4);
-    line(i, y1, i, y2);
-  }
-  
-  y1 = y2;
-  y2 = height;
-  for (var i = 0; i &lt; width; i+=3) {
-    stroke(255 - coswave[i]*255);
-    line(i, y1, i, y2);
-  }
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>An array is a list of data. Each piece of data in an array 
  is identified by an index number representing its position in 
  the array. Arrays are zero based, which means that the first 
@@ -60,6 +18,16 @@ function draw() {
  filled with the cosine values. This data is displayed three 
  separate ways on the screen.  
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -74,7 +42,14 @@ function draw() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/03_Arrays/00_Array.js');
+      });
+    </script>
   </body>
 </html>

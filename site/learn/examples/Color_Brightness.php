@@ -10,44 +10,19 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Brightness</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var img;
-
-function preload() {
-  img = loadImage(&quot;assets/moonwalk.jpg&quot;);
-}
-
-function setup() {
-  createCanvas(780, 200);
-  img.loadPixels();
-  loadPixels();
-}
-
-function draw() {
-  for (var x = 0; x &lt; width; x++) {
-    for (var y = 0; y &lt; height; y++ ) {
-      // Calculate the 1D location from a 2D grid
-      var loc = 4*(x + y*width);
-      var r = img.pixels[loc];
-      var maxdist = 50;
-      var d = dist(x, y, mouseX, mouseY);
-      var adjustbrightness = 255*(maxdist-d)/maxdist;
-      r += adjustbrightness;
-      r = constrain(r, 0, 255);
-      pixels[4*(y*width + x)+3] = 255-r;
-    }
-  }
-  updatePixels();
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>By Dan Shiffman. This program adjusts the brightness of a part 
  of the image by calculating the distance of each pixel to the mouse.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -62,7 +37,14 @@ function draw() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/07_Color/02_Brightness.js');
+      });
+    </script>
   </body>
 </html>

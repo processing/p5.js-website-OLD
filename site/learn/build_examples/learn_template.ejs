@@ -14,44 +14,41 @@
       <a name="tutorials" class="anchor"><h3>Tutorials</h3></a>
 
       <div class="left-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries">
         <div class="label">
-        <img src="../img/learn/dom.jpg"></a>
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><h4>Beyond the canvas</h4></a>
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries"><h4>Including other libraries</h4></a>
         </div>
-        <p>Creating and manipulating elements on the page 
-        beyond the canvas.</p> 
+        <p>Finding, adding, and integrating other JS libraries.</p> 
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Local-server">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound"><h4>Including other libraries</h4></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Local-server"><h4>Using a local server</h4></a>
         </div>
-        <p>Finding, adding, and integrating other JS libraries.</p> 
+        <p>How to set up a local server on Mac OSX, Windows, or Linux.</p> 
       </div>
       <div class="spacer"></div>
 
       <div class="left-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Development">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><h4>Using a local server</h4></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Development"><h4>Development</h4></a>
         </div>
-        <p>Some functionality (loading external 
-        files, for example) requires the use of a local server for local 
-        development. This tutorial includes instructions for setting this up on
-        Mac OSX, Windows, and Linux.</p> 
+        <p>Getting started and overview for contributing to development.</p> 
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
+        <a class="nounderline" href="#">
         <div class="label">
-        <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound"><h4>Development</h4></a>
+        <img src="../img/learn/dom.jpg"></a>
+        <a class="nounderline" href="#"><h4>Beyond the canvas</h4></a>
         </div>
-        <p>Getting started and overview for those that want to contribute to development.</p> 
+        <p>Creating and manipulating elements on the page 
+        beyond the canvas.</p> 
       </div>
 
       <div class="spacer"></div>

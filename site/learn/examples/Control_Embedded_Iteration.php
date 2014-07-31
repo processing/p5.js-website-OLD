@@ -10,34 +10,18 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Embedded Iteration</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-function setup() {
-
-  createCanvas(780, 395); 
-  background(0); 
-  noStroke(); 
-
-  var gridSize = 35;
-
-  for (var x = gridSize; x &lt;= width - gridSize; x += gridSize) {
-    for (var y = gridSize; y &lt;= height - gridSize; y += gridSize) {
-      noStroke();
-      fill(255);
-      rect(x-1, y-1, 3, 3);
-      stroke(255, 50);
-      line(x, y, width/2, height/2);
-    }
-  }
-
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>Embedding &quot;for&quot; structures allows repetition in two dimensions.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -52,7 +36,14 @@ function setup() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/04_Control/01_Embedded_Iteration.js');
+      });
+    </script>
   </body>
 </html>

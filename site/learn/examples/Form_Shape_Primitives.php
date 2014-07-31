@@ -10,43 +10,21 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Shape Primitives</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-function setup() {
-
-  // Sets the screen to be 720 pixels wide and 400 pixels high
-  createCanvas(780, 440);
-  background(0);
-  noStroke();
-
-  fill(204);
-  triangle(18, 18, 18, 360, 81, 360);
-
-  fill(102);
-  rect(81, 81, 63, 63);
-
-  fill(204);
-  quad(189, 18, 216, 18, 216, 360, 144, 360);
-
-  fill(255);
-  ellipse(252, 144, 72, 72);
-
-  fill(204);
-  triangle(288, 18, 351, 360, 288, 360); 
-
-  fill(255);
-  arc(479, 300, 280, 280, PI, TWO_PI);
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>The basic shape primitive functions are triangle(), 
  rect(), quad(), ellipse(), and arc(). Squares are made with rect() 
  and circles are made with ellipse(). Each of these functions requires 
  a number of parameters to determine the shape's position and size.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -61,7 +39,14 @@ function setup() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/01_Form/01_Shape_Primitives.js');
+      });
+    </script>
   </body>
 </html>

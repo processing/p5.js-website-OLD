@@ -10,38 +10,20 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Pointillism</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var img;
-var smallPoint, largePoint;
-
-function setup() {
-  createCanvas(780, 440);
-  img = loadImage(&quot;assets/moonwalk.jpg&quot;);
-  smallPoint = 4;
-  largePoint = 40;
-  imageMode(CENTER);
-  noStroke();
-  background(255);
-}
-
-function draw() { 
-  var pointillize = map(mouseX, 0, width, smallPoint, largePoint);
-  var x = floor(random(img.width));
-  var y = floor(random(img.height));
-  var pix = img.get(x, y);
-  fill(pix, 128);
-  ellipse(x, y, pointillize, pointillize);
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>By Dan Shiffman. Mouse horizontal location controls size of 
  dots. Creates a simple pointillist effect using ellipses colored according 
  to pixels in an image.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -56,7 +38,14 @@ function draw() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/05_Image/05_Pointillism.js');
+      });
+    </script>
   </body>
 </html>

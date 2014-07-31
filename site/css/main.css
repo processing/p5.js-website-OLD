@@ -166,6 +166,9 @@ section#reference h2 {
 .example_container button {
     position: absolute;
     top: 0.25em;
+}
+
+.edit_space button {
     font-family: "AvenirNextLTW01-Medium";
     font-size: 1em;
     color: #ccc;
@@ -455,6 +458,29 @@ textarea {
 
 .label:hover h4 {
     color:#ED225D;
+}
+
+#exampleDisplay, #exampleFrame, #exampleEditor {
+    width: 39em;
+    border: none;
+}
+
+#exampleDisplay button {
+    color: #2D7BB6;
+    border-color: rgba(45,123,182, .25);
+    float: right;
+    margin: 0.5em 0 0 0.5em;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#exampleFrame {
+    height: 22em;
+}
+
+#exampleEditor {
+    height: 500em;
+    overflow: hidden;
+    margin-top: 1em;
 }
 
 /* ==========================================================================

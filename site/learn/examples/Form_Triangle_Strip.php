@@ -10,50 +10,20 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Triangle Strip</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var x;
-var y;
-var outsideRadius = 150;
-var insideRadius = 100;
-
-function setup() {
-  createCanvas(780, 440);
-  background(204);
-  x = width/2;
-  y = height/2;
-}
-
-function draw() {
-  background(204);
-  
-  var numPoints = map(mouseX, 0, width, 6, 60);
-  var angle = 0;
-  var angleStep = 180.0/numPoints;
-    
-  beginShape(TRIANGLE_STRIP); 
-  for (var i = 0; i &lt;= numPoints; i++) {
-    var px = x + cos(radians(angle)) * outsideRadius;
-    var py = y + sin(radians(angle)) * outsideRadius;
-    angle += angleStep;
-    vertex(px, py);
-    px = x + cos(radians(angle)) * insideRadius;
-    py = y + sin(radians(angle)) * insideRadius;
-    vertex(px, py); 
-    angle += angleStep;
-  }
-  endShape();
-}
-</code></pre>
-          </div>
-          </div>
-          </p>
           <p>Example by Ira Greenberg. Generate a closed ring using the 
  vertex() function and beginShape(TRIANGLE_STRIP) mode. The outsideRadius 
  and insideRadius variables control ring's radii respectively.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -68,7 +38,14 @@ function draw() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/01_Form/05_Triangle_Strip.js');
+      });
+    </script>
   </body>
 </html>

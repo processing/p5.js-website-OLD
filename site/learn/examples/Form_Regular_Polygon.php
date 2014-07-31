@@ -10,54 +10,21 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Regular Polygon</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-function setup() {
-  createCanvas(780, 440);
-}
-
-function draw() {
-  background(102);
-  
-  push();
-  translate(width*0.2, height*0.5);
-  rotate(frameCount / 200.0);
-  polygon(0, 0, 82, 3); 
-  pop();
-  
-  push();
-  translate(width*0.5, height*0.5);
-  rotate(frameCount / 50.0);
-  polygon(0, 0, 80, 20); 
-  pop();
-  
-  push();
-  translate(width*0.8, height*0.5);
-  rotate(frameCount / -100.0);
-  polygon(0, 0, 70, 7); 
-  pop();
-}
-
-function polygon(x, y, radius, npoints) {
-  var angle = TWO_PI / npoints;
-  beginShape();
-  for (var a = 0; a &lt; TWO_PI; a += angle) {
-    var sx = x + cos(a) * radius;
-    var sy = y + sin(a) * radius;
-    vertex(sx, sy);
-  }
-  endShape(CLOSE);
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>What is your favorite? Pentagon? Hexagon? Heptagon? No? 
  What about the icosagon? The polygon() function created for this example is 
  capable of drawing any regular polygon. Try placing different numbers into 
  the polygon() function calls within draw() to explore.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -72,7 +39,14 @@ function polygon(x, y, radius, npoints) {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/01_Form/03_Regular_Polygon.js');
+      });
+    </script>
   </body>
 </html>

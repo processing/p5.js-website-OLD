@@ -10,33 +10,20 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Transparency</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var img;
-var offset = 0;
-var easing = 0.05;
-
-function setup() {
-  createCanvas(780, 440);
-  img = loadImage(&quot;assets/moonwalk.jpg&quot;);  // Load an image into the program 
-}
-
-function draw() { 
-  image(img, 0, 0);  // Display at full opacity
-  var dx = (mouseX-img.width/2) - offset;
-  offset += dx * easing; 
-  tint(255, 127);  // Display at half opacity
-  image(img, offset, 0);
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>Move the pointer left and right across the image to change its 
  position. This program overlays one image over another by modifying the 
  alpha value of the image with the tint() function.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -51,7 +38,14 @@ function draw() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/05_Image/02_Transparency.js');
+      });
+    </script>
   </body>
 </html>

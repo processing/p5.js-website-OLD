@@ -10,39 +10,20 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Background Image</h2>
-          <p>
-          <div class="example">
-          <div>
-          <pre><code class="language-javascript">
-var bg;
-var y = 0;
-
-function setup() {
-  // The background image must be the same size as the parameters
-  // into the size() method. In this program, the size of the image
-  // is 710x400 pixels.
-  bg = loadImage(&quot;assets/moonwalk.jpg&quot;);
-  createCanvas(780, 440);
-}
-
-function draw() {
-  background(bg);
-  
-  stroke(226, 204, 0);
-  line(0, y, width, y);
-  
-  y++;
-  if (y &gt; height) {
-    y = 0; 
-  }
-}</code></pre>
-          </div>
-          </div>
-          </p>
           <p>This example presents the fastest way to load a 
  background image into Processing. To load an image as the background, 
  it must be the same width and height as the program.
  </p>
+
+          <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <div class="edit_space">
+              <button id="runButton" class="edit_button">run</button>
+              <button id="resetButton" class="reset_button">reset</button>
+            </div>
+            <div id="exampleEditor"></div>
+          </div>
+
           <p><a style="border-bottom:none !important;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target=_blank><img src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" style="width:88px"/></a></p>
       </section>
 
@@ -57,7 +38,14 @@ function draw() {
          *<!-- to do: add fallback image in CSS -->
     </object>
 
-
     <?php include('../../end.php'); ?>
+
+    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/examples.js"></script>
+    <script>
+      $(document).ready( function () {
+          examples.init('../examples_src/05_Image/01_Background_Image.js');
+      });
+    </script>
   </body>
 </html>
