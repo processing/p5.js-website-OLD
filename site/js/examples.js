@@ -81,7 +81,7 @@ var examples = {
     var rows = examples.editor.getSession().$rowLengthCache.length;
     var lineH = examples.editor.renderer.lineHeight;
     $('#exampleEditor').height(rows*lineH+'px');
-    
+
     examples.runExample();
     $('#exampleDisplay').show();
   },
