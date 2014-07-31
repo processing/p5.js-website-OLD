@@ -12,40 +12,28 @@
 
       <h2>Contribute</h2> 
 
-      <p>
-        p5.js is a collaborative project created by many individuals. 
-        <a href="https://github.com/lmccart/p5.js">Github</a> is the main place where code is collected,
-        issues are documented, and discussions are had. If you'd like to be involved, you can follow
-        along there, see below for more specific ways you can contribute.
-      </p>
-
-
 
       <h3>Get involved</h3>
 
 
       <p>
-        p5.js is a collaborative project and you are invited to not only use but also help
-        create it.  
+        p5.js is a collaborative project created by many individuals, and you are invited to help. 
+        All types of involvement are welcome.
       </p>
 
-    <h4>Develop</h4>
-    <p>Follow along on <a href="https://github.com/lmccart/p5.js">github</a>
-        and check out the <a href="https://github.com/lmccart/p5.js/wiki/Development">
+    <p><strong>Develop</strong> &#8212; <a href="https://github.com/lmccart/p5.js">Github</a> is the main place where code is collected,
+        issues are documented, and discussions about code are had. Check out the <a href="https://github.com/lmccart/p5.js/wiki/Development">
         development tutorial</a> to get started, or <a href="http://localhost/p5js.org/site/libraries/#create_libraries">
         create your own library.</a></p>
 
 
-    <h4>Create documentation</h4>
-        <p>Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
+    <p><strong>Create documentation</strong> &#8212; Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
         adding documentation</a>, and creating tutorials.</p>
 
-    <h4>Teach</h4>
-        <p>Check out the <a href="#">education page</a> on the wiki to view
+    <p><strong>Teach</strong> &#8212; Check out the <a href="#">education page</a> on the wiki to view
         resources from past classes, workshops, and events. Add your own links!</p>
         
-    <h4>Something else?</h4>
-        <p>p5.js is looking for designers, artists, writers, organizers,
+    <p><strong>Something else?</strong> &#8212; p5.js is looking for designers, artists, writers, organizers,
         and any other role you can think of. Get in touch at <a href="mailto:hello@p5js.org">hello@p5js.org</a>.</p>
 
 
@@ -56,28 +44,26 @@
         collaboration with many others.</p>
  
         <p><a href="http://evelyneastmond.com">Evelyn Eastmond</a> helped conceptualize this project
-        from the early stages and did signicant work with core code structure and organization,
-        educational materials, and development best practices.</p>
+        from the early stages and did signicant work with core code structure and organization, and
+        creation of educational materials.</p>
         
-        <p><a href="http://www.shiffman.net/">Dan Shiffman</a> has led the charge on the vector and math
-        functionality, and developed examples and materials while fearlessly running some of the first
+        <p><a href="http://www.shiffman.net/">Dan Shiffman</a> added the vector and math
+        functionality, and developed examples and materials while running some of the first
         trials of p5.js in the classroom.</p>
-
-        <p><a href="http://www.estebanalmiron.com/">Esteban Almiron</a> added the reference engine, as well
-        as continuing to contribute many thoughts and code improvements as the project develops.</p>
-
 
         <p><a href="http://jereljohnson.com/">Jerel Johnson</a> created the visual identity, logo, and website 
         design.</p>
 
-        <p><a href="http://lav.io/">Sam Lavigne</a> is currently working on an IDE as part of Google
-        Summer of Code.</p>
+        <p><a href="http://lav.io/">Sam Lavigne</a> is leading the development of the p5.js IDE.</p>
 
         <p><a href="http://www.jasonsigal.cc/">Jason Sigal</a> is currently working on the p5.Sound 
         library and I/O functionality as part of Google Summer of Code.</p>
 
         <p><a href="http://scott.j38.net/">Scott Garner</a> made the fantastic <a href="http://hello.p5js.org">
         hello p5.js</a>.</p>
+
+        <p><a href="http://www.estebanalmiron.com/">Esteban Almiron</a> and <a href="http://lkd.to/unttld">Derek
+        Kinsman</a> contributed to the reference, and help in general library development.</p>
 
         <p>The students and faculty in the p5.js working group at <a href="http://itp.nyu.edu">NYU ITP</a>
         meet biweekly throughout the school year to work on everything from language design and 
