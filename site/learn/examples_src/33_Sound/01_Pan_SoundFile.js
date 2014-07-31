@@ -3,7 +3,6 @@
  * @description Ball position follows mouse and correlates to panning of sound.
  * Click mouse to play
  */
-
 var ball = {};
 var soundFile;
 var panning;

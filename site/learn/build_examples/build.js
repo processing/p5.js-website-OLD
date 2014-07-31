@@ -69,7 +69,8 @@ async.forEachSeries(inputFolders, function(folder, cb0) {
           var outputFile = outputRoot+folderName+'_'+name.replace(spaceReg, '_')+'.php';
           console.log(outputFile);
 
-          all[folderName].push([name, outputFile.substring(3)]);
+          var shortName = name.replace(' and ', '/');
+          all[folderName].push([shortName, outputFile.substring(3)]);
 
           fs.writeFile(outputFile, content, 'utf8');
 

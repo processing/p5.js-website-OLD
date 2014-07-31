@@ -9,10 +9,8 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Pointillism</h2>
-          <p>By Dan Shiffman. Mouse horizontal location controls size of 
- dots. Creates a simple pointillist effect using ellipses colored according 
- to pixels in an image.
+          <h2>Load and Play Sound</h2>
+          <p>Load sound during preload(). Play a sound when key is pressed.
  </p>
 
           <div id="exampleDisplay">
@@ -44,7 +42,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/07_Color/07_Wave_Gradient.js');
+          examples.init('../examples_src/33_Sound/00_Load_and_Play_Sound.js');
       });
     </script>
   </body>

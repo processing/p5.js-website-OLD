@@ -5,7 +5,6 @@
  * In 'sustain' mode, the sound will overlap with itself.
  * In 'restart' mode it will stop and then start again.
  */
-
 var playMode = 'sustain';
 var sample;
 

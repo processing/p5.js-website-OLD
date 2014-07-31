@@ -1,8 +1,7 @@
 /*
- * @name Load/Play Sound
+ * @name Load and Play Sound
  * @description Load sound during preload(). Play a sound when key is pressed.
  */
-
 var soundFile;  // Declare variable 'soundFile'.
 
 function preload() {
