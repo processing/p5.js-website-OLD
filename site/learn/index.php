@@ -241,6 +241,12 @@
             
           
             <p>
+            <strong>Simulate</strong><br>
+            
+            </p>
+            
+          
+            <p>
             <strong>Sound</strong><br>
             
               <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>
