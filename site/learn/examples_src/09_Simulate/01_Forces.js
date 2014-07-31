@@ -118,7 +118,7 @@ function Mover(m,x,y) {
 // Newton's 2nd law: F = M * A
 // or A = F / M
 Mover.prototype.applyForce = function(force) {
-  var f = PVector.div(force,this.mass);
+  var f = p5.Vector.div(force,this.mass);
   this.acceleration.add(f);
 };
   
