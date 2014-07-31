@@ -240,6 +240,27 @@
         
       
         <p>
+        <strong>Simulate</strong><br>
+        
+          <a href="examples/Simulate_Forces.php">Forces</a><br>
+          
+        
+          <a href="examples/Simulate_Particle_System.php">Particle System</a><br>
+          
+        
+          <a href="examples/Simulate_Flocking.php">Flocking</a><br>
+          
+        
+          <a href="examples/Simulate_Wolfram_Cellular_Automata.php">Wolfram Cellular Automata</a><br>
+          
+        
+          <a href="examples/Simulate_Game_of_Life.php">Game of Life</a><br>
+          
+        
+        </p>
+        
+      
+        <p>
         <strong>Sound</strong><br>
         
           <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>
