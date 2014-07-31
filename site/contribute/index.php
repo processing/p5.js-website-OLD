@@ -21,19 +21,19 @@
         All types of involvement are welcome.
       </p>
 
-    <p><strong>Develop</strong> &#8212; <a href="https://github.com/lmccart/p5.js">Github</a> is the main place where code is collected,
+    <p>Develop &#8212; <a href="https://github.com/lmccart/p5.js">Github</a> is the main place where code is collected,
         issues are documented, and discussions about code are had. Check out the <a href="https://github.com/lmccart/p5.js/wiki/Development">
         development tutorial</a> to get started, or <a href="http://localhost/p5js.org/site/libraries/#create_libraries">
         create your own library.</a></p>
 
 
-    <p><strong>Create documentation</strong> &#8212; Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
+    <p>Create documentation &#8212; Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
         adding documentation</a>, and creating tutorials.</p>
 
-    <p><strong>Teach</strong> &#8212; Check out the <a href="#">education page</a> on the wiki to view
+    <p>Teach &#8212; Check out the <a href="#">education page</a> on the wiki to view
         resources from past classes, workshops, and events. Add your own links!</p>
         
-    <p><strong>Something else?</strong> &#8212; p5.js is looking for designers, artists, writers, organizers,
+    <p>Something else? &#8212; p5.js is looking for designers, artists, writers, organizers,
         and any other role you can think of. Get in touch at <a href="mailto:hello@p5js.org">hello@p5js.org</a>.</p>
 
 
