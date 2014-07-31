@@ -47,6 +47,13 @@
     display: inline;
 }
 
+#separator-design-element {
+    width: 0.35em;
+    margin: 0 0.09em 0.25em 0.09em;
+}
+
+
+
 /* 
   //////////////////////////////////////////////////
     DOWNLOAD PAGE 
@@ -1155,12 +1162,6 @@ footer {
     }
 
 /* constants for the asterisk */
-
-    #separator-design-element {
-        width: 0.4em;
-        margin: 0 0.34em 0.25em 0.34em;
-    }
-
 
     #asterisk-design-element {
         position:fixed;
