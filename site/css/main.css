@@ -1192,7 +1192,6 @@ footer {
         transform: rotate(-1deg);
     }
 
-    #get-started-page #asterisk-design-element,
     #libraries-page #asterisk-design-element {
     
         bottom:-19%;
@@ -1206,6 +1205,7 @@ footer {
         transform: rotate(2deg);
     }
 
+    #get-started-page #asterisk-design-element,
     #contribute-page #asterisk-design-element {
 
         top:-30%;
