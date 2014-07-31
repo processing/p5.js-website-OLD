@@ -50,8 +50,10 @@ function getPackageVersion($f) {
 function updateLib($jside_v) {
 
   $r = 'https://raw.githubusercontent.com/lmccart/p5.js/master/';
-  download($r.'lib/p5.min.js', 'p5.min.js');
-  $v = getLibVersion('p5.min.js');
+  download($r.'lib/p5.min.js', '../js/p5.min.js');
+  download($r.'lib/addons/p5.dom.js', '../js/p5.dom.js');
+  download($r.'lib/addons/p5.sound.js', '../js/p5.sound.js');
+  $v = getLibVersion('../js/p5.min.js');
   //unlink('p5.min.js');
 
   $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $jside_version = "'.$jside_v.'"; ?>';

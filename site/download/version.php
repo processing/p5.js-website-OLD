@@ -1,1 +1,1 @@
-<?php $version = "0.2.22"; $date = "July 28, 2014"; $jside_version = "0.0.1"; ?>
+<?php $version = "0.2.22"; $date = "July 30, 2014"; $jside_version = "0.0.1"; ?>
