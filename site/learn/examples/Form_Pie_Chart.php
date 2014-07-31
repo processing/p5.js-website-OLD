@@ -39,7 +39,7 @@
 
     <?php include('../../end.php'); ?>
 
-    <script src="http://d1n0x3qji82z53.cloudfront.net/src-min-noconflict/ace.js"></script>
+    <script src="../../js/vendor/ace/ace.js"></script>
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
