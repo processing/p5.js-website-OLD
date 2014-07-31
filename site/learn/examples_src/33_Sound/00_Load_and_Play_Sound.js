@@ -1,5 +1,5 @@
 /*
- * @name Load & Play Sound
+ * @name Load/Play Sound
  * @description Load sound during preload(). Play a sound when key is pressed.
  */
 

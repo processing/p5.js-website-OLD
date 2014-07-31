@@ -162,7 +162,7 @@
             <p>
             <strong>Image</strong><br>
             
-              <a href="examples/Image_Load_&amp;_Display_Image.php">Load &amp; Display Image</a><br>
+              <a href="examples/Image_Load/Display_Image.php">Load/Display Image</a><br>
               
             
               <a href="examples/Image_Background_Image.php">Background Image</a><br>
@@ -243,7 +243,7 @@
             <p>
             <strong>Sound</strong><br>
             
-              <a href="examples/Sound_Load_&amp;_Play_Sound.php">Load &amp; Play Sound</a><br>
+              <a href="examples/Sound_Load/Play_Sound.php">Load/Play Sound</a><br>
               
             
               <a href="examples/Sound_Pan_Sound.php">Pan Sound</a><br>
