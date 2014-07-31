@@ -45,7 +45,7 @@
 
     <?php include('../../end.php'); ?>
 
-    <script src="../../js/vendor/ace/ace.js"></script>
+    <script src="../../js/vendor/ace-nc/ace.js"></script>
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
