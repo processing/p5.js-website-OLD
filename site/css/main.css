@@ -181,11 +181,11 @@ section#reference h2 {
 }
 
 .edit_button {
-    left: 27.5em;
+    left: 24.5em;
 }
 
 .reset_button {
-    left: 30.5em !important;
+    left: 27.5em;
 }
 
 .example_container {
@@ -469,6 +469,22 @@ textarea {
     float: right;
     margin: 0.5em 0 0 0.5em;
     background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top: 0.1em;
+}
+
+#exampleDisplay .edit_button {
+    left: 29.55em;
+}
+
+#exampleDisplay .reset_button {
+    left: 32.55em;
+}
+
+#exampleDisplay .edit_space {
+    position: relative;
 }
 
 #exampleFrame {
@@ -477,6 +493,7 @@ textarea {
 
 #exampleEditor {
     height: 500em;
+    width: 720px;
     overflow: hidden;
     margin-top: 1em;
 }
