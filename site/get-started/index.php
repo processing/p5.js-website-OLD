@@ -30,9 +30,7 @@
 
       <pre><code class="language-markup">&lt;script src="../p5.min.js">&lt;/script></code></pre>   
 
-       If you
-      would like 
-      <p>As a third option, you can link to a p5.js file hosted 
+      <p>Alternatively, you can link to a p5.js file hosted 
         online. All versions of p5.js are stored in a CDN ("Content Delivery 
         Network"). You can see a history of these versions here: <a target="_blank"
         href="http://cdnjs.com/libraries/p5.js/" >p5.js CDN</a>. In this case you can 
@@ -42,7 +40,7 @@
       <pre><code class="language-markup">&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.0.0/p5.js">&lt;/script></code></pre>   
 
       <p>
-        Where 0.0.0 gets replaced by the version you'd like to use (the highest one is usually best).
+        Where "0.0.0" gets replaced by the version you'd like to use (the highest one is usually best).
       </p>
 
 
