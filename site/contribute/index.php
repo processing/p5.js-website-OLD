@@ -72,9 +72,8 @@
         invaluable guidance with JS and development practices.
         </p>        
 
-        <p>Many others from around the world, including <a href="http://www.estebanalmiron.com/">Esteban 
-        Almiron</a> and <a href="http://lkd.to/unttld">Derek Kinsman</a>, contribute code and ideas to the 
-        library and reference.</p>
+        <p><a href="https://github.com/lmccart/p5.js/graphs/contributors">Many others</a> from around the 
+        world contribute code and ideas to the library and documentation.</p>
 
         <svg width="1em" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">

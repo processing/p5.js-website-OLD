@@ -897,7 +897,7 @@ section p, section li {
 }
 
 ul {
-    margin:0;
+    margin:0.5em 0 0 0;
     padding: 0;
     list-style: disc;
     list-style-position: outside;
@@ -912,7 +912,7 @@ section li {
 }
 
 ul.nobullet, div.params ul {
-    margin:0;
+    margin:0.5em 0 0 0;
     padding: 0;
     list-style: none;
     list-style-position: outside;

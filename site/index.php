@@ -25,19 +25,18 @@
 
       <p>p5.js is a JavaScript library that starts with the original goal of 
       <a href="http://processing.org">Processing</a>, to make coding accessible 
-      for artists, designers, educators, beginners, and reinterpets this for today, 
-      for the web. The library is intended to introduce creative coding, introduce 
-      web development, and provide a tie between the two. It it important that while 
-      this is accessible for beginners, it’s not a sandbox environment and people 
-      develop real web development literacy, and the ability to extend and learn new things 
-      on their own. The library is not domain specific, it’s useful for general creative 
-      coding from drawing, to working with text, images, DOM, etc.</p>
+      for artists, designers, educators, and beginners, and reinterpets this for today's web. 
+      </p>
 
-      <p>p5.js is about bringing Processing ideas and community to JavaScript and the web, 
-      rather than emulating Processing/Java through JavaScript. We hope to build a strong 
-      support community of users for constructive help, with a focus on teaching and learning. 
-      We have been focusing on language design, development, and documentation, but a p5.js 
-      web IDE is also in the plan.</p>
+      <p>Using the original metaphor of a software sketchbook, p5.js has a full set of
+      drawing functionality. However, you're not limited
+      to your drawing canvas, you can think of your whole browser page as your sketch!
+      For this, p5.js has addon libraries that make it easy to interact with other HTML5
+      objects, including text, input, video, audio, and webcam. For an overview, check out
+      <a href="http://hello.p5js.org">hello p5.js</a>.</p>
+
+      <p>p5.js is a new interpretation, not an emulation or port, and it is in active development.
+      An official editing environment is coming soon, as well as many more features!</p>
     </section>
 
     <?php include('footer.php'); ?>

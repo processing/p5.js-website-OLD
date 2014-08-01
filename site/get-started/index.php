@@ -140,7 +140,6 @@ function draw() {
       <img src="../img/get-started/first-sketch2.png" />
 
       <h3>What Next?</h3>
-      <p>
         <ul>
           <li>Read the 
           <a href="https://github.com/lmccart/p5.js/wiki/Processing-transition">
