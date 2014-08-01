@@ -77,7 +77,7 @@
 &lt;/body>
 &lt;/html></code></pre>
 
-      <a name="create_libraries" class="anchor"><h3>Create Your Own</h3></a>
+      <a name="create-your-own" class="anchor"><h3>Create Your Own</h3></a>
 
       <p>p5.js welcomes libraries contributed by others! Check out the 
       <a href="https://github.com/lmccart/p5.js/wiki/Libraries">libraries tutorial</a> for more
