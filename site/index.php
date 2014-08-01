@@ -34,7 +34,7 @@
       For this, p5.js has addon <a href="libraries/">libraries</a> that make it 
       <a href="http://hello.p5js.org">
       easy to interact</a> with other HTML5
-      objects, including text, input, video, audio, and webcam.</p>
+      objects, including text, input, video, webcam, and sound.</p>
 
       <p>p5.js is a new interpretation, not an emulation or port, and it is in active development.
       An official editing environment is coming soon, as well as many more features!</p>
