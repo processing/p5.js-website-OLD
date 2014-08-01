@@ -62,9 +62,6 @@
         <p><a href="http://scott.j38.net/">Scott Garner</a> made the fantastic <a href="http://hello.p5js.org">
         hello p5.js</a>.</p>
 
-        <p><a href="http://www.estebanalmiron.com/">Esteban Almiron</a> and <a href="http://lkd.to/unttld">Derek
-        Kinsman</a> contributed to the reference, and help in general library development.</p>
-
         <p>The students and faculty in the p5.js working group at <a href="http://itp.nyu.edu">NYU ITP</a>
         meet biweekly throughout the school year to work on everything from language design and 
         documentation to testing and bug fixes.</p>
@@ -74,6 +71,10 @@
         <a href="http://bobholt.me/">Bob Holt</a>, have made significant code contributions and offer
         invaluable guidance with JS and development practices.
         </p>        
+
+        <p>Many others from around the world, including <a href="http://www.estebanalmiron.com/">Esteban 
+        Almiron</a> and <a href="http://lkd.to/unttld">Derek Kinsman</a>, contribute code and ideas to the 
+        library and reference.</p>
 
         <svg width="1em" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
