@@ -9,15 +9,15 @@
   $path = getcwd();
 
   if (strpos($path, "download") !== false) {
-    $tagline = "the fun of Processing times the quirkiness of JavaScript";
+    $tagline = "Processing fun times JavaScript quirkiness";
   } else if (strpos($path, "get") !== false) {
-    $tagline = "the simplicity of Processing times the flexibility of JavaScript";
+    $tagline = "Processing simplicity times JavaScript flexibility";
   } else if (strpos($path, "reference") !== false || strpos($path, "libraries") !== false) {
-    $tagline = "the intuition of Processing times the extensibility of JavaScript";
+    $tagline = "Processing intuition times JavaScript power";
   } else if (strpos($path, "learn") !== false) {
-    $tagline = "the creativity of Processing times the dynamism of JavaScript";
+    $tagline = "Processing creativity times JavaScript dynamism";
   } else if (strpos($path, "contribute") !== false) {
-    $tagline = "the community of Processing times the community of JavaScript";
+    $tagline = "Processing community times JavaScript community";
   } else {
     $tagline = "the power of Processing times the reach of JavaScript";
   }
