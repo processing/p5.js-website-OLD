@@ -31,7 +31,8 @@
       <p>Using the original metaphor of a software sketchbook, p5.js has a full set of
       drawing functionality. However, you're not limited
       to your drawing canvas, you can think of your whole browser page as your sketch!
-      For this, p5.js has addon libraries that make it <a href="http://hello.p5js.org">
+      For this, p5.js has addon <a href="libraries/">libraries</a> that make it 
+      <a href="http://hello.p5js.org">
       easy to interact</a> with other HTML5
       objects, including text, input, video, audio, and webcam.</p>
 
