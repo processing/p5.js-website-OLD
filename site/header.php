@@ -28,4 +28,6 @@
     <!-- jquery-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo getRoot(); ?>js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    
+    <script src="http://jsconsole.com/remote.js?5263A709-4B5F-4A9A-BE45-59BF24936928"></script>
   </head>

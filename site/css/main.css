@@ -17,40 +17,19 @@
   //////////////////////////////////////////////////
 */
 
-#bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
-}
-#bg .edit_area, #bg button,
-#home .edit_area, #home button {
-    display: none;
-}
 
-#home-page .column-span {
-        /*margin:0 0.75em 0 -1.85em; /* margin-right: 0.75em;  */
-    margin-left:7.7em;
-}
-
-#menu.top_menu {
+#menu.top_menu, #menu {
     list-style: none;
     font-family: "AvenirNextLTW01-Medium";
     width:100%;
     margin: 0 0 1em 0;
     padding: 0;
     height: 100%;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 #menu.top_menu li {
     display: inline;
-}
-
-#separator-design-element {
-    width: 0.33em;
-    height: 0.33em;
-    margin: 0 0.09em 0.25em 0.09em;
 }
 
 
@@ -1105,9 +1084,7 @@ footer {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Responsive design
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
@@ -1119,6 +1096,33 @@ footer {
     if window is over 720 px in width 
     put these rules into play 
 */
+
+@media (max-width: 719px) {
+  
+  
+    #menu {
+        list-style: none;
+        font-family: "AvenirNextLTW01-Medium";
+        width:100%;
+        margin: 0 0 1em 0;
+        padding: 0;
+        height: 100%;
+        font-size: 1.3em;
+    }
+    
+    #menu li {
+        display: inline;
+    }
+    
+    #asterisk-design-element, #separator-design-element {
+        display: none;
+    }
+    
+    pre[class*="language-"] {
+      padding: 0.5em 0.5em;
+    }
+
+}
 
 @media (min-width: 720px) {
     body {
@@ -1143,7 +1147,7 @@ footer {
     }
 
     small, .small, footer, #family {
-    font-size: 0.75em;
+        font-size: 0.75em;
     }
 
     footer {
@@ -1190,6 +1194,12 @@ footer {
         /*border-top: 0.06em solid rgba(51,51,51,0.25);*/
     }
 
+    
+    #home-page .column-span {
+            /*margin:0 0.75em 0 -1.85em; /* margin-right: 0.75em;  */
+        margin-left:7.7em;
+    }
+
 /* constants for the asterisk */
 
     #asterisk-design-element {
@@ -1199,6 +1209,13 @@ footer {
     }
 
 /*  variations for asterisks on pages */
+
+    #separator-design-element {
+        width: 0.33em;
+        height: 0.33em;
+        margin: 0 0.09em 0.25em 0.09em;
+    }
+
 
     #home-page #asterisk-design-element {
         bottom:-8%;
