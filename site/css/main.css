@@ -538,6 +538,20 @@ textarea {
     line-height: 1em;
 }
 
+.ace_info {
+  background-color: #D7E5F5 !important;
+}
+
+.ace_warning {
+  background-color: #FFD700 !important;
+  color: #ffffff !important;
+}
+
+.ace_error {
+  background-color: #FF6347 !important;
+  color: #ffffff !important;
+}
+
 /* property, tag, boolean,
    number, function-name, constant,
    symbol */
@@ -583,6 +597,7 @@ variable */
   color: #e90 !important; /* og coy e90 orange */
 }
 
+
 .ace-gutter {
     color: #333 !important;
 }
@@ -603,19 +618,7 @@ variable */
   background-color: #AFAFAF !important;
 }
 
-.ace_info {
-  background-color: #D7E5F5 !important;
-}
 
-.ace_warning {
-  background-color: #FFD700 !important;
-  color: #ffffff !important;
-}
-
-.ace_error {
-  background-color: #FF6347 !important;
-  color: #ffffff !important;
-}
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */

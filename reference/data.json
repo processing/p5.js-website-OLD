@@ -279,6 +279,26 @@
             "fors": {},
             "namespaces": {}
         },
+        "src/objects/p5.Table.js": {
+            "name": "src/objects/p5.Table.js",
+            "modules": {
+                "Table": 1
+            },
+            "classes": {
+                "p5.Table": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/objects/p5.TableRow.js": {
+            "name": "src/objects/p5.TableRow.js",
+            "modules": {},
+            "classes": {
+                "p5.TableRow": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "src/objects/p5.Vector.js": {
             "name": "src/objects/p5.Vector.js",
             "modules": {},
@@ -527,13 +547,19 @@
             "name": "Data",
             "submodules": {
                 "Array Functions": 1,
-                "String Functions": 1
+                "String Functions": 1,
+                "Table": 1
             },
-            "classes": {},
+            "classes": {
+                "p5.Table": 1,
+                "p5.TableRow": 1
+            },
             "fors": {
                 "p5": 1
             },
-            "namespaces": {}
+            "namespaces": {},
+            "file": "src/objects/p5.TableRow.js",
+            "line": 12
         },
         "Array Functions": {
             "name": "Array Functions",
@@ -865,6 +891,25 @@
             "line": 11,
             "description": "Main graphics and rendering context, as well as the base API \nimplementation for p5.js \"core\". Use this class if you need to draw into \nan off-screen graphics buffer. A p5.Graphics object can be constructed \nwith the <code>createGraphics()</code> function. The fields and methods \nfor this class are extensive, but mirror the normal drawing API for p5."
         },
+        "Table": {
+            "name": "Table",
+            "submodules": {},
+            "classes": {
+                "p5.Table": 1,
+                "p5.TableRow": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Data",
+            "namespace": "",
+            "file": "src/objects/p5.TableRow.js",
+            "line": 12,
+            "requires": [
+                "core"
+            ],
+            "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file."
+        },
         "Output": {
             "name": "Output",
             "submodules": {
@@ -1172,6 +1217,64 @@
                     "name": "pInst",
                     "description": "An instance of a p5 sketch.",
                     "type": "Object"
+                }
+            ]
+        },
+        "p5.Table": {
+            "name": "p5.Table",
+            "shortname": "p5.Table",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Data",
+            "submodule": "Table",
+            "namespace": "",
+            "file": "src/objects/p5.Table.js",
+            "line": 12,
+            "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "rows",
+                    "description": "An array of p5.TableRow objects",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "p5.Table generated",
+                "type": "p5.Table"
+            }
+        },
+        "p5.TableRow": {
+            "name": "p5.TableRow",
+            "shortname": "p5.TableRow",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Data",
+            "submodule": "Table",
+            "namespace": "",
+            "file": "src/objects/p5.TableRow.js",
+            "line": 12,
+            "description": "A TableRow object represents a single row of data values,\nstored in columns, from a table.\n\nA Table Row contains both an ordered array, and an unordered\nJSON object.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "optional: populate the row with a\n                            string of values, separated by the\n                            separator",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "separator",
+                    "description": "comma separated values (csv) by default",
+                    "type": "String",
+                    "optional": true
                 }
             ]
         },
@@ -3523,7 +3626,34 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 108,
+            "line": 101,
+            "description": "<p>Reads the contents of a file or URL and creates an Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format), and to\ninclude a header row.</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>",
+            "itemtype": "method",
+            "name": "loadTable",
+            "params": [
+                {
+                    "name": "filename",
+                    "description": "name of the file or URL to load",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "function to be executed after loadXML()\n                             completes, XML object is passed in as\n                             first argument",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "XML object containing data",
+                "type": "Object"
+            },
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Files"
+        },
+        {
+            "file": "src/input/files.js",
+            "line": 162,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
@@ -5334,6 +5464,377 @@
             "submodule": "Image"
         },
         {
+            "file": "src/objects/p5.Table.js",
+            "line": 23,
+            "itemtype": "property",
+            "name": "columns",
+            "type": "{Array}",
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 29,
+            "itemtype": "property",
+            "name": "rows",
+            "type": "{Array}",
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 36,
+            "description": "Use addRow() to add a new row of data to a Table object. By default,\nan empty row is created. Typically, you would store a reference to\nthe new row in a TableRow object (see newRow in the example above),\nand then set individual values using set().\n\nIf a TableRow object is included as a parameter, then that row is\nduplicated and added to the table.",
+            "itemtype": "method",
+            "name": "addRow",
+            "params": [
+                {
+                    "name": "row",
+                    "description": "row to be added to the table",
+                    "type": "p5.TableRow",
+                    "optional": true
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 61,
+            "description": "[removeRow description]",
+            "itemtype": "method",
+            "name": "removeRow",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 76,
+            "description": "Returns a reference to the specified TableRow. The reference\ncan then be used to get and set values of the selected row.",
+            "itemtype": "method",
+            "name": "getRow",
+            "params": [
+                {
+                    "name": "rowID",
+                    "description": "ID number of the row to get",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "TableRow"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 88,
+            "description": "Gets all rows from the table. Returns an array of TableRows.",
+            "itemtype": "method",
+            "name": "getRows",
+            "return": {
+                "description": "Array of TableRows",
+                "type": "Array"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 98,
+            "description": "Finds the first row in the Table that contains the value\nprovided, and returns a reference to that row. Even if\nmultiple rows are possible matches, only the first matching\nrow is returned. The column to search may be specified by\neither its ID or title.",
+            "itemtype": "method",
+            "name": "findRow",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "The value to match",
+                    "type": "String"
+                },
+                {
+                    "name": "column",
+                    "description": "ID number or title of the\n                               column to search",
+                    "type": "Number|String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "TableRow"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 132,
+            "description": "Finds the rows in the Table that contain the value\nprovided, and returns references to those rows. Returns an\nArray, so for must be used to iterate through all the rows,\nas shown in the example above. The column to search may be\nspecified by either its ID or title.",
+            "itemtype": "method",
+            "name": "findRows",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "The value to match",
+                    "type": "String"
+                },
+                {
+                    "name": "column",
+                    "description": "ID number or title of the\n                               column to search",
+                    "type": "Number|String"
+                }
+            ],
+            "return": {
+                "description": "An Array of TableRow objects",
+                "type": "Array"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 165,
+            "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be\nspecified by either its ID or title.",
+            "itemtype": "method",
+            "name": "matchRow",
+            "params": [
+                {
+                    "name": "regexp",
+                    "description": "The regular expression to match",
+                    "type": "String"
+                },
+                {
+                    "name": "column",
+                    "description": "The column ID (number) or \n                                 title (string)",
+                    "type": "(String|Number)"
+                }
+            ],
+            "return": {
+                "description": "TableRow object",
+                "type": "TableRow"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 197,
+            "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be specified\nby either its ID or title.",
+            "itemtype": "method",
+            "name": "matchRows",
+            "params": [
+                {
+                    "name": "regexp",
+                    "description": "The regular expression to match",
+                    "type": "String"
+                },
+                {
+                    "name": "column",
+                    "description": "The column ID (number) or \n                                 title (string)",
+                    "type": "[(String|Number)]"
+                }
+            ],
+            "return": {
+                "description": "An Array of TableRow objects",
+                "type": "Array"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 231,
+            "description": "Retrieves all values in the specified column, and returns them\nas an array. The column may be specified by either its ID or title.",
+            "itemtype": "method",
+            "name": "getColumn",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "String or Number of the column to return",
+                    "type": "(String|Number)"
+                }
+            ],
+            "return": {
+                "description": "Array of column values",
+                "type": "Array"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 253,
+            "description": "Removes all rows from a Table. While all rows are removed,\ncolumns and column titles are maintained.",
+            "itemtype": "method",
+            "name": "clearRows",
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 264,
+            "description": "Use addColumn() to add a new column to a Table object.\nTypically, you will want to specify a title, so the column\nmay be easily referenced later by name. (If no title is\nspecified, the new column's title will be null.)",
+            "itemtype": "method",
+            "name": "addColumn",
+            "params": [
+                {
+                    "name": "title",
+                    "description": "Title of the given column",
+                    "type": "[String]"
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 278,
+            "description": "Returns the total number of columns in a Table.",
+            "return": {
+                "description": "Number of columns in this table",
+                "type": "Number"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 287,
+            "description": "Returns the total number of rows in a Table.",
+            "itemtype": "method",
+            "name": "getRowCount",
+            "return": {
+                "description": "Number of rows in this table",
+                "type": "Number"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 297,
+            "description": "<p>Removes any of the specified characters (or \"tokens\").</p>\n\n<p>If no column is specified, then the values in all columns and\nrows are processed. A specific column may be referenced by\neither its ID or title.</p>",
+            "itemtype": "method",
+            "name": "removeTokens",
+            "params": [
+                {
+                    "name": "chars",
+                    "description": "String listing characters to be removed",
+                    "type": "String"
+                },
+                {
+                    "name": "column",
+                    "description": "Column ID (number)\n                                 or name (string)",
+                    "type": "[String|Number]"
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 348,
+            "description": "Trims leading and trailing whitespace, such as spaces and tabs,\nfrom String table values. If no column is specified, then the\nvalues in all columns and rows are trimmed. A specific column\nmay be referenced by either its ID or title.",
+            "itemtype": "method",
+            "name": "trim",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "Column ID (number)\n                                 or name (string)",
+                    "type": "[String|Number]"
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 390,
+            "description": "Use removeColumn() to remove an existing column from a Table\nobject. The column to be removed may be identified by either\nits title (a String) or its index value (an int).\nremoveColumn(0) would remove the first column, removeColumn(1)\nwould remove the second column, and so on.",
+            "itemtype": "method",
+            "name": "removeColumn",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "columnName (string) or ID (number)",
+                    "type": "(String|Number)"
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 54,
+            "description": "Stores a value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "itemtype": "method",
+            "name": "set",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "value",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 91,
+            "description": "Retrieves a float value from the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                 ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
             "file": "src/objects/p5.Vector.js",
             "line": 52,
             "description": "The x component of the vector",
@@ -6119,7 +6620,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 120,
+            "line": 122,
             "description": "Blends the pixels in the display window according to the defined mode. \nThere is a choice of the following modes to blend the source pixels (A) \nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C = \nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C = \nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C = \nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be \ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the \ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% \ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and \n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast, \nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -7624,7 +8125,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 47,
+            "line": 49,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -9605,6 +10106,10 @@
             "line": " src/objects/p5.Image.js:64"
         },
         {
+            "message": "Missing item type\nReturns the total number of columns in a Table.",
+            "line": " src/objects/p5.Table.js:278"
+        },
+        {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "line": " src/objects/p5.Vector.js:319"
         },
@@ -9654,7 +10159,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:47"
+            "line": " src/app.js:49"
         },
         {
             "message": "Missing item type\nHelpers for create methods.",

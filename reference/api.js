@@ -15,6 +15,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Graphics",
         "p5.Image",
         "p5.MediaElement",
+        "p5.Table",
+        "p5.TableRow",
         "p5.Vector",
         "p5.dom",
         "p5.sound"
@@ -47,6 +49,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Shape",
         "String Functions",
         "Structure",
+        "Table",
         "Text Area",
         "Time & Date",
         "Touch",
@@ -179,6 +182,11 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Structure",
             "name": "Structure"
+        },
+        {
+            "displayName": "Table",
+            "name": "Table",
+            "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file."
         },
         {
             "displayName": "Text Area",
