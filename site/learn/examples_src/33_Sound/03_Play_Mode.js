@@ -16,8 +16,9 @@ function setup() {
 
 function draw() {
   background(255);
-  text('Current Play Mode: ' + playMode + '. Press z to change mode,
-    and a to trigger sound', 10, height/2);
+  text('Current Play Mode: ' + playMode+'.', 10, height/2);
+  text('Press z to change mode, and a to trigger sound.', 
+    10, height/2+20);
 }
 
 function togglePlayMode(){
