@@ -9,13 +9,15 @@ TO DO:
 
 */
 
-var elementPosition = $('#menu').offset();
-
-$(window).scroll(function(){
-  if($(window).scrollTop() > elementPosition.top){
-    var top = Math.round($(window).scrollTop()-elementPosition.top);
-    $('#menu').css({'margin-top': top});
-  } else {
-    $('#menu').css({'margin-top': 0});
-  }    
-});
+if (window.innerWidth >= 720) {
+  var elementPosition = $('#menu').offset();
+  
+  $(window).scroll(function(){
+    if($(window).scrollTop() > elementPosition.top){
+      var top = Math.round($(window).scrollTop()-elementPosition.top);
+      $('#menu').css({'margin-top': top});
+    } else {
+      $('#menu').css({'margin-top': 0});
+    }    
+  });
+}
