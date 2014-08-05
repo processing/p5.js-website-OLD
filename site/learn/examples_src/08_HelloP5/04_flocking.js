@@ -1,9 +1,9 @@
 /*
  * @name Flocking
- * @description Demonstration of Craig Reynolds' "Flocking" behavior
- * See: http://www.red3d.com/cwr/
- * Rules: Cohesion, Separation, Alignment
- * from http://natureofcode.com
+ * @description Demonstration of Craig Reynolds' "Flocking" behavior.
+ * See: http://www.red3d.com/cwr/.
+ * (Rules: Cohesion, Separation, Alignment.)
+ * From http://natureofcode.com.
  */
 var boids = [];
 

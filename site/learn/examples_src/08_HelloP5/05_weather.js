@@ -3,7 +3,6 @@
  * @frame 720,280
  * @description This example grabs JSON weather data from openweathermap.org.
 */
-
 var dir = 0;
 var wind;
 
@@ -61,6 +60,4 @@ function gotWeather(weather) {
   var gustDiv = createDiv("GUST " + gustmag + " <small>MPH</small>");
 
   wind = p5.Vector.fromAngle(radians(dir - 90));
-  println();
-
 }
