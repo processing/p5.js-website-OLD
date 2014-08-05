@@ -1230,7 +1230,7 @@
             "submodule": "Table",
             "namespace": "",
             "file": "src/objects/p5.Table.js",
-            "line": 12,
+            "line": 36,
             "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file.",
             "is_constructor": 1,
             "params": [
@@ -1398,7 +1398,7 @@
                 "type": "Object"
             },
             "example": [
-                " \n<div><code>\nfunction preload() {\n  mySound = loadSound('../sounds/drum.mp3');\n}\n\nfunction setup() {\n  mySound.play();\n}\n \n </code></div>"
+                " \n<div><code>\nfunction preload() {\n  mySound = loadSound('assets/drum.mp3');\n}\n\nfunction setup() {\n  mySound.play();\n}\n \n </code></div>"
             ]
         },
         "Amplitude": {
@@ -1429,7 +1429,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound = loadSound('../sounds/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound = loadSound('assets/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
             ]
         },
         "FFT": {
@@ -1466,7 +1466,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound = loadSound('../sounds/Damscray_DancingTiger.mp3');\n}\n\nfunction setup(){\n  createCanvas(100,100);\n  sound.loop();\n  fft = new FFT();\n}\n\nfunction draw(){\n  background(0);\n\n  var spectrum = fft.analyze(); \n  noStroke();\n  fill(0,255,0); // spectrum is green\n  for (var i = 0; i< spectrum.length; i++){\n    var x = map(i, 0, spectrum.length, 0, width);\n    var h = -height + map(spectrum[i], 0, 255, height, 0);\n    rect(x, height, width / spectrum.length, h )\n  }\n\n  var waveform = fft.waveform();\n  beginShape();\n  stroke(255,0,0); // waveform is red\n  strokeWeight(1);\n  for (var i = 0; i< waveform.length; i++){\n    var x = map(i, 0, waveform.length, 0, width);\n    var y = map( waveform[i], 0, 255, 0, height);\n    vertex(x,y);\n  }\n  endShape();\n}\n\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound = loadSound('assets/Damscray_DancingTiger.mp3');\n}\n\nfunction setup(){\n  createCanvas(100,100);\n  sound.loop();\n  fft = new FFT();\n}\n\nfunction draw(){\n  background(0);\n\n  var spectrum = fft.analyze(); \n  noStroke();\n  fill(0,255,0); // spectrum is green\n  for (var i = 0; i< spectrum.length; i++){\n    var x = map(i, 0, spectrum.length, 0, width);\n    var h = -height + map(spectrum[i], 0, 255, height, 0);\n    rect(x, height, width / spectrum.length, h )\n  }\n\n  var waveform = fft.waveform();\n  beginShape();\n  stroke(255,0,0); // waveform is red\n  strokeWeight(1);\n  for (var i = 0; i< waveform.length; i++){\n    var x = map(i, 0, waveform.length, 0, width);\n    var y = map( waveform[i], 0, 255, 0, height);\n    vertex(x,y);\n  }\n  endShape();\n}\n\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
             ]
         },
         "Oscillator": {
@@ -5487,7 +5487,15 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 23,
+            "line": 13,
+            "description": "Table Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>",
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 47,
             "itemtype": "property",
             "name": "columns",
             "type": "{Array}",
@@ -5497,7 +5505,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 29,
+            "line": 53,
             "itemtype": "property",
             "name": "rows",
             "type": "{Array}",
@@ -5507,7 +5515,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 36,
+            "line": 60,
             "description": "Use addRow() to add a new row of data to a p5.Table object. By default,\nan empty row is created. Typically, you would store a reference to\nthe new row in a TableRow object (see newRow in the example above),\nand then set individual values using set().\n\nIf a p5.TableRow object is included as a parameter, then that row is\nduplicated and added to the table.",
             "itemtype": "method",
             "name": "addRow",
@@ -5525,7 +5533,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 61,
+            "line": 85,
             "description": "Removes a row from the table object.",
             "itemtype": "method",
             "name": "removeRow",
@@ -5542,7 +5550,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 75,
+            "line": 99,
             "description": "Returns a reference to the specified p5.TableRow. The reference\ncan then be used to get and set values of the selected row.",
             "itemtype": "method",
             "name": "getRow",
@@ -5563,7 +5571,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 87,
+            "line": 111,
             "description": "Gets all rows from the table. Returns an array of p5.TableRows.",
             "itemtype": "method",
             "name": "getRows",
@@ -5577,7 +5585,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 97,
+            "line": 121,
             "description": "Finds the first row in the Table that contains the value\nprovided, and returns a reference to that row. Even if\nmultiple rows are possible matches, only the first matching\nrow is returned. The column to search may be specified by\neither its ID or title.",
             "itemtype": "method",
             "name": "findRow",
@@ -5603,7 +5611,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 131,
+            "line": 155,
             "description": "Finds the rows in the Table that contain the value\nprovided, and returns references to those rows. Returns an\nArray, so for must be used to iterate through all the rows,\nas shown in the example above. The column to search may be\nspecified by either its ID or title.",
             "itemtype": "method",
             "name": "findRows",
@@ -5629,7 +5637,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 164,
+            "line": 188,
             "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be\nspecified by either its ID or title.",
             "itemtype": "method",
             "name": "matchRow",
@@ -5642,7 +5650,7 @@
                 {
                     "name": "column",
                     "description": "The column ID (number) or \n                                 title (string)",
-                    "type": "(String|Number)"
+                    "type": "String|Number"
                 }
             ],
             "return": {
@@ -5655,7 +5663,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 196,
+            "line": 220,
             "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be specified\nby either its ID or title.",
             "itemtype": "method",
             "name": "matchRows",
@@ -5668,7 +5676,8 @@
                 {
                     "name": "column",
                     "description": "The column ID (number) or \n                                 title (string)",
-                    "type": "[(String|Number)]"
+                    "type": "String|Number",
+                    "optional": true
                 }
             ],
             "return": {
@@ -5681,7 +5690,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 230,
+            "line": 254,
             "description": "Retrieves all values in the specified column, and returns them\nas an array. The column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "getColumn",
@@ -5689,7 +5698,7 @@
                 {
                     "name": "column",
                     "description": "String or Number of the column to return",
-                    "type": "(String|Number)"
+                    "type": "String|Number"
                 }
             ],
             "return": {
@@ -5702,7 +5711,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 252,
+            "line": 276,
             "description": "Removes all rows from a Table. While all rows are removed,\ncolumns and column titles are maintained.",
             "itemtype": "method",
             "name": "clearRows",
@@ -5712,7 +5721,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 263,
+            "line": 287,
             "description": "Use addColumn() to add a new column to a Table object.\nTypically, you will want to specify a title, so the column\nmay be easily referenced later by name. (If no title is\nspecified, the new column's title will be null.)",
             "itemtype": "method",
             "name": "addColumn",
@@ -5720,7 +5729,8 @@
                 {
                     "name": "title",
                     "description": "Title of the given column",
-                    "type": "[String]"
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "class": "p5.Table",
@@ -5729,7 +5739,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 277,
+            "line": 301,
             "description": "Returns the total number of columns in a Table.",
             "return": {
                 "description": "Number of columns in this table",
@@ -5741,7 +5751,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 286,
+            "line": 310,
             "description": "Returns the total number of rows in a Table.",
             "itemtype": "method",
             "name": "getRowCount",
@@ -5755,7 +5765,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 296,
+            "line": 320,
             "description": "<p>Removes any of the specified characters (or \"tokens\").</p>\n\n<p>If no column is specified, then the values in all columns and\nrows are processed. A specific column may be referenced by\neither its ID or title.</p>",
             "itemtype": "method",
             "name": "removeTokens",
@@ -5768,7 +5778,8 @@
                 {
                     "name": "column",
                     "description": "Column ID (number)\n                                 or name (string)",
-                    "type": "[String|Number]"
+                    "type": "String|Number",
+                    "optional": true
                 }
             ],
             "class": "p5.Table",
@@ -5777,7 +5788,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 347,
+            "line": 371,
             "description": "Trims leading and trailing whitespace, such as spaces and tabs,\nfrom String table values. If no column is specified, then the\nvalues in all columns and rows are trimmed. A specific column\nmay be referenced by either its ID or title.",
             "itemtype": "method",
             "name": "trim",
@@ -5785,7 +5796,7 @@
                 {
                     "name": "column",
                     "description": "Column ID (number)\n                                 or name (string)",
-                    "type": "[String|Number]"
+                    "type": "String|Number"
                 }
             ],
             "class": "p5.Table",
@@ -5794,7 +5805,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 389,
+            "line": 413,
             "description": "Use removeColumn() to remove an existing column from a Table\nobject. The column to be removed may be identified by either\nits title (a String) or its index value (an int).\nremoveColumn(0) would remove the first column, removeColumn(1)\nwould remove the second column, and so on.",
             "itemtype": "method",
             "name": "removeColumn",
@@ -5802,7 +5813,7 @@
                 {
                     "name": "column",
                     "description": "columnName (string) or ID (number)",
-                    "type": "(String|Number)"
+                    "type": "String|Number"
                 }
             ],
             "class": "p5.Table",
@@ -5818,13 +5829,13 @@
             "params": [
                 {
                     "name": "column",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "Column ID (Number)\n                              or Title (String)",
+                    "type": "String|Number"
                 },
                 {
                     "name": "value",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "The value to be stored",
+                    "type": "String|Number"
                 }
             ],
             "class": "p5.TableRow",
@@ -5833,7 +5844,7 @@
         },
         {
             "file": "src/objects/p5.TableRow.js",
-            "line": 91,
+            "line": 92,
             "description": "Retrieves a float value from the TableRow's specified column.\nThe column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "get",
@@ -5845,8 +5856,8 @@
                 }
             ],
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "",
+                "type": "Object|p5.TableRow"
             },
             "class": "p5.TableRow",
             "module": "Data",
@@ -9040,7 +9051,7 @@
                 "type": "SoundFile"
             },
             "example": [
-                " \n<div><code>\nfunction preload() {\n mySound = loadSound('../sounds/drum.mp3');\n}\n\nfunction setup() {\n  mySound.loop();\n}\n</code></div>"
+                " \n<div><code>\nfunction preload() {\n mySound = loadSound('assets/drum.mp3');\n}\n\nfunction setup() {\n  mySound.loop();\n}\n</code></div>"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9128,7 +9139,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nfunction setup(){\n  mySound = loadSound('../sounds/Damscray_DancingTiger.mp3');\n}\nfunction mouseClicked() {\n  mySound.playMode('sustain');\n  mySound.play();\n}\nfunction keyPressed() {\n  mySound.playMode('restart');\n  mySound.play();\n}\n \n </code></div>"
+                "\n<div><code>\nfunction setup(){\n  mySound = loadSound('assets/Damscray_DancingTiger.mp3');\n}\nfunction mouseClicked() {\n  mySound.playMode('sustain');\n  mySound.play();\n}\nfunction keyPressed() {\n  mySound.playMode('restart');\n  mySound.play();\n}\n \n </code></div>"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9327,7 +9338,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nvar soundfile;\n\nfunction preload() {\n  soundfile = loadSound('../sounds/Damscray_DancingTiger.mp3');\n}\n\nfunction setup() {\n  soundfile.loop();\n}\n\nfunction draw() {\n  soundfile.rate(map(mouseX, 0, width, 0.25, 1.5)); \n}\n\n </code>\n </div>\n"
+                "\n<div><code>\nvar soundfile;\n\nfunction preload() {\n  soundfile = loadSound('assets/Damscray_DancingTiger.mp3');\n}\n\nfunction setup() {\n  soundfile.loop();\n}\n\nfunction draw() {\n  soundfile.rate(map(mouseX, 0, width, 0.25, 1.5)); \n}\n\n </code>\n </div>\n"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9454,7 +9465,7 @@
             "itemtype": "method",
             "name": "reverseBuffer",
             "example": [
-                "\n<div><code>\nvar drum;\n\nfunction preload() {\n  drum = loadSound('../sounds/drum.mp3');\n}\n\nfunction setup() {\n  drum.reverseBuffer();\n  drum.play();\n}\n\n </code>\n </div>"
+                "\n<div><code>\nvar drum;\n\nfunction preload() {\n  drum = loadSound('assets/drum.mp3');\n}\n\nfunction setup() {\n  drum.reverseBuffer();\n  drum.play();\n}\n\n </code>\n </div>"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9531,7 +9542,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound1 = loadSound('../sounds/beat.mp3');\n  sound2 = loadSound('../sounds/drum.mp3');\n}\nfunction setup(){\n  amplitude = new Amplitude();\n  sound1.loop();\n  sound2.loop();\n  amplitude.setInput(sound2);\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound1.stop();\n  sound2.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound1 = loadSound('assets/beat.mp3');\n  sound2 = loadSound('assets/drum.mp3');\n}\nfunction setup(){\n  amplitude = new Amplitude();\n  sound1.loop();\n  sound2.loop();\n  amplitude.setInput(sound2);\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound1.stop();\n  sound2.stop();\n}\n</code></div>"
             ],
             "class": "Amplitude",
             "module": "p5.sound",
@@ -9548,7 +9559,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound = loadSound('../sounds/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound = loadSound('assets/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
             ],
             "class": "Amplitude",
             "module": "p5.sound",
@@ -10397,8 +10408,12 @@
             "line": " src/objects/p5.Image.js:64"
         },
         {
+            "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>",
+            "line": " src/objects/p5.Table.js:13"
+        },
+        {
             "message": "Missing item type\nReturns the total number of columns in a Table.",
-            "line": " src/objects/p5.Table.js:277"
+            "line": " src/objects/p5.Table.js:301"
         },
         {
             "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",

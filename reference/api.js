@@ -152,7 +152,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "p5.sound",
             "name": "p5.sound",
-            "description": "This is the p5.sound library. Description goes here."
+            "description": "p5.sound extends p5 with <a href=\"http://www.w3.org/TR/webaudio/\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis."
         },
         {
             "displayName": "Pixels",

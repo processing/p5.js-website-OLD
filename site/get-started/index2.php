@@ -28,8 +28,8 @@
       you would like to use the minified version (compressed for faster page loading),
       change the link to p5.min.js.</p>
 
-      <pre><code class="language-markup">&lt;script src="../p5.min.js">&lt;/script></code></pre>   
-      
+      <pre><code class="language-markup">&lt;script src="../p5.min.jsp5.min.jsp5.min.jsp5.min.jsp5.min.jsp5.min.js">&lt;/script></code></pre>   
+  
       <p>Alternatively, you can link to a p5.js file hosted 
         online. All versions of p5.js are stored in a CDN ("Content Delivery 
         Network"). You can see a history of these versions here: <a target="_blank"
@@ -154,6 +154,8 @@ function draw() {
     </section>
 
   
+-->
+
     <?php include('../footer.php'); ?>
     <!-- outside of column for footer to go across both -->
 
@@ -164,8 +166,6 @@ function draw() {
     <object type="image/svg+xml" data="../img/thick-asterisk-alone.svg" id="asterisk-design-element">
          *<!-- to do: add fallback image in CSS -->
     </object>
-
-
     <?php include('../end.php'); ?>
   </body>
 </html>
