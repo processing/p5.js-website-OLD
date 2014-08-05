@@ -1,6 +1,6 @@
 /*
  * @name Song
- * @frame 720, 420
+ * @frame 720, 430
  * @description Play a song.
  */
 // The midi notes of a scale
