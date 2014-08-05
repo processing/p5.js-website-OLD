@@ -8,9 +8,12 @@
     <!-- content sections -->
     <div class="column-span">
       <section>
-          <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Animation</h2>
-          <p>The circle moves.
+          <p id="backlink"><a href="../#demos">< Back to Demos</a></p>
+          <h2>Flocking</h2>
+          <p>Demonstration of Craig Reynolds' &quot;Flocking&quot; behavior.
+ See: http://www.red3d.com/cwr/.
+ (Rules: Cohesion, Separation, Alignment.)
+ From http://natureofcode.com.
  </p>
 
           <div id="exampleDisplay">
@@ -42,7 +45,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/08_HelloP5/04_animate.js');
+          examples.init('../demos_src/01_HelloP5/04_flocking.js');
       });
     </script>
   </body>

@@ -216,36 +216,6 @@
         
       
         <p>
-        <strong>HelloP5</strong><br>
-        
-          <a href="examples/HelloP5_Simple_Shapes.php">Simple Shapes</a><br>
-          
-        
-          <a href="examples/HelloP5_Interactivity_1.php">Interactivity 1</a><br>
-          
-        
-          <a href="examples/HelloP5_Interactivity_2.php">Interactivity 2</a><br>
-          
-        
-          <a href="examples/HelloP5_Animation.php">Animation</a><br>
-          
-        
-          <a href="examples/HelloP5_Flocking.php">Flocking</a><br>
-          
-        
-          <a href="examples/HelloP5_Weather.php">Weather</a><br>
-          
-        
-          <a href="examples/HelloP5_Drawing.php">Drawing</a><br>
-          
-        
-          <a href="examples/HelloP5_Song.php">Song</a><br>
-          
-        
-        </p>
-        
-      
-        <p>
         <strong>Simulate</strong><br>
         
           <a href="examples/Simulate_Forces.php">Forces</a><br>
@@ -282,6 +252,46 @@
           
         
         </p>
+        
+      
+      </div>
+
+      <div class="spacer"></div>
+
+      <a name="demos" class="anchor"><h3>Demos</h3></a>
+      <div class="column_0">
+      
+        <p>
+        <strong>HelloP5</strong><br>
+        
+          <a href="demos/HelloP5_Simple_Shapes.php">Simple Shapes</a><br>
+          
+        
+          <a href="demos/HelloP5_Interactivity_1.php">Interactivity 1</a><br>
+          
+        
+          <a href="demos/HelloP5_Interactivity_2.php">Interactivity 2</a><br>
+          
+        
+          <a href="demos/HelloP5_Animation.php">Animation</a><br>
+          
+        
+          <a href="demos/HelloP5_Flocking.php">Flocking</a><br>
+          
+        
+          <a href="demos/HelloP5_Weather.php">Weather</a><br>
+          
+        
+          <a href="demos/HelloP5_Drawing.php">Drawing</a><br>
+          
+        
+          <a href="demos/HelloP5_Song.php">Song</a><br>
+          
+        
+        </p>
+        
+          </div>
+          <div class="column_1">
         
       
       </div>

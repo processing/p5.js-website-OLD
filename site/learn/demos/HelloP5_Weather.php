@@ -8,11 +8,10 @@
     <!-- content sections -->
     <div class="column-span">
       <section>
-          <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Song</h2>
-          <p>Play a song.
- @frame 720, 120
- </p>
+          <p id="backlink"><a href="../#demos">< Back to Demos</a></p>
+          <h2>Weather</h2>
+          <p>This example grabs JSON weather data from openweathermap.org.
+</p>
 
           <div id="exampleDisplay">
             <iframe id="exampleFrame" src="example.html" ></iframe>
@@ -43,7 +42,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/08_HelloP5/07_song.js');
+          examples.init('../demos_src/01_HelloP5/05_weather.js');
       });
     </script>
   </body>

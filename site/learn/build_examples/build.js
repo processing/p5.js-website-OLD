@@ -9,11 +9,7 @@ var ejs = require('ejs'),       // library for turning .ejs templates into .html
 ejs.open = '{{';
 ejs.close = '}}';
  
-// grab the file names from the command arguments array
-// and give them more convenient names
-var inputRoot = '../examples_src/';
-var inputFolders = fs.readdirSync(inputRoot);
-var outputRoot = "../examples/";
+
 
 var metaReg = new RegExp('\\* ', 'g');
 var spaceReg = new RegExp(' ', 'g');
@@ -25,22 +21,56 @@ var EOL = (process.platform === 'win32' ? '\r\n' : '\n')
 var example_template = ejs.compile(fs.readFileSync("example_template.ejs", 'utf8'));
 var learn_template = ejs.compile(fs.readFileSync("learn_template.ejs", 'utf8'));
  
-var all = {};
-var total = 0;
+var all = { examples: [], demos: [] };
+var total = { examples: 0, demos: 0 };
 
-var f = fs.readdirSync(outputRoot);
-f.forEach(function(file) {
-  console.log(file)
-  if (file.indexOf('.php') !== -1) {
-    fs.unlinkSync(outputRoot+file);
-  }
-});
 
-async.forEachSeries(inputFolders, function(folder, cb0) {
+// build examples
+// async.forEachSeries(examplesInputFolders, function(folder, cb0) {
+//   buildFolder(examplesInputRoot, examplesOutputRoot, folder, cb0);
+// }, function(callback) {
+//   // build demos
+//   // async.forEachSeries(inputFolders, function(folder, cb0) {
+//   //   buildFolder(folder, cb0);
+//   // }, function(callback) {
+//   //   console.log(all);
+//   //   // write main page
+//   //   fs.writeFile('../index.php', learn_template({'all':all, 'total':total}), 'utf8');
+//   // });
+// });
+
+buildSection('examples', function() {
+  buildSection('demos', function() {
+    console.log(all);
+    console.log(total);
+    // write main page
+    fs.writeFile('../index.php', learn_template({'all':all, 'total':total}), 'utf8');
+  })
+})
+
+function buildSection(type, callback) {
+  // get examples folders
+  var inputRoot = '../'+type+'_src/';
+  var outputRoot = '../'+type+'/';
+  var inputFolder = fs.readdirSync(inputRoot);
+  var f = fs.readdirSync(outputRoot);
+  f.forEach(function(file) {
+    console.log(file)
+    if (file.indexOf('.php') !== -1) {
+      fs.unlinkSync(outputRoot+file);
+    }
+  });
+  async.forEachSeries(inputFolder, function(folder, cb0) {
+    buildFolder(type, inputRoot, outputRoot, folder, cb0);
+  }, callback);
+}
+
+function buildFolder(type, inputRoot, outputRoot, folder, cb0) { 
   if (fs.statSync(inputRoot+folder).isDirectory()) {
 
     folderName = folder.substring(3);
-    all[folderName] = [];
+    console.log(type)
+    all[type][folderName] = [];
 
     var inputFiles = fs.readdirSync(inputRoot+folder);
     
@@ -65,17 +95,23 @@ async.forEachSeries(inputFolders, function(folder, cb0) {
 
           var code = data.substring(endDesc+2);
 
-          var content = example_template({'name':name, 'desc':desc, 'js':code, 'file':inputRoot+folder+'/'+file});
+          var formattedType = type.charAt(0).toUpperCase() + type.substring(1);
+          var content = example_template({'type':type, 
+                                          'formattedType':formattedType, 
+                                          'name':name, 
+                                          'desc':desc, 
+                                          'js':code, 
+                                          'file':inputRoot+folder+'/'+file});
           var outputFile = outputRoot+folderName+'_'+name.replace(spaceReg, '_')+'.php';
           console.log(outputFile);
 
           var shortName = name.replace(' and ', '/');
-          all[folderName].push([shortName, outputFile.substring(3)]);
+          all[type][folderName].push([shortName, outputFile.substring(3)]);
 
           fs.writeFile(outputFile, content, 'utf8');
 
           console.log('d')
-          total++;
+          total[type]++;
           cb1();
 
         });
@@ -89,10 +125,4 @@ async.forEachSeries(inputFolders, function(folder, cb0) {
   } else {
     cb0();
   }
-}, function(callback) {
-  console.log(all);
-  // write main page
-  fs.writeFile('../index.php', learn_template({'all':all, 'total':total}), 'utf8');
-
-});
-
+}

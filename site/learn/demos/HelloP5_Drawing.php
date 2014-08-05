@@ -8,10 +8,10 @@
     <!-- content sections -->
     <div class="column-span">
       <section>
-          <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Simple Shapes</h2>
-          <p>This examples includes a circle, square, triangle, and a flower.
- </p>
+          <p id="backlink"><a href="../#demos">< Back to Demos</a></p>
+          <h2>Drawing</h2>
+          <p>Generative painting program.
+</p>
 
           <div id="exampleDisplay">
             <iframe id="exampleFrame" src="example.html" ></iframe>
@@ -42,7 +42,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/08_HelloP5/01_shapes.js');
+          examples.init('../demos_src/01_HelloP5/06_drawing.js');
       });
     </script>
   </body>
