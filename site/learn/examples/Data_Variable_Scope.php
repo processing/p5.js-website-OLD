@@ -10,7 +10,7 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Variable Scope</h2>
-          <p>Variables have a global or local &quot;scope&quot;. For example, 
+          <p>Variables have a global or local "scope". For example, 
  variables declared within either the setup() or draw() functions may be 
  only used in these functions. Global variables, variables declared outside 
  of setup() and draw(), may be used anywhere within the program. If a local 

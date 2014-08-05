@@ -10,7 +10,7 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Logical Operators</h2>
-          <p>The logical operators for AND (&amp;&amp;) and OR (||) are used to 
+          <p>The logical operators for AND (&&) and OR (||) are used to 
  combine simple relational statements into more complex expressions.
  The NOT (!) operator is used to negate a boolean statement. 
  </p>

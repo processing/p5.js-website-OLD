@@ -6,8 +6,8 @@ var ejs = require('ejs'),       // library for turning .ejs templates into .html
     async = require('async');   // async module
  
 // make sure EJS is configured to use curly braces for templates
-ejs.open = '{{';
-ejs.close = '}}';
+// ejs.open = '<%';
+// ejs.close = '%>';
  
 
 

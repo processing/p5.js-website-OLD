@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Game of Life</h2>
           <p>A basic implementation of John Conway's Game of Life CA
- from (from &lt;a href=&quot;http://natureofcode.com&quot;&gt;natureofcode.com&lt;/a&gt;
+ from (from <a href="http://natureofcode.com">natureofcode.com</a>
  </p>
 
           <div id="exampleDisplay">

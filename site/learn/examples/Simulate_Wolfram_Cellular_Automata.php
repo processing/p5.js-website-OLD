@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Wolfram Cellular Automata</h2>
           <p>Simple demonstration of a Wolfram 1-dimensional cellular automata
- from (from &lt;a href=&quot;http://natureofcode.com&quot;&gt;natureofcode.com&lt;/a&gt;
+ from (from <a href="http://natureofcode.com">natureofcode.com</a>
  </p>
 
           <div id="exampleDisplay">

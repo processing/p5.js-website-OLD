@@ -8,9 +8,9 @@
     <!-- content sections -->
     <div class="column-span">
       <section>
-          <p id="backlink"><a href="../#{{=type}}">< Back to {{=formattedType}}</a></p>
-          <h2>{{=name}}</h2>
-          <p>{{=desc}}</p>
+          <p id="backlink"><a href="../#<%=type%>">< Back to <%=formattedType%></a></p>
+          <h2><%=name%></h2>
+          <p><%-desc%></p>
 
           <div id="exampleDisplay">
             <iframe id="exampleFrame" src="example.html" ></iframe>
@@ -41,7 +41,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('{{=file}}');
+          examples.init('<%=file%>');
       });
     </script>
   </body>

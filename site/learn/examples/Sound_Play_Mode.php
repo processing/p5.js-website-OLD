@@ -10,8 +10,8 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Play Mode</h2>
-          <p>Press &quot;a&quot; on your keyboard to play a sound file.
- Trigger lots of sounds at once! &quot;z&quot; to change playmode.
+          <p>Press "a" on your keyboard to play a sound file.
+ Trigger lots of sounds at once! "z" to change playmode.
  In 'sustain' mode, the sound will overlap with itself.
  In 'restart' mode it will stop and then start again.
  </p>

@@ -10,7 +10,7 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Iteration</h2>
-          <p>Iteration with a &quot;for&quot; structure to construct repetitive forms.
+          <p>Iteration with a "for" structure to construct repetitive forms.
  </p>
 
           <div id="exampleDisplay">

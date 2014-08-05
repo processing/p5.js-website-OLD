@@ -10,10 +10,9 @@
       <section>
           <p id="backlink"><a href="../#demos">< Back to Demos</a></p>
           <h2>Flocking</h2>
-          <p>Demonstration of Craig Reynolds' &quot;Flocking&quot; behavior.
- See: http://www.red3d.com/cwr/.
- (Rules: Cohesion, Separation, Alignment.)
- From http://natureofcode.com.
+          <p>Demonstration of <a href="http://www.red3d.com/cwr/">Craig Reynolds' "Flocking" behavior</a>.<br>
+ (Rules: Cohesion, Separation, Alignment.)<br>
+ From <a href="http://natureofcode.com">natureofcode.com</a>.
  </p>
 
           <div id="exampleDisplay">

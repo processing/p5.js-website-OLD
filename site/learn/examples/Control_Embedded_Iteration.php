@@ -10,7 +10,7 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Embedded Iteration</h2>
-          <p>Embedding &quot;for&quot; structures allows repetition in two dimensions.
+          <p>Embedding "for" structures allows repetition in two dimensions.
  </p>
 
           <div id="exampleDisplay">

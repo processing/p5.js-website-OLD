@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Conditionals 2</h2>
           <p>We extend the language of conditionals from the previous
- example by adding the keyword &quot;else&quot;. This allows conditionals 
+ example by adding the keyword "else". This allows conditionals 
  to ask two or more sequential questions, each with a different
  action. 
  </p>

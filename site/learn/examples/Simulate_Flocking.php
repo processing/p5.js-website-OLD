@@ -10,10 +10,10 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Flocking</h2>
-          <p>Demonstration of Craig Reynolds' &quot;Flocking&quot; behavior
+          <p>Demonstration of Craig Reynolds' "Flocking" behavior
  See: http://www.red3d.com/cwr/
  Rules: Cohesion, Separation, Alignment
- from (from &lt;a href=&quot;http://natureofcode.com&quot;&gt;natureofcode.com&lt;/a&gt;
+ from (from <a href="http://natureofcode.com">natureofcode.com</a>
  Click mouse to add boids into the system
  </p>
 

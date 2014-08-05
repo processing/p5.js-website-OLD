@@ -11,8 +11,8 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Saturation</h2>
           <p>Saturation is the strength or purity of the color and 
- represents the amount of gray in proportion to the hue. A &quot;saturated&quot; 
- color is pure and an &quot;unsaturated&quot; color has a large percentage of gray. 
+ represents the amount of gray in proportion to the hue. A "saturated" 
+ color is pure and an "unsaturated" color has a large percentage of gray. 
  Move the cursor vertically over each bar to alter its saturation.
  </p>
 
