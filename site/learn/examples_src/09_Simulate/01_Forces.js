@@ -1,7 +1,7 @@
 /*
  * @name Forces
  * @description Demonstration of multiple force acting on bodies
- * from (from <a href="http://natureofcode.com">natureofcode.com</a>
+ * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
 // Demonstration of multiple force acting on 
 // bodies (Mover class)
@@ -15,18 +15,10 @@ var movers = [];
 var liquid;
 
 function setup() {
-  // Must be before createGraphics
-  var text = createP("click mouse to reset");
-
   createCanvas(640, 360);
   reset();
   // Create liquid object
   liquid = new Liquid(0, height/2, width, height/2, 0.1);
-
-  // Here we call methods of each element to set the position and id, 
-  // try changing these values.
-  text.position(10, 365);
-
 }
 
 function draw() {
@@ -59,7 +51,6 @@ function draw() {
 }
 
 
-// Not working???
 function mousePressed() {
   reset();
 }
