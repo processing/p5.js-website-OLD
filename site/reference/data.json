@@ -1398,7 +1398,7 @@
                 "type": "Object"
             },
             "example": [
-                " \n<div><code>\nfunction preload() {\n  mySound = loadSound('../sounds/drum.mp3');\n}\n\nfunction setup() {\n  mySound.play();\n}\n \n </code></div>"
+                " \n<div><code>\nfunction preload() {\n  mySound = loadSound('assets/drum.mp3');\n}\n\nfunction setup() {\n  mySound.play();\n}\n \n </code></div>"
             ]
         },
         "Amplitude": {
@@ -1429,7 +1429,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound = loadSound('../sounds/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound = loadSound('assets/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
             ]
         },
         "FFT": {
@@ -1466,7 +1466,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound = loadSound('../sounds/Damscray_DancingTiger.mp3');\n}\n\nfunction setup(){\n  createCanvas(100,100);\n  sound.loop();\n  fft = new FFT();\n}\n\nfunction draw(){\n  background(0);\n\n  var spectrum = fft.analyze(); \n  noStroke();\n  fill(0,255,0); // spectrum is green\n  for (var i = 0; i< spectrum.length; i++){\n    var x = map(i, 0, spectrum.length, 0, width);\n    var h = -height + map(spectrum[i], 0, 255, height, 0);\n    rect(x, height, width / spectrum.length, h )\n  }\n\n  var waveform = fft.waveform();\n  beginShape();\n  stroke(255,0,0); // waveform is red\n  strokeWeight(1);\n  for (var i = 0; i< waveform.length; i++){\n    var x = map(i, 0, waveform.length, 0, width);\n    var y = map( waveform[i], 0, 255, 0, height);\n    vertex(x,y);\n  }\n  endShape();\n}\n\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound = loadSound('assets/Damscray_DancingTiger.mp3');\n}\n\nfunction setup(){\n  createCanvas(100,100);\n  sound.loop();\n  fft = new FFT();\n}\n\nfunction draw(){\n  background(0);\n\n  var spectrum = fft.analyze(); \n  noStroke();\n  fill(0,255,0); // spectrum is green\n  for (var i = 0; i< spectrum.length; i++){\n    var x = map(i, 0, spectrum.length, 0, width);\n    var h = -height + map(spectrum[i], 0, 255, height, 0);\n    rect(x, height, width / spectrum.length, h )\n  }\n\n  var waveform = fft.waveform();\n  beginShape();\n  stroke(255,0,0); // waveform is red\n  strokeWeight(1);\n  for (var i = 0; i< waveform.length; i++){\n    var x = map(i, 0, waveform.length, 0, width);\n    var y = map( waveform[i], 0, 255, 0, height);\n    vertex(x,y);\n  }\n  endShape();\n}\n\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
             ]
         },
         "Oscillator": {
@@ -9051,7 +9051,7 @@
                 "type": "SoundFile"
             },
             "example": [
-                " \n<div><code>\nfunction preload() {\n mySound = loadSound('../sounds/drum.mp3');\n}\n\nfunction setup() {\n  mySound.loop();\n}\n</code></div>"
+                " \n<div><code>\nfunction preload() {\n mySound = loadSound('assets/drum.mp3');\n}\n\nfunction setup() {\n  mySound.loop();\n}\n</code></div>"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9139,7 +9139,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nfunction setup(){\n  mySound = loadSound('../sounds/Damscray_DancingTiger.mp3');\n}\nfunction mouseClicked() {\n  mySound.playMode('sustain');\n  mySound.play();\n}\nfunction keyPressed() {\n  mySound.playMode('restart');\n  mySound.play();\n}\n \n </code></div>"
+                "\n<div><code>\nfunction setup(){\n  mySound = loadSound('assets/Damscray_DancingTiger.mp3');\n}\nfunction mouseClicked() {\n  mySound.playMode('sustain');\n  mySound.play();\n}\nfunction keyPressed() {\n  mySound.playMode('restart');\n  mySound.play();\n}\n \n </code></div>"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9338,7 +9338,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nvar soundfile;\n\nfunction preload() {\n  soundfile = loadSound('../sounds/Damscray_DancingTiger.mp3');\n}\n\nfunction setup() {\n  soundfile.loop();\n}\n\nfunction draw() {\n  soundfile.rate(map(mouseX, 0, width, 0.25, 1.5)); \n}\n\n </code>\n </div>\n"
+                "\n<div><code>\nvar soundfile;\n\nfunction preload() {\n  soundfile = loadSound('assets/Damscray_DancingTiger.mp3');\n}\n\nfunction setup() {\n  soundfile.loop();\n}\n\nfunction draw() {\n  soundfile.rate(map(mouseX, 0, width, 0.25, 1.5)); \n}\n\n </code>\n </div>\n"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9465,7 +9465,7 @@
             "itemtype": "method",
             "name": "reverseBuffer",
             "example": [
-                "\n<div><code>\nvar drum;\n\nfunction preload() {\n  drum = loadSound('../sounds/drum.mp3');\n}\n\nfunction setup() {\n  drum.reverseBuffer();\n  drum.play();\n}\n\n </code>\n </div>"
+                "\n<div><code>\nvar drum;\n\nfunction preload() {\n  drum = loadSound('assets/drum.mp3');\n}\n\nfunction setup() {\n  drum.reverseBuffer();\n  drum.play();\n}\n\n </code>\n </div>"
             ],
             "class": "SoundFile",
             "module": "p5.sound",
@@ -9542,7 +9542,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound1 = loadSound('../sounds/beat.mp3');\n  sound2 = loadSound('../sounds/drum.mp3');\n}\nfunction setup(){\n  amplitude = new Amplitude();\n  sound1.loop();\n  sound2.loop();\n  amplitude.setInput(sound2);\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound1.stop();\n  sound2.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound1 = loadSound('assets/beat.mp3');\n  sound2 = loadSound('assets/drum.mp3');\n}\nfunction setup(){\n  amplitude = new Amplitude();\n  sound1.loop();\n  sound2.loop();\n  amplitude.setInput(sound2);\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound1.stop();\n  sound2.stop();\n}\n</code></div>"
             ],
             "class": "Amplitude",
             "module": "p5.sound",
@@ -9559,7 +9559,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction preload(){\n  sound = loadSound('../sounds/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
+                "\n<div><code>\nfunction preload(){\n  sound = loadSound('assets/beat.mp3');\n}\nfunction setup() { \n  amplitude = new Amplitude();\n  sound.loop();\n}\nfunction draw() {\n  background(0);\n  fill(255);\n  var level = amplitude.getLevel();\n  var size = map(level, 0, 1, 0, 200);\n  ellipse(width/2, height/2, size, size);\n}\nfunction mouseClicked(){\n  sound.stop();\n}\n</code></div>"
             ],
             "class": "Amplitude",
             "module": "p5.sound",
