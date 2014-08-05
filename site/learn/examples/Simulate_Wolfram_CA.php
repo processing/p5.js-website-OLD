@@ -9,9 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Wolfram Cellular Automata</h2>
+          <h2>Wolfram CA</h2>
           <p>Simple demonstration of a Wolfram 1-dimensional cellular automata
- from (from <a href="http://natureofcode.com">natureofcode.com</a>
+ (<a href="http://natureofcode.com">natureofcode.com</a>)
  </p>
 
           <div id="exampleDisplay">

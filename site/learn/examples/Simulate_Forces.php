@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Forces</h2>
           <p>Demonstration of multiple force acting on bodies
- from (from <a href="http://natureofcode.com">natureofcode.com</a>
+ (<a href="http://natureofcode.com">natureofcode.com</a>)
  </p>
 
           <div id="exampleDisplay">

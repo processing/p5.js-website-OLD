@@ -10,8 +10,8 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Particle System</h2>
-          <p>This is a basic Particle System.
- from (from <a href="http://natureofcode.com">natureofcode.com</a>
+          <p>This is a basic Particle System
+ (<a href="http://natureofcode.com">natureofcode.com</a>)
  </p>
 
           <div id="exampleDisplay">

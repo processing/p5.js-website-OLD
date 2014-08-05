@@ -227,7 +227,7 @@
           <a href="examples/Simulate_Flocking.php">Flocking</a><br>
           
         
-          <a href="examples/Simulate_Wolfram_Cellular_Automata.php">Wolfram Cellular Automata</a><br>
+          <a href="examples/Simulate_Wolfram_CA.php">Wolfram CA</a><br>
           
         
           <a href="examples/Simulate_Game_of_Life.php">Game of Life</a><br>
