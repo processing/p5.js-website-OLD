@@ -7,8 +7,8 @@ var y;
 
 function setup() {
   createCanvas(720, 400);
-  x = 240;
-  y = 240;
+  x = width / 2;
+  y = height;
 }
 
 function draw() {
@@ -22,7 +22,7 @@ function draw() {
   y = y - 1;
   
   if (y < 0) {
-    y = 480;
+    y = height;
   }
 }
 
