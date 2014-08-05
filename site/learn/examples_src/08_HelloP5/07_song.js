@@ -1,8 +1,8 @@
 /*
  * @name Song
  * @description Play a song.
+ * @frame 720, 120
  */
-
 var triOsc;
 var env;
 var trigger = 0;
@@ -32,7 +32,8 @@ function setup() {
   triOsc = new TriOsc();
   triOsc.amp(0);
   triOsc.start();
-  env = new Env(attackTime, attackLevel, decayTime, sustainLevel, sustainTime, releaseTime);
+  env = new Env(attackTime, attackLevel, decayTime, 
+    sustainLevel, sustainTime, releaseTime);
 }
 
 function draw() {
@@ -43,6 +44,7 @@ function draw() {
     var duration = song[index].duration;
 
     var noteDiv = createSpan(song[index].display + "  ");
+    noteDiv.style('font-size', '70px')
     noteDiv.mousePressed(function() {
       triOsc.freq(midiToFreq(note));
       env.play(triOsc);

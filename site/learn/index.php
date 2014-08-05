@@ -221,19 +221,25 @@
           <a href="examples/HelloP5_Simple_Shapes.php">Simple Shapes</a><br>
           
         
-          <a href="examples/HelloP5_Interactivity.php">Interactivity</a><br>
+          <a href="examples/HelloP5_Interactivity_1.php">Interactivity 1</a><br>
+          
+        
+          <a href="examples/HelloP5_Interactivity_2.php">Interactivity 2</a><br>
           
         
           <a href="examples/HelloP5_Animation.php">Animation</a><br>
           
         
-          <a href="examples/HelloP5_Particle_System.php">Particle System</a><br>
+          <a href="examples/HelloP5_Flocking.php">Flocking</a><br>
           
         
           <a href="examples/HelloP5_Weather.php">Weather</a><br>
           
         
           <a href="examples/HelloP5_Drawing.php">Drawing</a><br>
+          
+        
+          <a href="examples/HelloP5_Song.php">Song</a><br>
           
         
         </p>

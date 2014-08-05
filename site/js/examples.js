@@ -27,7 +27,7 @@ var examples = {
       try {       
 
         if (exampleCode.indexOf('new p5') === -1) {
-          exampleCode += ' new p5();';
+          exampleCode += '\nnew p5();';
         }
 
         if (examples.dims.length < 2) {

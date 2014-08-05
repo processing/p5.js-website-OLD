@@ -9,8 +9,11 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Particle System</h2>
-          <p>A basic particle system.
+          <h2>Flocking</h2>
+          <p>Demonstration of Craig Reynolds' &quot;Flocking&quot; behavior
+ See: http://www.red3d.com/cwr/
+ Rules: Cohesion, Separation, Alignment
+ from http://natureofcode.com
  </p>
 
           <div id="exampleDisplay">
@@ -42,7 +45,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/08_HelloP5/04_particles.js');
+          examples.init('../examples_src/08_HelloP5/04_flocking.js');
       });
     </script>
   </body>

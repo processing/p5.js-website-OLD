@@ -2,7 +2,6 @@
 * @name Drawing
 * @description Generative painting program.
 */
-
 var paths = [];
 var painting = false;
 var next = 0;
@@ -12,9 +11,8 @@ function setup() {
 
   createCanvas(720, 400);
 
-  mousePosition = new p5.Vector(0,0);
-  lastPosition = new p5.Vector(0,0);
-
+  mousePosition = createVector(0,0);
+  lastPosition = createVector(0,0);
 };
 
 function draw() {
@@ -99,9 +97,9 @@ Paths.prototype.display = function() {
 }  
 
 // Class for individual circles on a path
-Circle = function (position, force, hue) {
-  this.position = new p5.Vector(position.x, position.y);
-  this.velocity = new p5.Vector(force.x, force.y);
+function Circle(position, force, hue) {
+  this.position = createVector(position.x, position.y);
+  this.velocity = createVector(force.x, force.y);
   this.drag = 0.95;
   this.age = 255;
 }

@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Weather</h2>
           <p>This example grabs JSON weather data from openweathermap.org.
- </p>
+</p>
 
           <div id="exampleDisplay">
             <iframe id="exampleFrame" src="example.html" ></iframe>

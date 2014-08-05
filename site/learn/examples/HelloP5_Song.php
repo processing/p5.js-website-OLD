@@ -9,8 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Interactivity</h2>
-          <p>The circle changes color when you click on it.
+          <h2>Song</h2>
+          <p>Play a song.
+ @frame 720, 120
  </p>
 
           <div id="exampleDisplay">
@@ -42,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/08_HelloP5/02_interactivity.js');
+          examples.init('../examples_src/08_HelloP5/07_song.js');
       });
     </script>
   </body>
