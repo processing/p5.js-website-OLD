@@ -17,21 +17,21 @@ function setup() {
 
 function draw() {
   background(51);
+  // Run all the boids
   for (var i = 0; i < boids.length; i++) {
-    boids[i].run(boids); // Passing the entire list of boids to each boid individually
+    boids[i].run(boids);
   }
 }
 
 
 // Boid class
 // Methods for Separation, Cohesion, Alignment added
-
 function Boid(x, y) {
   this.acceleration = createVector(0, 0);
   this.velocity = p5.Vector.random2D();
   this.position = createVector(x, y);
   this.r = 3.0;
-  this.maxspeed = 3; // Maximum speed
+  this.maxspeed = 3;    // Maximum speed
   this.maxforce = 0.05; // Maximum steering force
 }
 
@@ -42,15 +42,15 @@ Boid.prototype.run = function(boids) {
   this.render();
 }
 
+// Forces go into acceleration
 Boid.prototype.applyForce = function(force) {
-  // We could add mass here if we want A = F / M
   this.acceleration.add(force);
 }
 
 // We accumulate a new acceleration each time based on three rules
 Boid.prototype.flock = function(boids) {
   var sep = this.separate(boids); // Separation
-  var ali = this.align(boids); // Alignment
+  var ali = this.align(boids);    // Alignment
   var coh = this.cohesion(boids); // Cohesion
   // Arbitrarily weight these forces
   sep.mult(2.5);
@@ -86,6 +86,7 @@ Boid.prototype.seek = function(target) {
   return steer;
 }
 
+// Draw boid as a circle
 Boid.prototype.render = function() {
   fill(127, 127);
   stroke(200);
