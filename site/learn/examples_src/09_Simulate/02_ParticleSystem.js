@@ -1,25 +1,22 @@
 /*
  * @name Particle System
- * @description This is a basic Particle System.
- * from (from <a href="http://natureofcode.com">natureofcode.com</a>
+ * @description This is a basic Particle System
+ * (<a href="http://natureofcode.com">natureofcode.com</a>)
  */
-
-
-var ps;
+var system;
 
 function setup() {
-  createCanvas(640, 360);
-  ps = new ParticleSystem(createVector(width/2, 50));
+  createCanvas(720, 400);
+  system = new ParticleSystem(createVector(width/2, 50));
 }
 
 function draw() {
   background(51);
-  ps.addParticle();
-  ps.run();
+  system.addParticle();
+  system.run();
 }
 
 // A simple Particle class
-
 var Particle = function(position) {
   this.acceleration = createVector(0, 0.05);
   this.velocity = createVector(random(-1, 1), random(-1, 0));
@@ -49,13 +46,12 @@ Particle.prototype.display = function() {
 
 // Is the particle still useful?
 Particle.prototype.isDead = function(){
-  if (this.lifespan < 0.0) {
-      return true;
+  if (this.lifespan < 0) {
+    return true;
   } else {
     return false;
   }
 };
-
 
 var ParticleSystem = function(position) {
   this.origin = position.get();
@@ -68,10 +64,10 @@ ParticleSystem.prototype.addParticle = function() {
 
 ParticleSystem.prototype.run = function() {
   for (var i = this.particles.length-1; i >= 0; i--) {
-      var p = this.particles[i];
-      p.run();
-      if (p.isDead()) {
-        this.particles.splice(i, 1);
-      }
+    var p = this.particles[i];
+    p.run();
+    if (p.isDead()) {
+      this.particles.splice(i, 1);
     }
+  }
 };
