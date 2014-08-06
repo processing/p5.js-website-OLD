@@ -4,15 +4,10 @@
  */
 var osc, fft, soundFile;
 
-function preload() {
-  var soundFile = loadSound( ['assets/beatbox.ogg', 
-                          'assets/beatbox.wav'] );
-}
 
 function setup() {
   createCanvas(720, 400);
   background(0);
-  soundFile.play();
   osc = new p5.SinOsc(); // set frequency and type
   osc.amp(.5);
   fft = new p5.FFT();
