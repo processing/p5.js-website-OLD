@@ -14,19 +14,19 @@
       <h3></h3>
 
       <div class="left-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
+        <a class="nounderline" href="../reference/#/libraries/p5.dom">
         <div class="label">
         <img src="../img/libraries/dom.jpg"></a>
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom"><h4>p5.dom</h4></a>
+        <a class="nounderline" href="../reference/#/libraries/p5.dom"><h4>p5.dom</h4></a>
         </div>
         <p>p5.dom lets you interact with HTML5 objects beyond the canvas, including video, audio, webcam, input, and text.</p> 
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
+        <a class="nounderline" href="../reference/#/libraries/p5.sound">
         <div class="label">
         <img src="../img/libraries/sound.jpg"></a>
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound"><h4>p5.sound</h4></a>
+        <a class="nounderline" href="../reference/#/libraries/p5.sound"><h4>p5.sound</h4></a>
         </div>
         <p>p5.sound extends p5 with Web Audio functionality including audio input, playback, analysis and synthesis.</p> 
       </div>
@@ -36,7 +36,7 @@
       <a name="contributed" class="anchor"><h3>Contributed</h3></a>
 
       <div class="left-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.dom">
+        <a class="nounderline" href="../reference/#/libraries/p5.dom">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="#"><h4>p5.xxx</h4></a>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="<?php echo getRoot(); ?>reference/#/libraries/p5.sound">
+        <a class="nounderline" href="../reference/#/libraries/p5.sound">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="#"><h4>p5.xxx</h4></a>
@@ -59,8 +59,8 @@
       <a name="using-a-library" class="anchor"><h3>Using a library</h3></a>
 
       <p>A p5.js library can be any JavaScript code that extends or adds to the p5.js core functionality. 
-      There are two categories of libraries. Core libraries (<a href="<?php echo getRoot(); ?>reference/#/libraries/dom">p5.dom</a> 
-      and <a href="<?php echo getRoot(); ?>reference/#/libraries/sound">p5.sound</a>) are part of the p5.js 
+      There are two categories of libraries. Core libraries (<a href="../reference/#/libraries/dom">p5.dom</a> 
+      and <a href="../reference/#/libraries/sound">p5.sound</a>) are part of the p5.js 
       distribution, while contributed libraries are developed, owned, and maintained by members of the p5.js 
       community.</p>
 
@@ -91,7 +91,7 @@
 
     </div><!-- end id="container"  -->
 
-    <object type="image/svg+xml" data="<?php echo getRoot(); ?>img/thick-asterisk-alone.svg" id="asterisk-design-element">
+    <object type="image/svg+xml" data="../img/thick-asterisk-alone.svg" id="asterisk-design-element">
          *<!-- to do: add fallback image in CSS -->
     </object>
 
