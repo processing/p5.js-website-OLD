@@ -194,19 +194,16 @@
           <a href="examples/Color_Brightness.php">Brightness</a><br>
           
         
-          <a href="examples/Color_Alpha_Mask.php">Alpha Mask</a><br>
+          <a href="examples/Color_Color_Variables.php">Color Variables</a><br>
           
         
-          <a href="examples/Color_Create_Image.php">Create Image</a><br>
+          <a href="examples/Color_Relativity.php">Relativity</a><br>
           
         
-          <a href="examples/Color_Pointillism.php">Pointillism</a><br>
+          <a href="examples/Color_Linear_Gradient.php">Linear Gradient</a><br>
           
         
-          <a href="examples/Color_Pointillism.php">Pointillism</a><br>
-          
-        
-          <a href="examples/Color_Pointillism.php">Pointillism</a><br>
+          <a href="examples/Color_Radial_Gradient.php">Radial Gradient</a><br>
           
         
         </p>

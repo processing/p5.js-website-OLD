@@ -9,9 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Create Image</h2>
-          <p>The createImage() function provides a fresh buffer of pixels to
- play with. This example creates an image gradient.
+          <h2>Color Variables</h2>
+          <p>(Homage to Albers.) This example creates variables for colors 
+ that may be referred to in the program by a name, rather than a number.
  </p>
 
           <div id="exampleDisplay">
@@ -43,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/07_Color/04_Relativity.js');
+          examples.init('../examples_src/07_Color/03_Color_Variables.js');
       });
     </script>
   </body>

@@ -9,10 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Alpha Mask</h2>
-          <p>Loads a "mask" for an image to specify the transparency in 
- different parts of the image. The two images are blended together using 
- the mask() method of p5.Image.
+          <h2>Radial Gradient</h2>
+          <p>Draws a series of concentric circles to create a gradient 
+ from one color to another.
  </p>
 
           <div id="exampleDisplay">
@@ -44,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/07_Color/03_Color_Variables.js');
+          examples.init('../examples_src/07_Color/06_Radial_Gradient.js');
       });
     </script>
   </body>

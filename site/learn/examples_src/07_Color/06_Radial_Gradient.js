@@ -1,27 +1,33 @@
 /*
- * @name Pointillism
- * @description By Dan Shiffman. Mouse horizontal location controls size of 
- * dots. Creates a simple pointillist effect using ellipses colored according 
- * to pixels in an image.
+ * @name Radial Gradient
+ * @description Draws a series of concentric circles to create a gradient 
+ * from one color to another.
  */
-var img;
-var smallPoint, largePoint;
+var dim;
 
 function setup() {
-  createCanvas(720, 400);
-  img = loadImage("assets/moonwalk.jpg");
-  smallPoint = 4;
-  largePoint = 40;
-  imageMode(CENTER);
+  createCanvas(710, 400);
+  dim = width/2;
+  background(0);
+  colorMode(HSB, 360, 100, 100);
   noStroke();
-  background(255);
+  ellipseMode(RADIUS);
+  frameRate(1);
 }
 
-function draw() { 
-  var pointillize = map(mouseX, 0, width, smallPoint, largePoint);
-  var x = floor(random(img.width));
-  var y = floor(random(img.height));
-  var pix = img.get(x, y);
-  fill(pix, 128);
-  ellipse(x, y, pointillize, pointillize);
+function draw() {
+  background(0);
+  for (var x = 0; x <= width; x+=dim) {
+    drawGradient(x, height/2);
+  } 
+}
+
+function drawGradient(x, y) {
+  var radius = dim/2;
+  var h = random(0, 360);
+  for (var r = radius; r > 0; --r) {
+    fill(h, 90, 90);
+    ellipse(x, y, r, r);
+    h = (h + 1) % 360;
+  }
 }
