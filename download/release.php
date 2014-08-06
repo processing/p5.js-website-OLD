@@ -82,4 +82,8 @@ if ($_GET['f'] == 'update_lib') {
 else if ($_GET['f'] == 'update_jside') {
   updateJSIDE($version, $date);
 }
+else if (%_GET['f'] == 'update') {
+  updateLib($jside_version);
+  updateJSIDE($version, $date);
+}
 ?>
