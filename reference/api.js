@@ -99,7 +99,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "DOM",
             "name": "DOM",
-            "description": "A class to describe..."
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in black are added\nwith the p5.dom library. It is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
         },
         {
             "displayName": "Environment",

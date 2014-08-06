@@ -266,7 +266,7 @@
                 "p5.Graphics": 1
             },
             "fors": {
-                "p5.Graphics": 1
+                "p5": 1
             },
             "namespaces": {}
         },
@@ -871,7 +871,7 @@
             "module": "DOM",
             "file": "src/objects/p5.Element.js",
             "line": 10,
-            "description": "A class to describe..."
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in black are added\nwith the p5.dom library. It is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
         },
         "Rendering": {
             "name": "Rendering",
@@ -880,7 +880,6 @@
                 "p5.Graphics": 1
             },
             "fors": {
-                "p5.Graphics": 1,
                 "p5": 1
             },
             "namespaces": {},
@@ -1134,7 +1133,7 @@
             "namespace": "",
             "file": "src/objects/p5.Element.js",
             "line": 10,
-            "description": "A class to describe...",
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in black are added\nwith the p5.dom library. It is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc.",
             "is_constructor": 1,
             "params": [
                 {
@@ -1335,7 +1334,7 @@
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
             "line": 602,
-            "description": "A class to describe...",
+            "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
                 {
@@ -4957,7 +4956,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 19,
+            "line": 24,
             "description": "Underlying HTML element. All normal HTML methods can be called on this.",
             "itemtype": "property",
             "name": "elt",
@@ -4967,7 +4966,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 31,
+            "line": 36,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "parent",
@@ -4984,7 +4983,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 47,
+            "line": 52,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5001,7 +5000,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 58,
+            "line": 63,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5018,7 +5017,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 69,
+            "line": 74,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5035,7 +5034,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 82,
+            "line": 87,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5052,7 +5051,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 96,
+            "line": 101,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5069,7 +5068,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 109,
+            "line": 114,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5086,7 +5085,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 122,
+            "line": 127,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5103,7 +5102,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 135,
+            "line": 140,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5120,7 +5119,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 155,
+            "line": 160,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -8770,7 +8769,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 618,
+            "line": 621,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -8780,7 +8779,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 630,
+            "line": 633,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -8790,7 +8789,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 640,
+            "line": 643,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -8800,7 +8799,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 649,
+            "line": 652,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -8810,7 +8809,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 658,
+            "line": 661,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -8820,7 +8819,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 669,
+            "line": 672,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -8837,7 +8836,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 679,
+            "line": 682,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume;",
             "params": [
                 {
@@ -8859,7 +8858,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 695,
+            "line": 698,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -8881,7 +8880,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 711,
+            "line": 714,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -10322,7 +10321,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:155"
+            "line": " src/objects/p5.Element.js:160"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
