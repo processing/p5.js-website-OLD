@@ -1163,11 +1163,6 @@ footer {
         margin: 0;
     }
     
-    
-    .group-name {
-        font-size: 1em;
-    }
-    
     .group-name.first {
         margin-top: 0 !important;
     }
