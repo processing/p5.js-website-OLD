@@ -9,10 +9,10 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Pointillism</h2>
-          <p>By Dan Shiffman. Mouse horizontal location controls size of 
- dots. Creates a simple pointillist effect using ellipses colored according 
- to pixels in an image.
+          <h2>Objects</h2>
+          <p>Ported from example by hbarragan. Move the cursor across the 
+ image to change the speed and positions of the geometry. The class MRect 
+ defines a group of lines.
  </p>
 
           <div id="exampleDisplay">
@@ -44,8 +44,8 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/07_Color/07_Wave_Gradient.js');
+          examples.init('../examples_src/11_Objects/01_Objects.js');
       });
     </script>
   </body>
-</html>l>
+</html>

@@ -485,6 +485,9 @@ variable */
   background-color: #AFAFAF !important;
 }
 
+.ace_content {
+    padding: 0em 0.5em !important;
+}
 
 /* ==========================================================================
    Chrome Frame prompt

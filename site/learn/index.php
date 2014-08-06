@@ -237,6 +237,15 @@
         
       
         <p>
+        <strong>Objects</strong><br>
+        
+          <a href="examples/Objects_Objects.php">Objects</a><br>
+          
+        
+        </p>
+        
+      
+        <p>
         <strong>Sound</strong><br>
         
           <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>

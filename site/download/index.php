@@ -56,7 +56,7 @@
 
   
         <div class="link_group">
-        <h3>Editor</h3>
+        <a name="editor" class="anchor"><h3>Editor</h3></a>
         <p>The p5.js editor is currently in development, try out an alpha version of it now. Help out by posting
         <a href="https://github.com/antiboredom/jside/issues">feedback and bugs</a>. Support for Windows and Linux
         coming soon, along with more <a href="https://github.com/antiboredom/jside/labels/enhancement">features</a>.</p>

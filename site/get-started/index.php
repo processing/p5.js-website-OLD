@@ -21,7 +21,7 @@
       <h3>Download and File Setup</h3>
       <p>
         The easiest way to start is by using the empty example that comes with the
-        <a href="<?php echo getRoot(); ?>download/">p5.js complete</a> download. 
+        <a href="../download/">p5.js complete</a> download. 
       </p>
       
       <p>If you look in index.html, you'll notice that it links to the file p5.js. If
@@ -51,7 +51,7 @@
         target="_blank">code editor</a> of your choice. Instructions for getting set up 
         with <a href="www.sublimetext.com/2" target="_blank"> Sublime Text 2</a> are  
         included below. (An official p5 editor is in development, you can test out the
-        alpha version <a href="#">here</a>.)
+        alpha version <a href="../download/#editor">here</a>.)
       </p>
 
       <p>
@@ -151,6 +151,10 @@ function draw() {
         <li>Check out the <a href="../learn/">learn</a> page for tutorials and
           examples.</li>  
         </ul>
+
+
+      <p style="font-size: 1em; color:#AFAFAF">Parts of this tutorial were adapted from the book, Getting Started with Processing, by Casey Reas 
+      and Ben Fry, O’Reilly / Make 2010. Copyright © 2010 Casey Reas and Ben Fry. All rights reserved.</p>
     </section>
 
   
