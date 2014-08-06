@@ -2131,11 +2131,11 @@
         {
             "file": "src/core/core.js",
             "line": 42,
-            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial enviroment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
+            "description": "Called directly before setup(), the preload() function is used to handle\nasynchronous loading of external files. If a preload function is\ndefined, setup() will wait until any load calls within have finished.\nNothing besides load calls should be inside preload (loadImage,\nloadJSON, loadStrings, etc).",
             "itemtype": "method",
-            "name": "setup",
+            "name": "preload",
             "example": [
-                "\n  <div><code>\n    var a = 0;\n\n    function setup() {\n      createCanvas(200, 200);\n      background(0);\n      noStroke();\n      fill(102);\n    }\n\n    function draw() {\n      rect(a++%width, 10, 2, 80); \n    }\n  </code></div>"
+                "\n<div><code>\nvar img;\nvar c;\nfunction preload() {  // preload() runs once\n  img = loadImage('assets/laDefense.jpg');\n  noLoop();\n}\nfunction setup() {  // setup() waits until preload() is done\n  img.loadPixels();\n  // get color of middle pixel\n  c = img.get(img.width/2, img.height/2);\n}\nfunction draw() {\n  background(c);\n  image(img, 25, 25, 50, 50);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Structure",
@@ -2143,17 +2143,33 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 69,
-            "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
+            "line": 70,
+            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial enviroment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
-            "name": "draw",
+            "name": "setup",
+            "example": [
+                "\n<div><code>\nvar a = 0;\n\nfunction setup() {\n  background(0);\n  noStroke();\n  fill(102);\n}\n\nfunction draw() {\n  rect(a++%width, 10, 2, 80); \n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
         },
         {
             "file": "src/core/core.js",
-            "line": 248,
+            "line": 96,
+            "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
+            "itemtype": "method",
+            "name": "draw",
+            "example": [
+                "\n<div><code>\nvar yPos = 0;\nfunction setup() {  // setup() runs once\n  frameRate(30);\n}\nfunction draw() {  // draw() loops forever, until stopped\n  background(204);\n  yPos = yPos - 1;\n  if (yPos < 0) {\n    yPos = height;\n  }\n  line(0, yPos, width, yPos);\n}\n</code></div>"
+            ],
+            "class": "p5",
+            "module": "Structure",
+            "submodule": "Structure"
+        },
+        {
+            "file": "src/core/core.js",
+            "line": 290,
             "itemtype": "method",
             "name": "remove",
             "class": "p5",
@@ -2851,7 +2867,7 @@
         {
             "file": "src/environment/environment.js",
             "line": 236,
-            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state.",
+            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictiions this can only \nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
             "params": [
@@ -6595,7 +6611,7 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 12,
-            "description": "Creates a canvas element in the document.",
+            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed \nto this function. If size() is not used, the window will be given a \ndefault size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
@@ -6614,13 +6630,16 @@
                 "description": "canvas generated",
                 "type": "Object"
             },
+            "example": [
+                " \n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 50);\n  background(153);\n  line(0, 0, width, height);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Rendering",
             "submodule": "Rendering"
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 69,
+            "line": 84,
             "description": "Creates and returns a new p5.Graphics object. Use this class if you need \nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -6649,7 +6668,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 124,
+            "line": 139,
             "description": "Blends the pixels in the display window according to the defined mode. \nThere is a choice of the following modes to blend the source pixels (A) \nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C = \nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C = \nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C = \nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be \ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the \ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% \ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and \n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast, \nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
