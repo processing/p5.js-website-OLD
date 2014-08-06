@@ -871,7 +871,7 @@
             "module": "DOM",
             "file": "src/objects/p5.Element.js",
             "line": 10,
-            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in black are added\nwith the p5.dom library. It is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in brown are added\nwith the <a href=\"http://p5js.org/libraries/\">p5.dom library</a>. \nIt is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
         },
         "Rendering": {
             "name": "Rendering",
@@ -1133,7 +1133,7 @@
             "namespace": "",
             "file": "src/objects/p5.Element.js",
             "line": 10,
-            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in black are added\nwith the p5.dom library. It is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc.",
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in brown are added\nwith the <a href=\"http://p5js.org/libraries/\">p5.dom library</a>. \nIt is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc.",
             "is_constructor": 1,
             "params": [
                 {
@@ -4065,7 +4065,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 39,
+            "line": 33,
             "description": "The system variable touches[] contains an array of the positions of all\ncurrent touch points, relative to (0, 0) of the canvas. Each element in\nthe array is an object with x and y properties.",
             "itemtype": "property",
             "name": "touches[]",
@@ -4075,7 +4075,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 54,
+            "line": 56,
             "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -4085,7 +4085,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 73,
+            "line": 75,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -4095,7 +4095,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 92,
+            "line": 94,
             "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -4962,7 +4962,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 24,
+            "line": 25,
             "description": "Underlying HTML element. All normal HTML methods can be called on this.",
             "itemtype": "property",
             "name": "elt",
@@ -4972,7 +4972,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 36,
+            "line": 37,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "parent",
@@ -4989,7 +4989,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 52,
+            "line": 53,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5006,7 +5006,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 63,
+            "line": 64,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5023,7 +5023,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 74,
+            "line": 75,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5040,7 +5040,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 87,
+            "line": 88,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5057,7 +5057,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 101,
+            "line": 102,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5074,7 +5074,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 114,
+            "line": 115,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5091,7 +5091,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 127,
+            "line": 128,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5108,7 +5108,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 140,
+            "line": 141,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5125,7 +5125,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 160,
+            "line": 161,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -10410,7 +10410,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:160"
+            "line": " src/objects/p5.Element.js:161"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
