@@ -57,7 +57,7 @@
       <div class="column_0">
       <% var t = 0; var col=1; for(var topic in all['examples']) { %>
         <p>
-        <strong><%=topic%></strong><br>
+        <strong><% var newt = topic.replace('_', ' ')%><%=newt%></strong><br>
         <% for(var i=0; i<all['examples'][topic].length; i++) { %>
           <a href="<%=all['examples'][topic][i][1]%>"><%= all['examples'][topic][i][0] %></a><br>
           <% t++ %>
@@ -76,7 +76,7 @@
       <div class="column_0">
       <% var t = 0; var col=1; for(var topic in all['demos']) { %>
         <p>
-        <strong><%=topic%></strong><br>
+        <strong><% var newt = topic.replace('_', ' ')%><%=newt%></strong><br>
         <% for(var i=0; i<all['demos'][topic].length; i++) { %>
           <a href="<%=all['demos'][topic][i][1]%>"><%= all['demos'][topic][i][0] %></a><br>
           <% t++ %>

@@ -246,6 +246,15 @@
         
       
         <p>
+        <strong>Instance Mode</strong><br>
+        
+          <a href="examples/Instance_Mode_Instantiation.php">Instantiation</a><br>
+          
+        
+        </p>
+        
+      
+        <p>
         <strong>Sound</strong><br>
         
           <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>
@@ -271,30 +280,30 @@
       <div class="column_0">
       
         <p>
-        <strong>HelloP5</strong><br>
+        <strong>Hello P5</strong><br>
         
-          <a href="demos/HelloP5_Simple_Shapes.php">Simple Shapes</a><br>
+          <a href="demos/Hello_P5_Simple_Shapes.php">Simple Shapes</a><br>
           
         
-          <a href="demos/HelloP5_Interactivity_1.php">Interactivity 1</a><br>
+          <a href="demos/Hello_P5_Interactivity_1.php">Interactivity 1</a><br>
           
         
-          <a href="demos/HelloP5_Interactivity_2.php">Interactivity 2</a><br>
+          <a href="demos/Hello_P5_Interactivity_2.php">Interactivity 2</a><br>
           
         
-          <a href="demos/HelloP5_Animation.php">Animation</a><br>
+          <a href="demos/Hello_P5_Animation.php">Animation</a><br>
           
         
-          <a href="demos/HelloP5_Flocking.php">Flocking</a><br>
+          <a href="demos/Hello_P5_Flocking.php">Flocking</a><br>
           
         
-          <a href="demos/HelloP5_Weather.php">Weather</a><br>
+          <a href="demos/Hello_P5_Weather.php">Weather</a><br>
           
         
-          <a href="demos/HelloP5_Drawing.php">Drawing</a><br>
+          <a href="demos/Hello_P5_Drawing.php">Drawing</a><br>
           
         
-          <a href="demos/HelloP5_Song.php">Song</a><br>
+          <a href="demos/Hello_P5_Song.php">Song</a><br>
           
         
         </p>

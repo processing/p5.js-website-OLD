@@ -42,7 +42,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../demos_src/01_HelloP5/06_drawing.js');
+          examples.init('../demos_src/01_Hello_P5/06_drawing.js');
       });
     </script>
   </body>

@@ -9,9 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#demos">< Back to Demos</a></p>
-          <h2>Weather</h2>
-          <p>This example grabs JSON weather data from openweathermap.org.
-</p>
+          <h2>Simple Shapes</h2>
+          <p>This examples includes a circle, square, triangle, and a flower.
+ </p>
 
           <div id="exampleDisplay">
             <iframe id="exampleFrame" src="example.html" ></iframe>
@@ -42,7 +42,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../demos_src/01_HelloP5/05_weather.js');
+          examples.init('../demos_src/01_Hello_P5/01_shapes.js');
       });
     </script>
   </body>
