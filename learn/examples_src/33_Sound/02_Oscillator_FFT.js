@@ -2,7 +2,7 @@
  * @name Oscillator
  * @description Control an Oscillator and view the waveform using FFT
  */
-var osc, fft, soundFile;
+var osc, fft;
 
 
 function setup() {
