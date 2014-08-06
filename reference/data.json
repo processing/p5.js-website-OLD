@@ -1840,7 +1840,7 @@
         {
             "file": "src/color/setting.js",
             "line": 22,
-            "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the backgound need only be set once.",
+            "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the background need only be set once.",
             "itemtype": "method",
             "name": "background",
             "params": [
@@ -2120,7 +2120,7 @@
         {
             "file": "src/core/core.js",
             "line": 70,
-            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial enviroment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
+            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial environment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
             "example": [
@@ -2300,7 +2300,7 @@
         {
             "file": "src/data/array_functions.js",
             "line": 145,
-            "description": "Inserts a value or an array of values into an existing array. The first\nparameter specifies the intial array to be modified, and the second\nparameter defines the data to be inserted. The third parameter is an index\nvalue which specifies the array position from which to insert data.\n(Remember that array index numbering starts at zero, so the first position\nis 0, the second position is 1, and so on.)",
+            "description": "Inserts a value or an array of values into an existing array. The first\nparameter specifies the initial array to be modified, and the second\nparameter defines the data to be inserted. The third parameter is an index\nvalue which specifies the array position from which to insert data.\n(Remember that array index numbering starts at zero, so the first position\nis 0, the second position is 1, and so on.)",
             "itemtype": "method",
             "name": "splice",
             "params": [
@@ -2843,7 +2843,7 @@
         {
             "file": "src/environment/environment.js",
             "line": 236,
-            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictiions this can only \nbe called on user input, for example, on mouse press like the example\nbelow.",
+            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
             "params": [
@@ -2868,7 +2868,7 @@
         {
             "file": "src/image/filters.js",
             "line": 5,
-            "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
+            "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
             "class": "p5",
             "module": "Environment"
         },
@@ -3291,7 +3291,7 @@
         {
             "file": "src/image/loading_displaying.js",
             "line": 206,
-            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
+            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
             "params": [
@@ -4599,7 +4599,7 @@
         {
             "file": "src/math/noise.js",
             "line": 196,
-            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overal intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
+            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overall intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
             "itemtype": "method",
             "name": "noiseDetail",
             "params": [
@@ -6186,7 +6186,8 @@
             "file": "src/objects/p5.Vector.js",
             "line": 319,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "mtehod": "setMag",
+            "itemtype": "method",
+            "name": "setMag",
             "params": [
                 {
                     "name": "len",
@@ -6974,7 +6975,7 @@
         {
             "file": "src/shape/attributes.js",
             "line": 18,
-            "description": "Modifies the location from which ellipses are drawn by changing the way\nin which parameters given to ellipse() are intepreted.\n\nThe default mode is ellipseMode(CENTER), which interprets the first two\nparameters of ellipse() as the shape's center point, while the third and\nfourth parameters are its width and height.\n\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as\nthe shape's center point, but uses the third and fourth parameters to\nspecify half of the shapes's width and height.\n\nellipseMode(CORNER) interprets the first two parameters of ellipse() as\nthe upper-left corner of the shape, while the third and fourth parameters\nare its width and height.\n\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as\nthe location of one corner of the ellipse's bounding box, and the third\nand fourth parameters as the location of the opposite corner.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
+            "description": "Modifies the location from which ellipses are drawn by changing the way\nin which parameters given to ellipse() are interpreted.\n\nThe default mode is ellipseMode(CENTER), which interprets the first two\nparameters of ellipse() as the shape's center point, while the third and\nfourth parameters are its width and height.\n\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as\nthe shape's center point, but uses the third and fourth parameters to\nspecify half of the shapes's width and height.\n\nellipseMode(CORNER) interprets the first two parameters of ellipse() as\nthe upper-left corner of the shape, while the third and fourth parameters\nare its width and height.\n\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as\nthe location of one corner of the ellipse's bounding box, and the third\nand fourth parameters as the location of the opposite corner.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
             "itemtype": "method",
             "name": "ellipseMode",
             "params": [
@@ -8041,7 +8042,7 @@
         {
             "file": "src/typography/attributes.js",
             "line": 121,
-            "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverriden by CSS styling.",
+            "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
             "params": [
@@ -8087,7 +8088,7 @@
             "params": [
                 {
                     "name": "str",
-                    "description": "the alphanumberic symbols to be displayed",
+                    "description": "the alphanumeric symbols to be displayed",
                     "type": "String"
                 },
                 {
@@ -10232,10 +10233,6 @@
             "line": " src/image/filters.js:243"
         },
         {
-            "message": "unknown tag: mtehod",
-            "line": " src/objects/p5.Vector.js:319"
-        },
-        {
             "message": "replacing incorrect tag: params with param",
             "line": " lib/addons/p5.sound.js:1015"
         },
@@ -10256,7 +10253,7 @@
             "line": " src/environment/environment.js:133"
         },
         {
-            "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
+            "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
             "line": " src/image/filters.js:5"
         },
         {
@@ -10338,10 +10335,6 @@
         {
             "message": "Missing item type\nReturns the total number of columns in a Table.",
             "line": " src/objects/p5.Table.js:301"
-        },
-        {
-            "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/objects/p5.Vector.js:319"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
