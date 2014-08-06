@@ -1227,7 +1227,7 @@
             "submodule": "Table",
             "namespace": "",
             "file": "src/objects/p5.Table.js",
-            "line": 36,
+            "line": 35,
             "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file.",
             "is_constructor": 1,
             "params": [
@@ -3641,7 +3641,7 @@
         {
             "file": "src/input/files.js",
             "line": 101,
-            "description": "<p>Reads the contents of a file or URL and creates an Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format), and to\ninclude a header row.</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>",
+            "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>",
             "itemtype": "method",
             "name": "loadTable",
             "params": [
@@ -3649,6 +3649,12 @@
                     "name": "filename",
                     "description": "name of the file or URL to load",
                     "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "\"header\" \"csv\" \"tsv\"",
+                    "type": "String|Strings",
+                    "optional": true
                 },
                 {
                     "name": "callback",
@@ -3667,7 +3673,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 162,
+            "line": 205,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
@@ -5480,14 +5486,14 @@
         {
             "file": "src/objects/p5.Table.js",
             "line": 13,
-            "description": "Table Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>",
+            "description": "Table Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
             "class": "p5.Table",
             "module": "Data",
             "submodule": "Table"
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 47,
+            "line": 46,
             "itemtype": "property",
             "name": "columns",
             "type": "{Array}",
@@ -5497,7 +5503,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 53,
+            "line": 52,
             "itemtype": "property",
             "name": "rows",
             "type": "{Array}",
@@ -5507,7 +5513,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 60,
+            "line": 59,
             "description": "Use addRow() to add a new row of data to a p5.Table object. By default,\nan empty row is created. Typically, you would store a reference to\nthe new row in a TableRow object (see newRow in the example above),\nand then set individual values using set().\n\nIf a p5.TableRow object is included as a parameter, then that row is\nduplicated and added to the table.",
             "itemtype": "method",
             "name": "addRow",
@@ -5525,7 +5531,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 85,
+            "line": 84,
             "description": "Removes a row from the table object.",
             "itemtype": "method",
             "name": "removeRow",
@@ -5542,7 +5548,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 99,
+            "line": 98,
             "description": "Returns a reference to the specified p5.TableRow. The reference\ncan then be used to get and set values of the selected row.",
             "itemtype": "method",
             "name": "getRow",
@@ -5563,7 +5569,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 111,
+            "line": 110,
             "description": "Gets all rows from the table. Returns an array of p5.TableRows.",
             "itemtype": "method",
             "name": "getRows",
@@ -5577,7 +5583,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 121,
+            "line": 120,
             "description": "Finds the first row in the Table that contains the value\nprovided, and returns a reference to that row. Even if\nmultiple rows are possible matches, only the first matching\nrow is returned. The column to search may be specified by\neither its ID or title.",
             "itemtype": "method",
             "name": "findRow",
@@ -5603,7 +5609,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 155,
+            "line": 154,
             "description": "Finds the rows in the Table that contain the value\nprovided, and returns references to those rows. Returns an\nArray, so for must be used to iterate through all the rows,\nas shown in the example above. The column to search may be\nspecified by either its ID or title.",
             "itemtype": "method",
             "name": "findRows",
@@ -5629,7 +5635,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 188,
+            "line": 187,
             "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be\nspecified by either its ID or title.",
             "itemtype": "method",
             "name": "matchRow",
@@ -5655,7 +5661,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 220,
+            "line": 219,
             "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be specified\nby either its ID or title.",
             "itemtype": "method",
             "name": "matchRows",
@@ -5682,7 +5688,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 254,
+            "line": 253,
             "description": "Retrieves all values in the specified column, and returns them\nas an array. The column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "getColumn",
@@ -5703,7 +5709,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 276,
+            "line": 275,
             "description": "Removes all rows from a Table. While all rows are removed,\ncolumns and column titles are maintained.",
             "itemtype": "method",
             "name": "clearRows",
@@ -5713,7 +5719,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 287,
+            "line": 286,
             "description": "Use addColumn() to add a new column to a Table object.\nTypically, you will want to specify a title, so the column\nmay be easily referenced later by name. (If no title is\nspecified, the new column's title will be null.)",
             "itemtype": "method",
             "name": "addColumn",
@@ -5731,7 +5737,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 301,
+            "line": 300,
             "description": "Returns the total number of columns in a Table.",
             "return": {
                 "description": "Number of columns in this table",
@@ -5743,7 +5749,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 310,
+            "line": 309,
             "description": "Returns the total number of rows in a Table.",
             "itemtype": "method",
             "name": "getRowCount",
@@ -5757,7 +5763,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 320,
+            "line": 319,
             "description": "<p>Removes any of the specified characters (or \"tokens\").</p>\n\n<p>If no column is specified, then the values in all columns and\nrows are processed. A specific column may be referenced by\neither its ID or title.</p>",
             "itemtype": "method",
             "name": "removeTokens",
@@ -5780,7 +5786,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 371,
+            "line": 370,
             "description": "Trims leading and trailing whitespace, such as spaces and tabs,\nfrom String table values. If no column is specified, then the\nvalues in all columns and rows are trimmed. A specific column\nmay be referenced by either its ID or title.",
             "itemtype": "method",
             "name": "trim",
@@ -5797,7 +5803,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 413,
+            "line": 412,
             "description": "Use removeColumn() to remove an existing column from a Table\nobject. The column to be removed may be identified by either\nits title (a String) or its index value (an int).\nremoveColumn(0) would remove the first column, removeColumn(1)\nwould remove the second column, and so on.",
             "itemtype": "method",
             "name": "removeColumn",
@@ -5814,7 +5820,7 @@
         },
         {
             "file": "src/objects/p5.TableRow.js",
-            "line": 54,
+            "line": 43,
             "description": "Stores a value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "set",
@@ -5836,8 +5842,52 @@
         },
         {
             "file": "src/objects/p5.TableRow.js",
-            "line": 92,
-            "description": "Retrieves a float value from the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "line": 79,
+            "description": "Stores a Float value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "itemtype": "method",
+            "name": "setNum",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "Column ID (Number)\n                              or Title (String)",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "value",
+                    "description": "The value to be stored\n                              as a Float",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 95,
+            "description": "Stores a String value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "itemtype": "method",
+            "name": "setString",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "Column ID (Number)\n                              or Title (String)",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "value",
+                    "description": "The value to be stored\n                              as a String",
+                    "type": "String"
+                }
+            ],
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 110,
+            "description": "Retrieves a value from the TableRow's specified column.\nThe column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "get",
             "params": [
@@ -5849,7 +5899,49 @@
             ],
             "return": {
                 "description": "",
-                "type": "Object|p5.TableRow"
+                "type": "String|Number"
+            },
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 127,
+            "description": "Retrieves a Float value from the TableRow's specified\ncolumn. The column may be specified by either its ID or\ntitle.",
+            "itemtype": "method",
+            "name": "getNum",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                 ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "Float Floating point number",
+                "type": "Number"
+            },
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 151,
+            "description": "Retrieves an String value from the TableRow's specified\ncolumn. The column may be specified by either its ID or\ntitle.",
+            "itemtype": "method",
+            "name": "getString",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                 ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "String",
+                "type": "String"
             },
             "class": "p5.TableRow",
             "module": "Data",
@@ -10329,12 +10421,12 @@
             "line": " src/objects/p5.Image.js:64"
         },
         {
-            "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>",
+            "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
             "line": " src/objects/p5.Table.js:13"
         },
         {
             "message": "Missing item type\nReturns the total number of columns in a Table.",
-            "line": " src/objects/p5.Table.js:301"
+            "line": " src/objects/p5.Table.js:300"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
