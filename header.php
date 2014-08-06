@@ -11,10 +11,7 @@
     <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
     <meta name="viewport" content="width=device-width">
 
-    <!-- when hosted
-    <script type="text/javascript" src="http://fast.fonts.net/jsapi/173b6bc2-616e-4a13-8c9a-6fcf9ae1c69a.js"></script>
-    -->
-
+    <script type="text/javascript" src="http://fast.fonts.net/jsapi/5ace315e-3b19-4568-9e85-5bfcb29004c0.js"></script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- CSS (order matters): normalize across browsers -->
@@ -28,4 +25,8 @@
 
     <!-- modernizer (not leveraged, yet) 
     <script src="<?php echo getRoot(); ?>js/vendor/modernizr-2.6.2.min.js"></script>-->
+    <!-- jquery-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php echo getRoot(); ?>js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    
   </head>

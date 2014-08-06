@@ -21,15 +21,15 @@
       <h3>Download and File Setup</h3>
       <p>
         The easiest way to start is by using the empty example that comes with the
-        <a href="<?php echo getRoot(); ?>download/">p5.js complete</a> download. 
+        <a href="../download/">p5.js complete</a> download. 
       </p>
       
       <p>If you look in index.html, you'll notice that it links to the file p5.js. If
       you would like to use the minified version (compressed for faster page loading),
       change the link to p5.min.js.</p>
 
-      <pre><code class="language-markup">&lt;script src="../p5.min.jsp5.min.jsp5.min.jsp5.min.jsp5.min.jsp5.min.js">&lt;/script></code></pre>   
-  
+      <pre><code class="language-markup">&lt;script src="../p5.min.js">&lt;/script></code></pre>   
+      
       <p>Alternatively, you can link to a p5.js file hosted 
         online. All versions of p5.js are stored in a CDN ("Content Delivery 
         Network"). You can see a history of these versions here: <a target="_blank"
@@ -49,9 +49,9 @@
       <p>
         You can use the <a href="http://en.wikipedia.org/wiki/Source_code_editor" 
         target="_blank">code editor</a> of your choice. Instructions for getting set up 
-        with <a href="www.sublimetext.com/2" target="_blank"> Sublime Text 2</a> are  
+        with <a href="http://www.sublimetext.com/2" target="_blank"> Sublime Text 2</a> are  
         included below. (An official p5 editor is in development, you can test out the
-        alpha version <a href="#">here</a>.)
+        alpha version <a href="../download/#editor">here</a>.)
       </p>
 
       <p>
@@ -151,11 +151,13 @@ function draw() {
         <li>Check out the <a href="../learn/">learn</a> page for tutorials and
           examples.</li>  
         </ul>
+
+
+      <p style="font-size: 1em; color:#AFAFAF">Parts of this tutorial were adapted from the book, Getting Started with Processing, by Casey Reas 
+      and Ben Fry, O’Reilly / Make 2010. Copyright © 2010 Casey Reas and Ben Fry. All rights reserved.</p>
     </section>
 
   
--->
-
     <?php include('../footer.php'); ?>
     <!-- outside of column for footer to go across both -->
 
@@ -166,6 +168,8 @@ function draw() {
     <object type="image/svg+xml" data="../img/thick-asterisk-alone.svg" id="asterisk-design-element">
          *<!-- to do: add fallback image in CSS -->
     </object>
+
+
     <?php include('../end.php'); ?>
   </body>
 </html>

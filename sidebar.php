@@ -9,46 +9,36 @@
   $path = getcwd();
 
   if (strpos($path, "download") !== false) {
-    $tagline = "the fun of Processing times the quirkiness of JavaScript";
-  } else if (strpos($path, "getting") !== false) {
-    $tagline = "the simplicity of Processing times the flexibility of JavaScript";
+    $tagline = "Processing fun times JavaScript quirkiness";
+  } else if (strpos($path, "get") !== false) {
+    $tagline = "Processing simplicity times JavaScript flexibility";
   } else if (strpos($path, "reference") !== false || strpos($path, "libraries") !== false) {
-    $tagline = "the intuition of Processing times the extensibility of JavaScript";
-  } else if (strpos($path, "learning") !== false) {
-    $tagline = "the creativity of Processing times the dynamism of JavaScript";
-  } else if (strpos($path, "development") !== false) {
-    $tagline = "the community of Processing times the community of JavaScript";
+    $tagline = "Processing intuition times JavaScript power";
+  } else if (strpos($path, "learn") !== false) {
+    $tagline = "Processing creativity times JavaScript dynamism";
+  } else if (strpos($path, "contribute") !== false) {
+    $tagline = "Processing community times JavaScript community";
   } else {
     $tagline = "the power of Processing times the reach of JavaScript";
   }
 
 ?>
 
-<div id="family">
-  <p><a href="http://processing.org">Processing</a> <a class="here" href="<?php echo getRoot(); ?>">p5.js</a></p> 
-</div>    
-
-<div id="container">
-<!-- identity -->
-<div id="lockup">
-  <a href="<?php echo getRoot(); ?>">
-    <img type="image/svg+xml" src="<?php echo getRoot(); ?>img/p5js.svg" class="logo" />
-  </a>
-  <p><?php echo $tagline; ?></p>
-</div>
+<?php include('heading.php'); ?>
 
 <!-- site navigation -->
 <div class="column-span">
 <ul id="menu">
   <li><a href="<?php echo getRoot(); ?>">Home</a></li>
-  <li><a href="<?php echo getRoot(); ?>about/">About</a></li>
   <li><a href="<?php echo getRoot(); ?>download/">Download</a></li> 
-  <li><a href="<?php echo getRoot(); ?>getting-started/">Getting&nbsp;Started</a></li>
+  <li><a href="<?php echo getRoot(); ?>get-started/">Get&nbsp;Started</a></li>
   <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>libraries/">Libraries</a></li>
-  <li><a href="<?php echo getRoot(); ?>learning/">Learning</a></li>
-  <li><a href="<?php echo getRoot(); ?>development/">Development</a></li>
+  <li><a href="<?php echo getRoot(); ?>learn/">Learn</a></li>
+  <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
   <li><a href="http://github.com/lmccart/p5.js" target=_blank class="other-link">Github</a></li>
 </ul>
 <br />
 </div>
+
+<script src="<?php echo getRoot(); ?>js/scroll.js"></script>
