@@ -23,7 +23,7 @@
     </ul>
 
     <section id="home">
-      <p>p5.js is a JavaScript library that starts with the original goal of 
+      <p><a href="http://hello.p5js.org">p5.js</a> is a JavaScript library that starts with the original goal of 
       <a href="http://processing.org">Processing</a>, to make coding accessible 
       for artists, designers, educators, and beginners, and reinterpets this for today's web. 
       </p>
