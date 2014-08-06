@@ -23,7 +23,7 @@
 
     <p>Develop &#8212; <a href="https://github.com/lmccart/p5.js">Github</a> is the main place where code is collected,
         issues are documented, and discussions about code are had. Check out the <a href="https://github.com/lmccart/p5.js/wiki/Development">
-        development tutorial</a> to get started, or <a href="http://localhost/p5js.org/site/libraries/#create_libraries">
+        development tutorial</a> to get started, or <a href="../libraries/#create-your-own">
         create your own library.</a></p>
 
 
