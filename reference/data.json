@@ -5161,7 +5161,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 57,
+            "line": 58,
             "description": "Array containing the color of every pixel in the image.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -5171,7 +5171,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 64,
+            "line": 65,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Image",
             "module": "Image",
@@ -5179,7 +5179,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 72,
+            "line": 73,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -5189,7 +5189,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 81,
+            "line": 82,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -5221,7 +5221,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 99,
+            "line": 100,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -5261,7 +5261,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 121,
+            "line": 122,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()",
             "itemtype": "method",
             "name": "set",
@@ -5288,7 +5288,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 139,
+            "line": 140,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -5310,7 +5310,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 186,
+            "line": 187,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -5367,7 +5367,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 208,
+            "line": 209,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -5384,7 +5384,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 248,
+            "line": 249,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5406,7 +5406,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 261,
+            "line": 262,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5468,7 +5468,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 290,
+            "line": 291,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -6680,7 +6680,7 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 12,
-            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed \nto this function. If size() is not used, the window will be given a \ndefault size of 100x100 pixels.",
+            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed \nto this function. If createCanvas() is not used, the window will be \ngiven a default size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
@@ -10418,7 +10418,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Image.js:64"
+            "line": " src/objects/p5.Image.js:65"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
