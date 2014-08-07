@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.0",
+        "version": "0.3.1",
         "url": ""
     },
     "files": {
@@ -4983,13 +4983,16 @@
                     "type": "String|Object"
                 }
             ],
+            "example": [
+                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n \n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent('myContainer');\n </code></div>"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 53,
+            "line": 62,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5006,7 +5009,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 64,
+            "line": 73,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5023,7 +5026,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 75,
+            "line": 84,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5040,7 +5043,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 88,
+            "line": 97,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5057,7 +5060,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 102,
+            "line": 111,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5074,7 +5077,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 115,
+            "line": 124,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5091,7 +5094,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 128,
+            "line": 137,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5108,7 +5111,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 141,
+            "line": 150,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5125,7 +5128,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 161,
+            "line": 170,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -10410,7 +10413,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:161"
+            "line": " src/objects/p5.Element.js:170"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
