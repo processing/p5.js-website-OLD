@@ -7830,7 +7830,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 127,
+            "line": 120,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -7843,7 +7843,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 210,
+            "line": 195,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -8213,7 +8213,7 @@
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 123,
+            "line": 134,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
