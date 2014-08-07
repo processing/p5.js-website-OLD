@@ -254,6 +254,9 @@
         <p>
         <strong>Dom</strong><br>
         
+          <a href="examples/Dom_Input_and_Button.php">Input/Button</a><br>
+          
+        
           <a href="examples/Dom_Video_Capture.php">Video Capture</a><br>
           
         
