@@ -4984,7 +4984,7 @@
                 }
             ],
             "example": [
-                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n \n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent('myContainer');\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n \n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>"
             ],
             "class": "p5.Element",
             "module": "DOM",
