@@ -10,8 +10,10 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Sound Effect</h2>
-          <p>Control an Oscillator and view the waveform using FFT.
- MouseX is mapped to frequency, mouseY is mapped to amplitude.
+          <p><p>Play a sound effect when the mouse is clicked inside the circle.</p>
+ <p>You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ for this example to work in your own project.</p>
  </p>
 
           <div id="exampleDisplay">

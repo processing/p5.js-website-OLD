@@ -1,12 +1,14 @@
 /*
  * @name Playback Rate
- * @description Load a SoundFile and map its playback rate to
+ * @description <p>Load a SoundFile and map its playback rate to
  * mouseY, volume to mouseX. Playback rate is the speed with
  * which the web audio context processings the sound file information.
  * Slower rates not only increase the duration of the sound, but also
- * decrease the pitch because it is being played back at a slower frequency.
+ * decrease the pitch because it is being played back at a slower frequency.</p>
+ * <p>You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ * for this example to work in your own project.</p>
  */
-
 // A sound file object
 var song;
 
@@ -16,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
 
   // Loop the sound forever
   // (well, at least until stop() is called)

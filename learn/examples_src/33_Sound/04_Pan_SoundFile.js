@@ -7,7 +7,6 @@
  * for this example to work in your own project.</p>
  * 
  */
-
 var ball = {};
 var soundFile;
 

@@ -10,11 +10,14 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Noise Drum Envelope</h2>
-          <p> Control the output level of Noise with an Envelope.
+          <p> <p>Control the output level of Noise with an Envelope.
   The result sounds like a snare drum.
   A p5.Amplitude will get the level of all sound in the sketch, and
   we'll use this value to draw a green rectangle that shows the envelope
-  in action.
+  in action.</p>
+ <p>You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ for this example to work in your own project.</p>
  </p>
 
           <div id="exampleDisplay">
