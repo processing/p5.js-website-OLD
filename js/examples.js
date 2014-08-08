@@ -26,7 +26,7 @@ var examples = {
 
       try {       
 
-        if (exampleCode.indexOf('new p5') === -1) {
+        if (exampleCode.indexOf('new p5()') === -1) {
           exampleCode += '\nnew p5();';
         }
 
