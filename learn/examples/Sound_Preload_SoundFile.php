@@ -14,7 +14,9 @@
  sound will be loaded by setup(). If loadSound() and play() are both called
  during setup (or during preload), playback will fail because the sound will
  not have finished loading.
- 
+ <br><br>You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ for this example to work in your own project.
  </p>
 
           <div id="exampleDisplay">

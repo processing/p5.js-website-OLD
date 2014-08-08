@@ -23,6 +23,10 @@
   <p>The soundFormats() method tells loadSound which formats we have
   included with our sketch. Then, loadSound will attempt to load
   the first format that is supported by the client's web browser.</p>
+ 
+ <p>You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ for this example to work in your own project.</p>
  </p>
 
           <div id="exampleDisplay">

@@ -1,6 +1,10 @@
 /**
  *  @name  Amplitude Analysis
- *  @description Analyze the amplitude (volume) of sound with p5.Amplitude
+ *  @description <p>Analyze the amplitude (volume) of sound with p5.Amplitude.</p>
+ *
+ * <p>You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ * for this example to work in your own project.</p>
  */
 
 var song, analyzer;
@@ -10,7 +14,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(720, 200);
+  createCanvas(710, 200);
   song.loop();
 
   // create a new Amplitude analyzer
