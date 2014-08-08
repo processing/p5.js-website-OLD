@@ -3,14 +3,11 @@
  * @description Load sound during preload(). Play a sound when key is pressed.
  */
 
-// Adapted from Learning Processing by Daniel Shiffman
-// http://www.learningprocessing.com
-
 var song;
 
 function setup() {
-  song = loadSound('../../_files/lucky_dragons_-_power_melody.mp3');
-  createCanvas(640, 360);
+  song = loadSound('assets/lucky_dragons_-_power_melody.mp3');
+  createCanvas(720, 200);
   background(255,0,0);
 }
 

@@ -269,13 +269,19 @@
           <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>
           
         
+          <a href="examples/Sound_Preload_SoundFile.php">Preload SoundFile</a><br>
+          
+        
+          <a href="examples/Sound_soundFormats.php">soundFormats</a><br>
+          
+        
+          <a href="examples/Sound_Play_Mode.php">Play Mode</a><br>
+          
+        
           <a href="examples/Sound_Pan_Sound.php">Pan Sound</a><br>
           
         
           <a href="examples/Sound_Oscillator.php">Oscillator</a><br>
-          
-        
-          <a href="examples/Sound_Play_Mode.php">Play Mode</a><br>
           
         
         </p>

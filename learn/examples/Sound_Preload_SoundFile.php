@@ -9,9 +9,12 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Oscillator</h2>
-          <p>Control an Oscillator and view the waveform using FFT.
- MouseX is mapped to frequency, mouseY is mapped to amplitude.
+          <h2>Preload SoundFile</h2>
+          <p>call loadSound() during preload() to ensure that the
+ sound will be loaded by setup(). If loadSound() and play() are both called
+ during setup (or during preload), playback will fail because the sound will
+ not have finished loading.
+ 
  </p>
 
           <div id="exampleDisplay">
@@ -43,7 +46,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/05_Oscillator_FFT.js');
+          examples.init('../examples_src/33_Sound/01_Preload_Sound.js');
       });
     </script>
   </body>

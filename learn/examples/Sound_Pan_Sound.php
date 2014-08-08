@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Pan Sound</h2>
           <p>Ball position follows mouse and correlates to panning of sound.
- Click mouse to play
+ Click mouse to play.
  </p>
 
           <div id="exampleDisplay">
@@ -43,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/01_Pan_SoundFile.js');
+          examples.init('../examples_src/33_Sound/04_Pan_SoundFile.js');
       });
     </script>
   </body>
