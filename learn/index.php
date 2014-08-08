@@ -252,6 +252,18 @@
         
       
         <p>
+        <strong>Dom</strong><br>
+        
+          <a href="examples/Dom_Input_and_Button.php">Input/Button</a><br>
+          
+        
+          <a href="examples/Dom_Video_Capture.php">Video Capture</a><br>
+          
+        
+        </p>
+        
+      
+        <p>
         <strong>Sound</strong><br>
         
           <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>

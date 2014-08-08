@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.2.23",
+        "version": "0.3.1",
         "url": ""
     },
     "files": {
@@ -871,7 +871,7 @@
             "module": "DOM",
             "file": "src/objects/p5.Element.js",
             "line": 10,
-            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in black are added\nwith the p5.dom library. It is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in brown are added\nwith the <a href=\"http://p5js.org/libraries/\">p5.dom library</a>. \nIt is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
         },
         "Rendering": {
             "name": "Rendering",
@@ -1133,7 +1133,7 @@
             "namespace": "",
             "file": "src/objects/p5.Element.js",
             "line": 10,
-            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in black are added\nwith the p5.dom library. It is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc.",
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in brown are added\nwith the <a href=\"http://p5js.org/libraries/\">p5.dom library</a>. \nIt is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc.",
             "is_constructor": 1,
             "params": [
                 {
@@ -1227,7 +1227,7 @@
             "submodule": "Table",
             "namespace": "",
             "file": "src/objects/p5.Table.js",
-            "line": 36,
+            "line": 35,
             "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file.",
             "is_constructor": 1,
             "params": [
@@ -1840,7 +1840,7 @@
         {
             "file": "src/color/setting.js",
             "line": 22,
-            "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the backgound need only be set once.",
+            "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the background need only be set once.",
             "itemtype": "method",
             "name": "background",
             "params": [
@@ -2120,7 +2120,7 @@
         {
             "file": "src/core/core.js",
             "line": 70,
-            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial enviroment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
+            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial environment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
             "example": [
@@ -2300,7 +2300,7 @@
         {
             "file": "src/data/array_functions.js",
             "line": 145,
-            "description": "Inserts a value or an array of values into an existing array. The first\nparameter specifies the intial array to be modified, and the second\nparameter defines the data to be inserted. The third parameter is an index\nvalue which specifies the array position from which to insert data.\n(Remember that array index numbering starts at zero, so the first position\nis 0, the second position is 1, and so on.)",
+            "description": "Inserts a value or an array of values into an existing array. The first\nparameter specifies the initial array to be modified, and the second\nparameter defines the data to be inserted. The third parameter is an index\nvalue which specifies the array position from which to insert data.\n(Remember that array index numbering starts at zero, so the first position\nis 0, the second position is 1, and so on.)",
             "itemtype": "method",
             "name": "splice",
             "params": [
@@ -2843,7 +2843,7 @@
         {
             "file": "src/environment/environment.js",
             "line": 236,
-            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictiions this can only \nbe called on user input, for example, on mouse press like the example\nbelow.",
+            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
             "params": [
@@ -2868,7 +2868,7 @@
         {
             "file": "src/image/filters.js",
             "line": 5,
-            "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
+            "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
             "class": "p5",
             "module": "Environment"
         },
@@ -3291,7 +3291,7 @@
         {
             "file": "src/image/loading_displaying.js",
             "line": 206,
-            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are intepreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
+            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
             "params": [
@@ -3641,7 +3641,7 @@
         {
             "file": "src/input/files.js",
             "line": 101,
-            "description": "<p>Reads the contents of a file or URL and creates an Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format), and to\ninclude a header row.</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>",
+            "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>",
             "itemtype": "method",
             "name": "loadTable",
             "params": [
@@ -3649,6 +3649,12 @@
                     "name": "filename",
                     "description": "name of the file or URL to load",
                     "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "\"header\" \"csv\" \"tsv\"",
+                    "type": "String|Strings",
+                    "optional": true
                 },
                 {
                     "name": "callback",
@@ -3667,7 +3673,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 162,
+            "line": 205,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
@@ -4059,7 +4065,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 39,
+            "line": 33,
             "description": "The system variable touches[] contains an array of the positions of all\ncurrent touch points, relative to (0, 0) of the canvas. Each element in\nthe array is an object with x and y properties.",
             "itemtype": "property",
             "name": "touches[]",
@@ -4069,7 +4075,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 54,
+            "line": 56,
             "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -4079,7 +4085,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 73,
+            "line": 75,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -4089,7 +4095,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 92,
+            "line": 94,
             "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -4599,7 +4605,7 @@
         {
             "file": "src/math/noise.js",
             "line": 196,
-            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overal intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
+            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overall intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
             "itemtype": "method",
             "name": "noiseDetail",
             "params": [
@@ -4956,7 +4962,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 24,
+            "line": 25,
             "description": "Underlying HTML element. All normal HTML methods can be called on this.",
             "itemtype": "property",
             "name": "elt",
@@ -4966,7 +4972,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 36,
+            "line": 37,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "parent",
@@ -4977,13 +4983,16 @@
                     "type": "String|Object"
                 }
             ],
+            "example": [
+                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n \n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 52,
+            "line": 62,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5000,7 +5009,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 63,
+            "line": 73,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5017,7 +5026,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 74,
+            "line": 84,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5034,7 +5043,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 87,
+            "line": 97,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5051,7 +5060,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 101,
+            "line": 111,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5068,7 +5077,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 114,
+            "line": 124,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5085,7 +5094,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 127,
+            "line": 137,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5102,7 +5111,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 140,
+            "line": 150,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5119,7 +5128,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 160,
+            "line": 170,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -5155,7 +5164,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 57,
+            "line": 58,
             "description": "Array containing the color of every pixel in the image.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -5165,7 +5174,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 64,
+            "line": 65,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Image",
             "module": "Image",
@@ -5173,7 +5182,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 72,
+            "line": 73,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -5183,7 +5192,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 81,
+            "line": 82,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -5215,7 +5224,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 99,
+            "line": 100,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -5255,7 +5264,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 121,
+            "line": 122,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()",
             "itemtype": "method",
             "name": "set",
@@ -5282,7 +5291,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 139,
+            "line": 140,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -5304,7 +5313,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 186,
+            "line": 187,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -5361,7 +5370,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 208,
+            "line": 209,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -5378,7 +5387,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 248,
+            "line": 249,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5400,7 +5409,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 261,
+            "line": 262,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5462,7 +5471,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 290,
+            "line": 291,
             "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -5480,14 +5489,14 @@
         {
             "file": "src/objects/p5.Table.js",
             "line": 13,
-            "description": "Table Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>",
+            "description": "Table Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
             "class": "p5.Table",
             "module": "Data",
             "submodule": "Table"
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 47,
+            "line": 46,
             "itemtype": "property",
             "name": "columns",
             "type": "{Array}",
@@ -5497,7 +5506,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 53,
+            "line": 52,
             "itemtype": "property",
             "name": "rows",
             "type": "{Array}",
@@ -5507,7 +5516,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 60,
+            "line": 59,
             "description": "Use addRow() to add a new row of data to a p5.Table object. By default,\nan empty row is created. Typically, you would store a reference to\nthe new row in a TableRow object (see newRow in the example above),\nand then set individual values using set().\n\nIf a p5.TableRow object is included as a parameter, then that row is\nduplicated and added to the table.",
             "itemtype": "method",
             "name": "addRow",
@@ -5525,7 +5534,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 85,
+            "line": 84,
             "description": "Removes a row from the table object.",
             "itemtype": "method",
             "name": "removeRow",
@@ -5542,7 +5551,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 99,
+            "line": 98,
             "description": "Returns a reference to the specified p5.TableRow. The reference\ncan then be used to get and set values of the selected row.",
             "itemtype": "method",
             "name": "getRow",
@@ -5563,7 +5572,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 111,
+            "line": 110,
             "description": "Gets all rows from the table. Returns an array of p5.TableRows.",
             "itemtype": "method",
             "name": "getRows",
@@ -5577,7 +5586,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 121,
+            "line": 120,
             "description": "Finds the first row in the Table that contains the value\nprovided, and returns a reference to that row. Even if\nmultiple rows are possible matches, only the first matching\nrow is returned. The column to search may be specified by\neither its ID or title.",
             "itemtype": "method",
             "name": "findRow",
@@ -5603,7 +5612,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 155,
+            "line": 154,
             "description": "Finds the rows in the Table that contain the value\nprovided, and returns references to those rows. Returns an\nArray, so for must be used to iterate through all the rows,\nas shown in the example above. The column to search may be\nspecified by either its ID or title.",
             "itemtype": "method",
             "name": "findRows",
@@ -5629,7 +5638,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 188,
+            "line": 187,
             "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be\nspecified by either its ID or title.",
             "itemtype": "method",
             "name": "matchRow",
@@ -5655,7 +5664,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 220,
+            "line": 219,
             "description": "Finds the first row in the Table that matches the regular\nexpression provided, and returns a reference to that row.\nEven if multiple rows are possible matches, only the first\nmatching row is returned. The column to search may be specified\nby either its ID or title.",
             "itemtype": "method",
             "name": "matchRows",
@@ -5682,7 +5691,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 254,
+            "line": 253,
             "description": "Retrieves all values in the specified column, and returns them\nas an array. The column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "getColumn",
@@ -5703,7 +5712,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 276,
+            "line": 275,
             "description": "Removes all rows from a Table. While all rows are removed,\ncolumns and column titles are maintained.",
             "itemtype": "method",
             "name": "clearRows",
@@ -5713,7 +5722,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 287,
+            "line": 286,
             "description": "Use addColumn() to add a new column to a Table object.\nTypically, you will want to specify a title, so the column\nmay be easily referenced later by name. (If no title is\nspecified, the new column's title will be null.)",
             "itemtype": "method",
             "name": "addColumn",
@@ -5731,7 +5740,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 301,
+            "line": 300,
             "description": "Returns the total number of columns in a Table.",
             "return": {
                 "description": "Number of columns in this table",
@@ -5743,7 +5752,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 310,
+            "line": 309,
             "description": "Returns the total number of rows in a Table.",
             "itemtype": "method",
             "name": "getRowCount",
@@ -5757,7 +5766,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 320,
+            "line": 319,
             "description": "<p>Removes any of the specified characters (or \"tokens\").</p>\n\n<p>If no column is specified, then the values in all columns and\nrows are processed. A specific column may be referenced by\neither its ID or title.</p>",
             "itemtype": "method",
             "name": "removeTokens",
@@ -5780,7 +5789,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 371,
+            "line": 370,
             "description": "Trims leading and trailing whitespace, such as spaces and tabs,\nfrom String table values. If no column is specified, then the\nvalues in all columns and rows are trimmed. A specific column\nmay be referenced by either its ID or title.",
             "itemtype": "method",
             "name": "trim",
@@ -5797,7 +5806,7 @@
         },
         {
             "file": "src/objects/p5.Table.js",
-            "line": 413,
+            "line": 412,
             "description": "Use removeColumn() to remove an existing column from a Table\nobject. The column to be removed may be identified by either\nits title (a String) or its index value (an int).\nremoveColumn(0) would remove the first column, removeColumn(1)\nwould remove the second column, and so on.",
             "itemtype": "method",
             "name": "removeColumn",
@@ -5814,7 +5823,7 @@
         },
         {
             "file": "src/objects/p5.TableRow.js",
-            "line": 54,
+            "line": 43,
             "description": "Stores a value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "set",
@@ -5836,8 +5845,52 @@
         },
         {
             "file": "src/objects/p5.TableRow.js",
-            "line": 92,
-            "description": "Retrieves a float value from the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "line": 79,
+            "description": "Stores a Float value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "itemtype": "method",
+            "name": "setNum",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "Column ID (Number)\n                              or Title (String)",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "value",
+                    "description": "The value to be stored\n                              as a Float",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 95,
+            "description": "Stores a String value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
+            "itemtype": "method",
+            "name": "setString",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "Column ID (Number)\n                              or Title (String)",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "value",
+                    "description": "The value to be stored\n                              as a String",
+                    "type": "String"
+                }
+            ],
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 110,
+            "description": "Retrieves a value from the TableRow's specified column.\nThe column may be specified by either its ID or title.",
             "itemtype": "method",
             "name": "get",
             "params": [
@@ -5849,7 +5902,49 @@
             ],
             "return": {
                 "description": "",
-                "type": "Object|p5.TableRow"
+                "type": "String|Number"
+            },
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 127,
+            "description": "Retrieves a Float value from the TableRow's specified\ncolumn. The column may be specified by either its ID or\ntitle.",
+            "itemtype": "method",
+            "name": "getNum",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                 ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "Float Floating point number",
+                "type": "Number"
+            },
+            "class": "p5.TableRow",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.TableRow.js",
+            "line": 151,
+            "description": "Retrieves an String value from the TableRow's specified\ncolumn. The column may be specified by either its ID or\ntitle.",
+            "itemtype": "method",
+            "name": "getString",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                 ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "String",
+                "type": "String"
             },
             "class": "p5.TableRow",
             "module": "Data",
@@ -6186,7 +6281,8 @@
             "file": "src/objects/p5.Vector.js",
             "line": 319,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "mtehod": "setMag",
+            "itemtype": "method",
+            "name": "setMag",
             "params": [
                 {
                     "name": "len",
@@ -6587,7 +6683,7 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 12,
-            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed \nto this function. If size() is not used, the window will be given a \ndefault size of 100x100 pixels.",
+            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed \nto this function. If createCanvas() is not used, the window will be \ngiven a default size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
@@ -6974,7 +7070,7 @@
         {
             "file": "src/shape/attributes.js",
             "line": 18,
-            "description": "Modifies the location from which ellipses are drawn by changing the way\nin which parameters given to ellipse() are intepreted.\n\nThe default mode is ellipseMode(CENTER), which interprets the first two\nparameters of ellipse() as the shape's center point, while the third and\nfourth parameters are its width and height.\n\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as\nthe shape's center point, but uses the third and fourth parameters to\nspecify half of the shapes's width and height.\n\nellipseMode(CORNER) interprets the first two parameters of ellipse() as\nthe upper-left corner of the shape, while the third and fourth parameters\nare its width and height.\n\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as\nthe location of one corner of the ellipse's bounding box, and the third\nand fourth parameters as the location of the opposite corner.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
+            "description": "Modifies the location from which ellipses are drawn by changing the way\nin which parameters given to ellipse() are interpreted.\n\nThe default mode is ellipseMode(CENTER), which interprets the first two\nparameters of ellipse() as the shape's center point, while the third and\nfourth parameters are its width and height.\n\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as\nthe shape's center point, but uses the third and fourth parameters to\nspecify half of the shapes's width and height.\n\nellipseMode(CORNER) interprets the first two parameters of ellipse() as\nthe upper-left corner of the shape, while the third and fourth parameters\nare its width and height.\n\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as\nthe location of one corner of the ellipse's bounding box, and the third\nand fourth parameters as the location of the opposite corner.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
             "itemtype": "method",
             "name": "ellipseMode",
             "params": [
@@ -7737,7 +7833,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 127,
+            "line": 120,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -7750,7 +7846,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 210,
+            "line": 195,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -8041,7 +8137,7 @@
         {
             "file": "src/typography/attributes.js",
             "line": 121,
-            "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverriden by CSS styling.",
+            "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
             "params": [
@@ -8087,7 +8183,7 @@
             "params": [
                 {
                     "name": "str",
-                    "description": "the alphanumberic symbols to be displayed",
+                    "description": "the alphanumeric symbols to be displayed",
                     "type": "String"
                 },
                 {
@@ -8120,7 +8216,7 @@
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 123,
+            "line": 134,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
@@ -10232,10 +10328,6 @@
             "line": " src/image/filters.js:243"
         },
         {
-            "message": "unknown tag: mtehod",
-            "line": " src/objects/p5.Vector.js:319"
-        },
-        {
             "message": "replacing incorrect tag: params with param",
             "line": " lib/addons/p5.sound.js:1015"
         },
@@ -10256,7 +10348,7 @@
             "line": " src/environment/environment.js:133"
         },
         {
-            "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implmentation.",
+            "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
             "line": " src/image/filters.js:5"
         },
         {
@@ -10321,7 +10413,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:160"
+            "line": " src/objects/p5.Element.js:170"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
@@ -10329,19 +10421,15 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Image.js:64"
+            "line": " src/objects/p5.Image.js:65"
         },
         {
-            "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>",
+            "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
             "line": " src/objects/p5.Table.js:13"
         },
         {
             "message": "Missing item type\nReturns the total number of columns in a Table.",
-            "line": " src/objects/p5.Table.js:301"
-        },
-        {
-            "message": "Missing item type\nSet the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
-            "line": " src/objects/p5.Vector.js:319"
+            "line": " src/objects/p5.Table.js:300"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",

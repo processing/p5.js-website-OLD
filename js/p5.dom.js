@@ -1,4 +1,4 @@
-/*! p5.dom.js v0.0.1 July 31, 2014 */
+/*! p5.dom.js v0.1.0 August 6, 2014 */
 /**
  * <p>The web is much more than just canvas and p5.dom makes it easy to interact 
  * with other HTML5 objects, including text, hyperlink, image, input, video, 
@@ -562,8 +562,8 @@ var p5DOM = (function(){
         this.elt.setAttribute('height', aH * this._pInst._pixelDensity);
         this.elt.setAttribute('style', 'width:' + aW + 'px !important; height:' + aH + 'px !important;');
       } else {
-        this.elt.style.width = aW;
-        this.elt.style.height = aH;
+        this.elt.style.width = aW+'px';
+        this.elt.style.height = aH+'px';
       }
       this.width = this.elt.offsetWidth;
       this.height = this.elt.offsetHeight;
@@ -600,7 +600,10 @@ var p5DOM = (function(){
 
 
   /**
-   * A class to describe...
+   * Extends p5.Element to handle audio and video. In addition to the methods
+   * of p5.Element, it also contains methods for controlling media. It is not
+   * called directly, but p5.MediaElements are created by calling createVideo,
+   * createAudio, and createCapture.
    *
    * @class p5.MediaElement
    * @constructor

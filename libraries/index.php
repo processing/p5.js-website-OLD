@@ -32,7 +32,7 @@
       </div>
 
       <div class="spacer"></div>
- 
+ <!--
       <a name="contributed" class="anchor"><h3>Contributed</h3></a>
 
       <div class="left-column">
@@ -54,7 +54,7 @@
       </div>
 
       <div class="spacer"></div>
-
+-->
 
       <a name="using-a-library" class="anchor"><h3>Using a library</h3></a>
 

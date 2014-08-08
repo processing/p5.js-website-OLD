@@ -47,22 +47,21 @@ function getPackageVersion($f) {
   return $matches[1];
 }
 
-function updateLib($jside_v) {
-
+function updateFiles() {
   $r = 'https://raw.githubusercontent.com/lmccart/p5.js/master/';
   download($r.'lib/p5.min.js', '../js/p5.min.js');
   download($r.'lib/addons/p5.dom.js', '../js/p5.dom.js');
   download($r.'lib/addons/p5.sound.js', '../js/p5.sound.js');
+}
+
+function updateLib($jside_v) {
+  updateFiles();
   $v = getLibVersion('../js/p5.min.js');
   //unlink('p5.min.js');
 
   $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $jside_version = "'.$jside_v.'"; ?>';
 
   file_put_contents('version.php', $contents);
-}
-
-if ($_GET['f'] == 'update_version') {
-  updateVersion();
 }
 
 
@@ -81,5 +80,8 @@ if ($_GET['f'] == 'update_lib') {
 }
 else if ($_GET['f'] == 'update_jside') {
   updateJSIDE($version, $date);
+}
+else if ($_GET['f'] == 'update_files') {
+  updateFiles();
 }
 ?>

@@ -123,10 +123,14 @@ section#reference h2 {
     border: none !important;
 }
 
+.norender pre {
+    left: 0px !important;
+}
+
 .example-content pre {
 
     margin-top: 0 !important;
-    width: 33.5em !important;
+    width: 30.5em !important;
 }
 
 .example-content .edit_space {
@@ -383,11 +387,11 @@ textarea {
 }
 
 #exampleDisplay .edit_button {
-    left: 29.55em;
+    left: 29em;
 }
 
 #exampleDisplay .reset_button {
-    left: 32.55em;
+    left: 32em;
 }
 
 #exampleDisplay .edit_space {
@@ -400,7 +404,7 @@ textarea {
 
 #exampleEditor {
     height: 500em;
-    width: 720px;
+    width: 710px;
     overflow: hidden;
     margin-top: 0.5em;
     color: #222;
