@@ -14,6 +14,27 @@
       <a name="tutorials" class="anchor"><h3>Tutorials</h3></a>
 
       <div class="left-column">
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/p5.js-overview">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/p5.js-overview"><h4>p5.js overview</h4></a>
+        </div>
+        <p>An overview of the main features of p5.js.</p> 
+      </div>
+      
+      <div class="right-column">
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Processing-transition">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Processing-transition"><h4>p5.js and Processing</h4></a>
+        </div>
+        <p>The main differences between the two, and how to convert from one to the other.</p> 
+      </div>
+
+
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
