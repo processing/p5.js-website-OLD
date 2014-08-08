@@ -302,6 +302,12 @@
           <a href="examples/Sound__Live_Input.php"> Live Input</a><br>
           
         
+          <a href="examples/Sound_Frequency_Spectrum.php">Frequency Spectrum</a><br>
+          
+        
+          <a href="examples/Sound_FFT_Frequency_Spectrum.php">FFT Frequency Spectrum</a><br>
+          
+        
           <a href="examples/Sound__Mic_Threshold.php"> Mic Threshold</a><br>
           
         
