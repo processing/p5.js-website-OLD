@@ -1,24 +1,30 @@
 /*
  * @name Play Mode
- * @description Press "a" on your keyboard to play a sound file.
- * Trigger lots of sounds at once! "z" to change playmode.
+ * @description 
  * In 'sustain' mode, the sound will overlap with itself.
  * In 'restart' mode it will stop and then start again.
+ * Click mouse to play a sound file.
+ * Trigger lots of sounds at once! Press any key to change playmode.
  */
 var playMode = 'sustain';
 var sample;
 
 function setup() {
   createCanvas(720,50);
-  sample = loadSound( ['assets/Damscray_-_Dancing_Tiger_02.ogg', 
-                       'assets/Damscray_-_Dancing_Tiger_02.mp3'] );
+  soundFormats('mp3', 'ogg');
+  sample = loadSound('assets/Damscray_-_Dancing_Tiger_02.mp3');
 }
 
 function draw() {
-  background(255);
-  text('Current Play Mode: ' + playMode+'.', 10, height/2);
-  text('Press z to change mode, and a to trigger sound.', 
-    10, height/2+20);
+  background(255,255,0);
+  text('Click here to play! Current Play Mode: ' + playMode+'.', 10, height/2);
+}
+
+function mouseClicked() {
+  sample.play();
+}
+function keyPressed(k) {
+    togglePlayMode();
 }
 
 function togglePlayMode(){
@@ -31,11 +37,3 @@ function togglePlayMode(){
   sample.playMode(playMode);
 }
 
-function keyPressed(k) {
-  if (k.keyCode == 65) {
-    sample.play(.6);
-  }
-  if (k.keyCode == 90) {
-    togglePlayMode();
-  }
-}

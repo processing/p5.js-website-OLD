@@ -133,9 +133,6 @@
         
         </p>
         
-          </div>
-          <div class="column_1">
-        
       
         <p>
         <strong>Control</strong><br>
@@ -156,6 +153,9 @@
           
         
         </p>
+        
+          </div>
+          <div class="column_1">
         
       
         <p>
@@ -208,9 +208,6 @@
         
         </p>
         
-          </div>
-          <div class="column_2">
-        
       
         <p>
         <strong>Simulate</strong><br>
@@ -250,6 +247,9 @@
         
         </p>
         
+          </div>
+          <div class="column_2">
+        
       
         <p>
         <strong>Dom</strong><br>
@@ -269,13 +269,46 @@
           <a href="examples/Sound_Load_and_Play_Sound.php">Load/Play Sound</a><br>
           
         
-          <a href="examples/Sound_Pan_Sound.php">Pan Sound</a><br>
+          <a href="examples/Sound_Preload_SoundFile.php">Preload SoundFile</a><br>
           
         
-          <a href="examples/Sound_Oscillator.php">Oscillator</a><br>
+          <a href="examples/Sound_soundFormats.php">soundFormats</a><br>
           
         
           <a href="examples/Sound_Play_Mode.php">Play Mode</a><br>
+          
+        
+          <a href="examples/Sound_Pan_Sound.php">Pan Sound</a><br>
+          
+        
+          <a href="examples/Sound_Oscillator_Frequency.php">Oscillator Frequency</a><br>
+          
+        
+          <a href="examples/Sound_Sound_Effect.php">Sound Effect</a><br>
+          
+        
+          <a href="examples/Sound_Playback_Rate.php">Playback Rate</a><br>
+          
+        
+          <a href="examples/Sound_Noise_Drum_Envelope.php">Noise Drum Envelope</a><br>
+          
+        
+          <a href="examples/Sound__Note_Envelope.php"> Note Envelope</a><br>
+          
+        
+          <a href="examples/Sound__Amplitude_Analysis.php"> Amplitude Analysis</a><br>
+          
+        
+          <a href="examples/Sound__Live_Input.php"> Live Input</a><br>
+          
+        
+          <a href="examples/Sound_Frequency_Spectrum.php">Frequency Spectrum</a><br>
+          
+        
+          <a href="examples/Sound_FFT_Frequency_Spectrum.php">FFT Frequency Spectrum</a><br>
+          
+        
+          <a href="examples/Sound__Mic_Threshold.php"> Mic Threshold</a><br>
           
         
         </p>

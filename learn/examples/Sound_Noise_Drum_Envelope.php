@@ -9,12 +9,12 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Play Mode</h2>
-          <p>
- In 'sustain' mode, the sound will overlap with itself.
- In 'restart' mode it will stop and then start again.
- Click mouse to play a sound file.
- Trigger lots of sounds at once! Press any key to change playmode.
+          <h2>Noise Drum Envelope</h2>
+          <p> Control the output level of Noise with an Envelope.
+  The result sounds like a snare drum.
+  A p5.Amplitude will get the level of all sound in the sketch, and
+  we'll use this value to draw a green rectangle that shows the envelope
+  in action.
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +46,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/03_Play_Mode.js');
+          examples.init('../examples_src/33_Sound/08_Noise_Envelope.js');
       });
     </script>
   </body>

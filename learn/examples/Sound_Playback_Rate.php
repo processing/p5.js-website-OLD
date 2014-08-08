@@ -9,12 +9,12 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Play Mode</h2>
-          <p>
- In 'sustain' mode, the sound will overlap with itself.
- In 'restart' mode it will stop and then start again.
- Click mouse to play a sound file.
- Trigger lots of sounds at once! Press any key to change playmode.
+          <h2>Playback Rate</h2>
+          <p>Load a SoundFile and map its playback rate to
+ mouseY, volume to mouseX. Playback rate is the speed with
+ which the web audio context processings the sound file information.
+ Slower rates not only increase the duration of the sound, but also
+ decrease the pitch because it is being played back at a slower frequency.
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +46,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/03_Play_Mode.js');
+          examples.init('../examples_src/33_Sound/07_Manipulate_Sound.js');
       });
     </script>
   </body>

@@ -9,12 +9,17 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Play Mode</h2>
-          <p>
- In 'sustain' mode, the sound will overlap with itself.
- In 'restart' mode it will stop and then start again.
- Click mouse to play a sound file.
- Trigger lots of sounds at once! Press any key to change playmode.
+          <h2> Note Envelope</h2>
+          <p> An Envelope is a series of fades, defined
+  as time / value pairs. In this example, the envelope
+  will be used to "play" a note by controlling the output
+  amplitude of an oscillator.<br/><br/>
+  The p5.Oscillator sends its output through
+  an internal Web Audio GainNode (p5.Oscillator.output).
+  By default, that node has a constant value of 0.5. It can
+  be reset with the osc.amp() method. Or, in this example, an
+  Envelope takes control of that node, turning the amplitude
+  up and down like a volume knob.
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +51,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/03_Play_Mode.js');
+          examples.init('../examples_src/33_Sound/09_Note_Envelope.js');
       });
     </script>
   </body>

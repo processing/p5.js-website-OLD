@@ -11,6 +11,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Graphics",
         "p5.Image",
         "p5.MediaElement",
+        "p5.Noise",
         "p5.Oscillator",
         "p5.Pulse",
         "p5.SoundFile",

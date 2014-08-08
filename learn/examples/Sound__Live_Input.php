@@ -9,12 +9,13 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Play Mode</h2>
-          <p>
- In 'sustain' mode, the sound will overlap with itself.
- In 'restart' mode it will stop and then start again.
- Click mouse to play a sound file.
- Trigger lots of sounds at once! Press any key to change playmode.
+          <h2> Live Input</h2>
+          <p> Get audio input from your computer's microphone.
+  Make noise to float the ellipse.
+ *
+  Note: p5.AudioIn contains its own p5.Amplitude object,
+  so you can call getLevel on p5.AudioIn without
+  creating a p5.Amplitude.
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +47,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/03_Play_Mode.js');
+          examples.init('../examples_src/33_Sound/11_Live_Input.js');
       });
     </script>
   </body>

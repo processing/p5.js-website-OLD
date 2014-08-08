@@ -9,12 +9,20 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Play Mode</h2>
-          <p>
- In 'sustain' mode, the sound will overlap with itself.
- In 'restart' mode it will stop and then start again.
- Click mouse to play a sound file.
- Trigger lots of sounds at once! Press any key to change playmode.
+          <h2>soundFormats</h2>
+          <p><p>There is no single sound format that is supported
+  by all web browsers. For example, mp3 support is not native to
+  Firefox and Opera because the mp3 codec is patented.</p>
+  
+  <p>To ensure compatability, you can include the same sound file
+  in multiple formats, i.e. 'sound.mp3' and 'sound.ogg'. (Ogg is an
+  open source alternative to mp3.) You can convert audio files
+  into web friendly formats for free online at <a href="
+  http://media.io/">media.io</a></p>
+  
+  <p>The soundFormats() method tells loadSound which formats we have
+  included with our sketch. Then, loadSound will attempt to load
+  the first format that is supported by the client's web browser.</p>
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +54,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/03_Play_Mode.js');
+          examples.init('../examples_src/33_Sound/02_soundFormats.js');
       });
     </script>
   </body>

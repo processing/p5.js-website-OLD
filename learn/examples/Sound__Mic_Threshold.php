@@ -9,12 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Play Mode</h2>
-          <p>
- In 'sustain' mode, the sound will overlap with itself.
- In 'restart' mode it will stop and then start again.
- Click mouse to play a sound file.
- Trigger lots of sounds at once! Press any key to change playmode.
+          <h2> Mic Threshold</h2>
+          <p>Trigger an event (draw a rectangle) when the Audio Input
+  volume surpasses a threshold.
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/03_Play_Mode.js');
+          examples.init('../examples_src/33_Sound/14_Mic_Threshold.js');
       });
     </script>
   </body>

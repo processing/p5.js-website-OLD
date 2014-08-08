@@ -9,8 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Oscillator</h2>
-          <p>Control an Oscillator and view the waveform using FFT
+          <h2>Oscillator Frequency</h2>
+          <p>Control an Oscillator and view the waveform using FFT.
+ MouseX is mapped to frequency, mouseY is mapped to amplitude.
  </p>
 
           <div id="exampleDisplay">
@@ -42,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/02_Oscillator_FFT.js');
+          examples.init('../examples_src/33_Sound/05_Oscillator_FFT.js');
       });
     </script>
   </body>
