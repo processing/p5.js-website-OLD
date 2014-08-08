@@ -10,8 +10,9 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Pan Sound</h2>
-          <p>Ball position follows mouse and correlates to panning of sound.
- Click mouse to play.
+          <p>Click mouse to play the sound.
+ Ball position follows mouse and correlates to panning of sound.
+ 
  </p>
 
           <div id="exampleDisplay">

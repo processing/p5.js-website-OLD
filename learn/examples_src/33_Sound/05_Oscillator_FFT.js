@@ -1,5 +1,5 @@
 /*
- * @name Oscillator
+ * @name Oscillator Frequency
  * @description Control an Oscillator and view the waveform using FFT.
  * MouseX is mapped to frequency, mouseY is mapped to amplitude.
  */
@@ -23,8 +23,8 @@ function draw() {
   strokeWeight(5);
   for (var i = 0; i < waveform.length; i++){
     var x = map(i, 0, waveform.length, 0, width);
-    var y = map(waveform[i], 0, 256, height/2, 0);
-    vertex(x, y + height/2);
+    var y = map(waveform[i], 0, 256, height, 0);
+    vertex(x, y);
   }
   endShape();
 
