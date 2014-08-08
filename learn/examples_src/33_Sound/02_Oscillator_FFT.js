@@ -5,7 +5,7 @@
 var osc, fft, soundFile;
 
 function preload() {
-  var soundFile = loadSound( ['assets/beatbox.ogg', 
+  soundFile = loadSound( ['assets/beatbox.ogg', 
                           'assets/beatbox.wav'] );
 }
 
