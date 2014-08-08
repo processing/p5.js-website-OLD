@@ -10,8 +10,7 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Sound Effect</h2>
-          <p>Control an Oscillator and view the waveform using FFT.
- MouseX is mapped to frequency, mouseY is mapped to amplitude.
+          <p>Play a sound effect when the mouse is clicked inside the circle.
  </p>
 
           <div id="exampleDisplay">
