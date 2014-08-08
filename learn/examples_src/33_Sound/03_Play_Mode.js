@@ -5,7 +5,6 @@
  * In 'restart' mode it will stop and then start again.
  * Click mouse to play a sound file.
  * Trigger lots of sounds at once! Press any key to change playmode.</p>
- *
  * <p>You will need to include the 
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
  * for this example to work in your own project.</p>
