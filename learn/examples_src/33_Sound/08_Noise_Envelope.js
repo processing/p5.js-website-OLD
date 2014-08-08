@@ -1,16 +1,18 @@
 /**
  *  @name Noise Drum Envelope
- *  @description  Control the output level of Noise with an Envelope.
+ *  @description  <p>Control the output level of Noise with an Envelope.
  *  The result sounds like a snare drum.
  *  A p5.Amplitude will get the level of all sound in the sketch, and
  *  we'll use this value to draw a green rectangle that shows the envelope
- *  in action.
+ *  in action.</p>
+ * <p>You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ * for this example to work in your own project.</p>
  */
-
 var noise, env, analyzer;
 
 function setup() {
-  createCanvas(780, 200);
+  createCanvas(710, 200);
   noise = new p5.Noise(); // other types include 'brown' and 'pink'
   noise.start();
 

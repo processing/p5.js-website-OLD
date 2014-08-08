@@ -10,7 +10,7 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2> Note Envelope</h2>
-          <p> An Envelope is a series of fades, defined
+          <p> <p>An Envelope is a series of fades, defined
   as time / value pairs. In this example, the envelope
   will be used to "play" a note by controlling the output
   amplitude of an oscillator.<br/><br/>
@@ -19,7 +19,10 @@
   By default, that node has a constant value of 0.5. It can
   be reset with the osc.amp() method. Or, in this example, an
   Envelope takes control of that node, turning the amplitude
-  up and down like a volume knob.
+  up and down like a volume knob.</p>
+ <p>You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ for this example to work in your own project.</p>
  </p>
 
           <div id="exampleDisplay">

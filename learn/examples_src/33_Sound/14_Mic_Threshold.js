@@ -1,18 +1,18 @@
 /**
- * 
- *  @name  Mic Threshold
- *  @description Trigger an event (draw a rectangle) when the Audio Input
- *  volume surpasses a threshold.
+ * @name Mic Threshold
+ * @description <p>Trigger an event (draw a rectangle) when the Audio Input
+ * volume surpasses a threshold.</p>
+ * <p>You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ * for this example to work in your own project.</p>
  */
-
-// Adapted from Learning Processing, Daniel Shiffman, learningprocessing.com
-
-
+// Adapted from Learning Processing, Daniel Shiffman
+// learningprocessing.com
 var input;
 var analyzer;
 
 function setup() {
-  createCanvas(200, 200);
+  createCanvas(710, 200);
   background(255);
 
   // Create an Audio input

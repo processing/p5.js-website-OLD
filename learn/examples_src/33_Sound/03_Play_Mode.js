@@ -20,7 +20,8 @@ function setup() {
 
 function draw() {
   background(255,255,0);
-  var str = 'Click here to play! Current Play Mode: ' + playMode+'.';
+  var str = 'Click here to play! Press key to toggle play mode.';
+  str += ' Current Play Mode: ' + playMode+'.';
   text(str, 10, height/2);
 }
 

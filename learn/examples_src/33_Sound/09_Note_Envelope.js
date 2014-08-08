@@ -1,6 +1,6 @@
 /**
  *  @name  Note Envelope
- *  @description  An Envelope is a series of fades, defined
+ *  @description  <p>An Envelope is a series of fades, defined
  *  as time / value pairs. In this example, the envelope
  *  will be used to "play" a note by controlling the output
  *  amplitude of an oscillator.<br/><br/>
@@ -9,16 +9,18 @@
  *  By default, that node has a constant value of 0.5. It can
  *  be reset with the osc.amp() method. Or, in this example, an
  *  Envelope takes control of that node, turning the amplitude
- *  up and down like a volume knob.
+ *  up and down like a volume knob.</p>
+ * <p>You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ * for this example to work in your own project.</p>
  */
-
 var osc, envelope, fft;
 
 var scaleArray = [60, 62, 64, 65, 67, 69, 71, 72];
 var note = 0;
 
 function setup() {
-  createCanvas(200, 200);
+  createCanvas(710, 200);
   osc = new p5.SinOsc();
 
   // Instantiate the envelope with time / value pairs

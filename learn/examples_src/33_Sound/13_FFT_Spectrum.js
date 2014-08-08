@@ -1,12 +1,14 @@
 /**
- *  @name FFT Frequency Spectrum
- *  @description  Visualize the frequency spectrum of live audio input.
+ * @name FFT Frequency Spectrum
+ * @description <p>Visualize the frequency spectrum of live audio input.</p>
+ * <p>You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ * for this example to work in your own project.</p>
  */
-
 var mic, fft;
 
 function setup() {
-   createCanvas(512,400);
+   createCanvas(710,400);
    mic = new p5.AudioIn();
    mic.start();
    fft = new p5.FFT();

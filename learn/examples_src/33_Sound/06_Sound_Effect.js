@@ -1,11 +1,14 @@
 /*
  * @name Sound Effect
- * @description Play a sound effect when the mouse is clicked inside the circle.
+ * @description <p>Play a sound effect when the mouse is clicked inside the circle.</p>
+ * <p>You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ * for this example to work in your own project.</p>
  */
-
 // Adapted from Learning Processing by Daniel Shiffman
 // http://www.learningprocessing.com
-// Doorbell sample by Corsica_S via freesound.org, Creative Commons BY 3.0
+// Doorbell sample by Corsica_S via freesound.org, 
+// Creative Commons BY 3.0
 
 // A sound file object
 var dingdong;

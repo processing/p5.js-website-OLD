@@ -1,22 +1,19 @@
 /**
- *  @name  Live Input
- *  @description  <p>Get audio input from your computer's microphone.
- *  Make noise to float the ellipse.</p>
- *
- *  <p>Note: p5.AudioIn contains its own p5.Amplitude object,
- *  so you can call getLevel on p5.AudioIn without
- *  creating a p5.Amplitude.</p>
- *
+ * @name Live Input
+ * @description <p>Get audio input from your computer's microphone.
+ * Make noise to float the ellipse.</p>
+ * <p>Note: p5.AudioIn contains its own p5.Amplitude object,
+ * so you can call getLevel on p5.AudioIn without
+ * creating a p5.Amplitude.</p>
  * <p>You will need to include the 
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
  * for this example to work in your own project.</p>
  */
-
 var input;
 var analyzer;
 
 function setup() {
-  createCanvas(200, 200);
+  createCanvas(710, 200);
 
   // Create an Audio input
   mic = new p5.AudioIn();

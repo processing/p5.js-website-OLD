@@ -9,14 +9,12 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2> Live Input</h2>
-          <p> <p>Get audio input from your computer's microphone.
-  Make noise to float the ellipse.</p>
- *
-  <p>Note: p5.AudioIn contains its own p5.Amplitude object,
-  so you can call getLevel on p5.AudioIn without
-  creating a p5.Amplitude.</p>
- *
+          <h2>Live Input</h2>
+          <p><p>Get audio input from your computer's microphone.
+ Make noise to float the ellipse.</p>
+ <p>Note: p5.AudioIn contains its own p5.Amplitude object,
+ so you can call getLevel on p5.AudioIn without
+ creating a p5.Amplitude.</p>
  <p>You will need to include the 
  <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
  for this example to work in your own project.</p>

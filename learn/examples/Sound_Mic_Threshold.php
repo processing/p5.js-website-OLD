@@ -9,9 +9,12 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2> Mic Threshold</h2>
-          <p>Trigger an event (draw a rectangle) when the Audio Input
-  volume surpasses a threshold.
+          <h2>Mic Threshold</h2>
+          <p><p>Trigger an event (draw a rectangle) when the Audio Input
+ volume surpasses a threshold.</p>
+ <p>You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+ for this example to work in your own project.</p>
  </p>
 
           <div id="exampleDisplay">
