@@ -1,7 +1,6 @@
 /*
  * @name Sound Effect
- * @description Control an Oscillator and view the waveform using FFT.
- * MouseX is mapped to frequency, mouseY is mapped to amplitude.
+ * @description Play a sound effect when the mouse is clicked inside the circle.
  */
 
 // Adapted from Learning Processing by Daniel Shiffman
