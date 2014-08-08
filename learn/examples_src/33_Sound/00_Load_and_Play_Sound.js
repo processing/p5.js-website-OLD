@@ -2,30 +2,24 @@
  * @name Load and Play Sound
  * @description Load sound during preload(). Play a sound when key is pressed.
  */
-var soundFile;  // Declare variable 'soundFile'.
 
-function preload() {
-  // create a SoundFile
-  soundFile = loadSound( ['assets/beatbox.ogg', 
-                          'assets/beatbox.mp3'] );
-}
+// Adapted from Learning Processing by Daniel Shiffman
+// http://www.learningprocessing.com
+
+var song;
 
 function setup() {
-  createCanvas(720, 400);
-  background(0);
+  song = loadSound('../../_files/lucky_dragons_-_power_melody.mp3');
+  createCanvas(640, 360);
+  background(255,0,0);
 }
 
-// when a key is pressed...
-function keyPressed() {
-
-  // play the sound file
-  soundFile.play(1,1);
-
-  // also make the background yellow
-  background(255, 255, 0);
-}
-
-function keyReleased() {
-  // make the background black again when the key is released
-  background(0);
+function mousePressed() {
+  if ( song.isPlaying() ) { // .isPlaying() returns a boolean
+    song.stop();
+    background(255,0,0);
+  } else {
+    song.play();
+    background(0,255,0);
+  }
 }
