@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.1",
+        "version": "0.3.2",
         "url": ""
     },
     "files": {
@@ -2804,7 +2804,7 @@
             "itemtype": "property",
             "name": "displayWidth",
             "example": [
-                "\n  <div><code>\n    size(displayWidth, displayHeight);\n  </code></div>"
+                "\n<div class=\"norender\"><code>\ncreateCanvas(displayWidth, displayHeight);\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -2817,7 +2817,7 @@
             "itemtype": "property",
             "name": "displayHeight",
             "example": [
-                "\n  <div><code>\n    size(displayWidth, displayHeight);\n  </code></div>"
+                "\n<div class=\"norender\"><code>\ncreateCanvas(displayWidth, displayHeight);\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -2830,7 +2830,7 @@
             "itemtype": "property",
             "name": "windowWidth",
             "example": [
-                "\n  <div><code>\n    size(windowWidth, windowHeight);\n  </code></div>"
+                "\n<div class=\"norender\"><code>\ncreateCanvas(windowWidth, windowHeight);\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -2843,7 +2843,7 @@
             "itemtype": "property",
             "name": "windowHeight",
             "example": [
-                "\n  <div><code>\n    size(windowWidth, windowHeight);\n  </code></div>"
+                "\n<div class=\"norender\"><code>\ncreateCanvas(windowWidth, windowHeight);\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -3892,9 +3892,9 @@
         {
             "file": "src/input/mouse.js",
             "line": 94,
-            "description": "The boolean system variable isMousePressed is true if the mouse is pressed\nand false if not.",
+            "description": "The boolean system variable mouseIsPressed is true if the mouse is pressed\nand false if not.",
             "itemtype": "property",
-            "name": "isMousePressed",
+            "name": "mouseIsPressed",
             "class": "p5",
             "module": "Input",
             "submodule": "Mouse"
