@@ -10,8 +10,10 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Modifying the DOM</h2>
-          <p>Create DOM elements and modify their properties every time
- `draw()` is called.
+          <p><p>Create DOM elements and modify their properties every time
+ draw() is called. You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
+ for this example to work in your own project.</p>
  </p>
 
           <div id="exampleDisplay">

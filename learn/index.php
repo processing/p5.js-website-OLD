@@ -268,6 +268,9 @@
         
         </p>
         
+          </div>
+          <div class="column_2">
+        
       
         <p>
         <strong>Dom</strong><br>
@@ -282,9 +285,6 @@
           
         
         </p>
-        
-          </div>
-          <div class="column_2">
         
       
         <p>
@@ -305,13 +305,13 @@
           <a href="examples/Sound_Pan_Sound.php">Pan Sound</a><br>
           
         
-          <a href="examples/Sound_Oscillator_Frequency.php">Oscillator Frequency</a><br>
-          
-        
           <a href="examples/Sound_Sound_Effect.php">Sound Effect</a><br>
           
         
           <a href="examples/Sound_Playback_Rate.php">Playback Rate</a><br>
+          
+        
+          <a href="examples/Sound_Oscillator_Frequency.php">Oscillator Frequency</a><br>
           
         
           <a href="examples/Sound_Noise_Drum_Envelope.php">Noise Drum Envelope</a><br>
@@ -327,9 +327,6 @@
           
         
           <a href="examples/Sound_Frequency_Spectrum.php">Frequency Spectrum</a><br>
-          
-        
-          <a href="examples/Sound_FFT_Frequency_Spectrum.php">FFT Frequency Spectrum</a><br>
           
         
           <a href="examples/Sound_Mic_Threshold.php">Mic Threshold</a><br>
