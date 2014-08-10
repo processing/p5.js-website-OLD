@@ -44,7 +44,7 @@
         </div>
         </a>
 
-        <a href="http://cdnjs.com/libraries/p5.js">
+        <a href="http://www.jsdelivr.com/#!p5.js">
         <div class="download_box half_box">
         <h4>CDN</h4>
         <p>Link:<br>Statically hosted file</p>
