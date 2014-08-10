@@ -268,9 +268,6 @@
         
         </p>
         
-          </div>
-          <div class="column_2">
-        
       
         <p>
         <strong>Dom</strong><br>
@@ -278,10 +275,16 @@
           <a href="examples/Dom_Input_and_Button.php">Input/Button</a><br>
           
         
+          <a href="examples/Dom_Modifying_the_DOM.php">Modifying the DOM</a><br>
+          
+        
           <a href="examples/Dom_Video_Capture.php">Video Capture</a><br>
           
         
         </p>
+        
+          </div>
+          <div class="column_2">
         
       
         <p>
