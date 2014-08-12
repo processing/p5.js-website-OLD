@@ -5,15 +5,19 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Amplitude",
         "p5.AudioIn",
         "p5.Color",
+        "p5.Convolver",
+        "p5.Delay",
         "p5.Element",
         "p5.Env",
         "p5.FFT",
+        "p5.Filter",
         "p5.Graphics",
         "p5.Image",
         "p5.MediaElement",
         "p5.Noise",
         "p5.Oscillator",
         "p5.Pulse",
+        "p5.Reverb",
         "p5.SoundFile",
         "p5.Table",
         "p5.TableRow",
@@ -50,7 +54,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "String Functions",
         "Structure",
         "Table",
-        "Text Area",
         "Time & Date",
         "Touch",
         "Transform",
@@ -152,7 +155,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "p5.sound",
             "name": "p5.sound",
-            "description": "p5.sound extends p5 with <a href=\"http://www.w3.org/TR/webaudio/\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis.\n<br/><br/>\nClasses include:\n<br/>\n<a href=\"#/p5.SoundFile\"><b>p5.SoundFile</b></a>: Load and play sound files.<br/>\n<a href=\"#/p5.Amplitude\"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br/>\n<a href=\"#/p5.AudioIn\"><b>p5.AudioIn</b></a>: Get sound from an input source, typically\n  a computer microphone.<br/>\n<a href=\"#/p5.FFT\"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns\n  results from the frequency spectrum or time domain (waveform).<br/>\n<a href=\"#/p5.Oscillator\"><b>p5.Oscillator</b></a>: Generate Sine,\n  Triangle, Square and Sawtooth waveforms for playback and/or parameter\n  modulation. Base class of <a href=\"#/p5.Noise\">p5.Noise</a>\n  (white, pink, brown) and <a href=\"#/p5.Pulse\">p5.Pulse</a>.\n  <br/>\n<a href=\"#/p5.Env\"><b>p5.Env</b></a>: An Envelope is a series\n  of fades over time. Often used to control an object's\n  output gain level as an \"ADSR Envelope\" (Attack, Decay,\n  Sustain, Release). Can also modulate other parameters.\n<br/><br/>\np5.sound is on <a href=\"https://github.com/therewasaguy/p5.sound/\">GitHub</a>.\nDownload the latest version \n<a href=\"https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js\">here</a>."
+            "description": "p5.sound extends p5 with <a href=\"http://www.w3.org/TR/webaudio/\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis.\n<br/><br/>\nClasses include:\n<br/>\n<a href=\"#/p5.SoundFile\"><b>p5.SoundFile</b></a>: Load and play sound files.<br/>\n<a href=\"#/p5.Amplitude\"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br/>\n<a href=\"#/p5.AudioIn\"><b>p5.AudioIn</b></a>: Get sound from an input source, typically\n  a computer microphone.<br/>\n<a href=\"#/p5.FFT\"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns\n  results from the frequency spectrum or time domain (waveform).<br/>\n<a href=\"#/p5.Oscillator\"><b>p5.Oscillator</b></a>: Generate Sine,\n  Triangle, Square and Sawtooth waveforms for playback and/or parameter\n  modulation. Base class of <a href=\"#/p5.Noise\">p5.Noise</a>\n  (white, pink, brown) and <a href=\"#/p5.Pulse\">p5.Pulse</a>.\n  <br/>\n<a href=\"#/p5.Env\"><b>p5.Env</b></a>: An Envelope is a series\n  of fades over time. Often used to control an object's\n  output gain level as an \"ADSR Envelope\" (Attack, Decay,\n  Sustain, Release). Can also modulate other parameters.<br/>\n<a href=\"#/p5.Delay\"><b>p5.Delay</b></a>: A delay effect with\n  parameters for feedback, delayTime, and lowpass filter.<br/>\n<a href=\"#/p5.Filter\"><b>p5.Filter</b></a>: Filter the frequency range of a\nsound. For example, p5.LowPass turns down frequencies above a certain cutoff,\nwhile p5.BandPass filters frequencies above and below a certain range.\n<br/>\n<a href=\"#/p5.Reverb\"><b>p5.Reverb</b></a>: add reverb to a sound by specifying\nduration and decay. <b><a href=\"#/p5.Convolver\">p5.Convolver</a></b> extends p5.Reverb\nand can simulate the sound of real physical spaces through convolution.\n<br/><br/>\np5.sound is on <a href=\"https://github.com/therewasaguy/p5.sound/\">GitHub</a>.\nDownload the latest version \n<a href=\"https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js\">here</a>."
         },
         {
             "displayName": "Pixels",
