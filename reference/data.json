@@ -2949,7 +2949,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 198,
+            "line": 193,
             "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
@@ -2962,7 +2962,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 214,
+            "line": 210,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -2972,7 +2972,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 225,
+            "line": 221,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -2982,7 +2982,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 236,
+            "line": 232,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
