@@ -12,7 +12,7 @@ var position;
 function setup() {
   createCanvas(720, 200);
   // Request the data from openweathermap
-  loadJSON('http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA&units=imperial', gotWeather);
+  loadJSON('http://api.openweathermap.org/data/2.5/weather?q=New%20York,NY&units=imperial', gotWeather);
   // Circle starts in the middle
   position = createVector(width/2, height/2);
   // wind starts as (0,0)

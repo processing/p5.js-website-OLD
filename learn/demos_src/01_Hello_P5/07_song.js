@@ -80,7 +80,7 @@ function draw() {
     // If the mouse is over the key
     if (mouseX > x && mouseX < x + w && mouseY < height) {
       // If we're clicking
-      if (isMousePressed) {
+      if (mouseIsPressed) {
         fill(100,255,200);
       // Or just rolling over
       } else {

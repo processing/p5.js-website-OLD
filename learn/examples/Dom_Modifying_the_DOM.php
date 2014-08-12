@@ -9,10 +9,10 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>FFT Frequency Spectrum</h2>
-          <p><p>Visualize the frequency spectrum of live audio input.</p>
- <p>You will need to include the 
- <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
+          <h2>Modifying the DOM</h2>
+          <p><p>Create DOM elements and modify their properties every time
+ draw() is called. You will need to include the 
+ <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
  for this example to work in your own project.</p>
  </p>
 
@@ -45,7 +45,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/13_FFT_Spectrum.js');
+          examples.init('../examples_src/16_Dom/07_Modify_DOM.js');
       });
     </script>
   </body>

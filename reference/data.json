@@ -308,17 +308,6 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/output/files.js": {
-            "name": "src/output/files.js",
-            "modules": {
-                "Output": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
         "src/output/text_area.js": {
             "name": "src/output/text_area.js",
             "modules": {
@@ -562,8 +551,7 @@
             "submodules": {
                 "Array Functions": 1,
                 "String Functions": 1,
-                "Table": 1,
-                "Output": 1
+                "Table": 1
             },
             "classes": {
                 "p5.Table": 1,
@@ -933,15 +921,7 @@
             "fors": {
                 "p5": 1
             },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Data",
-            "namespace": "",
-            "file": "src/output/files.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
+            "namespaces": {}
         },
         "Text Area": {
             "name": "Text Area",
@@ -1087,7 +1067,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 602,
+            "line": 630,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact \nwith other HTML5 objects, including text, hyperlink, image, input, video, \naudio, and webcam.</p>\n<p>There are a set of creation methods, and some other stuff... @TODO.</p>\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>",
             "tag": "main",
             "itemtype": "main"
@@ -1363,7 +1343,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 602,
+            "line": 630,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -2969,7 +2949,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 198,
+            "line": 193,
             "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
@@ -2982,7 +2962,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 214,
+            "line": 210,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -2992,7 +2972,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 225,
+            "line": 221,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -3002,7 +2982,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 236,
+            "line": 232,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
@@ -6824,164 +6804,6 @@
             "submodule": "Math"
         },
         {
-            "file": "src/output/files.js",
-            "line": 84,
-            "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "itemtype": "method",
-            "name": "saveJSON",
-            "params": [
-                {
-                    "name": "json",
-                    "description": "",
-                    "type": "Array|Object"
-                },
-                {
-                    "name": "filename",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "optimize",
-                    "description": "If true, removes line breaks\n                               and spaces from the output\n                               file to optimize filesize\n                               (but not readability).",
-                    "type": "Boolean",
-                    "optional": true
-                }
-            ],
-            "example": [
-                "\n<div><code>\nvar json;\n\nfunction setup() {\n\n  json = {}; // new JSON Object\n  \n  json.id = 0;\n  json.species = 'Panthera leo';\n  json.name = 'Lion';\n  \n// To save, un-comment the line below, then click 'run'\n// saveJSONObject(json, 'lion.json');\n}\n\n// Saves the following to a file called \"lion.json\":\n// {\n//   \"id\": 0,\n//   \"species\": \"Panthera leo\",\n//   \"name\": \"Lion\"\n// }\n</div></code>"
-            ],
-            "class": "p5",
-            "module": "Data",
-            "submodule": "Output"
-        },
-        {
-            "file": "src/output/files.js",
-            "line": 139,
-            "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "itemtype": "method",
-            "name": "saveStrings",
-            "params": [
-                {
-                    "name": "list",
-                    "description": "string array to be written",
-                    "type": "Array"
-                },
-                {
-                    "name": "filename",
-                    "description": "filename for output",
-                    "type": "String"
-                }
-            ],
-            "example": [
-                "\n<div><code>\nvar words = 'apple bear cat dog';\n\n// .split() outputs an Array\nvar list = split(words, ' ');\n\n// To save the file, un-comment next line and click 'run'\n// saveStrings(list, 'nouns.txt');\n\n// Saves the following to a file called 'nouns.txt':\n//\n// apple\n// bear\n// cat\n// dog\n</code></div>"
-            ],
-            "class": "p5",
-            "module": "Data",
-            "submodule": "Output"
-        },
-        {
-            "file": "src/output/files.js",
-            "line": 191,
-            "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "itemtype": "method",
-            "name": "saveTable",
-            "params": [
-                {
-                    "name": "Table",
-                    "description": "the Table object to save to a file",
-                    "type": "p5.Table"
-                },
-                {
-                    "name": "filename",
-                    "description": "the filename to which the Table should be saved",
-                    "type": "String"
-                },
-                {
-                    "name": "options",
-                    "description": "can be one of \"tsv\", \"csv\", or \"html\"",
-                    "type": "[String]"
-                }
-            ],
-            "example": [
-                "\n<div><code>\nvar table;\n\nfunction setup() {\n  table = new p5.Table();\n  \n  table.addColumn('id');\n  table.addColumn('species');\n  table.addColumn('name');\n  \n  var newRow = table.addRow();\n  newRow.setNum('id', table.getRowCount() - 1);\n  newRow.setString('species', 'Panthera leo');\n  newRow.setString('name', 'Lion');\n\n  // To save, un-comment next line then click 'run'\n  // saveTable(table, 'new.csv');\n  }\n  \n  // Saves the following to a file called 'new.csv':\n  // id,species,name\n  // 0,Panthera leo,Lion\n</code></div>"
-            ],
-            "class": "p5",
-            "module": "Data",
-            "submodule": "Output"
-        },
-        {
-            "file": "src/output/files.js",
-            "line": 311,
-            "description": "Generate a file and force download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "params": [
-                {
-                    "name": "dataToDownload",
-                    "description": "",
-                    "type": "Array"
-                },
-                {
-                    "name": "filename",
-                    "description": "",
-                    "type": "String"
-                },
-                {
-                    "name": "extension",
-                    "description": "",
-                    "type": "[String]"
-                }
-            ],
-            "access": "private",
-            "tagname": "",
-            "class": "p5",
-            "module": "Data",
-            "submodule": "Output"
-        },
-        {
-            "file": "src/output/files.js",
-            "line": 366,
-            "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
-            "params": [
-                {
-                    "name": "filename",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "File Extension",
-                "type": "String"
-            },
-            "access": "private",
-            "tagname": "",
-            "class": "p5",
-            "module": "Data",
-            "submodule": "Output"
-        },
-        {
-            "file": "src/output/files.js",
-            "line": 378,
-            "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "return": {
-                "description": "[description]",
-                "type": "Boolean"
-            },
-            "access": "private",
-            "tagname": "",
-            "class": "p5",
-            "module": "Data",
-            "submodule": "Output"
-        },
-        {
-            "file": "src/output/files.js",
-            "line": 390,
-            "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "access": "private",
-            "tagname": "",
-            "class": "p5",
-            "module": "Data",
-            "submodule": "Output"
-        },
-        {
             "file": "src/output/text_area.js",
             "line": 19,
             "description": "The print() function writes to the console area of your browser, it maps\nto console.log(). This function is often helpful for looking at the data\na program is producing. This function creates a new line of text for\neach call to the function. More than one parameter can be passed into\nthe function by separating them with commas. Alternatively, individual\nelements can be separated with quotes (\"\") and joined with the addition\noperator (+).",
@@ -8977,13 +8799,17 @@
                     "type": "String"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 403,
+            "line": 405,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -8994,13 +8820,17 @@
                     "type": "String"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 416,
+            "line": 420,
             "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
             "itemtype": "method",
             "name": "child",
@@ -9011,30 +8841,39 @@
                     "type": "String|Object"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 433,
-            "description": "Sets the inner HTML of the element. Replaces any existing html.",
+            "line": 439,
+            "description": "If an argument is given, sets the inner HTML of the element, \n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
             "params": [
                 {
                     "name": "html",
                     "description": "the HTML to be placed inside the element",
-                    "type": "String"
+                    "type": "String",
+                    "optional": true
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element|String"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 445,
+            "line": 459,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -9050,13 +8889,17 @@
                     "type": "Number"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 461,
+            "line": 477,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property, \n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -9069,12 +8912,13 @@
                 {
                     "name": "value",
                     "description": "value to assign to property",
-                    "type": "String"
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
-                "description": "value of property, if no value is specified",
-                "type": "String"
+                "description": "value of property, if no value is specified\n                             or p5.Element",
+                "type": "String|p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -9082,7 +8926,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 481,
+            "line": 499,
             "description": "Adds a new attribute or changes the value of an existing attribute \n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -9100,8 +8944,8 @@
                 }
             ],
             "return": {
-                "description": "value of attribute, if no value is specified",
-                "type": "String"
+                "description": "value of attribute, if no value is \n                             specified or p5.Element",
+                "type": "String|p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -9109,7 +8953,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 501,
+            "line": 521,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -9122,8 +8966,8 @@
                 }
             ],
             "return": {
-                "description": "",
-                "type": "String|Number"
+                "description": "value of element, if no value is \n                            specified or p5.Element",
+                "type": "String|p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -9131,27 +8975,35 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 520,
+            "line": 542,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 530,
+            "line": 554,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 539,
+            "line": 565,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -9167,13 +9019,17 @@
                     "type": "Number"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 579,
+            "line": 607,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -9183,57 +9039,77 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 621,
+            "line": 649,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 633,
+            "line": 663,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 643,
+            "line": 675,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 652,
+            "line": 686,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 661,
+            "line": 697,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 672,
+            "line": 710,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -9244,14 +9120,18 @@
                     "type": "Boolean"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 682,
-            "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume;",
+            "line": 722,
+            "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
                     "name": "val",
@@ -9261,8 +9141,8 @@
                 }
             ],
             "return": {
-                "description": "current volume",
-                "type": "Number"
+                "description": "current volume or p5.MediaElement",
+                "type": "Number|p5.MediaElement"
             },
             "itemtype": "method",
             "name": "volume",
@@ -9272,7 +9152,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 698,
+            "line": 738,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -9285,8 +9165,8 @@
                 }
             ],
             "return": {
-                "description": "current time (in seconds)",
-                "type": "Number"
+                "description": "current time (in seconds)\n                                 or p5.MediaElement",
+                "type": "Number|p5.MediaElement"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -9294,7 +9174,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 714,
+            "line": 755,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -11671,22 +11551,6 @@
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
             "line": " src/objects/p5.Vector.js:586"
-        },
-        {
-            "message": "Missing item type\nGenerate a file and force download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/output/files.js:311"
-        },
-        {
-            "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/output/files.js:366"
-        },
-        {
-            "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/output/files.js:378"
-        },
-        {
-            "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/output/files.js:390"
         },
         {
             "message": "Missing item type",

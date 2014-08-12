@@ -14,7 +14,7 @@ function draw() {
 
     background(238, 49, 157);
 
-    if (isMousePressed() == true) {
+    if (mouseIsPressed == true) {
         fill(255); // White
     } else {
         fill(0); // Black

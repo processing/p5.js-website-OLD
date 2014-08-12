@@ -49,7 +49,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/07_Manipulate_Sound.js');
+          examples.init('../examples_src/33_Sound/06_Manipulate_Sound.js');
       });
     </script>
   </body>

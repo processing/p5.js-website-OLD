@@ -54,6 +54,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "String Functions",
         "Structure",
         "Table",
+        "Text Area",
         "Time & Date",
         "Touch",
         "Transform",
