@@ -1,12 +1,13 @@
 /*
  * @name Preload SoundFile
- * @description call loadSound() during preload() to ensure that the
- * sound will be loaded by setup(). If loadSound() and play() are both called
- * during setup (or during preload), playback will fail because the sound will
- * not have finished loading.
- * <br><br>You will need to include the 
+ * @description Call loadSound() during preload() to ensure that the
+ * sound is completely loaded before setup() is called. It's best to always
+ * call loadSound() in preload(), otherwise sounds won't necessarily be loaded
+ * by the time you want to play them in your sketch.
+ * 
+ * <br><br><em><span class="small">You will need to include the 
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.
+ * for this example to work in your own project.</em></span>
  */
 
 var song;

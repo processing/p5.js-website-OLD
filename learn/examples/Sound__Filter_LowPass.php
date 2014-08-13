@@ -9,15 +9,15 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Live Input</h2>
-          <p><p>Get audio input from your computer's microphone.
- Make noise to float the ellipse.</p>
- <p>Note: p5.AudioIn contains its own p5.Amplitude object,
- so you can call getLevel on p5.AudioIn without
- creating a p5.Amplitude.</p>
- <p>You will need to include the 
+          <h2> Filter LowPass</h2>
+          <p>Apply a p5.LowPass filter to a p5.SoundFile.
+  Visualize the sound with FFT.
+  Map mouseX to the the filter's cutoff frequency
+  and mouseY to resonance/width of the a BandPass filter
+  
+ <p><em><span class="small">You will need to include the 
  <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- for this example to work in your own project.</p>
+ for this example to work in your own project.</em></span></p>
  </p>
 
           <div id="exampleDisplay">
@@ -49,7 +49,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/11_Live_Input.js');
+          examples.init('../examples_src/33_Sound/14_Filter_LowPass.js');
       });
     </script>
   </body>

@@ -1,9 +1,9 @@
 /*
  * @name Load and Play Sound
- * @description Load sound during preload(). Play a sound when key is pressed.
- * <br><br>You will need to include the 
+ * @description Load sound during preload(). Play a sound when canvas is clicked.
+ * <br><br><em><span class="small"> You will need to include the 
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.
+ * for this example to work in your own project.</span></em>
  */
 var song;
 
