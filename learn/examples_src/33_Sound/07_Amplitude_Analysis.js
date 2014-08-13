@@ -1,5 +1,5 @@
 /**
- * @name  Amplitude (Volume)
+ * @name  Amplitude Analysis
  * @description <p>Analyze the amplitude (volume) of sound with 
  * p5.Amplitude.</p>
  * <p><em><span class="small">You will need to include the 

@@ -9,21 +9,21 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Noise Drum Envelope</h2>
-          <p> <p>White Noise is a random audio signal with equal energy
-  at every part of the frequency spectrum</p>
-  
-  <p>An Envelope is a series of fades, defined
-  as time / value pairs.</p>
-  
-  <p>In this example, the p5.Env
-  will be used to "play" the p5.Noise like a drum by controlling its output
-  amplitude. A p5.Amplitude will get the level of all sound in the sketch, and
-  we'll use this value to draw a green rectangle that shows the envelope
-  in action.</p>
+          <h2> Convolution Reverb</h2>
+          <p><p>The p5.Convolver can recreate the sound of actual
+ spaces using convolution. Convolution takes an Impulse Response,
+ (the sound of a room reverberating), and uses that to
+ recreate the sound of that space.</p><p>Click to play a sound through
+ convolution. Every time you click, the sound is convolved with
+ a different Impulse Response. To hear the Impulse Response itself,
+ press any key.</p>
+ 
  <p><em><span class="small">You will need to include the 
  <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- for this example to work in your own project.</em></span></p>
+ for this example to work in your own project. These convolution samples
+ are Creative Commons BY
+ <a href="https://www.freesound.org/people/recordinghopkins/">
+ recordinghopkins</a></em></span></p>
  </p>
 
           <div id="exampleDisplay">
@@ -55,7 +55,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/08_Noise_Envelope.js');
+          examples.init('../examples_src/33_Sound/18_Convolution_Reverb.js');
       });
     </script>
   </body>

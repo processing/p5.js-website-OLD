@@ -1,13 +1,19 @@
 /**
  *  @name Noise Drum Envelope
- *  @description  <p>Control the output level of Noise with an Envelope.
- *  The result sounds like a snare drum.
- *  A p5.Amplitude will get the level of all sound in the sketch, and
+ *  @description  <p>White Noise is a random audio signal with equal energy
+ *  at every part of the frequency spectrum</p>
+ *  
+ *  <p>An Envelope is a series of fades, defined
+ *  as time / value pairs.</p>
+ *  
+ *  <p>In this example, the p5.Env
+ *  will be used to "play" the p5.Noise like a drum by controlling its output
+ *  amplitude. A p5.Amplitude will get the level of all sound in the sketch, and
  *  we'll use this value to draw a green rectangle that shows the envelope
  *  in action.</p>
- * <p>You will need to include the 
+ * <p><em><span class="small">You will need to include the 
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</p>
+ * for this example to work in your own project.</em></span></p>
  */
 var noise, env, analyzer;
 

@@ -2,9 +2,9 @@
  * @name Mic Threshold
  * @description <p>Trigger an event (draw a rectangle) when the Audio Input
  * volume surpasses a threshold.</p>
- * <p>You will need to include the 
+ * <p><em><span class="small">You will need to include the 
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</p>
+ * for this example to work in your own project.<em><span></p>
  */
 // Adapted from Learning Processing, Daniel Shiffman
 // learningprocessing.com

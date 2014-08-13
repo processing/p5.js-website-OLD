@@ -8,15 +8,17 @@
  *  in multiple formats, i.e. 'sound.mp3' and 'sound.ogg'. (Ogg is an
  *  open source alternative to mp3.) You can convert audio files
  *  into web friendly formats for free online at <a href="
- *  http://media.io/">media.io</a></p>
+ *  http://media.io/">media.io</a></p>.
+ *
+ *  <p>The soundFormats() method tells loadSound which formats
+ *  we have included with our sketch. Then, loadSound will
+ *  attempt to load the first format that is supported by the
+ *  client's web browser.</p>
  *  
- *  <p>The soundFormats() method tells loadSound which formats we have
- *  included with our sketch. Then, loadSound will attempt to load
- *  the first format that is supported by the client's web browser.</p>
- * 
- * <p>You will need to include the 
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</p>
+ *  <p><em><span class="small">You will need to include the 
+ *  <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound
+ *  library</a> for this example to work in your own project.
+ *  </em></span></p>
  */
 var song;
 
