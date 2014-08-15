@@ -268,9 +268,6 @@
         
         </p>
         
-          </div>
-          <div class="column_2">
-        
       
         <p>
         <strong>Dom</strong><br>
@@ -285,6 +282,9 @@
           
         
         </p>
+        
+          </div>
+          <div class="column_2">
         
       
         <p>
@@ -311,7 +311,7 @@
           <a href="examples/Sound_Playback_Rate.php">Playback Rate</a><br>
           
         
-          <a href="examples/Sound_Oscillator_Frequency.php">Oscillator Frequency</a><br>
+          <a href="examples/Sound__Amplitude_Analysis.php"> Amplitude Analysis</a><br>
           
         
           <a href="examples/Sound_Noise_Drum_Envelope.php">Noise Drum Envelope</a><br>
@@ -320,16 +320,34 @@
           <a href="examples/Sound__Note_Envelope.php"> Note Envelope</a><br>
           
         
-          <a href="examples/Sound__Amplitude_Analysis.php"> Amplitude Analysis</a><br>
+          <a href="examples/Sound__Amplitude_(Volume).php"> Amplitude (Volume)</a><br>
           
         
-          <a href="examples/Sound_Live_Input.php">Live Input</a><br>
+          <a href="examples/Sound_Oscillator_Frequency.php">Oscillator Frequency</a><br>
+          
+        
+          <a href="examples/Sound_Mic_Input.php">Mic Input</a><br>
           
         
           <a href="examples/Sound_Frequency_Spectrum.php">Frequency Spectrum</a><br>
           
         
           <a href="examples/Sound_Mic_Threshold.php">Mic Threshold</a><br>
+          
+        
+          <a href="examples/Sound__Filter_LowPass.php"> Filter LowPass</a><br>
+          
+        
+          <a href="examples/Sound__Filter_BandPass.php"> Filter BandPass</a><br>
+          
+        
+          <a href="examples/Sound__Delay.php"> Delay</a><br>
+          
+        
+          <a href="examples/Sound__Reverb.php"> Reverb</a><br>
+          
+        
+          <a href="examples/Sound__Convolution_Reverb.php"> Convolution Reverb</a><br>
           
         
         </p>

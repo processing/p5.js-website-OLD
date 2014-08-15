@@ -12,9 +12,9 @@
           <h2> Amplitude Analysis</h2>
           <p><p>Analyze the amplitude (volume) of sound with 
  p5.Amplitude.</p>
- <p>You will need to include the 
+ <p><em><span class="small">You will need to include the 
  <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- for this example to work in your own project.</p>
+ for this example to work in your own project.</em></span></p>
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +46,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/10_Amplitude_Analysis.js');
+          examples.init('../examples_src/33_Sound/07_Amplitude_Analysis.js');
       });
     </script>
   </body>

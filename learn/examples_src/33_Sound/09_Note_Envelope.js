@@ -10,9 +10,9 @@
  *  be reset with the osc.amp() method. Or, in this example, an
  *  Envelope takes control of that node, turning the amplitude
  *  up and down like a volume knob.</p>
- * <p>You will need to include the 
+ * <p><em><span class="small">You will need to include the 
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</p>
+ * for this example to work in your own project.</em></span>></p>
  */
 var osc, envelope, fft;
 
