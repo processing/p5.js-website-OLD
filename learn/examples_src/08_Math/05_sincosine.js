@@ -5,13 +5,12 @@
  * are put into these functions and numbers between -1 and 1 are returned.
  * These values are then scaled to produce larger movements.
  */
- 
 var angle1=0;
 var angle2=0;
 var scalar = 70;
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   noStroke();
   rectMode(CENTER);
 }
@@ -40,6 +39,5 @@ function draw() {
   ellipse(width*0.5 + 120, y2, scalar, scalar);
 
   angle1 += 2;
-  angle2 += 3;
-  
+  angle2 += 3; 
 }

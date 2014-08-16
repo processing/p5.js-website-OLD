@@ -3,7 +3,6 @@
  * @description Move the mouse left and right to control
  * the speed and direction of the moving shapes.
  */
- 
 var xpos1;
 var xpos2;
 var xpos3;
@@ -11,9 +10,8 @@ var xpos4;
 var thin = 8;
 var thick = 36;
 
-function setup() 
-{
-  createCanvas(720, 400);
+function setup() {
+  createCanvas(710, 400);
   noStroke();
   xpos1 = width/2;
   xpos2 = width/2;
@@ -21,8 +19,7 @@ function setup()
   xpos4 = width/2;
 }
 
-function draw() 
-{
+function draw() {
   background(0);
   
   var mx = mouseX * 0.4 - width/5.0;

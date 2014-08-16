@@ -175,9 +175,6 @@
         
         </p>
         
-          </div>
-          <div class="column_1">
-        
       
         <p>
         <strong>Image</strong><br>
@@ -202,6 +199,9 @@
         
         </p>
         
+          </div>
+          <div class="column_1">
+        
       
         <p>
         <strong>Color</strong><br>
@@ -225,6 +225,51 @@
           
         
           <a href="examples/Color_Radial_Gradient.php">Radial Gradient</a><br>
+          
+        
+        </p>
+        
+      
+        <p>
+        <strong>Math</strong><br>
+        
+          <a href="examples/Math_Increment_Decrement.php">Increment Decrement</a><br>
+          
+        
+          <a href="examples/Math_Operator_Precedence_.php">Operator Precedence </a><br>
+          
+        
+          <a href="examples/Math_Distance_1D.php">Distance 1D</a><br>
+          
+        
+          <a href="examples/Math_Distance_2D.php">Distance 2D</a><br>
+          
+        
+          <a href="examples/Math_Sine.php">Sine</a><br>
+          
+        
+          <a href="examples/Math_Sine_Cosine.php">Sine Cosine</a><br>
+          
+        
+          <a href="examples/Math_Sine_Wave.php">Sine Wave</a><br>
+          
+        
+          <a href="examples/Math_Additive_Wave.php">Additive Wave</a><br>
+          
+        
+          <a href="examples/Math_PolarToCartesian.php">PolarToCartesian</a><br>
+          
+        
+          <a href="examples/Math_Double_Random.php">Double Random</a><br>
+          
+        
+          <a href="examples/Math_Random.php">Random</a><br>
+          
+        
+          <a href="examples/Math__Noise1D.php"> Noise1D</a><br>
+          
+        
+          <a href="examples/Math_Noise_Wave.php">Noise Wave</a><br>
           
         
         </p>
@@ -268,6 +313,9 @@
         
         </p>
         
+          </div>
+          <div class="column_2">
+        
       
         <p>
         <strong>Dom</strong><br>
@@ -282,9 +330,6 @@
           
         
         </p>
-        
-          </div>
-          <div class="column_2">
         
       
         <p>

@@ -5,12 +5,11 @@
  * function to create an irregular sawtooth line.
  * Original by by Ira Greenberg.
  */
-
 var totalPts = 300;
 var steps = totalPts + 1;
   
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   stroke(255);
   frameRate(1);
 } 

@@ -3,13 +3,12 @@
  * @description Writing "a++" is equivalent to "a = a + 1".
  * Writing "a--" is equivalent to "a = a - 1".
  */
- 
 var a;
 var b;
 var direction;
 
 function setup() {
-  createCanvas(640, 360);
+  createCanvas(710, 400);
   colorMode(RGB, width);
   a = 0;
   b = width;

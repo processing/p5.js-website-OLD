@@ -1,14 +1,12 @@
 /*
  * @name Sine
- * @frame 720,400 (optional)
  * @description Smoothly scaling size with the sin() function.
  */
- 
 var diameter; 
 var angle = 0;
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   diameter = height - 10;
   noStroke();
   noStroke();
@@ -16,7 +14,6 @@ function setup() {
 }
 
 function draw() {
-  
   background(0);
 
   var d1 = 10 + (sin(angle) * diameter/2) + diameter/2;

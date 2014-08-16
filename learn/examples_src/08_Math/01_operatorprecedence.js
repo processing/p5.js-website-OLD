@@ -10,7 +10,6 @@
  * through placement of parenthesis in the code. A table of operator
  * precedence follows below.
  */
-
 // The highest precedence is at the top of the list and 
 // the lowest is at the bottom.
 // Multiplicative: * / %
@@ -21,7 +20,7 @@
 // Logical OR: ||
 // Assignment: = += -= *= /= %=
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   background(51);
   noFill();
   stroke(51);

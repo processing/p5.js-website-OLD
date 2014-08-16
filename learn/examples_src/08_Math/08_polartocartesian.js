@@ -4,7 +4,6 @@
  * to cartesian (x,y): x = rcos(theta) y = rsin(theta)
  * Original by Daniel Shiffman. 
  */
-
 var r;
 
 // Angle and angular velocity, accleration
@@ -13,7 +12,7 @@ var theta_vel;
 var theta_acc;
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   
   // Initialize all values
   r = height * 0.45;
@@ -39,7 +38,8 @@ function draw() {
   fill(200);
   ellipse(x, y, 32, 32);
   
-  // Apply acceleration and velocity to angle (r remains static in this example)
+  // Apply acceleration and velocity to angle 
+  // (r remains static in this example)
   theta_vel += theta_acc;
   theta += theta_vel;
 }

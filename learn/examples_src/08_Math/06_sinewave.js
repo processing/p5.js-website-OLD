@@ -1,24 +1,22 @@
 /*
  * @name Sine Wave
- * @frame 720,400 (optional)
  * @description Render a simple sine wave.
  * Original by Danial Shiffman.
  */
 
-var xspacing = 16;   // How far apart should each horizontal location be spaced
-var w;              // Width of entire wave
-
-var theta = 0.0;  // Start angle at 0
-var amplitude = 75.0;  // Height of wave
-var period = 500.0;  // How many pixels before the wave repeats
-var dx;  // Value for incrementing X, a function of period and xspacing
+var xspacing = 16;    // Distance between each horizontal location
+var w;                // Width of entire wave
+var theta = 0.0;      // Start angle at 0
+var amplitude = 75.0; // Height of wave
+var period = 500.0;   // How many pixels before the wave repeats
+var dx;               // Value for incrementing x
 var yvalues;  // Using an array to store height values for the wave
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   w = width+16;
   dx = (TWO_PI / period) * xspacing;
-  yvalues = new Array(w/xspacing);
+  yvalues = new Array(floor(w/xspacing));
 }
 
 function draw() {
@@ -28,7 +26,8 @@ function draw() {
 }
 
 function calcWave() {
-  // Increment theta (try different values for 'angular velocity' here
+  // Increment theta (try different values for 
+  // 'angular velocity' here
   theta += 0.02;
 
   // For every x value, calculate a y value with sine function

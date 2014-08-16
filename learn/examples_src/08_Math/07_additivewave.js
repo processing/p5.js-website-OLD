@@ -1,32 +1,34 @@
 /*
  * @name Additive Wave
- * @frame 720,400 (optional)
  * @description Create a more complex wave by adding two waves together.
  * Original by Daniel Shiffman
  */
- 
-var xspacing = 8;   // How far apart should each horizontal location be spaced
+var xspacing = 8;   // Distance between each horizontal location
 var w;              // Width of entire wave
 var maxwaves = 4;   // total # of waves to add together
 
 var theta = 0.0;
 var amplitude = new Array(maxwaves);   // Height of wave
-var dx = new Array(maxwaves);          // Value for incrementing X, to be calculated as a function of period and xspacing
-var yvalues;                           // Using an array to store height values for the wave (not entirely necessary)
+// Value for incrementing X, to be calculated 
+// as a function of period and xspacing
+var dx = new Array(maxwaves);         
+// Using an array to store height values
+// for the wave (not entirely necessary)
+var yvalues;                          
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   frameRate(30);
   colorMode(RGB, 255, 255, 255, 100);
   w = width + 16;
 
   for (var i = 0; i < maxwaves; i++) {
     amplitude[i] = random(10,30);
-    var period = random(100,300); // How many pixels before the wave repeats
+    var period = random(100,300); // Num pixels before wave repeats
     dx[i] = (TWO_PI / period) * xspacing;
   }
 
-  yvalues = new Array(w/xspacing);
+  yvalues = new Array(floor(w/xspacing));
 }
 
 function draw() {
@@ -36,7 +38,8 @@ function draw() {
 }
 
 function calcWave() {
-  // Increment theta (try different values for 'angular velocity' here
+  // Increment theta (try different values 
+  // for 'angular velocity' here
   theta += 0.02;
 
   // Set all height values to zero

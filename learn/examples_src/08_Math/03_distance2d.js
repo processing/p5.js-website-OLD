@@ -4,17 +4,15 @@
  * and reveal the matrix. Measures the distance from the mouse
  * to each square and sets the size proportionally.
  */
- 
 var max_distance;
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   noStroke();
   max_distance = dist(0, 0, width, height);
 }
 
-function draw() 
-{
+function draw() {
   background(0);
 
   for(var i = 0; i <= width; i += 20) {

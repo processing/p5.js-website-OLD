@@ -2,12 +2,11 @@
  * @name  Noise1D
  * @description Using 1D Perlin Noise to assign location.
  */
-
 var xoff = 0.0;
 var xincrement = 0.01; 
 
 function setup() {
-  createCanvas(720, 400);
+  createCanvas(710, 400);
   background(0);
   noStroke();
 }
@@ -19,7 +18,8 @@ function draw() {
   
   //float n = random(0,width);  // Try this line instead of noise
   
-  // Get a noise value based on xoff and scale it according to the window's width
+  // Get a noise value based on xoff and scale 
+  // it according to the window's width
   var n = noise(xoff)*width;
   
   // With each cycle, increment xoff
