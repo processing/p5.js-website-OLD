@@ -320,12 +320,12 @@ helpers = function () {
     }
   };
   // register removeSound to dispose of p5sound SoundFiles and Oscillators when sketch ends
-  p5.prototype._registerRemoveFunc('disposeSound');
   p5.prototype.disposeSound = function () {
     for (var i = 0; i < p5sound.soundArray.length; i++) {
       p5sound.soundArray[i].dispose();
     }
   };
+  p5.prototype.registerMethod('remove', p5.prototype.disposeSound);
   p5.prototype._checkFileFormats = function (paths) {
     var path;
     // if path is a single string, check to see if extension is provided
@@ -469,7 +469,7 @@ soundfile = function () {
     p5sound.soundArray.push(this);
   };
   // register preload handling of loadSound
-  p5.prototype._registerPreloadFunc('loadSound');
+  p5.prototype.registerPreloadMethod('loadSound');
   /**
    *  loadSound() returns a new p5.SoundFile from a specified
    *  path. If called during preload(), the p5.SoundFile will be ready
@@ -3626,7 +3626,7 @@ reverb = function () {
     this.connect();
   };
   p5.Convolver.prototype = Object.create(p5.Reverb.prototype);
-  p5.prototype._registerPreloadFunc('createConvolution');
+  p5.prototype.registerPreloadMethod('createConvolution');
   /**
    *  Create a p5.Convolver. Accepts a path to a soundfile 
    *  that will be used to generate an impulse response.
