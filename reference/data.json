@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.2",
+        "version": "0.3.3",
         "url": ""
     },
     "files": {
@@ -2243,11 +2243,11 @@
         {
             "file": "src/core/core.js",
             "line": 17,
-            "description": "This is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
+            "description": "This is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure and it can also\ntake an optional node parameter for attaching the generated p5 canvas\nto a node.  The sketch closure takes the newly created p5 instance as\nits sole argument and may optionally set preload(), setup(), and/or\ndraw() properties on it for running a sketch.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
             "params": [
                 {
                     "name": "sketch",
-                    "description": "a closure with optional preload(), setup()\n                              and draw() properties",
+                    "description": "a closure that can set optional preload(),\n                             setup(), and/or draw() properties on the\n                             given p5 instance",
                     "type": "Function"
                 },
                 {
@@ -2266,7 +2266,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 42,
+            "line": 44,
             "description": "Called directly before setup(), the preload() function is used to handle\nasynchronous loading of external files. If a preload function is\ndefined, setup() will wait until any load calls within have finished.\nNothing besides load calls should be inside preload (loadImage,\nloadJSON, loadStrings, etc).",
             "itemtype": "method",
             "name": "preload",
@@ -2279,7 +2279,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 70,
+            "line": 72,
             "description": "The setup() function is called once when the program starts. It's used to\ndefine initial environment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
@@ -2292,7 +2292,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 96,
+            "line": 98,
             "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -2305,7 +2305,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 298,
+            "line": 300,
             "itemtype": "method",
             "name": "remove",
             "class": "p5",
@@ -8194,7 +8194,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 22,
+            "line": 18,
             "description": "Multiplies the current matrix by the one specified through the parameters.\nThis is very slow because it will try to calculate the inverse of the\ntransform, so avoid it whenever possible.",
             "itemtype": "method",
             "name": "applyMatrix",
@@ -8243,7 +8243,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 62,
+            "line": 55,
             "description": "Replaces the current matrix with the identity matrix.",
             "itemtype": "method",
             "name": "resetMatrix",
@@ -8260,7 +8260,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 81,
+            "line": 72,
             "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe push() and pop().",
             "itemtype": "method",
             "name": "rotate",
@@ -8284,7 +8284,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 140,
+            "line": 119,
             "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with push() and pop().",
             "itemtype": "method",
             "name": "scale",
@@ -8314,7 +8314,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 198,
+            "line": 171,
             "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearX",
@@ -8338,7 +8338,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 238,
+            "line": 208,
             "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearY",
@@ -8362,7 +8362,7 @@
         },
         {
             "file": "src/transform/transform.js",
-            "line": 278,
+            "line": 245,
             "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().",
             "itemtype": "method",
             "name": "translate",
@@ -11616,7 +11616,7 @@
             "line": " lib/addons/p5.sound.js:3037"
         },
         {
-            "message": "Missing item type\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure with optional\npreload(), setup() and draw() properties to attach to this p5\ninstance for running a sketch.  It can also take an optional node\nparameter for attaching the generated p5 canvas to a node.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
+            "message": "Missing item type\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure and it can also\ntake an optional node parameter for attaching the generated p5 canvas\nto a node.  The sketch closure takes the newly created p5 instance as\nits sole argument and may optionally set preload(), setup(), and/or\ndraw() properties on it for running a sketch.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
             "line": " src/core/core.js:17"
         },
         {
