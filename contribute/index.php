@@ -30,7 +30,7 @@
     <p>Create documentation &#8212; Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
         adding documentation</a>, and creating tutorials.</p>
 
-    <p>Teach &#8212; Check out the <a href="#">education page</a> on the wiki to view
+    <p>Teach &#8212; Check out the <a href="https://github.com/lmccart/p5.js/wiki/Education">education page</a> on the wiki to view
         resources from past classes, workshops, and events. Add your own links!</p>
         
     <p>Something else? &#8212; p5.js is looking for designers, artists, writers, organizers,
