@@ -80,7 +80,7 @@ function mousePressed() {
   // display the current Impulse Response name (the filepath)
   println('Convolution Impulse Response: ' + cVerb.impulses[currentIR].name);
 
-  rawImpulse.setBuffer('assets/' + cVerb.impulses[currentIR].name);
+  rawImpulse.setPath('assets/' + cVerb.impulses[currentIR].name);
 }
 
 // play the impulse (without convolution)

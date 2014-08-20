@@ -313,9 +313,6 @@
         
         </p>
         
-          </div>
-          <div class="column_2">
-        
       
         <p>
         <strong>Dom</strong><br>
@@ -330,6 +327,9 @@
           
         
         </p>
+        
+          </div>
+          <div class="column_2">
         
       
         <p>
@@ -393,6 +393,18 @@
           
         
           <a href="examples/Sound__Convolution_Reverb.php"> Convolution Reverb</a><br>
+          
+        
+          <a href="examples/Sound__Record_Save_Audio.php"> Record Save Audio</a><br>
+          
+        
+          <a href="examples/Sound_.php"></a><br>
+          
+        
+          <a href="examples/Sound_Amplitude_Modulation.php">Amplitude Modulation</a><br>
+          
+        
+          <a href="examples/Sound_Frequency_Modulation.php">Frequency Modulation</a><br>
           
         
         </p>
