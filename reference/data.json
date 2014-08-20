@@ -3906,11 +3906,11 @@
         {
             "file": "src/input/keyboard.js",
             "line": 13,
-            "description": "The boolean system variable isKeyPressed is true if any key is pressed\nand false if no keys are pressed.",
+            "description": "The boolean system variable keyIsPressed is true if any key is pressed\nand false if no keys are pressed.",
             "itemtype": "property",
-            "name": "isKeyPressed",
+            "name": "keyIsPressed",
             "example": [
-                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  if (isKeyPressed === true) {\n    fill(0);\n  } else {\n    fill(255);\n  }\n  rect(25, 25, 50, 50);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  if (keyIsPressed === true) {\n    fill(0);\n  } else {\n    fill(255);\n  }\n  rect(25, 25, 50, 50);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
