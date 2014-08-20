@@ -37,6 +37,7 @@
   <li><a href="<?php echo getRoot(); ?>learn/">Learn</a></li>
   <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
   <li><a href="http://github.com/lmccart/p5.js" target=_blank class="other-link">Github</a></li>
+  <li><a href="http://twitter.com/p5xjs" target=_blank class="other-link">Twitter</a></li>
 </ul>
 <br />
 </div>
