@@ -1,4 +1,5 @@
 function renderCode(sel) {
+  var _p5 = p5;
   var instances = [];
   var selector = sel || 'example';
   var examples = document.getElementsByClassName(selector);
@@ -183,7 +184,7 @@ function renderCode(sel) {
 
     $( document ).ready(function() {
       setTimeout(function() {
-        var myp5 = new p5(s, cnv);      
+        var myp5 = new _p5(s, cnv);      
         $( ".example-content" ).find('div').each(function() {
           $this = $( this );
           var pre = $this.find('pre')[0];
