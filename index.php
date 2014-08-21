@@ -25,11 +25,11 @@
     <section id="home">
       <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of 
       <a href="http://processing.org">Processing</a>, to make coding accessible 
-      for artists, designers, educators, and beginners, and reinterprets this for today's web. 
+      for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web. 
       </p>
 
       <p>Using the original metaphor of a software sketchbook, p5.js has a full set of
-      drawing functionality. However, you're not limited
+      drawing functionality. However, you&#8217;re not limited
       to your drawing canvas, you can think of your whole browser page as your sketch!
       For this, p5.js has addon <a href="libraries/">libraries</a> that make it 
       <a href="http://hello.p5js.org">
