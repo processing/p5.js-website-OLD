@@ -319,6 +319,13 @@
             },
             "namespaces": {}
         },
+        "src/output/image.js": {
+            "name": "src/output/image.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "src/output/text_area.js": {
             "name": "src/output/text_area.js",
             "modules": {
@@ -1341,6 +1348,9 @@
                     "type": "Number",
                     "optional": true
                 }
+            ],
+            "example": [
+                "\n<div>\n<code> \nvar vector = createVector(40, 50);\nvar vector2 = createVector(40, 50);\n\nellipse(vector.x, vector.y, 50, 50);\nellipse(vector2.x, vector2.y, 50, 50);\nvector.add(vector2);\nellipse(vector.x, vector.y, 50, 50);\n</div>\n</code>"
             ]
         },
         "p5.dom": {
@@ -5694,14 +5704,19 @@
         {
             "file": "src/objects/p5.Image.js",
             "line": 291,
-            "description": "Saves the image to a file and forces the browser to download it.\nSupports png and jpg.",
+            "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
             "params": [
                 {
-                    "name": "extension\n\nTODO:",
-                    "description": "There doesn't seem to be a way to give the force the\nbrowser to download a file *and* give it a name. Which is why \nthis function currently only take an extension parameter.",
-                    "type": "[type]"
+                    "name": "filename",
+                    "description": "give your file a name",
+                    "type": "String"
+                },
+                {
+                    "name": "extension",
+                    "description": "'png' or 'jpg'",
+                    "type": "String"
                 }
             ],
             "class": "p5.Image",
@@ -6174,7 +6189,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 52,
+            "line": 64,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
@@ -6185,7 +6200,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 58,
+            "line": 70,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
@@ -6196,7 +6211,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 64,
+            "line": 76,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
@@ -6207,7 +6222,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 73,
+            "line": 85,
             "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Vector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -6237,7 +6252,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 102,
+            "line": 114,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
             "name": "get",
@@ -6251,7 +6266,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 117,
+            "line": 129,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
             "itemtype": "method",
             "name": "add",
@@ -6285,7 +6300,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 153,
+            "line": 165,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a p5.Vector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -6319,7 +6334,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 187,
+            "line": 199,
             "description": "Multiply the vector by a scalar.",
             "itemtype": "method",
             "name": "mult",
@@ -6341,7 +6356,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 202,
+            "line": 214,
             "description": "Divide the vector by a scalar.",
             "itemtype": "method",
             "name": "div",
@@ -6363,7 +6378,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 217,
+            "line": 229,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -6377,7 +6392,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 228,
+            "line": 240,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -6391,7 +6406,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 242,
+            "line": 254,
             "description": "Calculates the dot product of two vectors.",
             "itemtype": "method",
             "name": "dot",
@@ -6424,7 +6439,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 260,
+            "line": 272,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
             "itemtype": "method",
             "name": "cross",
@@ -6445,7 +6460,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 279,
+            "line": 291,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -6466,7 +6481,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 292,
+            "line": 304,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -6480,7 +6495,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 302,
+            "line": 314,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -6501,7 +6516,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 319,
+            "line": 331,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "itemtype": "method",
             "name": "setMag",
@@ -6522,7 +6537,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 331,
+            "line": 343,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -6536,7 +6551,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 350,
+            "line": 362,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -6557,7 +6572,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 371,
+            "line": 383,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -6595,7 +6610,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 393,
+            "line": 405,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -6609,7 +6624,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 410,
+            "line": 422,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -6631,7 +6646,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 431,
+            "line": 443,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -6646,7 +6661,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 454,
+            "line": 466,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -6661,7 +6676,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 481,
+            "line": 493,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -6686,7 +6701,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 494,
+            "line": 506,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -6711,7 +6726,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 509,
+            "line": 521,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -6736,7 +6751,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 521,
+            "line": 533,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -6761,7 +6776,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 534,
+            "line": 546,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -6786,7 +6801,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 546,
+            "line": 558,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -6811,7 +6826,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 558,
+            "line": 570,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -6836,7 +6851,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 571,
+            "line": 583,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -6862,7 +6877,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 586,
+            "line": 598,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "static": 1,
             "params": [
@@ -6887,10 +6902,35 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 106,
-            "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
+            "line": 109,
+            "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myFile.jpg');\n</code></pre>\n\n<p>Alternately, the first parameter can be an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
-            "name": "saveJSON",
+            "name": "save",
+            "params": [
+                {
+                    "name": "objectOrFilename",
+                    "description": "If filename is provided, will\n                                           save canvas as an image with\n                                           either png or jpg extension\n                                           depending on the filename.\n                                           If object is provided, will\n                                           save depending on the object\n                                           and filename (see examples\n                                           above).",
+                    "type": "[Object|String]"
+                },
+                {
+                    "name": "filename",
+                    "description": "If an object is provided as the first\n                             parameter, then the second parameter\n                             indicates the filename,\n                             and should include an appropriate\n                             file extension (see examples above).",
+                    "type": "[String]"
+                },
+                {
+                    "name": "options",
+                    "description": "Additional options depend on\n                          filetype. For example, when saving JSON,\n                          <code>true</code> indicates that the\n                          output will be optimized for filesize,\n                          rather than readability.",
+                    "type": "[Boolean/String]"
+                }
+            ],
+            "class": "p5",
+            "module": "Data",
+            "submodule": "Output"
+        },
+        {
+            "file": "src/output/files.js",
+            "line": 227,
+            "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
                     "name": "json",
@@ -6918,10 +6958,8 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 161,
+            "line": 281,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "itemtype": "method",
-            "name": "saveStrings",
             "params": [
                 {
                     "name": "list",
@@ -6943,10 +6981,8 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 213,
+            "line": 332,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "itemtype": "method",
-            "name": "saveTable",
             "params": [
                 {
                     "name": "Table",
@@ -6973,8 +7009,8 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 333,
-            "description": "Generate a file and force download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
+            "line": 451,
+            "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
                     "name": "dataToDownload",
@@ -7000,7 +7036,32 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 387,
+            "line": 472,
+            "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
+            "params": [
+                {
+                    "name": "href",
+                    "description": "i.e. an href generated by createObjectURL",
+                    "type": "String"
+                },
+                {
+                    "name": "filename",
+                    "description": "",
+                    "type": "[String]"
+                },
+                {
+                    "name": "extension",
+                    "description": "",
+                    "type": "[String]"
+                }
+            ],
+            "class": "p5",
+            "module": "Data",
+            "submodule": "Output"
+        },
+        {
+            "file": "src/output/files.js",
+            "line": 508,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -7021,7 +7082,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 399,
+            "line": 537,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -7035,13 +7096,75 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 411,
+            "line": 549,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
             "class": "p5",
             "module": "Data",
             "submodule": "Output"
+        },
+        {
+            "file": "src/output/image.js",
+            "line": 8,
+            "description": "Save the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
+            "params": [
+                {
+                    "name": "filename",
+                    "description": "",
+                    "type": "[String]"
+                },
+                {
+                    "name": "extension",
+                    "description": "'jpg' or 'png'",
+                    "type": "[String]"
+                },
+                {
+                    "name": "canvas",
+                    "description": "a variable representing a\n                           specific html5 canvas (optional).",
+                    "type": "[Canvas]"
+                }
+            ],
+            "class": "p5",
+            "module": "Data"
+        },
+        {
+            "file": "src/output/image.js",
+            "line": 64,
+            "description": "Capture a sequence of frames that can be used to create a movie.\nAccepts a callback. For example, you may wish to send the frames\nto a server where they can be stored or converted into a movie.\nIf no callback is provided, the browser will attempt to download\nall of the images that have just been created.",
+            "params": [
+                {
+                    "name": "filename",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "extension",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "_duration",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "_fps",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "callback",
+                    "description": "[description]",
+                    "type": "[Function]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5",
+            "module": "Data"
         },
         {
             "file": "src/output/text_area.js",
@@ -12287,55 +12410,79 @@
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/objects/p5.Vector.js:481"
+            "line": " src/objects/p5.Vector.js:493"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/objects/p5.Vector.js:494"
+            "line": " src/objects/p5.Vector.js:506"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:509"
-        },
-        {
-            "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
             "line": " src/objects/p5.Vector.js:521"
         },
         {
-            "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/objects/p5.Vector.js:534"
+            "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
+            "line": " src/objects/p5.Vector.js:533"
         },
         {
-            "message": "Missing item type\nCalculates the cross product of two vectors.",
+            "message": "Missing item type\nCalculates the dot product of two vectors.",
             "line": " src/objects/p5.Vector.js:546"
         },
         {
-            "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
+            "message": "Missing item type\nCalculates the cross product of two vectors.",
             "line": " src/objects/p5.Vector.js:558"
         },
         {
+            "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
+            "line": " src/objects/p5.Vector.js:570"
+        },
+        {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/objects/p5.Vector.js:571"
+            "line": " src/objects/p5.Vector.js:583"
         },
         {
             "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/objects/p5.Vector.js:586"
+            "line": " src/objects/p5.Vector.js:598"
         },
         {
-            "message": "Missing item type\nGenerate a file and force download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/output/files.js:333"
+            "message": "Missing item type\nWrites the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
+            "line": " src/output/files.js:227"
+        },
+        {
+            "message": "Missing item type\nWrites an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
+            "line": " src/output/files.js:281"
+        },
+        {
+            "message": "Missing item type\nWrites the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
+            "line": " src/output/files.js:332"
+        },
+        {
+            "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
+            "line": " src/output/files.js:451"
+        },
+        {
+            "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
+            "line": " src/output/files.js:472"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/output/files.js:387"
+            "line": " src/output/files.js:508"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/output/files.js:399"
+            "line": " src/output/files.js:537"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/output/files.js:411"
+            "line": " src/output/files.js:549"
+        },
+        {
+            "message": "Missing item type\nSave the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
+            "line": " src/output/image.js:8"
+        },
+        {
+            "message": "Missing item type\nCapture a sequence of frames that can be used to create a movie.\nAccepts a callback. For example, you may wish to send the frames\nto a server where they can be stored or converted into a movie.\nIf no callback is provided, the browser will attempt to download\nall of the images that have just been created.",
+            "line": " src/output/image.js:64"
         },
         {
             "message": "Missing item type",
