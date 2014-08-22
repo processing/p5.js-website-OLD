@@ -24,15 +24,15 @@
         <a href="../download/">p5.js complete</a> download. 
       </p>
       
-      <p>If you look in index.html, you'll notice that it links to the file p5.js. If
+      <p>If you look in index.html, you&#8217;ll notice that it links to the file p5.js. If
       you would like to use the minified version (compressed for faster page loading),
       change the link to p5.min.js.</p>
 
       <pre><code class="language-markup">&lt;script src="../p5.min.js">&lt;/script></code></pre>   
       
       <p>Alternatively, you can link to a p5.js file hosted 
-        online. All versions of p5.js are stored in a CDN ("Content Delivery 
-        Network"). You can see a history of these versions here: <a target="_blank"
+        online. All versions of p5.js are stored in a CDN (&#8221;Content Delivery 
+        Network&#8221;). You can see a history of these versions here: <a target="_blank"
         href="http://cdnjs.com/libraries/p5.js" >p5.js CDN</a>. In this case you can 
         change the link to:
       </p>
@@ -40,7 +40,7 @@
       <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.0.0/p5.js">&lt;/script></code></pre>   
 
       <p>
-        Where "0.0.0" gets replaced by the version you'd like to use (the highest one is usually best).
+        Where &#8220;0.0.0&#8221; gets replaced by the version you&#8217;d like to use (the highest one is usually best).
       </p>
 
 
@@ -85,34 +85,34 @@ function draw() {
 }</code></pre>  
 
       <p>
-        This line of code means "draw an ellipse, with the center 50 pixels over from the
-        left and 50 pixels down from the top, with a width and height of 80 pixels."
+        This line of code means &#8220;draw an ellipse, with the center 50 pixels over from the
+        left and 50 pixels down from the top, with a width and height of 80 pixels.&#8221;
       </p>
       <p>
-        Refresh your page view in your browser, if you've typed everything correctly, 
-        you'll see this appear in the display window: 
+        Refresh your page view in your browser, if you&#8217;ve typed everything correctly, 
+        you&#8217;ll see this appear in the display window: 
       </p>
       <img src="../img/get-started/first-sketch.png" />
 
       <p>
-        If you didn't type it correctly, you might not see anything. If this happens, 
-        make sure that you've copied the example code exactly: the numbers should be 
+        If you didn&#8217;t type it correctly, you might not see anything. If this happens, 
+        make sure that you&#8217;ve copied the example code exactly: the numbers should be 
         contained within parentheses and have commas between each of them, and the line 
         should end with a semicolon.
       </p>
 
       <p>
         One of the most difficult things about getting started with programming is that 
-        you have to be very specific about the syntax. The browser isn't always smart 
+        you have to be very specific about the syntax. The browser isn&#8217;t always smart 
         enough to know what you mean, and can be quite fussy about the placement of 
-        punctuation. You'll get used to it with a little practice. Depending on the 
+        punctuation. You&#8217;ll get used to it with a little practice. Depending on the 
         browser you are using, you can also see errors by looking at the JavaScript 
-        "console". In chrome, for example, this is under View > Developer > JavaScript 
+        &#8220;console&#8221;. In chrome, for example, this is under View > Developer > JavaScript 
         Console.
       </p>
 
       <p>
-        Next, we'll skip ahead to a sketch that's a little more exciting. Delete the text
+        Next, we&#8217;ll skip ahead to a sketch that&#8217;s a little more exciting. Delete the text
          from the last example, and try this:
       </p>
 
@@ -132,7 +132,7 @@ function draw() {
       <p>
         This program creates a window that is 640 pixels wide and 480 pixels high, and 
         then starts drawing white circles at the position of the mouse. When a mouse 
-        button is pressed, the circle color changes to black. We'll explain more about 
+        button is pressed, the circle color changes to black. We&#8217;ll explain more about 
         the elements of this program in detail later. For now, run the code, move the 
         mouse, and click to experience it.
       </p>
@@ -154,7 +154,7 @@ function draw() {
 
 
       <p style="font-size: 1em; color:#AFAFAF">Parts of this tutorial were adapted from the book, Getting Started with Processing, by Casey Reas 
-      and Ben Fry, O’Reilly / Make 2010. Copyright © 2010 Casey Reas and Ben Fry. All rights reserved.</p>
+      and Ben Fry, O&#8217;Reilly / Make 2010. Copyright &copy; 2010 Casey Reas and Ben Fry. All rights reserved.</p>
     </section>
 
   
