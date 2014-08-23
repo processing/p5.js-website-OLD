@@ -2919,13 +2919,16 @@
                     "optional": true
                 }
             ],
+            "example": [
+                "\n<div><code>\n// Move the mouse left and right across the image\n// to see the cursor change from a cross to a hand\nfunction draw() {\n  line(width/2, 0, width/2, height); \n  if (mouseX < 50) {\n    cursor(CROSS);\n  } else {\n    cursor(HAND);\n  }\n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Environment",
             "submodule": "Environment"
         },
         {
             "file": "src/environment/environment.js",
-            "line": 100,
+            "line": 113,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().",
             "itemtype": "method",
             "name": "frameRate",
@@ -2947,7 +2950,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 124,
+            "line": 137,
             "description": "Returns the current framerate.",
             "return": {
                 "description": "current frameRate",
@@ -2959,7 +2962,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 133,
+            "line": 146,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
             "params": [
                 {
@@ -2975,17 +2978,20 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 148,
+            "line": 161,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
             "name": "noCursor",
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  noCursor();\n}\n\nfunction draw() {\n  background(200);\n  ellipse(mouseX, mouseY, 10, 10); \n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Environment",
             "submodule": "Environment"
         },
         {
             "file": "src/environment/environment.js",
-            "line": 158,
+            "line": 182,
             "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayWidth",
@@ -2998,7 +3004,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 170,
+            "line": 194,
             "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayHeight",
@@ -3011,7 +3017,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 182,
+            "line": 206,
             "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
             "itemtype": "property",
             "name": "windowWidth",
@@ -3024,7 +3030,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 193,
+            "line": 217,
             "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
@@ -3037,7 +3043,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 210,
+            "line": 234,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -3047,7 +3053,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 221,
+            "line": 245,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -3057,7 +3063,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 232,
+            "line": 256,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
@@ -12318,11 +12324,11 @@
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/environment/environment.js:124"
+            "line": " src/environment/environment.js:137"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/environment/environment.js:133"
+            "line": " src/environment/environment.js:146"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
