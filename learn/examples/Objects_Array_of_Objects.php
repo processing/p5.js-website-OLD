@@ -9,10 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Objects</h2>
-          <p>Create a Jitter class, instantiate an object,
- and move it around the screen. Adapted from Getting Started with
- Processing by Casey Reas and Ben Fry.
+          <h2>Array of Objects</h2>
+          <p>Create a Jitter class, instantiate an array of objects
+ and move them around the screen.
  </p>
 
           <div id="exampleDisplay">
@@ -44,7 +43,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/11_Objects/01_Objects.js');
+          examples.init('../examples_src/11_Objects/03_Objects_Array.js');
       });
     </script>
   </body>

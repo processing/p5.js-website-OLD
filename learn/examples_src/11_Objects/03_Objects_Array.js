@@ -1,21 +1,24 @@
 /*
- * @name Objects
- * @description Create a Jitter class, instantiate an object,
- * and move it around the screen. Adapted from Getting Started with
- * Processing by Casey Reas and Ben Fry.
+ * @name Array of Objects
+ * @description Create a Jitter class, instantiate an array of objects
+ * and move them around the screen.
  */
-var bug;  // Declare object
+var bugs = []; // array of Jitter objects
 
 function setup() {
   createCanvas(710, 400);
-  // Create object
-  bug = new Jitter();
+  // Create objects
+  for (var i=0; i<50; i++) {
+    bugs.push(new Jitter());
+  }
 }
 
 function draw() {
   background(50, 89, 100);
-  bug.move();
-  bug.display();
+  for (var i=0; i<bugs.length; i++) {
+    bugs[i].move();
+    bugs[i].display();
+  }
 }
 
 // Jitter class

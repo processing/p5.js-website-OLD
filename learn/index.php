@@ -302,7 +302,19 @@
           <a href="examples/Objects_Objects.php">Objects</a><br>
           
         
+          <a href="examples/Objects_Multiple_Objects.php">Multiple Objects</a><br>
+          
+        
+          <a href="examples/Objects_Array_of_Objects.php">Array of Objects</a><br>
+          
+        
+          <a href="examples/Objects_Objects_2.php">Objects 2</a><br>
+          
+        
         </p>
+        
+          </div>
+          <div class="column_2">
         
       
         <p>
@@ -327,9 +339,6 @@
           
         
         </p>
-        
-          </div>
-          <div class="column_2">
         
       
         <p>

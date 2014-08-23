@@ -9,10 +9,10 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Objects</h2>
-          <p>Create a Jitter class, instantiate an object,
- and move it around the screen. Adapted from Getting Started with
- Processing by Casey Reas and Ben Fry.
+          <h2>Objects 2</h2>
+          <p>Ported from example by hbarragan. Move the cursor across the 
+ image to change the speed and positions of the geometry. The class MRect 
+ defines a group of lines.
  </p>
 
           <div id="exampleDisplay">
@@ -44,7 +44,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/11_Objects/01_Objects.js');
+          examples.init('../examples_src/11_Objects/03_Objects_Optional_Arguments.js');
       });
     </script>
   </body>
