@@ -2824,7 +2824,7 @@
             "line": 262,
             "description": "The splitTokens() function splits a String at one or many character\ndelimiters or \"tokens.\" The delim parameter specifies the character or\ncharacters to be used as a boundary.\n\nIf no delim characters are specified, any whitespace character is used to\nsplit. Whitespace characters include tab (\\t), line feed (\\n), carriage\nreturn (\\r), form feed (\\f), and space.",
             "itemtype": "method",
-            "name": "split",
+            "name": "splitTokens",
             "params": [
                 {
                     "name": "value",
