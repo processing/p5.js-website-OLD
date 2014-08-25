@@ -58,7 +58,7 @@
         <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/p5.js,-node.js,-socket.io">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="#"><h4>node.js and socket.io</h4></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/p5.js,-node.js,-socket.io"><h4>node.js and socket.io</h4></a>
         </div>
         <p>Using a node.js server with p5.js, communcation via socket.io.</p> 
       </div>

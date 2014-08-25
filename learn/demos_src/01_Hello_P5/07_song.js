@@ -37,7 +37,7 @@ function setup() {
   });
   
   // A triangle oscillator
-  osc = new TriOsc();
+  osc = new p5.TriOsc();
   // Start silent
   osc.start();
   osc.amp(0);
