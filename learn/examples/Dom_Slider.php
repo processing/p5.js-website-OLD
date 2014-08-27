@@ -9,14 +9,11 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Video Capture</h2>
+          <h2>Slider</h2>
           <p>You will need to include the 
  <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
  for this example to work in your own project.<br><br>
- Capture video from the webcam and display
- on the canvas as well with invert filter. Note that by
- default the capture feed shows up, too. You can hide the
- feed by uncommenting the capture.hide() line.
+ Move the sliders to control the R, G, B values of the background.
  </p>
 
           <div id="exampleDisplay">
@@ -48,7 +45,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/16_Dom/11_Capture.js');
+          examples.init('../examples_src/16_Dom/04_Slider.js');
       });
     </script>
   </body>

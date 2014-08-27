@@ -16,7 +16,8 @@ function setup() {
   var index = 0;
   for (var y = 0; y < highCount; y++) {
     for (var x = 0; x < wideCount; x++) {
-      mods[index++] = new Module(x*unit, y*unit, unit/2, unit/2, random(0.05, 0.8), unit);
+      mods[index++] = new Module(x*unit, y*unit, unit/2, unit/2, 
+        random(0.05, 0.8), unit);
     }
   }
 }
@@ -51,7 +52,7 @@ Module.prototype.update = function() {
   }
   if (this.y >= this.unit || this.y <= 0) {
     this.yDir *= -1;
-    this.y = this.y + (1 * this.this.yDir);
+    this.y = this.y + (1 * this.yDir);
   }
 }
 

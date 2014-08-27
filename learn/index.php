@@ -211,9 +211,6 @@
         
         </p>
         
-          </div>
-          <div class="column_1">
-        
       
         <p>
         <strong>Color</strong><br>
@@ -240,6 +237,9 @@
           
         
         </p>
+        
+          </div>
+          <div class="column_1">
         
       
         <p>
@@ -325,9 +325,6 @@
         
         </p>
         
-          </div>
-          <div class="column_2">
-        
       
         <p>
         <strong>Instance Mode</strong><br>
@@ -344,13 +341,28 @@
           <a href="examples/Dom_Input_and_Button.php">Input/Button</a><br>
           
         
+          <a href="examples/Dom_Slider.php">Slider</a><br>
+          
+        
           <a href="examples/Dom_Modifying_the_DOM.php">Modifying the DOM</a><br>
+          
+        
+          <a href="examples/Dom_Video.php">Video</a><br>
+          
+        
+          <a href="examples/Dom_Video_Canvas.php">Video Canvas</a><br>
+          
+        
+          <a href="examples/Dom_Video_Pixels.php">Video Pixels</a><br>
           
         
           <a href="examples/Dom_Video_Capture.php">Video Capture</a><br>
           
         
         </p>
+        
+          </div>
+          <div class="column_2">
         
       
         <p>
