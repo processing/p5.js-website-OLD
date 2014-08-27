@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.3",
+        "version": "0.3.4",
         "url": ""
     },
     "files": {
@@ -1127,8 +1127,8 @@
             "namespaces": {},
             "module": "p5.sound",
             "file": "lib/addons/p5.sound.js",
-            "line": 4697,
-            "description": "p5.sound extends p5 with <a href=\"http://caniuse.com/audio-api\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis.\n<br/><br/>\n<a href=\"#/p5.SoundFile\"><b>p5.SoundFile</b></a>: Load and play sound files.<br/>\n<a href=\"#/p5.Amplitude\"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br/>\n<a href=\"#/p5.AudioIn\"><b>p5.AudioIn</b></a>: Get sound from an input source, typically\n  a computer microphone.<br/>\n<a href=\"#/p5.FFT\"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns\n  results from the frequency spectrum or time domain (waveform).<br/>\n<a href=\"#/p5.Oscillator\"><b>p5.Oscillator</b></a>: Generate Sine,\n  Triangle, Square and Sawtooth waveforms. Base class of\n  <a href=\"#/p5.Noise\">p5.Noise</a> and <a href=\"#/p5.Pulse\">p5.Pulse</a>.\n  <br/>\n<a href=\"#/p5.Env\"><b>p5.Env</b></a>: An Envelope is a series\n  of fades over time. Often used to control an object's\n  output gain level as an \"ADSR Envelope\" (Attack, Decay,\n  Sustain, Release). Can also modulate other parameters.<br/>\n<a href=\"#/p5.Delay\"><b>p5.Delay</b></a>: A delay effect with\n  parameters for feedback, delayTime, and lowpass filter.<br/>\n<a href=\"#/p5.Filter\"><b>p5.Filter</b></a>: Filter the frequency range of a\n  sound.\n<br/>\n<a href=\"#/p5.Reverb\"><b>p5.Reverb</b></a>: Add reverb to a sound by specifying\n  duration and decay. <br/>\n<b><a href=\"#/p5.Convolver\">p5.Convolver:</a></b> Extends\n<a href=\"#/p5.Reverb\">p5.Reverb</a> to simulate the sound of real\n  physical spaces through convolution.<br/>\n<a href=\"#/p5.SoundRecorder\">p5.SoundRecorder</a>: Record sound for playback \n  / save the .wav file.\n<br/><br/>\np5.sound is on <a href=\"https://github.com/therewasaguy/p5.sound/\">GitHub</a>.\nDownload the latest version \n<a href=\"https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js\">here</a>.",
+            "line": 4695,
+            "description": "p5.sound extends p5 with <a href=\"http://caniuse.com/audio-api\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis.\n<br/><br/>\n<a href=\"#/p5.SoundFile\"><b>p5.SoundFile</b></a>: Load and play sound files.<br/>\n<a href=\"#/p5.Amplitude\"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br/>\n<a href=\"#/p5.AudioIn\"><b>p5.AudioIn</b></a>: Get sound from an input source, typically\n  a computer microphone.<br/>\n<a href=\"#/p5.FFT\"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns\n  results from the frequency spectrum or time domain (waveform).<br/>\n<a href=\"#/p5.Oscillator\"><b>p5.Oscillator</b></a>: Generate Sine,\n  Triangle, Square and Sawtooth waveforms. Base class of\n  <a href=\"#/p5.Noise\">p5.Noise</a> and <a href=\"#/p5.Pulse\">p5.Pulse</a>.\n  <br/>\n<a href=\"#/p5.Env\"><b>p5.Env</b></a>: An Envelope is a series\n  of fades over time. Often used to control an object's\n  output gain level as an \"ADSR Envelope\" (Attack, Decay,\n  Sustain, Release). Can also modulate other parameters.<br/>\n<a href=\"#/p5.Delay\"><b>p5.Delay</b></a>: A delay effect with\n  parameters for feedback, delayTime, and lowpass filter.<br/>\n<a href=\"#/p5.Filter\"><b>p5.Filter</b></a>: Filter the frequency range of a\n  sound.\n<br/>\n<a href=\"#/p5.Reverb\"><b>p5.Reverb</b></a>: Add reverb to a sound by specifying\n  duration and decay. <br/>\n<b><a href=\"#/p5.Convolver\">p5.Convolver:</a></b> Extends\n<a href=\"#/p5.Reverb\">p5.Reverb</a> to simulate the sound of real\n  physical spaces through convolution.<br/>\n<b><a href=\"#/p5.SoundRecorder\">p5.SoundRecorder</a></b>: Record sound for playback \n  / save the .wav file.\n<br/><br/>\np5.sound is on <a href=\"https://github.com/therewasaguy/p5.sound/\">GitHub</a>.\nDownload the latest version \n<a href=\"https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js\">here</a>.",
             "tag": "main",
             "itemtype": "main"
         }
@@ -1541,7 +1541,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 2150,
+            "line": 2141,
             "description": "<p>Creates a signal that oscillates between -1.0 and 1.0.\nBy default, the oscillation takes the form of a sinusoidal\nshape ('sine'). Additional types include 'triangle',\n'sawtooth' and 'square'. The frequency defaults to\n440 oscillations per second (440Hz, equal to the pitch of an\n'A' note).</p> \n\n<p>Set the type of oscillation with setType(), or by creating a\nspecific oscillator.</p> For example:\n<code>new p5.SinOsc(freq)</code>\n<code>new p5.TriOsc(freq)</code>\n<code>new p5.SqrOsc(freq)</code>\n<code>new p5.SawOsc(freq)</code>.\n</p>",
             "is_constructor": 1,
             "params": [
@@ -1575,7 +1575,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 2573,
+            "line": 2564,
             "description": "<p>Envelopes are pre-defined amplitude distribution over time. \nThe p5.Env accepts up to four time/level pairs, where time\ndetermines how long of a ramp before value reaches level.\nTypically, envelopes are used to control the output volume\nof an object, a series of fades referred to as Attack, Decay,\nSustain and Release (ADSR). But p5.Env can control any\nWeb Audio Param, for example it can be passed to an Oscillator\nfrequency like osc.freq(env) </p>",
             "is_constructor": 1,
             "params": [
@@ -1641,7 +1641,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 2891,
+            "line": 2889,
             "description": "Creates a Pulse object, an oscillator that implements\nPulse Width Modulation.\nThe pulse is created with two oscillators.\nAccepts a parameter for frequency, and to set the\nwidth between the pulses. See <a href=\"\nhttp://localhost:8888/p5js.org/reference/#/p5.Oscillator\">\n<code>p5.Oscillator</code> for a full list of methods.",
             "is_constructor": 1,
             "params": [
@@ -1674,7 +1674,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 3069,
+            "line": 3067,
             "description": "Noise is a type of oscillator that generates a buffer with random values.",
             "is_constructor": 1,
             "params": [
@@ -1701,7 +1701,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 3283,
+            "line": 3281,
             "description": "<p>Get audio from an input, i.e. your computer's microphone.</p>\n\n<p>Turn the mic on/off with the start() and stop() methods. When the mic\nis on, its volume can be measured with getLevel or by connecting an\nFFT object.</p>\n\n<p>If you want to hear the AudioIn, use the .connect() method. \nAudioIn does not connect to p5.sound output by default to prevent\nfeedback.</p> \n\n<p><em>Note: This uses the <a href=\"http://caniuse.com/stream\">getUserMedia/\nStream</a> API, which is not supported by certain browsers.</em></p>",
             "is_constructor": 1,
             "return": {
@@ -1724,7 +1724,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 3535,
+            "line": 3533,
             "description": "A p5.Filter uses a Web Audio Biquad Filter to filter\nthe frequency response of an input source. Inheriting\nclasses include:<br/>\n* <code>p5.LowPass</code> - allows frequencies below\nthe cutoff frequency to pass through, and attenuates\nfrequencies above the cutoff.<br/>\n* <code>p5.HighPass</code> - the opposite of a lowpass\nfilter. <br/>\n* <code>p5.BandPass</code> -  allows a range of\nfrequencies to pass through and attenuates the frequencies\nbelow and above this frequency range.<br/>\n\nThe <code>.res()</code> method controls either width of the\nbandpass, or resonance of the low/highpass cutoff frequency.",
             "is_constructor": 1,
             "params": [
@@ -1754,7 +1754,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 3773,
+            "line": 3771,
             "description": "Delay is an echo effect. It processes an existing sound source,\nand outputs a delayed version of that sound. The p5.Delay can\nproduce different effects depending on the delayTime, feedback,\nfilter, and type. In the example below, a feedback of 0.5 will\nproduce a looping delay that decreases in volume by\n50% each repeat. A filter will cut out the high frequencies so\nthat the delay does not sound as piercing as the original source.",
             "is_constructor": 1,
             "return": {
@@ -1777,7 +1777,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 4032,
+            "line": 4030,
             "description": "Reverb adds depth to a sound through a large number of decaying\nechoes. It creates the perception that sound is occurring in a\nphysical space. The p5.Reverb has paramters for Time (how long does the\nreverb last) and decayRate (how much the sound decays with each echo)\nthat can be set with the .set() or .process() methods. The p5.Convolver\nextends p5.Reverb allowing you to recreate the sound of actual physical\nspaces through convolution.",
             "is_constructor": 1,
             "example": [
@@ -1796,7 +1796,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 4209,
+            "line": 4207,
             "description": "<p>p5.Convolver extends p5.Reverb. It can emulate the sound of real\nphysical spaces through a process called <a href=\"\nhttps://en.wikipedia.org/wiki/Convolution_reverb#Real_space_simulation\">\nconvolution</a>.</p>\n\n<p>Convolution multiplies any audio input by an \"impulse response\"\nto simulate the dispersion of sound over time. The impulse response is\ngenerated from an audio file that you provide. One way to\ngenerate an impulse response is to pop a balloon in a reverberant space\nand record the echo. Convolution can also be used to experiment with\nsound.</p>\n\n<p>Use the method <code>createConvolution(path)</code> to instantiate a\np5.Convolver with a path to your impulse response audio file.</p>",
             "is_constructor": 1,
             "params": [
@@ -1827,11 +1827,11 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 4697,
+            "line": 4695,
             "description": "<p>Record sounds for playback and/or to save as a .wav file.\nThe p5.SoundRecorder records all sound output from your sketch,\nor can be assigned a specific source with setInput().</p>\n<p>The record() method accepts a p5.SoundFile as a parameter.\nWhen playback is stopped (either after the given amount of time,\nor with the stop() method), the p5.SoundRecorder will send its\nrecording to that p5.SoundFile for playback.</p>",
             "is_constructor": 1,
             "example": [
-                "\n<div><code>\nvar mic, recorder, soundFile;\nvar state = 0;\n\nfunction setup() {\n  background(200);\n  // create an audio in\n  mic = new p5.AudioIn();\n  \n  // prompts user to enable their browser mic\n  mic.start();\n  \n  // create a sound recorder\n  recorder = new p5.SoundRecorder();\n  \n  // connect the mic to the recorder\n  recorder.setInput(mic);\n  \n  // this sound file will be used to\n  // playback & save the recording\n  soundFile = new p5.SoundFile();\n\n  text('keyPress to record', 20, 20);\n}\n\nfunction keyPressed() {\n  // make sure user enabled the mic\n  if (state === 0 && mic.enabled) {\n  \n    // record to our p5.SoundFile\n    recorder.record(soundFile);\n    \n    background(255,0,0);\n    text('Recording!', 20, 20);\n    state++;\n  }\n  else if (state === 1) {\n    background(0,255,0);\n\n    // stop recorder and\n    // send result to soundFile\n    recorder.stop(); \n    \n    text('Stopped', 20, 20);\n    state++;\n  }\n  \n  else if (state === 2) {\n    soundFile.play(); // play the result!\n    saveSound(soundFile, 'mySound.wav');\n    state++;\n  }\n}\n</div></code>"
+                "\n<div><code>\nvar mic, recorder, soundFile;\nvar state = 0;\n\nfunction setup() {\n  background(200);\n  // create an audio in\n  mic = new p5.AudioIn();\n  \n  // prompts user to enable their browser mic\n  mic.start();\n  \n  // create a sound recorder\n  recorder = new p5.SoundRecorder();\n  \n  // connect the mic to the recorder\n  recorder.setInput(mic);\n  \n  // this sound file will be used to\n  // playback & save the recording\n  soundFile = new p5.SoundFile();\n\n  text('keyPress to record', 20, 20);\n}\n\nfunction keyPressed() {\n  // make sure user enabled the mic\n  if (state === 0 && mic.enabled) {\n  \n    // record to our p5.SoundFile\n    recorder.record(soundFile);\n    \n    background(255,0,0);\n    text('Recording!', 20, 20);\n    state++;\n  }\n  else if (state === 1) {\n    background(0,255,0);\n\n    // stop recorder and\n    // send result to soundFile\n    recorder.stop(); \n    \n    text('Stopped', 20, 20);\n    state++;\n  }\n  \n  else if (state === 2) {\n    soundFile.play(); // play the result!\n    save(soundFile, 'mySound.wav');\n    state++;\n  }\n}\n</div></code>"
             ]
         }
     },
@@ -7363,7 +7363,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 181,
+            "line": 184,
             "description": "Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.",
             "itemtype": "method",
             "name": "line",
@@ -7402,7 +7402,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 228,
+            "line": 231,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point.",
             "itemtype": "method",
             "name": "point",
@@ -7431,7 +7431,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 280,
+            "line": 283,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -7490,7 +7490,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 325,
+            "line": 328,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.",
             "itemtype": "method",
             "name": "rect",
@@ -7529,7 +7529,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 369,
+            "line": 372,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -10454,7 +10454,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1914,
+            "line": 1908,
             "description": "Get the Signal Value. This is not currently working\nbecause of browser issues so it is not in the docs.",
             "itemtype": "method",
             "name": "",
@@ -10468,7 +10468,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1924,
+            "line": 1918,
             "description": "Set the value of a signal.",
             "itemtype": "method",
             "name": "setValue",
@@ -10485,7 +10485,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1943,
+            "line": 1937,
             "description": "setValueAtTime is similar to the Web Audio API AudioParam\nmethod of the same name.",
             "params": [
                 {
@@ -10505,7 +10505,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1976,
+            "line": 1970,
             "description": "Fade to value, for smooth transitions",
             "itemtype": "method",
             "name": "fade",
@@ -10527,7 +10527,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2000,
+            "line": 1993,
             "description": "Connect a p5.sound object or Web Audio node to this\np5.Signal so that its amplitude values can be scaled.",
             "itemtype": "method",
             "name": "setInput",
@@ -10544,7 +10544,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2010,
+            "line": 2003,
             "description": "Connect a p5.Signal to an object, such a AudioParam",
             "itemtype": "method",
             "name": "connect",
@@ -10561,7 +10561,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2026,
+            "line": 2019,
             "description": "Disconnect the signal",
             "itemtype": "method",
             "name": "disconnect",
@@ -10571,7 +10571,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2035,
+            "line": 2028,
             "description": "Add a constant value to this audio signal,\nand return the resulting audio signal. Does\nnot change the value of the original signal,\ninstead it returns a new p5.SignalAdd.",
             "itemtype": "method",
             "name": "add",
@@ -10592,7 +10592,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2050,
+            "line": 2043,
             "description": "Multiply this signal by a constant value,\nand return the resulting audio signal. Does\nnot change the value of the original signal,\ninstead it returns a new p5.SignalMult.",
             "itemtype": "method",
             "name": "mult",
@@ -10613,7 +10613,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2065,
+            "line": 2058,
             "description": "Scale this signal value to a given range,\nand return the result as an audio signal. Does\nnot change the value of the original signal,\ninstead it returns a new p5.SignalScale.",
             "itemtype": "method",
             "name": "scale",
@@ -10654,7 +10654,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2091,
+            "line": 2084,
             "description": "Multiply one signal by one constant value\nusing setInput(signal), setValue(value).\nOr, multiply two signals together using\nsetInput(signal), setValue(signal),",
             "itemtype": "method",
             "name": "signalMult",
@@ -10680,7 +10680,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2216,
+            "line": 2207,
             "description": "Start an oscillator. Accepts an optional parameter to\ndetermine how long (in seconds from now) until the\noscillator starts.",
             "itemtype": "method",
             "name": "start",
@@ -10704,7 +10704,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2249,
+            "line": 2240,
             "description": "Stop an oscillator. Accepts an optional parameter\nto determine how long (in seconds from now) until the\noscillator stops.",
             "itemtype": "method",
             "name": "stop",
@@ -10721,7 +10721,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2265,
+            "line": 2256,
             "description": "Set amplitude (volume) of an oscillator between 0 and 1.0",
             "itemtype": "method",
             "name": "amp",
@@ -10754,7 +10754,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2300,
+            "line": 2291,
             "description": "Set frequency of an oscillator.",
             "itemtype": "method",
             "name": "freq",
@@ -10790,7 +10790,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2346,
+            "line": 2337,
             "description": "Set type to 'sine', 'triangle', 'sawtooth' or 'square'.",
             "itemtype": "method",
             "name": "setType",
@@ -10807,7 +10807,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2358,
+            "line": 2349,
             "description": "Connect to a p5.sound / Web Audio object.",
             "itemtype": "method",
             "name": "connect",
@@ -10824,7 +10824,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2375,
+            "line": 2366,
             "description": "Disconnect all outputs",
             "itemtype": "method",
             "name": "disconnect",
@@ -10834,7 +10834,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2385,
+            "line": 2376,
             "description": "Pan between Left (-1) and Right (1)",
             "itemtype": "method",
             "name": "pan",
@@ -10851,7 +10851,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2424,
+            "line": 2415,
             "description": "Set the phase of an oscillator between 0.0 and 1.0",
             "itemtype": "method",
             "name": "phase",
@@ -10868,7 +10868,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2446,
+            "line": 2437,
             "description": "Add a value to the p5.Oscillator's output amplitude,\nand return the result in the form of a p5.Signal. \nThis method does not add to the p5.Oscillator itself,\n— the returned p5.Signal handles the math.\nThis is useful for modulating parameters\nwith an oscillating signal.\n\np5.Oscillator's amplitude. \non this oscillator's signal.",
             "itemtype": "method",
             "name": "add",
@@ -10889,7 +10889,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2468,
+            "line": 2459,
             "description": "Multiply the p5.Oscillator's output amplitude\nby a fixed value. This method does not add to the\noscillator itself, but instead returns a p5.Signal\nobject that handles the signal math. This is useful for\nmodulating parameters with an oscillating signal.",
             "itemtype": "method",
             "name": "add",
@@ -10910,7 +10910,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2486,
+            "line": 2477,
             "description": "Scale this oscillator's amplitude values to a given\nrange, and return the result as an audio signal. Does\nnot change the value of the original oscillator,\ninstead it returns a new p5.SignalScale.",
             "itemtype": "method",
             "name": "scale",
@@ -10946,7 +10946,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2508,
+            "line": 2499,
             "description": "Constructor: <code>new p5.SinOsc()</code>.\nThis creates a Sine Wave Oscillator and is\nequivalent to <code> new p5.Oscillator('sine')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('sine')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.SinOsc",
@@ -10963,7 +10963,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2523,
+            "line": 2514,
             "description": "Constructor: <code>new p5.TriOsc()</code>.\nThis creates a Triangle Wave Oscillator and is\nequivalent to <code>new p5.Oscillator('triangle')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('triangle')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.TriOsc",
@@ -10980,7 +10980,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2538,
+            "line": 2529,
             "description": "Constructor: <code>new p5.SawOsc()</code>.\nThis creates a SawTooth Wave Oscillator and is\nequivalent to <code> new p5.Oscillator('sawtooth')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('sawtooth')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.SawOsc",
@@ -10997,7 +10997,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2553,
+            "line": 2544,
             "description": "Constructor: <code>new p5.SqrOsc()</code>.\nThis creates a Square Wave Oscillator and is\nequivalent to <code> new p5.Oscillator('square')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('square')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.SawOsc",
@@ -11014,7 +11014,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2620,
+            "line": 2611,
             "itemtype": "property",
             "name": "attackTime",
             "class": "p5.Env",
@@ -11023,7 +11023,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2624,
+            "line": 2615,
             "itemtype": "property",
             "name": "attackLevel",
             "class": "p5.Env",
@@ -11032,7 +11032,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2628,
+            "line": 2619,
             "itemtype": "property",
             "name": "decayTime",
             "class": "p5.Env",
@@ -11041,7 +11041,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2632,
+            "line": 2623,
             "itemtype": "property",
             "name": "decayLevel",
             "class": "p5.Env",
@@ -11050,7 +11050,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2636,
+            "line": 2627,
             "itemtype": "property",
             "name": "sustainTime",
             "class": "p5.Env",
@@ -11059,7 +11059,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2640,
+            "line": 2631,
             "itemtype": "property",
             "name": "sustainLevel",
             "class": "p5.Env",
@@ -11068,7 +11068,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2644,
+            "line": 2635,
             "itemtype": "property",
             "name": "releaseTime",
             "class": "p5.Env",
@@ -11077,7 +11077,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2648,
+            "line": 2639,
             "itemtype": "property",
             "name": "releaseLevel",
             "class": "p5.Env",
@@ -11086,7 +11086,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2659,
+            "line": 2650,
             "description": "Reset the envelope with a series of time/value pairs.",
             "itemtype": "method",
             "name": "set",
@@ -11143,7 +11143,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2685,
+            "line": 2676,
             "params": [
                 {
                     "name": "input",
@@ -11157,7 +11157,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2696,
+            "line": 2687,
             "description": "Play tells the envelope to start acting on a given input.\nIf the input is a p5.sound object (i.e. AudioIn, Oscillator,\nSoundFile), then Env will control its output volume.\nEnvelopes can also be used to control any <a href=\"\nhttp://docs.webplatform.org/wiki/apis/webaudio/AudioParam\">\nWeb Audio Audio Param.</a>",
             "itemtype": "method",
             "name": "play",
@@ -11179,7 +11179,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2752,
+            "line": 2742,
             "description": "Trigger the Attack, Decay, and Sustain of the Envelope.\nSimilar to holding down a key on a piano, but it will\nhold the sustain level until you let go. Input can be\nany p5.sound object, or a <a href=\"\nhttp://docs.webplatform.org/wiki/apis/webaudio/AudioParam\">\nWeb Audio Param</a>.",
             "itemtype": "method",
             "name": "triggerAttack",
@@ -11201,7 +11201,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2798,
+            "line": 2789,
             "description": "Trigger the Release of the Envelope. This is similar to releasing\nthe key on a piano and letting the sound fade according to the\nrelease level and release time.",
             "itemtype": "method",
             "name": "triggerRelease",
@@ -11223,7 +11223,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2956,
+            "line": 2954,
             "description": "Set the width of a Pulse object (an oscillator that implements\nPulse Width Modulation).",
             "itemtype": "method",
             "name": "width",
@@ -11241,7 +11241,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3144,
+            "line": 3142,
             "description": "Set type of noise to 'white', 'pink' or 'brown'.\nWhite is the default.",
             "itemtype": "method",
             "name": "setType",
@@ -11259,7 +11259,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3171,
+            "line": 3169,
             "description": "Start the noise",
             "itemtype": "method",
             "name": "start",
@@ -11269,7 +11269,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3188,
+            "line": 3186,
             "description": "Stop the noise.",
             "itemtype": "method",
             "name": "stop",
@@ -11279,7 +11279,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3200,
+            "line": 3198,
             "description": "Pan the noise.",
             "itemtype": "method",
             "name": "pan",
@@ -11296,7 +11296,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3219,
+            "line": 3217,
             "description": "Set the amplitude of the noise between 0 and 1.0",
             "params": [
                 {
@@ -11323,7 +11323,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3236,
+            "line": 3234,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -11340,7 +11340,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3251,
+            "line": 3249,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -11350,7 +11350,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3321,
+            "line": 3319,
             "description": "Client must allow browser to access their microphone / audioin source.\nDefault: false. Will become true when the client enables acces.",
             "itemtype": "property",
             "name": "enabled",
@@ -11361,7 +11361,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3342,
+            "line": 3340,
             "description": "Start processing audio input. This enables the use of other\nAudioIn methods like getLevel(). Note that by default, AudioIn\nis not connected to p5.sound's output. So you won't hear\nanything unless you use the connect() method.<br/>",
             "itemtype": "method",
             "name": "start",
@@ -11371,7 +11371,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3385,
+            "line": 3383,
             "description": "Turn the AudioIn off. If the AudioIn is stopped, it cannot getLevel().<br/>",
             "itemtype": "method",
             "name": "stop",
@@ -11381,7 +11381,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3395,
+            "line": 3393,
             "description": "Connect to an audio unit. If no parameter is provided, will\nconnect to the master output (i.e. your speakers).<br/>",
             "itemtype": "method",
             "name": "connect",
@@ -11399,7 +11399,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3416,
+            "line": 3414,
             "description": "Disconnect the AudioIn from all audio units. For example, if\nconnect() had been called, disconnect() will stop sending \nsignal to your speakers.<br/>",
             "itemtype": "method",
             "name": "disconnect",
@@ -11409,7 +11409,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3428,
+            "line": 3426,
             "description": "Read the Amplitude (volume level) of an AudioIn. The AudioIn\nclass contains its own instance of the Amplitude class to help\nmake it easy to get a microphone's volume level. Accepts an\noptional smoothing value (0.0 < 1.0). <em>NOTE: AudioIn must\n.start() before using .getLevel().</em><br/>",
             "itemtype": "method",
             "name": "getLevel",
@@ -11431,7 +11431,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3446,
+            "line": 3444,
             "description": "Add input sources to the list of available sources.",
             "access": "private",
             "tagname": "",
@@ -11441,7 +11441,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3460,
+            "line": 3458,
             "description": "Set amplitude (volume) of a mic input between 0 and 1.0. <br/>",
             "itemtype": "method",
             "name": "amp",
@@ -11464,7 +11464,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3479,
+            "line": 3477,
             "description": "Returns a list of available input sources. Some browsers\ngive the client the option to set their own media source.\nOthers allow JavaScript to determine which source,\nand for this we have listSources() and setSource().<br/>",
             "itemtype": "method",
             "name": "listSources",
@@ -11478,7 +11478,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3497,
+            "line": 3495,
             "description": "Set the input source. Accepts a number representing a\nposition in the array returned by listSources().\nThis is only available in browsers that support \nMediaStreamTrack.getSources(). Instead, some browsers\ngive users the option to set their own media source.<br/>",
             "itemtype": "method",
             "name": "setSource",
@@ -11495,7 +11495,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3598,
+            "line": 3596,
             "description": "The p5.Filter is built with a\n<a href=\"http://www.w3.org/TR/webaudio/#BiquadFilterNode\">\nWeb Audio BiquadFilter Node</a>.",
             "itemtype": "property",
             "name": "biquadFilter",
@@ -11506,7 +11506,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3614,
+            "line": 3612,
             "description": "Filter an audio signal according to a set\nof filter parameters.",
             "itemtype": "method",
             "name": "process",
@@ -11533,7 +11533,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3628,
+            "line": 3626,
             "description": "Set the frequency and the resonance of the filter.",
             "itemtype": "method",
             "name": "set",
@@ -11555,7 +11555,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3643,
+            "line": 3641,
             "description": "Set the filter frequency, in Hz, from 10 to 22050 (the range of\nhuman hearing, although in reality most people hear in a narrower\nrange).",
             "itemtype": "method",
             "name": "freq",
@@ -11576,7 +11576,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3663,
+            "line": 3661,
             "description": "Controls either width of a bandpass frequency,\nor the resonance of a low/highpass cutoff frequency.",
             "itemtype": "method",
             "name": "res",
@@ -11597,7 +11597,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3683,
+            "line": 3681,
             "description": "Set the type of a p5.Filter. Possible types include: \n\"lowpass\" (default), \"highpass\", \"bandpass\", \n\"lowshelf\", \"highshelf\", \"peaking\", \"notch\",\n\"allpass\".",
             "itemtype": "method",
             "name": "setType",
@@ -11614,7 +11614,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3695,
+            "line": 3693,
             "description": "Set the output level of the filter.",
             "itemtype": "method",
             "name": "amp",
@@ -11643,7 +11643,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3713,
+            "line": 3711,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -11660,7 +11660,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3723,
+            "line": 3721,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -11670,7 +11670,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3731,
+            "line": 3729,
             "description": "Constructor: <code>new p5.LowPass()</code> Filter.\nThis is the same as creating a p5.Filter and then calling\nits method <code>setType('lowpass')</code>.\nSee p5.Filter for methods.",
             "itemtype": "method",
             "name": "p5.LowPass",
@@ -11680,7 +11680,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3743,
+            "line": 3741,
             "description": "Constructor: <code>new p5.HighPass()</code> Filter.\nThis is the same as creating a p5.Filter and then calling\nits method <code>setType('highpass')</code>.\nSee p5.Filter for methods.",
             "itemtype": "method",
             "name": "p5.HighPass",
@@ -11690,7 +11690,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3755,
+            "line": 3753,
             "description": "Constructor: <code>new p5.BandPass()</code> Filter.\nThis is the same as creating a p5.Filter and then calling\nits method <code>setType('bandpass')</code>.\nSee p5.Filter for methods.",
             "itemtype": "method",
             "name": "p5.BandPass",
@@ -11700,7 +11700,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3815,
+            "line": 3813,
             "description": "The p5.Delay is built with two\n<a href=\"http://www.w3.org/TR/webaudio/#DelayNode\">\nWeb Audio Delay Nodes</a>, one for each stereo channel.",
             "itemtype": "property",
             "name": "leftDelay",
@@ -11711,7 +11711,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3824,
+            "line": 3822,
             "description": "The p5.Delay is built with two\n<a href=\"http://www.w3.org/TR/webaudio/#DelayNode\">\nWeb Audio Delay Nodes</a>, one for each stereo channel.",
             "itemtype": "property",
             "name": "rightDelay",
@@ -11722,7 +11722,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3837,
+            "line": 3835,
             "description": "Internal filter. Set to lowPass by default, but can be accessed directly.\nSee p5.Filter for methods. Or use the p5.Delay.filter() method to change\nfrequency and q.",
             "itemtype": "property",
             "name": "lowPass",
@@ -11733,7 +11733,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3864,
+            "line": 3862,
             "description": "Add delay to an audio signal according to a set\nof delay parameters.",
             "itemtype": "method",
             "name": "process",
@@ -11768,7 +11768,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3899,
+            "line": 3897,
             "description": "Set the delay (echo) time, in seconds. Usually this value will be\na floating point number between 0.0 and 1.0.",
             "itemtype": "method",
             "name": "delayTime",
@@ -11785,7 +11785,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3918,
+            "line": 3916,
             "description": "Feedback occurs when Delay sends its signal back through its input\nin a loop. The feedback amount determines how much signal to send each\ntime through the loop. A feedback greater than 1.0 is not desirable because\nit will increase the overall output each time through the loop,\ncreating an infinite feedback loop.",
             "itemtype": "method",
             "name": "feedback",
@@ -11802,7 +11802,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3942,
+            "line": 3940,
             "description": "Set a lowpass filter frequency for the delay. A lowpass filter\nwill cut off any frequencies higher than the filter frequency.",
             "itemtype": "method",
             "name": "filter",
@@ -11824,7 +11824,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3959,
+            "line": 3957,
             "description": "Choose a preset type of delay. 'pingPong' bounces the signal\nfrom the left to the right channel to produce a stereo effect.\nAny other parameter will revert to the default delay setting.",
             "itemtype": "method",
             "name": "setType",
@@ -11841,7 +11841,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3991,
+            "line": 3989,
             "description": "Set the output level of the delay effect.",
             "itemtype": "method",
             "name": "amp",
@@ -11870,7 +11870,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4009,
+            "line": 4007,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -11887,7 +11887,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4019,
+            "line": 4017,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -11897,7 +11897,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4078,
+            "line": 4076,
             "description": "Connect a source to the reverb, and assign reverb parameters.",
             "itemtype": "method",
             "name": "process",
@@ -11929,7 +11929,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4107,
+            "line": 4105,
             "description": "Set the reverb settings. Similar to .process(), but without\nassigning a new input.",
             "itemtype": "method",
             "name": "set",
@@ -11956,7 +11956,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4134,
+            "line": 4132,
             "description": "Set the output level of the delay effect.",
             "itemtype": "method",
             "name": "amp",
@@ -11985,7 +11985,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4152,
+            "line": 4150,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -12002,7 +12002,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4162,
+            "line": 4160,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -12012,7 +12012,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4170,
+            "line": 4168,
             "description": "Inspired by Simple Reverb by Jordan Santell\nhttps://github.com/web-audio-components/simple-reverb/blob/master/index.js\n \nUtility function for building an impulse response\nbased on the module parameters.",
             "access": "private",
             "tagname": "",
@@ -12022,7 +12022,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4259,
+            "line": 4257,
             "description": "Internally, the p5.Convolver uses the a\n<a href=\"http://www.w3.org/TR/webaudio/#ConvolverNode\">\nWeb Audio Convolver Node</a>.",
             "itemtype": "property",
             "name": "convolverNode",
@@ -12033,7 +12033,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4289,
+            "line": 4287,
             "description": "Create a p5.Convolver. Accepts a path to a soundfile \nthat will be used to generate an impulse response.",
             "itemtype": "method",
             "name": "createConvolver",
@@ -12062,7 +12062,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4334,
+            "line": 4332,
             "description": "Private method to load a buffer as an Impulse Response,\nassign it to the convolverNode, and add to the Array of .impulses.",
             "params": [
                 {
@@ -12084,7 +12084,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4366,
+            "line": 4364,
             "description": "Connect a source to the reverb, and assign reverb parameters.",
             "itemtype": "method",
             "name": "process",
@@ -12104,7 +12104,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4398,
+            "line": 4396,
             "description": "If you load multiple impulse files using the .addImpulse method,\nthey will be stored as Objects in this Array. Toggle between them\nwith the <code>toggleImpulse(id)</code> method.",
             "itemtype": "property",
             "name": "impulses",
@@ -12115,7 +12115,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4407,
+            "line": 4405,
             "description": "Load and assign a new Impulse Response to the p5.Convolver.\nThe impulse is added to the <code>.impulses</code> array. Previous\nimpulses can be accessed with the <code>.toggleImpulse(id)</code>\nmethod.",
             "itemtype": "method",
             "name": "addImpulse",
@@ -12137,7 +12137,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4424,
+            "line": 4422,
             "description": "Similar to .addImpulse, except that the <code>.impulses</code>\nArray is reset to save memory. A new <code>.impulses</code>\narray is created with this impulse as the only item.",
             "itemtype": "method",
             "name": "resetImpulse",
@@ -12159,7 +12159,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4441,
+            "line": 4439,
             "description": "If you have used <code>.addImpulse()</code> to add multiple impulses\nto a p5.Convolver, then you can use this method to toggle between\nthe items in the <code>.impulses</code> Array. Accepts a parameter\nto identify which impulse you wish to use, identified either by its\noriginal filename (String) or by its position in the <code>.impulses\n</code> Array (Number).<br/>\nYou can access the objects in the .impulses Array directly. Each\nObject has two attributes: an <code>.audioBuffer</code> (type:\nWeb Audio <a href=\"\nhttp://webaudio.github.io/web-audio-api/#the-audiobuffer-interface\">\nAudioBuffer)</a> and a <code>.name</code>, a String that corresponds\nwith the original filename.",
             "itemtype": "method",
             "name": "toggleImpulse",
@@ -12176,7 +12176,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4584,
+            "line": 4582,
             "description": "Fire a callback function every step",
             "params": [
                 {
@@ -12195,7 +12195,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4775,
+            "line": 4773,
             "description": "callback invoked when the recording is over",
             "access": "private",
             "tagname": "",
@@ -12206,7 +12206,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4788,
+            "line": 4786,
             "description": "Connect a specific device to the p5.SoundRecorder.\nIf no parameter is given, p5.SoundRecorer will record\nall audible p5.sound from your sketch.",
             "itemtype": "method",
             "name": "setInput",
@@ -12224,7 +12224,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4809,
+            "line": 4807,
             "description": "Start recording. To access the recording, provide\na p5.SoundFile as the first parameter. The p5.SoundRecorder\nwill send its recording to that p5.SoundFile for playback once\nrecording is complete. Optional parameters include duration\n(in seconds) of the recording, and a callback function that\nwill be called once the complete recording has been\ntransfered to the p5.SoundFile.",
             "itemtype": "method",
             "name": "record",
@@ -12253,7 +12253,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4842,
+            "line": 4840,
             "description": "Stop the recording. Once the recording is stopped,\nthe results will be sent to the p5.SoundFile that\nwas given on .record(), and if a callback function\nwas provided on record, that function will be called.",
             "itemtype": "method",
             "name": "stop",
@@ -12263,7 +12263,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4861,
+            "line": 4859,
             "description": "internal method called on audio process",
             "access": "private",
             "tagname": "",
@@ -12280,7 +12280,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4912,
+            "line": 4910,
             "description": "Save a p5.SoundFile as a .wav audio file.",
             "itemtype": "method",
             "name": "saveSound",
@@ -12316,7 +12316,7 @@
         },
         {
             "message": "param name missing: {String}",
-            "line": " lib/addons/p5.sound.js:3683"
+            "line": " lib/addons/p5.sound.js:3681"
         },
         {
             "message": "Missing item type\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure and it can also\ntake an optional node parameter for attaching the generated p5 canvas\nto a node.  The sketch closure takes the newly created p5 instance as\nits sole argument and may optionally set preload(), setup(), and/or\ndraw() properties on it for running a sketch.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
@@ -12572,39 +12572,39 @@
         },
         {
             "message": "Missing item type\nsetValueAtTime is similar to the Web Audio API AudioParam\nmethod of the same name.",
-            "line": " lib/addons/p5.sound.js:1943"
+            "line": " lib/addons/p5.sound.js:1937"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:2685"
+            "line": " lib/addons/p5.sound.js:2676"
         },
         {
             "message": "Missing item type\nSet the amplitude of the noise between 0 and 1.0",
-            "line": " lib/addons/p5.sound.js:3219"
+            "line": " lib/addons/p5.sound.js:3217"
         },
         {
             "message": "Missing item type\nAdd input sources to the list of available sources.",
-            "line": " lib/addons/p5.sound.js:3446"
+            "line": " lib/addons/p5.sound.js:3444"
         },
         {
             "message": "Missing item type\nInspired by Simple Reverb by Jordan Santell\nhttps://github.com/web-audio-components/simple-reverb/blob/master/index.js\n \nUtility function for building an impulse response\nbased on the module parameters.",
-            "line": " lib/addons/p5.sound.js:4170"
+            "line": " lib/addons/p5.sound.js:4168"
         },
         {
             "message": "Missing item type\nPrivate method to load a buffer as an Impulse Response,\nassign it to the convolverNode, and add to the Array of .impulses.",
-            "line": " lib/addons/p5.sound.js:4334"
+            "line": " lib/addons/p5.sound.js:4332"
         },
         {
             "message": "Missing item type\nFire a callback function every step",
-            "line": " lib/addons/p5.sound.js:4584"
+            "line": " lib/addons/p5.sound.js:4582"
         },
         {
             "message": "Missing item type\ncallback invoked when the recording is over",
-            "line": " lib/addons/p5.sound.js:4775"
+            "line": " lib/addons/p5.sound.js:4773"
         },
         {
             "message": "Missing item type\ninternal method called on audio process",
-            "line": " lib/addons/p5.sound.js:4861"
+            "line": " lib/addons/p5.sound.js:4859"
         }
     ]
 }

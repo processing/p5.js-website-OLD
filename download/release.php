@@ -58,7 +58,7 @@ function updateLib($jside_v) {
   updateFiles();
   $v = getLibVersion('../js/p5.min.js');
   //unlink('p5.min.js');
-
+  echo 'updating library to v'.$v[0].' ('.$v[1].')';
   $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $jside_version = "'.$jside_v.'"; ?>';
 
   file_put_contents('version.php', $contents);
