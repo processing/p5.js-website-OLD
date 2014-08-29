@@ -9,7 +9,6 @@ function setup() {
   createCanvas(710, 400);
   diameter = height - 10;
   noStroke();
-  noStroke();
   fill(255, 204, 0);
 }
 
