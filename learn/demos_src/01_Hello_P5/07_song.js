@@ -2,6 +2,9 @@
  * @name Song
  * @frame 720, 430
  * @description Play a song.
+ * You will need to include the 
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound
+ * library</a> for this example to work in your own project.
  */
 // The midi notes of a scale
 var notes = [ 60, 62, 64, 65, 67, 69, 71];
