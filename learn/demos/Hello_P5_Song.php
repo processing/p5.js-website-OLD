@@ -14,7 +14,6 @@
  You will need to include the 
  <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound
  library</a> for this example to work in your own project.
- </em>
  </p>
 
           <div id="exampleDisplay">

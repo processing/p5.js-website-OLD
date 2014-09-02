@@ -44,6 +44,18 @@
       </div>
 
       <div class="right-column">
+        <a class="nounderline" href="#">
+        <div class="label">
+        <img src="../img/learn/dom.jpg"></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas"><h4>Beyond the canvas</h4></a>
+        </div>
+        <p>Creating and manipulating elements on the page 
+        beyond the canvas.</p> 
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Local-server">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -52,9 +64,7 @@
         <p>How to set up a local server on Mac OSX, Windows, or Linux.</p> 
       </div>
 
-      <div class="spacer"></div>
-
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/p5.js,-node.js,-socket.io">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -63,7 +73,10 @@
         <p>Using a node.js server with p5.js, communcation via socket.io.</p> 
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Development">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -71,19 +84,7 @@
         </div>
         <p>Getting started and overview for contributing to development.</p> 
       </div>
-
-      <div class="spacer"></div>
-
-      <div class="left-column">
-        <a class="nounderline" href="#">
-        <div class="label">
-        <img src="../img/learn/dom.jpg"></a>
-        <a class="nounderline" href="#"><h4>Beyond the canvas</h4></a>
-        </div>
-        <p>Creating and manipulating elements on the page 
-        beyond the canvas.</p> 
-      </div>
-
+      
       <div class="spacer"></div>
 
       <a name="examples" class="anchor"><h3>Examples</h3></a>
