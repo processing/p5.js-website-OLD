@@ -35,15 +35,6 @@
       <div class="spacer"></div>
 
       <div class="left-column">
-        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries">
-        <div class="label">
-        <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries"><h4>Adding libraries</h4></a>
-        </div>
-        <p>Finding, adding, and integrating other JS libraries.</p> 
-      </div>
-
-      <div class="right-column">
         <a class="nounderline" href="#">
         <div class="label">
         <img src="../img/learn/dom.jpg"></a>
@@ -52,6 +43,16 @@
         <p>Creating and manipulating elements on the page 
         beyond the canvas.</p> 
       </div>
+
+      <div class="right-column">
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="https://github.com/lmccart/p5.js/wiki/Integrating-other-libraries"><h4>Adding libraries</h4></a>
+        </div>
+        <p>Finding, adding, and integrating other JS libraries.</p> 
+      </div>
+
 
       <div class="spacer"></div>
 
@@ -84,7 +85,7 @@
         </div>
         <p>Getting started and overview for contributing to development.</p> 
       </div>
-      
+
       <div class="spacer"></div>
 
       <a name="examples" class="anchor"><h3>Examples</h3></a>
