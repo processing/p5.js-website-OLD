@@ -32,18 +32,18 @@
       </div>
 
       <div class="spacer"></div>
- <!--
+
       <a name="contributed" class="anchor"><h3>Contributed</h3></a>
 
       <div class="left-column">
-        <a class="nounderline" href="../reference/#/libraries/p5.dom">
+        <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/">
         <div class="label">
-        <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="#"><h4>p5.xxx</h4></a>
+        <img src="../img/libraries/p5.gibber.logo.jpg"></a>
+        <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/"><h4>p5.gibber</h4></a>
         </div>
-        <p>Description of p5.xxx library would go here. You can imagine that the text would run at least 2-3 lines.</p> 
+        <p>p5.gibber provides rapid music sequencing and audio synthesis capabilities.</p> 
       </div>
-
+<!--
       <div class="right-column">
         <a class="nounderline" href="../reference/#/libraries/p5.sound">
         <div class="label">
@@ -52,9 +52,9 @@
         </div>
         <p>Description of p5.xxx library would go here. You can imagine that the text would run at least 2-3 lines.</p> 
       </div>
+-->
 
       <div class="spacer"></div>
--->
 
       <a name="using-a-library" class="anchor"><h3>Using a library</h3></a>
 
