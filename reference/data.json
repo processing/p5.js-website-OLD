@@ -4122,7 +4122,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 216,
+            "line": 223,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -4135,7 +4135,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 261,
+            "line": 273,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -4148,7 +4148,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 303,
+            "line": 320,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -4161,7 +4161,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 338,
+            "line": 357,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -4309,7 +4309,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 81,
+            "line": 86,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -4319,7 +4319,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 101,
+            "line": 111,
             "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -7223,7 +7223,20 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 84,
+            "line": 83,
+            "description": "Removes the default canvas for a p5 sketch that doesn't \nrequire a canvas",
+            "itemtype": "method",
+            "name": "noCanvas",
+            "example": [
+                " \n<div>\n<code>\nfunction setup() {\n  noCanvas();\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Rendering",
+            "submodule": "Rendering"
+        },
+        {
+            "file": "src/rendering/rendering.js",
+            "line": 103,
             "description": "Creates and returns a new p5.Graphics object. Use this class if you need \nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -7252,7 +7265,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 139,
+            "line": 158,
             "description": "Blends the pixels in the display window according to the defined mode. \nThere is a choice of the following modes to blend the source pixels (A) \nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C = \nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C = \nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C = \nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be \ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the \ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% \ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and \n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast, \nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -8648,7 +8661,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 121,
+            "line": 122,
             "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
@@ -8668,7 +8681,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 153,
+            "line": 155,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
             "name": "textWidth",
@@ -8682,6 +8695,14 @@
             "example": [
                 "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(14);\ns = \"String.\";\ntext(s, 10, 23);\nconsole.log(textWidth(s));\n</code>\n</div>"
             ],
+            "class": "p5",
+            "module": "Typography",
+            "submodule": "Attributes"
+        },
+        {
+            "file": "src/typography/attributes.js",
+            "line": 176,
+            "description": "Helper fxn to apply text properties.",
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
@@ -8728,7 +8749,7 @@
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 103,
+            "line": 101,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
@@ -12502,6 +12523,10 @@
         {
             "message": "Missing item type",
             "line": " src/shape/curves.js:363"
+        },
+        {
+            "message": "Missing item type\nHelper fxn to apply text properties.",
+            "line": " src/typography/attributes.js:176"
         },
         {
             "message": "Missing item type",
