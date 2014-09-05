@@ -1096,7 +1096,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 658,
+            "line": 677,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact \nwith other HTML5 objects, including text, hyperlink, image, input, video, \naudio, and webcam.</p>\n<p>There are a set of creation methods, and some other stuff... @TODO.</p>\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1377,7 +1377,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 658,
+            "line": 677,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -5197,18 +5197,19 @@
         {
             "file": "src/objects/p5.Element.js",
             "line": 37,
-            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
+            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID, DOM\n node, or p5.Element.",
             "itemtype": "method",
             "name": "parent",
             "params": [
                 {
                     "name": "parent",
-                    "description": "the ID or node of the parent elt",
+                    "description": "the ID, DOM node, or p5.Element\n                         of desired parent element",
                     "type": "String|Object"
                 }
             ],
             "example": [
-                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n \n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>",
+                "\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var div1 = createDiv('this is the child');\n div1.parent(div0); // use p5.Element\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n div0.id('apples');\n var div1 = createDiv('this is the child');\n div1.parent('apples'); // use id\n </code></div>\n <div class='norender'><code>\n var elt = document.getElementById('myParentDiv');\n var div1 = createDiv('this is the child');\n div1.parent(elt); // use element from page\n </code></div>"
             ],
             "class": "p5.Element",
             "module": "DOM",
@@ -5216,7 +5217,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 62,
+            "line": 81,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5233,7 +5234,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 73,
+            "line": 92,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5250,7 +5251,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 84,
+            "line": 103,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5267,7 +5268,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 97,
+            "line": 116,
             "description": "The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5284,7 +5285,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 114,
+            "line": 133,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5301,7 +5302,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 128,
+            "line": 147,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5318,7 +5319,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 141,
+            "line": 160,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5335,7 +5336,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 154,
+            "line": 173,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5352,7 +5353,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 167,
+            "line": 186,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5369,7 +5370,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 187,
+            "line": 206,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -9224,13 +9225,13 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 421,
-            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID or\n DOM node.",
+            "description": "Attaches the element  as a child to the parent specified. \n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
             "params": [
                 {
                     "name": "child",
-                    "description": "the ID or node to add to the current element",
+                    "description": "the ID, DOM node, or p5.Element \n                         to add to the current element",
                     "type": "String|Object"
                 }
             ],
@@ -9238,13 +9239,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var div1 = createDiv('this is the child');\n div0.child(div1); // use p5.Element\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var div1 = createDiv('this is the child');\n div1.id('apples');\n div0.child('apples'); // use id\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var elt = document.getElementById('myChildDiv');\n div0.child(elt); // use element from page\n </code></div>"
+            ],
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 440,
+            "line": 459,
             "description": "If an argument is given, sets the inner HTML of the element, \n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -9266,7 +9270,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 460,
+            "line": 479,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -9292,7 +9296,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 478,
+            "line": 497,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property, \n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -9322,7 +9326,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 513,
+            "line": 532,
             "description": "Adds a new attribute or changes the value of an existing attribute \n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -9352,7 +9356,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 540,
+            "line": 559,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -9374,7 +9378,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 561,
+            "line": 580,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -9388,7 +9392,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 573,
+            "line": 592,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -9402,7 +9406,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 584,
+            "line": 603,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -9428,7 +9432,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 635,
+            "line": 654,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -9438,7 +9442,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 677,
+            "line": 696,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -9452,7 +9456,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 691,
+            "line": 710,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -9466,7 +9470,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 703,
+            "line": 722,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -9480,7 +9484,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 714,
+            "line": 733,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -9494,7 +9498,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 725,
+            "line": 744,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -9508,7 +9512,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 738,
+            "line": 757,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -9529,7 +9533,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 750,
+            "line": 769,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -9551,7 +9555,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 766,
+            "line": 785,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -9573,7 +9577,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 783,
+            "line": 802,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -12426,7 +12430,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:187"
+            "line": " src/objects/p5.Element.js:206"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
