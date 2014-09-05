@@ -5208,8 +5208,7 @@
                 }
             ],
             "example": [
-                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>",
-                "\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var div1 = createDiv('this is the child');\n div1.parent(div0); // use p5.Element\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n div0.id('apples');\n var div1 = createDiv('this is the child');\n div1.parent('apples'); // use id\n </code></div>\n <div class='norender'><code>\n var elt = document.getElementById('myParentDiv');\n var div1 = createDiv('this is the child');\n div1.parent(elt); // use element from page\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var div1 = createDiv('this is the child');\n div1.parent(div0); // use p5.Element\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n div0.id('apples');\n var div1 = createDiv('this is the child');\n div1.parent('apples'); // use id\n </code></div>\n <div class='norender'><code>\n var elt = document.getElementById('myParentDiv');\n var div1 = createDiv('this is the child');\n div1.parent(elt); // use element from page\n </code></div>"
             ],
             "class": "p5.Element",
             "module": "DOM",
@@ -5217,7 +5216,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 81,
+            "line": 80,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5234,7 +5233,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 92,
+            "line": 91,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5251,7 +5250,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 103,
+            "line": 102,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5268,7 +5267,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 116,
+            "line": 115,
             "description": "The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5285,7 +5284,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 133,
+            "line": 132,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5302,7 +5301,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 147,
+            "line": 146,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5319,7 +5318,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 160,
+            "line": 159,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5336,7 +5335,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 173,
+            "line": 172,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5353,7 +5352,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 186,
+            "line": 185,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5370,7 +5369,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 206,
+            "line": 205,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -12430,7 +12429,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:206"
+            "line": " src/objects/p5.Element.js:205"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
