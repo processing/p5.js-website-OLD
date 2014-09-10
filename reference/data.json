@@ -2297,7 +2297,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 17,
+            "line": 16,
             "description": "This is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure and it can also\ntake an optional node parameter for attaching the generated p5 canvas\nto a node.  The sketch closure takes the newly created p5 instance as\nits sole argument and may optionally set preload(), setup(), and/or\ndraw() properties on it for running a sketch.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
             "params": [
                 {
@@ -2321,7 +2321,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 44,
+            "line": 43,
             "description": "Called directly before setup(), the preload() function is used to handle\nasynchronous loading of external files. If a preload function is\ndefined, setup() will wait until any load calls within have finished.\nNothing besides load calls should be inside preload (loadImage,\nloadJSON, loadStrings, etc).",
             "itemtype": "method",
             "name": "preload",
@@ -2334,7 +2334,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 72,
+            "line": 71,
             "description": "The setup() function is called once when the program starts. It's used to\ndefine initial environment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
@@ -2347,7 +2347,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 98,
+            "line": 97,
             "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -2360,7 +2360,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 300,
+            "line": 307,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any \nelements created by p5.js. It will also stop the draw loop and unbind \nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch. \nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -3838,7 +3838,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 60,
+            "line": 61,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -3868,7 +3868,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 126,
+            "line": 127,
             "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>",
             "itemtype": "method",
             "name": "loadTable",
@@ -3886,13 +3886,13 @@
                 },
                 {
                     "name": "callback",
-                    "description": "function to be executed after loadXML()\n                             completes, XML object is passed in as\n                             first argument",
+                    "description": "function to be executed after loadTable()\n                             completes, Table object is passed in as\n                             first argument",
                     "type": "Function",
                     "optional": true
                 }
             ],
             "return": {
-                "description": "XML object containing data",
+                "description": "Table object containing data",
                 "type": "Object"
             },
             "class": "p5",
@@ -3901,7 +3901,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 230,
+            "line": 231,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
@@ -6916,7 +6916,7 @@
         {
             "file": "src/output/files.js",
             "line": 109,
-            "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myFile.jpg');\n</code></pre>\n\n<p>Alternately, the first parameter can be an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
+            "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Graphics object as an image\n \nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
             "params": [
@@ -6942,7 +6942,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 227,
+            "line": 230,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
@@ -6971,7 +6971,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 281,
+            "line": 284,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
@@ -6994,7 +6994,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 332,
+            "line": 335,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
@@ -7022,7 +7022,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 451,
+            "line": 454,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -7049,7 +7049,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 472,
+            "line": 475,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -7074,7 +7074,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 508,
+            "line": 511,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -7095,7 +7095,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 537,
+            "line": 540,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -7109,7 +7109,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 549,
+            "line": 552,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -12361,7 +12361,7 @@
         },
         {
             "message": "Missing item type\nThis is the p5 instance constructor.\n\nA p5 instance holds all the properties and methods related to\na p5 sketch.  It expects an incoming sketch closure and it can also\ntake an optional node parameter for attaching the generated p5 canvas\nto a node.  The sketch closure takes the newly created p5 instance as\nits sole argument and may optionally set preload(), setup(), and/or\ndraw() properties on it for running a sketch.\n\nA p5 sketch can run in \"global\" or \"instance\" mode:\n\"global\"   - all properties and methods are attached to the window\n\"instance\" - all properties and methods are bound to this p5 object",
-            "line": " src/core/core.js:17"
+            "line": " src/core/core.js:16"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
@@ -12493,35 +12493,35 @@
         },
         {
             "message": "Missing item type\nWrites the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "line": " src/output/files.js:227"
+            "line": " src/output/files.js:230"
         },
         {
             "message": "Missing item type\nWrites an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "line": " src/output/files.js:281"
+            "line": " src/output/files.js:284"
         },
         {
             "message": "Missing item type\nWrites the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "line": " src/output/files.js:332"
+            "line": " src/output/files.js:335"
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/output/files.js:451"
+            "line": " src/output/files.js:454"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/output/files.js:472"
+            "line": " src/output/files.js:475"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/output/files.js:508"
+            "line": " src/output/files.js:511"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/output/files.js:537"
+            "line": " src/output/files.js:540"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/output/files.js:549"
+            "line": " src/output/files.js:552"
         },
         {
             "message": "Missing item type\nSave the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
