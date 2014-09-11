@@ -912,7 +912,7 @@
             "module": "Rendering",
             "file": "src/objects/p5.Graphics.js",
             "line": 11,
-            "description": "Main graphics and rendering context, as well as the base API \nimplementation for p5.js \"core\". Use this class if you need to draw into \nan off-screen graphics buffer. A p5.Graphics object can be constructed \nwith the <code>createGraphics()</code> function. The fields and methods \nfor this class are extensive, but mirror the normal drawing API for p5."
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". Use this class if you need to draw into\nan off-screen graphics buffer. A p5.Graphics object can be constructed\nwith the <code>createGraphics()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         "Table": {
             "name": "Table",
@@ -1203,7 +1203,7 @@
             "namespace": "",
             "file": "src/objects/p5.Graphics.js",
             "line": 11,
-            "description": "Main graphics and rendering context, as well as the base API \nimplementation for p5.js \"core\". Use this class if you need to draw into \nan off-screen graphics buffer. A p5.Graphics object can be constructed \nwith the <code>createGraphics()</code> function. The fields and methods \nfor this class are extensive, but mirror the normal drawing API for p5.",
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". Use this class if you need to draw into\nan off-screen graphics buffer. A p5.Graphics object can be constructed\nwith the <code>createGraphics()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
             "is_constructor": 1,
             "extends": "p5.Element",
             "params": [
@@ -1220,7 +1220,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(40, 40);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width/2, pg.height/2, 50, 50);\n  image(pg, 9, 30); \n  image(pg, 51, 30);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(40, 40);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width/2, pg.height/2, 50, 50);\n  image(pg, 9, 30);\n  image(pg, 51, 30);\n}\n</code>\n</div>"
             ]
         },
         "p5.Image": {
@@ -2360,7 +2360,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 307,
+            "line": 310,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any \nelements created by p5.js. It will also stop the draw loop and unbind \nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch. \nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -2924,7 +2924,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\n// Move the mouse left and right across the image\n// to see the cursor change from a cross to a hand\nfunction draw() {\n  line(width/2, 0, width/2, height); \n  if (mouseX < 50) {\n    cursor(CROSS);\n  } else {\n    cursor(HAND);\n  }\n}\n</code></div>"
+                "\n<div><code>\n// Move the mouse left and right across the image\n// to see the cursor change from a cross to a hand\nfunction draw() {\n  line(width/2, 0, width/2, height);\n  if (mouseX < 50) {\n    cursor(CROSS);\n  } else {\n    cursor(HAND);\n  }\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -2987,7 +2987,7 @@
             "itemtype": "method",
             "name": "noCursor",
             "example": [
-                "\n<div><code>\nfunction setup() {\n  noCursor();\n}\n\nfunction draw() {\n  background(200);\n  ellipse(mouseX, mouseY, 10, 10); \n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  noCursor();\n}\n\nfunction draw() {\n  background(200);\n  ellipse(mouseX, mouseY, 10, 10);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -3047,7 +3047,20 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 234,
+            "line": 229,
+            "description": "The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other \nadjustements to accomodate the new window size.",
+            "itemtype": "property",
+            "name": "windowResized",
+            "example": [
+                "\n<div class=\"norender\"><code>\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);\n}\n\nfunction draw() {\n background(0, 100, 200);\n}\n\nfunction windowResized() {\n  resizeCanvas(windowWidth, windowHeight);\n}\n</code></div>"
+            ],
+            "class": "p5",
+            "module": "Environment",
+            "submodule": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 263,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -3057,7 +3070,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 245,
+            "line": 274,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -3067,8 +3080,8 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 256,
-            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current \nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
+            "line": 285,
+            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
             "params": [
@@ -4100,7 +4113,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 143,
+            "line": 145,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -4113,7 +4126,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 169,
+            "line": 171,
             "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -4126,7 +4139,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 223,
+            "line": 225,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -4139,7 +4152,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 273,
+            "line": 275,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -4152,7 +4165,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 320,
+            "line": 322,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -4165,7 +4178,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 357,
+            "line": 359,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -4284,7 +4297,7 @@
         {
             "file": "src/input/touch.js",
             "line": 23,
-            "description": "The system variable touchY always contains the horizontal position of\none finger, relative to (0, 0) of the canvas. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
+            "description": "The system variable touchY always contains the horizontal position of\none finger, relative to (0, 0) of the canvas in the frame previous to the\ncurrent frame. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
             "itemtype": "property",
             "name": "touchY",
             "class": "p5",
@@ -4293,7 +4306,27 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 33,
+            "line": 34,
+            "description": "The system variable touchY always contains the horizontal position of\none finger, relative to (0, 0) of the canvas in the frame previous to the\ncurrent frame. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
+            "itemtype": "property",
+            "name": "ptouchX",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Touch"
+        },
+        {
+            "file": "src/input/touch.js",
+            "line": 45,
+            "description": "The system variable pmouseY always contains the vertical position of the\nmouse in the frame previous to the current frame, relative to (0, 0) of\nthe canvas.",
+            "itemtype": "property",
+            "name": "ptouchY",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Touch"
+        },
+        {
+            "file": "src/input/touch.js",
+            "line": 54,
             "description": "The system variable touches[] contains an array of the positions of all\ncurrent touch points, relative to (0, 0) of the canvas. Each element in\nthe array is an object with x and y properties.",
             "itemtype": "property",
             "name": "touches[]",
@@ -4303,7 +4336,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 61,
+            "line": 85,
             "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -4313,7 +4346,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 86,
+            "line": 110,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -4323,7 +4356,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 111,
+            "line": 135,
             "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -7095,7 +7128,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 540,
+            "line": 542,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -7109,7 +7142,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 552,
+            "line": 554,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -7143,7 +7176,7 @@
         },
         {
             "file": "src/output/image.js",
-            "line": 64,
+            "line": 70,
             "description": "Capture a sequence of frames that can be used to create a movie.\nAccepts a callback. For example, you may wish to send the frames\nto a server where they can be stored or converted into a movie.\nIf no callback is provided, the browser will attempt to download\nall of the images that have just been created.",
             "params": [
                 {
@@ -7199,7 +7232,7 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 12,
-            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed \nto this function. If createCanvas() is not used, the window will be \ngiven a default size of 100x100 pixels.",
+            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
@@ -7219,7 +7252,7 @@
                 "type": "Object"
             },
             "example": [
-                " \n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 50);\n  background(153);\n  line(0, 0, width, height);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 50);\n  background(153);\n  line(0, 0, width, height);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Rendering",
@@ -7227,12 +7260,12 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 83,
-            "description": "Removes the default canvas for a p5 sketch that doesn't \nrequire a canvas",
+            "line": 120,
+            "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
             "example": [
-                " \n<div>\n<code>\nfunction setup() {\n  noCanvas();\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup() {\n  noCanvas();\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Rendering",
@@ -7240,8 +7273,8 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 103,
-            "description": "Creates and returns a new p5.Graphics object. Use this class if you need \nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
+            "line": 140,
+            "description": "Creates and returns a new p5.Graphics object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
             "params": [
@@ -7261,7 +7294,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(100, 100);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width/2, pg.height/2, 50, 50);\n  image(pg, 50, 50); \n  image(pg, 0, 0, 50, 50);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createGraphics(100, 100);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width/2, pg.height/2, 50, 50);\n  image(pg, 50, 50);\n  image(pg, 0, 0, 50, 50);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Rendering",
@@ -7269,8 +7302,8 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 158,
-            "description": "Blends the pixels in the display window according to the defined mode. \nThere is a choice of the following modes to blend the source pixels (A) \nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C = \nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C = \nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C = \nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be \ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the \ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50% \ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and \n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast, \nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
+            "line": 195,
+            "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
             "params": [
@@ -12517,11 +12550,11 @@
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/output/files.js:540"
+            "line": " src/output/files.js:542"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/output/files.js:552"
+            "line": " src/output/files.js:554"
         },
         {
             "message": "Missing item type\nSave the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
@@ -12529,7 +12562,7 @@
         },
         {
             "message": "Missing item type\nCapture a sequence of frames that can be used to create a movie.\nAccepts a callback. For example, you may wish to send the frames\nto a server where they can be stored or converted into a movie.\nIf no callback is provided, the browser will attempt to download\nall of the images that have just been created.",
-            "line": " src/output/image.js:64"
+            "line": " src/output/image.js:70"
         },
         {
             "message": "Missing item type",
