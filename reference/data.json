@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.5",
+        "version": "0.3.6",
         "url": ""
     },
     "files": {
@@ -3368,7 +3368,7 @@
         {
             "file": "src/image/image.js",
             "line": 23,
-            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.",
+            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.\n\n.pixels gives access to an array containing the values for all the pixels \nin the display window.\nThese values are numbers. This array is the size of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from \nleft to right across each row, then down each column. See .pixels for\nmore info. It may also be simpler to use set() or get().\n<br><br>\nBefore accessing the pixels of an image, the data must loaded with the \nloadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "method",
             "name": "createImage",
             "params": [
@@ -3388,7 +3388,7 @@
                 "type": "p5.Image"
             },
             "example": [
-                "\n<div>\n<code>\nimg = createImage(66, 66);\nimg.loadPixels();\nfor (i = 0; i < img.pixels.length; i++) {\n  img.pixels[i] = color(0, 90, 102); \n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>\n\n<div>\n<code>\nimg = createImage(66, 66);\nimg.loadPixels();\nfor (i = 0; i < img.pixels.length; i++) {\n  img.pixels[i] = color(0, 90, 102, i % img.width * 2); \n}\nimg.updatePixels();\nimage(img, 17, 17);\nimage(img, 34, 34);\n</code>\n</div>"
+                "\n<div>\n<code>\nimg = createImage(66, 66);\nimg.loadPixels();\nfor (i = 0; i < img.width; i++) {\n  for (j = 0; j < img.height; j++) {\n    img.set(i, j, color(0, 90, 102)); \n  }\n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>\n\n<div>\n<code>\nimg = createImage(66, 66);\nimg.loadPixels();\nfor (i = 0; i < img.width; i++) {\n  for (j = 0; j < img.height; j++) {\n    img.set(i, j, color(0, 90, 102, i % img.width * 2)); \n  }\n}\nimg.updatePixels();\nimage(img, 17, 17);\nimage(img, 34, 34);\n</code>\n</div>\n\n<div>\n<code>\nvar pink = color(255, 102, 204);\nimg = createImage(66, 66);\nimg.loadPixels();\nfor (var i = 0; i < 4*(width*height/2); i+=4) {\n  img.pixels[i] = red(pink);\n  img.pixels[i+1] = green(pink);\n  img.pixels[i+2] = blue(pink);\n  img.pixels[i+3] = alpha(pink);\n}\nimg.updatePixels();\nimage(img, 17, 17);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Image",
@@ -5443,7 +5443,7 @@
         {
             "file": "src/objects/p5.Image.js",
             "line": 58,
-            "description": "Array containing the color of every pixel in the image.",
+            "description": "Array containing the color of every pixel in the image.\nThese values are numbers. This array is the size of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from \nleft to right across each row, then down each column. For example, \nif the image is 100x100 pixels, there will be 40000. The first four values\n(indices 0-3) in the array will be the R, G, B, A values of the pixel at \n(0, 0). The second four values (indices 4-7) will contain the R, G, B, A\nvalues of the pixel at (1, 0). More generally, to set values for a pixel\nat (x, y): \n<code>pixels[y*width+x] = r; \npixels[y*width+x+1] = g;\npixels[y*width+x+2] = b;\npixels[y*width+x+3] = a;</code>\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "property",
             "name": "pixels[]",
             "class": "p5.Image",
@@ -5452,7 +5452,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 65,
+            "line": 81,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Image",
             "module": "Image",
@@ -5460,7 +5460,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 73,
+            "line": 89,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -5470,7 +5470,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 82,
+            "line": 98,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -5502,7 +5502,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 100,
+            "line": 116,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -5542,7 +5542,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 122,
+            "line": 138,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels()",
             "itemtype": "method",
             "name": "set",
@@ -5569,7 +5569,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 140,
+            "line": 156,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -5591,7 +5591,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 187,
+            "line": 203,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -5648,7 +5648,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 209,
+            "line": 225,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -5665,7 +5665,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 249,
+            "line": 265,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5687,7 +5687,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 262,
+            "line": 278,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5749,7 +5749,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 291,
+            "line": 307,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -12478,7 +12478,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Image.js:65"
+            "line": " src/objects/p5.Image.js:81"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
