@@ -5443,7 +5443,7 @@
         {
             "file": "src/objects/p5.Image.js",
             "line": 58,
-            "description": "Array containing the color of every pixel in the image.\nThese values are numbers. This array is the size of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from \nleft to right across each row, then down each column. For example, \nif the image is 100x100 pixels, there will be 40000. The first four values\n(indices 0-3) in the array will be the R, G, B, A values of the pixel at \n(0, 0). The second four values (indices 4-7) will contain the R, G, B, A\nvalues of the pixel at (1, 0). More generally, to set values for a pixel\nat (x, y):<br>\n<code>pixels[y*width+x] = r; <br>\npixels[y*width+x+1] = g;<br>\npixels[y*width+x+2] = b;<br>\npixels[y*width+x+3] = a;</code>\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
+            "description": "Array containing the color of every pixel in the image.\nThese values are numbers. This array is the size of the display window\nx 4, representing the R, G, B, A values in order for each pixel, moving \nfrom left to right across each row, then down each column. For example, \nif the image is 100x100 pixels, there will be 40000. The first four\nvalues (indices 0-3) in the array will be the R, G, B, A values of the\npixel at  (0, 0). The second four values (indices 4-7) will contain the\nR, G, B, A values of the pixel at (1, 0). More generally, to set values\nfor a pixel at (x, y):<br>\n<code>pixels[y*width+x] = r; <br>\npixels[y*width+x+1] = g;<br>\npixels[y*width+x+2] = b;<br>\npixels[y*width+x+3] = a;</code>\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "property",
             "name": "pixels[]",
             "example": [
@@ -8624,7 +8624,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 20,
+            "line": 22,
             "description": "Sets the current alignment for drawing text. The parameters LEFT, CENTER,\nand RIGHT set the display characteristics of the letters in relation to\nthe values for the x and y parameters of the text() function.",
             "itemtype": "method",
             "name": "textAlign",
@@ -8644,27 +8644,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 49,
-            "description": "Calculates and returns the height of any character or text string.",
-            "itemtype": "method",
-            "name": "textHeight",
-            "params": [
-                {
-                    "name": "s",
-                    "description": "the String of characters to measure",
-                    "type": "String"
-                }
-            ],
-            "example": [
-                "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(14);\ns = \"String.\";\ntext(s, 10, 23);\nconsole.log(textHeight(s));\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Typography",
-            "submodule": "Attributes"
-        },
-        {
-            "file": "src/typography/attributes.js",
-            "line": 70,
+            "line": 51,
             "description": "Sets the spacing between lines of text in units of pixels. This\nsetting will be used in all subsequent calls to the text() function.",
             "itemtype": "method",
             "name": "textLeading",
@@ -8684,7 +8664,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 99,
+            "line": 80,
             "description": "Sets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in units of pixels.",
             "itemtype": "method",
             "name": "textSize",
@@ -8704,7 +8684,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 122,
+            "line": 103,
             "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
@@ -8724,7 +8704,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 155,
+            "line": 136,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
             "name": "textWidth",
@@ -8744,8 +8724,46 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 176,
+            "line": 157,
+            "description": "Returns ascent of the current font at its current size.",
+            "example": [
+                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textAscent() * scalar;  // Calc ascent\nline(0, base-a, width, base-a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textAscent() * scalar;  // Recalc ascent\nline(40, base-a, width, base-a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Typography",
+            "submodule": "Attributes"
+        },
+        {
+            "file": "src/typography/attributes.js",
+            "line": 182,
+            "description": "Returns descent of the current font at its current size.",
+            "example": [
+                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textDescent() * scalar;  // Calc ascent\nline(0, base+a, width, base+a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textDescent() * scalar;  // Recalc ascent\nline(40, base+a, width, base+a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div> "
+            ],
+            "class": "p5",
+            "module": "Typography",
+            "submodule": "Attributes"
+        },
+        {
+            "file": "src/typography/attributes.js",
+            "line": 207,
             "description": "Helper fxn to apply text properties.",
+            "class": "p5",
+            "module": "Typography",
+            "submodule": "Attributes"
+        },
+        {
+            "file": "src/typography/attributes.js",
+            "line": 218,
+            "description": "Helper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
+            "class": "p5",
+            "module": "Typography",
+            "submodule": "Attributes"
+        },
+        {
+            "file": "src/typography/attributes.js",
+            "line": 259,
+            "description": "Helper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
@@ -12575,8 +12593,24 @@
             "line": " src/shape/curves.js:363"
         },
         {
+            "message": "Missing item type\nReturns ascent of the current font at its current size.",
+            "line": " src/typography/attributes.js:157"
+        },
+        {
+            "message": "Missing item type\nReturns descent of the current font at its current size.",
+            "line": " src/typography/attributes.js:182"
+        },
+        {
             "message": "Missing item type\nHelper fxn to apply text properties.",
-            "line": " src/typography/attributes.js:176"
+            "line": " src/typography/attributes.js:207"
+        },
+        {
+            "message": "Missing item type\nHelper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
+            "line": " src/typography/attributes.js:218"
+        },
+        {
+            "message": "Missing item type\nHelper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
+            "line": " src/typography/attributes.js:259"
         },
         {
             "message": "Missing item type",
