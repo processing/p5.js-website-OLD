@@ -30,6 +30,9 @@ function renderCode(sel) {
       sketchContainer.appendChild(pre);
       sketchContainer.className = 'example_container'
       sketch.className = 'language-javascript';
+      if (!rc) {
+        pre.className += ' norender';
+      }
     }
 
 

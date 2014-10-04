@@ -34,6 +34,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Calculation",
         "Color",
         "Constants",
+        "Conversion",
         "Creating & Reading",
         "Curves",
         "DOM",
@@ -89,6 +90,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Constants",
             "name": "Constants"
+        },
+        {
+            "displayName": "Conversion",
+            "name": "Conversion"
         },
         {
             "displayName": "Creating & Reading",

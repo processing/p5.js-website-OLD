@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.6",
+        "version": "0.3.8",
         "url": ""
     },
     "files": {
@@ -54,6 +54,17 @@
             "name": "src/data/array_functions.js",
             "modules": {
                 "Array Functions": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
+        "src/data/conversion.js": {
+            "name": "src/data/conversion.js",
+            "modules": {
+                "Conversion": 1
             },
             "classes": {},
             "fors": {
@@ -570,6 +581,7 @@
             "name": "Data",
             "submodules": {
                 "Array Functions": 1,
+                "Conversion": 1,
                 "String Functions": 1,
                 "Table": 1,
                 "Output": 1
@@ -597,6 +609,23 @@
             "module": "Data",
             "namespace": "",
             "file": "src/data/array_functions.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
+        },
+        "Conversion": {
+            "name": "Conversion",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Data",
+            "namespace": "",
+            "file": "src/data/conversion.js",
             "line": 1,
             "requires": [
                 "core"
@@ -2360,7 +2389,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 310,
+            "line": 305,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any \nelements created by p5.js. It will also stop the draw loop and unbind \nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch. \nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -2574,6 +2603,54 @@
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
+        },
+        {
+            "file": "src/data/conversion.js",
+            "line": 13,
+            "description": "Converts a string to its floating point representation. The contents of a\nstring must resemble a number, or NaN (not a number) will be returned. \nFor example, float(\"1234.56\") evaluates to 1234.56, but float(\"giraffe\") \nwill return NaN.",
+            "itemtype": "method",
+            "name": "float",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "float string to parse",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "floating point representation of string",
+                "type": "Number"
+            },
+            "example": [
+                "\n<div><code>\nvar str = '20';\nvar diameter = float(str);\nellipse(width/2, height/2, diameter, diameter);\n</code></div>"
+            ],
+            "class": "p5",
+            "module": "Data",
+            "submodule": "Conversion"
+        },
+        {
+            "file": "src/data/conversion.js",
+            "line": 33,
+            "description": "Converts a boolean, string, or float to its integer representation.\nWhen an array of values is passed in, then an int array of the same length \nis returned.",
+            "itemtype": "method",
+            "name": "int",
+            "params": [
+                {
+                    "name": "n",
+                    "description": "value to parse",
+                    "type": "String|Boolean|Number|Array"
+                }
+            ],
+            "return": {
+                "description": "integer representation of value",
+                "type": "Number"
+            },
+            "example": [
+                "\n<div class='norender'><code>\nprint(int(\"10\")); // 10\nprint(int(10.31)); // 10\nprint(int(-10)); // -10\nprint(int(true)); // 1\nprint(int(false)); // 0\nprint(int([false, true, \"10.3\", 9.8])); // [0, 1, 10, 9]\n</code></div>"
+            ],
+            "class": "p5",
+            "module": "Data",
+            "submodule": "Conversion"
         },
         {
             "file": "src/data/string_functions.js",
@@ -3499,7 +3576,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 161,
+            "line": 162,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -3509,7 +3586,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 171,
+            "line": 172,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -3528,7 +3605,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 206,
+            "line": 207,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -3825,7 +3902,7 @@
         {
             "file": "src/input/files.js",
             "line": 31,
-            "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
+            "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
             "itemtype": "method",
             "name": "loadJSON",
             "params": [
@@ -3852,7 +3929,7 @@
         {
             "file": "src/input/files.js",
             "line": 61,
-            "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
+            "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
             "itemtype": "method",
             "name": "loadStrings",
             "params": [
@@ -3882,7 +3959,7 @@
         {
             "file": "src/input/files.js",
             "line": 127,
-            "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>",
+            "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadTable() completes.</p>",
             "itemtype": "method",
             "name": "loadTable",
             "params": [
@@ -3914,8 +3991,8 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 231,
-            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed, either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
+            "line": 236,
+            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
             "params": [
@@ -3975,7 +4052,7 @@
         {
             "file": "src/input/keyboard.js",
             "line": 55,
-            "description": "The keyPressed() function is called once every time a key is pressed. The\nkeyCode for the key that was pressed is stored in the keyCode variable. \n<br><br>\nFor non-ASCII keys, use the keyCode variable. You can check if the keyCode\nequals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, \nOPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.\n<br><br>\nFor ASCII keys that was pressed is stored in the key variable. However, it\ndoes not distinguish between uppercase and lowercase. For this reason, it\nis recommended to use keyTyped() to read the key variable, in which the\ncase of the variable will be distinguished.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key \nmay cause multiple calls to keyTyped() (and keyReleased() as well). The \nrate of repeat is set by the operating system and how each computer is \nconfigured.",
+            "description": "The keyPressed() function is called once every time a key is pressed. The\nkeyCode for the key that was pressed is stored in the keyCode variable.\n<br><br>\nFor non-ASCII keys, use the keyCode variable. You can check if the keyCode\nequals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL,\nOPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.\n<br><br>\nFor ASCII keys that was pressed is stored in the key variable. However, it\ndoes not distinguish between uppercase and lowercase. For this reason, it\nis recommended to use keyTyped() to read the key variable, in which the\ncase of the variable will be distinguished.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nmay cause multiple calls to keyTyped() (and keyReleased() as well). The\nrate of repeat is set by the operating system and how each computer is\nconfigured.",
             "itemtype": "method",
             "name": "keyPressed",
             "example": [
@@ -4000,8 +4077,8 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 154,
-            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key \nwill cause multiple calls to keyTyped(), the rate is set by the operating \nsystem and how each computer is configured.",
+            "line": 160,
+            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nwill cause multiple calls to keyTyped(), the rate is set by the operating\nsystem and how each computer is configured.",
             "itemtype": "method",
             "name": "keyTyped",
             "example": [
@@ -4114,11 +4191,11 @@
         {
             "file": "src/input/mouse.js",
             "line": 145,
-            "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.",
+            "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
             "example": [
-                "\n<div>\n<code>\n// Move the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Move the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseMoved() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4126,12 +4203,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 171,
-            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.",
+            "line": 184,
+            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
             "example": [
-                "\n<div>\n<code>\n// Drag the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseDragged() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Drag the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseDragged() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseDragged() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4139,12 +4216,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 225,
-            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.",
+            "line": 251,
+            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
             "example": [
-                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mousePressed() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mousePressed() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mousePressed() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4152,12 +4229,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 275,
-            "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.",
+            "line": 313,
+            "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
             "example": [
-                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseReleased() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseReleased() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseReleased() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4165,12 +4242,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 322,
-            "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.",
+            "line": 374,
+            "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
             "example": [
-                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseClicked() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseClicked() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseClicked() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4178,8 +4255,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 359,
-            "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
+            "line": 424,
+            "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
             "class": "p5",
@@ -4337,29 +4414,38 @@
         {
             "file": "src/input/touch.js",
             "line": 85,
-            "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.",
+            "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined. Browsers may have \ndifferent default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchStarted",
+            "example": [
+                "\n<div>\n<code>\n// Touch within the image to change \n// the value of the rectangle\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction touchStarted() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction touchStarted() {\n  ellipse(touchX, touchY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Touch"
         },
         {
             "file": "src/input/touch.js",
-            "line": 110,
-            "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined.",
+            "line": 143,
+            "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchMoved",
+            "example": [
+                "\n<div>\n<code>\n// Move your finger across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction touchMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction touchMoved() {\n  ellipse(touchX, touchY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Touch"
         },
         {
             "file": "src/input/touch.js",
-            "line": 135,
-            "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.",
+            "line": 199,
+            "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchEnded",
+            "example": [
+                "\n<div>\n<code>\n// Release touch within the image to \n// change the value of the rectangle\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction touchEnded() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction touchEnded() {\n  ellipse(touchX, touchY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Touch"
@@ -5199,10 +5285,8 @@
         },
         {
             "file": "src/objects/p5.Color.js",
-            "line": 30,
+            "line": 44,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
-            "itemtype": "method",
-            "name": "getNormalizedColor",
             "params": [
                 {
                     "name": "args",
@@ -5217,6 +5301,25 @@
             "example": [
                 "\n<div>\n<code>\n// todo\n</code>\n</div>"
             ],
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 94,
+            "description": "Normalizes an array based on max vals.",
+            "params": [
+                {
+                    "name": "array",
+                    "description": "A four value array rgba or hsba array.",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
@@ -5674,7 +5777,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 309,
+            "line": 314,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5696,7 +5799,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 322,
+            "line": 327,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5758,7 +5861,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 351,
+            "line": 356,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -7241,7 +7344,7 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 12,
-            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\n<br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
+            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).<br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
@@ -7269,7 +7372,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 120,
+            "line": 97,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -7282,7 +7385,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 140,
+            "line": 117,
             "description": "Creates and returns a new p5.Graphics object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -7311,7 +7414,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 195,
+            "line": 169,
             "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -8842,7 +8945,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 49,
+            "line": 50,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -12495,7 +12598,15 @@
         },
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:171"
+            "line": " src/image/loading_displaying.js:172"
+        },
+        {
+            "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
+            "line": " src/objects/p5.Color.js:44"
+        },
+        {
+            "message": "Missing item type\nNormalizes an array based on max vals.",
+            "line": " src/objects/p5.Color.js:94"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
@@ -12623,7 +12734,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:49"
+            "line": " src/app.js:50"
         },
         {
             "message": "Missing item type\nHelpers for create methods.",
