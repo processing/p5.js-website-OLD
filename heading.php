@@ -14,5 +14,5 @@
   <a href="<?php echo getRoot(); ?>">
     <img type="image/svg+xml" src="<?php echo getRoot(); ?>img/p5js-beta.svg" class="logo" />
   </a>
-  <?php if ($tagline) { echo '<p>'.$tagline.'</p>'; } ?>
+  <?php if (isset($tagline)) { echo '<p>'.$tagline.'</p>'; } ?>
 </div>
