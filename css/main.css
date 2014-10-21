@@ -600,7 +600,7 @@ a.anchor {
 }
 
 a.anchor:hover {
-    color:#ED225D; 
+    color:#ED225D !important; 
     text-decoration: none;
     padding-bottom: 0.11em; 
     border-bottom: 0.11em dashed; 
