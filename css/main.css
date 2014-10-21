@@ -580,6 +580,7 @@ body {
 }
 
 /* body links  */
+
 a:link, a:visited { 
     color: #2D7BB6;
     text-decoration: none; 
@@ -594,8 +595,17 @@ a:active, a:hover, #reference a:hover {
     transition: border-bottom 30ms linear; 
 }
 
-.anchor {
+a.anchor {
     color: #222 !important;
+}
+
+a.anchor:hover {
+    color:#ED225D; 
+    text-decoration: none;
+    padding-bottom: 0.11em; 
+    border-bottom: 0.11em dashed; 
+    border-bottom-color: #ED225D;
+    transition: border-bottom 30ms linear; 
 }
 
 a.nounderline:hover {
