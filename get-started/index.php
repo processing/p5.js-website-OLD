@@ -18,7 +18,7 @@
       <a href="https://github.com/lmccart/p5.js/wiki/Processing-transition">Processing
       transition tutorial</a>.
       </p>
-      <h3>Download and File Setup</h3>
+      <a href="file-setup"><h3>Download and File Setup</h3></a>
       <p>
         The easiest way to start is by using the empty example that comes with the
         <a href="../download/">p5.js complete</a> download. 
