@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.8",
+        "version": "0.3.10",
         "url": ""
     },
     "files": {
@@ -2355,7 +2355,7 @@
             "itemtype": "method",
             "name": "preload",
             "example": [
-                "\n<div><code>\nvar img;\nvar c;\nfunction preload() {  // preload() runs once\n  img = loadImage('assets/laDefense.jpg');\n  noLoop();\n}\nfunction setup() {  // setup() waits until preload() is done\n  img.loadPixels();\n  // get color of middle pixel\n  c = img.get(img.width/2, img.height/2);\n}\nfunction draw() {\n  background(c);\n  image(img, 25, 25, 50, 50);\n}\n</code></div>"
+                "\n<div><code>\nvar img;\nvar c;\nfunction preload() {  // preload() runs once\n  img = loadImage('assets/laDefense.jpg');\n}\n\nfunction setup() {  // setup() waits until preload() is done\n  img.loadPixels();\n  // get color of middle pixel\n  c = img.get(img.width/2, img.height/2);\n}\n\nfunction draw() {\n  background(c);\n  image(img, 25, 25, 50, 50);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Structure",
@@ -2363,7 +2363,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 71,
+            "line": 72,
             "description": "The setup() function is called once when the program starts. It's used to\ndefine initial environment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
             "itemtype": "method",
             "name": "setup",
@@ -2376,7 +2376,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 97,
+            "line": 98,
             "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
@@ -2389,7 +2389,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 305,
+            "line": 306,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any \nelements created by p5.js. It will also stop the draw loop and unbind \nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch. \nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -5347,6 +5347,10 @@
                     "type": "String|Object"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "example": [
                 "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var div1 = createDiv('this is the child');\n div1.parent(div0); // use p5.Element\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n div0.id('apples');\n var div1 = createDiv('this is the child');\n div1.parent('apples'); // use id\n </code></div>\n <div class='norender'><code>\n var elt = document.getElementById('myParentDiv');\n var div1 = createDiv('this is the child');\n div1.parent(elt); // use element from page\n </code></div>"
             ],
@@ -5356,7 +5360,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 80,
+            "line": 82,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5367,13 +5371,17 @@
                     "type": "String"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 91,
+            "line": 95,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5384,13 +5392,17 @@
                     "type": "String"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 102,
+            "line": 108,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5401,6 +5413,10 @@
                     "type": "Function"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "example": [
                 "\n<div class='norender'><code>\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.mousePressed(changeGray); // attach listener for\n                                // canvas click only\n  d = 10;\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n  ellipse(width/2, height/2, d, d);\n}\n\n// this function fires with any click anywhere\nfunction mousePressed() {\n  d = d + 10;\n}\n\n// this function fires only when cnv is clicked\nfunction changeGray() {\n  g = random(0, 255);\n}\n</code></div>\n"
             ],
@@ -5410,7 +5426,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 144,
+            "line": 152,
             "description": "The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5421,13 +5437,17 @@
                     "type": "Function"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 161,
+            "line": 171,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5438,13 +5458,17 @@
                     "type": "Function"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 175,
+            "line": 187,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5455,13 +5479,17 @@
                     "type": "Function"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 188,
+            "line": 202,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5472,13 +5500,17 @@
                     "type": "Function"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 201,
+            "line": 217,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5489,13 +5521,17 @@
                     "type": "Function"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 214,
+            "line": 232,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5506,13 +5542,17 @@
                     "type": "Function"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 234,
+            "line": 254,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -7372,7 +7412,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 97,
+            "line": 98,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -8475,16 +8515,19 @@
         {
             "file": "src/structure/structure.js",
             "line": 16,
-            "description": "Stops p5.js from continuously executing the code within draw(). If loop()\nis called, the code in draw() begins to run continuously again. If using\nnoLoop() in setup(), it should be the last line inside the block.\n\nWhen noLoop() is used, it's not possible to manipulate or access the\nscreen inside event handling functions such as mousePressed() or\nkeyPressed(). Instead, use those functions to call redraw() or loop(),\nwhich will run draw(), which can update the screen properly. This means\nthat when noLoop() has been called, no drawing can happen, and functions\nlike saveFrame() or loadPixels() may not be used.\n\nNote that if the sketch is resized, redraw() will be called to update the\nsketch, even after noLoop() has been specified. Otherwise, the sketch\nwould enter an odd state until loop() was called.",
+            "description": "<p>Stops p5.js from continuously executing the code within draw(). \nIf loop() is called, the code in draw() begins to run continuously again. \nIf using noLoop() in setup(), it should be the last line inside the block.\n</p>\n\n<p>When noLoop() is used, it's not possible to manipulate or access the\nscreen inside event handling functions such as mousePressed() or\nkeyPressed(). Instead, use those functions to call redraw() or loop(),\nwhich will run draw(), which can update the screen properly. This means\nthat when noLoop() has been called, no drawing can happen, and functions\nlike saveFrame() or loadPixels() may not be used.</p>\n\n<p>Note that if the sketch is resized, redraw() will be called to update \nthe sketch, even after noLoop() has been specified. Otherwise, the sketch\nwould enter an odd state until loop() was called.</p>",
             "itemtype": "method",
             "name": "noLoop",
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  createCanvas(100, 100);\n  background(200);\n  noLoop();\n}\n\nfunction draw() {\n  line(10, 10, 90, 90);\n}\n</code></div>\n\n<div><code>\nvar x = 0;\nfunction setup() {\n  createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(204);\n  x = x + 0.1;\n  if (x > width) {\n    x = 0;\n  }\n  line(x, 0, x, height); \n}\n\nfunction mousePressed() {\n  noLoop();\n}\n\nfunction mouseReleased() {\n  loop();\n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
         },
         {
             "file": "src/structure/structure.js",
-            "line": 40,
+            "line": 77,
             "description": "By default, p5.js loops through draw() continuously, executing the code\nwithin it. However, the draw() loop may be stopped by calling noLoop().\nIn that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
             "name": "loop",
@@ -8494,7 +8537,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 52,
+            "line": 89,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "push",
@@ -8507,7 +8550,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 120,
+            "line": 157,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -8520,7 +8563,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 195,
+            "line": 232,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -12610,7 +12653,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:234"
+            "line": " src/objects/p5.Element.js:254"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
