@@ -10,6 +10,10 @@
 
     <section>
       <h2>Learn</h2>
+      
+      <p>The <a href="#tutorials">tutorials</a> provide more in-depth or step-by-step overviews of 
+      particular topics. Scroll down to see <a href="#examples">examples</a> demonstrating a variety
+      of p5.js topics.</p>
 
       <a name="tutorials" class="anchor"><h3>Tutorials</h3></a>
 

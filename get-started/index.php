@@ -18,7 +18,7 @@
       <a href="https://github.com/lmccart/p5.js/wiki/Processing-transition">Processing
       transition tutorial</a>.
       </p>
-      <h3>Download and File Setup</h3>
+      <a class="anchor" href="#file-setup"><h3>Download and File Setup</h3></a>
       <p>
         The easiest way to start is by using the empty example that comes with the
         <a href="../download/">p5.js complete</a> download. 
@@ -33,11 +33,11 @@
       <p>Alternatively, you can link to a p5.js file hosted 
         online. All versions of p5.js are stored in a CDN (&#8221;Content Delivery 
         Network&#8221;). You can see a history of these versions here: <a target="_blank"
-        href="http://www.jsdelivr.com/#!p5.js" >p5.js CDN</a>. In this case you can 
+        href="http://cdnjs.com/libraries/p5.js" >p5.js CDN</a>. In this case you can 
         change the link to:
       </p>
 
-      <pre><code class="language-markup">&lt;script src="//cdn.jsdelivr.net/p5.js/0.0.0/p5.min.js">&lt;/script></code></pre>   
+      <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.0.0/p5.js">&lt;/script></code></pre>   
 
       <p>
         Where &#8220;0.0.0&#8221; gets replaced by the version you&#8217;d like to use (the highest one is usually best).
