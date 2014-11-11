@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.10",
+        "version": "0.3.11",
         "url": ""
     },
     "files": {
@@ -1125,7 +1125,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 715,
+            "line": 717,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact \nwith other HTML5 objects, including text, hyperlink, image, input, video, \naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the \n<a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1406,7 +1406,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 715,
+            "line": 717,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -2368,7 +2368,7 @@
             "itemtype": "method",
             "name": "setup",
             "example": [
-                "\n<div><code>\nvar a = 0;\n\nfunction setup() {\n  background(0);\n  noStroke();\n  fill(102);\n}\n\nfunction draw() {\n  rect(a++%width, 10, 2, 80); \n}\n</code></div>"
+                "\n<div><code>\nvar a = 0;\n\nfunction setup() {\n  background(0);\n  noStroke();\n  fill(102);\n}\n\nfunction draw() {\n  rect(a++%width, 10, 2, 80);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Structure",
@@ -2389,8 +2389,8 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 306,
-            "description": "Removes the entire p5 sketch. This will remove the canvas and any \nelements created by p5.js. It will also stop the draw loop and unbind \nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch. \nIf you like, you can set p5 = null to erase it.",
+            "line": 315,
+            "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
             "example": [
@@ -4052,11 +4052,11 @@
         {
             "file": "src/input/keyboard.js",
             "line": 55,
-            "description": "The keyPressed() function is called once every time a key is pressed. The\nkeyCode for the key that was pressed is stored in the keyCode variable.\n<br><br>\nFor non-ASCII keys, use the keyCode variable. You can check if the keyCode\nequals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL,\nOPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.\n<br><br>\nFor ASCII keys that was pressed is stored in the key variable. However, it\ndoes not distinguish between uppercase and lowercase. For this reason, it\nis recommended to use keyTyped() to read the key variable, in which the\ncase of the variable will be distinguished.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nmay cause multiple calls to keyTyped() (and keyReleased() as well). The\nrate of repeat is set by the operating system and how each computer is\nconfigured.",
+            "description": "The keyPressed() function is called once every time a key is pressed. The\nkeyCode for the key that was pressed is stored in the keyCode variable.\n<br><br>\nFor non-ASCII keys, use the keyCode variable. You can check if the keyCode\nequals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL,\nOPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.\n<br><br>\nFor ASCII keys that was pressed is stored in the key variable. However, it\ndoes not distinguish between uppercase and lowercase. For this reason, it\nis recommended to use keyTyped() to read the key variable, in which the\ncase of the variable will be distinguished.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nmay cause multiple calls to keyTyped() (and keyReleased() as well). The\nrate of repeat is set by the operating system and how each computer is\nconfigured.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyPressed",
             "example": [
-                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (keyCode === LEFT_ARROW) {\n    value = 255;\n  } else if (keyCode === RIGHT_ARROW) {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyPressed() {\n  if (keyCode === LEFT_ARROW) {\n    value = 255;\n  } else if (keyCode === RIGHT_ARROW) {\n    value = 0;\n  }\n  return false; // prevent any default behavior\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4064,12 +4064,12 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 122,
-            "description": "The keyReleased() function is called once every time a key is released.\nSee key and keyCode for more information.",
+            "line": 129,
+            "description": "The keyReleased() function is called once every time a key is released.\nSee key and keyCode for more information.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyReleased",
             "example": [
-                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyReleased() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyReleased() {\n  if (value === 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n  return false; // prevent any default behavior\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4077,12 +4077,12 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 160,
-            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nwill cause multiple calls to keyTyped(), the rate is set by the operating\nsystem and how each computer is configured.",
+            "line": 174,
+            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nwill cause multiple calls to keyTyped(), the rate is set by the operating\nsystem and how each computer is configured.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyTyped",
             "example": [
-                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyTyped() {\n  if (key === 'a') {\n    value = 255;\n  } else if (key === 'b') {\n    value = 0;\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyTyped() {\n  if (key === 'a') {\n    value = 255;\n  } else if (key === 'b') {\n    value = 0;\n  }\n  return false; // prevent any default behavior\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4190,8 +4190,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 145,
-            "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "line": 147,
+            "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
             "example": [
@@ -4203,8 +4203,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 184,
-            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "line": 186,
+            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
             "example": [
@@ -4216,8 +4216,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 251,
-            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "line": 253,
+            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
             "example": [
@@ -4229,8 +4229,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 313,
-            "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "line": 316,
+            "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
             "example": [
@@ -4242,8 +4242,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 374,
-            "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "line": 377,
+            "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
             "example": [
@@ -4255,8 +4255,8 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 424,
-            "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
+            "line": 427,
+            "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
             "class": "p5",
@@ -4413,7 +4413,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 85,
+            "line": 87,
             "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined. Browsers may have \ndifferent default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -4426,7 +4426,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 143,
+            "line": 145,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -4439,7 +4439,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 199,
+            "line": 201,
             "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -4968,7 +4968,7 @@
                 }
             ],
             "example": [
-                "\n <div>\n <code>\n \n var noiseVal;\n var noiseScale=0.02;\n \n function setup() {\n   createCanvas(100,100);\n }\n \n function draw() {\n   background(0);\n   for (var y = 0; y < height; y++) {\n     for (var x = 0; x < width/2; x++) {\n       noiseDetail(2,0.2);\n       noiseVal = noise((mouseX+x) * noiseScale, \n                        (mouseY+y) * noiseScale);\n       stroke(noiseVal*255);\n       point(x,y);\n       noiseDetail(8,0.65);\n       noiseVal = noise((mouseX + x + width/2) * noiseScale, \n                        (mouseY + y) * noiseScale);\n       stroke(noiseVal*255);\n       point(x + width/2, y);\n     }\n   }\n }\n </code>\n </div>"
+                "\n <div>\n <code>\nvar noiseVal;\n var noiseScale=0.02;\nfunction setup() {\n   createCanvas(100,100);\n }\nfunction draw() {\n   background(0);\n   for (var y = 0; y < height; y++) {\n     for (var x = 0; x < width/2; x++) {\n       noiseDetail(2,0.2);\n       noiseVal = noise((mouseX+x) * noiseScale,\n                        (mouseY+y) * noiseScale);\n       stroke(noiseVal*255);\n       point(x,y);\n       noiseDetail(8,0.65);\n       noiseVal = noise((mouseX + x + width/2) * noiseScale,\n                        (mouseY + y) * noiseScale);\n       stroke(noiseVal*255);\n       point(x + width/2, y);\n     }\n   }\n }\n </code>\n </div>"
             ],
             "class": "p5",
             "module": "Math",
@@ -7412,7 +7412,20 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 98,
+            "line": 68,
+            "description": "Resizes the canvas to given width and height. Note that the\ncanvas will be cleared so anything drawn previously in setup\nor draw will disappear on resize. Setup will not be called\nagain.",
+            "itemtype": "method",
+            "name": "resizeCanvas",
+            "example": [
+                "\n<div class=\"norender\"><code>\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);\n}\n\nfunction draw() {\n background(0, 100, 200);\n}\n\nfunction windowResized() {\n  resizeCanvas(windowWidth, windowHeight);\n}\n</code></div>"
+            ],
+            "class": "p5",
+            "module": "Rendering",
+            "submodule": "Rendering"
+        },
+        {
+            "file": "src/rendering/rendering.js",
+            "line": 99,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -7425,7 +7438,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 117,
+            "line": 118,
             "description": "Creates and returns a new p5.Graphics object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -7454,7 +7467,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 169,
+            "line": 170,
             "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -7825,7 +7838,7 @@
         {
             "file": "src/shape/attributes.js",
             "line": 106,
-            "description": "Modifies the location from which rectangles are drawn by changing the way\nin which parameters given to rect() are intepreted.\n\nThe default mode is rectMode(CORNER), which interprets the first two\nparameters of rect() as the upper-left corner of the shape, while the\nthird and fourth parameters are its width and height.\n\nrectMode(CORNERS) interprets the first two parameters of rect() as the\nlocation of one corner, and the third and fourth parameters as the\nlocation of the opposite corner.\n\nrectMode(CENTER) interprets the first two parameters of rect() as the\nshape's center point, while the third and fourth parameters are its\nwidth and height.\n\nrectMode(RADIUS) also uses the first two parameters of rect() as the\nshape's center point, but uses the third and fourth parameters to specify\nhalf of the shapes's width and height.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
+            "description": "Modifies the location from which rectangles are drawn by changing the way\nin which parameters given to rect() are interpreted.\n\nThe default mode is rectMode(CORNER), which interprets the first two\nparameters of rect() as the upper-left corner of the shape, while the\nthird and fourth parameters are its width and height.\n\nrectMode(CORNERS) interprets the first two parameters of rect() as the\nlocation of one corner, and the third and fourth parameters as the\nlocation of the opposite corner.\n\nrectMode(CENTER) interprets the first two parameters of rect() as the\nshape's center point, while the third and fourth parameters are its\nwidth and height.\n\nrectMode(RADIUS) also uses the first two parameters of rect() as the\nshape's center point, but uses the third and fourth parameters to specify\nhalf of the shapes's width and height.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
             "itemtype": "method",
             "name": "rectMode",
             "params": [
@@ -9647,7 +9660,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 688,
+            "line": 690,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -9660,7 +9673,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 734,
+            "line": 736,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -9674,7 +9687,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 748,
+            "line": 750,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -9688,7 +9701,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 760,
+            "line": 762,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -9702,7 +9715,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 771,
+            "line": 773,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -9716,7 +9729,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 782,
+            "line": 784,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -9730,7 +9743,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 795,
+            "line": 797,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -9751,7 +9764,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 807,
+            "line": 809,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -9773,7 +9786,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 823,
+            "line": 825,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -9795,7 +9808,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 840,
+            "line": 842,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
