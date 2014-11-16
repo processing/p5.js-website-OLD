@@ -37,22 +37,22 @@ function MRect(iw, ixp, ih, iyp, id, it) {
   this.ypos = iyp; // rect yposition
   this.d = id; // single bar distance
   this.t = it; // number of bars
-}
 
-MRect.prototype.move = function(posX, posY, damping) {
-  var dif = this.ypos - posY;
-  if (abs(dif) > 1) {
-    this.ypos -= dif/damping;
+  this.move = function(posX, posY, damping) {
+    var dif = this.ypos - posY;
+    if (abs(dif) > 1) {
+      this.ypos -= dif/damping;
+    }
+    dif = this.xpos - posX;
+    if (abs(dif) > 1) {
+      this.xpos -= dif/damping;
+    }
   }
-  dif = this.xpos - posX;
-  if (abs(dif) > 1) {
-    this.xpos -= dif/damping;
-  }
-}
 
-MRect.prototype.display = function() {
-  for (var i=0; i<this.t; i++) {
-    rect(this.xpos+(i*(this.d+this.w)), 
-      this.ypos, this.w, height*this.h);
+  this.display = function() {
+    for (var i=0; i<this.t; i++) {
+      rect(this.xpos+(i*(this.d+this.w)), 
+        this.ypos, this.w, height*this.h);
+    }
   }
 }

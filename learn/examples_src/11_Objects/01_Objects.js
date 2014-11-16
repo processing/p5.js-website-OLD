@@ -24,13 +24,13 @@ function Jitter() {
   this.y = random(height);
   this.diameter = random(10, 30);
   this.speed = 1;
-}
 
-Jitter.prototype.move = function() {
-  this.x += random(-this.speed, this.speed);
-  this.y += random(-this.speed, this.speed);
-};
+  this.move = function() {
+    this.x += random(-this.speed, this.speed);
+    this.y += random(-this.speed, this.speed);
+  };
 
-Jitter.prototype.display = function() {
-  ellipse(this.x, this.y, this.diameter, this.diameter);
+  this.display = function() {
+    ellipse(this.x, this.y, this.diameter, this.diameter);
+  }
 };
