@@ -1,7 +1,7 @@
 /*
  * @name Width and Height
  * @description The 'width' and 'height' variables contain the 
- * width and height of the display window as defined in the size() 
+ * width and height of the display window as defined in the createCanvas() 
  * function.
  */
 function setup() {

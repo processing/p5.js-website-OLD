@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Width and Height</h2>
           <p>The 'width' and 'height' variables contain the 
- width and height of the display window as defined in the size() 
+ width and height of the display window as defined in the createCanvas() 
  function.
  </p>
 
