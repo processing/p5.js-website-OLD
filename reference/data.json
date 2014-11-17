@@ -1125,7 +1125,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 717,
+            "line": 719,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact \nwith other HTML5 objects, including text, hyperlink, image, input, video, \naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the \n<a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1379,7 +1379,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code> \nvar vector = createVector(40, 50);\nvar vector2 = createVector(40, 50);\n\nellipse(vector.x, vector.y, 50, 50);\nellipse(vector2.x, vector2.y, 50, 50);\nvector.add(vector2);\nellipse(vector.x, vector.y, 50, 50);\n</div>\n</code>"
+                "\n<div>\n<code>\nvar vector = createVector(40, 50);\nvar vector2 = createVector(40, 50);\n\nellipse(vector.x, vector.y, 50, 50);\nellipse(vector2.x, vector2.y, 50, 50);\nvector.add(vector2);\nellipse(vector.x, vector.y, 50, 50);\n</code>\n</div>"
             ]
         },
         "p5.dom": {
@@ -1406,7 +1406,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 717,
+            "line": 719,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -3499,7 +3499,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 57,
+            "line": 61,
             "description": "Draw an image to the main canvas of the p5js sketch",
             "itemtype": "method",
             "name": "image",
@@ -3538,8 +3538,8 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 94,
-            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use \nwhite as the tint color and specify an alpha value. For instance, \ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()). \n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
+            "line": 98,
+            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use\nwhite as the tint color and specify an alpha value. For instance,\ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()).\n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
             "itemtype": "method",
             "name": "tint",
             "params": [
@@ -3576,7 +3576,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 162,
+            "line": 166,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -3586,7 +3586,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 172,
+            "line": 176,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -3605,7 +3605,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 207,
+            "line": 211,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -4131,7 +4131,7 @@
         {
             "file": "src/input/mouse.js",
             "line": 50,
-            "description": "The system variable pwinMouseY always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the window.",
+            "description": "The system variable winMouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseX",
             "class": "p5",
@@ -4190,7 +4190,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 147,
+            "line": 149,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -4203,7 +4203,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 186,
+            "line": 188,
             "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -4216,7 +4216,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 253,
+            "line": 255,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -4229,7 +4229,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 316,
+            "line": 318,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -4242,7 +4242,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 377,
+            "line": 379,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -4255,7 +4255,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 427,
+            "line": 429,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -4827,7 +4827,7 @@
             "line": 230,
             "description": "Calculates the integer closest to the n parameter. For example,\nround(133.8) returns the value 134. Maps to Math.round().",
             "itemtype": "method",
-            "name": "constrain",
+            "name": "round",
             "params": [
                 {
                     "name": "n",
@@ -5743,7 +5743,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 247,
+            "line": 249,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -5800,7 +5800,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 269,
+            "line": 271,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -5817,7 +5817,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 314,
+            "line": 316,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5839,7 +5839,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 327,
+            "line": 329,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5901,7 +5901,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 356,
+            "line": 358,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -6444,13 +6444,16 @@
                     "optional": true
                 }
             ],
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nfunction setup() {\n   var v = createVector(1,2,3);\n   v.set(4,5,6); //Sets vector to [4,5,6]\n\n   var v1 = createVector(0,0,0);\n   var arr = [1,2,3]\n   v1.set(arr); //Sets vector to [1,2,3]\n}\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 114,
+            "line": 127,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
             "name": "get",
@@ -6464,8 +6467,8 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 129,
-            "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nhave no return value -- they act directly on the vector. See the examples\nfor more context.",
+            "line": 142,
+            "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nacts directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "add",
             "chainable": 1,
@@ -6492,14 +6495,17 @@
                 "description": "the p5.Vector object.",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1,2,3);\nv.add(4,5,6); //v's compnents are set to [5,7,9]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v = createVector(1,2,3);\nvar v1 = createVector(2,3,4);\n\nvar v2 = p5.Vector.add(v, v1); //v2 has compnents [3,5,7]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 165,
-            "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat substracts two vectors is a static method and returns a p5.Vector, the\nothers have no return value -- they act directly on the vector. See the\nexamples for more context.",
+            "line": 193,
+            "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat subtracts two vectors is a static method and returns a p5.Vector, the\nother acts directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "sub",
             "chainable": 1,
@@ -6526,14 +6532,17 @@
                 "description": "p5.Vector object.",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(4,5,6);\nv.sub(1,1,1); //v's compnents are set to [3,4,5]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v  = createVector(2,3,4);\nvar v1 = createVector(1,2,3);\n\nvar v2 = p5.Vector.sub(v, v1); //v2 has compnents [1,1,1]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 199,
-            "description": "Multiply the vector by a scalar.",
+            "line": 242,
+            "description": "Multiply the vector by a scalar. The static version of this method creates a new p5.Vector\nwhile the non static version acts on the vector directly. See the examples for more context.",
             "itemtype": "method",
             "name": "mult",
             "chainable": 1,
@@ -6548,14 +6557,17 @@
                 "description": "a reference to the p5.Vector object (allow chaining)",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1,2,3);\nv.mult(2); //v's compnents are set to [2,4,6]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v  = createVector(1,2,3);\n\nvar v1 = p5.Vector.mult(v, 2); //v1 has compnents [2,4,6]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 214,
-            "description": "Divide the vector by a scalar.",
+            "line": 273,
+            "description": "Divide the vector by a scalar. The static version of this method creates a new p5.Vector\nwhile the non static version acts on the vector directly. See the examples for more context.",
             "itemtype": "method",
             "name": "div",
             "chainable": 1,
@@ -6570,13 +6582,16 @@
                 "description": "a reference to the p5.Vector object (allow chaining)",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(6,4,2);\nv.div(2); //v's compnents are set to [3,2,1]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v  = createVector(6,4,2);\n\nvar v1 = p5.Vector.div(v, 2); //v1 has compnents [3,2,1]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 229,
+            "line": 304,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -6590,7 +6605,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 240,
+            "line": 315,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -6604,8 +6619,8 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 254,
-            "description": "Calculates the dot product of two vectors.",
+            "line": 329,
+            "description": "Calculates the dot product of two vectors. The version of the method\nthat computes the dot product of two independent vectors is a static method.\nSee the examples for more context.",
             "itemtype": "method",
             "name": "dot",
             "params": [
@@ -6631,14 +6646,17 @@
                 "description": "the dot product",
                 "type": "Number"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1,2,3);\nvar v1 = createVector(2,3,4);\n\nv.dot(v1); //Returns 20\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v = createVector(1,2,3);\nvar v1 = createVector(3,2,1);\n\nvar dotProduct = p5.Vector.dot(v,v1); //dotProduct == 10\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 272,
-            "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors.",
+            "line": 368,
+            "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors. Both the static and non static methods return a new p5.Vector.\nSee the examples for more context.",
             "itemtype": "method",
             "name": "cross",
             "params": [
@@ -6652,13 +6670,16 @@
                 "description": "p5.Vector composed of cross product",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1,2,3);\nvar v1 = createVector(1,2,3);\n\nv.cross(v1); //v's components are [0,0,0]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v = createVector(1,0,0);\nvar v1 = createVector(0,1,0);\n\nvar crossProduct = p5.Vector.cross(v,v1); //crossProduct has components [0,0,1]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 291,
+            "line": 406,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -6673,13 +6694,16 @@
                 "description": "the distance",
                 "type": "Number"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1,0,0);\nvar v1 = createVector(0,1,0);\n\nvar distance = v.dist(v1); //distance == 1.4142...\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v = createVector(1,0,0);\nvar v1 = createVector(0,1,0);\n\nvar distance = p5.Vector.dist(v,v1); //distance == 1.4142...\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 304,
+            "line": 437,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -6693,7 +6717,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 314,
+            "line": 447,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -6714,7 +6738,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 331,
+            "line": 464,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "itemtype": "method",
             "name": "setMag",
@@ -6735,7 +6759,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 343,
+            "line": 476,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -6749,7 +6773,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 362,
+            "line": 495,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -6770,7 +6794,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 383,
+            "line": 516,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -6802,13 +6826,16 @@
                 "description": "the modified p5.Vector",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1,1,0);\n\nv.lerp(3,3,0,0.5); //v now has components [2,2,0]\n</code>\n</div>\n<div class=\"norender\">\n<code>\nvar v = createVector(0,0,0);\nvar v1 = createVector(100,100,0);\n\nvar v2 = p5.Vector.lerp(v,v1,0.5);\n//v2 has components [50,50,0]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 405,
+            "line": 555,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.get()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -6822,7 +6849,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 422,
+            "line": 572,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -6838,13 +6865,16 @@
                 "description": "the new p5.Vector object",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.fromAngle(PI / 2);\n//v has components [0,1,0]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 443,
+            "line": 600,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -6853,13 +6883,16 @@
                 "description": "the new p5.Vector object",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.random2D();\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 466,
+            "line": 629,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -6868,13 +6901,16 @@
                 "description": "the new p5.Vector object",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.random3D();\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 493,
+            "line": 662,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -6899,7 +6935,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 506,
+            "line": 675,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -6924,7 +6960,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 521,
+            "line": 690,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -6949,7 +6985,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 533,
+            "line": 702,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -6974,7 +7010,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 546,
+            "line": 715,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -6999,7 +7035,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 558,
+            "line": 727,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -7024,7 +7060,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 570,
+            "line": 739,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -7049,7 +7085,7 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 583,
+            "line": 752,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -7075,8 +7111,10 @@
         },
         {
             "file": "src/objects/p5.Vector.js",
-            "line": 598,
+            "line": 767,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
+            "itemtype": "method",
+            "name": "angleBetween",
             "static": 1,
             "params": [
                 {
@@ -7091,9 +7129,12 @@
                 }
             ],
             "return": {
-                "description": "the angle between",
+                "description": "the angle between (in radians)",
                 "type": "Number"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1,0,0);\nvar v1 = createVector(0,1,0);\n\nvar angle = p5.Vector.angleBetween(v,v1);\n//angle == (PI / 2)\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
@@ -7425,7 +7466,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 99,
+            "line": 98,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -7438,7 +7479,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 118,
+            "line": 117,
             "description": "Creates and returns a new p5.Graphics object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -7467,7 +7508,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 170,
+            "line": 169,
             "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -7581,7 +7622,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 188,
+            "line": 193,
             "description": "Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.",
             "itemtype": "method",
             "name": "line",
@@ -7620,7 +7661,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 235,
+            "line": 240,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point.",
             "itemtype": "method",
             "name": "point",
@@ -7649,7 +7690,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 287,
+            "line": 292,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -7708,7 +7749,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 332,
+            "line": 337,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.",
             "itemtype": "method",
             "name": "rect",
@@ -7747,7 +7788,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 376,
+            "line": 381,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -9380,7 +9421,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 386,
+            "line": 388,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -9407,7 +9448,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 409,
+            "line": 411,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -9428,7 +9469,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 431,
+            "line": 433,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -9449,7 +9490,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 446,
+            "line": 448,
             "description": "Attaches the element  as a child to the parent specified. \n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
@@ -9473,7 +9514,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 484,
+            "line": 486,
             "description": "If an argument is given, sets the inner HTML of the element, \n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -9495,7 +9536,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 504,
+            "line": 506,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -9524,7 +9565,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 531,
+            "line": 533,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property, \n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -9554,7 +9595,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 566,
+            "line": 568,
             "description": "Adds a new attribute or changes the value of an existing attribute \n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -9584,7 +9625,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 593,
+            "line": 595,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -9606,7 +9647,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 614,
+            "line": 616,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -9620,7 +9661,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 626,
+            "line": 628,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -9634,7 +9675,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 637,
+            "line": 639,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -9660,7 +9701,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 690,
+            "line": 692,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -9673,7 +9714,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 736,
+            "line": 738,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -9687,7 +9728,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 750,
+            "line": 752,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -9701,7 +9742,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 762,
+            "line": 764,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -9715,7 +9756,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 773,
+            "line": 775,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -9729,7 +9770,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 784,
+            "line": 786,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -9743,7 +9784,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 797,
+            "line": 799,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -9764,7 +9805,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 809,
+            "line": 811,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -9786,7 +9827,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 825,
+            "line": 827,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -9808,7 +9849,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 842,
+            "line": 844,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -12657,7 +12698,7 @@
         },
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:172"
+            "line": " src/image/loading_displaying.js:176"
         },
         {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
@@ -12689,39 +12730,35 @@
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/objects/p5.Vector.js:493"
+            "line": " src/objects/p5.Vector.js:662"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/objects/p5.Vector.js:506"
+            "line": " src/objects/p5.Vector.js:675"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:521"
+            "line": " src/objects/p5.Vector.js:690"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/objects/p5.Vector.js:533"
+            "line": " src/objects/p5.Vector.js:702"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/objects/p5.Vector.js:546"
+            "line": " src/objects/p5.Vector.js:715"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/objects/p5.Vector.js:558"
+            "line": " src/objects/p5.Vector.js:727"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/objects/p5.Vector.js:570"
+            "line": " src/objects/p5.Vector.js:739"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/objects/p5.Vector.js:583"
-        },
-        {
-            "message": "Missing item type\nCalculates and returns the angle (in radians) between two vectors.",
-            "line": " src/objects/p5.Vector.js:598"
+            "line": " src/objects/p5.Vector.js:752"
         },
         {
             "message": "Missing item type\nWrites the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
