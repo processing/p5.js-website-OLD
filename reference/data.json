@@ -3480,13 +3480,14 @@
             "params": [
                 {
                     "name": "path",
-                    "description": "",
+                    "description": "Path of the image to be loaded",
                     "type": "String"
                 },
                 {
                     "name": "callback",
-                    "description": "Function to be called once the image is\n                            loaded. Will be passed the p5.Image.",
-                    "type": "Function"
+                    "description": "Function to be called once the image is\n                                loaded. Will be passed the p5.Image.",
+                    "type": "Function(p5.Image)",
+                    "optional": true
                 }
             ],
             "return": {
