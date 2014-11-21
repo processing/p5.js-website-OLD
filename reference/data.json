@@ -3494,13 +3494,16 @@
                 "description": "the p5.Image object",
                 "type": "p5.Image"
             },
+            "example": [
+                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/laDefense.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  // here we use a callback to display the image after loading\n  loadImage(\"assets/laDefense.jpg\", function(img) {\n    image(img, 0, 0);\n  });\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Image",
             "submodule": "Loading & Displaying"
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 62,
+            "line": 84,
             "description": "Draw an image to the main canvas of the p5js sketch",
             "itemtype": "method",
             "name": "image",
@@ -3542,7 +3545,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 121,
+            "line": 143,
             "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use\nwhite as the tint color and specify an alpha value. For instance,\ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()).\n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
             "itemtype": "method",
             "name": "tint",
@@ -3580,7 +3583,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 189,
+            "line": 211,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -3590,7 +3593,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 199,
+            "line": 221,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -3609,7 +3612,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 234,
+            "line": 256,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -12702,7 +12705,7 @@
         },
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:199"
+            "line": " src/image/loading_displaying.js:221"
         },
         {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
