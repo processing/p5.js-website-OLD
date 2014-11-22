@@ -31,7 +31,7 @@
       <pre><code class="language-markup">&lt;script src="../p5.min.js">&lt;/script></code></pre>   
       
       <p>Alternatively, you can link to a p5.js file hosted 
-        online. All versions of p5.js are stored in a CDN (&#8221;Content Delivery 
+        online. All versions of p5.js are stored in a CDN (&#8220;Content Delivery 
         Network&#8221;). You can see a history of these versions here: <a target="_blank"
         href="http://cdnjs.com/libraries/p5.js" >p5.js CDN</a>. In this case you can 
         change the link to:
