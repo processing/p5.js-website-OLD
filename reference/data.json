@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.11",
+        "version": "0.3.13",
         "url": ""
     },
     "files": {
@@ -4036,6 +4036,16 @@
         {
             "file": "src/input/keyboard.js",
             "line": 13,
+            "description": "Holds the key codes of currently pressed keys.",
+            "access": "private",
+            "tagname": "",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Keyboard"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 19,
             "description": "The boolean system variable keyIsPressed is true if any key is pressed\nand false if no keys are pressed.",
             "itemtype": "property",
             "name": "keyIsPressed",
@@ -4048,7 +4058,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 36,
+            "line": 42,
             "description": "The system variable key always contains the value of the most recent\nkey on the keyboard that was typed. To get the proper capitalization, it\nis best to use it within keyTyped(). For non-ASCII keys, use the keyCode\nvariable.",
             "itemtype": "property",
             "name": "key",
@@ -4058,7 +4068,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 46,
+            "line": 52,
             "description": "The variable keyCode is used to detect special keys such as BACKSPACE,\nDELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, OPTION, ALT, UP_ARROW,\nDOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.",
             "itemtype": "property",
             "name": "keyCode",
@@ -4068,7 +4078,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 55,
+            "line": 61,
             "description": "The keyPressed() function is called once every time a key is pressed. The\nkeyCode for the key that was pressed is stored in the keyCode variable.\n<br><br>\nFor non-ASCII keys, use the keyCode variable. You can check if the keyCode\nequals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL,\nOPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.\n<br><br>\nFor ASCII keys that was pressed is stored in the key variable. However, it\ndoes not distinguish between uppercase and lowercase. For this reason, it\nis recommended to use keyTyped() to read the key variable, in which the\ncase of the variable will be distinguished.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nmay cause multiple calls to keyTyped() (and keyReleased() as well). The\nrate of repeat is set by the operating system and how each computer is\nconfigured.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyPressed",
@@ -4081,7 +4091,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 129,
+            "line": 136,
             "description": "The keyReleased() function is called once every time a key is released.\nSee key and keyCode for more information.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyReleased",
@@ -4094,12 +4104,33 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 174,
+            "line": 183,
             "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nwill cause multiple calls to keyTyped(), the rate is set by the operating\nsystem and how each computer is configured.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyTyped",
             "example": [
                 "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyTyped() {\n  if (key === 'a') {\n    value = 255;\n  } else if (key === 'b') {\n    value = 0;\n  }\n  return false; // prevent any default behavior\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Keyboard"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 227,
+            "description": "The keyIsDown function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally.",
+            "itemtype": "method",
+            "name": "keyIsDown",
+            "params": [
+                {
+                    "name": "code",
+                    "description": "The key to check for.",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "example": [
+                "\n<div>\n<code>\nvar x = 100;\nvar y = 100;\n\nfunction setup() {\n  createCanvas(512, 512);\n}\n\nfunction draw() {\n  if (keyIsDown(LEFT_ARROW))\n    x-=5;\n\n  if (keyIsDown(RIGHT_ARROW))\n    x+=5;\n\n  if (keyIsDown(UP_ARROW))\n    y-=5;\n\n  if (keyIsDown(DOWN_ARROW))\n    y+=5;\n\n  clear();\n  fill(255, 0, 0);\n  ellipse(x, y, 50, 50);\n}\n<code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -8067,10 +8098,8 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 64,
+            "line": 58,
             "description": "Sets the resolution at which Beziers display.\n\nThe default value is 20.",
-            "itemtype": "method",
-            "name": "bezierDetail",
             "params": [
                 {
                     "name": "detail",
@@ -8091,7 +8120,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 86,
+            "line": 79,
             "description": "Calculate a point on the Bezier Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a bezier curve at t.",
             "itemtype": "method",
             "name": "bezierPoint",
@@ -8135,7 +8164,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 127,
+            "line": 120,
             "description": "Calculates the tangent of a point on a Bezier curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
             "itemtype": "method",
             "name": "bezierTangent",
@@ -8179,7 +8208,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 199,
+            "line": 192,
             "description": "Draws a curved line on the screen. The first and second parameters specify\nthe beginning control point and the last two parameters specify the ending\ncontrol point. The middle parameters specify the start and stop of the\ncurve. Longer curves can be created by putting a series of curve() \nfunctions together or using curveVertex(). An additional function called\ncurveTightness() provides control for the visual quality of the curve.\nThe curve() function is an implementation of Catmull-Rom splines.",
             "itemtype": "method",
             "name": "curve",
@@ -8238,10 +8267,8 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 250,
+            "line": 238,
             "description": "Sets the resolution at which curves display.\n\nThe default value is 20.",
-            "itemtype": "method",
-            "name": "curveDetail",
             "params": [
                 {
                     "name": "resolution",
@@ -8262,7 +8289,31 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 273,
+            "line": 259,
+            "description": "Modifies the quality of forms created with curve() and curveVertex().\nThe parameter tightness determines how the curve fits to the vertex \npoints. The value 0.0 is the default value for tightness (this value\ndefines the curves to be Catmull-Rom splines) and the value 1.0 connects\nall the points with straight lines. Values within the range -5.0 and 5.0\nwill deform the curves but will leave them recognizable and as values \nincrease in magnitude, they will continue to deform.",
+            "itemtype": "method",
+            "name": "curveTightness",
+            "params": [
+                {
+                    "name": "amount",
+                    "description": "of deformation from the original vertices",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "Object"
+            },
+            "example": [
+                "\n<div>\n<code>\n// Move the mouse left and right to see the curve change\n\nfunction setup() {\n  createCanvas(100, 100);\n  noFill();\n}\n\nfunction draw() {\n  background(204);\n  var t = map(mouseX, 0, width, -5, 5);\n  curveTightness(t);\n  beginShape();\n  curveVertex(10, 26);\n  curveVertex(10, 26);\n  curveVertex(83, 24);\n  curveVertex(83, 61);\n  curveVertex(25, 65); \n  curveVertex(25, 65);\n  endShape();\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "Curves"
+        },
+        {
+            "file": "src/shape/curves.js",
+            "line": 301,
             "description": "Calculate a point on the Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.",
             "itemtype": "method",
             "name": "curvePoint",
@@ -8306,7 +8357,7 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 320,
+            "line": 348,
             "description": "Calculates the tangent of a point on a curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
             "itemtype": "method",
             "name": "curveTangent",
@@ -8350,15 +8401,15 @@
         },
         {
             "file": "src/shape/curves.js",
-            "line": 363,
+            "line": 391,
             "class": "p5",
             "module": "Shape",
             "submodule": "Curves"
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 21,
-            "description": "Use the beginContour() and endContour() function to create negative shapes\nwithin shapes. For instance, the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThese functions can only be within a beginShape()/endShape() pair.\n\nTransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
+            "line": 35,
+            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite \ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices \nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work \nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "beginContour",
             "return": {
@@ -8366,7 +8417,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\ntranslate(50, 50);\nstroke(255, 0, 0);\nbeginShape();\n// Exterior part of shape\nvertex(-40, -40);\nvertex(40, -40);\nvertex(40, 40);\nvertex(-40, 40);\n// Interior part of shape\nbeginContour();\nvertex(-20, -20);\nvertex(20, -20);\nvertex(20, 20);\nvertex(-20, 20);\nendContour();\nendShape(CLOSE);\n</code>\n</div>"
+                "\n<div>\n<code>\ntranslate(50, 50);\nstroke(255, 0, 0);\nbeginShape();\n// Exterior part of shape, clockwise winding\nvertex(-40, -40);\nvertex(40, -40);\nvertex(40, 40);\nvertex(-40, 40);\n// Interior part of shape, counter-clockwise winding\nbeginContour();\nvertex(-20, -20);\nvertex(-20, 20);\nvertex(20, 20);\nvertex(20, -20);\nendContour();\nendShape(CLOSE);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -8374,7 +8425,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 62,
+            "line": 79,
             "description": "Using the beginShape() and endShape() functions allow creating more\ncomplex forms. beginShape() begins recording vertices for a shape and\nendShape() stops recording. The value of the kind parameter tells it which\ntypes of shapes to create from the provided vertices. With no mode\nspecified, the shape can be any irregular polygon. The parameters\navailable for beginShape() are POINTS, LINES, TRIANGLES, TRIANGLE_FAN,\nTRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the beginShape()\nfunction, a series of vertex() commands must follow. To stop drawing the\nshape, call endShape(). Each shape will be outlined with the current\nstroke color and filled with the fill color.\n\nTransformations such as translate(), rotate(), and scale() do not work\nwithin beginShape(). It is also not possible to use other shapes, such as\nellipse() or rect() within beginShape().",
             "itemtype": "method",
             "name": "beginShape",
@@ -8398,7 +8449,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 244,
+            "line": 259,
             "description": "Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape. The first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().",
             "itemtype": "method",
             "name": "bezierVertex",
@@ -8447,7 +8498,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 303,
+            "line": 317,
             "description": "Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape(). The first and\nlast points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.",
             "itemtype": "method",
             "name": "curveVertex",
@@ -8476,8 +8527,8 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 355,
-            "description": "Use the beginContour() and endContour() function to create negative\nshapes within shapes. For instance, the center of the letter 'O'.\nbeginContour() begins recording vertices for the shape and endContour()\nstops recording. These functions can only be within a\nbeginShape()/endShape() pair.",
+            "line": 354,
+            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite \ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices \nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work \nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "endContour",
             "return": {
@@ -8485,7 +8536,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\n// drawing the outer border must happen last,\n// otherwise it gets drawn under the interior shape\ntranslate(50, 50);\nstroke(255, 0, 0);\nbeginShape();\n// Interior part of shape\nbeginContour();\nvertex(-20, -20);\nvertex(20, -20);\nvertex(20, 20);\nvertex(-20, 20);\nendContour();\n// Exterior part of shape\nvertex(-40, -40);\nvertex(40, -40);\nvertex(40, 40);\nvertex(-40, 40);\nendShape(CLOSE);\n</code>\n</div>"
+                "\n<div>\n<code>\ntranslate(50, 50);\nstroke(255, 0, 0);\nbeginShape();\n// Exterior part of shape, clockwise winding\nvertex(-40, -40);\nvertex(40, -40);\nvertex(40, 40);\nvertex(-40, 40);\n// Interior part of shape, counter-clockwise winding\nbeginContour();\nvertex(-20, -20);\nvertex(-20, 20);\nvertex(20, 20);\nvertex(20, -20);\nendContour();\nendShape(CLOSE);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -8493,7 +8544,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 420,
+            "line": 405,
             "description": "The endShape() function is the companion to beginShape() and may only be\ncalled after beginShape(). When endshape() is called, all of image data\ndefined since the previous call to beginShape() is written into the image\nbuffer. The constant CLOSE as the value for the MODE parameter to close\nthe shape (to connect the beginning and the end).",
             "itemtype": "method",
             "name": "endShape",
@@ -8517,7 +8568,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 465,
+            "line": 682,
             "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -8556,7 +8607,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 525,
+            "line": 754,
             "description": "All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.",
             "itemtype": "method",
             "name": "vertex",
@@ -12726,6 +12777,10 @@
             "line": " src/image/loading_displaying.js:221"
         },
         {
+            "message": "Missing item type\nHolds the key codes of currently pressed keys.",
+            "line": " src/input/keyboard.js:13"
+        },
+        {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "line": " src/objects/p5.Color.js:44"
         },
@@ -12826,8 +12881,16 @@
             "line": " src/output/image.js:70"
         },
         {
+            "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
+            "line": " src/shape/curves.js:58"
+        },
+        {
+            "message": "Missing item type\nSets the resolution at which curves display.\n\nThe default value is 20.",
+            "line": " src/shape/curves.js:238"
+        },
+        {
             "message": "Missing item type",
-            "line": " src/shape/curves.js:363"
+            "line": " src/shape/curves.js:391"
         },
         {
             "message": "Missing item type\nReturns ascent of the current font at its current size.",
