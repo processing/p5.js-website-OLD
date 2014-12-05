@@ -5786,7 +5786,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nvar img;\n\nfunction setup() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction draw() {\n  image(img, 0, 0);\n}\n\nfunction mousePressed() {\n  img.resize(100, 200);\n}\n</code></div>"
+                "\n<div><code>\nvar img;\n\nfunction setup() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction draw() {\n  image(img, 0, 0);\n}\n\nfunction mousePressed() {\n  img.resize(50, 100);\n}\n</code></div>"
             ],
             "class": "p5.Image",
             "module": "Image",
