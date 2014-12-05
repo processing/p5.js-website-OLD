@@ -5785,13 +5785,16 @@
                     "type": "Number"
                 }
             ],
+            "example": [
+                "\n<div><code>\nvar img;\n\nfunction setup() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction draw() {\n  image(img, 0, 0);\n}\n\nfunction mousePressed() {\n  img.resize(100, 200);\n}\n</code></div>"
+            ],
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 249,
+            "line": 265,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -5848,7 +5851,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 271,
+            "line": 287,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -5865,7 +5868,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 316,
+            "line": 332,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -5887,7 +5890,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 329,
+            "line": 345,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -5949,7 +5952,7 @@
         },
         {
             "file": "src/objects/p5.Image.js",
-            "line": 358,
+            "line": 374,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
