@@ -3288,7 +3288,7 @@
         {
             "file": "src/environment/environment.js",
             "line": 327,
-            "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
+            "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.",
             "itemtype": "method",
             "name": "devicePixelScaling",
             "example": [
