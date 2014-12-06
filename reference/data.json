@@ -3292,7 +3292,7 @@
             "itemtype": "method",
             "name": "devicePixelScaling",
             "example": [
-                "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100);\n}\n\nfunction draw() {\n  ellipse(width/2, height/2, 50, 50);\n}\nfunction mousePressed() {\n  devicePixelScaling(false);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup() {\n  devicePixelScaling(false);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Environment",
