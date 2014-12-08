@@ -143,8 +143,8 @@ Boid.prototype.render = function() {
 Boid.prototype.borders = function() {
   if (this.position.x < -this.r)  this.position.x = width +this.r;
   if (this.position.y < -this.r)  this.position.y = height+this.r;
-  if (this.position.x > width +this.r) location.x = -this.r;
-  if (this.position.y > height+this.r) location.y = -this.r;
+  if (this.position.x > width +this.r) this.position.x = -this.r;
+  if (this.position.y > height+this.r) this.position.y = -this.r;
 }
 
 // Separation
