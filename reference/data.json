@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.13",
+        "version": "0.3.14",
         "url": ""
     },
     "files": {
@@ -4266,13 +4266,16 @@
             "description": "The variable keyCode is used to detect special keys such as BACKSPACE,\nDELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL, OPTION, ALT, UP_ARROW,\nDOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.",
             "itemtype": "property",
             "name": "keyCode",
+            "example": [
+                "\n<div><code>\nvar fillVal = 126;\nfunction draw() {\n  fill(fillVal);\n  rect(25, 25, 50, 50);\n}\n\nfunction keyPressed() {\n  if (keyCode == UP_ARROW) {\n    fillVal = 255;\n  } else if (keyCode == DOWN_ARROW) {\n    fillVal = 0;\n  } \n  return false; // prevent default\n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Keyboard"
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 61,
+            "line": 78,
             "description": "The keyPressed() function is called once every time a key is pressed. The\nkeyCode for the key that was pressed is stored in the keyCode variable.\n<br><br>\nFor non-ASCII keys, use the keyCode variable. You can check if the keyCode\nequals BACKSPACE, DELETE, ENTER, RETURN, TAB, ESCAPE, SHIFT, CONTROL,\nOPTION, ALT, UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.\n<br><br>\nFor ASCII keys that was pressed is stored in the key variable. However, it\ndoes not distinguish between uppercase and lowercase. For this reason, it\nis recommended to use keyTyped() to read the key variable, in which the\ncase of the variable will be distinguished.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nmay cause multiple calls to keyTyped() (and keyReleased() as well). The\nrate of repeat is set by the operating system and how each computer is\nconfigured.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyPressed",
@@ -4285,7 +4288,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 136,
+            "line": 153,
             "description": "The keyReleased() function is called once every time a key is released.\nSee key and keyCode for more information.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyReleased",
@@ -4298,7 +4301,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 183,
+            "line": 200,
             "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nwill cause multiple calls to keyTyped(), the rate is set by the operating\nsystem and how each computer is configured.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "keyTyped",
@@ -4311,7 +4314,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 226,
+            "line": 243,
             "description": "The onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will no fire if the user is\nnot focused on the element we must assume all keys currently down have \nbeen released.",
             "class": "p5",
             "module": "Input",
@@ -4319,7 +4322,7 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 236,
+            "line": 253,
             "description": "The keyIsDown function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally.",
             "itemtype": "method",
             "name": "keyIsDown",
@@ -13338,7 +13341,7 @@
         },
         {
             "message": "Missing item type\nThe onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will no fire if the user is\nnot focused on the element we must assume all keys currently down have \nbeen released.",
-            "line": " src/input/keyboard.js:226"
+            "line": " src/input/keyboard.js:243"
         },
         {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
