@@ -2494,7 +2494,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 315,
+            "line": 316,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -4311,7 +4311,15 @@
         },
         {
             "file": "src/input/keyboard.js",
-            "line": 227,
+            "line": 226,
+            "description": "The onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will no fire if the user is\nnot focused on the element we must assume all keys currently down have \nbeen released.",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Keyboard"
+        },
+        {
+            "file": "src/input/keyboard.js",
+            "line": 236,
             "description": "The keyIsDown function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally.",
             "itemtype": "method",
             "name": "keyIsDown",
@@ -5668,7 +5676,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 152,
+            "line": 153,
             "description": "The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5689,7 +5697,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 171,
+            "line": 172,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5710,7 +5718,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 187,
+            "line": 189,
             "description": "The .mouseClicked() function is called once after a mouse button is \npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5731,7 +5739,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 202,
+            "line": 204,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5752,7 +5760,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 217,
+            "line": 220,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5773,7 +5781,7 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 232,
+            "line": 235,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5794,7 +5802,79 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 256,
+            "line": 250,
+            "description": "The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
+            "itemtype": "method",
+            "name": "touchStarted",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when touch is\n                   started over the element.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.touchStarted(changeGray); // attach listener for\n                                // canvas click only\n  d = 10;\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n  ellipse(width/2, height/2, d, d);\n}\n\n// this function fires with any touch anywhere\nfunction touchStarted() {\n  d = d + 10;\n}\n\n// this function fires only when cnv is clicked\nfunction changeGray() {\n  g = random(0, 255);\n}\n</code></div>\n"
+            ],
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 294,
+            "description": "The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.",
+            "itemtype": "method",
+            "name": "touchMoved",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when touch is moved\n                   over the element.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.touchMoved(changeGray); // attach listener for\n                              // canvas click only\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n}\n\n// this function fires only when cnv is clicked\nfunction changeGray() {\n  g = random(0, 255);\n}\n</code></div>\n"
+            ],
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 330,
+            "description": "The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
+            "itemtype": "method",
+            "name": "touchEnded",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when touch is\n                   ended over the element.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.touchEnded(changeGray);   // attach listener for\n                                // canvas click only\n  d = 10;\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n  ellipse(width/2, height/2, d, d);\n}\n\n// this function fires with any touch anywhere\nfunction touchEnded() {\n  d = d + 10;\n}\n\n// this function fires only when cnv is clicked\nfunction changeGray() {\n  g = random(0, 255);\n}\n</code></div>\n"
+            ],
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 384,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -13257,6 +13337,10 @@
             "line": " src/input/keyboard.js:13"
         },
         {
+            "message": "Missing item type\nThe onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will no fire if the user is\nnot focused on the element we must assume all keys currently down have \nbeen released.",
+            "line": " src/input/keyboard.js:226"
+        },
+        {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "line": " src/objects/p5.Color.js:44"
         },
@@ -13266,7 +13350,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:256"
+            "line": " src/objects/p5.Element.js:384"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
