@@ -4323,19 +4323,22 @@
         {
             "file": "src/input/keyboard.js",
             "line": 253,
-            "description": "The keyIsDown function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally.",
+            "description": "The keyIsDown function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally. You can put in any number representing the keyCode of\nthe key, or use any of the variable keyCode names listed\n<a href=\"http://localhost:8000/docs/reference/#p5/keyCode\">here</a>.",
             "itemtype": "method",
             "name": "keyIsDown",
             "params": [
                 {
                     "name": "code",
                     "description": "The key to check for.",
-                    "type": "Number",
-                    "optional": true
+                    "type": "Number"
                 }
             ],
+            "return": {
+                "description": "whether key is down or not",
+                "type": "Boolean"
+            },
             "example": [
-                "\n<div>\n<code>\nvar x = 100;\nvar y = 100;\n\nfunction setup() {\n  createCanvas(512, 512);\n}\n\nfunction draw() {\n  if (keyIsDown(LEFT_ARROW))\n    x-=5;\n\n  if (keyIsDown(RIGHT_ARROW))\n    x+=5;\n\n  if (keyIsDown(UP_ARROW))\n    y-=5;\n\n  if (keyIsDown(DOWN_ARROW))\n    y+=5;\n\n  clear();\n  fill(255, 0, 0);\n  ellipse(x, y, 50, 50);\n}\n<code>\n</div>"
+                "\n<div><code>\nvar x = 100;\nvar y = 100;\n\nfunction setup() {\n  createCanvas(512, 512);\n}\n\nfunction draw() {\n  if (keyIsDown(LEFT_ARROW))\n    x-=5;\n\n  if (keyIsDown(RIGHT_ARROW))\n    x+=5;\n\n  if (keyIsDown(UP_ARROW))\n    y-=5;\n\n  if (keyIsDown(DOWN_ARROW))\n    y+=5;\n\n  clear();\n  fill(255, 0, 0);\n  ellipse(x, y, 50, 50);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Input",
