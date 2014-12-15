@@ -3326,7 +3326,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100);\n  fill(0);\n  noStroke();  \n  var urlPath = getURLPath();  \n  background(200);\n  for (var i=0; i<urlPath.length; i++) {\n    text(urlPath[i], 10, i*20+20);\n  }\n}    \n</code>\n</div>"
+                "\n<div class='norender'><code>\nfunction setup() {\n  createCanvas(100, 100);\n  fill(0);\n  noStroke();  \n  var urlPath = getURLPath();  \n  background(200);\n  for (var i=0; i&lt;urlPath.length; i++) {\n    text(urlPath[i], 10, i*20+20);\n  }\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -3334,7 +3334,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 433,
+            "line": 431,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -3343,7 +3343,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\n// Try adding \"?year=2014&month=December&day=15\" to\n// the end of the URL in the address bar.\n\nfunction setup() {\n  createCanvas(100, 100);\n  fill(0);\n  noStroke();\n  var params = getURLParams();  \n  background(200);\n  text(params.day, 10, 20);\n  text(params.month, 10, 40);\n  text(params.year, 10, 60);  \n}    \n</code>\n</div>"
+                "\n<div class='norender'>\n<code>\n// Example: http://p5js.org?year=2014&month=May&day=15\n\nfunction setup() {\n  createCanvas(100, 100);\n  fill(0);\n  noStroke();\n  var params = getURLParams();  \n  background(200);\n  text(params.day, 10, 20);\n  text(params.month, 10, 40);\n  text(params.year, 10, 60);  \n}    \n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Environment",
