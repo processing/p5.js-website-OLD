@@ -3765,7 +3765,7 @@
         {
             "file": "src/image/pixels.js",
             "line": 52,
-            "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
+            "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.<br><br>\nAvailable blend modes are: BLEND | DARKEST | LIGHTEST | DIFFERENCE | \nMULTIPLY| EXCLUSION | SCREEN | REPLACE | OVERLAY | HARD_LIGHT | \nSOFT_LIGHT | DODGE | BURN | ADD | NORMAL",
             "itemtype": "method",
             "name": "blend",
             "params": [
@@ -3816,9 +3816,12 @@
                 },
                 {
                     "name": "blendMode",
-                    "description": "the blend mode\n\nAvailable blend modes are: normal | multiply | screen | overlay | \n           darken | lighten | color-dodge | color-burn | hard-light | \n           soft-light | difference | exclusion | hue | saturation | \n           color | luminosity\n\n\nhttp://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/",
+                    "description": "the blend mode",
                     "type": "Integer"
                 }
+            ],
+            "example": [
+                "\n<div><code>\nvar img0;\nvar img1;\n\nfunction preload() {\n  img0 = loadImage(\"rockies.jpg\");\n  img1 = loadImage(\"bricks_third.jpg\");\n}\n\nfunction setup() {\n  background(img0);\n  image(img1, 0, 0);\n  blend(img1, 0, 0, 33, 100, 67, 0, 33, 100, LIGHTEST);\n}\n</code></div>\n<div><code>\nvar img0;\nvar img1;\n\nfunction preload() {\n  img0 = loadImage(\"rockies.jpg\");\n  img1 = loadImage(\"bricks_third.jpg\");\n}\n\nfunction setup() {\n  background(img0);\n  image(img1, 0, 0);\n  blend(img1, 0, 0, 33, 100, 67, 0, 33, 100, DARKEST);\n}\n</code></div>\n<div><code>\nvar img0;\nvar img1;\n\nfunction preload() {\n  img0 = loadImage(\"rockies.jpg\");\n  img1 = loadImage(\"bricks_third.jpg\");\n}\n\nfunction setup() {\n  background(img0);\n  image(img1, 0, 0);\n  blend(img1, 0, 0, 33, 100, 67, 0, 33, 100, ADD);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Image",
@@ -3826,7 +3829,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 91,
+            "line": 133,
             "description": "Copies a region of the canvas to another region of the canvas  \nand copies a region of pixels from an image used as the srcImg parameter\ninto the canvas srcImage is specified this is used as the source. If\nthe source and destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -3883,7 +3886,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 144,
+            "line": 186,
             "description": "Applies a filter to the canvas",
             "itemtype": "method",
             "name": "filter",
@@ -3905,7 +3908,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 157,
+            "line": 199,
             "description": "Returns an array of [R,G,B,A] values for any pixel or grabs a section of\nan image. If no parameters are specified, the entire image is returned. \nUse the x and y parameters to get the value of one pixel. Get a section of\nthe display window by specifying additional w and h parameters. When \ngetting an image, the x and y parameters define the coordinates for the \nupper-left corner of the image, regardless of the current imageMode().\n\nIf the pixel requested is outside of the image window, [0,0,0,255] is \nreturned. To get the numbers scaled according to the current color ranges\nand taking into account colorMode, use getColor instead of get.\n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] is [ pixels[y*width+x], pixels[y*width+x+1], \npixels[y*width+x+2], pixels[y*width+3] ]. See the reference for\npixels[] for more information.",
             "itemtype": "method",
             "name": "get",
@@ -3948,7 +3951,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 253,
+            "line": 295,
             "description": "Loads the pixel data for the display window into the pixels[] array. This\nfunction must always be called before reading from or writing to pixels[].",
             "itemtype": "method",
             "name": "loadPixels",
@@ -3961,7 +3964,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 290,
+            "line": 332,
             "description": "<p>Changes the color of any pixel, or writes an image directly to the \ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, [100, 50, 10, 255]) using pixels[] is:</p>\n<pre><code class=\"language-markup\">pixels[4*(y*width+x)] = 100;\npixels[4*(y*width+x)+1] = 50;\npixels[4*(y*width+x)+2] = 10;\npixels[4*(y*width+x)+3] = 255;</code></pre>\n<p>See the reference for pixels[] for more information.</p>",
             "itemtype": "method",
             "name": "set",
@@ -3991,7 +3994,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 393,
+            "line": 435,
             "description": "Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you're only reading pixels from\nthe array, there's no need to call updatePixels() — updating is only\nnecessary to apply changes. updatePixels() should be called anytime the \npixels array is manipulated or set() is called.",
             "itemtype": "method",
             "name": "updatePixels",
