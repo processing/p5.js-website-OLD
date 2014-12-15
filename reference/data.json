@@ -3299,6 +3299,57 @@
             "submodule": "Environment"
         },
         {
+            "file": "src/environment/environment.js",
+            "line": 383,
+            "description": "Gets the current URL.",
+            "itemtype": "method",
+            "name": "getURL",
+            "return": {
+                "description": "url",
+                "type": "String"
+            },
+            "example": [
+                "\n<div>\n<code>\nvar url;\nvar x = 100;    \n\nfunction setup() {\n  fill(0);\n  noStroke();\n  url = getURL();    \n}    \n\nfunction draw() {\n  background(200);\n  text(url, x, height/2);\n  x--;\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Environment",
+            "submodule": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 410,
+            "description": "Gets the current URL path as an array.",
+            "itemtype": "method",
+            "name": "getURLPath",
+            "return": {
+                "description": "path components",
+                "type": "Array"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100);\n  fill(0);\n  noStroke();  \n  var urlPath = getURLPath();  \n  background(200);\n  for (var i=0; i<urlPath.length; i++) {\n    text(urlPath[i], 10, i*20+20);\n  }\n}    \n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Environment",
+            "submodule": "Environment"
+        },
+        {
+            "file": "src/environment/environment.js",
+            "line": 433,
+            "description": "Gets the current URL params as an Object.",
+            "itemtype": "method",
+            "name": "getURLParams",
+            "return": {
+                "description": "URL params",
+                "type": "Object"
+            },
+            "example": [
+                "\n<div>\n<code>\n// Try adding \"?year=2014&month=December&day=15\" to\n// the end of the URL in the address bar.\n\nfunction setup() {\n  createCanvas(100, 100);\n  fill(0);\n  noStroke();\n  var params = getURLParams();  \n  background(200);\n  text(params.day, 10, 20);\n  text(params.month, 10, 40);\n  text(params.year, 10, 60);  \n}    \n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Environment",
+            "submodule": "Environment"
+        },
+        {
             "file": "src/image/filters.js",
             "line": 5,
             "description": "This module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
@@ -4190,7 +4241,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 320,
+            "line": 322,
             "itemtype": "method",
             "name": "httpPost",
             "params": [
@@ -4224,8 +4275,34 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 334,
-            "description": "Helper method for httpGet and httpPost",
+            "line": 338,
+            "itemtype": "method",
+            "name": "httpDo",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "name of the file or url to load",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "param data passed sent with request",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "datatype",
+                    "description": "\"json\", \"jsonp\", \"xml\", or \"text\"",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "callback",
+                    "description": "function to be executed after\n                                    httpGet() completes, data is passed in\n                                    as first argument",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Files"
@@ -9367,7 +9444,7 @@
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 100,
+            "line": 103,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
@@ -13336,10 +13413,6 @@
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
             "line": " src/image/loading_displaying.js:221"
-        },
-        {
-            "message": "Missing item type\nHelper method for httpGet and httpPost",
-            "line": " src/input/files.js:334"
         },
         {
             "message": "Missing item type\nHolds the key codes of currently pressed keys.",
