@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.14",
+        "version": "0.3.15",
         "url": ""
     },
     "files": {
@@ -2903,7 +2903,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 179,
+            "line": 182,
             "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
             "itemtype": "method",
             "name": "nfp",
@@ -2942,7 +2942,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 211,
+            "line": 214,
             "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
             "itemtype": "method",
             "name": "nfs",
@@ -2981,7 +2981,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 243,
+            "line": 246,
             "description": "The split() function maps to String.split(), it breaks a String into\npieces using a character or string as the delimiter. The delim parameter\nspecifies the character or characters that mark the boundaries between\neach piece. A String[] array is returned that contains each of the pieces.\n\nThe splitTokens() function works in a similar fashion, except that it\nsplits using a range of characters instead of a specific character or\nsequence.",
             "itemtype": "method",
             "name": "split",
@@ -3007,7 +3007,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 262,
+            "line": 265,
             "description": "The splitTokens() function splits a String at one or many character\ndelimiters or \"tokens.\" The delim parameter specifies the character or\ncharacters to be used as a boundary.\n\nIf no delim characters are specified, any whitespace character is used to\nsplit. Whitespace characters include tab (\\t), line feed (\\n), carriage\nreturn (\\r), form feed (\\f), and space.",
             "itemtype": "method",
             "name": "splitTokens",
@@ -3034,7 +3034,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 282,
+            "line": 285,
             "description": "Removes whitespace characters from the beginning and end of a String. In\naddition to standard whitespace characters such as space, carriage return,\nand tab, this function also removes the Unicode \"nbsp\" character.",
             "itemtype": "method",
             "name": "trim",
@@ -4208,6 +4208,7 @@
         {
             "file": "src/input/files.js",
             "line": 305,
+            "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
             "params": [
@@ -4230,7 +4231,7 @@
                 },
                 {
                     "name": "callback",
-                    "description": "function to be executed after\n                                    httpGet() completes, data is passed in\n                                    as first argument",
+                    "description": "function to be executed after\n                                   httpGet() completes, data is passed in\n                                   as first argument",
                     "type": "Function",
                     "optional": true
                 }
@@ -4241,7 +4242,8 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 322,
+            "line": 324,
+            "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
             "params": [
@@ -4264,7 +4266,7 @@
                 },
                 {
                     "name": "callback",
-                    "description": "function to be executed after\n                                    httpGet() completes, data is passed in\n                                    as first argument",
+                    "description": "function to be executed after\n                                   httpGet() completes, data is passed in\n                                   as first argument",
                     "type": "Function",
                     "optional": true
                 }
@@ -4275,7 +4277,8 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 338,
+            "line": 342,
+            "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
             "params": [
@@ -4298,7 +4301,7 @@
                 },
                 {
                     "name": "callback",
-                    "description": "function to be executed after\n                                    httpGet() completes, data is passed in\n                                    as first argument",
+                    "description": "function to be executed after\n                                   httpGet() completes, data is passed in\n                                   as first argument",
                     "type": "Function",
                     "optional": true
                 }
@@ -7552,7 +7555,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 109,
+            "line": 99,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Graphics object as an image\n \nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -7579,7 +7582,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 230,
+            "line": 220,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
@@ -7608,7 +7611,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 284,
+            "line": 274,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
@@ -7631,7 +7634,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 335,
+            "line": 325,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
@@ -7659,7 +7662,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 454,
+            "line": 453,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -7686,7 +7689,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 475,
+            "line": 474,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -7711,7 +7714,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 511,
+            "line": 510,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -7732,7 +7735,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 542,
+            "line": 541,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -7746,7 +7749,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 554,
+            "line": 553,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -8931,7 +8934,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 682,
+            "line": 685,
             "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -8970,7 +8973,7 @@
         },
         {
             "file": "src/shape/vertex.js",
-            "line": 754,
+            "line": 757,
             "description": "All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.",
             "itemtype": "method",
             "name": "vertex",
@@ -13484,35 +13487,35 @@
         },
         {
             "message": "Missing item type\nWrites the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "line": " src/output/files.js:230"
+            "line": " src/output/files.js:220"
         },
         {
             "message": "Missing item type\nWrites an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "line": " src/output/files.js:284"
+            "line": " src/output/files.js:274"
         },
         {
             "message": "Missing item type\nWrites the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "line": " src/output/files.js:335"
+            "line": " src/output/files.js:325"
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/output/files.js:454"
+            "line": " src/output/files.js:453"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/output/files.js:475"
+            "line": " src/output/files.js:474"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/output/files.js:511"
+            "line": " src/output/files.js:510"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/output/files.js:542"
+            "line": " src/output/files.js:541"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/output/files.js:554"
+            "line": " src/output/files.js:553"
         },
         {
             "message": "Missing item type\nSave the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
