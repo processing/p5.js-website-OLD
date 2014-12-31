@@ -4111,13 +4111,16 @@
                 "description": "JSON data",
                 "type": "Object|Array"
             },
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  noLoop();\n  loadJSON('http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA', drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n<div><code>\nvar weather;\nfunction preload() {\n  weather = loadJSON('http://api.openweathermap.org/data/2.5/weather?q=London,UK');\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Files"
         },
         {
             "file": "src/input/files.js",
-            "line": 71,
+            "line": 110,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -4147,7 +4150,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 137,
+            "line": 176,
             "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadTable() completes.</p>",
             "itemtype": "method",
             "name": "loadTable",
@@ -4180,7 +4183,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 246,
+            "line": 285,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
@@ -4207,7 +4210,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 305,
+            "line": 344,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -4242,7 +4245,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 324,
+            "line": 363,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -4277,7 +4280,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 342,
+            "line": 381,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
