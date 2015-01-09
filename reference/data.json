@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.3.15",
+        "version": "0.3.16",
         "url": ""
     },
     "files": {
@@ -1128,7 +1128,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 730,
+            "line": 747,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact \nwith other HTML5 objects, including text, hyperlink, image, input, video, \naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the \n<a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1412,7 +1412,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 730,
+            "line": 747,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -3288,7 +3288,7 @@
         {
             "file": "src/environment/environment.js",
             "line": 327,
-            "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.",
+            "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.\nThis devicePixelScaling() function must be the first line of code\ninside setup().",
             "itemtype": "method",
             "name": "devicePixelScaling",
             "example": [
@@ -3300,7 +3300,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 383,
+            "line": 385,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -3317,7 +3317,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 410,
+            "line": 412,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -3334,7 +3334,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 427,
+            "line": 429,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -4112,7 +4112,7 @@
                 "type": "Object|Array"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  noLoop();\n  loadJSON('http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA', drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n<div><code>\nvar weather;\nfunction preload() {\n  weather = loadJSON('http://api.openweathermap.org/data/2.5/weather?q=London,UK');\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  noLoop();\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA';\n  loadJSON(url, drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n<div><code>\nvar weather;\nfunction preload() {\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,UK';\n  weather = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4120,7 +4120,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 110,
+            "line": 112,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -4150,7 +4150,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 176,
+            "line": 178,
             "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadTable() completes.</p>",
             "itemtype": "method",
             "name": "loadTable",
@@ -4183,7 +4183,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 285,
+            "line": 287,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
@@ -4210,7 +4210,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 344,
+            "line": 346,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -4245,7 +4245,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 363,
+            "line": 365,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -4280,7 +4280,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 381,
+            "line": 383,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
@@ -4289,6 +4289,12 @@
                     "name": "path",
                     "description": "name of the file or url to load",
                     "type": "String"
+                },
+                {
+                    "name": "method",
+                    "description": "either \"GET\", \"POST\", or \"PUT\", \n                                   defaults to \"GET\"",
+                    "type": "String",
+                    "optional": true
                 },
                 {
                     "name": "data",
@@ -5338,7 +5344,7 @@
         },
         {
             "file": "src/math/random.js",
-            "line": 44,
+            "line": 46,
             "description": "Sets the seed value for random(). \n\nBy default, random() produces different results each time the program \nis run. Set the seed parameter to a constant to return the same \npseudo-random numbers each time the software is run.",
             "itemtype": "method",
             "name": "randomSeed",
@@ -5358,7 +5364,7 @@
         },
         {
             "file": "src/math/random.js",
-            "line": 70,
+            "line": 72,
             "description": "Return a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them,\ninclusive.",
             "itemtype": "method",
             "name": "random",
@@ -5387,7 +5393,7 @@
         },
         {
             "file": "src/math/random.js",
-            "line": 137,
+            "line": 139,
             "description": "Returns a random number fitting a Gaussian, or\n normal, distribution. There is theoretically no minimum or maximum\n value that <b>randomGaussian()</b> might return. Rather, there is\n just a very low probability that values far from the mean will be\n returned; and a higher probability that numbers near the mean will\n be returned.   \n Takes either 0, 1 or 2 arguments.\n If no args, returns a mean of 0 and standard deviation of 1\n If one arg, that arg is the mean (standard deviation is 1)\n If two args, first is mean, second is standard deviation",
             "itemtype": "method",
             "name": "randomGaussian",
@@ -7883,7 +7889,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 98,
+            "line": 100,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -7896,7 +7902,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 117,
+            "line": 119,
             "description": "Creates and returns a new p5.Graphics object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -7925,7 +7931,7 @@
         },
         {
             "file": "src/rendering/rendering.js",
-            "line": 169,
+            "line": 171,
             "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -9270,8 +9276,13 @@
             "name": "textAlign",
             "params": [
                 {
-                    "name": "a",
+                    "name": "h",
                     "description": "horizontal alignment, either LEFT,\n                           CENTER, or RIGHT",
+                    "type": "Number/Constant"
+                },
+                {
+                    "name": "v",
+                    "description": "vertical alignment, either TOP,\n                           BOTTOM, CENTER, or BASELINE",
                     "type": "Number/Constant"
                 }
             ],
@@ -9284,7 +9295,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 51,
+            "line": 59,
             "description": "Sets the spacing between lines of text in units of pixels. This\nsetting will be used in all subsequent calls to the text() function.",
             "itemtype": "method",
             "name": "textLeading",
@@ -9304,7 +9315,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 80,
+            "line": 88,
             "description": "Sets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in units of pixels.",
             "itemtype": "method",
             "name": "textSize",
@@ -9324,7 +9335,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 103,
+            "line": 111,
             "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
@@ -9344,7 +9355,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 136,
+            "line": 144,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
             "name": "textWidth",
@@ -9364,7 +9375,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 157,
+            "line": 165,
             "description": "Returns ascent of the current font at its current size.",
             "example": [
                 "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textAscent() * scalar;  // Calc ascent\nline(0, base-a, width, base-a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textAscent() * scalar;  // Recalc ascent\nline(40, base-a, width, base-a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
@@ -9375,7 +9386,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 182,
+            "line": 190,
             "description": "Returns descent of the current font at its current size.",
             "example": [
                 "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textDescent() * scalar;  // Calc ascent\nline(0, base+a, width, base+a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textDescent() * scalar;  // Recalc ascent\nline(40, base+a, width, base+a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div> "
@@ -9386,7 +9397,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 207,
+            "line": 215,
             "description": "Helper fxn to apply text properties.",
             "class": "p5",
             "module": "Typography",
@@ -9394,7 +9405,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 218,
+            "line": 226,
             "description": "Helper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
             "class": "p5",
             "module": "Typography",
@@ -9402,7 +9413,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 259,
+            "line": 267,
             "description": "Helper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
             "class": "p5",
             "module": "Typography",
@@ -9411,7 +9422,7 @@
         {
             "file": "src/typography/loading_displaying.js",
             "line": 12,
-            "description": "Draws text to the screen. Displays the information specified in the first\nparameter on the screen in the position specified by the additional\nparameters. A default font will be used unless a font is set with the\ntextFont() function and a default size will be used unless a font is set\nwith textSize(). Change the color of the text with the fill() function.\nThe text displays in relation to the textAlign() function, which gives the\noption to draw to the left, right, and center of the coordinates.\n\nThe x2 and y2 parameters define a rectangular area to display within and\nmay only be used with string data. When these parameters are specified,\nthey are interpreted based on the current rectMode() setting. Text that\ndoes not fit completely within the rectangle specified will not be drawn\nto the screen.",
+            "description": "Draws text to the screen. Displays the information specified in the first\nparameter on the screen in the position specified by the additional\nparameters. A default font will be used unless a font is set with the\ntextFont() function and a default size will be used unless a font is set\nwith textSize(). Change the color of the text with the fill() function.\nChange the outline of the text with the stroke() and strokeWeight() \nfunctions.\nThe text displays in relation to the textAlign() function, which gives the\noption to draw to the left, right, and center of the coordinates.\n\nThe x2 and y2 parameters define a rectangular area to display within and\nmay only be used with string data. When these parameters are specified,\nthey are interpreted based on the current rectMode() setting. Text that\ndoes not fit completely within the rectangle specified will not be drawn\nto the screen.",
             "itemtype": "method",
             "name": "text",
             "params": [
@@ -9450,7 +9461,7 @@
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 103,
+            "line": 105,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
@@ -9866,7 +9877,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 399,
+            "line": 416,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise \nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -9893,7 +9904,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 422,
+            "line": 439,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -9914,7 +9925,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 444,
+            "line": 461,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -9935,7 +9946,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 459,
+            "line": 476,
             "description": "Attaches the element  as a child to the parent specified. \n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
@@ -9959,7 +9970,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 497,
+            "line": 514,
             "description": "If an argument is given, sets the inner HTML of the element, \n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -9981,7 +9992,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 517,
+            "line": 534,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -10010,7 +10021,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 544,
+            "line": 561,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property, \n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -10040,7 +10051,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 579,
+            "line": 596,
             "description": "Adds a new attribute or changes the value of an existing attribute \n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -10070,7 +10081,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 606,
+            "line": 623,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -10092,7 +10103,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 627,
+            "line": 644,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -10106,7 +10117,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 639,
+            "line": 656,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -10120,7 +10131,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 650,
+            "line": 667,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -10146,7 +10157,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 703,
+            "line": 720,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -10159,7 +10170,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 749,
+            "line": 766,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -10173,7 +10184,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 763,
+            "line": 780,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -10187,7 +10198,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 775,
+            "line": 792,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -10201,7 +10212,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 786,
+            "line": 803,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -10215,7 +10226,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 797,
+            "line": 814,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -10229,7 +10240,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 810,
+            "line": 827,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -10250,7 +10261,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 822,
+            "line": 839,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -10272,7 +10283,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 838,
+            "line": 855,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -10294,7 +10305,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 855,
+            "line": 872,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -13542,23 +13553,23 @@
         },
         {
             "message": "Missing item type\nReturns ascent of the current font at its current size.",
-            "line": " src/typography/attributes.js:157"
+            "line": " src/typography/attributes.js:165"
         },
         {
             "message": "Missing item type\nReturns descent of the current font at its current size.",
-            "line": " src/typography/attributes.js:182"
+            "line": " src/typography/attributes.js:190"
         },
         {
             "message": "Missing item type\nHelper fxn to apply text properties.",
-            "line": " src/typography/attributes.js:207"
+            "line": " src/typography/attributes.js:215"
         },
         {
             "message": "Missing item type\nHelper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
-            "line": " src/typography/attributes.js:218"
+            "line": " src/typography/attributes.js:226"
         },
         {
             "message": "Missing item type\nHelper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
-            "line": " src/typography/attributes.js:259"
+            "line": " src/typography/attributes.js:267"
         },
         {
             "message": "Missing item type",
