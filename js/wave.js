@@ -206,5 +206,11 @@ Particleloop.prototype.checkEdges = function(){
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+  particleloop = [];
+  for (var i = 0; i < position; i++) {
+    var p = createVector(map(i, 0, p, 0, width * 2),random(0, height));
+    //particles[i] = new Particle(p);
+    particleloop[i] = new Particleloop(p);
+  }
   background(0);
 }
