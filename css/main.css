@@ -32,6 +32,21 @@
     display: inline;
 }
 
+#home-sketch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+#credits {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    padding: 1em;
+    font-size: 0.75em;
+}
 
 
 /* 
@@ -679,11 +694,6 @@ h4 {
 }
 
 h4 + p {display: inline;}
-
-
-small, .small, footer, #family {
-    font-size: 0.9em;
-}
 
 
 #family a:link, #family a:visited {
