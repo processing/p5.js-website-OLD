@@ -1052,10 +1052,10 @@ footer {
     }
     
 
-}
     small, .small, footer, #family {
-        font-size: 0.75em;
+        font-size: 0.5em;
     }
+}
 
 @media (min-width: 720px) {
     body {
@@ -1079,6 +1079,9 @@ footer {
         width:36em; /* 36-38 em for about 10-14 words at this size   */
     }
 
+    small, .small, footer, #family {
+        font-size: 0.75em;
+    }
 
     footer {
         clear:both;
