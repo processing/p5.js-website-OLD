@@ -1046,7 +1046,15 @@ footer {
       word-wrap: break-word;
       word-break: break-all;
     }
+
+    #credits, #home-sketch {
+        display: none;
+    }
     
+
+    small, .small, footer, #family {
+        font-size: 0.5em;
+    }
 }
 
 @media (min-width: 720px) {
