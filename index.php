@@ -2,6 +2,8 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
+  <div id="home-sketch"></div>
+  <div id="credits"><em>Adventure in Mountains</em><br>by <a target=_blank href="http://www.liuchangitp.com">Chang Liu</a></div>
 
   <?php include('heading.php'); ?>
 
@@ -52,5 +54,6 @@
   </object>
 
   <?php include('end.php'); ?>
+  <script type="text/javascript" src="js/wave.js"></script>
 </body>
 </html>
