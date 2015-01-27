@@ -31,6 +31,7 @@ var fft; // we'll visualize the waveform
 
 function setup() {
   createCanvas(800,400);
+  noFill();
 
   carrier = new p5.Oscillator('sine');
   carrier.amp(1); // set amplitude

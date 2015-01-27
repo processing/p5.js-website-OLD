@@ -1,6 +1,13 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
+        "Add a signal and a number or two signals. \n       input 0: augend. input 1: addend",
+        "Base class for all Signals",
+        "Constant audio-rate signal.\n        Tone.Signal is a core component which allows for sample-accurate \n        synchronization of many components. Tone.Signal can be scheduled \n        with all of the functions available to AudioParams",
+        "Multiply the incoming signal by a number or Multiply two signals.\n        input 0: multiplicand.\n        input 1: multiplier.",
+        "Tone is the baseclass of all Tone Modules.",
+        "Wraps the WaveShaperNode\n\n```javascript\nvar timesTwo = new Tone.WaveShaper(function(val){\n\treturn val * 2;\n}, 2048);\n```",
+        "a sample accurate clock built on an oscillator.\n        Invokes the onTick method at the set rate\n        NB: can cause audio glitches. use sparingly.",
         "p5",
         "p5.Amplitude",
         "p5.AudioIn",
@@ -28,7 +35,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.TableRow",
         "p5.Vector",
         "p5.dom",
-        "p5.sound"
+        "p5.sound",
+        "performs a linear scaling on an input signal.\n        Scales a normal gain input range [0,1] to between\n        outputMin and outputMax"
     ],
     "modules": [
         "2D Primitives",
