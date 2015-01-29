@@ -727,9 +727,14 @@ h4 + p {display: inline;}
     color:#333 !important;
 } 
 
-#family p {
+#family p.left {
     float: left;
     margin:0.375em 0 0.375em 2em;
+}
+
+#family p.right {
+    float: right;
+    margin:0.375em 0 0.375em 0;
 }
 
 #family form {
