@@ -14,7 +14,7 @@
  See: http://www.red3d.com/cwr/
  Rules: Cohesion, Separation, Alignment
  (from <a href="http://natureofcode.com">natureofcode.com</a>).
-  Drag mouse to add boids into the system
+  Drag mouse to add boids into the system.
  </p>
 
           <div id="exampleDisplay">
