@@ -1,6 +1,6 @@
 /*
  * @name Flocking
- * @description Demonstration of Craig Reynolds' "Flocking" behavior
+ * @description Demonstration of Craig Reynolds' "Flocking" behavior.
  * See: http://www.red3d.com/cwr/
  * Rules: Cohesion, Separation, Alignment
  * (from <a href="http://natureofcode.com">natureofcode.com</a>).
