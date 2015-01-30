@@ -1,6 +1,6 @@
 
 <div id="family">
-  <p><a href="http://processing.org">Processing</a> 
+  <p class="left"><a href="http://processing.org">Processing</a> 
      <a class="here" href="<?php echo getRoot(); ?>">p5.js</a>
      <a href="http://py.processing.org/">Processing.py</a>
   </p> 
@@ -9,6 +9,9 @@
     <input id="search_field" type="text" name="as_q" value="" size="20" class="text" />
     <input id="search_button" type="submit" value=" " />
   </form>
+  <p class="right">
+    <a href="http://foundation.processing.org">Processing Foundation</a>
+  </p>
 </div>    
 
 <div id="container">
