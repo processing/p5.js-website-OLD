@@ -1,13 +1,6 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "Add a signal and a number or two signals. \n       input 0: augend. input 1: addend",
-        "Base class for all Signals",
-        "Constant audio-rate signal.\n        Tone.Signal is a core component which allows for sample-accurate \n        synchronization of many components. Tone.Signal can be scheduled \n        with all of the functions available to AudioParams",
-        "Multiply the incoming signal by a number or Multiply two signals.\n        input 0: multiplicand.\n        input 1: multiplier.",
-        "Tone is the baseclass of all Tone Modules.",
-        "Wraps the WaveShaperNode\n\n```javascript\nvar timesTwo = new Tone.WaveShaper(function(val){\n\treturn val * 2;\n}, 2048);\n```",
-        "a sample accurate clock built on an oscillator.\n        Invokes the onTick method at the set rate\n        NB: can cause audio glitches. use sparingly.",
         "p5",
         "p5.Amplitude",
         "p5.AudioIn",
@@ -35,8 +28,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.TableRow",
         "p5.Vector",
         "p5.dom",
-        "p5.sound",
-        "performs a linear scaling on an input signal.\n        Scales a normal gain input range [0,1] to between\n        outputMin and outputMax"
+        "p5.sound"
     ],
     "modules": [
         "2D Primitives",
@@ -168,7 +160,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "p5.dom",
             "name": "p5.dom",
-            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact \nwith other HTML5 objects, including text, hyperlink, image, input, video, \naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the \n<a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>"
+            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>"
         },
         {
             "displayName": "p5.sound",
