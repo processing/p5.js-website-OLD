@@ -365,6 +365,9 @@
           <a href="examples/Dom_Video_Capture.php">Video Capture</a><br>
           
         
+          <a href="examples/Dom_Drop.php">Drop</a><br>
+          
+        
         </p>
         
           </div>
