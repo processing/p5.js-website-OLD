@@ -1,5 +1,5 @@
-p5js.org
+p5.js-website
 ========
 
-website for p5.js
+website for p5.js at p5js.org
 
