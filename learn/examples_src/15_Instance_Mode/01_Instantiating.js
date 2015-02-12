@@ -3,23 +3,23 @@
  * @description Create a p5 instance, which keeps all variables
  * out of the global scope of your page.
  */
-var s = function( sketch ) {
+var sketch = function( p ) {
 
   var x = 100; 
   var y = 100;
 
-  sketch.setup = function() {
-    sketch.createCanvas(700, 410);
+  p.setup = function() {
+    p.createCanvas(700, 410);
   };
 
-  sketch.draw = function() {
-    sketch.background(0);
-    sketch.fill(255);
-    sketch.rect(x,y,50,50);
+  p.draw = function() {
+    p.background(0);
+    p.fill(255);
+    p.rect(x,y,50,50);
   };
 };
 
-var myp5 = new p5(s);
+var myp5 = new p5(sketch);
 
 // Compare to "global mode"
 // var x = 100;
