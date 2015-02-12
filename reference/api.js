@@ -10,6 +10,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Element",
         "p5.Env",
         "p5.FFT",
+        "p5.File",
         "p5.Filter",
         "p5.Graphics",
         "p5.Image",
@@ -108,7 +109,8 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Data",
-            "name": "Data"
+            "name": "Data",
+            "description": "Base class for a file\nUsing this for createFileInput"
         },
         {
             "displayName": "DOM",

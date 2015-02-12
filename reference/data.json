@@ -268,6 +268,19 @@
             },
             "namespaces": {}
         },
+        "src/objects/p5.File.js": {
+            "name": "src/objects/p5.File.js",
+            "modules": {
+                "Data": 1
+            },
+            "classes": {
+                "p5.File": 1
+            },
+            "fors": {
+                "p5.File": 1
+            },
+            "namespaces": {}
+        },
         "src/objects/p5.Graphics.js": {
             "name": "src/objects/p5.Graphics.js",
             "modules": {
@@ -590,15 +603,19 @@
                 "Output": 1
             },
             "classes": {
+                "p5.File": 1,
                 "p5.Table": 1,
                 "p5.TableRow": 1
             },
             "fors": {
-                "p5": 1
+                "p5": 1,
+                "p5.File": 1
             },
             "namespaces": {},
+            "module": "Data",
             "file": "src/objects/p5.TableRow.js",
-            "line": 12
+            "line": 12,
+            "description": "Base class for a file\nUsing this for createFileInput"
         },
         "Array Functions": {
             "name": "Array Functions",
@@ -1128,7 +1145,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 754,
+            "line": 818,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1216,6 +1233,35 @@
                     "name": "elt",
                     "description": "DOM node that is wrapped",
                     "type": "String"
+                },
+                {
+                    "name": "pInst",
+                    "description": "pointer to p5 instance",
+                    "type": "Object",
+                    "optional": true
+                }
+            ]
+        },
+        "p5.File": {
+            "name": "p5.File",
+            "shortname": "p5.File",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Data",
+            "submodule": "Data",
+            "namespace": "",
+            "file": "src/objects/p5.File.js",
+            "line": 14,
+            "description": "Base class for a file\nUsing this for createFileInput",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "file",
+                    "description": "File that is wrapped",
+                    "type": "File"
                 },
                 {
                     "name": "pInst",
@@ -1412,7 +1458,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 754,
+            "line": 818,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -3730,7 +3776,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 151,
+            "line": 159,
             "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use\nwhite as the tint color and specify an alpha value. For instance,\ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()).\n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
             "itemtype": "method",
             "name": "tint",
@@ -3768,7 +3814,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 219,
+            "line": 227,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -3778,7 +3824,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 229,
+            "line": 237,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -3797,7 +3843,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 264,
+            "line": 272,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -5994,11 +6040,129 @@
         },
         {
             "file": "src/objects/p5.Element.js",
-            "line": 384,
+            "line": 376,
+            "description": "The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.",
+            "itemtype": "method",
+            "name": "dragOver",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   dragged over the element.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 391,
+            "description": "The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.",
+            "itemtype": "method",
+            "name": "dragLeave",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   dragged over the element.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 406,
+            "description": "The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can \noptionally pass two callbacks, the first one (required) is triggered \nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.",
+            "itemtype": "method",
+            "name": "drop",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "triggered when files are dropped.",
+                    "type": "Function"
+                },
+                {
+                    "name": "callback",
+                    "description": "to receive loaded file.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.Element.js",
+            "line": 494,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
+        },
+        {
+            "file": "src/objects/p5.File.js",
+            "line": 24,
+            "description": "Underlying File object. All normal File methods can be called on this.",
+            "itemtype": "property",
+            "name": "file",
+            "class": "p5.File",
+            "module": "Data",
+            "submodule": "Data"
+        },
+        {
+            "file": "src/objects/p5.File.js",
+            "line": 36,
+            "description": "File type (image, text, etc.)",
+            "itemtype": "property",
+            "name": "type",
+            "class": "p5.File",
+            "module": "Data",
+            "submodule": "Data"
+        },
+        {
+            "file": "src/objects/p5.File.js",
+            "line": 42,
+            "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
+            "itemtype": "property",
+            "name": "subtype",
+            "class": "p5.File",
+            "module": "Data",
+            "submodule": "Data"
+        },
+        {
+            "file": "src/objects/p5.File.js",
+            "line": 48,
+            "description": "File name",
+            "itemtype": "property",
+            "name": "name",
+            "class": "p5.File",
+            "module": "Data",
+            "submodule": "Data"
+        },
+        {
+            "file": "src/objects/p5.File.js",
+            "line": 54,
+            "description": "File size",
+            "itemtype": "property",
+            "name": "size",
+            "class": "p5.File",
+            "module": "Data",
+            "submodule": "Data"
         },
         {
             "file": "src/objects/p5.Image.js",
@@ -7993,7 +8157,23 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 18,
+            "line": 23,
+            "description": "Return a array of objects that represent bezier curves which approximate \nthe circular arc centered at the origin, from startAngle to endAngle \n(radians) with the specified radius.\n\nEach bezier curve is an object with four points, where x1,y1 and\nx4,y4 are the arc's end points and x2,y2 and x3,y3 are the cubic bezier's\ncontrol points.",
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "2D Primitives"
+        },
+        {
+            "file": "src/shape/2d_primitives.js",
+            "line": 51,
+            "description": "Cubic bezier approximation of a circular arc centered at the origin,\nfrom (radians) a1 to a2, where a2-a1 < pi/2.  The arc's radius is r.\n\nReturns an object with four points, where x1,y1 and x4,y4 are the arc's \nend points and x2,y2 and x3,y3 are the cubic bezier's control points.\n\nThis algorithm is based on the approach described in:\nA. Riškus, \"Approximation of a Cubic Bezier Curve by Circular Arcs and \nVice Versa,\" Information Technology and Control, 35(4), 2006 pp. 371-378.",
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "2D Primitives"
+        },
+        {
+            "file": "src/shape/2d_primitives.js",
+            "line": 100,
             "description": "Draw an arc.\n\nIf a,b,c,d,start and stop are the only params provided, draws an\nopen pie.\n\nIf mode is provided draws the arc either open, chord or pie, dependent\non the variable provided.",
             "itemtype": "method",
             "name": "arc",
@@ -8048,7 +8228,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 112,
+            "line": 215,
             "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape's width and height. The\norigin may be changed with the ellipseMode() function.",
             "itemtype": "method",
             "name": "ellipse",
@@ -8087,7 +8267,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 195,
+            "line": 298,
             "description": "Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.",
             "itemtype": "method",
             "name": "line",
@@ -8126,7 +8306,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 242,
+            "line": 345,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point.",
             "itemtype": "method",
             "name": "point",
@@ -8155,7 +8335,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 294,
+            "line": 397,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -8214,7 +8394,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 339,
+            "line": 442,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.",
             "itemtype": "method",
             "name": "rect",
@@ -8253,7 +8433,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 383,
+            "line": 486,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -9532,7 +9712,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 50,
+            "line": 51,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -9824,13 +10004,41 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 279,
+            "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM of type 'file'.  \nThis allows users to select local files for use in a sketch.",
+            "itemtype": "method",
+            "name": "createFileInput",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "callback function for when a file loaded",
+                    "type": "Function",
+                    "optional": true
+                },
+                {
+                    "name": "multiple",
+                    "description": "optional to allow multiple files selected",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to p5.Element holding created DOM element",
+                "type": "Object/p5.Element"
+            },
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 308,
+            "line": 343,
+            "class": "p5.dom",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 372,
             "description": "Creates an HTML5 &lt;video&gt; element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body. The first parameter\ncan be either a single string path to a video file, or an array of string\npaths to different formats of the same video. This is useful for ensuring\nthat your video can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
             "itemtype": "method",
             "name": "createVideo",
@@ -9857,14 +10065,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 334,
+            "line": 398,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 336,
+            "line": 400,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio\nplayback. Appends to the container node if one is specified,\notherwise appends to body. The first parameter\ncan be either a single string path to a audio file, or an array of string\npaths to different formats of the same audio. This is useful for ensuring\nthat your audio can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
             "itemtype": "method",
             "name": "createAudio",
@@ -9891,14 +10099,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 362,
+            "line": 426,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 372,
+            "line": 436,
             "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video().",
             "itemtype": "method",
             "name": "createCapture",
@@ -9919,7 +10127,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 423,
+            "line": 487,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -9946,7 +10154,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 446,
+            "line": 510,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -9967,7 +10175,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 468,
+            "line": 532,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -9988,7 +10196,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 483,
+            "line": 547,
             "description": "Attaches the element  as a child to the parent specified.\n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
@@ -10012,7 +10220,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 521,
+            "line": 585,
             "description": "If an argument is given, sets the inner HTML of the element,\n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -10034,7 +10242,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 541,
+            "line": 605,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -10063,7 +10271,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 568,
+            "line": 632,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property,\n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -10093,7 +10301,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 603,
+            "line": 667,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -10123,7 +10331,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 630,
+            "line": 694,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -10145,7 +10353,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 651,
+            "line": 715,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -10159,7 +10367,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 663,
+            "line": 727,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -10173,7 +10381,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 674,
+            "line": 738,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -10199,7 +10407,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 727,
+            "line": 791,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -10212,7 +10420,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 773,
+            "line": 837,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -10226,7 +10434,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 787,
+            "line": 851,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -10240,7 +10448,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 799,
+            "line": 863,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -10254,7 +10462,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 810,
+            "line": 874,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -10268,7 +10476,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 821,
+            "line": 885,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -10282,7 +10490,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 834,
+            "line": 898,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -10303,7 +10511,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 846,
+            "line": 910,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -10325,7 +10533,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 862,
+            "line": 926,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -10347,7 +10555,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 879,
+            "line": 943,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -13589,7 +13797,7 @@
         },
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:229"
+            "line": " src/image/loading_displaying.js:237"
         },
         {
             "message": "Missing item type\nHolds the key codes of currently pressed keys.",
@@ -13609,7 +13817,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/objects/p5.Element.js:384"
+            "line": " src/objects/p5.Element.js:494"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
@@ -13700,6 +13908,14 @@
             "line": " src/output/image.js:70"
         },
         {
+            "message": "Missing item type\nReturn a array of objects that represent bezier curves which approximate \nthe circular arc centered at the origin, from startAngle to endAngle \n(radians) with the specified radius.\n\nEach bezier curve is an object with four points, where x1,y1 and\nx4,y4 are the arc's end points and x2,y2 and x3,y3 are the cubic bezier's\ncontrol points.",
+            "line": " src/shape/2d_primitives.js:23"
+        },
+        {
+            "message": "Missing item type\nCubic bezier approximation of a circular arc centered at the origin,\nfrom (radians) a1 to a2, where a2-a1 < pi/2.  The arc's radius is r.\n\nReturns an object with four points, where x1,y1 and x4,y4 are the arc's \nend points and x2,y2 and x3,y3 are the cubic bezier's control points.\n\nThis algorithm is based on the approach described in:\nA. Riškus, \"Approximation of a Cubic Bezier Curve by Circular Arcs and \nVice Versa,\" Information Technology and Control, 35(4), 2006 pp. 371-378.",
+            "line": " src/shape/2d_primitives.js:51"
+        },
+        {
             "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
             "line": " src/shape/curves.js:58"
         },
@@ -13737,7 +13953,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:50"
+            "line": " src/app.js:51"
         },
         {
             "message": "Missing item type\nHelper function for getElement and getElements.",
@@ -13753,15 +13969,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:279"
+            "line": " lib/addons/p5.dom.js:343"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:334"
+            "line": " lib/addons/p5.dom.js:398"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:362"
+            "line": " lib/addons/p5.dom.js:426"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
