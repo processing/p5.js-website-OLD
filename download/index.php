@@ -12,7 +12,7 @@
         <h3>Complete Library</h3>
 
         <div class="link_group">
-        <a href="https://github.com/lmccart/p5.js/releases/download/<?php echo $version; ?>/p5.zip">
+        <a href="https://github.com/processing/p5.js/releases/download/<?php echo $version; ?>/p5.zip">
         <div class="download_box">
         <h4>p5.js complete</h4>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -30,14 +30,14 @@
 
         <div class="link_group">
         <h3>Single Files</h3>
-        <a href="https://github.com/lmccart/p5.js/releases/download/<?php echo $version; ?>/p5.js">
+        <a href="https://github.com/processing/p5.js/releases/download/<?php echo $version; ?>/p5.js">
         <div class="download_box half_box">
         <h4>p5.js</h4>
         <p>Single file:<br>Full uncompressed version</p>
         </div>
         </a>
 
-        <a href="https://github.com/lmccart/p5.js/releases/download/<?php echo $version; ?>/p5.min.js">
+        <a href="https://github.com/processing/p5.js/releases/download/<?php echo $version; ?>/p5.min.js">
         <div class="download_box half_box">
         <h4>p5.min.js</h4>
         <p>Single file:<br>Compressed version</p>
@@ -87,10 +87,10 @@
       
         <div class="link_group">
         <h3>ETC</h3>
-        <p>Older releases <a href="https://github.com/lmccart/p5.js/releases">p5</a>, <a href="https://github.com/antiboredom/jside/releases">editor</a><br>
-        Github <a href="https://github.com/lmccart/p5.js">p5</a>, <a href="https://github.com/antiboredom/jside">editor</a><br>
-        Report bugs <a href="https://github.com/lmccart/p5.js/issues">p5</a>, <a href="https://github.com/antiboredom/jside/issues">editor</a><br>
-        Supported browsers <a href="https://github.com/lmccart/p5.js/wiki/Supported-browsers">editor</a></p>
+        <p>Older releases <a href="https://github.com/processing/p5.js/releases">p5</a>, <a href="https://github.com/antiboredom/jside/releases">editor</a><br>
+        Github <a href="https://github.com/processing/p5.js">p5</a>, <a href="https://github.com/antiboredom/jside">editor</a><br>
+        Report bugs <a href="https://github.com/processing/p5.js/issues">p5</a>, <a href="https://github.com/antiboredom/jside/issues">editor</a><br>
+        Supported browsers <a href="https://github.com/processing/p5.js/wiki/Supported-browsers">editor</a></p>
         </a>
 
         <!--

@@ -80,7 +80,7 @@
       <a name="create-your-own" class="anchor"><h3>Create Your Own</h3></a>
 
       <p>p5.js welcomes libraries contributed by others! Check out the 
-      <a href="https://github.com/lmccart/p5.js/wiki/Libraries">libraries tutorial</a> for more
+      <a href="https://github.com/processing/p5.js/wiki/Libraries">libraries tutorial</a> for more
       specifics about how to create one.</p>
 
     </section>

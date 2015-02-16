@@ -15,7 +15,7 @@
       <p>This page walks you through setting up a p5.js project and making your first sketch.
       If you are using the p5 editor, you can skip to the <a href="#your-first-sketch">Your
       First Sketch</a> section. Processing users may want to check out the 
-      <a href="https://github.com/lmccart/p5.js/wiki/Processing-transition">Processing
+      <a href="https://github.com/processing/p5.js/wiki/Processing-transition">Processing
       transition tutorial</a>.
       </p>
       <a class="anchor" href="#file-setup"><h3>Download and File Setup</h3></a>
@@ -142,7 +142,7 @@ function draw() {
       <h3>What Next?</h3>
         <ul>
           <li>Read the 
-          <a href="https://github.com/lmccart/p5.js/wiki/Processing-transition">
+          <a href="https://github.com/processing/p5.js/wiki/Processing-transition">
           Processing transition tutorial</a> to learn how to convert from Processing
           to p5.js, and the main differences between them.</li>
 

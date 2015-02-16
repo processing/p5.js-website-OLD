@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.0",
+        "version": "0.4.1",
         "url": ""
     },
     "files": {
@@ -1146,7 +1146,7 @@
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
             "line": 818,
-            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/lmccart/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
+            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
         },
@@ -2078,7 +2078,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 101,
+            "line": 97,
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
@@ -2120,7 +2120,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 175,
+            "line": 172,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
@@ -2140,7 +2140,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 204,
+            "line": 201,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -2160,7 +2160,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 233,
+            "line": 227,
             "description": "Calculates a color or colors between two color at a specific increment.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -2194,7 +2194,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 285,
+            "line": 279,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -2214,7 +2214,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 314,
+            "line": 308,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -2272,7 +2272,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 69,
+            "line": 70,
             "description": "Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
@@ -2285,7 +2285,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 88,
+            "line": 89,
             "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems.",
             "itemtype": "method",
             "name": "colorMode",
@@ -2325,7 +2325,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 154,
+            "line": 155,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.)",
             "itemtype": "method",
             "name": "fill",
@@ -2363,7 +2363,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 190,
+            "line": 192,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -2376,7 +2376,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 208,
+            "line": 210,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -2389,7 +2389,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 225,
+            "line": 227,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).",
             "itemtype": "method",
             "name": "stroke",
@@ -2546,7 +2546,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 304,
+            "line": 305,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -3814,7 +3814,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 227,
+            "line": 226,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -3824,7 +3824,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 237,
+            "line": 236,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -3843,7 +3843,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 272,
+            "line": 271,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -5701,7 +5701,7 @@
         },
         {
             "file": "src/objects/p5.Color.js",
-            "line": 44,
+            "line": 78,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "params": [
                 {
@@ -5717,25 +5717,6 @@
             "example": [
                 "\n<div>\n<code>\n// todo\n</code>\n</div>"
             ],
-            "class": "p5.Color",
-            "module": "Color",
-            "submodule": "Creating & Reading"
-        },
-        {
-            "file": "src/objects/p5.Color.js",
-            "line": 94,
-            "description": "Normalizes an array based on max vals.",
-            "params": [
-                {
-                    "name": "array",
-                    "description": "A four value array rgba or hsba array.",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Array"
-            },
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
@@ -10742,7 +10723,7 @@
         {
             "file": "lib/addons/p5.sound.js",
             "line": 609,
-            "description": "loadSound() returns a new p5.SoundFile from a specified\npath. If called during preload(), the p5.SoundFile will be ready\nto play in time for setup() and draw(). If called outside of\npreload, the p5.SoundFile will not be ready immediately, so\nloadSound accepts a callback as the second parameter. Using a\n<a href=\"https://github.com/lmccart/p5.js/wiki/Local-server\">\nlocal server</a> is recommended when loading external files.",
+            "description": "loadSound() returns a new p5.SoundFile from a specified\npath. If called during preload(), the p5.SoundFile will be ready\nto play in time for setup() and draw(). If called outside of\npreload, the p5.SoundFile will not be ready immediately, so\nloadSound accepts a callback as the second parameter. Using a\n<a href=\"https://github.com/processing/p5.js/wiki/Local-server\">\nlocal server</a> is recommended when loading external files.",
             "itemtype": "method",
             "name": "loadSound",
             "params": [
@@ -13797,7 +13778,7 @@
         },
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:237"
+            "line": " src/image/loading_displaying.js:236"
         },
         {
             "message": "Missing item type\nHolds the key codes of currently pressed keys.",
@@ -13809,11 +13790,7 @@
         },
         {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
-            "line": " src/objects/p5.Color.js:44"
-        },
-        {
-            "message": "Missing item type\nNormalizes an array based on max vals.",
-            "line": " src/objects/p5.Color.js:94"
+            "line": " src/objects/p5.Color.js:78"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",

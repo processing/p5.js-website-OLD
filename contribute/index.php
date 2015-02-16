@@ -21,16 +21,16 @@
         All types of involvement are welcome.
       </p>
 
-    <p>Develop &#8212; <a href="https://github.com/lmccart/p5.js">Github</a> is the main place where code is collected,
-        issues are documented, and discussions about code are had. Check out the <a href="https://github.com/lmccart/p5.js/wiki/Development">
+    <p>Develop &#8212; <a href="https://github.com/processing/p5.js">Github</a> is the main place where code is collected,
+        issues are documented, and discussions about code are had. Check out the <a href="https://github.com/processing/p5.js/wiki/Development">
         development tutorial</a> to get started, or <a href="../libraries/#create-your-own">
         create your own library.</a></p>
 
 
-    <p>Create documentation &#8212; Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/lmccart/p5.js/wiki/Inline-documentation">
+    <p>Create documentation &#8212; Everyone loves documentation. Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/processing/p5.js/wiki/Inline-documentation">
         adding documentation</a>, and creating tutorials.</p>
 
-    <p>Teach &#8212; Check out the <a href="https://github.com/lmccart/p5.js/wiki/Education">education page</a> on the wiki to view
+    <p>Teach &#8212; Check out the <a href="https://github.com/processing/p5.js/wiki/Education">education page</a> on the wiki to view
         resources from past classes, workshops, and events. Add your own links!</p>
         
     <p>Something else? &#8212; p5.js is looking for designers, artists, writers, organizers,
@@ -72,7 +72,7 @@
         invaluable guidance with JS and development practices.
         </p>        
 
-        <p><a href="https://github.com/lmccart/p5.js/graphs/contributors">Many others</a> from around the 
+        <p><a href="https://github.com/processing/p5.js/graphs/contributors">Many others</a> from around the 
         world contribute code and ideas to the library and documentation.</p>
 
         <svg width="1em" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
