@@ -48,7 +48,7 @@ function getPackageVersion($f) {
 }
 
 function updateFiles() {
-  $r = 'https://raw.githubusercontent.com/lmccart/p5.js/master/';
+  $r = 'https://raw.githubusercontent.com/processing/p5.js/master/';
   download($r.'lib/p5.min.js', '../js/p5.min.js');
   download($r.'lib/addons/p5.dom.js', '../js/p5.dom.js');
   download($r.'lib/addons/p5.sound.js', '../js/p5.sound.js');
