@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.1",
+        "version": "0.4.2",
         "url": ""
     },
     "files": {
@@ -452,6 +452,17 @@
             },
             "namespaces": {}
         },
+        "src/utils/color_utils.js": {
+            "name": "src/utils/color_utils.js",
+            "modules": {
+                "Color Utils": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
         "src/var/canvas.js": {
             "name": "src/var/canvas.js",
             "modules": {},
@@ -526,7 +537,7 @@
             },
             "namespaces": {},
             "file": "src/objects/p5.Color.js",
-            "line": 11
+            "line": 12
         },
         "Creating & Reading": {
             "name": "Creating & Reading",
@@ -543,7 +554,7 @@
             "module": "Color",
             "namespace": "",
             "file": "src/objects/p5.Color.js",
-            "line": 11,
+            "line": 12,
             "requires": [
                 "core"
             ]
@@ -1131,6 +1142,31 @@
             },
             "namespaces": {}
         },
+        "Utils": {
+            "name": "Utils",
+            "submodules": {
+                "Color Utils": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
+        "Color Utils": {
+            "name": "Color Utils",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Utils",
+            "namespace": "",
+            "file": "src/utils/color_utils.js",
+            "line": 1
+        },
         "p5.dom": {
             "name": "p5.dom",
             "submodules": {},
@@ -1210,7 +1246,7 @@
             "submodule": "Creating & Reading",
             "namespace": "",
             "file": "src/objects/p5.Color.js",
-            "line": 11,
+            "line": 12,
             "is_constructor": 1
         },
         "p5.Element": {
@@ -2038,7 +2074,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 42,
+            "line": 40,
             "description": "Extracts the blue value from a color or a pixel array.",
             "itemtype": "method",
             "name": "blue",
@@ -2058,7 +2094,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 71,
+            "line": 67,
             "description": "Extracts the brightness value from a color.",
             "itemtype": "method",
             "name": "brightness",
@@ -2078,7 +2114,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 97,
+            "line": 93,
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
@@ -2120,7 +2156,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 172,
+            "line": 170,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
@@ -2140,7 +2176,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 201,
+            "line": 197,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -2160,7 +2196,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 227,
+            "line": 223,
             "description": "Calculates a color or colors between two color at a specific increment.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -2194,7 +2230,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 279,
+            "line": 275,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -2214,7 +2250,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 308,
+            "line": 302,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -2325,7 +2361,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 155,
+            "line": 156,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.)",
             "itemtype": "method",
             "name": "fill",
@@ -2363,7 +2399,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 192,
+            "line": 193,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -2376,7 +2412,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 210,
+            "line": 211,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -2389,7 +2425,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 227,
+            "line": 228,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).",
             "itemtype": "method",
             "name": "stroke",
@@ -4209,7 +4245,7 @@
         {
             "file": "src/input/files.js",
             "line": 178,
-            "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>newlines - this CSV file contains newlines inside individual cells\n<li>header - this table has a header (title) row\n</ul>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadTable() completes.</p>",
+            "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas.</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadTable() completes.</p>",
             "itemtype": "method",
             "name": "loadTable",
             "params": [
@@ -4241,7 +4277,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 287,
+            "line": 405,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
             "itemtype": "method",
             "name": "loadXML",
@@ -4268,7 +4304,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 346,
+            "line": 464,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -4303,7 +4339,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 365,
+            "line": 483,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -4338,7 +4374,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 383,
+            "line": 501,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
@@ -5701,7 +5737,7 @@
         },
         {
             "file": "src/objects/p5.Color.js",
-            "line": 78,
+            "line": 79,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "params": [
                 {
@@ -9683,13 +9719,51 @@
             "submodule": "Loading & Displaying"
         },
         {
+            "file": "src/utils/color_utils.js",
+            "line": 11,
+            "description": "For a color expressed as an HSBA array, return the corresponding RGBA value",
+            "params": [
+                {
+                    "name": "hsba",
+                    "description": "An 'array' object that represents a list of\n                         HSB colors on a scale of 0-255",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "an array of RGBA values, on a scale of 0-255",
+                "type": "Array"
+            },
+            "class": "p5",
+            "module": "Utils",
+            "submodule": "Color Utils"
+        },
+        {
+            "file": "src/utils/color_utils.js",
+            "line": 79,
+            "description": "For a color expressed as an RGBA array, return the corresponding HSBA value",
+            "params": [
+                {
+                    "name": "rgba",
+                    "description": "An 'array' object that represents a list of\n                         RGB colors on a scale of 0-255",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "an array of HSB values, on a scale of 0-255",
+                "type": "Array"
+            },
+            "class": "p5",
+            "module": "Utils",
+            "submodule": "Color Utils"
+        },
+        {
             "file": "src/var/canvas.js",
             "line": 1,
             "requires": [
                 "constants"
             ],
             "class": "p5.dom",
-            "module": "Typography"
+            "module": "Utils"
         },
         {
             "file": "src/app.js",
@@ -9700,7 +9774,7 @@
                 "type": "Undefined"
             },
             "class": "p5.dom",
-            "module": "Typography"
+            "module": "Utils"
         },
         {
             "file": "lib/addons/p5.dom.js",
@@ -13790,7 +13864,7 @@
         },
         {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
-            "line": " src/objects/p5.Color.js:78"
+            "line": " src/objects/p5.Color.js:79"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
@@ -13923,6 +13997,14 @@
         {
             "message": "Missing item type\nHelper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
             "line": " src/typography/attributes.js:268"
+        },
+        {
+            "message": "Missing item type\nFor a color expressed as an HSBA array, return the corresponding RGBA value",
+            "line": " src/utils/color_utils.js:11"
+        },
+        {
+            "message": "Missing item type\nFor a color expressed as an RGBA array, return the corresponding HSBA value",
+            "line": " src/utils/color_utils.js:79"
         },
         {
             "message": "Missing item type",

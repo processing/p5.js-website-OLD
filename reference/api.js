@@ -37,6 +37,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Attributes",
         "Calculation",
         "Color",
+        "Color Utils",
         "Constants",
         "Conversion",
         "Creating & Reading",
@@ -66,6 +67,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Transform",
         "Trigonometry",
         "Typography",
+        "Utils",
         "Vertex",
         "p5.dom",
         "p5.sound"
@@ -90,6 +92,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Color",
             "name": "Color"
+        },
+        {
+            "displayName": "Color Utils",
+            "name": "Color Utils"
         },
         {
             "displayName": "Constants",
@@ -226,6 +232,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Typography",
             "name": "Typography"
+        },
+        {
+            "displayName": "Utils",
+            "name": "Utils"
         },
         {
             "displayName": "Vertex",
