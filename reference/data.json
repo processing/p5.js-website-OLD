@@ -6883,6 +6883,160 @@
             "submodule": "Table"
         },
         {
+            "file": "src/objects/p5.Table.js",
+            "line": 451,
+            "description": "Stores a value in the Table's specified row and column.\nThe row is specified by its ID, while the column may be specified \nby either its ID or title.",
+            "itemtype": "method",
+            "name": "set",
+            "params": [
+                {
+                    "name": "column",
+                    "description": "column ID (Number)\n                              or Title (String)",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "value",
+                    "description": "value to assign",
+                    "type": "String|Number"
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 465,
+            "description": "Stores a Float value in the Table's specified row and column.\nThe row is specified by its ID, while the column may be specified \nby either its ID or title.",
+            "itemtype": "method",
+            "name": "setNum",
+            "params": [
+                {
+                    "name": "row",
+                    "description": "row ID",
+                    "type": "Number"
+                },
+                {
+                    "name": "column",
+                    "description": "column ID (Number)\n                              or title (String)",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "value",
+                    "description": "value to assign",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 481,
+            "description": "Stores a String value in the Table's specified row and column.\nThe row is specified by its ID, while the column may be specified \nby either its ID or title.",
+            "itemtype": "method",
+            "name": "setString",
+            "params": [
+                {
+                    "name": "row",
+                    "description": "row ID",
+                    "type": "Number"
+                },
+                {
+                    "name": "column",
+                    "description": "column ID (Number)\n                              or Title (String)",
+                    "type": "String|Number"
+                },
+                {
+                    "name": "value",
+                    "description": "value to assign",
+                    "type": "String"
+                }
+            ],
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 496,
+            "description": "Retrieves a value from the Table's specified row and column.\nThe row is specified by its ID, while the column may be specified by \neither its ID or title.",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "row",
+                    "description": "row ID (Number)",
+                    "type": "Number"
+                },
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                  ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String|Number"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 511,
+            "description": "Retrieves a Float value from the Table's specified row and column.\nThe row is specified by its ID, while the column may be specified by \neither its ID or title.",
+            "itemtype": "method",
+            "name": "getNum",
+            "params": [
+                {
+                    "name": "row",
+                    "description": "row ID (Number)",
+                    "type": "Number"
+                },
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                  ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
+            "file": "src/objects/p5.Table.js",
+            "line": 526,
+            "description": "Retrieves a String value from the Table's specified row and column.\nThe row is specified by its ID, while the column may be specified by \neither its ID or title.",
+            "itemtype": "method",
+            "name": "getString",
+            "params": [
+                {
+                    "name": "row",
+                    "description": "row ID (Number)",
+                    "type": "Number"
+                },
+                {
+                    "name": "column",
+                    "description": "columnName (string) or\n                                  ID (number)",
+                    "type": "String|Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "p5.Table",
+            "module": "Data",
+            "submodule": "Table"
+        },
+        {
             "file": "src/objects/p5.TableRow.js",
             "line": 43,
             "description": "Stores a value in the TableRow's specified column.\nThe column may be specified by either its ID or title.",
