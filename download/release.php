@@ -67,7 +67,7 @@ function updateLib($jside_v) {
 
 function updateJSIDE($lib_v, $lib_d) {
 
-  $r = 'https://raw.githubusercontent.com/antiboredom/jside/master/';
+  $r = 'https://raw.githubusercontent.com/processing/p5.js-editor/master/';
   download($r.'package.json', 'package.json');
   $v = getPackageVersion('package.json');
   unlink('package.json');
