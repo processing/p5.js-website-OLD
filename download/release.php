@@ -54,32 +54,32 @@ function updateFiles() {
   download($r.'lib/addons/p5.sound.js', '../js/p5.sound.js');
 }
 
-function updateLib($jside_v) {
+function updateLib($p5jseditor_v) {
   updateFiles();
   $v = getLibVersion('../js/p5.min.js');
   //unlink('p5.min.js');
   echo 'updating library to v'.$v[0].' ('.$v[1].')';
-  $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $jside_version = "'.$jside_v.'"; ?>';
+  $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $p5jseditor_version = "'.$p5jseditor_v.'"; ?>';
 
   file_put_contents('version.php', $contents);
 }
 
 
-function updateJSIDE($lib_v, $lib_d) {
+function updateP5JSEDITOR($lib_v, $lib_d) {
 
-  $r = 'https://raw.githubusercontent.com/antiboredom/jside/master/';
+  $r = 'https://raw.githubusercontent.com/processing/p5.js-editor/master/';
   download($r.'package.json', 'package.json');
   $v = getPackageVersion('package.json');
   unlink('package.json');
-  $contents = '<?php $version = "'.$lib_v.'"; $date = "'.$lib_d.'"; $jside_version = "'.$v.'"; ?>';
+  $contents = '<?php $version = "'.$lib_v.'"; $date = "'.$lib_d.'"; $p5jseditor_version = "'.$v.'"; ?>';
   file_put_contents('version.php', $contents);
 }
 
 if ($_GET['f'] == 'update_lib') {
-  updateLib($jside_version);
+  updateLib($p5jseditor_version);
 }
-else if ($_GET['f'] == 'update_jside') {
-  updateJSIDE($version, $date);
+else if ($_GET['f'] == 'update_p5jseditor') {
+  updateP5JSEDITOR($version, $date);
 }
 else if ($_GET['f'] == 'update_files') {
   updateFiles();
