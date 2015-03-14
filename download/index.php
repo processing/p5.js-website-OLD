@@ -60,10 +60,10 @@
         <p>The p5.js editor is currently in development, try out an alpha version of it now. Help out by posting
         <a href="https://github.com/processing/p5.js-editor/issues">feedback and bugs</a>. Support for Windows and Linux
         coming soon, along with more <a href="https://github.com/processing/p5.js-editor/labels/enhancement">features</a>.</p>
-        <a href="https://github.com/processing/p5.js-editor/releases/download/v<?php echo $jside_version; ?>/p5.zip">
+        <a href="https://github.com/processing/p5.js-editor/releases/download/v<?php echo $p5jseditor_version; ?>/p5.zip">
         <div class="download_box half_box">
         <h4>Mac OS X</h4>
-        <p>p5 Editor<br>Version <?php echo $jside_version; ?></p>
+        <p>p5 Editor<br>Version <?php echo $p5jseditor_version; ?></p>
         </div>
         </a>
 
