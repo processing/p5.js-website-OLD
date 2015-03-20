@@ -66,9 +66,9 @@
         <img src="../img/get-started/sublime2.png" />
       </p>
       
-      <p>Open the index.html file in your browser by double clicking on it in your file manager or type:<br>
+      <p>Open the index.html file in your browser by double clicking on it in your file manager or type: 
         <code>file:///the/file/path/to/your/html</code> 
-        <br> in the address bar to view your sketch.
+        in the address bar to view your sketch.
       </p>
 
       <a name="your-first-sketch" class="anchor"><h3>Your First Sketch</h3></a>
