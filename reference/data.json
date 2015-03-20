@@ -2691,6 +2691,36 @@
         {
             "file": "src/data/array_functions.js",
             "line": 123,
+            "description": "Randomizes the order of the elements of an array.\nImplements Fisher-Yates Shuffle Algorithm\nhttp://Bost.Ocks.org/mike/shuffle/\nhttp://en.Wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
+            "itemtype": "method",
+            "name": "shuffle",
+            "params": [
+                {
+                    "name": "array",
+                    "description": "Array to shuffle",
+                    "type": "Array"
+                },
+                {
+                    "name": "bool",
+                    "description": "modify passed array",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "shuffled Array",
+                "type": "Array"
+            },
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  var regularArr = ['ABC', 'def', createVector(), TAU, Math.E];\n  print(regularArr);\n  shuffle(regularArr, true); // force modifications to passed array\n  print(regularArr);\n\n  // By default shuffle() returns a shuffled cloned array:\n  var newArr = shuffle(regularArr);\n  print(regularArr);\n  print(newArr);\n}\n</code></div>"
+            ],
+            "class": "p5",
+            "module": "Data",
+            "submodule": "Array Functions"
+        },
+        {
+            "file": "src/data/array_functions.js",
+            "line": 163,
             "description": "Sorts an array of numbers from smallest to largest, or puts an array of\nwords in alphabetical order. The original array is not modified; a\nre-ordered array is returned. The count parameter states the number of\nelements to sort. For example, if there are 12 elements in an array and\ncount is set to 5, only the first 5 elements in the array will be sorted.",
             "itemtype": "method",
             "name": "sort",
@@ -2713,7 +2743,7 @@
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 145,
+            "line": 185,
             "description": "Inserts a value or an array of values into an existing array. The first\nparameter specifies the initial array to be modified, and the second\nparameter defines the data to be inserted. The third parameter is an index\nvalue which specifies the array position from which to insert data.\n(Remember that array index numbering starts at zero, so the first position\nis 0, the second position is 1, and so on.)",
             "itemtype": "method",
             "name": "splice",
@@ -2740,7 +2770,7 @@
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 166,
+            "line": 206,
             "description": "Extracts an array of elements from an existing array. The list parameter\ndefines the array from which the elements will be copied, and the start\nand count parameters specify which elements to extract. If no count is\ngiven, elements will be extracted from the start to the end of the array.\nWhen specifying the start, remember that the first array element is 0.\nThis function does not change the source array.",
             "itemtype": "method",
             "name": "subset",
@@ -3361,7 +3391,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 385,
+            "line": 387,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -3378,7 +3408,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 412,
+            "line": 414,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -3395,7 +3425,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 429,
+            "line": 431,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -10314,7 +10344,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 487,
+            "line": 486,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -10341,7 +10371,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 510,
+            "line": 509,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -10362,7 +10392,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 532,
+            "line": 531,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -10383,7 +10413,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 547,
+            "line": 546,
             "description": "Attaches the element  as a child to the parent specified.\n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
@@ -10407,7 +10437,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 585,
+            "line": 584,
             "description": "If an argument is given, sets the inner HTML of the element,\n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -10429,7 +10459,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 605,
+            "line": 604,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style.",
             "itemtype": "method",
             "name": "position",
@@ -10458,7 +10488,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 632,
+            "line": 631,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property,\n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -10488,7 +10518,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 667,
+            "line": 666,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -10518,7 +10548,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 694,
+            "line": 693,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -10540,7 +10570,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 715,
+            "line": 714,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -10554,7 +10584,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 727,
+            "line": 726,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -10568,7 +10598,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 738,
+            "line": 737,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
