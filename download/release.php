@@ -73,7 +73,7 @@ function updateP5JSEDITOR($lib_v, $lib_d) {
   unlink('package.json');
   $contents = '<?php $version = "'.$lib_v.'"; $date = "'.$lib_d.'"; $p5jseditor_version = "'.$v.'"; ?>';
   file_put_contents('version.php', $contents);
-  echo 'updating p5.js editor version updated to '.$v;
+  echo 'updating p5.js editor version to '.$v;
 }
 
 if ($_GET['f'] == 'update_lib') {
