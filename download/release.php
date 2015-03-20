@@ -58,11 +58,10 @@ function updateLib($p5jseditor_v) {
   updateFiles();
   $v = getLibVersion('../js/p5.min.js');
   //unlink('p5.min.js');
-  echo 'updating library to v'.$v[0].' ('.$v[1].')';
+  echo 'updating library version to v'.$v[0].' ('.$v[1].')';
   $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $p5jseditor_version = "'.$p5jseditor_v.'"; ?>';
 
   file_put_contents('version.php', $contents);
-  echo 'p5.js version updated to '.$v;
 }
 
 
@@ -74,7 +73,7 @@ function updateP5JSEDITOR($lib_v, $lib_d) {
   unlink('package.json');
   $contents = '<?php $version = "'.$lib_v.'"; $date = "'.$lib_d.'"; $p5jseditor_version = "'.$v.'"; ?>';
   file_put_contents('version.php', $contents);
-  echo 'p5.js editor version updated to '.$v;
+  echo 'updating p5.js editor version updated to '.$v;
 }
 
 if ($_GET['f'] == 'update_lib') {
@@ -86,7 +85,7 @@ else if ($_GET['f'] == 'update_p5jseditor') {
 else if ($_GET['f'] == 'update_files') {
   updateFiles();
 } else {
-  echo '<a href="http://p5js.org/download/release.php?f=update_lib">update library version</a>';
+  echo '<a href="http://p5js.org/download/release.php?f=update_lib">update library version</a><br>';
   echo '<a href="http://p5js.org/download/release.php?f=update_p5jseditor">update editor version</a>';
 }
 ?>
