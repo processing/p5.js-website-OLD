@@ -454,9 +454,7 @@
         },
         "src/utils/color_utils.js": {
             "name": "src/utils/color_utils.js",
-            "modules": {
-                "Color Utils": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "p5": 1
@@ -1141,31 +1139,6 @@
                 "p5": 1
             },
             "namespaces": {}
-        },
-        "Utils": {
-            "name": "Utils",
-            "submodules": {
-                "Color Utils": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
-        "Color Utils": {
-            "name": "Color Utils",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Utils",
-            "namespace": "",
-            "file": "src/utils/color_utils.js",
-            "line": 1
         },
         "p5.dom": {
             "name": "p5.dom",
@@ -2582,7 +2555,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 305,
+            "line": 307,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -6790,7 +6763,7 @@
             "params": [
                 {
                     "name": "title",
-                    "description": "Title of the given column",
+                    "description": "title of the given column",
                     "type": "String",
                     "optional": true
                 }
@@ -6891,7 +6864,7 @@
             "params": [
                 {
                     "name": "column",
-                    "description": "column ID (Number)\n                              or Title (String)",
+                    "description": "column ID (Number)\n                              or title (String)",
                     "type": "String|Number"
                 },
                 {
@@ -6945,7 +6918,7 @@
                 },
                 {
                     "name": "column",
-                    "description": "column ID (Number)\n                              or Title (String)",
+                    "description": "column ID (Number)\n                              or title (String)",
                     "type": "String|Number"
                 },
                 {
@@ -6967,7 +6940,7 @@
             "params": [
                 {
                     "name": "row",
-                    "description": "row ID (Number)",
+                    "description": "row ID",
                     "type": "Number"
                 },
                 {
@@ -6993,7 +6966,7 @@
             "params": [
                 {
                     "name": "row",
-                    "description": "row ID (Number)",
+                    "description": "row ID",
                     "type": "Number"
                 },
                 {
@@ -7019,7 +6992,7 @@
             "params": [
                 {
                     "name": "row",
-                    "description": "row ID (Number)",
+                    "description": "row ID",
                     "type": "Number"
                 },
                 {
@@ -7942,7 +7915,7 @@
         {
             "file": "src/output/files.js",
             "line": 99,
-            "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Graphics object as an image\n \nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
+            "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Graphics object as an image\n \nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
             "params": [
@@ -7968,7 +7941,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 220,
+            "line": 219,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "params": [
                 {
@@ -8110,8 +8083,8 @@
                 }
             ],
             "return": {
-                "description": "File Extension",
-                "type": "String"
+                "description": "[fileName, fileExtension]",
+                "type": "Array"
             },
             "access": "private",
             "tagname": "",
@@ -8121,7 +8094,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 541,
+            "line": 542,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -8135,7 +8108,7 @@
         },
         {
             "file": "src/output/files.js",
-            "line": 553,
+            "line": 554,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -9854,7 +9827,7 @@
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 108,
+            "line": 105,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
@@ -9874,6 +9847,13 @@
         },
         {
             "file": "src/utils/color_utils.js",
+            "line": 1,
+            "description": "module Utils\nsubmodule Color Utils",
+            "class": "p5",
+            "module": "Typography"
+        },
+        {
+            "file": "src/utils/color_utils.js",
             "line": 11,
             "description": "For a color expressed as an HSBA array, return the corresponding RGBA value",
             "params": [
@@ -9888,8 +9868,7 @@
                 "type": "Array"
             },
             "class": "p5",
-            "module": "Utils",
-            "submodule": "Color Utils"
+            "module": "Typography"
         },
         {
             "file": "src/utils/color_utils.js",
@@ -9907,8 +9886,7 @@
                 "type": "Array"
             },
             "class": "p5",
-            "module": "Utils",
-            "submodule": "Color Utils"
+            "module": "Typography"
         },
         {
             "file": "src/var/canvas.js",
@@ -9917,18 +9895,18 @@
                 "constants"
             ],
             "class": "p5.dom",
-            "module": "Utils"
+            "module": "Typography"
         },
         {
             "file": "src/app.js",
-            "line": 51,
+            "line": 52,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
                 "type": "Undefined"
             },
             "class": "p5.dom",
-            "module": "Utils"
+            "module": "Typography"
         },
         {
             "file": "lib/addons/p5.dom.js",
@@ -14074,7 +14052,7 @@
         },
         {
             "message": "Missing item type\nWrites the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
-            "line": " src/output/files.js:220"
+            "line": " src/output/files.js:219"
         },
         {
             "message": "Missing item type\nWrites an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
@@ -14098,11 +14076,11 @@
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/output/files.js:541"
+            "line": " src/output/files.js:542"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/output/files.js:553"
+            "line": " src/output/files.js:554"
         },
         {
             "message": "Missing item type\nSave the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
@@ -14153,6 +14131,10 @@
             "line": " src/typography/attributes.js:268"
         },
         {
+            "message": "Missing item type\nmodule Utils\nsubmodule Color Utils",
+            "line": " src/utils/color_utils.js:1"
+        },
+        {
             "message": "Missing item type\nFor a color expressed as an HSBA array, return the corresponding RGBA value",
             "line": " src/utils/color_utils.js:11"
         },
@@ -14166,7 +14148,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:51"
+            "line": " src/app.js:52"
         },
         {
             "message": "Missing item type\nHelper function for getElement and getElements.",
