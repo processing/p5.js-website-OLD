@@ -33,6 +33,7 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
+        "Acceleration",
         "Array Functions",
         "Attributes",
         "Calculation",
@@ -74,6 +75,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "2D Primitives",
             "name": "2D Primitives"
+        },
+        {
+            "displayName": "Acceleration",
+            "name": "Acceleration"
         },
         {
             "displayName": "Array Functions",

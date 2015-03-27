@@ -134,6 +134,17 @@
             },
             "namespaces": {}
         },
+        "src/input/acceleration.js": {
+            "name": "src/input/acceleration.js",
+            "modules": {
+                "Acceleration": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
         "src/input/files.js": {
             "name": "src/input/files.js",
             "modules": {
@@ -750,6 +761,7 @@
         "Input": {
             "name": "Input",
             "submodules": {
+                "Acceleration": 1,
                 "Files": 1,
                 "Keyboard": 1,
                 "Mouse": 1,
@@ -761,6 +773,23 @@
                 "p5": 1
             },
             "namespaces": {}
+        },
+        "Acceleration": {
+            "name": "Acceleration",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Input",
+            "namespace": "",
+            "file": "src/input/acceleration.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
         },
         "Files": {
             "name": "Files",
@@ -3382,8 +3411,16 @@
             "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.\nThis devicePixelScaling() function must be the first line of code\ninside setup().",
             "itemtype": "method",
             "name": "devicePixelScaling",
+            "params": [
+                {
+                    "name": "val",
+                    "description": "whether or how much the sketch should scale",
+                    "type": "Boolean|Number",
+                    "optional": true
+                }
+            ],
             "example": [
-                "\n<div>\n<code>\nfunction setup() {\n  devicePixelScaling(false);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup() {\n  devicePixelScaling(false);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  devicePixelScaling(3.0);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -3391,7 +3428,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 387,
+            "line": 403,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -3408,7 +3445,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 414,
+            "line": 430,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -3425,7 +3462,7 @@
         },
         {
             "file": "src/environment/environment.js",
-            "line": 431,
+            "line": 447,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -4178,6 +4215,129 @@
             "class": "p5",
             "module": "Image",
             "submodule": "Pixels"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 13,
+            "description": "The system variable deviceOrientation always contains the orientation of\nthe device. The value of this variable will either be set 'landscape'\nor 'portrait'. If no data is avaliable it will be set to 'undefined'.",
+            "itemtype": "property",
+            "name": "deviceOrientation",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 22,
+            "description": "The system variable accelerationX always contains the acceleration of the\ndevice along the x axis. Value is represented as meters per second squared.",
+            "itemtype": "property",
+            "name": "accelerationX",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 30,
+            "description": "The system variable accelerationY always contains the acceleration of the\ndevice along the y axis. Value is represented as meters per second squared.",
+            "itemtype": "property",
+            "name": "accelerationY",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 38,
+            "description": "The system variable accelerationZ always contains the acceleration of the\ndevice along the z axis. Value is represented as meters per second squared.",
+            "itemtype": "property",
+            "name": "accelerationZ",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 46,
+            "description": "The system variable pAccelerationX always contains the acceleration of the\ndevice along the x axis in the frame previous to the current frame. Value\nis represented as meters per second squared.",
+            "itemtype": "property",
+            "name": "pAccelerationX",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 55,
+            "description": "The system variable pAccelerationY always contains the acceleration of the\ndevice along the y axis in the frame previous to the current frame. Value\nis represented as meters per second squared.",
+            "itemtype": "property",
+            "name": "pAccelerationY",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 64,
+            "description": "The system variable pAccelerationZ always contains the acceleration of the\ndevice along the z axis in the frame previous to the current frame. Value\nis represented as meters per second squared.",
+            "itemtype": "property",
+            "name": "pAccelerationZ",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 73,
+            "description": "_updatePAccelerations updates the pAcceleration values",
+            "access": "private",
+            "tagname": "",
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 86,
+            "description": "The setMoveThreshold() function is used to set the movement threshold for\nthe onDeviceMove() function.",
+            "itemtype": "method",
+            "name": "setMoveThreshold",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "The threshold value",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 102,
+            "description": "The onDeviceMove() function is called when the devices orientation changes\nby more than the threshold value.",
+            "itemtype": "method",
+            "name": "onDeviceMove",
+            "example": [
+                "\n<div>\n<code>\n// Run this example on a mobile device\n// Move the device around\n// to change the value.\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction onDeviceMove() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
+        },
+        {
+            "file": "src/input/acceleration.js",
+            "line": 128,
+            "description": "The onDeviceTurn() function is called when the device rotates by\nmore than 90 degrees.",
+            "itemtype": "method",
+            "name": "onDeviceTurn",
+            "example": [
+                "\n<div>\n<code>\n// Run this example on a mobile device\n// Rotate the device by 90 degrees\n// to change the value.\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction onDeviceTurn() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Input",
+            "submodule": "Acceleration"
         },
         {
             "file": "src/input/files.js",
@@ -14015,6 +14175,10 @@
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
             "line": " src/image/loading_displaying.js:236"
+        },
+        {
+            "message": "Missing item type\n_updatePAccelerations updates the pAcceleration values",
+            "line": " src/input/acceleration.js:73"
         },
         {
             "message": "Missing item type\nHolds the key codes of currently pressed keys.",
