@@ -9,7 +9,7 @@ TO DO:
 
 */
 
-if (window.innerWidth >= 720) {
+if (window.matchMedia("(min-width:720px").matches) {
   var elementPosition = $('#menu').offset();
   
   $(window).scroll(function(){
