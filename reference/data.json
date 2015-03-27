@@ -4342,7 +4342,7 @@
         {
             "file": "src/input/files.js",
             "line": 31,
-            "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
+            "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadJSON",
             "params": [
@@ -4369,7 +4369,7 @@
                 "type": "Object|Array"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  noLoop();\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA';\n  loadJSON(url, drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n<div><code>\nvar weather;\nfunction preload() {\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,UK';\n  weather = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>"
+                "\n\n<p>Calling loadJSON() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar weather;\nfunction preload() {\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,UK';\n  weather = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n<p>Outside preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  noLoop();\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA';\n  loadJSON(url, drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n"
             ],
             "class": "p5",
             "module": "Input",
@@ -4377,8 +4377,8 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 112,
-            "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadStrings() completes.",
+            "line": 118,
+            "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadStrings",
             "params": [
@@ -4399,7 +4399,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div><code>\nvar result;\nfunction preload() {\n  result = loadStrings('assets/test.txt');\n}\n\nfunction setup() {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>\n\n<div><code>\nfunction setup() {\n  loadStrings('assets/test.txt', pickString);\n}\n\nfunction pickString(result) {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>"
+                "\n\n<p>Calling loadStrings() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar result;\nfunction preload() {\n  result = loadStrings('assets/test.txt');\n}\n\nfunction setup() {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>\n\n<p>Outside preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadStrings('assets/test.txt', pickString);\n}\n\nfunction pickString(result) {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4407,8 +4407,8 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 178,
-            "description": "<p>Reads the contents of a file or URL and creates a p5.Table\nobject with its values. If a file is specified, it must be\nlocated in the sketch's \"data\" folder. The filename parameter\ncan also be a URL to a file found online. By default, the file\nis assumed to be comma-separated (in CSV format). Table only\nlooks for a header row if the 'header' option is included.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas.</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadTable() completes.</p>",
+            "line": 189,
+            "description": "<p>Reads the contents of a file or URL and creates a p5.Table object with\nits values. If a file is specified, it must be located in the sketch's\n\"data\" folder. The filename parameter can also be a URL to a file found\nonline. By default, the file is assumed to be comma-separated (in CSV\nformat). Table only looks for a header row if the 'header' option is\nincluded.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas. For example: \"csv, header\".</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadTable() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.\n</p>",
             "itemtype": "method",
             "name": "loadTable",
             "params": [
@@ -4425,7 +4425,7 @@
                 },
                 {
                     "name": "callback",
-                    "description": "function to be executed after loadTable()\n                             completes, Table object is passed in as\n                             first argument",
+                    "description": "function to be executed after\n                                    loadTable() completes, Table object is\n                                    passed in as first argument",
                     "type": "Function",
                     "optional": true
                 }
@@ -4440,8 +4440,8 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 405,
-            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Either use preload() to guarantee the\nfile loads before setup() and draw() are called, or supply a callback\nfunction that is executed when loadXML() completes.",
+            "line": 417,
+            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.",
             "itemtype": "method",
             "name": "loadXML",
             "params": [
@@ -4467,7 +4467,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 464,
+            "line": 476,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -4502,7 +4502,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 483,
+            "line": 495,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -4537,7 +4537,7 @@
         },
         {
             "file": "src/input/files.js",
-            "line": 501,
+            "line": 513,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
@@ -4549,7 +4549,7 @@
                 },
                 {
                     "name": "method",
-                    "description": "either \"GET\", \"POST\", or \"PUT\", \n                                   defaults to \"GET\"",
+                    "description": "either \"GET\", \"POST\", or \"PUT\",\n                                   defaults to \"GET\"",
                     "type": "String",
                     "optional": true
                 },
