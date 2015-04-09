@@ -12,6 +12,13 @@
 
       <h2>Contribute</h2> 
 
+      <div class='focus'>
+        <p><a href='http://bitly.com/p5concon'>Join us</a> May 25-31 for the p5.js Contributors Conference at the <a href='http://studioforcreativeinquiry.org'>
+        STUDIO for Creative Inquiry</a> at Carnegie Mellon University in Pittsburgh!</p>
+        <p>Whether you’re a developer, designer, 
+        writer, educator, or somewhere in between, we welcome individuals with all backgrounds, skills, and styles to come 
+        together and get creative. <a href='http://bitly.com/p5concon'>Apply by April 13.</a></p>
+      </div>
 
       <h3>Get involved</h3>
 

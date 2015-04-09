@@ -48,6 +48,13 @@
     font-size: 0.75em;
 }
 
+.focus {
+    border: 1px solid #ED225D;
+    padding: 0.4em;
+    margin: 1em 1.75em 0 0;
+    padding: 0.5em 1em 0em 1em;
+    color: #333 !important;
+}
 
 /* 
   //////////////////////////////////////////////////
