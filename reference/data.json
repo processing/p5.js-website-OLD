@@ -2088,7 +2088,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nc = color(175, 100, 220);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nblueValue = blue(c);  // Get blue in 'c'\nprintln(blueValue);  // Prints \"220.0\"\nfill(0, 0, blueValue);  // Use 'blueValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle   \n</code>\n</div>"
+                "\n<div>\n<code>\nc = color(175, 100, 220);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nblueValue = blue(c);  // Get blue in 'c'\nprintln(blueValue);  // Prints \"220.0\"\nfill(0, 0, blueValue);  // Use 'blueValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -2117,24 +2117,24 @@
         {
             "file": "src/color/creating_reading.js",
             "line": 93,
-            "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency.\n\nColors are stored as Numbers or Arrays.",
+            "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency. If a single string parameter is provided it will be\ninterpreted as a CSS-compatible color string.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
             "params": [
                 {
                     "name": "v1",
-                    "description": "gray value or red or hue value relative to the \n                         current color range",
-                    "type": "Number"
+                    "description": "gray value or red or hue value relative to\n                                the current color range, or a color string",
+                    "type": "Number|String"
                 },
                 {
                     "name": "v2",
-                    "description": "gray value or green or saturation value relative\n                         to the current color range (or alpha value if\n                         first param is gray value)",
+                    "description": "gray value or green or saturation value\n                                relative to the current color range (or\n                                alpha value if first param is gray value)",
                     "type": "Number",
                     "optional": true
                 },
                 {
                     "name": "v3",
-                    "description": "gray value or blue or brightness value relative\n                         to the current color range",
+                    "description": "gray value or blue or brightness value\n                                relative to the current color range",
                     "type": "Number",
                     "optional": true
                 },
@@ -2150,7 +2150,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(30, 20, 55, 55);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80);  // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nc = color(65);  // Update 'c' with grayscale value\nfill(c);  // Use updated 'c' as fill color\nellipse(75, 75, 80, 80);  // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();  // Don't draw a stroke around shapes\n\n// if switching from RGB to HSB both modes must be declared\ncolorMode(RGB, 255);  // Use RGB with scale of 0-255\nc = color(50, 55, 100);  // Create a color for 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(0, 10, 45, 80);  // Draw left rect\n\ncolorMode(HSB, 100);  // Use HSB with scale of 0-100\nc = color(50, 55, 100);  // Update 'c' with new color\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw right rect\n</code>\n</div>"
+                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(30, 20, 55, 55);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80);  // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nc = color(65);  // Update 'c' with grayscale value\nfill(c);  // Use updated 'c' as fill color\nellipse(75, 75, 80, 80);  // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG & CSS colors may be used,\nc = color('magenta');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// as can hex color codes:\nc = color('#4F66A1');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// RGB and RGBA color strings are also supported:\n// these all set 'c' to the same color (solid blue)\nc = color('rgb(0,0,255)');\nc = color('rgb(0%, 0%, 100%)');\nc = color('rgba(0, 0, 255, 1)');\nc = color('rgba(0%, 0%, 100%, 1)');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();  // Don't draw a stroke around shapes\n\n// if switching from RGB to HSB both modes must be declared\ncolorMode(RGB, 255);  // Use RGB with scale of 0-255\nc = color(50, 55, 100);  // Create a color for 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(0, 10, 45, 80);  // Draw left rect\n\ncolorMode(HSB, 100);  // Use HSB with scale of 0-100\nc = color(50, 55, 100);  // Update 'c' with new color\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw right rect\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -2158,7 +2158,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 170,
+            "line": 206,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
@@ -2178,7 +2178,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 197,
+            "line": 233,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -2198,7 +2198,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 223,
+            "line": 259,
             "description": "Calculates a color or colors between two color at a specific increment.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -2232,7 +2232,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 275,
+            "line": 311,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -2252,7 +2252,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 302,
+            "line": 338,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -2279,18 +2279,18 @@
             "params": [
                 {
                     "name": "v1",
-                    "description": "gray value, red or hue value \n                                    (depending on the current color mode),\n                                    or color or p5.Image",
-                    "type": "Number|Color|p5.Image"
+                    "description": "gray value, red or hue value\n                                              (depending on the current\n                                              color mode), color string,\n                                              p5.Color, or p5.Image",
+                    "type": "Number|String|p5.Color|p5.Image"
                 },
                 {
                     "name": "v2",
-                    "description": "green or saturation value (depending on\n                                    the current color mode)",
+                    "description": "green or saturation value\n                                              (depending on the current\n                                              color mode)",
                     "type": "Number|Array",
                     "optional": true
                 },
                 {
                     "name": "v3",
-                    "description": "blue or brightness value (depending on \n                                    the current color mode)",
+                    "description": "blue or brightness value\n                                              (depending on the current\n                                              color mode)",
                     "type": "Number|Array",
                     "optional": true
                 },
@@ -2302,7 +2302,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nbackground(51);   \n</code>\n</div>\n\n<div>\n<code>\nbackground(255, 204, 0);\n</code>\n</div>"
+                "\n<div>\n<code>\n// Grayscale integer value\nbackground(51);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nbackground(255, 204, 0);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nbackground(255, 204, 100);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nbackground('red');\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nbackground('#fae');\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nbackground('#222222');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nbackground('rgb(0,255,0)');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nbackground('rgba(0,255,0, 0.25)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nbackground('rgb(100%,0%,10%)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nbackground('rgba(100%,0%,100%,0.5)');\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nbackground(color(0, 0, 255));\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -2310,7 +2310,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 70,
+            "line": 140,
             "description": "Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
@@ -2323,7 +2323,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 89,
+            "line": 159,
             "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems.",
             "itemtype": "method",
             "name": "colorMode",
@@ -2335,12 +2335,12 @@
                 },
                 {
                     "name": "max1",
-                    "description": "range for the red or hue depending on the \n                              current color mode, or range for all values",
+                    "description": "range for the red or hue depending on the\n                              current color mode, or range for all values",
                     "type": "Number|Constant"
                 },
                 {
                     "name": "max2",
-                    "description": "range for the green or saturation depending \n                              on the current color mode",
+                    "description": "range for the green or saturation depending\n                              on the current color mode",
                     "type": "Number|Constant"
                 },
                 {
@@ -2363,25 +2363,25 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 156,
-            "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.)",
+            "line": 226,
+            "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.) If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the fill color.",
             "itemtype": "method",
             "name": "fill",
             "params": [
                 {
                     "name": "v1",
-                    "description": "gray value, red or hue value (depending on the\n                           current color mode), or color Array",
-                    "type": "Number|Array"
+                    "description": "gray value, red or hue value\n                                           (depending on the current color\n                                           mode), or color Array, or CSS\n                                           color string",
+                    "type": "Number|Array|String|p5.Color"
                 },
                 {
                     "name": "v2",
-                    "description": "green or saturation value (depending on the\n                           current color mode)",
+                    "description": "green or saturation value\n                                           (depending on the current\n                                           color mode)",
                     "type": "Number|Array",
                     "optional": true
                 },
                 {
                     "name": "v3",
-                    "description": "blue or brightness value (depending on the\n                           current color mode)",
+                    "description": "blue or brightness value\n                                           (depending on the current\n                                           color mode)",
                     "type": "Number|Array",
                     "optional": true
                 },
@@ -2393,7 +2393,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nfill(153);\nrect(30, 20, 55, 55);   \n</code>\n</div>\n\n<div>\n<code>\nfill(204, 102, 0);\nrect(30, 20, 55, 55);\n</code>\n</div>"
+                "\n<div>\n<code>\n// Grayscale integer value\nfill(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nfill(255, 204, 0);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nfill(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nfill('red');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nfill('#fae');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nfill('#222222');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nfill('rgb(0,255,0)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nfill('rgba(0,255,0, 0.25)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nfill('rgb(100%,0%,10%)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nfill('rgba(100%,0%,100%,0.5)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nfill(color(0, 0, 255));\nrect(20, 20, 60, 60);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -2401,12 +2401,12 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 193,
+            "line": 345,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
             "example": [
-                "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(30, 20, 55, 55);\n</code>\n</div>"
+                "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(20, 20, 60, 60);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -2414,12 +2414,12 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 211,
+            "line": 363,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
             "example": [
-                "\n<div>\n<code>\nnoStroke();\nrect(30, 20, 55, 55);\n</code>\n</div>"
+                "\n<div>\n<code>\nnoStroke();\nrect(20, 20, 60, 60);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -2427,25 +2427,25 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 228,
-            "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).",
+            "line": 380,
+            "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255). If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the stroke color.",
             "itemtype": "method",
             "name": "stroke",
             "params": [
                 {
                     "name": "v1",
-                    "description": "gray value, red or hue value (depending on the\n                           current color mode), or color Array",
-                    "type": "Number|Array"
+                    "description": "gray value, red or hue value\n                                           (depending on the current color\n                                           mode), or color Array, or CSS\n                                           color string",
+                    "type": "Number|Array|String|p5.Color"
                 },
                 {
                     "name": "v2",
-                    "description": "green or saturation value (depending on the\n                           current color mode)",
+                    "description": "green or saturation value\n                                           (depending on the current\n                                           color mode)",
                     "type": "Number|Array",
                     "optional": true
                 },
                 {
                     "name": "v3",
-                    "description": "blue or brightness value (depending on the\n                           current color mode)",
+                    "description": "blue or brightness value\n                                           (depending on the current\n                                           color mode)",
                     "type": "Number|Array",
                     "optional": true
                 },
@@ -2457,7 +2457,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nstroke(153);\nrect(30, 20, 55, 55);   \n</code>\n</div>\n\n<div>\n<code>\nstroke(204, 102, 0);\nrect(30, 20, 55, 55);\n</code>\n</div>"
+                "\n<div>\n<code>\n// Grayscale integer value\nstrokeWeight(4);\nstroke(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nstroke(255, 204, 0);\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nstrokeWeight(4);\nstroke(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nstroke('red');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nstroke('#fae');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nstroke('#222222');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nstroke('rgb(0,255,0)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nstroke('rgba(0,255,0,0.25)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nstroke('rgb(100%,0%,10%)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nstroke('rgba(100%,0%,100%,0.5)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nstroke(color(0, 0, 255));\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -4979,7 +4979,7 @@
         {
             "file": "src/input/touch.js",
             "line": 23,
-            "description": "The system variable touchY always contains the horizontal position of\none finger, relative to (0, 0) of the canvas in the frame previous to the\ncurrent frame. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
+            "description": "The system variable touchY always contains the vertical position of\none finger, relative to (0, 0) of the canvas. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
             "itemtype": "property",
             "name": "touchY",
             "class": "p5",
@@ -4988,8 +4988,8 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 34,
-            "description": "The system variable touchY always contains the horizontal position of\none finger, relative to (0, 0) of the canvas in the frame previous to the\ncurrent frame. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
+            "line": 33,
+            "description": "The system variable ptouchX always contains the horizontal position of\none finger, relative to (0, 0) of the canvas, in the frame previous to the\ncurrent frame.",
             "itemtype": "property",
             "name": "ptouchX",
             "class": "p5",
@@ -4998,8 +4998,8 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 45,
-            "description": "The system variable pmouseY always contains the vertical position of the\nmouse in the frame previous to the current frame, relative to (0, 0) of\nthe canvas.",
+            "line": 42,
+            "description": "The system variable ptouchY always contains the vertical position of\none finger, relative to (0, 0) of the canvas, in the frame previous to the\ncurrent frame.",
             "itemtype": "property",
             "name": "ptouchY",
             "class": "p5",
@@ -5008,7 +5008,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 54,
+            "line": 51,
             "description": "The system variable touches[] contains an array of the positions of all\ncurrent touch points, relative to (0, 0) of the canvas. Each element in\nthe array is an object with x and y properties.",
             "itemtype": "property",
             "name": "touches[]",
@@ -5018,7 +5018,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 63,
+            "line": 60,
             "description": "The boolean system variable touchIsDown is true if the screen is\ntouched and false if not.",
             "itemtype": "property",
             "name": "touchIsDown",
@@ -5028,7 +5028,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 105,
+            "line": 102,
             "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined. Browsers may have \ndifferent default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -5041,7 +5041,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 164,
+            "line": 161,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -5054,7 +5054,7 @@
         },
         {
             "file": "src/input/touch.js",
-            "line": 220,
+            "line": 217,
             "description": "The touchEnded() function is called every time a touch ends. If no \ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -5901,6 +5901,62 @@
         {
             "file": "src/objects/p5.Color.js",
             "line": 79,
+            "description": "These Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 247,
+            "description": "Regular expression for matching colors in format #XXX,\ne.g. #416",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 253,
+            "description": "Regular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 259,
+            "description": "Regular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 275,
+            "description": "Regular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 291,
+            "description": "Regular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 307,
+            "description": "Regular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/objects/p5.Color.js",
+            "line": 324,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "params": [
                 {
@@ -14231,8 +14287,36 @@
             "line": " src/input/keyboard.js:243"
         },
         {
-            "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
+            "message": "Missing item type\nThese Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
             "line": " src/objects/p5.Color.js:79"
+        },
+        {
+            "message": "Missing item type\nRegular expression for matching colors in format #XXX,\ne.g. #416",
+            "line": " src/objects/p5.Color.js:247"
+        },
+        {
+            "message": "Missing item type\nRegular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
+            "line": " src/objects/p5.Color.js:253"
+        },
+        {
+            "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
+            "line": " src/objects/p5.Color.js:259"
+        },
+        {
+            "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
+            "line": " src/objects/p5.Color.js:275"
+        },
+        {
+            "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
+            "line": " src/objects/p5.Color.js:291"
+        },
+        {
+            "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
+            "line": " src/objects/p5.Color.js:307"
+        },
+        {
+            "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
+            "line": " src/objects/p5.Color.js:324"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
