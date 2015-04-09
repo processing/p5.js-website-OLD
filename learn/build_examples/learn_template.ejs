@@ -39,7 +39,7 @@
       <div class="spacer"></div>
 
       <div class="left-column">
-        <a class="nounderline" href="#">
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas">
         <div class="label">
         <img src="../img/learn/dom.jpg"></a>
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas"><h4>Beyond the canvas</h4></a>
