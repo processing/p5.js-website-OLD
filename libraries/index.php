@@ -48,7 +48,7 @@
         <a class="nounderline" href="https://github.com/jagracar/grafica.js">
         <div class="label">
         <img src="../img/libraries/grafica.jpg"></a>
-        <a class="nounderline" href="#"><h4>grafica.js</h4></a>
+        <a class="nounderline" href="https://github.com/jagracar/grafica.js"><h4>grafica.js</h4></a>
         </div>
         <p>"grafica.js gives you the possibility to add simple but highly configurable 2D plots to your p5.js sketches.</p> 
       </div>
