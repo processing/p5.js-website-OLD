@@ -7455,7 +7455,7 @@
             "line": 127,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
-            "name": "get",
+            "name": "copy",
             "return": {
                 "description": "the copy of the p5.Vector object",
                 "type": "p5.Vector"
@@ -9416,13 +9416,6 @@
             "example": [
                 "\n<div>\n<code>\nnoFill();\ncurve(5, 26, 73, 24, 73, 61, 15, 65); \nsteps = 6;\nfor (i = 0; i <= steps; i++) {\n  t = i / steps;\n  x = curvePoint(5, 73, 73, 15, t);\n  y = curvePoint(26, 24, 61, 65, t);\n  //ellipse(x, y, 5, 5);\n  tx = curveTangent(5, 73, 73, 15, t);\n  ty = curveTangent(26, 24, 61, 65, t);\n  a = atan2(ty, tx);\n  a -= PI/2.0;\n  line(x, y, cos(a)*8 + x, sin(a)*8 + y);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "Curves"
-        },
-        {
-            "file": "src/shape/curves.js",
-            "line": 391,
             "class": "p5",
             "module": "Shape",
             "submodule": "Curves"
@@ -14425,10 +14418,6 @@
         {
             "message": "Missing item type\nSets the resolution at which curves display.\n\nThe default value is 20.",
             "line": " src/shape/curves.js:238"
-        },
-        {
-            "message": "Missing item type",
-            "line": " src/shape/curves.js:391"
         },
         {
             "message": "Missing item type\nReturns ascent of the current font at its current size.",
