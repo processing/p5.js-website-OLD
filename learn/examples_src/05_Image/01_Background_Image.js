@@ -9,8 +9,8 @@ var y = 0;
 
 function setup() {
   // The background image must be the same size as the parameters
-  // into the size() method. In this program, the size of the image
-  // is 710x400 pixels.
+  // into the createCanvas() method. In this program, the size of 
+  // the image is 720x400 pixels.
   bg = loadImage("assets/moonwalk.jpg");
   createCanvas(720, 400);
 }
