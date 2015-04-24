@@ -8819,37 +8819,61 @@
         {
             "file": "src/shape/2d_primitives.js",
             "line": 442,
-            "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.",
+            "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function. If provided, the fifth, sixth\nseventh and eighth parameters, if specified, determine corner radius for\nthe top-right, top-left, lower-right and lower-left corners, respectively.\nAn omitted corner radius parameter is set to the value of the previously\nspecified radius value in the parameter list.",
             "itemtype": "method",
             "name": "rect",
             "params": [
                 {
-                    "name": "a",
-                    "description": "x-coordinate of the rectangle",
+                    "name": "x",
+                    "description": "x-coordinate of the rectangle.",
                     "type": "Number"
                 },
                 {
-                    "name": "b",
-                    "description": "y-coordinate of the rectangle",
+                    "name": "y",
+                    "description": "y-coordinate of the rectangle.",
                     "type": "Number"
                 },
                 {
-                    "name": "c",
-                    "description": "width of the rectangle",
+                    "name": "w",
+                    "description": "width of the rectangle.",
                     "type": "Number"
                 },
                 {
-                    "name": "d",
-                    "description": "height of the rectangle",
+                    "name": "h",
+                    "description": "height of the rectangle.",
                     "type": "Number"
+                },
+                {
+                    "name": "tl",
+                    "description": "optional radius of top-left corner.",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "tr",
+                    "description": "optional radius of top-right corner.",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "br",
+                    "description": "optional radius of bottom-right corner.",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "bl",
+                    "description": "optional radius of bottom-left corner.",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "the p5 object.",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nrect(30, 20, 55, 55);\n</code>\n</div>"
+                "\n<div>\n<code>\n// Draw a rectangle at location (30, 25) with a width and height of 55.\nrect(30, 20, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners, each having a radius of 20.\nrect(30, 20, 55, 55, 20);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners having the following radii:\n// top-left = 20, top-right = 15, bottom-right = 10, bottom-left = 5.\nrect(30, 20, 55, 55, 20, 15, 10, 5)\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -8857,7 +8881,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 486,
+            "line": 548,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
