@@ -2,9 +2,8 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-<!--   <div id="home-sketch"></div>
-  <div id="credits"><em>Adventure in Mountains</em><br>by <a target=_blank href="http://www.liuchangitp.com">Chang Liu</a></div>
- -->
+  <div id="credits"><em>RainyTypewriter</em><br>by <a target=_blank href="http://kimsehyun.kr">Kim Sehyun</a></div>
+ 
   <?php include('heading.php'); ?>
 
   <!-- content sections -->
@@ -54,6 +53,16 @@
   </object>
 
   <?php include('end.php'); ?>
-  <script type="text/javascript" src="js/wave.js"></script>
+
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/15May_AV'></iframe>
+  <script type='text/javascript'>
+    $('#home-sketch-frame').width(window.innerWidth);
+    $('#home-sketch-frame').height(window.innerHeight);
+
+    $('#home-sketch-frame').css('position', 'absolute');
+    $('#home-sketch-frame').css('top', '0px');
+    $('#home-sketch-frame').css('left', '0px');
+    $('#home-sketch-frame').css('z-index', '-2');
+  </script>
 </body>
 </html>
