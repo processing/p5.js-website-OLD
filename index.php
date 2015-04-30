@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <div id="credits"><em>RainyTypewriter</em><br>by <a target=_blank href="http://kimsehyun.kr">AV</a></div>
+  <div id="credits"><em>RainyTypewriter</em><br>by <a target=_blank href="http://kimsehyun.kr">AV(Sehyun Kim)</a></div>
  
   <?php include('heading.php'); ?>
 
