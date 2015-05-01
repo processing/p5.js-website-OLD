@@ -53,6 +53,7 @@
         <a href='http://luisaph.com' target='_blank'>Luisa Pereira</a>,
         <a href='https://twitter.com/mileshiroo' target='_blank'>Miles Peyton</a>,
         <a href='https://pibloginthesky.wordpress.com/' target='_blank'>Stephanie Pi</a>,
+        <a href='http://shiffman.net/' target='_blank'>Daniel Shiffman</a>,
         <a href='http://jasonsigal.cc' target='_blank'>Jason Sigal</a>,
         <a href='http://studioindefinit.com/' target='_blank'>Kevin Siwoff</a>,
         <a href='http://charlottestiles.com/' target='_blank'>Charlotte Stiles</a>,
