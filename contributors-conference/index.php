@@ -79,7 +79,7 @@
       science, technology, and culture. This event is supported by a grant from the National Endowment for the Arts, with additional support from 
       the <a href='http://processing.org'>Processing Foundation</a>, the <a href='http://itp.nyu.edu'>NYU Interactive Telecommunications Program</a>,
       <a href='http://theartificial.nl/'>The Artificial</a>, <a href='http://www.du.edu/ahss/edp/'>University of Denver, Emergent Digital Practices</a>,
-      and <a href='http://tinysubversions.com/'>Darius Kazemi</a>.</p>
+      and <a href='http://tinysubversions.com/'>Darius Kazemi</a>. Thank you!</p>
       </div> 
 
 
