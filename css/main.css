@@ -17,7 +17,6 @@
   //////////////////////////////////////////////////
 */
 
-
 #menu.top_menu, #menu {
     list-style: none;
     font-family: "AvenirNextLTW01-Medium";
@@ -1069,17 +1068,23 @@ footer {
         /*display: none;*/
     }
     
-    
-        #credits {
-            position: relative !important;
-          z-index: 2;
-          margin-top: -4em;
-          padding: 0 1em 3em 1em;
-          font-size: 0.5em;
-          float: right;
-          width: 100%;
-          text-align: right;
-        }
+
+    #credits {
+      position: relative !important;
+      z-index: 2;
+      margin-top: -4em;
+      padding: 0 1em 3em 1em;
+      font-size: 0.5em;
+      float: right;
+      width: 100%;
+      text-align: right;
+    }
+
+    #home-sketch-frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
         
           
 
