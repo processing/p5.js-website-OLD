@@ -16,7 +16,8 @@
       <div id="contributors-subsection">
       <h3>Frank-Ratchye STUDIO for Creative Inquiry<br>Carnegie Mellon University<br>May 25-31</h3>
 
-      <p>For one week, a diverse group of participants will gather to work on all aspects of p5.js, 
+      <p>For one week, an enthusiastic group of participants with a range of skills, backgrounds, and styles
+      will gather to work on all aspects of p5.js, 
       including (but not limited to) new features, bug fixing, documentation, outreach, community, 
       design, and internationalization.
       </p>
@@ -76,7 +77,9 @@
 
       <p>Our contributor conference will take place at the <a href='http://studioforcreativeinquiry.org'>Frank-Ratchye STUDIO for Creative Inquiry</a>
       at Carnegie Mellon University, an academic laboratory for atypical, anti-disciplinary, and inter-institutional research at the intersections of arts, 
-      science, technology, and culture. This event is supported by a grant from the National Endowment for the Arts, with additional support from 
+      science, technology, and culture.</p>
+
+      <p>This event is supported by a grant from the National Endowment for the Arts, with additional support from 
       the <a href='http://processing.org'>Processing Foundation</a>, the <a href='http://itp.nyu.edu'>NYU Interactive Telecommunications Program</a>,
       <a href='http://theartificial.nl/'>The Artificial</a>, <a href='http://www.du.edu/ahss/edp/'>University of Denver, Emergent Digital Practices</a>,
       and <a href='http://tinysubversions.com/'>Darius Kazemi</a>. Thank you!</p>
