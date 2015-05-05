@@ -311,6 +311,9 @@
           <a href="examples/Simulate_Game_of_Life.php">Game of Life</a><br>
           
         
+          <a href="examples/Simulate_Soft_Body.php">Soft Body</a><br>
+          
+        
         </p>
         
       
