@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-  <body id="reference-page">
+  <body id="libraries-page">
 
     <?php include('../sidebar-minimal.php'); ?>
 
@@ -104,8 +104,13 @@
       <a href="http://theartificial.nl/" target="_blank">TheArtificial</a>, <a href="http://bocoup.com/" target="_blank">Bocoup</a>, 
       and <a href="http://www.du.edu/ahss/edp/" target="_blank">Emergent Digital Practices | University of Denver</a>.<br><b>Thank you!</b></p>
       
-      <img src='logos.png'/>
+      <img style='width:18%' src='studio.png'/>
+      <img style='width:18%' src='itp.png'/>
+      <img style='width:18%' src='edp.png'/>
+      <img style='width:18%' src='bocoup.png'/>
+      <img style='width:18%' src='theartificial.png'/>
 
+      <p class="clearfix"> &nbsp; </p>
       </div> 
 
 
