@@ -24,21 +24,6 @@
       </div>
 
       <div id="contributors-subsection">
-      <h3>Diversity</h3>
-      <p>
-        Along with all the technical development, one of our main focuses of this conference will be 
-        outreach, community, and diversity. We will kick off the conference
-        with a panel—<a target=_blank href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet">Diversity: 
-        Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and the Internet</a>. It will take place
-        Tuesday, May 25 6-7:30pm EDT in Kresge Auditorium at Carnegie Mellon University.
-      </p>
-
-      <p>This panel will open a discussion we'll continue throughout the week as we draft a code
-      of conduct and community statement for the p5.js project.
-      </p>
-      </div>
-
-      <div id="contributors-subsection">
       <h3>Participants</h3>
       <p>
         <a href='http://huah.net/jason/' target='_blank'>Jason Alderman</a>,
@@ -91,6 +76,22 @@
 
       </div> 
 
+
+      <div id="contributors-subsection">
+      <h3>Diversity</h3>
+      <p>
+        Along with all the technical development, one of our main focuses of this conference will be 
+        outreach, community, and diversity. We will kick off the conference
+        with a panel—<a target=_blank href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet">Diversity: 
+        Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and the Internet</a>. It will take place
+        Tuesday, May 25 6-7:30pm EDT in Kresge Auditorium at Carnegie Mellon University.
+      </p>
+
+      <p>This panel will open a discussion we'll continue throughout the week as we draft a code
+      of conduct and community statement for the p5.js project.
+      </p>
+      </div>
+      
       <div id="contributors-subsection">
       <h3>Support</h3>
 
