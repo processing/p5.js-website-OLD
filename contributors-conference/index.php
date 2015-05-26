@@ -102,8 +102,9 @@
       <p>This event was made possible by a grant from the <a href="http://arts.gov/" target="_blank">National Endowment for the Arts</a>, 
       and generous support from the <a href="http://itp.nyu.edu/itp/" target="_blank">NYU Interactive Telecommunications Program</a> 
       (ITP), the <a href='http://processing.org' target=_blank>Processing Foundation</a>, 
-      <a href="http://tinysubversions.com/" target="_blank">Darius Kazemi</a>, 
       <a href="http://theartificial.nl/" target="_blank">TheArtificial</a>, <a href="http://bocoup.com/" target="_blank">Bocoup</a>, 
+      
+      <a href="http://tinysubversions.com/" target="_blank">Darius Kazemi</a>, 
       and <a href="http://www.du.edu/ahss/edp/" target="_blank">Emergent Digital Practices | University of Denver</a>.<br><b>Thank you!</b></p>
       
       <img style='width:18%' src='studio.png'/>
