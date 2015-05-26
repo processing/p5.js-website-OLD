@@ -3,7 +3,7 @@
   <?php include('../header.php'); ?>
   <body id="reference-page">
 
-    <?php include('../sidebar.php'); ?>
+    <?php include('../sidebar-minimal.php'); ?>
 
     <!-- content sections -->
     <div class="column-span">
@@ -20,6 +20,21 @@
       will gather to work on all aspects of p5.js, 
       including (but not limited to) new features, bug fixing, documentation, outreach, community, 
       design, and internationalization.
+      </p>
+      </div>
+
+      <div id="contributors-subsection">
+      <h3>Diversity</h3>
+      <p>
+        Along with all the technical development, one of our main focuses of this conference will be 
+        outreach, community, and diversity. We will kick off the conference
+        with a panel—<a target=_blank href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet">Diversity: 
+        Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and the Internet</a>. It will take place
+        Tuesday, May 25 6-7:30pm EDT in Kresge Auditorium at Carnegie Mellon University.
+      </p>
+
+      <p>This panel will open a discussion we'll continue throughout the week as we draft a code
+      of conduct and community statement for the p5.js project.
       </p>
       </div>
 
@@ -51,7 +66,7 @@
         <a href='http://www.workergnome.com/' target='_blank'>David Newbury</a>,
         <a href='http://molleindustria.org/' target='_blank'>Paolo Pedercini</a>,
         <a href='http://luisaph.com' target='_blank'>Luisa Pereira</a>,
-        <a href='https://twitter.com/mileshiroo' target='_blank'>Miles Peyton</a>,
+        <a href='http://mileshiroo.info/' target='_blank'>Miles Peyton</a>,
         <a href='https://pibloginthesky.wordpress.com/' target='_blank'>Stephanie Pi</a>,
         <a href='http://shiffman.net/' target='_blank'>Daniel Shiffman</a>,
         <a href='http://jasonsigal.cc' target='_blank'>Jason Sigal</a>,
@@ -64,11 +79,14 @@
       <div id="contributors-subsection">
       <h3>Participate Remotely</h3>
 
-      <p>We welcome virtual participate from afar! To follow along, you can join the p5.js Contributors Conference 
-      <a href='https://groups.google.com/forum/#!forum/p5js-contributors-conference' target='_blank'>mailing list</a>
-      for updates, follow <a href='http://twitter.com/p5xjs' target='_blank'>@p5xjs</a> on Twitter, participate in conversation 
-      on <a href='https://github.com/processing/p5.js/issues' target='_blank'>Github</a>, or join the conversation on Freenode IRC 
-      in the <a href='http://webchat.freenode.net/?channels=p5js' target='_blank'>#p5js channel</a>.</li>
+      <p>We welcome virtual participate from afar! We will typically be working 10am-6pm EDT 5/26-30. To follow along, you can:
+      <ul>
+      <li>Join the p5.js Contributors Conference <a href='https://groups.google.com/forum/#!forum/p5js-contributors-conference' target='_blank'>mailing list</a>
+      for updates.</li>
+      <li>Follow <a href='http://twitter.com/p5xjs' target='_blank'>@p5xjs</a> on Twitter.</li>
+      <li>Participate in conversation on <a href='https://github.com/processing/p5.js/issues' target='_blank'>Github</a>.</li>
+      <li>Join the conversation on Freenode IRC in the <a href='http://webchat.freenode.net/?channels=p5js' target='_blank'>#p5js channel</a>.</li>
+      </ul>
       </p>
 
       </div> 
@@ -80,10 +98,14 @@
       at Carnegie Mellon University, an academic laboratory for atypical, anti-disciplinary, and inter-institutional research at the intersections of arts, 
       science, technology, and culture.</p>
 
-      <p>This event is supported by a grant from the National Endowment for the Arts, with additional support from 
-      the <a href='http://processing.org'>Processing Foundation</a>, the <a href='http://itp.nyu.edu'>NYU Interactive Telecommunications Program</a>,
-      <a href='http://theartificial.nl/'>The Artificial</a>, <a href='http://www.du.edu/ahss/edp/'>University of Denver, Emergent Digital Practices</a>,
-      and <a href='http://tinysubversions.com/'>Darius Kazemi</a>. Thank you!</p>
+      <p>This event was made possible by a grant from the <a href="http://arts.gov/" target="_blank">National Endowment for the Arts</a>, 
+      and generous support from the <a href="http://itp.nyu.edu/itp/" target="_blank">NYU Interactive Telecommunications Program</a> 
+      (ITP), <a href="http://tinysubversions.com/" target="_blank">Darius Kazemi</a>, 
+      <a href="http://theartificial.nl/" target="_blank">TheArtificial</a>, <a href="http://bocoup.com/" target="_blank">Bocoup</a>, 
+      and <a href="http://www.du.edu/ahss/edp/" target="_blank">Emergent Digital Practices | University of Denver</a>.<br><b>Thank you!</b></p>
+      
+      <img src='logos.png'/>
+
       </div> 
 
 
