@@ -84,7 +84,12 @@
         outreach, community, and diversity. We will kick off the conference
         with a panel—<a target=_blank href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet">Diversity: 
         Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and the Internet</a>. It will take place
-        Tuesday, May 25 6-7:30pm EDT in Kresge Auditorium at Carnegie Mellon University.
+        Tuesday, May 25 6-7:30pm EDT in Kresge Auditorium at Carnegie Mellon University. Speakers include 
+        Maya Man, <a href='http://reas.com/'>Casey Reas</a>, <a href='http://johannahedva.com'>Johanna Hedva</a>, 
+        <a href='https://pibloginthesky.wordpress.com/'>Stephanie Pi</a>, <a href='http://phoenixperry.com'>Phoenix Perry</a>,
+        <a href='http://taeyoonchoi.com/'>Taeyoon Choi</a>, <a href='http://ablersite.org'>Sara Hendren</a>,
+        <a href='http://www.epicjefferson.com'>Epic Jefferson</a>, and <a href='http://chandlermcwilliams.com/'>Chandler
+        McWilliams</a>.
       </p>
 
       <p>This panel will open a discussion we'll continue throughout the week as we draft a code
