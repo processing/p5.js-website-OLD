@@ -8478,7 +8478,7 @@
         {
             "file": "src/rendering/rendering.js",
             "line": 12,
-            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).<br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
+            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).<br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
