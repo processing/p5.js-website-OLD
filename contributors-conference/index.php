@@ -107,13 +107,14 @@
       <a href="http://tinysubversions.com/" target="_blank">Darius Kazemi</a>, 
       and <a href="http://www.du.edu/ahss/edp/" target="_blank">Emergent Digital Practices | University of Denver</a>.<br><b>Thank you!</b></p>
       
+      <div style='width:100%; position: relative; text-align:center'><img style='width:38%; padding-bottom:20px' src='nea.jpg'/></div>
       <img style='width:18%' src='studio.png'/>
       <img style='width:18%' src='itp.png'/>
       <img style='width:18%' src='edp.png'/>
       <img style='width:18%' src='bocoup.png'/>
       <img style='width:18%' src='theartificial.png'/>
 
-      <p class="clearfix"> &nbsp; </p>
+      <p class="clearfix"> &nbsp;</p>
       </div> 
 
 
