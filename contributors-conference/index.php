@@ -101,18 +101,18 @@
 
       <p>This event was made possible by a grant from the <a href="http://arts.gov/" target="_blank">National Endowment for the Arts</a>, 
       and generous support from the <a href="http://itp.nyu.edu/itp/" target="_blank">NYU Interactive Telecommunications Program</a> 
-      (ITP), the <a href='http://processing.org' target=_blank>Processing Foundation</a>, 
+      (ITP), the <a href='http://foundation.processing.org' target=_blank>Processing Foundation</a>, 
       <a href="http://theartificial.nl/" target="_blank">TheArtificial</a>, <a href="http://bocoup.com/" target="_blank">Bocoup</a>, 
       
       <a href="http://tinysubversions.com/" target="_blank">Darius Kazemi</a>, 
       and <a href="http://www.du.edu/ahss/edp/" target="_blank">Emergent Digital Practices | University of Denver</a>.<br><b>Thank you!</b></p>
       
-      <div style='width:100%; position: relative; text-align:center'><img style='width:38%; padding-bottom:20px' src='nea.jpg'/></div>
-      <img style='width:18%' src='studio.png'/>
-      <img style='width:18%' src='itp.png'/>
-      <img style='width:18%' src='edp.png'/>
-      <img style='width:18%' src='bocoup.png'/>
-      <img style='width:18%' src='theartificial.png'/>
+      <div style='width:100%; position: relative; text-align:center'><a class='nounderline' href='http://arts.gov/' target=_blank ><img style='width:38%; padding-bottom:20px' src='nea.jpg'/></a></div>
+      <a class='nounderline' href='http://studioforcreativeinquiry.org' target=_blank ><img style='width:18%' src='studio.png'/>
+      <a class='nounderline' href='http://itp.nyu.edu/itp/' target=_blank ><img style='width:18%' src='itp.png'/>
+      <a class='nounderline' href='http://www.du.edu/ahss/edp/' target=_blank ><img style='width:18%' src='edp.png'/>
+      <a class='nounderline' href='http://bocoup.com/' target=_blank ><img style='width:18%' src='bocoup.png'/>
+      <a class='nounderline' href='http://theartificial.nl/' target=_blank ><img style='width:18%' src='theartificial.png'/></a>
 
       <p class="clearfix"> &nbsp;</p>
       </div> 
