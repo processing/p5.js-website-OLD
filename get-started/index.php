@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-    <?php include('version.php'); ?>
+    <?php include('../download/version.php'); ?>
   <body id="get-started-page">
 
     <?php include('../sidebar.php'); ?>
@@ -37,7 +37,7 @@
         href="http://cdnjs.com/libraries/p5.js" >p5.js CDN</a>. In this case you can 
         change the link to:
       </p>
-      
+
       <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>   
 
       <a name="environment" class="anchor"><h3>Environment</h3></a>
