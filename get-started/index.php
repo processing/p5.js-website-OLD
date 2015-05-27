@@ -38,7 +38,7 @@
         change the link to:
       </p>
 
-      <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>   
+      <pre><code class="language-markup">&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>   
 
       <a name="environment" class="anchor"><h3>Environment</h3></a>
 
