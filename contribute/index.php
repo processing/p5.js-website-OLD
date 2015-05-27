@@ -32,8 +32,13 @@
     <p>Teach &#8212; Check out the <a href="https://github.com/processing/p5.js/wiki/Education">education page</a> on the wiki to view
         resources from past classes, workshops, and events. Add your own links!</p>
 
+<<<<<<< HEAD
     <p>Create &#8212; p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show
        on the front page and inspire other people.  <a href="<?php echo getRoot(); ?>form/">Submit your work!</a> Get in touch at
+=======
+    <p>Create &#8212; p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show 
+       on the front page and inspire other people.  <a href="https://docs.google.com/forms/d/1dLNS9VB12TXl9vee0ys8x23ZCNo9RuzG8thIrAx0nTI/viewform">Submit your work!</a> Get in touch at 
+>>>>>>> master
        <a href="mailto:feature@p5js.org">feature@p5js.org</a>.</p>
 
 
