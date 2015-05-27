@@ -4870,13 +4870,16 @@
             "description": "The system variable mouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseX",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() {\n background(204);\n line(mouseX, 20, mouseX, 80);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Mouse"
         },
         {
             "file": "src/input/mouse.js",
-            "line": 24,
+            "line": 34,
             "description": "The system variable mouseY always contains the current vertical position\nof the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseY",
@@ -4886,7 +4889,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 32,
+            "line": 42,
             "description": "The system variable pmouseX always contains the horizontal position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the canvas.",
             "itemtype": "property",
             "name": "pmouseX",
@@ -4896,7 +4899,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 41,
+            "line": 51,
             "description": "The system variable pmouseY always contains the vertical position of the\nmouse in the frame previous to the current frame, relative to (0, 0) of\nthe canvas.",
             "itemtype": "property",
             "name": "pmouseY",
@@ -4906,7 +4909,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 50,
+            "line": 60,
             "description": "The system variable winMouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseX",
@@ -4916,7 +4919,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 58,
+            "line": 68,
             "description": "The system variable winMouseY always contains the current vertical\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseY",
@@ -4926,7 +4929,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 66,
+            "line": 76,
             "description": "The system variable pwinMouseX always contains the horizontal position\nof the mouse in the frame previous to the current frame, relative to\n(0, 0) of the window.",
             "itemtype": "property",
             "name": "pwinMouseX",
@@ -4936,7 +4939,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 75,
+            "line": 85,
             "description": "The system variable pwinMouseY always contains the vertical position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the window.",
             "itemtype": "property",
             "name": "pwinMouseY",
@@ -4946,8 +4949,11 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 84,
+            "line": 94,
             "description": "Processing automatically tracks if the mouse button is pressed and which\nbutton is pressed. The value of the system variable mouseButton is either\nLEFT, RIGHT, or CENTER depending on which button is pressed. Browsers are\nweird, USE AT YOUR OWN RISK FOR NOW!",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() {\n if (mousePressed && (mouseButton == LEFT)) {\n   fill(0);\n } else if (mousePressed && (mouseButton == RIGHT)) {\n   fill(255);\n } else {\n   fill(126);\n }\n rect(25, 25, 50, 50);\n}\n// Click within the image and press\n// the left and right mouse buttons to\n// change the value of the rectangle\nfunction draw() {\n rect(25, 25, 50, 50);\n}\n\nfunction mousePressed() {\n if (mouseButton == LEFT) {\n   fill(0);\n } else if (mouseButton == RIGHT) {\n   fill(255);\n } else {\n   fill(126);\n }\n}\n</code>\n</div>"
+            ],
             "itemtype": "property",
             "name": "mouseButton",
             "class": "p5",
@@ -4956,22 +4962,25 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 94,
+            "line": 135,
             "description": "The boolean system variable mouseIsPressed is true if the mouse is pressed\nand false if not.",
             "itemtype": "property",
             "name": "mouseIsPressed",
+            "example": [
+                "\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\nfunction draw() {\n  if (mouseIsPressed == true) {\n    fill(0);\n  } else {\n    fill(255);\n  }\n  rect(25, 25, 50, 50);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Mouse"
         },
         {
             "file": "src/input/mouse.js",
-            "line": 149,
+            "line": 206,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
             "example": [
-                "\n<div>\n<code>\n// Move the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseMoved() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Move the mouse across the page\n// to change its value\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseMoved() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseMoved() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4979,12 +4988,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 188,
+            "line": 245,
             "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
             "example": [
-                "\n<div>\n<code>\n// Drag the mouse across the page\n// to change its value\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseDragged() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseDragged() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Drag the mouse across the page\n// to change its value\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseDragged() {\n  value = value + 5;\n  if (value > 255) {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseDragged() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -4992,12 +5001,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 255,
-            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "line": 312,
+            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no\nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
             "example": [
-                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mousePressed() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mousePressed() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mousePressed() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mousePressed() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -5005,12 +5014,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 318,
+            "line": 375,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
             "example": [
-                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseReleased() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseReleased() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\n// after the mouse has been clicked\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseReleased() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseReleased() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -5018,12 +5027,12 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 379,
+            "line": 436,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
             "example": [
-                "\n<div>\n<code>\n// Click within the image to change \n// the value of the rectangle\n// after the mouse has been clicked\n      \nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseClicked() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseClicked() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Click within the image to change\n// the value of the rectangle\n// after the mouse has been clicked\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction mouseClicked() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction mouseClicked() {\n  ellipse(mouseX, mouseY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -5031,7 +5040,7 @@
         },
         {
             "file": "src/input/mouse.js",
-            "line": 429,
+            "line": 486,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -9618,7 +9627,7 @@
         {
             "file": "src/shape/vertex.js",
             "line": 35,
-            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite \ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices \nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work \nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
+            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite\ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices\nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "beginContour",
             "return": {
@@ -9650,7 +9659,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working   \nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15); \nvertex(92, 50); \nvertex(57.5, 85); \nvertex(22, 50); \nvertex(57.5, 15); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>  \nbeginShape(QUAD_STRIP); \nvertex(30, 20); \nvertex(30, 75); \nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20); \nvertex(65, 75); \nvertex(85, 20);\nvertex(85, 75); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>"
+                "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15);\nvertex(92, 50);\nvertex(57.5, 85);\nvertex(22, 50);\nvertex(57.5, 15);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUAD_STRIP);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 20);\nvertex(85, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -9737,7 +9746,7 @@
         {
             "file": "src/shape/vertex.js",
             "line": 354,
-            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite \ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices \nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work \nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
+            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite\ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices\nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "endContour",
             "return": {
