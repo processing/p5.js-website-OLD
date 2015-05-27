@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
+    <?php include('version.php'); ?>
   <body id="get-started-page">
 
     <?php include('../sidebar.php'); ?>
@@ -36,13 +37,8 @@
         href="http://cdnjs.com/libraries/p5.js" >p5.js CDN</a>. In this case you can 
         change the link to:
       </p>
-
-      <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.0.0/p5.js">&lt;/script></code></pre>   
-
-      <p>
-        Where &#8220;0.0.0&#8221; gets replaced by the version you&#8217;d like to use (the highest one is usually best).
-      </p>
-
+      
+      <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>   
 
       <a name="environment" class="anchor"><h3>Environment</h3></a>
 

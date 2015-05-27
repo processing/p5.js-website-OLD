@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<?php $version = "80"; ?>  <?php include('../header.php'); ?>
+<?php $version = "80"; ?>
+<?php include('../header.php'); ?>
   <body id="download-page">
 
     <?php include('../sidebar.php'); ?>
