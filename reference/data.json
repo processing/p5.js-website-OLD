@@ -3067,13 +3067,16 @@
                 "description": "joined String",
                 "type": "String"
             },
+            "example": [
+                "\n<div>\n<code>\nvar array = [\"Hello\", \"world!\"]\nvar separator = \" \"\nvar message = join(array, separator);\ntext(message, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 30,
+            "line": 40,
             "description": "This function is used to apply a regular expression to a piece of text,\nand return matching groups (elements found inside parentheses) as a\nString array. If there are no matches, a null value will be returned.\nIf no groups are specified in the regular expression, but the sequence\nmatches, an array of length 1 (with the matched text as the first element\nof the array) will be returned.\n\nTo use the function, first check to see if the result is null. If the\nresult is null, then the sequence did not match at all. If the sequence\ndid match, an array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular\nexpression, then the contents of each will be returned in the array.\nElement [0] of a regular expression match returns the entire matching\nstring, and the match groups start at element [1] (the first group is [1],\nthe second [2], and so on).",
             "itemtype": "method",
             "name": "match",
@@ -3093,13 +3096,16 @@
                 "description": "Array of Strings found",
                 "type": "Array"
             },
+            "example": [
+                "\n<div>\n<code>\nvar string = \"Hello p5js*!\"\nvar regexp = \"p5js\\\\*\"\nvar match = match(string, regexp);\ntext(match, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 57,
+            "line": 76,
             "description": "This function is used to apply a regular expression to a piece of text,\nand return a list of matching groups (elements found inside parentheses)\nas a two-dimensional String array. If there are no matches, a null value\nwill be returned. If no groups are specified in the regular expression,\nbut the sequence matches, a two dimensional array is still returned, but\nthe second dimension is only of length one.\n\nTo use the function, first check to see if the result is null. If the\nresult is null, then the sequence did not match at all. If the sequence\ndid match, a 2D array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular\nexpression, then the contents of each will be returned in the array.\nAssuming a loop with counter variable i, element [i][0] of a regular\nexpression match returns the entire matching string, and the match groups\nstart at element [i][1] (the first group is [i][1], the second [i][2],\nand so on).",
             "itemtype": "method",
             "name": "matchAll",
@@ -3119,13 +3125,16 @@
                 "description": "2d Array of Strings found",
                 "type": "Array"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar string = \"Hello p5js*! Hello world!\"\nvar regexp = \"Hello\"\nmatchAll(string, regexp);\n</code>\n</div>\n"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 95,
+            "line": 123,
             "description": "Utility function for formatting numbers into strings. There are two\nversions: one for formatting floats, and one for formatting ints.\nThe values for the digits, left, and right parameters should always\nbe positive integers.",
             "itemtype": "method",
             "name": "nf",
@@ -3164,7 +3173,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 146,
+            "line": 174,
             "description": "Utility function for formatting numbers into strings and placing\nappropriate commas to mark units of 1000. There are two versions: one\nfor formatting ints, and one for formatting an array of ints. The value\nfor the right parameter should always be a positive integer.",
             "itemtype": "method",
             "name": "nfc",
@@ -3185,13 +3194,16 @@
                 "description": "formatted String",
                 "type": "String|Array"
             },
+            "example": [
+                "\n<div>\n<code>\nvar num = nfc(1000.02, 1);\ntext(num, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 182,
+            "line": 217,
             "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
             "itemtype": "method",
             "name": "nfp",
@@ -3230,7 +3242,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 214,
+            "line": 249,
             "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
             "itemtype": "method",
             "name": "nfs",
@@ -3269,7 +3281,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 246,
+            "line": 281,
             "description": "The split() function maps to String.split(), it breaks a String into\npieces using a character or string as the delimiter. The delim parameter\nspecifies the character or characters that mark the boundaries between\neach piece. A String[] array is returned that contains each of the pieces.\n\nThe splitTokens() function works in a similar fashion, except that it\nsplits using a range of characters instead of a specific character or\nsequence.",
             "itemtype": "method",
             "name": "split",
@@ -3289,13 +3301,16 @@
                 "description": "Array of Strings",
                 "type": "Array"
             },
+            "example": [
+                "\n<div>\n<code>\nvar names = \"Pat,Xio,Alex\"\nvar splitString = split(names, \",\");\ntext(splitString[0], 5, 30);\ntext(splitString[1], 5, 50);\ntext(splitString[2], 5, 70);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 265,
+            "line": 310,
             "description": "The splitTokens() function splits a String at one or many character\ndelimiters or \"tokens.\" The delim parameter specifies the character or\ncharacters to be used as a boundary.\n\nIf no delim characters are specified, any whitespace character is used to\nsplit. Whitespace characters include tab (\\t), line feed (\\n), carriage\nreturn (\\r), form feed (\\f), and space.",
             "itemtype": "method",
             "name": "splitTokens",
@@ -3322,7 +3337,7 @@
         },
         {
             "file": "src/data/string_functions.js",
-            "line": 285,
+            "line": 331,
             "description": "Removes whitespace characters from the beginning and end of a String. In\naddition to standard whitespace characters such as space, carriage return,\nand tab, this function also removes the Unicode \"nbsp\" character.",
             "itemtype": "method",
             "name": "trim",
@@ -3338,6 +3353,9 @@
                 "description": "a trimmed String or Array of Strings",
                 "type": "String|Array"
             },
+            "example": [
+                "\n<div>\n<code>\nvar string = trim(\"  No new lines\\n   \");\ntext(string +\" here\", 2, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
