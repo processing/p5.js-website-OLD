@@ -25,7 +25,7 @@ $('.info').css('display', 'none');
 var currentId;
 var tag;
 
-$('.start-element').click(function () {
+$('.start-element').click(function() {
   
   var currentId = $(this).attr('id').toString();
   tag = '.info#' + currentId;

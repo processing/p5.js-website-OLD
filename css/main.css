@@ -145,6 +145,7 @@
     width: 500px;
     text-align: center;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 /*
@@ -482,6 +483,11 @@ textarea {
     color:#ED225D;
 }
 
+.home-links span{
+  color: #ED225D;
+  font-size: 10px;
+}
+
 #exampleDisplay, #exampleFrame, #exampleEditor {
     width: 36em;
     border: none;
@@ -615,6 +621,51 @@ variable */
     padding: 0em 0.5em !important;
 }
 
+/*
+  //////////////////////////////////////////////////
+    GALLERY
+  //////////////////////////////////////////////////
+*/
+.gallery-item {
+    font-size: .75em;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-item:hover {
+    font-size: .75em;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-item a:hover {
+    border: none;
+}
+
+img.gallery-img {
+    width: 200px;
+    height: 200px;
+}
+
+img.gallery-img:hover {
+    width: 200px;
+    height: 200px;
+    opacity: .8;
+}
+
+.gallery-source {
+    color: #AFAFAF;
+    font-size: .7em;
+}
+
+.gallery-source:hover {
+    color: #AFAFAF;
+    font-size: .7em;
+}
+
+
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
@@ -710,6 +761,7 @@ a:active, a:hover, #reference a:hover {
 
 a.anchor {
     color: #222 !important;
+    outline: none;
 }
 
 a.anchor:hover {
@@ -735,7 +787,7 @@ p {
 
 .highlight {background-color: rgba(237,34,93,0.15);}
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   margin: 1.414em 0 0.5em 0;
   font-weight: inherit;
   line-height: 1.2;
@@ -1230,6 +1282,23 @@ footer {
         z-index: 100;
     }
 
+    #sub-menu{
+      margin-top: -30px;
+    }
+
+    #sub-menu a{
+      display: inline-block;
+      margin-right: 10px;
+
+    }
+    #sub-menu a:hover{
+      color:#ED225D;
+    }
+
+    #sub-menu h5{
+      margin-top: 0 !important;
+    }
+
     #menu li {
         float:none;
         margin: 0 0 1em 0;
@@ -1247,7 +1316,7 @@ footer {
         /*content:" Â»";*/
         }
 
-    #menu li:nth-child(8) {
+    #menu li:nth-child(9) {
         margin-top:3em;
         padding-top: 0.5em;
         /*border-top: 0.06em solid rgba(51,51,51,0.25);*/
@@ -1256,9 +1325,13 @@ footer {
 
     #home-page .column-span {
             /*margin:0 0.75em 0 -1.85em; /* margin-right: 0.75em;  */
-        margin-left:7.7em;
+        margin-left:4.7em;
     }
 
+    /*.home-link-img{
+      width: 223px;
+      height: 72px;
+    }*/
 
     .left-column  {
         width:48%;
