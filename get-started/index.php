@@ -18,7 +18,7 @@
       <a href="https://github.com/processing/p5.js/wiki/Processing-transition">Processing
       transition tutorial</a>.
       </p>
-      <a class="anchor" href="#file-setup"><h3 class = "start-element" id = "download">Download and File Setup</h3></a>
+      <a class="anchor" href="#file-setup"><h3 class = "start-element tutorial-btn" id = "download">Download and File Setup</h3></a>
     <div class="info" id="download">
       <p>
         The easiest way to start is by using the empty example that comes with the
@@ -45,7 +45,7 @@
       </p>
     </div>
 
-      <a name="environment" class="anchor"><h3 class = "start-element" id = "environment">Environment</h3></a>
+      <a name="environment" class="anchor"><h3 class = "start-element tutorial-btn" id = "environment">Environment</h3></a>
       <div class="info" id = "environment">
       <p>
         You can use the <a href="http://en.wikipedia.org/wiki/Source_code_editor" 
@@ -72,7 +72,7 @@
       </p>
       </div>
 
-      <a name="your-first-sketch" class="anchor"><h3 class = "start-element" id = "sketch">Your First Sketch</h3></a>
+      <a name="your-first-sketch" class="anchor"><h3 class = "start-element tutorial-btn" id = "sketch">Your First Sketch</h3></a>
       <div class = "info" id = "sketch">
       <p>
         In your editor, type the following:
@@ -141,7 +141,7 @@ function draw() {
 
       <img src="../img/get-started/first-sketch2.png" />
     </div>
-      <h3 class = "start-element" id = "next">What Next?</h3>
+      <h3 class = "start-element tutorial-btn" id = "next">What Next?</h3>
       <div class = 'info' id = 'next'>
         <ul>
           <li>Read the 
