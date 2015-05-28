@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.4",
+        "version": "0.4.5",
         "url": ""
     },
     "files": {
@@ -2469,46 +2469,61 @@
             "description": "HALF_PI is a mathematical constant with the value\n1.57079632679489661923. It is half the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
             "itemtype": "property",
             "name": "HALF_PI",
+            "example": [
+                "\n<div><code>\narc(50, 50, 80, 80, 0, HALF_PI);\n</code></div>\n"
+            ],
             "class": "p5",
             "module": "Constants",
             "submodule": "Constants"
         },
         {
             "file": "src/core/constants.js",
-            "line": 31,
+            "line": 37,
             "description": "PI is a mathematical constant with the value\n3.14159265358979323846. It is the ratio of the circumference\nof a circle to its diameter. It is useful in combination with\nthe trigonometric functions sin() and cos().",
             "itemtype": "property",
             "name": "PI",
+            "example": [
+                "\n<div><code>\narc(50, 50, 80, 80, 0, PI);\n</code></div>"
+            ],
             "class": "p5",
             "module": "Constants",
             "submodule": "Constants"
         },
         {
             "file": "src/core/constants.js",
-            "line": 40,
+            "line": 51,
             "description": "QUARTER_PI is a mathematical constant with the value 0.7853982.\nIt is one quarter the ratio of the circumference of a circle to\nits diameter. It is useful in combination with the trigonometric\nfunctions sin() and cos().",
             "itemtype": "property",
             "name": "QUARTER_PI",
+            "example": [
+                "\n<div><code>\narc(50, 50, 80, 80, 0, QUARTER_PI);\n</code></div>\n"
+            ],
             "class": "p5",
             "module": "Constants",
             "submodule": "Constants"
         },
         {
             "file": "src/core/constants.js",
-            "line": 49,
+            "line": 66,
             "description": "TAU is an alias for TWO_PI, a mathematical constant with the\nvalue 6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
             "itemtype": "property",
             "name": "TAU",
+            "example": [
+                "\n<div><code>\narc(50, 50, 80, 80, 0, TAU);\n</code></div>\n"
+            ],
             "class": "p5",
             "module": "Constants",
             "submodule": "Constants"
         },
         {
             "file": "src/core/constants.js",
-            "line": 58,
+            "line": 81,
             "description": "TWO_PI is a mathematical constant with the value\n6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().",
             "itemtype": "property",
             "name": "TWO_PI",
+            "example": [
+                "\n<div><code>\narc(50, 50, 80, 80, 0, TWO_PI);\n</code></div>\n"
+            ],
             "class": "p5",
             "module": "Constants",
             "submodule": "Constants"
@@ -2598,7 +2613,7 @@
         {
             "file": "src/data/array_functions.js",
             "line": 13,
-            "description": "Adds a value to an Array, maps to Array.push.",
+            "description": "Adds a value to the end of an array. Extends the length of \nthe array by one. Maps to Array.push().",
             "itemtype": "method",
             "name": "append",
             "params": [
@@ -2613,13 +2628,16 @@
                     "type": "Any"
                 }
             ],
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n\nvar myArray = new Array(\"Mango\", \"Apple\", \"Papaya\") \nprint(myArray) // [\"Mango\", \"Apple\", \"Papaya\"]\n\nappend(myArray, \"Peach\")  \nprint(myArray) // [\"Mango\", \"Apple\", \"Papaya\", \"Peach\"]\n\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 25,
+            "line": 38,
             "description": "Copies an array (or part of an array) to another array. The src array is\ncopied to the dst array, beginning at the position specified by\nsrcPosition and into the position specified by dstPosition. The number of\nelements to copy is determined by length. Note that copying values\noverwrites existing values in the destination array. To append values\ninstead of overwriting them, use concat().\n\nThe simplified version with only two arguments — arrayCopy(src, dst) —\ncopies an entire array to another of the same size. It is equivalent to\narrayCopy(src, 0, dst, 0, src.length).\n\nUsing this function is far more efficient for copying array data than\niterating through a for() loop and copying each element individually.",
             "itemtype": "method",
             "name": "arrayCopy",
@@ -2653,14 +2671,17 @@
                     "optional": true
                 }
             ],
+            "example": [
+                "\n <div class=\"norender\"><code>\n function setup() {\n \n   var src = new Array(\"A\", \"B\", \"C\");\n   var dst = new Array( 1 ,  2 ,  3 );\n   var srcPosition = 1;\n   var dstPosition = 0;\n   var length = 2;\n\n   print(src); // [\"A\", \"B\", \"C\"]\n   print(dst); // [ 1 ,  2 ,  3 ]\n   \n   arrayCopy(src, srcPosition, dst, dstPosition, length);\n   print(dst); // [\"B\", \"C\", 3]\n   \n   }\n </div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 87,
-            "description": "Concatenates two arrays, maps to Array.concat(). For example,\nconcatenating the array { 1, 2, 3 } and the array { 4, 5, 6 } yields\n{ 1, 2, 3, 4, 5, 6 }.",
+            "line": 119,
+            "description": "Concatenates two arrays, maps to Array.concat(). Does not modify the \ninput arrays.",
             "itemtype": "method",
             "name": "concat",
             "params": [
@@ -2675,13 +2696,20 @@
                     "type": "Array"
                 }
             ],
+            "return": {
+                "description": "concatenated array",
+                "type": "Array"
+            },
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var arr1 = new Array(\"A\", \"B\", \"C\");\n  var arr2 = new Array( 1 ,  2 ,  3 );\n  \n  print(arr1); // [\"A\",\"B\",\"C\"]\n  print(arr2); // [1,2,3]\n  \n  var arr3 = concat(arr1, arr2);\n  \n  print(arr1); // [\"A\",\"B\",\"C\"]\n  print(arr2); // [1,2,3]\n  print(arr3); // [\"A\",\"B\",\"C\",1,2,3]\n \n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 100,
+            "line": 150,
             "description": "Reverses the order of an array, maps to Array.reverse()",
             "itemtype": "method",
             "name": "reverse",
@@ -2692,13 +2720,16 @@
                     "type": "Array"
                 }
             ],
+            "example": [
+                "\n<div class=\"norender\"><code>\nfunction setup() {\n  var myArray = new Array(\"A\", \"B\", \"C\");\n  print(myArray); // [\"A\",\"B\",\"C\"]\n  \n  reverse(myArray);\n  print(myArray); // [\"C\",\"B\",\"A\"]\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 110,
+            "line": 170,
             "description": "Decreases an array by one element and returns the shortened array,\nmaps to Array.pop().",
             "itemtype": "method",
             "name": "shorten",
@@ -2713,13 +2744,16 @@
                 "description": "shortened Array",
                 "type": "Array"
             },
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(\"A\", \"B\", \"C\");\n  print(myArray); // [\"A\",\"B\",\"C\"]\n  \n  var newArray = shorten(myArray);\n  print(myArray); // [\"A\",\"B\",\"C\"]\n  print(newArray); // [\"A\",\"B\"]\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 123,
+            "line": 194,
             "description": "Randomizes the order of the elements of an array.\nImplements Fisher-Yates Shuffle Algorithm\nhttp://Bost.Ocks.org/mike/shuffle/\nhttp://en.Wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
             "itemtype": "method",
             "name": "shuffle",
@@ -2749,7 +2783,7 @@
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 163,
+            "line": 234,
             "description": "Sorts an array of numbers from smallest to largest, or puts an array of\nwords in alphabetical order. The original array is not modified; a\nre-ordered array is returned. The count parameter states the number of\nelements to sort. For example, if there are 12 elements in an array and\ncount is set to 5, only the first 5 elements in the array will be sorted.",
             "itemtype": "method",
             "name": "sort",
@@ -2766,13 +2800,16 @@
                     "optional": true
                 }
             ],
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var words = new Array(\"banana\", \"apple\", \"pear\",\"lime\");\n  print(words); // [\"banana\", \"apple\", \"pear\", \"lime\"]\n  var count = 4; // length of array\n  \n  sort(words, count);\n  print(words); // [\"apple\", \"banana\", \"lime\", \"pear\"]\n}\n</div></code>\n<div class = \"norender\"><code>\nfunction setup() {\n  var numbers = new Array(2,6,1,5,14,9,8,12);\n  print(numbers); // [2,6,1,5,14,9,8,12]\n  var count = 5; // Less than the length of the array\n  \n  sort(numbers, count);\n  print(numbers); // [1,2,5,6,14,9,8,12]\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 185,
+            "line": 278,
             "description": "Inserts a value or an array of values into an existing array. The first\nparameter specifies the initial array to be modified, and the second\nparameter defines the data to be inserted. The third parameter is an index\nvalue which specifies the array position from which to insert data.\n(Remember that array index numbering starts at zero, so the first position\nis 0, the second position is 1, and so on.)",
             "itemtype": "method",
             "name": "splice",
@@ -2793,13 +2830,16 @@
                     "type": "Number"
                 }
             ],
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(0,1,2,3,4);\n  var insArray = new Array(\"A\",\"B\",\"C\");\n  print(myArray); // [0,1,2,3,4]\n  print(insArray); // [\"A\",\"B\",\"C\"]\n  \n  splice(myArray, insArray, 3);\n  print(myArray); // [0,1,2,\"A\",\"B\",\"C\",3,4]\n}  \n</div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
         },
         {
             "file": "src/data/array_functions.js",
-            "line": 206,
+            "line": 312,
             "description": "Extracts an array of elements from an existing array. The list parameter\ndefines the array from which the elements will be copied, and the start\nand count parameters specify which elements to extract. If no count is\ngiven, elements will be extracted from the start to the end of the array.\nWhen specifying the start, remember that the first array element is 0.\nThis function does not change the source array.",
             "itemtype": "method",
             "name": "subset",
@@ -2825,6 +2865,9 @@
                 "description": "Array of extracted elements",
                 "type": "Array"
             },
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(1,2,3,4,5);\n  print(myArray); // [1,2,3,4,5]\n  \n  var sub1 = subset(myArray, 0, 3);\n  var sub2 = subset(myArray, 2, 2);\n  print(sub1); // [1,2,3]\n  print(sub2); // [3,4]\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "Array Functions"
@@ -4321,7 +4364,7 @@
         {
             "file": "src/image/pixels.js",
             "line": 340,
-            "description": "<p>Changes the color of any pixel, or writes an image directly to the \ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, [100, 50, 10, 255]) using pixels[] is:</p>\n<pre><code class=\"language-markup\">pixels[4*(y*width+x)] = 100;\npixels[4*(y*width+x)+1] = 50;\npixels[4*(y*width+x)+2] = 10;\npixels[4*(y*width+x)+3] = 255;</code></pre>\n<p>See the reference for pixels[] for more information.</p>",
+            "description": "<p>Changes the color of any pixel, or writes an image directly to the \ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>\nAfter using set(), you must call updatePixels() for your changes to \nappear.  This should be called once all pixels have been set.\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, [100, 50, 10, 255]) using pixels[] is:</p>\n<pre><code class=\"language-markup\">pixels[4*(y*width+x)] = 100;\npixels[4*(y*width+x)+1] = 50;\npixels[4*(y*width+x)+2] = 10;\npixels[4*(y*width+x)+3] = 255;</code></pre>\n<p>See the reference for pixels[] for more information.</p>",
             "itemtype": "method",
             "name": "set",
             "params": [
@@ -4350,7 +4393,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 447,
+            "line": 451,
             "description": "Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you're only reading pixels from\nthe array, there's no need to call updatePixels() — updating is only\nnecessary to apply changes. updatePixels() should be called anytime the \npixels array is manipulated or set() is called.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -8752,7 +8795,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 23,
+            "line": 25,
             "description": "Return a array of objects that represent bezier curves which approximate \nthe circular arc centered at the origin, from startAngle to endAngle \n(radians) with the specified radius.\n\nEach bezier curve is an object with four points, where x1,y1 and\nx4,y4 are the arc's end points and x2,y2 and x3,y3 are the cubic bezier's\ncontrol points.",
             "class": "p5",
             "module": "Shape",
@@ -8760,7 +8803,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 51,
+            "line": 53,
             "description": "Cubic bezier approximation of a circular arc centered at the origin,\nfrom (radians) a1 to a2, where a2-a1 < pi/2.  The arc's radius is r.\n\nReturns an object with four points, where x1,y1 and x4,y4 are the arc's \nend points and x2,y2 and x3,y3 are the cubic bezier's control points.\n\nThis algorithm is based on the approach described in:\nA. Riškus, \"Approximation of a Cubic Bezier Curve by Circular Arcs and \nVice Versa,\" Information Technology and Control, 35(4), 2006 pp. 371-378.",
             "class": "p5",
             "module": "Shape",
@@ -8768,7 +8811,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 100,
+            "line": 103,
             "description": "Draw an arc.\n\nIf a,b,c,d,start and stop are the only params provided, draws an\nopen pie.\n\nIf mode is provided draws the arc either open, chord or pie, dependent\non the variable provided.",
             "itemtype": "method",
             "name": "arc",
@@ -8823,7 +8866,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 215,
+            "line": 218,
             "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape's width and height. The\norigin may be changed with the ellipseMode() function.",
             "itemtype": "method",
             "name": "ellipse",
@@ -8862,7 +8905,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 298,
+            "line": 301,
             "description": "Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.",
             "itemtype": "method",
             "name": "line",
@@ -8901,7 +8944,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 345,
+            "line": 348,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point.",
             "itemtype": "method",
             "name": "point",
@@ -8930,7 +8973,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 397,
+            "line": 400,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -8989,7 +9032,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 442,
+            "line": 445,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function. If provided, the fifth, sixth\nseventh and eighth parameters, if specified, determine corner radius for\nthe top-right, top-left, lower-right and lower-left corners, respectively.\nAn omitted corner radius parameter is set to the value of the previously\nspecified radius value in the parameter list.",
             "itemtype": "method",
             "name": "rect",
@@ -9052,7 +9095,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 548,
+            "line": 551,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -9862,13 +9905,16 @@
             "description": "By default, p5.js loops through draw() continuously, executing the code\nwithin it. However, the draw() loop may be stopped by calling noLoop().\nIn that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
             "name": "loop",
+            "example": [
+                "\n<div><code>\nvar x = 0;\nfunction setup() {\n  createCanvas(100, 100);\n  noLoop();\n}\n\nfunction draw() {\n  background(204);\n  x = x + 0.1;\n  if (x > width) {\n    x = 0;\n  }\n  line(x, 0, x, height); \n}\n\nfunction mousePressed() {\n  loop();\n}\n\nfunction mouseReleased() {\n  noLoop();\n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
         },
         {
             "file": "src/structure/structure.js",
-            "line": 89,
+            "line": 115,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "push",
@@ -9881,7 +9927,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 157,
+            "line": 183,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -9894,7 +9940,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 232,
+            "line": 258,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -14604,11 +14650,11 @@
         },
         {
             "message": "Missing item type\nReturn a array of objects that represent bezier curves which approximate \nthe circular arc centered at the origin, from startAngle to endAngle \n(radians) with the specified radius.\n\nEach bezier curve is an object with four points, where x1,y1 and\nx4,y4 are the arc's end points and x2,y2 and x3,y3 are the cubic bezier's\ncontrol points.",
-            "line": " src/shape/2d_primitives.js:23"
+            "line": " src/shape/2d_primitives.js:25"
         },
         {
             "message": "Missing item type\nCubic bezier approximation of a circular arc centered at the origin,\nfrom (radians) a1 to a2, where a2-a1 < pi/2.  The arc's radius is r.\n\nReturns an object with four points, where x1,y1 and x4,y4 are the arc's \nend points and x2,y2 and x3,y3 are the cubic bezier's control points.\n\nThis algorithm is based on the approach described in:\nA. Riškus, \"Approximation of a Cubic Bezier Curve by Circular Arcs and \nVice Versa,\" Information Technology and Control, 35(4), 2006 pp. 371-378.",
-            "line": " src/shape/2d_primitives.js:51"
+            "line": " src/shape/2d_primitives.js:53"
         },
         {
             "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
