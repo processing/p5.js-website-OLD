@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.4",
+        "version": "0.4.5",
         "url": ""
     },
     "files": {
@@ -4321,7 +4321,7 @@
         {
             "file": "src/image/pixels.js",
             "line": 340,
-            "description": "<p>Changes the color of any pixel, or writes an image directly to the \ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, [100, 50, 10, 255]) using pixels[] is:</p>\n<pre><code class=\"language-markup\">pixels[4*(y*width+x)] = 100;\npixels[4*(y*width+x)+1] = 50;\npixels[4*(y*width+x)+2] = 10;\npixels[4*(y*width+x)+3] = 255;</code></pre>\n<p>See the reference for pixels[] for more information.</p>",
+            "description": "<p>Changes the color of any pixel, or writes an image directly to the \ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>\nAfter using set(), you must call updatePixels() for your changes to \nappear.  This should be called once all pixels have been set.\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. The equivalent statement\nto set(x, y, [100, 50, 10, 255]) using pixels[] is:</p>\n<pre><code class=\"language-markup\">pixels[4*(y*width+x)] = 100;\npixels[4*(y*width+x)+1] = 50;\npixels[4*(y*width+x)+2] = 10;\npixels[4*(y*width+x)+3] = 255;</code></pre>\n<p>See the reference for pixels[] for more information.</p>",
             "itemtype": "method",
             "name": "set",
             "params": [
@@ -4350,7 +4350,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 447,
+            "line": 451,
             "description": "Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you're only reading pixels from\nthe array, there's no need to call updatePixels() — updating is only\nnecessary to apply changes. updatePixels() should be called anytime the \npixels array is manipulated or set() is called.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -5049,13 +5049,16 @@
                 "description": "the current day",
                 "type": "Number"
             },
+            "example": [
+                "\n<div>\n<code>\nvar day = day();\ntext(\"Current day: \\n\"+day, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Time & Date"
         },
         {
             "file": "src/input/time_date.js",
-            "line": 24,
+            "line": 31,
             "description": "p5.js communicates with the clock on your computer. The hour() function\nreturns the current hour as a value from 0 - 23.",
             "itemtype": "method",
             "name": "hour",
@@ -5063,13 +5066,16 @@
                 "description": "the current hour",
                 "type": "Number"
             },
+            "example": [
+                "\n<div>\n<code>\nvar hour = hour();\ntext(\"Current hour:\\n\"+hour, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Time & Date"
         },
         {
             "file": "src/input/time_date.js",
-            "line": 35,
+            "line": 49,
             "description": "p5.js communicates with the clock on your computer. The minute() function\nreturns the current minute as a value from 0 - 59.",
             "itemtype": "method",
             "name": "minute",
@@ -5077,13 +5083,16 @@
                 "description": "the current minute",
                 "type": "Number"
             },
+            "example": [
+                "\n<div>\n<code>\nvar minute = minute();\ntext(\"Current minute: \\n:\"+minute, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Time & Date"
         },
         {
             "file": "src/input/time_date.js",
-            "line": 46,
+            "line": 67,
             "description": "Returns the number of milliseconds (thousandths of a second) since\nstarting the program. This information is often used for timing events and\nanimation sequences.",
             "itemtype": "method",
             "name": "millis",
@@ -5091,13 +5100,16 @@
                 "description": "the number of milliseconds since starting the program",
                 "type": "Number"
             },
+            "example": [
+                "\n<div>\n<code>\nvar millisecond = millis();\ntext(\"Milliseconds \\nrunning: \"+millisecond, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Time & Date"
         },
         {
             "file": "src/input/time_date.js",
-            "line": 58,
+            "line": 86,
             "description": "p5.js communicates with the clock on your computer. The month() function\nreturns the current month as a value from 1 - 12.",
             "itemtype": "method",
             "name": "month",
@@ -5105,13 +5117,16 @@
                 "description": "the current month",
                 "type": "Number"
             },
+            "example": [
+                "\n<div>\n<code>\nvar month = month();\ntext(\"Current month: \\n\"+month, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Time & Date"
         },
         {
             "file": "src/input/time_date.js",
-            "line": 69,
+            "line": 104,
             "description": "p5.js communicates with the clock on your computer. The second() function\nreturns the current second as a value from 0 - 59.",
             "itemtype": "method",
             "name": "second",
@@ -5119,13 +5134,16 @@
                 "description": "the current second",
                 "type": "Number"
             },
+            "example": [
+                "\n<div>\n<code>\nvar second = second();\ntext(\"Current second: \\n\" +second, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Time & Date"
         },
         {
             "file": "src/input/time_date.js",
-            "line": 80,
+            "line": 122,
             "description": "p5.js communicates with the clock on your computer. The year() function\nreturns the current year as an integer (2014, 2015, 2016, etc).",
             "itemtype": "method",
             "name": "year",
@@ -5133,6 +5151,9 @@
                 "description": "the current year",
                 "type": "Number"
             },
+            "example": [
+                "\n<div>\n<code>\nvar year = year();\ntext(\"Current year: \\n\" +year, 5, 50);\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Input",
             "submodule": "Time & Date"
@@ -8752,7 +8773,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 23,
+            "line": 25,
             "description": "Return a array of objects that represent bezier curves which approximate \nthe circular arc centered at the origin, from startAngle to endAngle \n(radians) with the specified radius.\n\nEach bezier curve is an object with four points, where x1,y1 and\nx4,y4 are the arc's end points and x2,y2 and x3,y3 are the cubic bezier's\ncontrol points.",
             "class": "p5",
             "module": "Shape",
@@ -8760,7 +8781,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 51,
+            "line": 53,
             "description": "Cubic bezier approximation of a circular arc centered at the origin,\nfrom (radians) a1 to a2, where a2-a1 < pi/2.  The arc's radius is r.\n\nReturns an object with four points, where x1,y1 and x4,y4 are the arc's \nend points and x2,y2 and x3,y3 are the cubic bezier's control points.\n\nThis algorithm is based on the approach described in:\nA. Riškus, \"Approximation of a Cubic Bezier Curve by Circular Arcs and \nVice Versa,\" Information Technology and Control, 35(4), 2006 pp. 371-378.",
             "class": "p5",
             "module": "Shape",
@@ -8768,7 +8789,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 100,
+            "line": 103,
             "description": "Draw an arc.\n\nIf a,b,c,d,start and stop are the only params provided, draws an\nopen pie.\n\nIf mode is provided draws the arc either open, chord or pie, dependent\non the variable provided.",
             "itemtype": "method",
             "name": "arc",
@@ -8823,7 +8844,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 215,
+            "line": 218,
             "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape's width and height. The\norigin may be changed with the ellipseMode() function.",
             "itemtype": "method",
             "name": "ellipse",
@@ -8862,7 +8883,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 298,
+            "line": 301,
             "description": "Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.",
             "itemtype": "method",
             "name": "line",
@@ -8901,7 +8922,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 345,
+            "line": 348,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point.",
             "itemtype": "method",
             "name": "point",
@@ -8930,7 +8951,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 397,
+            "line": 400,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -8989,7 +9010,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 442,
+            "line": 445,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function. If provided, the fifth, sixth\nseventh and eighth parameters, if specified, determine corner radius for\nthe top-right, top-left, lower-right and lower-left corners, respectively.\nAn omitted corner radius parameter is set to the value of the previously\nspecified radius value in the parameter list.",
             "itemtype": "method",
             "name": "rect",
@@ -9052,7 +9073,7 @@
         },
         {
             "file": "src/shape/2d_primitives.js",
-            "line": 548,
+            "line": 551,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -9862,13 +9883,16 @@
             "description": "By default, p5.js loops through draw() continuously, executing the code\nwithin it. However, the draw() loop may be stopped by calling noLoop().\nIn that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
             "name": "loop",
+            "example": [
+                "\n<div><code>\nvar x = 0;\nfunction setup() {\n  createCanvas(100, 100);\n  noLoop();\n}\n\nfunction draw() {\n  background(204);\n  x = x + 0.1;\n  if (x > width) {\n    x = 0;\n  }\n  line(x, 0, x, height); \n}\n\nfunction mousePressed() {\n  loop();\n}\n\nfunction mouseReleased() {\n  noLoop();\n}\n</code></div>"
+            ],
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
         },
         {
             "file": "src/structure/structure.js",
-            "line": 89,
+            "line": 115,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "push",
@@ -9881,7 +9905,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 157,
+            "line": 183,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -9894,7 +9918,7 @@
         },
         {
             "file": "src/structure/structure.js",
-            "line": 232,
+            "line": 258,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -14604,11 +14628,11 @@
         },
         {
             "message": "Missing item type\nReturn a array of objects that represent bezier curves which approximate \nthe circular arc centered at the origin, from startAngle to endAngle \n(radians) with the specified radius.\n\nEach bezier curve is an object with four points, where x1,y1 and\nx4,y4 are the arc's end points and x2,y2 and x3,y3 are the cubic bezier's\ncontrol points.",
-            "line": " src/shape/2d_primitives.js:23"
+            "line": " src/shape/2d_primitives.js:25"
         },
         {
             "message": "Missing item type\nCubic bezier approximation of a circular arc centered at the origin,\nfrom (radians) a1 to a2, where a2-a1 < pi/2.  The arc's radius is r.\n\nReturns an object with four points, where x1,y1 and x4,y4 are the arc's \nend points and x2,y2 and x3,y3 are the cubic bezier's control points.\n\nThis algorithm is based on the approach described in:\nA. Riškus, \"Approximation of a Cubic Bezier Curve by Circular Arcs and \nVice Versa,\" Information Technology and Control, 35(4), 2006 pp. 371-378.",
-            "line": " src/shape/2d_primitives.js:51"
+            "line": " src/shape/2d_primitives.js:53"
         },
         {
             "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
