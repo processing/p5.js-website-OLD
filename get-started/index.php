@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
   <?php include('../header.php'); ?>
-    <?php include('../download/version.php'); ?>
   <body id="get-started-page">
 
     <?php include('../sidebar.php'); ?>
@@ -19,7 +18,8 @@
       <a href="https://github.com/processing/p5.js/wiki/Processing-transition">Processing
       transition tutorial</a>.
       </p>
-      <a class="anchor" href="#file-setup"><h3>Download and File Setup</h3></a>
+      <a class="anchor" href="#file-setup"><h3 class = "start-element" id = "download">Download and File Setup</h3></a>
+    <div class="info" id="download">
       <p>
         The easiest way to start is by using the empty example that comes with the
         <a href="../download/">p5.js complete</a> download. 
@@ -38,10 +38,15 @@
         change the link to:
       </p>
 
-      <pre><code class="language-markup">&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>   
+      <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/0.0.0/p5.js">&lt;/script></code></pre>   
 
-      <a name="environment" class="anchor"><h3>Environment</h3></a>
+      <p>
+        Where &#8220;0.0.0&#8221; gets replaced by the version you&#8217;d like to use (the highest one is usually best).
+      </p>
+    </div>
 
+      <a name="environment" class="anchor"><h3 class = "start-element" id = "environment">Environment</h3></a>
+      <div class="info" id = "environment">
       <p>
         You can use the <a href="http://en.wikipedia.org/wiki/Source_code_editor" 
         target="_blank">code editor</a> of your choice. Instructions for getting set up 
@@ -62,13 +67,13 @@
         <img src="../img/get-started/sublime2.png" />
       </p>
       
-      <p>Open the index.html file in your browser by double clicking on it in your file manager or type: 
-        <code>file:///the/file/path/to/your/html</code> 
-        in the address bar to view your sketch.
+      <p>Open a web browser. Type:<br> <code>localhost/path/to/your/index.html</code> 
+          <br> in the address bar to view your sketch.
       </p>
+      </div>
 
-      <a name="your-first-sketch" class="anchor"><h3>Your First Sketch</h3></a>
-
+      <a name="your-first-sketch" class="anchor"><h3 class = "start-element" id = "sketch">Your First Sketch</h3></a>
+      <div class = "info" id = "sketch">
       <p>
         In your editor, type the following:
       </p>
@@ -135,8 +140,9 @@ function draw() {
       </p>
 
       <img src="../img/get-started/first-sketch2.png" />
-
-      <h3>What Next?</h3>
+    </div>
+      <h3 class = "start-element" id = "next">What Next?</h3>
+      <div class = 'info' id = 'next'>
         <ul>
           <li>Read the 
           <a href="https://github.com/processing/p5.js/wiki/Processing-transition">
@@ -148,6 +154,7 @@ function draw() {
         <li>Check out the <a href="../learn/">learn</a> page for tutorials and
           examples.</li>  
         </ul>
+      </div>
 
 
       <p style="font-size: 1em; color:#AFAFAF">Parts of this tutorial were adapted from the book, Getting Started with Processing, by Casey Reas 
