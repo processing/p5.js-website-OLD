@@ -9,13 +9,32 @@
     <div class="column-span">
 
     <section>
-      <h2>Learn</h2>
-
-      <a name="tutorials" class="anchor"><h3>Tutorials</h3></a>
+      <h2>Tutorials</h2>
       
-      <p>The <a href="#tutorials">tutorials</a> provide more in-depth or step-by-step overviews of 
+      <p>These tutorials provide more in-depth or step-by-step overviews of 
       particular topics. Scroll down to see <a href="#examples">examples</a> demonstrating a variety
       of p5.js topics.</p>
+
+      <div class="left-column">
+        <a class="nounderline" href="http://hello.p5js.org/">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="http://hello.p5js.org/"><h4>Hello p5.js</h4></a>
+        </div>
+        <p>This short video will introduce you to the library and what you can do with it.</p> 
+      </div>
+
+      <div class="right-column">
+        <a class="nounderline" href="http://p5js.org/get-started/">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="http://p5js.org/get-started/"><h4>Getting Started</h4></a>
+        </div>
+        <p>Welcome to p5.js! <br> This introduction covers the basics of setting up a p5.js project.</p> 
+      </div>
+
+
+      <div class="spacer"></div>
 
       <div class="left-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js-overview">

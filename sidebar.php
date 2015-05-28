@@ -31,10 +31,10 @@
 <ul id="menu">
   <li><a href="<?php echo getRoot(); ?>">Home</a></li>
   <li><a href="<?php echo getRoot(); ?>download/">Download</a></li> 
-  <li><a href="<?php echo getRoot(); ?>get-started/">Get&nbsp;Started</a></li>
+    <li><a href="<?php echo getRoot(); ?>gallery/">Gallery</a></li>
   <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>libraries/">Libraries</a></li>
-  <li><a href="<?php echo getRoot(); ?>learn/">Learn</a></li>
+  <li><a href="<?php echo getRoot(); ?>learn/">Tutorials</a></li>
   <li><a href="<?php echo getRoot(); ?>learn/#examples">Examples</a></li>
   <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
   <li><a href="http://forum.processing.org/two/" target=_blank class="other-link">Forum</a></li>
