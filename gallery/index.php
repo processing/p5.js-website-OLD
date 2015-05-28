@@ -50,6 +50,26 @@
          <a class = "gallery-source"> Google Summer of Code, 2014 </a>
         </p>
     </div>
+
+    <div class = "gallery-item">
+        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        target="_blank">
+           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
+           width = "5" alt = "preview image" title = "Diversity Panel">
+        </a>
+        <br>
+        <p>
+         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         target="_blank">
+            p5.js + p5.sound
+         </a>
+         <br>
+         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+        </p>
+    </div>
+
+    <div class="spacer"></div>
+
     <div class = "gallery-item">
         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
         target="_blank">
@@ -98,6 +118,9 @@
          <a class = "gallery-source"> Google Summer of Code, 2014 </a>
         </p>
     </div>
+
+    <div class="spacer"></div>
+
     <div class = "gallery-item">
         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
         target="_blank">
@@ -114,7 +137,39 @@
          <a class = "gallery-source"> Google Summer of Code, 2014 </a>
         </p>
     </div>
-     </div>
+    <div class = "gallery-item">
+        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        target="_blank">
+           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
+           width = "5" alt = "preview image" title = "Diversity Panel">
+        </a>
+        <br>
+        <p>
+         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         target="_blank">
+            p5.js + p5.sound
+         </a>
+         <br>
+         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+        </p>
+    </div>
+    <div class = "gallery-item">
+        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        target="_blank">
+           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
+           width = "5" alt = "preview image" title = "Diversity Panel">
+        </a>
+        <br>
+        <p>
+         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         target="_blank">
+            p5.js + p5.sound
+         </a>
+         <br>
+         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+        </p>
+    </div>
+</div>
 
     </section>
 
