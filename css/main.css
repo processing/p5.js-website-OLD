@@ -125,6 +125,30 @@
 
 /*
   //////////////////////////////////////////////////
+    GET STARTED
+  //////////////////////////////////////////////////
+*/
+.tutorial-btn {
+    background: white;
+    color: black !important;
+    padding: 7px;
+    width: 500px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tutorial-btn:hover {
+    background: #AFAFAF;
+    color: white !important;
+    padding: 7px;
+    width: 500px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/*
+  //////////////////////////////////////////////////
     REFERENCE
   //////////////////////////////////////////////////
 */
