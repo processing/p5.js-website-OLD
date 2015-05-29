@@ -29,6 +29,7 @@ $(function() {
         offset     = $sidebar.offset(),
         topPadding = 0;
 
+
       if (window.matchMedia("(min-width:720px").matches) {
           $window.scroll(function() {
               if ($window.scrollTop() > offset.top) {
