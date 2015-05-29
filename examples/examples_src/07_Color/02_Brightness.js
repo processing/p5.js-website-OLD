@@ -1,7 +1,9 @@
 /*
  * @name Brightness
- * @description By Dan Shiffman. This program adjusts the brightness of a part 
+ * @description By Dan Shiffman. This program adjusts the brightness of a part
  * of the image by calculating the distance of each pixel to the mouse.
+ * <p><em><span class="small"> To run this example locally, you will need
+ * at least an image file and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  */
 var img;
 

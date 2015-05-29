@@ -2,9 +2,10 @@
  * @name Video
  * @frame 710,250
  * @description <p>Load a video with multiple formats and toggle between playing
- * and paused with a button press. You will need to include the 
- * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
- * for this example to work in your own project.</p>
+ * and paused with a button press. 
+ * <p><em><span class="small"> To run this example locally, you will need at least
+ * one video file, and the
+ * <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>.</span></em></p>
  */
 var playing = false;
 var fingers;
@@ -13,7 +14,7 @@ var button;
 
 function setup() {
   // specify multiple formats for different browsers
-  fingers = createVideo(['assets/fingers.mov', 
+  fingers = createVideo(['assets/fingers.mov',
                          'assets/fingers.webm']);
   button = createButton('play');
   button.mousePressed(toggleVid); // attach button listener
