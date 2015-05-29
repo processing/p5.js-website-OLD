@@ -1,10 +1,10 @@
 /**
  * @name  Amplitude Analysis
- * @description <p>Analyze the amplitude (volume) of sound with 
+ * @description <p>Analyze the amplitude (volume) of sound with
  * p5.Amplitude.</p>
- * <p><em><span class="small">You will need to include the 
+ * <p><em><span class="small"> To run this example locally, you will need the
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</em></span></p>
+ * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  */
 var song, analyzer;
 

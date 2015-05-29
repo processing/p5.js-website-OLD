@@ -1,13 +1,13 @@
 /*
  * @name Sound Effect
  * @description <p>Play a sound effect when the mouse is clicked inside the circle.</p>
- * <p><em><span class="small">You will need to include the 
+ * <p><em><span class="small"> To run this example locally, you will need the
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</em></span></p>
+ * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  */
 // Adapted from Learning Processing by Daniel Shiffman
 // http://www.learningprocessing.com
-// Doorbell sample by Corsica_S via freesound.org, 
+// Doorbell sample by Corsica_S via freesound.org,
 // Creative Commons BY 3.0
 
 // A sound file object
@@ -19,7 +19,7 @@ var doorbell;
 function setup() {
   createCanvas(200, 200);
 
-  // Load the sound file. 
+  // Load the sound file.
   // We have included both an MP3 and an OGG version.
   soundFormats('mp3', 'ogg');
   dingdong = loadSound('assets/doorbell.mp3');
