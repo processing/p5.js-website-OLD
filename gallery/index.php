@@ -19,156 +19,110 @@
       </p>
 
     <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
         target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
+           <img class = "gallery-img" src="../img/gallery-images/social-tension.png" 
+           width = "5" alt = "preview image" title = "Social Tension">
         </a>
         <br>
         <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
          target="_blank">
-            p5.js + p5.sound
+            Social Tension
          </a>
          <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+         <a class = "gallery-source"> Christine de Carteret, 2015 </a>
         </p>
     </div>
     <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        <a href="http://samanthaticknor.com/images/scroll/two.html"
         target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
+           <img class = "gallery-img" src="../img/gallery-images/ol-scroll.png" 
            width = "5" alt = "preview image" title = "Diversity Panel">
         </a>
         <br>
         <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         <a href="http://samanthaticknor.com/images/scroll/two.html"
          target="_blank">
-            p5.js + p5.sound
+            Ol' Scroll
          </a>
          <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
-        </p>
-    </div>
-
-    <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
-        target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
-        </a>
-        <br>
-        <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
-         target="_blank">
-            p5.js + p5.sound
-         </a>
-         <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+         <a class = "gallery-source"> Sam Ticknor, 2015 </a>
         </p>
     </div>
 
-    <div class="spacer"></div>
-
     <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        <a href="http://www.michellechandra.com/portfolio/star-trails/"
         target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
+           <img class = "gallery-img" src="../img/gallery-images/star-trails.png" 
+           width = "5" alt = "preview image" title = "Star Trails">
         </a>
         <br>
         <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         <a href="http://www.michellechandra.com/portfolio/star-trails/"
          target="_blank">
-            p5.js + p5.sound
+            Star Trails
          </a>
          <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
-        </p>
-    </div>
-    <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
-        target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
-        </a>
-        <br>
-        <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
-         target="_blank">
-            p5.js + p5.sound
-         </a>
-         <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
-        </p>
-    </div>
-    <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
-        target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
-        </a>
-        <br>
-        <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
-         target="_blank">
-            p5.js + p5.sound
-         </a>
-         <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+         <a class = "gallery-source"> Michelle Chandra, Jason Sigal, 2014 </a>
         </p>
     </div>
 
     <div class="spacer"></div>
 
     <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        <a href="http://emojibooth.biz/"
         target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
+           <img class = "gallery-img" src="../img/gallery-images/emoji-booth.png" 
            width = "5" alt = "preview image" title = "Diversity Panel">
         </a>
         <br>
         <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         <a href="http://emojibooth.biz/"
          target="_blank">
-            p5.js + p5.sound
+            Emoji Cam
          </a>
          <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+         <a class = "gallery-source"> Alex Wiles, 2015</a>
         </p>
     </div>
+
     <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        <a href="http://therewasaguy.github.io/p5-music-viz/demos/08_echonestPitchSegment/"
         target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
+           <img class = "gallery-img" src="../img/gallery-images/music-viz.png" 
            width = "5" alt = "preview image" title = "Diversity Panel">
         </a>
         <br>
         <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         <a href="http://therewasaguy.github.io/p5-music-viz/demos/08_echonestPitchSegment/"
          target="_blank">
-            p5.js + p5.sound
+            Music Viz
          </a>
          <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+         <a class = "gallery-source"> Jason Sigal, 2014 </a>
         </p>
     </div>
+
     <div class = "gallery-item">
-        <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+        <a href="http://ericrosenbaum.github.io/MK-1/"
         target="_blank">
-           <img class = "gallery-img" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_-03-1024x710.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
+           <img class = "gallery-img" src="../img/gallery-images/keyboard.png" 
+           width = "5" alt = "preview image" title = "Keyboard">
         </a>
         <br>
         <p>
-         <a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet"
+         <a href="http://ericrosenbaum.github.io/MK-1/"
          target="_blank">
-            p5.js + p5.sound
+            Sampling Keyboard
          </a>
          <br>
-         <a class = "gallery-source"> Google Summer of Code, 2014 </a>
+         <a class = "gallery-source"> Eric Rosenbaum, 2014 </a>
         </p>
     </div>
+
+    <div class="spacer"></div>
+
 </div>
 
     </section>
