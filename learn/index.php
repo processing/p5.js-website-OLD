@@ -13,7 +13,7 @@
       <h2>Tutorials</h2>
 
       <p>These tutorials provide more in-depth or step-by-step overviews of
-      particular topics. Click here to see <a href="http://p5js.org/examples">examples</a> demonstrating a variety
+      particular topics. Click here to see <a href="<?php echo getRoot(); ?>examples/">examples</a> demonstrating a variety
       of p5.js topics.</p>
 
       <div class="left-column">

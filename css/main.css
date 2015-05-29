@@ -621,50 +621,6 @@ variable */
     padding: 0em 0.5em !important;
 }
 
-/*
-  //////////////////////////////////////////////////
-    GALLERY
-  //////////////////////////////////////////////////
-*/
-.gallery-item {
-    font-size: .75em;
-    text-align: center;
-    display: inline-block;
-    margin: 10px;
-}
-
-.gallery-item:hover {
-    font-size: .75em;
-    text-align: center;
-    display: inline-block;
-    margin: 10px;
-}
-
-.gallery-item a:hover {
-    border: none;
-}
-
-img.gallery-img {
-    width: 200px;
-    height: 200px;
-}
-
-img.gallery-img:hover {
-    width: 200px;
-    height: 200px;
-    opacity: .8;
-}
-
-.gallery-source {
-    color: #AFAFAF;
-    font-size: .7em;
-}
-
-.gallery-source:hover {
-    color: #AFAFAF;
-    font-size: .7em;
-}
-
 
 /* ==========================================================================
    Chrome Frame prompt
@@ -1282,22 +1238,6 @@ footer {
         z-index: 100;
     }
 
-    #sub-menu{
-      margin-top: -30px;
-    }
-
-    #sub-menu a{
-      display: inline-block;
-      margin-right: 10px;
-
-    }
-    #sub-menu a:hover{
-      color:#ED225D;
-    }
-
-    #sub-menu h5{
-      margin-top: 0 !important;
-    }
 
     #menu li {
         float:none;
@@ -1316,7 +1256,7 @@ footer {
         /*content:" Â»";*/
         }
 
-    #menu li:nth-child(9) {
+    #menu li:nth-child(8) {
         margin-top:3em;
         padding-top: 0.5em;
         /*border-top: 0.06em solid rgba(51,51,51,0.25);*/

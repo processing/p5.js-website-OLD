@@ -33,7 +33,6 @@
 
 
   <li><a href="<?php echo getRoot(); ?>download/">Download</a></li>
-  <li><a href="<?php echo getRoot(); ?>gallery/">Gallery</a></li>
   <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
   <li><a href="<?php echo getRoot(); ?>libraries/">Libraries</a></li>
   <li><a href="<?php echo getRoot(); ?>learn/">Tutorials</a></li>

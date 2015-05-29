@@ -22,17 +22,6 @@
     </ul>
     <section id="home">
 
-      <div id = "sub-menu">
-
-      <a class="home-links nounderline" href="<?php echo getRoot(); ?>get-started/"><h5> <span>>></span> Get started</h5></a>
-
-      <a class="home-links nounderline" href="<?php echo getRoot(); ?>examples/"><h5> <span>>></span> Play with examples </h5></a>
-
-      <a class="home-links nounderline" href="<?php echo getRoot(); ?>gallery/"><h5> <span>>></span> Gallery </h5></a>
-
-
-    </div>
-
       <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of
       <a href="http://processing.org">Processing</a>, to make coding accessible
       for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web.
