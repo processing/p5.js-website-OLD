@@ -9,26 +9,12 @@ TO DO:
 
 */
 
-// if (window.matchMedia("(min-width:720px").matches) {
-//   var elementPosition = $('#menu').offset();
-//
-//   $(window).scroll(function(){
-//     if($(window).scrollTop() > elementPosition.top){
-//       var top = Math.round($(window).scrollTop()-elementPosition.top);
-//       $('#menu').css({'margin-top': top});
-//     } else {
-//       $('#menu').css({'margin-top': 0});
-//     }
-//   });
-// }
-
 $(function() {
 
     var $sidebar   = $("#menu"),
         $window    = $(window),
         offset     = $sidebar.offset(),
         topPadding = 0;
-
 
       if (window.matchMedia("(min-width:720px").matches) {
           $window.scroll(function() {
