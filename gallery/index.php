@@ -18,7 +18,7 @@
         <a href="mailto:feature@p5js.org">feature@p5js.org</a>.
       </p>
 
-    <div class = "gallery-item">
+      <div class = "gallery-item">
         <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/social-tension.png" 
@@ -33,8 +33,8 @@
          <br>
          <a class = "gallery-source"> Christine de Carteret, 2015 </a>
         </p>
-    </div>
-    <div class = "gallery-item">
+      </div>
+      <div class = "gallery-item">
         <a href="http://samanthaticknor.com/images/scroll/two.html"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/ol-scroll.png" 
@@ -49,9 +49,9 @@
          <br>
          <a class = "gallery-source"> Sam Ticknor, 2015 </a>
         </p>
-    </div>
+      </div>
 
-    <div class = "gallery-item">
+      <div class = "gallery-item">
         <a href="http://www.michellechandra.com/portfolio/star-trails/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/star-trails.png" 
@@ -66,11 +66,11 @@
          <br>
          <a class = "gallery-source"> Michelle Chandra, Jason Sigal, 2014 </a>
         </p>
-    </div>
+      </div>
 
-    <div class="spacer"></div>
+      <div class="spacer"></div>
 
-    <div class = "gallery-item">
+      <div class = "gallery-item">
         <a href="http://emojibooth.biz/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/emoji-booth.png" 
@@ -85,9 +85,9 @@
          <br>
          <a class = "gallery-source"> Alex Wiles, 2015</a>
         </p>
-    </div>
+      </div>
 
-    <div class = "gallery-item">
+      <div class = "gallery-item">
         <a href="http://therewasaguy.github.io/p5-music-viz/demos/08_echonestPitchSegment/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/music-viz.png" 
@@ -102,9 +102,9 @@
          <br>
          <a class = "gallery-source"> Jason Sigal, 2014 </a>
         </p>
-    </div>
+      </div>
 
-    <div class = "gallery-item">
+      <div class = "gallery-item">
         <a href="http://ericrosenbaum.github.io/MK-1/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/keyboard.png" 
@@ -119,11 +119,9 @@
          <br>
          <a class = "gallery-source"> Eric Rosenbaum, 2014 </a>
         </p>
-    </div>
+      </div>
 
-    <div class="spacer"></div>
-
-</div>
+      <div class="spacer"></div>
 
     </section>
 

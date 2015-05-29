@@ -151,8 +151,8 @@ function draw() {
 
         <li>View the <a href="../reference/">reference</a> for full documentation.</li>
 
-        <li>Check out the <a href="../learn/">learn</a> page for tutorials and
-          examples.</li>  
+        <li>Check out the <a href="../tutorials/">tutorials</a> page and
+          <a href="../examples">examples</a> page for more.</li>  
         </ul>
       </div>
 
