@@ -145,6 +145,7 @@
     width: 500px;
     text-align: center;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 /*
@@ -615,6 +616,51 @@ variable */
     padding: 0em 0.5em !important;
 }
 
+/*
+  //////////////////////////////////////////////////
+    GALLERY
+  //////////////////////////////////////////////////
+*/
+.gallery-item {
+    font-size: .75em;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-item:hover {
+    font-size: .75em;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+.gallery-item a:hover {
+    border: none;
+}
+
+img.gallery-img {
+    width: 200px;
+    height: 200px;
+}
+
+img.gallery-img:hover {
+    width: 200px;
+    height: 200px;
+    opacity: .8;
+}
+
+.gallery-source {
+    color: #AFAFAF;
+    font-size: .7em;
+}
+
+.gallery-source:hover {
+    color: #AFAFAF;
+    font-size: .7em;
+}
+
+
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
@@ -710,6 +756,7 @@ a:active, a:hover, #reference a:hover {
 
 a.anchor {
     color: #222 !important;
+    outline: none;
 }
 
 a.anchor:hover {
@@ -1247,7 +1294,7 @@ footer {
         /*content:" Â»";*/
         }
 
-    #menu li:nth-child(8) {
+    #menu li:nth-child(9) {
         margin-top:3em;
         padding-top: 0.5em;
         /*border-top: 0.06em solid rgba(51,51,51,0.25);*/

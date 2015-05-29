@@ -1,6 +1,7 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
+        "4x4 Matrix",
         "p5",
         "p5.Amplitude",
         "p5.AudioIn",
@@ -13,7 +14,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.File",
         "p5.Filter",
         "p5.Graphics",
+        "p5.Graphics2D",
         "p5.Image",
+        "p5.Matrix",
         "p5.MediaElement",
         "p5.Noise",
         "p5.Oscillator",
@@ -33,6 +36,7 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
+        "3D Primitives",
         "Acceleration",
         "Array Functions",
         "Attributes",
@@ -51,6 +55,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Keyboard",
         "Loading & Displaying",
         "Math",
+        "Matrix",
         "Mouse",
         "Noise",
         "Output",
@@ -75,6 +80,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "2D Primitives",
             "name": "2D Primitives"
+        },
+        {
+            "displayName": "3D Primitives",
+            "name": "3D Primitives"
         },
         {
             "displayName": "Acceleration",
@@ -150,7 +159,11 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Math",
             "name": "Math",
-            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class."
+            "description": "A class to describe a 4x4 matrix \nfor model and view matrix manipulation in the p5js webgl renderer."
+        },
+        {
+            "displayName": "Matrix",
+            "name": "Matrix"
         },
         {
             "displayName": "Mouse",
@@ -185,7 +198,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Rendering",
             "name": "Rendering",
-            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". Use this class if you need to draw into\nan off-screen graphics buffer. A p5.Graphics object can be constructed\nwith the <code>createGraphics()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for \nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         {
             "displayName": "Setting",

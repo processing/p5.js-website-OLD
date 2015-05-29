@@ -2875,7 +2875,7 @@
   java, location, Components, FileUtils */
 
 define('text',['module'], function (module) {
-    'use strict';
+    
 
     var text, fs, Cc, Ci, xpcIsWindows,
         progIds = ['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP', 'Msxml2.XMLHTTP.4.0'],
@@ -6908,7 +6908,7 @@ define('itemView',[
   'prettify'
 ], function (_, Backbone, App, itemTpl, classTpl, endTpl) {
 
-  'use strict';
+  
 
   var itemView = Backbone.View.extend({
     el: '#item',
@@ -7330,7 +7330,7 @@ define('router',[
   'App'
 ], function(_, Backbone, App) {
 
-  'use strict'; //
+   //
 
   var Router = Backbone.Router.extend({
     
