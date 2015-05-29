@@ -26,7 +26,7 @@
     <!-- CSS (order matters): code highlighting -->
     <link rel="stylesheet" href="../css/prism.css">
 
-    <!-- modernizer (not leveraged, yet) 
+    <!-- modernizer (not leveraged, yet)
     <script src="../js/vendor/modernizr-2.6.2.min.js"></script>-->
 
     <!-- jquery-->
@@ -40,10 +40,10 @@
 
 
     <div id="family">
-      <p class="left"><a href="http://processing.org">Processing</a> 
+      <p class="left"><a href="http://processing.org">Processing</a>
          <a class="here" href="http://p5js.org">p5.js</a>
          <a href="http://py.processing.org/">Processing.py</a>
-      </p> 
+      </p>
       <form name="search" method="get" action="http://www.google.com/search">
         <input type="hidden" name="as_sitesearch" value="p5js.org" />
         <input id="search_field" type="text" name="as_q" value="" size="20" class="text" />
@@ -52,8 +52,8 @@
       <p class="right">
         <a href="http://foundation.processing.org">Processing Foundation</a>
       </p>
-    </div>    
-  
+    </div>
+
 
     <div id="container">
     <!-- identity -->
@@ -68,7 +68,7 @@
     <div class="column-span">
     <ul id="menu">
       <li><a href="../">Home</a></li>
-      <li><a href="../download/">Download</a></li> 
+      <li><a href="../download/">Download</a></li>
       <li><a href="../get-started/">Get&nbsp;Started</a></li>
       <li><a href="../reference/">Reference</a></li>
       <li><a href="../libraries/">Libraries</a></li>
@@ -101,8 +101,8 @@
 
 
       <footer>
-        <p>p5.js is developed by a group of collaborators, 
-        with support from <a href="http://processing.org/foundation/" target="_blank">Processing Foundation</a> 
+        <p>p5.js is developed by a group of collaborators,
+        with support from <a href="http://processing.org/foundation/" target="_blank">Processing Foundation</a>
         and <a href="http://itp.nyu.edu/itp/" target="_blank">NYU ITP</a>.<br>
         <a href="<?php echo getRoot(); ?>copyright.php">&copy; Info.</a> Updated <?php include('updated.php'); ?>.</p>
       </footer>
@@ -131,9 +131,9 @@
     <script src="./assets/js/reference.js"></script>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
     <script>
-    /*    
+    /*
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
       g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
@@ -141,5 +141,19 @@
     */
     </script>
     -->
+
+
+    <script type='text/javascript'>
+      $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        var rotation = -scroll / 80;
+        $('#asterisk-design-element').css({
+          '-ms-transform': 'rotate(' + rotation + 'deg)',
+          '-webkit-transform': 'rotate(' + rotation + 'deg)',
+          'transform': 'rotate(' + rotation + 'deg)'
+        });
+      });
+    </script>
+    
   </body>
 </html>

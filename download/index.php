@@ -125,5 +125,17 @@
 
 
     <?php include('../end.php'); ?>
+
+    <script type='text/javascript'>
+      $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        var rotation = -scroll / 40;
+        $('#asterisk-design-element').css({
+          '-ms-transform': 'rotate(' + rotation + 'deg)',
+          '-webkit-transform': 'rotate(' + rotation + 'deg)',
+          'transform': 'rotate(' + rotation + 'deg)'
+        });
+      });
+    </script>
   </body>
 </html>

@@ -3,7 +3,7 @@
 <?php include('header.php'); ?>
 <body id="home-page">
   <div id="credits"><em>RainyTypewriter</em><br>by <a target=_blank href="http://kimsehyun.kr">AV(Sehyun Kim)</a></div>
- 
+
   <?php include('heading.php'); ?>
 
   <!-- content sections -->
@@ -24,15 +24,15 @@
     </ul>
 
     <section id="home">
-      <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of 
-      <a href="http://processing.org">Processing</a>, to make coding accessible 
-      for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web. 
+      <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of
+      <a href="http://processing.org">Processing</a>, to make coding accessible
+      for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web.
       </p>
 
       <p>Using the original metaphor of a software sketchbook, p5.js has a full set of
       drawing functionality. However, you&#8217;re not limited
       to your drawing canvas, you can think of your whole browser page as your sketch!
-      For this, p5.js has addon <a href="libraries/">libraries</a> that make it 
+      For this, p5.js has addon <a href="libraries/">libraries</a> that make it
       <a href="http://hello.p5js.org">
       easy to interact</a> with other HTML5
       objects, including text, input, video, webcam, and sound.</p>
@@ -63,6 +63,15 @@
     $('#home-sketch-frame').css('top', '0px');
     $('#home-sketch-frame').css('left', '0px');
     $('#home-sketch-frame').css('z-index', '-2');
+    $(window).scroll(function (event) {
+      var scroll = $(window).scrollTop();
+      var rotation = scroll / 20;
+      $('#asterisk-design-element').css({
+        '-ms-transform': 'rotate(' + rotation + 'deg)',
+        '-webkit-transform': 'rotate(' + rotation + 'deg)',
+        'transform': 'rotate(' + rotation + 'deg)'
+      });
+    });
   </script>
 </body>
 </html>
