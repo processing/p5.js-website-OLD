@@ -1,8 +1,11 @@
 /*
  * @name Pointillism
- * @description By Dan Shiffman. Mouse horizontal location controls size of 
- * dots. Creates a simple pointillist effect using ellipses colored according 
+ * @description By Dan Shiffman. Mouse horizontal location controls size of
+ * dots. Creates a simple pointillist effect using ellipses colored according
  * to pixels in an image.
+ * <p><em><span class="small"> To run this example locally, you will need an
+ * image file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">
+ * local server</a>.</span></em></p>
  */
 var img;
 var smallPoint, largePoint;
@@ -17,7 +20,7 @@ function setup() {
   background(255);
 }
 
-function draw() { 
+function draw() {
   var pointillize = map(mouseX, 0, width, smallPoint, largePoint);
   var x = floor(random(img.width));
   var y = floor(random(img.height));
