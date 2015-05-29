@@ -145,6 +145,7 @@
     width: 500px;
     text-align: center;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 /*
@@ -482,6 +483,11 @@ textarea {
     color:#ED225D;
 }
 
+.home-links span{
+  color: #ED225D;
+  font-size: 10px;
+}
+
 #exampleDisplay, #exampleFrame, #exampleEditor {
     width: 36em;
     border: none;
@@ -615,6 +621,7 @@ variable */
     padding: 0em 0.5em !important;
 }
 
+
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
@@ -710,6 +717,7 @@ a:active, a:hover, #reference a:hover {
 
 a.anchor {
     color: #222 !important;
+    outline: none;
 }
 
 a.anchor:hover {
@@ -735,7 +743,7 @@ p {
 
 .highlight {background-color: rgba(237,34,93,0.15);}
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   margin: 1.414em 0 0.5em 0;
   font-weight: inherit;
   line-height: 1.2;
@@ -1221,14 +1229,15 @@ footer {
         margin:0 0.75em 0 -1.85em; /* margin-right: 0.75em;  */
         width:7.3em;
         height:100%;
-        float:left;
+        /*float:left;*/
         border-top: transparent;
         border-bottom: transparent;
         height: 14.25em;
-        padding:5.25em 0;
+        padding:1.25em 0;
         font-size: 0.92em;
         z-index: 100;
     }
+
 
     #menu li {
         float:none;
@@ -1256,9 +1265,13 @@ footer {
 
     #home-page .column-span {
             /*margin:0 0.75em 0 -1.85em; /* margin-right: 0.75em;  */
-        margin-left:7.7em;
+        margin-left:4.7em;
     }
 
+    /*.home-link-img{
+      width: 223px;
+      height: 72px;
+    }*/
 
     .left-column  {
         width:48%;

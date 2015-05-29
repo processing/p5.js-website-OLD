@@ -3,7 +3,7 @@
 <?php include('header.php'); ?>
 <body id="home-page">
   <div id="credits"><em>RainyTypewriter</em><br>by <a target=_blank href="http://kimsehyun.kr">AV(Sehyun Kim)</a></div>
- 
+
   <?php include('heading.php'); ?>
 
   <!-- content sections -->
@@ -12,27 +12,25 @@
     <ul id="menu" class="top_menu" >
       <li><a href="<?php echo getRoot(); ?>download/">Download</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
-      <li><a href="<?php echo getRoot(); ?>get-started/">Get Started</a></li>
+      <li><a href="<?php echo getRoot(); ?>learn/">Tutorials</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
       <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
       <li><a href="<?php echo getRoot(); ?>libraries/">Libraries</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
-      <li><a href="<?php echo getRoot(); ?>learn/">Learn</a></li>
-      <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
       <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
     </ul>
-
     <section id="home">
-      <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of 
-      <a href="http://processing.org">Processing</a>, to make coding accessible 
-      for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web. 
+
+      <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of
+      <a href="http://processing.org">Processing</a>, to make coding accessible
+      for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web.
       </p>
 
       <p>Using the original metaphor of a software sketchbook, p5.js has a full set of
       drawing functionality. However, you&#8217;re not limited
       to your drawing canvas, you can think of your whole browser page as your sketch!
-      For this, p5.js has addon <a href="libraries/">libraries</a> that make it 
+      For this, p5.js has addon <a href="libraries/">libraries</a> that make it
       <a href="http://hello.p5js.org">
       easy to interact</a> with other HTML5
       objects, including text, input, video, webcam, and sound.</p>
