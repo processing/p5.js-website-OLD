@@ -13,7 +13,7 @@
       <h2>Get Started</h2>
 
       <p>This page walks you through setting up a p5.js project and making your first sketch.
-      If you are using the p5 editor, you can skip to the <a href="#your-first-sketch">Your
+      If you are using the p5 editor, you can skip to the <a>Your
       First Sketch</a> section. Processing users may want to check out the 
       <a href="https://github.com/processing/p5.js/wiki/Processing-transition">Processing
       transition tutorial</a>.
