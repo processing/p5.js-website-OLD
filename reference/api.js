@@ -36,7 +36,6 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
-        "3D Primitives",
         "Acceleration",
         "Array Functions",
         "Attributes",
@@ -44,18 +43,20 @@ YUI.add("yuidoc-meta", function(Y) {
         "Color",
         "Constants",
         "Conversion",
+        "Core",
         "Creating & Reading",
         "Curves",
         "DOM",
         "Data",
         "Environment",
-        "Files",
+        "Events",
+        "Helpers",
+        "IO",
         "Image",
         "Input",
         "Keyboard",
         "Loading & Displaying",
         "Math",
-        "Matrix",
         "Mouse",
         "Noise",
         "Output",
@@ -67,7 +68,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "String Functions",
         "Structure",
         "Table",
-        "Time & Date",
         "Touch",
         "Transform",
         "Trigonometry",
@@ -80,10 +80,6 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "2D Primitives",
             "name": "2D Primitives"
-        },
-        {
-            "displayName": "3D Primitives",
-            "name": "3D Primitives"
         },
         {
             "displayName": "Acceleration",
@@ -114,6 +110,10 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Conversion"
         },
         {
+            "displayName": "Core",
+            "name": "Core"
+        },
+        {
             "displayName": "Creating & Reading",
             "name": "Creating & Reading"
         },
@@ -123,8 +123,7 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Data",
-            "name": "Data",
-            "description": "Base class for a file\nUsing this for createFileInput"
+            "name": "Data"
         },
         {
             "displayName": "DOM",
@@ -136,8 +135,12 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Environment"
         },
         {
-            "displayName": "Files",
-            "name": "Files"
+            "displayName": "Events",
+            "name": "Events"
+        },
+        {
+            "displayName": "Helpers",
+            "name": "Helpers"
         },
         {
             "displayName": "Image",
@@ -147,6 +150,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Input",
             "name": "Input"
+        },
+        {
+            "displayName": "IO",
+            "name": "IO"
         },
         {
             "displayName": "Keyboard",
@@ -159,11 +166,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Math",
             "name": "Math",
-            "description": "A class to describe a 4x4 matrix \nfor model and view matrix manipulation in the p5js webgl renderer."
-        },
-        {
-            "displayName": "Matrix",
-            "name": "Matrix"
+            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class."
         },
         {
             "displayName": "Mouse",
@@ -220,10 +223,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "Table",
             "name": "Table",
             "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file."
-        },
-        {
-            "displayName": "Text Area",
-            "name": "Text Area"
         },
         {
             "displayName": "Time & Date",
