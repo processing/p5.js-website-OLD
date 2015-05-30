@@ -5,9 +5,9 @@
  * which the web audio context processings the sound file information.
  * Slower rates not only increase the duration of the sound, but also
  * decrease the pitch because it is being played back at a slower frequency.</p>
- * <p><em><span class="small">You will need to include the 
+ * <p><em><span class="small"> To run this example locally, you will need the
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</em></span></p>
+ * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  */
 // A sound file object
 var song;

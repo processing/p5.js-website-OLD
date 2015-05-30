@@ -4,10 +4,10 @@
  * sound is completely loaded before setup() is called. It's best to always
  * call loadSound() in preload(), otherwise sounds won't necessarily be loaded
  * by the time you want to play them in your sketch.
- * 
- * <br><br><em><span class="small">You will need to include the 
+ *
+ * <br><br><em><span class="small"> To run this example locally, you will need the
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</em></span>
+ * a sound file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em>
  */
 
 var song;

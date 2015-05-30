@@ -10,9 +10,9 @@
  *  be reset with the osc.amp() method. Or, in this example, an
  *  Envelope takes control of that node, turning the amplitude
  *  up and down like a volume knob.</p>
- * <p><em><span class="small">You will need to include the 
- * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</em></span></p>
+ * <p><em><span class="small"> To run this example locally, you will need the
+ * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a> and a
+ * sound file.</span></em></p>
  */
 var osc, envelope, fft;
 
@@ -34,7 +34,7 @@ function setup() {
 
 function draw() {
   background(20);
-    
+
   if (frameCount % 60 == 0) {
     var midiValue = scaleArray[note];
     var freqValue = midiToFreq(midiValue);
@@ -44,7 +44,7 @@ function draw() {
     note = (note + 1) % scaleArray.length;
   }
 
-  // plot FFT.analyze() frequency analysis on the canvas 
+  // plot FFT.analyze() frequency analysis on the canvas
   var spectrum = fft.analyze();
   for (var i = 0; i < spectrum.length/20; i++) {
     fill(spectrum[i], spectrum[i]/10, 0);
