@@ -9,7 +9,7 @@ TO DO:
 
 */
 
-// if (window.matchMedia("(min-width:720px").matches) {
+// if (window.matchMedia("min-width:720px").matches) {
 //   var elementPosition = $('#menu').offset();
 //
 //   $(window).scroll(function(){
@@ -30,7 +30,7 @@ $(function() {
       topPadding = 0;
 
 
-  if (window.matchMedia("min-width:720px").matches) {
+  if (window.matchMedia("(min-width: 720px)").matches) {
     $window.scroll(function() {
       if ($window.scrollTop() > offset.top) {
         $sidebar.stop().animate({
@@ -45,5 +45,5 @@ $(function() {
       }
 
     });
-  }
+}
 });
