@@ -44,7 +44,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "Color",
         "Constants",
         "Conversion",
-        "Core",
         "Creating & Reading",
         "Curves",
         "DOM",
@@ -52,7 +51,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "Environment",
         "Events",
         "Font",
-        "Helpers",
         "IO",
         "Image",
         "Input",
@@ -112,10 +110,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Conversion"
         },
         {
-            "displayName": "Core",
-            "name": "Core"
-        },
-        {
             "displayName": "Creating & Reading",
             "name": "Creating & Reading"
         },
@@ -144,10 +138,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "Font",
             "name": "Font",
             "description": "Base class for font handling"
-        },
-        {
-            "displayName": "Helpers",
-            "name": "Helpers"
         },
         {
             "displayName": "Image",
