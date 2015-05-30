@@ -23,52 +23,35 @@
       <div class = "gallery-item">
         <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/social-tension.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/social-tension.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
-         target="_blank">
-            Social Tension
+            <p>Social Tension</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Christine de Carteret, 2015 </a>
-        </p>
+         <p class = "gallery-source">
+         Christine de Carteret, 2015
       </div>
 
       <div class = "gallery-item">
         <a href="http://samanthaticknor.com/images/scroll/two.html"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/ol-scroll.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/ol-scroll.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://samanthaticknor.com/images/scroll/two.html"
-         target="_blank">
-            Ol' Scroll
+            <p>Ol' Scroll</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Sam Ticknor, 2015 </a>
-        </p>
+         <p class = "gallery-source"> Sam Ticknor, 2015 </p>
       </div>
 
       <div class = "gallery-item">
         <a href="http://www.michellechandra.com/portfolio/star-trails/"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/star-trails.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/star-trails.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://www.michellechandra.com/portfolio/star-trails/"
-         target="_blank">
-            Star Trails
+        <p>Star Trails</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Michelle Chandra, Jason Sigal, 2014 </a>
-        </p>
+         <p class = "gallery-source"> Michelle Chandra, Jason Sigal, 2014 </p>
       </div>
 
       <div class="spacer"></div>
@@ -76,52 +59,34 @@
       <div class = "gallery-item">
         <a href="http://emojibooth.biz/"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/emoji-booth.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/emoji-booth.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://emojibooth.biz/"
-         target="_blank">
-            Emoji Cam
+        <p>Emoji Cam</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Alex Wiles, 2015</a>
-        </p>
+         <p class = "gallery-source"> Alex Wiles, 2015</p>
       </div>
 
       <div class = "gallery-item">
         <a href="http://therewasaguy.github.io/p5-music-viz/demos/08_echonestPitchSegment/"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/music-viz.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/music-viz.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://therewasaguy.github.io/p5-music-viz/demos/08_echonestPitchSegment/"
-         target="_blank">
-            Music Viz
+        <p> Music Viz </p>
          </a>
-         <br>
-         <a class = "gallery-source"> Jason Sigal, 2014 </a>
-        </p>
+         <p class = "gallery-source"> Jason Sigal, 2014 </p>
       </div>
 
       <div class = "gallery-item">
         <a href="http://ericrosenbaum.github.io/MK-1/"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/keyboard.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/keyboard.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://ericrosenbaum.github.io/MK-1/"
-         target="_blank">
-            Sampling Keyboard
+        <p> Sampling Keyboard </p>
          </a>
-         <br>
-         <a class = "gallery-source"> Eric Rosenbaum, 2014 </a>
-        </p>
+         <p class = "gallery-source"> Eric Rosenbaum, 2014 </p>
       </div>
 
       <div class="spacer"></div>
@@ -129,52 +94,34 @@
       <div class = "gallery-item">
         <a href="http://the816.com/neobrush/"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/neobrush.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/neobrush.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://the816.com/neobrush/"
-         target="_blank">
-            Neobrush
+        <p>Neobrush</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Chris Riebschlager, 2014 </a>
-        </p>
+         <p class = "gallery-source"> Chris Riebschlager, 2014 </p>
       </div>
 
       <div class = "gallery-item">
         <a href="http://b2renger.github.io/pages_p5js/organic_motion/index.html"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/organic-motion-sonification.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/organic-motion-sonification.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://b2renger.github.io/pages_p5js/organic_motion/index.html"
-         target="_blank">
-            Organic Motion
+        <p>Organic Motion</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Berenger Recoules, 2015 </a>
-        </p>
+         <p class = "gallery-source"> Berenger Recoules, 2015 </p>
       </div>
 
       <div class = "gallery-item">
         <a href="http://b2renger.github.io/pages_p5js/springs/index.html"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/springs.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/springs.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://b2renger.github.io/pages_p5js/springs/index.html"
-         target="_blank">
-            Springs
+        <p>Springs</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Berenger Recoules, 2014 </a>
-        </p>
+         <p class = "gallery-source"> Berenger Recoules, 2014 </p>
       </div>
 
       <div class="spacer"></div>
@@ -182,52 +129,34 @@
          <div class = "gallery-item">
         <a href="http://cell-flight.com/mural.html"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/cell-flight.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/cell-flight.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://cell-flight.com/mural.html"
-         target="_blank">
-            Cell-Flight
+        <p>Cell-Flight</p>
          </a>
-         <br>
-         <a class = "gallery-source"> kawandeep virdee, 2014 </a>
-        </p>
+         <p class = "gallery-source"> Kawandeep Virdee, 2014 </p>
       </div>
 
       <div class = "gallery-item">
         <a href="http://104.236.250.114:3000/emoji_new/"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/magic-is-real-emoji.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/magic-is-real-emoji.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://104.236.250.114:3000/emoji_new/"
-         target="_blank">
-            Magic is real-Emoji
+        <p>Magic is Real-Emoji</p>
          </a>
-         <br>
-         <a class = "gallery-source"> Marc Abbey, 2015 </a>
-        </p>
+         <p class = "gallery-source"> Marc Abbey, 2015 </p>
       </div>
 
       <div class = "gallery-item">
         <a href="http://nithi-p.github.io/finalproject/"
         target="_blank">
-           <img class = "gallery-img" src="../img/gallery-images/nithi-prasanpanich.png" 
+           <img class = "gallery-img nounderline" src="../img/gallery-images/nithi-prasanpanich.png" 
            width = "5" alt = "preview image">
-        </a>
         <br>
-        <p>
-         <a href="http://nithi-p.github.io/finalproject/"
-         target="_blank">
-            Face Sound Visualization
+        <p>Face Sound Visualization</p>
          </a>
-         <br>
-         <a class = "gallery-source">Nithi Prasanpanich, 2015</a>
-        </p>
+         <p class = "gallery-source">Nithi Prasanpanich, 2015</p>
       </div>
 
       <div class="spacer"></div>
