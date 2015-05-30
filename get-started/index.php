@@ -4,6 +4,7 @@
   <body id="get-started-page">
 
     <?php include('../sidebar.php'); ?>
+    <?php include('../download/version.php'); ?>
 
     <!-- content sections -->
     <div class="column-span">
@@ -39,9 +40,6 @@
       </p>
 
       <pre><code class="language-markup">&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>
-      <p>
-        Where &#8220;0.0.0&#8221; gets replaced by the version you&#8217;d like to use (the highest one is usually best).
-      </p>
     </div>
 
       <a name="environment" class="anchor"><h3 class = "start-element tutorial-btn" id = "environment">Environment</h3></a>
