@@ -164,9 +164,7 @@
         },
         "src/core/error_helpers.js": {
             "name": "src/core/error_helpers.js",
-            "modules": {
-                "Helpers": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "p5": 1
@@ -745,34 +743,6 @@
                 "constants"
             ]
         },
-        "Core": {
-            "name": "Core",
-            "submodules": {
-                "Helpers": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
-        "Helpers": {
-            "name": "Helpers",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Core",
-            "namespace": "",
-            "file": "src/core/error_helpers.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
         "DOM": {
             "name": "DOM",
             "submodules": {},
@@ -802,9 +772,6 @@
             "module": "Rendering",
             "file": "src/core/p5.Graphics2D.js",
             "line": 10,
-            "todo": [
-                ": need to make a separate Graphics2D class and use this\nclass to decide which renderer to go with."
-            ],
             "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         "Transform": {
@@ -1418,7 +1385,7 @@
             "module": "Rendering",
             "submodule": "Rendering",
             "file": "src/core/p5.Graphics.js",
-            "line": 12,
+            "line": 10,
             "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
             "is_constructor": 1,
             "extends": "p5.Element",
@@ -4329,7 +4296,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 332,
+            "line": 331,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -5027,15 +4994,23 @@
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 41,
-            "description": "Checks the definition type against the argument type\nIf any of these passes (in order), it matches:\n\n- p5.* definitions are checked with instanceof\n- Booleans are let through (everything is truthy or falsey)\n- Lowercase of the definition is checked against the js type\n- Number types are checked to see if they are numerically castable",
+            "line": 1,
+            "requires": [
+                "core"
+            ],
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 61,
+            "line": 39,
+            "description": "Checks the definition type against the argument type\nIf any of these passes (in order), it matches:\n\n- p5.* definitions are checked with instanceof\n- Booleans are let through (everything is truthy or falsey)\n- Lowercase of the definition is checked against the js type\n- Number types are checked to see if they are numerically castable",
+            "class": "p5",
+            "module": "Environment"
+        },
+        {
+            "file": "src/core/error_helpers.js",
+            "line": 59,
             "description": "Prints out a fancy, colorful message to the console log",
             "params": [
                 {
@@ -5058,12 +5033,11 @@
                 "description": "console logs"
             },
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 90,
+            "line": 88,
             "description": "Validate all the parameters of a function for number and type",
             "params": [
                 {
@@ -5086,32 +5060,28 @@
                 "description": "console logs"
             },
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 107,
+            "line": 105,
             "description": "Check number of parameters\n\nExample: \"You wrote ellipse(X,X,X). ellipse was expecting 4\n          parameters. Try ellipse(X,X,X,X).\"",
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 143,
+            "line": 141,
             "description": "Type checking\n\nExample: \"It looks like ellipse received an empty variable in spot #2.\"\nExample: \"ellipse was expecting a number for parameter #1,\n          received \"foo\" instead.\"",
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 177,
+            "line": 175,
             "description": "Prints out all the colors in the color pallete with white text.\nFor color blindness testing.",
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/p5.Element.js",
@@ -5619,7 +5589,7 @@
         },
         {
             "file": "src/core/shim.js",
-            "line": 16,
+            "line": 30,
             "description": "shim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
             "class": "p5",
             "module": "Rendering"
@@ -6420,103 +6390,133 @@
             "description": "The system variable mouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseX",
+            "example": [
+                "\n<div>\n<code>\n// Move the mouse across the canvas      \nfunction draw() {\n  background(244, 248, 252);\n  line(mouseX, 0, mouseX, 100);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 24,
+            "line": 35,
             "description": "The system variable mouseY always contains the current vertical position\nof the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseY",
+            "example": [
+                "\n<div>\n<code>\n// Move the mouse across the canvas\nfunction draw() {\n  background(244, 248, 252);\n  line(0, mouseY, 100, mouseY);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 32,
+            "line": 54,
             "description": "The system variable pmouseX always contains the horizontal position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the canvas.",
             "itemtype": "property",
             "name": "pmouseX",
+            "example": [
+                "\n<div>\n<code>\n// Move the mouse across the canvas to leave a trail\nfunction setup() {\n  //slow down the frameRate to make it more visible\n  frameRate(10);\n}\n\nfunction draw() { \n  background(244, 248, 252);\n  line(mouseX, mouseY, pmouseX, pmouseY); \n  print(pmouseX + \" -> \" + mouseX);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 41,
+            "line": 81,
             "description": "The system variable pmouseY always contains the vertical position of the\nmouse in the frame previous to the current frame, relative to (0, 0) of\nthe canvas.",
             "itemtype": "property",
             "name": "pmouseY",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() { \n  background(237, 34, 93);\n  fill(0);\n  //draw a square only if the mouse is not moving\n  if(mouseY == pmouseY && mouseX == pmouseX)\n    rect(20,20,60,60);\n  \n  print(pmouseY + \" -> \" + mouseY);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 50,
+            "line": 106,
             "description": "The system variable winMouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseX",
+            "example": [
+                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);  \n}\n\nfunction draw() { \n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the horizontal mouse position\n  //relative to the window\n  myCanvas.position(winMouseX+1, windowHeight/2);\n\n //the y of the square is relative to the canvas\n rect(20,mouseY,60,60);\n}\n   \n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 58,
+            "line": 139,
             "description": "The system variable winMouseY always contains the current vertical\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseY",
+            "example": [
+                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);  \n}\n\nfunction draw() { \n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the vertical mouse position\n  //relative to the window\n  myCanvas.position(windowWidth/2, winMouseY+1);\n\n //the x of the square is relative to the canvas\n rect(mouseX,20,60,60);\n}\n   \n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 66,
+            "line": 172,
             "description": "The system variable pwinMouseX always contains the horizontal position\nof the mouse in the frame previous to the current frame, relative to\n(0, 0) of the window.",
             "itemtype": "property",
             "name": "pwinMouseX",
+            "example": [
+                "\n<div>\n<code>\n\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100); \n  noStroke();\n  fill(237, 34, 93);\n  }\n\nfunction draw() { \n  clear();\n  //the difference between previous and \n  //current x position is the horizontal mouse speed\n  var speed = abs(winMouseX-pwinMouseX);\n  //change the size of the circle\n  //according to the horizontal speed\n  ellipse(50, 50, 10+speed*5, 10+speed*5);\n  //move the canvas to the mouse position\n  myCanvas.position( winMouseX+1, winMouseY+1);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 75,
+            "line": 209,
             "description": "The system variable pwinMouseY always contains the vertical position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the window.",
             "itemtype": "property",
             "name": "pwinMouseY",
+            "example": [
+                "\n<div>\n<code>\n\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100); \n  noStroke();\n  fill(237, 34, 93);\n  }\n\nfunction draw() { \n  clear();\n  //the difference between previous and \n  //current y position is the vertical mouse speed\n  var speed = abs(winMouseY-pwinMouseY);\n  //change the size of the circle\n  //according to the vertical speed\n  ellipse(50, 50, 10+speed*5, 10+speed*5);\n  //move the canvas to the mouse position\n  myCanvas.position( winMouseX+1, winMouseY+1);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 84,
-            "description": "Processing automatically tracks if the mouse button is pressed and which\nbutton is pressed. The value of the system variable mouseButton is either\nLEFT, RIGHT, or CENTER depending on which button is pressed. Browsers are\nweird, USE AT YOUR OWN RISK FOR NOW!",
+            "line": 247,
+            "description": "Processing automatically tracks if the mouse button is pressed and which\nbutton is pressed. The value of the system variable mouseButton is either\nLEFT, RIGHT, or CENTER depending on which button was pressed last. \nWarning: different browsers may track mouseButton differently.",
             "itemtype": "property",
             "name": "mouseButton",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed) {\n    if (mouseButton == LEFT)\n      ellipse(50, 50, 50, 50);\n    if (mouseButton == RIGHT)\n      rect(25, 25, 50, 50);\n    if (mouseButton == CENTER)\n      triangle(23, 75, 50, 20, 78, 75);\n  }\n \n  print(mouseButton);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 94,
+            "line": 278,
             "description": "The boolean system variable mouseIsPressed is true if the mouse is pressed\nand false if not.",
             "itemtype": "property",
             "name": "mouseIsPressed",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed)\n    ellipse(50, 50, 50, 50);\n  else\n    rect(25, 25, 50, 50);\n\n  print(mouseIsPressed);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 149,
+            "line": 350,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -6529,7 +6529,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 188,
+            "line": 389,
             "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -6542,7 +6542,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 255,
+            "line": 456,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -6555,7 +6555,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 318,
+            "line": 519,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -6568,7 +6568,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 379,
+            "line": 580,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -6581,10 +6581,13 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 429,
+            "line": 630,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
+            "example": [
+                "\n<div>\n<code>\nvar pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  //browsers have different ways to detect scroll\n  //this delta variable is -1 or +1 depending on the\n  //direction\n  var min = Math.min(1, (event.wheelDelta || -event.detail));\n  var delta = Math.max(-1, min);\n  //move the square one pixel up or down\n  pos += delta;\n\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
@@ -16548,28 +16551,32 @@
             "line": " src/core/environment.js:219"
         },
         {
+            "message": "Missing item type",
+            "line": " src/core/error_helpers.js:1"
+        },
+        {
             "message": "Missing item type\nChecks the definition type against the argument type\nIf any of these passes (in order), it matches:\n\n- p5.* definitions are checked with instanceof\n- Booleans are let through (everything is truthy or falsey)\n- Lowercase of the definition is checked against the js type\n- Number types are checked to see if they are numerically castable",
-            "line": " src/core/error_helpers.js:41"
+            "line": " src/core/error_helpers.js:39"
         },
         {
             "message": "Missing item type\nPrints out a fancy, colorful message to the console log",
-            "line": " src/core/error_helpers.js:61"
+            "line": " src/core/error_helpers.js:59"
         },
         {
             "message": "Missing item type\nValidate all the parameters of a function for number and type",
-            "line": " src/core/error_helpers.js:90"
+            "line": " src/core/error_helpers.js:88"
         },
         {
             "message": "Missing item type\nCheck number of parameters\n\nExample: \"You wrote ellipse(X,X,X). ellipse was expecting 4\n          parameters. Try ellipse(X,X,X,X).\"",
-            "line": " src/core/error_helpers.js:107"
+            "line": " src/core/error_helpers.js:105"
         },
         {
             "message": "Missing item type\nType checking\n\nExample: \"It looks like ellipse received an empty variable in spot #2.\"\nExample: \"ellipse was expecting a number for parameter #1,\n          received \"foo\" instead.\"",
-            "line": " src/core/error_helpers.js:143"
+            "line": " src/core/error_helpers.js:141"
         },
         {
             "message": "Missing item type\nPrints out all the colors in the color pallete with white text.\nFor color blindness testing.",
-            "line": " src/core/error_helpers.js:177"
+            "line": " src/core/error_helpers.js:175"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
@@ -16585,7 +16592,7 @@
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
-            "line": " src/core/shim.js:16"
+            "line": " src/core/shim.js:30"
         },
         {
             "message": "Missing item type\n[rotateX description]",
