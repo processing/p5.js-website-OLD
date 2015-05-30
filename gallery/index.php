@@ -24,7 +24,7 @@
         <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/social-tension.png" 
-           width = "5" alt = "preview image" title = "Social Tension">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -41,7 +41,7 @@
         <a href="http://samanthaticknor.com/images/scroll/two.html"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/ol-scroll.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -58,7 +58,7 @@
         <a href="http://www.michellechandra.com/portfolio/star-trails/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/star-trails.png" 
-           width = "5" alt = "preview image" title = "Star Trails">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -77,7 +77,7 @@
         <a href="http://emojibooth.biz/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/emoji-booth.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -94,7 +94,7 @@
         <a href="http://therewasaguy.github.io/p5-music-viz/demos/08_echonestPitchSegment/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/music-viz.png" 
-           width = "5" alt = "preview image" title = "Diversity Panel">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -111,7 +111,7 @@
         <a href="http://ericrosenbaum.github.io/MK-1/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/keyboard.png" 
-           width = "5" alt = "preview image" title = "Keyboard">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -130,7 +130,7 @@
         <a href="http://the816.com/neobrush/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/neobrush.png" 
-           width = "5" alt = "preview image" title = "Neobrush">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -147,7 +147,7 @@
         <a href="http://b2renger.github.io/pages_p5js/organic_motion/index.html"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/organic-motion-sonification.png" 
-           width = "5" alt = "preview image" title = "Neobrush">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -164,7 +164,7 @@
         <a href="http://b2renger.github.io/pages_p5js/springs/index.html"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/springs.png" 
-           width = "5" alt = "preview image" title = "springs">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -183,7 +183,7 @@
         <a href="http://cell-flight.com/mural.html"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/cell-flight.png" 
-           width = "5" alt = "preview image" title = "Cell-Flight">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -200,7 +200,7 @@
         <a href="http://104.236.250.114:3000/emoji_new/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/magic-is-real-emoji.png" 
-           width = "5" alt = "preview image" title = "Magic is real-Emoji">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
@@ -217,7 +217,7 @@
         <a href="http://nithi-p.github.io/finalproject/"
         target="_blank">
            <img class = "gallery-img" src="../img/gallery-images/nithi-prasanpanich.png" 
-           width = "5" alt = "preview image" title = "Face Sound Visualization">
+           width = "5" alt = "preview image">
         </a>
         <br>
         <p>
