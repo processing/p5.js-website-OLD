@@ -462,7 +462,35 @@ textarea {
 
 }
 
+/*
+  //////////////////////////////////////////////////
+    Contributors
+  //////////////////////////////////////////////////
+*/
+.contribute-item {
+    font-size: .75em;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+    border-color: #AFAFAF;
+    border-style: dashed;
+    border-width: 3px;
+}
 
+.contribute-item:hover {
+
+
+}
+
+
+
+
+.contribute-title {
+
+}
 
 /*
   //////////////////////////////////////////////////
