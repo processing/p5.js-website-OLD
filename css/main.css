@@ -471,6 +471,7 @@ textarea {
 #contribute-container{
 
 
+
 }
 #contribute-item {
   font-size: .75em;
@@ -479,19 +480,64 @@ textarea {
   width: 320px;
   height: 250px;
   float: left;
-  padding: 10px;
-  z-index: 20;
   border: 1px solid #ED225D;
   margin: 0 25px 25px 0;
   position: relative;
 
 }
 
-#contribute-item-background{
-  width: 320px;
-  height: 250px;
-  z-index: 0;
+.contribute-item-container{
+  position: absolute;
+  z-index: 20;
+  margin: 0;
+  padding: 10px;
+}
 
+
+/*
+#contribute-item-background0{
+  display:none;
+}
+#contribute-item-background1{
+  display:none;
+}
+#contribute-item-background2{
+  display:none;
+}
+#contribute-item-background3{
+  display:none;
+}*/
+
+/*#contribute-item-background0:hover{
+display: block;
+}
+#contribute-item-background1:hover{
+  display:block;
+}
+#contribute-item-background2:hover{
+  display:block;
+}
+#contribute-item-background3:hover{
+  display:block;
+}*/
+
+#container {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+#navi,
+#infoi {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#infoi {
+    z-index: 10;
 }
 
 
