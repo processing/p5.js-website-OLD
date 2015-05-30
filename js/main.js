@@ -20,23 +20,11 @@ function closeSearch() {
   console.log($('#search_field').attr('width'));
 }
 
-$('.info').css('display', 'none');
+// $('.info').css('display', 'none');
 
-var currentId;
-var tag;
+// var currentId;
+// var tag;
 
-$('.start-element').click(function() {
-
-  var currentId = $(this).attr('id').toString();
-  tag = '.info#' + currentId;
-
-  if ($(tag).css('display') =='block') {
-    $(tag).css('display', 'none');
-  }
-  else {
-    $(tag).css('display', 'block');
-  }
-});
 //
 // var canvas;
 // function setup() {
@@ -58,3 +46,16 @@ $('.start-element').click(function() {
 //   ellipse(width/2, height/2, 100, 100);
 //   ellipse(width/4, height/2, 50, 50);
 // }
+
+// $('.start-element').click(function() {
+
+//   var currentId = $(this).attr('id').toString();
+//   tag = '.info#' + currentId;
+
+//   if ($(tag).css('display') =='block') {
+//     $(tag).css('display', 'none');
+//   }
+//   else {
+//     $(tag).css('display', 'block');
+//   }
+// });

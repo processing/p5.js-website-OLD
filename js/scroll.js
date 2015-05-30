@@ -31,6 +31,7 @@ $(function() {
 
 
   if (window.matchMedia("(min-width: 720px)").matches) {
+
     $window.scroll(function() {
       if ($window.scrollTop() > offset.top) {
         $sidebar.stop().animate({
@@ -45,5 +46,5 @@ $(function() {
       }
 
     });
-}
+  }
 });
