@@ -42,7 +42,7 @@
         <a href='http://www.katehollenbach.com/' target='_blank'>Kate Hollenbach</a>,
         <a href='http://web.media.mit.edu/~jacobsj/' target='_blank'>Jennifer Jacobs</a>,
         <a href='http://www.epicjefferson.com/' target='_blank'>Epic Jefferson</a>,
-        <a href='#' target='_blank'>Eddy Man Kim</a>,
+        <a href='http://michellepartogi.com' target='_blank'>Michelle Partogi</a>,
         <a href='http://lav.io/' target='_blank'>Sam Lavigne</a>,
         <a href='http://flong.com' target='_blank'>Golan Levin</a>,
         <a href='http://www.liuchangitp.com/' target='_blank'>Cici Liu</a>,
@@ -52,14 +52,16 @@
         <a href='http://molleindustria.org/' target='_blank'>Paolo Pedercini</a>,
         <a href='http://luisaph.com' target='_blank'>Luisa Pereira</a>,
         <a href='http://mileshiroo.info/' target='_blank'>Miles Peyton</a>,
+        <a href='http://carolinerecord.com/' target='_blank'>Caroline Record</a>,
         <a href='https://pibloginthesky.wordpress.com/' target='_blank'>Stephanie Pi</a>,
         <a href='http://shiffman.net/' target='_blank'>Daniel Shiffman</a>,
         <a href='http://jasonsigal.cc' target='_blank'>Jason Sigal</a>,
         <a href='http://studioindefinit.com/' target='_blank'>Kevin Siwoff</a>,
-        <a href='http://charlottestiles.com/' target='_blank'>Charlotte Stiles</a>,
-        <a href='http://www.danomatika.com/' target='_blank'>Dan Wilcox</a>
+        <a href='http://charlottestiles.com/' target='_blank'>Charlotte Stiles</a>
       </p>
       </div>
+
+ 
 
       <div id="contributors-subsection">
       <h3>Participate Remotely</h3>

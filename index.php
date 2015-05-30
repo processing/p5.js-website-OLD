@@ -12,11 +12,13 @@
     <ul id="menu" class="top_menu" >
       <li><a href="<?php echo getRoot(); ?>download/">Download</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
-      <li><a href="<?php echo getRoot(); ?>tutorials/">Learn</a></li>
+      <li><a href="<?php echo getRoot(); ?>get-started/">Start</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
       <li><a href="<?php echo getRoot(); ?>reference/">Reference</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
       <li><a href="<?php echo getRoot(); ?>libraries/">Libraries</a></li>
+      <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
+      <li><a href="<?php echo getRoot(); ?>tutorials/">Learn</a></li>
       <object width="0" height="0" type="image/svg+xml" data="img/thick-asterisk-alone.svg" id="separator-design-element">*</object>
       <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
     </ul>

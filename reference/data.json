@@ -164,9 +164,7 @@
         },
         "src/core/error_helpers.js": {
             "name": "src/core/error_helpers.js",
-            "modules": {
-                "Helpers": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "p5": 1
@@ -462,6 +460,17 @@
             },
             "namespaces": {}
         },
+        "src/typography/p5.Font.js": {
+            "name": "src/typography/p5.Font.js",
+            "modules": {
+                "Font": 1
+            },
+            "classes": {
+                "p5.Font": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "src/utilities/array_functions.js": {
             "name": "src/utilities/array_functions.js",
             "modules": {
@@ -734,34 +743,6 @@
                 "constants"
             ]
         },
-        "Core": {
-            "name": "Core",
-            "submodules": {
-                "Helpers": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
-        "Helpers": {
-            "name": "Helpers",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Core",
-            "namespace": "",
-            "file": "src/core/error_helpers.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
         "DOM": {
             "name": "DOM",
             "submodules": {},
@@ -790,11 +771,8 @@
             "namespaces": {},
             "module": "Rendering",
             "file": "src/core/p5.Graphics2D.js",
-            "line": 8,
-            "todo": [
-                ": need to make a separate Graphics2D class and use this\nclass to decide which renderer to go with."
-            ],
-            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for \nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
+            "line": 10,
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         "Transform": {
             "name": "Transform",
@@ -1020,7 +998,7 @@
             "module": "IO",
             "namespace": "",
             "file": "src/io/files.js",
-            "line": 1,
+            "line": 3,
             "requires": [
                 "core",
                 "reqwest"
@@ -1150,6 +1128,23 @@
             },
             "namespaces": {}
         },
+        "Font": {
+            "name": "Font",
+            "submodules": {},
+            "classes": {
+                "p5.Font": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "module": "Font",
+            "file": "src/typography/p5.Font.js",
+            "line": 35,
+            "requires": [
+                "core",
+                "constants"
+            ],
+            "description": "Base class for font handling"
+        },
         "Data": {
             "name": "Data",
             "submodules": {
@@ -1250,7 +1245,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 864,
+            "line": 865,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1390,8 +1385,8 @@
             "module": "Rendering",
             "submodule": "Rendering",
             "file": "src/core/p5.Graphics.js",
-            "line": 12,
-            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for \nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
+            "line": 10,
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
             "is_constructor": 1,
             "extends": "p5.Element",
             "params": [
@@ -1423,7 +1418,7 @@
             "extension_for": [],
             "module": "Rendering",
             "file": "src/core/p5.Graphics2D.js",
-            "line": 8,
+            "line": 10,
             "description": "2D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Graphics2D object can be constructed\nwith the <code>createGraphics2D()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
             "is_constructor": 1,
             "extends": "p5.Element",
@@ -1574,6 +1569,30 @@
                 "\n<div>\n<code>\nvar v1 = createVector(40, 50);\nvar v2 = createVector(40, 50);\n\nellipse(v1.x, v1.y, 50, 50);\nellipse(v2.x, v2.y, 50, 50);\nv1.add(v2);\nellipse(v1.x, v1.y, 50, 50);\n</code>\n</div>"
             ]
         },
+        "p5.Font": {
+            "name": "p5.Font",
+            "shortname": "p5.Font",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Font",
+            "submodule": "Font",
+            "namespace": "",
+            "file": "src/typography/p5.Font.js",
+            "line": 35,
+            "description": "Base class for font handling",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "pInst",
+                    "description": "pointer to p5 instance",
+                    "type": "Object",
+                    "optional": true
+                }
+            ]
+        },
         "p5.File": {
             "name": "p5.File",
             "shortname": "p5.File",
@@ -1586,7 +1605,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1036,
+            "line": 1268,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -1627,7 +1646,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 864,
+            "line": 865,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -3360,7 +3379,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 81,
+            "line": 100,
             "description": "These Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
             "class": "p5.Color",
             "module": "Color",
@@ -3368,7 +3387,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 249,
+            "line": 268,
             "description": "Regular expression for matching colors in format #XXX,\ne.g. #416",
             "class": "p5.Color",
             "module": "Color",
@@ -3376,7 +3395,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 255,
+            "line": 274,
             "description": "Regular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
             "class": "p5.Color",
             "module": "Color",
@@ -3384,7 +3403,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 261,
+            "line": 280,
             "description": "Regular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
             "class": "p5.Color",
             "module": "Color",
@@ -3392,7 +3411,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 277,
+            "line": 296,
             "description": "Regular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
             "class": "p5.Color",
             "module": "Color",
@@ -3400,7 +3419,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 293,
+            "line": 312,
             "description": "Regular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
             "class": "p5.Color",
             "module": "Color",
@@ -3408,7 +3427,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 309,
+            "line": 328,
             "description": "Regular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
             "class": "p5.Color",
             "module": "Color",
@@ -3416,7 +3435,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 326,
+            "line": 345,
             "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
             "params": [
                 {
@@ -3438,7 +3457,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 22,
+            "line": 24,
             "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the background need only be set once.",
             "itemtype": "method",
             "name": "background",
@@ -3476,7 +3495,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 129,
+            "line": 132,
             "description": "Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
@@ -3489,7 +3508,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 148,
+            "line": 152,
             "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems. Regardless of color system, all value ranges\nare presumed to be 0–255 unless explicitly set otherwise. That is, \nfor a standard HSB range, one would pass colorMode(HSB, 360, 100, 100, 1).",
             "itemtype": "method",
             "name": "colorMode",
@@ -3529,7 +3548,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 217,
+            "line": 221,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.) If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the fill color.",
             "itemtype": "method",
             "name": "fill",
@@ -3567,7 +3586,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 334,
+            "line": 340,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -3580,7 +3599,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 352,
+            "line": 359,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -3593,7 +3612,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 369,
+            "line": 377,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255). If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the stroke color.",
             "itemtype": "method",
             "name": "stroke",
@@ -4239,7 +4258,7 @@
         {
             "file": "src/core/core.js",
             "line": 50,
-            "description": "Called directly before setup(), the preload() function is used to handle\nasynchronous loading of external files. If a preload function is\ndefined, setup() will wait until any load calls within have finished.\nNothing besides load calls should be inside preload (loadImage,\nloadJSON, loadStrings, etc).",
+            "description": "Called directly before setup(), the preload() function is used to handle\nasynchronous loading of external files. If a preload function is\ndefined, setup() will wait until any load calls within have finished.\nNothing besides load calls should be inside preload (loadImage,\nloadJSON, loadFont, loadStrings, etc).",
             "itemtype": "method",
             "name": "preload",
             "example": [
@@ -4277,7 +4296,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 332,
+            "line": 331,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -4653,7 +4672,7 @@
         {
             "file": "src/core/environment.js",
             "line": 23,
-            "description": "The print() function writes to the console area of your browser, it maps\nto console.log(). This function is often helpful for looking at the data\na program is producing. This function creates a new line of text for\neach call to the function. More than one parameter can be passed into\nthe function by separating them with commas. Alternatively, individual\nelements can be separated with quotes (\"\") and joined with the addition\noperator (+).",
+            "description": "The print() function writes to the console area of your browser. \nThis function is often helpful for looking at the data a program is \nproducing. This function creates a new line of text for each call to \nthe function. More than one parameter can be passed into the function by \nseparating them with commas. Alternatively, individual elements can be \nseparated with quotes (\"\") and joined with the addition operator (+).\n\nWhile print() is similar to console.log(), it does not directly map to \nit in order to simulate easier to understand behavior than \nconsole.log(). Due to this, it is slower. For fastest results, use \nconsole.log().",
             "itemtype": "method",
             "name": "print",
             "params": [
@@ -4669,7 +4688,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 48,
+            "line": 58,
             "description": "The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.",
             "itemtype": "property",
             "name": "frameCount",
@@ -4682,7 +4701,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 71,
+            "line": 81,
             "description": "Confirms if a p5.js program is \"focused,\" meaning that it is active and\nwill accept mouse or keyboard input. This variable is \"true\" if it is\nfocused and \"false\" if not.",
             "itemtype": "property",
             "name": "focused",
@@ -4695,7 +4714,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 89,
+            "line": 99,
             "description": "Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.",
             "itemtype": "method",
             "name": "cursor",
@@ -4727,7 +4746,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 143,
+            "line": 153,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().",
             "itemtype": "method",
             "name": "frameRate",
@@ -4752,7 +4771,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 200,
+            "line": 210,
             "description": "Returns the current framerate.",
             "return": {
                 "description": "current frameRate",
@@ -4764,7 +4783,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 209,
+            "line": 219,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
             "params": [
                 {
@@ -4780,7 +4799,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 224,
+            "line": 234,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
             "name": "noCursor",
@@ -4793,7 +4812,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 245,
+            "line": 255,
             "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayWidth",
@@ -4806,7 +4825,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 257,
+            "line": 267,
             "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayHeight",
@@ -4819,7 +4838,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 269,
+            "line": 279,
             "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
             "itemtype": "property",
             "name": "windowWidth",
@@ -4832,7 +4851,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 280,
+            "line": 290,
             "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
@@ -4845,7 +4864,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 292,
+            "line": 302,
             "description": "The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other \nadjustements to accomodate the new window size.",
             "itemtype": "property",
             "name": "windowResized",
@@ -4858,7 +4877,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 326,
+            "line": 336,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -4868,7 +4887,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 337,
+            "line": 347,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -4878,7 +4897,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 348,
+            "line": 358,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
@@ -4903,7 +4922,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 390,
+            "line": 400,
             "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.\nThis devicePixelScaling() function must be the first line of code\ninside setup().",
             "itemtype": "method",
             "name": "devicePixelScaling",
@@ -4924,7 +4943,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 466,
+            "line": 476,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -4941,7 +4960,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 493,
+            "line": 503,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -4958,7 +4977,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 510,
+            "line": 520,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -4975,15 +4994,23 @@
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 41,
-            "description": "Checks the definition type against the argument type\nIf any of these passes (in order), it matches:\n\n- p5.* definitions are checked with instanceof\n- Booleans are let through (everything is truthy or falsey)\n- Lowercase of the definition is checked against the js type\n- Number types are checked to see if they are numerically castable",
+            "line": 1,
+            "requires": [
+                "core"
+            ],
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 61,
+            "line": 39,
+            "description": "Checks the definition type against the argument type\nIf any of these passes (in order), it matches:\n\n- p5.* definitions are checked with instanceof\n- Booleans are let through (everything is truthy or falsey)\n- Lowercase of the definition is checked against the js type\n- Number types are checked to see if they are numerically castable",
+            "class": "p5",
+            "module": "Environment"
+        },
+        {
+            "file": "src/core/error_helpers.js",
+            "line": 59,
             "description": "Prints out a fancy, colorful message to the console log",
             "params": [
                 {
@@ -5006,12 +5033,11 @@
                 "description": "console logs"
             },
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 90,
+            "line": 88,
             "description": "Validate all the parameters of a function for number and type",
             "params": [
                 {
@@ -5034,32 +5060,28 @@
                 "description": "console logs"
             },
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 107,
+            "line": 105,
             "description": "Check number of parameters\n\nExample: \"You wrote ellipse(X,X,X). ellipse was expecting 4\n          parameters. Try ellipse(X,X,X,X).\"",
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 143,
+            "line": 141,
             "description": "Type checking\n\nExample: \"It looks like ellipse received an empty variable in spot #2.\"\nExample: \"ellipse was expecting a number for parameter #1,\n          received \"foo\" instead.\"",
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 177,
+            "line": 175,
             "description": "Prints out all the colors in the color pallete with white text.\nFor color blindness testing.",
             "class": "p5",
-            "module": "Core",
-            "submodule": "Helpers"
+            "module": "Environment"
         },
         {
             "file": "src/core/p5.Element.js",
@@ -5567,7 +5589,7 @@
         },
         {
             "file": "src/core/shim.js",
-            "line": 16,
+            "line": 30,
             "description": "shim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
             "class": "p5",
             "module": "Rendering"
@@ -5893,8 +5915,8 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 23,
-            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite \ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices \nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work \nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
+            "line": 22,
+            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite\ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices\nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "beginContour",
             "return": {
@@ -5910,7 +5932,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 67,
+            "line": 66,
             "description": "Using the beginShape() and endShape() functions allow creating more\ncomplex forms. beginShape() begins recording vertices for a shape and\nendShape() stops recording. The value of the kind parameter tells it which\ntypes of shapes to create from the provided vertices. With no mode\nspecified, the shape can be any irregular polygon. The parameters\navailable for beginShape() are POINTS, LINES, TRIANGLES, TRIANGLE_FAN,\nTRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the beginShape()\nfunction, a series of vertex() commands must follow. To stop drawing the\nshape, call endShape(). Each shape will be outlined with the current\nstroke color and filled with the fill color.\n\nTransformations such as translate(), rotate(), and scale() do not work\nwithin beginShape(). It is also not possible to use other shapes, such as\nellipse() or rect() within beginShape().",
             "itemtype": "method",
             "name": "beginShape",
@@ -5926,7 +5948,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working   \nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15); \nvertex(92, 50); \nvertex(57.5, 85); \nvertex(22, 50); \nvertex(57.5, 15); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>  \nbeginShape(QUAD_STRIP); \nvertex(30, 20); \nvertex(30, 75); \nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20); \nvertex(65, 75); \nvertex(85, 20);\nvertex(85, 75); \nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>"
+                "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15);\nvertex(92, 50);\nvertex(57.5, 85);\nvertex(22, 50);\nvertex(57.5, 15);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUAD_STRIP);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 20);\nvertex(85, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -5934,7 +5956,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 247,
+            "line": 246,
             "description": "Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape. The first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().",
             "itemtype": "method",
             "name": "bezierVertex",
@@ -5983,7 +6005,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 305,
+            "line": 304,
             "description": "Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape(). The first and\nlast points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.",
             "itemtype": "method",
             "name": "curveVertex",
@@ -6012,8 +6034,8 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 342,
-            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite \ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices \nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work \nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
+            "line": 341,
+            "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite\ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices\nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "endContour",
             "return": {
@@ -6029,7 +6051,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 393,
+            "line": 392,
             "description": "The endShape() function is the companion to beginShape() and may only be\ncalled after beginShape(). When endshape() is called, all of image data\ndefined since the previous call to beginShape() is written into the image\nbuffer. The constant CLOSE as the value for the MODE parameter to close\nthe shape (to connect the beginning and the end).",
             "itemtype": "method",
             "name": "endShape",
@@ -6053,7 +6075,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 451,
+            "line": 450,
             "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -6092,7 +6114,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 523,
+            "line": 522,
             "description": "All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.",
             "itemtype": "method",
             "name": "vertex",
@@ -6368,103 +6390,133 @@
             "description": "The system variable mouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseX",
+            "example": [
+                "\n<div>\n<code>\n// Move the mouse across the canvas      \nfunction draw() {\n  background(244, 248, 252);\n  line(mouseX, 0, mouseX, 100);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 24,
+            "line": 35,
             "description": "The system variable mouseY always contains the current vertical position\nof the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseY",
+            "example": [
+                "\n<div>\n<code>\n// Move the mouse across the canvas\nfunction draw() {\n  background(244, 248, 252);\n  line(0, mouseY, 100, mouseY);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 32,
+            "line": 54,
             "description": "The system variable pmouseX always contains the horizontal position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the canvas.",
             "itemtype": "property",
             "name": "pmouseX",
+            "example": [
+                "\n<div>\n<code>\n// Move the mouse across the canvas to leave a trail\nfunction setup() {\n  //slow down the frameRate to make it more visible\n  frameRate(10);\n}\n\nfunction draw() { \n  background(244, 248, 252);\n  line(mouseX, mouseY, pmouseX, pmouseY); \n  print(pmouseX + \" -> \" + mouseX);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 41,
+            "line": 81,
             "description": "The system variable pmouseY always contains the vertical position of the\nmouse in the frame previous to the current frame, relative to (0, 0) of\nthe canvas.",
             "itemtype": "property",
             "name": "pmouseY",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() { \n  background(237, 34, 93);\n  fill(0);\n  //draw a square only if the mouse is not moving\n  if(mouseY == pmouseY && mouseX == pmouseX)\n    rect(20,20,60,60);\n  \n  print(pmouseY + \" -> \" + mouseY);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 50,
+            "line": 106,
             "description": "The system variable winMouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseX",
+            "example": [
+                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);  \n}\n\nfunction draw() { \n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the horizontal mouse position\n  //relative to the window\n  myCanvas.position(winMouseX+1, windowHeight/2);\n\n //the y of the square is relative to the canvas\n rect(20,mouseY,60,60);\n}\n   \n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 58,
+            "line": 139,
             "description": "The system variable winMouseY always contains the current vertical\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseY",
+            "example": [
+                "\n<div>\n<code>\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);  \n}\n\nfunction draw() { \n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the vertical mouse position\n  //relative to the window\n  myCanvas.position(windowWidth/2, winMouseY+1);\n\n //the x of the square is relative to the canvas\n rect(mouseX,20,60,60);\n}\n   \n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 66,
+            "line": 172,
             "description": "The system variable pwinMouseX always contains the horizontal position\nof the mouse in the frame previous to the current frame, relative to\n(0, 0) of the window.",
             "itemtype": "property",
             "name": "pwinMouseX",
+            "example": [
+                "\n<div>\n<code>\n\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100); \n  noStroke();\n  fill(237, 34, 93);\n  }\n\nfunction draw() { \n  clear();\n  //the difference between previous and \n  //current x position is the horizontal mouse speed\n  var speed = abs(winMouseX-pwinMouseX);\n  //change the size of the circle\n  //according to the horizontal speed\n  ellipse(50, 50, 10+speed*5, 10+speed*5);\n  //move the canvas to the mouse position\n  myCanvas.position( winMouseX+1, winMouseY+1);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 75,
+            "line": 209,
             "description": "The system variable pwinMouseY always contains the vertical position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the window.",
             "itemtype": "property",
             "name": "pwinMouseY",
+            "example": [
+                "\n<div>\n<code>\n\nvar myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100); \n  noStroke();\n  fill(237, 34, 93);\n  }\n\nfunction draw() { \n  clear();\n  //the difference between previous and \n  //current y position is the vertical mouse speed\n  var speed = abs(winMouseY-pwinMouseY);\n  //change the size of the circle\n  //according to the vertical speed\n  ellipse(50, 50, 10+speed*5, 10+speed*5);\n  //move the canvas to the mouse position\n  myCanvas.position( winMouseX+1, winMouseY+1);\n}\n\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 84,
-            "description": "Processing automatically tracks if the mouse button is pressed and which\nbutton is pressed. The value of the system variable mouseButton is either\nLEFT, RIGHT, or CENTER depending on which button is pressed. Browsers are\nweird, USE AT YOUR OWN RISK FOR NOW!",
+            "line": 247,
+            "description": "Processing automatically tracks if the mouse button is pressed and which\nbutton is pressed. The value of the system variable mouseButton is either\nLEFT, RIGHT, or CENTER depending on which button was pressed last. \nWarning: different browsers may track mouseButton differently.",
             "itemtype": "property",
             "name": "mouseButton",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed) {\n    if (mouseButton == LEFT)\n      ellipse(50, 50, 50, 50);\n    if (mouseButton == RIGHT)\n      rect(25, 25, 50, 50);\n    if (mouseButton == CENTER)\n      triangle(23, 75, 50, 20, 78, 75);\n  }\n \n  print(mouseButton);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 94,
+            "line": 278,
             "description": "The boolean system variable mouseIsPressed is true if the mouse is pressed\nand false if not.",
             "itemtype": "property",
             "name": "mouseIsPressed",
+            "example": [
+                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed)\n    ellipse(50, 50, 50, 50);\n  else\n    rect(25, 25, 50, 50);\n\n  print(mouseIsPressed);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
         },
         {
             "file": "src/events/mouse.js",
-            "line": 149,
+            "line": 350,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -6477,7 +6529,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 188,
+            "line": 389,
             "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -6490,7 +6542,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 255,
+            "line": 456,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no \nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -6503,7 +6555,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 318,
+            "line": 519,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -6516,7 +6568,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 379,
+            "line": 580,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -6529,10 +6581,13 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 429,
+            "line": 630,
             "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
+            "example": [
+                "\n<div>\n<code>\nvar pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  //browsers have different ways to detect scroll\n  //this delta variable is -1 or +1 depending on the\n  //direction\n  var min = Math.min(1, (event.wheelDelta || -event.detail));\n  var delta = Math.max(-1, min);\n  //move the square one pixel up or down\n  pos += delta;\n\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Events",
             "submodule": "Mouse"
@@ -7823,7 +7878,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 31,
+            "line": 51,
             "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadJSON",
@@ -7859,7 +7914,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 118,
+            "line": 138,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -7889,7 +7944,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 189,
+            "line": 209,
             "description": "<p>Reads the contents of a file or URL and creates a p5.Table object with\nits values. If a file is specified, it must be located in the sketch's\n\"data\" folder. The filename parameter can also be a URL to a file found\nonline. By default, the file is assumed to be comma-separated (in CSV\nformat). Table only looks for a header row if the 'header' option is\nincluded.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas. For example:\n<br><br>\n<code>\n  loadTable(\"my_csv_file.csv\", \"csv\", \"header\")\n</code>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadTable() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.\n</p>",
             "itemtype": "method",
             "name": "loadTable",
@@ -7922,7 +7977,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 428,
+            "line": 448,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.",
             "itemtype": "method",
             "name": "loadXML",
@@ -7949,7 +8004,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 487,
+            "line": 507,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -7984,7 +8039,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 506,
+            "line": 526,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -8019,7 +8074,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 524,
+            "line": 544,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
@@ -8060,7 +8115,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 682,
+            "line": 702,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Graphics object as an image\n \nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -8087,7 +8142,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 802,
+            "line": 822,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveJSON",
@@ -8118,7 +8173,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 858,
+            "line": 878,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveStrings",
@@ -8143,7 +8198,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 910,
+            "line": 930,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveTable",
@@ -8173,7 +8228,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1039,
+            "line": 1059,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8200,7 +8255,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1060,
+            "line": 1080,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8225,7 +8280,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1096,
+            "line": 1116,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -8246,7 +8301,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1128,
+            "line": 1148,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -8260,7 +8315,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1140,
+            "line": 1160,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -8963,7 +9018,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  // map, mouseX between 0 and 5. \n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the ceiling of the mapped number. \n  var bx = ceil(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiple the mapped numbers by 20 to more easily\n  // see the changes. \n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it. \n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5); \n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  // map, mouseX between 0 and 5. \n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the ceiling of the mapped number. \n  var bx = ceil(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes. \n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it. \n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5); \n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -9084,7 +9139,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5. \n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the floor of the mapped number. \n  var bx = floor(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiple the mapped numbers by 20 to more easily\n  // see the changes. \n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it. \n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5); \n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5. \n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the floor of the mapped number. \n  var bx = floor(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes. \n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it. \n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5); \n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -9141,13 +9196,16 @@
                 "description": "natural logarithm of n",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code> \nfunction draw() {\n  background(200);\n  var maxX = 2.8;\n  var maxY = 1.5;\n  \n  // Compute the natural log of a value between 0 and maxX\n  var xValue = map(mouseX, 0, width, 0, maxX);\n  if (xValue > 0) { // Cannot take the log of a negative number. \n    var yValue = log(xValue);\n    var y = map(yValue, -maxY, maxY, height, 0);\n    \n    // Display the calculation occurring. \n    var legend = \"log(\" + nf(xValue, 1, 2) + \")\\n= \" + nf(yValue, 1, 3); \n    stroke(150);\n    line(mouseX, y, mouseX, height);\n    fill(0);\n    text (legend, 5, 15);\n    noStroke();\n    ellipse (mouseX, y, 7, 7);\n  }\n  \n  // Draw the log(x) curve,\n  // over the domain of x from 0 to maxX\n  noFill();\n  stroke(0);\n  beginShape();\n  for(var x=0; x<width; x++) {\n    xValue = map(x, 0, width, 0, maxX);\n    yValue = log(xValue);\n    y = map(yValue, -maxY, maxY, height, 0);\n    vertex(x, y);\n  }\n  endShape();\n  line(0,0,0,height);\n  line(0,height/2,width, height/2);\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 285,
+            "line": 324,
             "description": "Calculates the magnitude (or length) of a vector. A vector is a direction\nin space commonly used in computer graphics and linear algebra. Because it\nhas no \"start\" position, the magnitude of a vector can be thought of as\nthe distance from the coordinate 0,0 to its x,y value. Therefore, mag() is\na shortcut for writing dist(0, 0, x, y).",
             "itemtype": "method",
             "name": "mag",
@@ -9167,13 +9225,16 @@
                 "description": "magnitude of vector from (0,0) to (a,b)",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  var x1 = 20;\n  var x2 = 80;\n  var y1 = 30;\n  var y2 = 70;\n  \n  line(0, 0, x1, y1);\n  print(mag(x1, y1));  // Prints \"36.05551\"\n  line(0, 0, x2, y1);\n  print(mag(x2, y1));  // Prints \"85.44004\"\n  line(0, 0, x1, y2);\n  print(mag(x1, y2));  // Prints \"72.8011\"\n  line(0, 0, x2, y2);\n  print(mag(x2, y2));  // Prints \"106.30146\"\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 301,
+            "line": 358,
             "description": "Re-maps a number from one range to another.\nIn the first example above, the number 25 is converted from a value in the\nrange of 0 to 100 into a value that ranges from the left edge of the\nwindow (0) to the right edge (width).",
             "itemtype": "method",
             "name": "map",
@@ -9209,7 +9270,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n  <div><code>\n    createCanvas(200, 200);\n    var value = 25;\n    var m = map(value, 0, 100, 0, width);\n    ellipse(m, 200, 10, 10);\n  </code></div>\n\n  <div><code>\n    function setup() {\n      createCanvs(200, 200);\n      noStroke();\n    }\n\n    function draw() {\n      background(204);\n      var x1 = map(mouseX, 0, width, 50, 150);\n      ellipse(x1, 75, 50, 50);  \n      var x2 = map(mouseX, 0, width, 0, 200);\n      ellipse(x2, 125, 50, 50);  \n    }\n  </code></div>"
+                "\n  <div><code>\n    createCanvas(200, 200);\n    var value = 25;\n    var m = map(value, 0, 100, 0, width);\n    ellipse(m, 200, 10, 10);\n  </code></div>\n\n  <div><code>\n    function setup() {\n      createCanvs(200, 200);\n      noStroke();\n    }\n\n    function draw() {\n      background(204);\n      var x1 = map(mouseX, 0, width, 50, 150);\n      ellipse(x1, 75, 50, 50);  \n      var x2 = map(mouseX, 0, width, 0, 200);\n      ellipse(x2, 125, 50, 50);  \n    }\n  </div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -9217,7 +9278,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 341,
+            "line": 398,
             "description": "Determines the largest value in a sequence of numbers, and then returns\nthat value. max() accepts any number of Number parameters, or an Array\nof any length.",
             "itemtype": "method",
             "name": "max",
@@ -9232,13 +9293,16 @@
                 "description": "maximum Number",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how max() works! \n  numArray = new Array(2,1,5,4,8,9);\n  fill(0);\n  noStroke();\n  text(\"Array Elements\", 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15; \n  var elemsY = 25;\n  for(var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  maxX = 33;\n  maxY = 80; \n  // Draw the Maximum value in the array.\n  textSize(32);\n  text(max(numArray), maxX, maxY);\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 358,
+            "line": 437,
             "description": "Determines the smallest value in a sequence of numbers, and then returns\nthat value. min() accepts any number of Number parameters, or an Array\nof any length.",
             "itemtype": "method",
             "name": "min",
@@ -9253,13 +9317,16 @@
                 "description": "minimum Number",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how min() works! \n  numArray = new Array(2,1,5,4,8,9);\n  fill(0);\n  noStroke();\n  text(\"Array Elements\", 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15; \n  var elemsY = 25;\n  for(var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  maxX = 33;\n  maxY = 80; \n  // Draw the Minimum value in the array.\n  textSize(32);\n  text(min(numArray), maxX, maxY);\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 375,
+            "line": 476,
             "description": "Normalizes a number from another range into a value between 0 and 1.\nIdentical to map(value, low, high, 0, 1).\nNumbers outside of the range are not clamped to 0 and 1, because\nout-of-range values are often intentional and useful. (See the second\nexample above.)",
             "itemtype": "method",
             "name": "norm",
@@ -9284,13 +9351,16 @@
                 "description": "normalized number",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  currentNum = mouseX;\n  lowerBound = 0;\n  upperBound = width; //100;\n  normalized = norm(currentNum, lowerBound, upperBound);\n  lineY = 70\n  line(0, lineY, width, lineY);\n  //Draw an ellipse mapped to the non-normalized value. \n  noStroke();\n  fill(50)\n  var s = 7; // ellipse size\n  ellipse(currentNum, lineY, s, s);\n  \n  // Draw the guide\n  guideY = lineY + 15;\n  text(\"0\", 0, guideY);\n  textAlign(RIGHT);\n  text(\"100\", width, guideY);\n  \n  // Draw the normalized value\n  textAlign(LEFT);\n  fill(0);\n  textSize(32);\n  normalY = 40;\n  normalX = 20;\n  text(normalized, normalX, normalY);\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 392,
+            "line": 524,
             "description": "Facilitates exponential expressions. The pow() function is an efficient\nway of multiplying numbers by themselves (or their reciprocals) in large\nquantities. For example, pow(3, 5) is equivalent to the expression\n3*3*3*3*3 and pow(3, -5) is equivalent to 1 / 3*3*3*3*3. Maps to\nMath.pow().",
             "itemtype": "method",
             "name": "pow",
@@ -9310,13 +9380,16 @@
                 "description": "n^e",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction setup() { \n  //Exponentially increase the size of an ellipse. \n  eSize = 3; // Original Size\n  eLoc = 10; // Original Location\n  \n  ellipse(eLoc, eLoc, eSize, eSize);\n  \n  ellipse(eLoc*2, eLoc*2, pow(eSize, 2), pow(eSize, 2));\n  \n  ellipse(eLoc*4, eLoc*4, pow(eSize, 3), pow(eSize, 3));\n  \n  ellipse(eLoc*8, eLoc*8, pow(eSize, 4), pow(eSize, 4));\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 406,
+            "line": 554,
             "description": "Calculates the integer closest to the n parameter. For example,\nround(133.8) returns the value 134. Maps to Math.round().",
             "itemtype": "method",
             "name": "round",
@@ -9331,13 +9404,16 @@
                 "description": "rounded number",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5. \n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  // Round the mapped number. \n  var bx = round(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes. \n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it. \n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5); \n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 416,
+            "line": 589,
             "description": "Squares a number (multiplies a number by itself). The result is always a\npositive number, as multiplying two negative numbers always yields a\npositive result. For example, -1 * -1 = 1.",
             "itemtype": "method",
             "name": "sq",
@@ -9352,13 +9428,16 @@
                 "description": "squared number",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = map(mouseX, 0, width, 0, 10);\n  y1 = 80;\n  x2 = sq(x1);\n  y2 = 20;\n  \n  // Draw the non-squared. \n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n  \n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n  \n  // Draw dividing line. \n  stroke(100)\n  line(0, height/2, width, height/2);\n  \n  // Draw text. \n  noStroke();\n  fill(0);\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sqrt(x) = \" + x2, 0, y2 + spacing);\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
         },
         {
             "file": "src/math/calculation.js",
-            "line": 427,
+            "line": 629,
             "description": "Calculates the square root of a number. The square root of a number is\nalways positive, even though there may be a valid negative root. The\nsquare root s of number a is such that s*s = a. It is the opposite of\nsquaring. Maps to Math.sqrt().",
             "itemtype": "method",
             "name": "sqrt",
@@ -9373,6 +9452,9 @@
                 "description": "square root of number",
                 "type": "Number"
             },
+            "example": [
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = mouseX;\n  y1 = 80;\n  x2 = sqrt(x1);\n  y2 = 20;\n  \n  // Draw the non-squared. \n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n  \n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n  \n  // Draw dividing line. \n  stroke(100)\n  line(0, height/2, width, height/2);\n  \n  // Draw text. \n  noStroke();\n  fill(0);\n  var spacing = 15;\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sqrt(x) = \" + x2, 0, y2 + spacing);\n}\n</div></code>"
+            ],
             "class": "p5",
             "module": "Math",
             "submodule": "Calculation"
@@ -9521,7 +9603,20 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 85,
+            "line": 84,
+            "description": "Returns a string representation of a vector v by calling String(v)\nor v.toString(). This method is useful for logging vectors in the\nconsole.",
+            "itemtype": "method",
+            "name": "toString",
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v = createVector(20,30);\n  print(String(v)); // prints \"p5.Vector Object : [20, 30, 0]\"\n}\n</div></code>\n "
+            ],
+            "class": "p5.Vector",
+            "module": "Math",
+            "submodule": "Math"
+        },
+        {
+            "file": "src/math/p5.Vector.js",
+            "line": 102,
             "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Vector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -9546,7 +9641,7 @@
                 }
             ],
             "example": [
-                "\n<div class=\"norender\">\n<code>\nfunction setup() {\n   var v = createVector(1,2,3);\n   v.set(4,5,6); //Sets vector to [4,5,6]\n\n   var v1 = createVector(0,0,0);\n   var arr = [1,2,3]\n   v1.set(arr); //Sets vector to [1,2,3]\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nfunction setup() {\n   var v = createVector(1, 2, 3);\n   v.set(4,5,6); // Sets vector to [4, 5, 6]\n\n   var v1 = createVector(0, 0, 0);\n   var arr = [1, 2, 3];\n   v1.set(arr); // Sets vector to [1, 2, 3]\n}\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9554,7 +9649,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 127,
+            "line": 144,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
             "name": "copy",
@@ -9562,13 +9657,16 @@
                 "description": "the copy of the p5.Vector object",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = v.copy();\nprint(v1.x == v2.x && v1.y == v2.y && v1.z == v2.z); \n// Prints \"true\"\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 141,
+            "line": 167,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nacts directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "add",
@@ -9597,7 +9695,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1, 2, 3);\nv.add(4,5,6); // v's compnents are set to [5,7,9]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(2, 3, 4);\n\nvar v3 = p5.Vector.add(v1, v2); // v3 has components [3,5,7]\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1, 2, 3);\nv.add(4,5,6); \n// v's compnents are set to [5, 7, 9]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(2, 3, 4);\n\nvar v3 = p5.Vector.add(v1, v2); \n// v3 has components [3, 5, 7]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9605,7 +9703,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 192,
+            "line": 220,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat subtracts two vectors is a static method and returns a p5.Vector, the\nother acts directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -9634,7 +9732,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = createVector(4, 5, 6);\nv.sub(1, 1, 1); // v's compnents are set to [3,4,5]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(2, 3, 4);\nvar v2 = createVector(1, 2, 3);\n\nvar v3 = p5.Vector.sub(v1, v2); // v3 has compnents [1,1,1]\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(4, 5, 6);\nv.sub(1, 1, 1); \n// v's compnents are set to [3, 4, 5]\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(2, 3, 4);\nvar v2 = createVector(1, 2, 3);\n\nvar v3 = p5.Vector.sub(v1, v2); \n// v3 has compnents [1, 1, 1]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9642,7 +9740,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 241,
+            "line": 272,
             "description": "Multiply the vector by a scalar. The static version of this method\ncreates a new p5.Vector while the non static version acts on the vector\ndirectly. See the examples for more context.",
             "itemtype": "method",
             "name": "mult",
@@ -9659,7 +9757,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1, 2, 3);\nv.mult(2); // v's compnents are set to [2,4,6]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n// Static method\nvar v1  = createVector(1, 2, 3);\nvar v2 = p5.Vector.mult(v1, 2); // v2 has compnents [2,4,6]\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1, 2, 3);\nv.mult(2); \n// v's compnents are set to [2, 4, 6]\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(1, 2, 3);\nvar v2 = p5.Vector.mult(v1, 2); \n// v2 has compnents [2, 4, 6]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9667,7 +9765,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 272,
+            "line": 306,
             "description": "Divide the vector by a scalar. The static version of this method creates a\nnew p5.Vector while the non static version acts on the vector directly.\nSee the examples for more context.",
             "itemtype": "method",
             "name": "div",
@@ -9684,7 +9782,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = createVector(6, 4, 2);\nv.div(2); //v's compnents are set to [3,2,1]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n// Static method\nvar v1  = createVector(6, 4, 2);\nvar v2 = p5.Vector.div(v, 2); // v2 has compnents [3,2,1]\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(6, 4, 2);\nv.div(2); //v's compnents are set to [3, 2, 1]\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\n// Static method\nvar v1  = createVector(6, 4, 2);\nvar v2 = p5.Vector.div(v, 2); \n// v2 has compnents [3, 2, 1]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9692,7 +9790,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 303,
+            "line": 339,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -9700,13 +9798,16 @@
                 "description": "magnitude of the vector",
                 "type": "Number"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(20.0, 30.0, 40.0);\nvar m = v.mag(10);\nprint(m); // Prints \"53.85164807134504\"\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 314,
+            "line": 358,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -9714,13 +9815,16 @@
                 "description": "squared magnitude of the vector",
                 "type": "Number"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(6, 4, 2);\nprint(v1.magSq()); // Prints \"56\"\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 328,
+            "line": 380,
             "description": "Calculates the dot product of two vectors. The version of the method\nthat computes the dot product of two independent vectors is a static\nmethod. See the examples for more context.",
             "itemtype": "method",
             "name": "dot",
@@ -9748,7 +9852,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(2, 3, 4);\n\nv1.dot(v2); // returns 20\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(3, 2, 1);\n\nvar dotProduct = p5.Vector.dot(v1, v2); // dotProduct is 10\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(2, 3, 4);\n\nprint(v1.dot(v2)); // Prints \"20\"\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\n//Static method\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(3, 2, 1);\nprint (p5.Vector.dot(v1, v2)); // Prints \"10\"\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9756,7 +9860,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 367,
+            "line": 420,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors. Both the static and non static methods return a new p5.Vector.\nSee the examples for more context.",
             "itemtype": "method",
             "name": "cross",
@@ -9772,7 +9876,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(1, 2, 3);\n\nv1.cross(v2); // v's components are [0,0,0]\n</code>\n</div>\n<div class=\"norender\">\n<code>\n//Static method\nvar v1 = createVector(1, 0, 0);\nvar v2 = createVector(0, 1, 0);\n\n// crossProduct has components [0,0,1]\nvar crossProduct = p5.Vector.cross(v1,v2);\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(1, 2, 3);\n\nv1.cross(v2); // v's components are [0, 0, 0]\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(1, 0, 0);\nvar v2 = createVector(0, 1, 0);\n\nvar crossProduct = p5.Vector.cross(v1, v2);\n// crossProduct has components [0, 0, 1]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9780,7 +9884,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 406,
+            "line": 460,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -9796,7 +9900,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 0, 0);\nvar v2 = createVector(0, 1, 0);\n\nvar distance = v.dist(v1); // distance is 1.4142...\n</code>\n</div>\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(1, 0, 0);\nvar v2 = createVector(0, 1, 0);\n\nvar distance = p5.Vector.dist(v1,v2); //distance is 1.4142...\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 0, 0);\nvar v2 = createVector(0, 1, 0);\n\nvar distance = v1.dist(v2); // distance is 1.4142...\n</code>\n</div>\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(1, 0, 0);\nvar v2 = createVector(0, 1, 0);\n\nvar distance = p5.Vector.dist(v1,v2); \n// distance is 1.4142...\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9804,7 +9908,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 437,
+            "line": 492,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -9812,13 +9916,16 @@
                 "description": "normalized p5.Vector",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(10, 20, 2); \n// v has compnents [10.0, 20.0, 2.0]\nv.normalize();\n// v's compnents are set to\n// [0.4454354, 0.8908708, 0.089087084]\n</code>\n</div>\n"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 447,
+            "line": 513,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -9833,13 +9940,16 @@
                 "description": "the modified p5.Vector",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(10, 20, 2); \n// v has compnents [10.0, 20.0, 2.0]\nv.limit(5);\n// v's compnents are set to \n// [2.2271771, 4.4543543, 0.4454354]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 464,
+            "line": 540,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "itemtype": "method",
             "name": "setMag",
@@ -9854,13 +9964,16 @@
                 "description": "the modified p5.Vector",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(10, 20, 2); \n// v has compnents [10.0, 20.0, 2.0]\nv1.setMag(10); \n// v's compnents are set to [6.0, 8.0, 0.0]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 476,
+            "line": 561,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -9868,13 +9981,16 @@
                 "description": "the angle of rotation",
                 "type": "Number"
             },
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v1 = createVector(30,50); \n  print(v1.heading()); // 1.0303768265243125\n  \n  var v1 = createVector(40,50); \n  print(v1.heading()); // 0.8960553845713439\n  \n  var v1 = createVector(30,70); \n  print(v1.heading()); // 1.1659045405098132\n}\n</div></code>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 495,
+            "line": 593,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -9889,13 +10005,16 @@
                 "description": "the modified p5.Vector",
                 "type": "p5.Vector"
             },
+            "example": [
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(10.0, 20.0); \n// v has compnents [10.0, 20.0, 0.0]\nv.rotate(HALF_PI); \n// v's compnents are set to [-20.0, 9.999999, 0.0]\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 516,
+            "line": 623,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -9928,7 +10047,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1, 1, 0);\n\nv.lerp(3, 3, 0, 0.5); // v now has components [2,2,0]\n</code>\n</div>\n<div class=\"norender\">\n<code>\nvar v1 = createVector(0, 0, 0);\nvar v2 = createVector(100, 100, 0);\n\nvar v3 = p5.Vector.lerp(v1, v2, 0.5);\n// v3 has components [50,50,0]\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(1, 1, 0);\n\nv.lerp(3, 3, 0, 0.5); // v now has components [2,2,0]\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nvar v1 = createVector(0, 0, 0);\nvar v2 = createVector(100, 100, 0);\n\nvar v3 = p5.Vector.lerp(v1, v2, 0.5); \n// v3 has components [50,50,0]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -9936,7 +10055,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 555,
+            "line": 663,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.copy()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -9944,13 +10063,16 @@
                 "description": "an Array with the 3 values",
                 "type": "Array"
             },
+            "example": [
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v = createVector(20,30);\n  print(v.array()); // Prints : Array [20, 30, 0]\n}\n</div></code>\n<div class=\"norender\">\n<code>\nvar v = createVector(10.0, 20.0, 30.0);\nvar f = v.array();\nprint(f[0]); // Prints \"10.0\"\nprint(f[1]); // Prints \"20.0\"\nprint(f[2]); // Prints \"30.0\"\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 568,
+            "line": 692,
             "description": "Equality check against a p5.Vector",
             "itemtype": "method",
             "name": "equals",
@@ -9978,13 +10100,16 @@
                 "description": "whether the vectors are equals",
                 "type": "Boolean"
             },
+            "example": [
+                "\n<div class = \"norender\"><code>\nv1 = createVector(5,10,20);\nv2 = createVector(5,10,20);\nv3 = createVector(13,10,19);\n\nprint(v1.equals(v2.x,v2.y,v2.z)); // true\nprint(v1.equals(v3.x,v3.y,v3.z)); // false\n</div></code>\n<div class=\"norender\">\n<code>\nvar v1 = createVector(10.0, 20.0, 30.0);\nvar v2 = createVector(10.0, 20.0, 30.0);\nvar v3 = createVector(0.0, 0.0, 0.0);\nprint (v1.equals(v2)) // true\nprint (v1.equals(v3)) // false\n</code>\n</div>"
+            ],
             "class": "p5.Vector",
             "module": "Math",
             "submodule": "Math"
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 600,
+            "line": 742,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -10001,7 +10126,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.fromAngle(PI / 2);\n//v has components [0,1,0]\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.fromAngle(PI / 2); \n// v has components [0, 1, 0]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10009,7 +10134,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 628,
+            "line": 770,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -10019,7 +10144,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.random2D();\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.random2D();\n// May make v's attributes something like:\n// [0.61554617, -0.51195765, 0.0] or \n// [-0.4695841, -0.14366731, 0.0] or \n// [0.6091097, -0.22805278, 0.0]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10027,7 +10152,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 657,
+            "line": 803,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -10037,7 +10162,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.random3D();\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.random3D();\n// May make v's attributes something like:\n// [0.61554617, -0.51195765, 0.599168] or \n// [-0.4695841, -0.14366731, -0.8711202] or \n// [0.6091097, -0.22805278, -0.7595902]\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10045,7 +10170,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 690,
+            "line": 840,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -10075,7 +10200,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 710,
+            "line": 861,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -10105,7 +10230,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 732,
+            "line": 883,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -10135,7 +10260,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 751,
+            "line": 902,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -10165,7 +10290,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 771,
+            "line": 922,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -10190,7 +10315,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 783,
+            "line": 934,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -10215,7 +10340,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 795,
+            "line": 946,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -10240,7 +10365,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 808,
+            "line": 959,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -10266,7 +10391,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 829,
+            "line": 980,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "itemtype": "method",
             "name": "angleBetween",
@@ -10288,7 +10413,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1,0,0);\nvar v2 = createVector(0,1,0);\n\nvar angle = p5.Vector.angleBetween(v1,v2);\n// angle is PI/2\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 0, 0);\nvar v2 = createVector(0, 1, 0);\n\nvar angle = p5.Vector.angleBetween(v1, v2);\n// angle is PI/2\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10631,6 +10756,10 @@
                     "type": "Number/Constant"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
             "example": [
                 "\n<div>\n<code>\ntextSize(16);\ntextAlign(RIGHT);\ntext(\"ABCD\", 50, 30);\ntextAlign(CENTER);\ntext(\"EFGH\", 50, 50);\ntextAlign(LEFT);\ntext(\"IJKL\", 50, 70);\n</code>\n</div>"
             ],
@@ -10640,8 +10769,8 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 49,
-            "description": "Sets the spacing between lines of text in units of pixels. This\nsetting will be used in all subsequent calls to the text() function.",
+            "line": 51,
+            "description": "Sets/gets the spacing between lines of text in units of pixels. This\nsetting will be used in all subsequent calls to the text() function.",
             "itemtype": "method",
             "name": "textLeading",
             "params": [
@@ -10651,6 +10780,10 @@
                     "type": "Number"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "Object|Number"
+            },
             "example": [
                 "\n<div>\n<code>\n// Text to display. The \"\\n\" is a \"new line\" character\nlines = \"L1\\nL2\\nL3\";\ntextSize(12);\nfill(0);  // Set fill to black\n\ntextLeading(10);  // Set leading to 10\ntext(lines, 10, 25);\n\ntextLeading(20);  // Set leading to 20\ntext(lines, 40, 25);\n\ntextLeading(30);  // Set leading to 30\ntext(lines, 70, 25);\n</code>\n</div>"
             ],
@@ -10660,8 +10793,8 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 78,
-            "description": "Sets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in units of pixels.",
+            "line": 88,
+            "description": "Sets/gets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in units of pixels.",
             "itemtype": "method",
             "name": "textSize",
             "params": [
@@ -10672,16 +10805,20 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(26); \ntext(\"WORD\", 10, 50); \ntextSize(14);\ntext(\"WORD\", 10, 70);\n</code>\n</div>"
+                ""
             ],
+            "return": {
+                "description": "<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(26);\ntext(\"WORD\", 10, 50);\ntextSize(14);\ntext(\"WORD\", 10, 70);\n</code>\n</div>",
+                "type": "Object|Number"
+            },
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 102,
-            "description": "Sets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.",
+            "line": 119,
+            "description": "Sets/gets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.",
             "itemtype": "method",
             "name": "textStyle",
             "params": [
@@ -10691,6 +10828,10 @@
                     "type": "Number/Constant"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "Object|String"
+            },
             "example": [
                 "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextStyle(NORMAL);\ntextSize(14);\ntext(\"WORD\", 10, 23);\ntextStyle(ITALIC);\ntextSize(14);\ntext(\"WORD\", 10, 45);\ntextStyle(BOLD);\ntextSize(14);\ntext(\"WORD\", 10, 67);\n</code>\n</div>"
             ],
@@ -10700,7 +10841,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 135,
+            "line": 160,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
             "name": "textWidth",
@@ -10711,6 +10852,10 @@
                     "type": "String"
                 }
             ],
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
             "example": [
                 "\n<div>\n<code>\nbackground(0);\nfill(255);\ntextSize(14);\ns = \"String.\";\ntext(s, 10, 23);\nconsole.log(textWidth(s));\n</code>\n</div>"
             ],
@@ -10720,7 +10865,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 156,
+            "line": 183,
             "description": "Returns ascent of the current font at its current size.",
             "example": [
                 "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textAscent() * scalar;  // Calc ascent\nline(0, base-a, width, base-a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textAscent() * scalar;  // Recalc ascent\nline(40, base-a, width, base-a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
@@ -10731,10 +10876,10 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 181,
+            "line": 243,
             "description": "Returns descent of the current font at its current size.",
             "example": [
-                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textDescent() * scalar;  // Calc ascent\nline(0, base+a, width, base+a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textDescent() * scalar;  // Recalc ascent\nline(40, base+a, width, base+a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div> "
+                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textDescent() * scalar;  // Calc ascent\nline(0, base+a, width, base+a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textDescent() * scalar;  // Recalc ascent\nline(40, base+a, width, base+a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
@@ -10742,31 +10887,31 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 206,
-            "description": "Helper fxn to apply text properties.",
+            "line": 271,
+            "description": "Helper fxn to check font type (system or otf)",
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 217,
-            "description": "Helper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
+            "line": 280,
+            "description": "Helper fxn to measure ascent and descent.",
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 258,
-            "description": "Helper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
+            "line": 331,
+            "description": "Helper fxn to measure ascent and descent.\nAdapted from http://stackoverflow.com/a/25355178",
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 15,
+            "line": 17,
             "description": "Draws text to the screen. Displays the information specified in the first\nparameter on the screen in the position specified by the additional\nparameters. A default font will be used unless a font is set with the\ntextFont() function and a default size will be used unless a font is set\nwith textSize(). Change the color of the text with the fill() function.\nChange the outline of the text with the stroke() and strokeWeight()\nfunctions.\nThe text displays in relation to the textAlign() function, which gives the\noption to draw to the left, right, and center of the coordinates.\n\nThe x2 and y2 parameters define a rectangular area to display within and\nmay only be used with string data. When these parameters are specified,\nthey are interpreted based on the current rectMode() setting. Text that\ndoes not fit completely within the rectangle specified will not be drawn\nto the screen.",
             "itemtype": "method",
             "name": "text",
@@ -10797,6 +10942,10 @@
                     "type": "Number"
                 }
             ],
+            "return": {
+                "description": "this",
+                "type": "Object"
+            },
             "example": [
                 "\n<div>\n<code>\ntextSize(32);\ntext(\"word\", 10, 30);\nfill(0, 102, 153);\ntext(\"word\", 10, 60);\nfill(0, 102, 153, 51);\ntext(\"word\", 10, 90);\n</code>\n</div>\n<div>\n<code>\ns = \"The quick brown fox jumped over the lazy dog.\";\nfill(50);\ntext(s, 10, 10, 70, 80); // Text wraps within text box\n</code>\n</div>"
             ],
@@ -10806,7 +10955,7 @@
         },
         {
             "file": "src/typography/loading_displaying.js",
-            "line": 75,
+            "line": 77,
             "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
@@ -10817,12 +10966,107 @@
                     "type": "String"
                 }
             ],
+            "return": {
+                "description": "this",
+                "type": "Object"
+            },
             "example": [
-                "\n<div>\n<code>\nfill(0);\ntextSize(36);\ntextFont(\"Georgia\");\ntext(\"Georgia\", 12, 40);\ntextFont(\"Helvetica\");\ntext(\"Helvetica\", 12, 90);\n</code>\n</div>"
+                "\n<div>\n<code>\nfill(0);\ntextSize(12);\ntextFont(\"Georgia\");\ntext(\"Georgia\", 12, 40);\ntextFont(\"Helvetica\");\ntext(\"Helvetica\", 12, 90);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
             "submodule": "Loading & Displaying"
+        },
+        {
+            "file": "src/typography/p5.Font.js",
+            "line": 9,
+            "description": "This module defines the p5.Font class and P5 methods for\ndrawing text to the main display canvas.",
+            "class": "p5.Font",
+            "module": "Font",
+            "submodule": "Font"
+        },
+        {
+            "file": "src/typography/p5.Font.js",
+            "line": 45,
+            "description": "Underlying opentype font implementation",
+            "itemtype": "property",
+            "name": "font",
+            "class": "p5.Font",
+            "module": "Font",
+            "submodule": "Font"
+        },
+        {
+            "file": "src/typography/p5.Font.js",
+            "line": 52,
+            "description": "Renders a set of glyph paths to the current graphics context",
+            "params": [
+                {
+                    "name": "line",
+                    "description": "a line of text",
+                    "type": "String"
+                },
+                {
+                    "name": "x",
+                    "description": "x-position",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-position",
+                    "type": "Number"
+                },
+                {
+                    "name": "fontSize",
+                    "description": "font size to use (optional)",
+                    "type": "Number"
+                },
+                {
+                    "name": "options",
+                    "description": "opentype options (optional)",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "this object",
+                "type": "Object"
+            },
+            "class": "p5.Font",
+            "module": "Font",
+            "submodule": "Font"
+        },
+        {
+            "file": "src/typography/p5.Font.js",
+            "line": 121,
+            "description": "Returns a tight bounding box for the given text string using this font",
+            "params": [
+                {
+                    "name": "line",
+                    "description": "a line of text",
+                    "type": "String"
+                },
+                {
+                    "name": "x",
+                    "description": "x-position",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-position",
+                    "type": "Number"
+                },
+                {
+                    "name": "fontSize",
+                    "description": "font size to use (optional)",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "a rectangle with properties: x, y, w, h",
+                "type": "Object"
+            },
+            "class": "p5.Font",
+            "module": "Font",
+            "submodule": "Font"
         },
         {
             "file": "src/utilities/array_functions.js",
@@ -11402,12 +11646,6 @@
                     "type": "Number|Array"
                 },
                 {
-                    "name": "digits",
-                    "description": "number of digits to pad with zero",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
                     "name": "left",
                     "description": "number of digits to the left of the\n                               decimal point",
                     "type": "Number",
@@ -11430,7 +11668,7 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 173,
+            "line": 199,
             "description": "Utility function for formatting numbers into strings and placing\nappropriate commas to mark units of 1000. There are two versions: one\nfor formatting ints, and one for formatting an array of ints. The value\nfor the right parameter should always be a positive integer.",
             "itemtype": "method",
             "name": "nfc",
@@ -11460,7 +11698,7 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 216,
+            "line": 252,
             "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
             "itemtype": "method",
             "name": "nfp",
@@ -11471,12 +11709,6 @@
                     "type": "Number|Array"
                 },
                 {
-                    "name": "digits",
-                    "description": "number of digits to pad with zero",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
                     "name": "left",
                     "description": "number of digits to the left of the decimal\n                               point",
                     "type": "Number",
@@ -11499,7 +11731,7 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 248,
+            "line": 283,
             "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
             "itemtype": "method",
             "name": "nfs",
@@ -11510,12 +11742,6 @@
                     "type": "Number|Array"
                 },
                 {
-                    "name": "digits",
-                    "description": "number of digits to pad with zero",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
                     "name": "left",
                     "description": "number of digits to the left of the decimal\n                               point",
                     "type": "Number",
@@ -11538,7 +11764,7 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 280,
+            "line": 314,
             "description": "The split() function maps to String.split(), it breaks a String into\npieces using a character or string as the delimiter. The delim parameter\nspecifies the character or characters that mark the boundaries between\neach piece. A String[] array is returned that contains each of the pieces.\n\nThe splitTokens() function works in a similar fashion, except that it\nsplits using a range of characters instead of a specific character or\nsequence.",
             "itemtype": "method",
             "name": "split",
@@ -11567,7 +11793,7 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 309,
+            "line": 343,
             "description": "The splitTokens() function splits a String at one or many character\ndelimiters or \"tokens.\" The delim parameter specifies the character or\ncharacters to be used as a boundary.\n\nIf no delim characters are specified, any whitespace character is used to\nsplit. Whitespace characters include tab (\\t), line feed (\\n), carriage\nreturn (\\r), form feed (\\f), and space.",
             "itemtype": "method",
             "name": "splitTokens",
@@ -11594,7 +11820,7 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 330,
+            "line": 364,
             "description": "Removes whitespace characters from the beginning and end of a String. In\naddition to standard whitespace characters such as space, carriage return,\nand tab, this function also removes the Unicode \"nbsp\" character.",
             "itemtype": "method",
             "name": "trim",
@@ -11738,7 +11964,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 50,
+            "line": 49,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -12355,7 +12581,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 677,
+            "line": 678,
             "description": "Sets the given style (css) property of the element with the given value.\n If no value is specified, returns the value of the given property,\n or undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -12385,7 +12611,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 712,
+            "line": 713,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -12415,7 +12641,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 739,
+            "line": 740,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -12437,7 +12663,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 760,
+            "line": 761,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -12451,7 +12677,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 772,
+            "line": 773,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -12465,7 +12691,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 783,
+            "line": 784,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension.",
             "itemtype": "method",
             "name": "size",
@@ -12491,7 +12717,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 837,
+            "line": 838,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -12504,7 +12730,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 883,
+            "line": 890,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -12518,7 +12744,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 897,
+            "line": 911,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -12532,7 +12758,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 909,
+            "line": 923,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -12546,7 +12772,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 920,
+            "line": 934,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -12560,7 +12786,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 931,
+            "line": 945,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -12574,7 +12800,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 944,
+            "line": 958,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -12595,7 +12821,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 956,
+            "line": 970,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -12617,7 +12843,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 972,
+            "line": 986,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -12639,7 +12865,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 989,
+            "line": 1003,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -12653,7 +12879,137 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1046,
+            "line": 1043,
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1045,
+            "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
+            "itemtype": "method",
+            "name": "connect",
+            "params": [
+                {
+                    "name": "audioNode",
+                    "description": "AudioNode from the Web\n                                    Audio API, or an object from the\n                                    p5.sound library",
+                    "type": "AudioNode|p5.sound object"
+                }
+            ],
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1098,
+            "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
+            "itemtype": "method",
+            "name": "disconnect",
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1114,
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1116,
+            "description": "Show the default MediaElement controls, as determined by the web browser.",
+            "itemtype": "method",
+            "name": "showControls",
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1127,
+            "description": "Hide the default mediaElement controls.",
+            "itemtype": "method",
+            "name": "hideControls",
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1137,
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1139,
+            "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
+            "itemtype": "method",
+            "name": "addCue",
+            "params": [
+                {
+                    "name": "time",
+                    "description": "Time in seconds, relative to this media\n                           element's playback. For example, to trigger\n                           an event every time playback reaches two\n                           seconds, pass in the number 2. This will be\n                           passed as the first parameter to\n                           the callback function.",
+                    "type": "Number"
+                },
+                {
+                    "name": "callback",
+                    "description": "Name of a function that will be\n                           called at the given time. The callback will\n                           receive time and (optionally) param as its\n                           two parameters.",
+                    "type": "Function"
+                },
+                {
+                    "name": "value",
+                    "description": "An object to be passed as the\n                           second parameter to the\n                           callback function.",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "id ID of this cue,\n                    useful for removeCue(id)",
+                "type": "Number"
+            },
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  background(255,255,255);\n  \n  audioEl = createAudio('assets/beat.mp3');\n  audioEl.showControls();\n\n  // schedule three calls to changeBackground\n  audioEl.addCue(0.5, changeBackground, color(255,0,0) );\n  audioEl.addCue(1.0, changeBackground, color(0,255,0) );\n  audioEl.addCue(2.5, changeBackground, color(0,0,255) );\n  audioEl.addCue(3.0, changeBackground, color(0,255,255) );\n  audioEl.addCue(4.2, changeBackground, color(255,255,0) );\n  audioEl.addCue(5.0, changeBackground, color(255,255,0) );\n}\n\nfunction changeBackground(val) {\n  background(val);\n}\n</code></div>"
+            ],
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1201,
+            "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
+            "itemtype": "method",
+            "name": "removeCue",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "ID of the cue, as returned by addCue",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1221,
+            "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
+            "itemtype": "method",
+            "name": "clearCues",
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1278,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -12663,7 +13019,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1058,
+            "line": 1290,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -12673,7 +13029,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1064,
+            "line": 1296,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -12683,7 +13039,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1070,
+            "line": 1302,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -12693,7 +13049,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1076,
+            "line": 1308,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -16135,35 +16491,35 @@
         },
         {
             "message": "Missing item type\nThese Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
-            "line": " src/color/p5.Color.js:81"
+            "line": " src/color/p5.Color.js:100"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format #XXX,\ne.g. #416",
-            "line": " src/color/p5.Color.js:249"
+            "line": " src/color/p5.Color.js:268"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
-            "line": " src/color/p5.Color.js:255"
+            "line": " src/color/p5.Color.js:274"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
-            "line": " src/color/p5.Color.js:261"
+            "line": " src/color/p5.Color.js:280"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
-            "line": " src/color/p5.Color.js:277"
+            "line": " src/color/p5.Color.js:296"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
-            "line": " src/color/p5.Color.js:293"
+            "line": " src/color/p5.Color.js:312"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
-            "line": " src/color/p5.Color.js:309"
+            "line": " src/color/p5.Color.js:328"
         },
         {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
-            "line": " src/color/p5.Color.js:326"
+            "line": " src/color/p5.Color.js:345"
         },
         {
             "message": "Missing item type\nReturn a array of objects that represent bezier curves which approximate\nthe circular arc centered at the origin, from startAngle to endAngle\n(radians) with the specified radius.\n\nEach bezier curve is an object with four points, where x1,y1 and\nx4,y4 are the arc's end points and x2,y2 and x3,y3 are the cubic bezier's\ncontrol points.",
@@ -16191,35 +16547,39 @@
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/core/environment.js:200"
+            "line": " src/core/environment.js:210"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/core/environment.js:209"
+            "line": " src/core/environment.js:219"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/core/error_helpers.js:1"
         },
         {
             "message": "Missing item type\nChecks the definition type against the argument type\nIf any of these passes (in order), it matches:\n\n- p5.* definitions are checked with instanceof\n- Booleans are let through (everything is truthy or falsey)\n- Lowercase of the definition is checked against the js type\n- Number types are checked to see if they are numerically castable",
-            "line": " src/core/error_helpers.js:41"
+            "line": " src/core/error_helpers.js:39"
         },
         {
             "message": "Missing item type\nPrints out a fancy, colorful message to the console log",
-            "line": " src/core/error_helpers.js:61"
+            "line": " src/core/error_helpers.js:59"
         },
         {
             "message": "Missing item type\nValidate all the parameters of a function for number and type",
-            "line": " src/core/error_helpers.js:90"
+            "line": " src/core/error_helpers.js:88"
         },
         {
             "message": "Missing item type\nCheck number of parameters\n\nExample: \"You wrote ellipse(X,X,X). ellipse was expecting 4\n          parameters. Try ellipse(X,X,X,X).\"",
-            "line": " src/core/error_helpers.js:107"
+            "line": " src/core/error_helpers.js:105"
         },
         {
             "message": "Missing item type\nType checking\n\nExample: \"It looks like ellipse received an empty variable in spot #2.\"\nExample: \"ellipse was expecting a number for parameter #1,\n          received \"foo\" instead.\"",
-            "line": " src/core/error_helpers.js:143"
+            "line": " src/core/error_helpers.js:141"
         },
         {
             "message": "Missing item type\nPrints out all the colors in the color pallete with white text.\nFor color blindness testing.",
-            "line": " src/core/error_helpers.js:177"
+            "line": " src/core/error_helpers.js:175"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
@@ -16235,7 +16595,7 @@
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
-            "line": " src/core/shim.js:16"
+            "line": " src/core/shim.js:30"
         },
         {
             "message": "Missing item type\n[rotateX description]",
@@ -16335,23 +16695,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1039"
+            "line": " src/io/files.js:1059"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1060"
+            "line": " src/io/files.js:1080"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1096"
+            "line": " src/io/files.js:1116"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1128"
+            "line": " src/io/files.js:1148"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1140"
+            "line": " src/io/files.js:1160"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
@@ -16363,59 +16723,71 @@
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/p5.Vector.js:690"
+            "line": " src/math/p5.Vector.js:840"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/p5.Vector.js:710"
+            "line": " src/math/p5.Vector.js:861"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/p5.Vector.js:732"
+            "line": " src/math/p5.Vector.js:883"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/p5.Vector.js:751"
+            "line": " src/math/p5.Vector.js:902"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/p5.Vector.js:771"
+            "line": " src/math/p5.Vector.js:922"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/p5.Vector.js:783"
+            "line": " src/math/p5.Vector.js:934"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/math/p5.Vector.js:795"
+            "line": " src/math/p5.Vector.js:946"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/math/p5.Vector.js:808"
+            "line": " src/math/p5.Vector.js:959"
         },
         {
             "message": "Missing item type\nReturns ascent of the current font at its current size.",
-            "line": " src/typography/attributes.js:156"
+            "line": " src/typography/attributes.js:183"
         },
         {
             "message": "Missing item type\nReturns descent of the current font at its current size.",
-            "line": " src/typography/attributes.js:181"
+            "line": " src/typography/attributes.js:243"
         },
         {
-            "message": "Missing item type\nHelper fxn to apply text properties.",
-            "line": " src/typography/attributes.js:206"
+            "message": "Missing item type\nHelper fxn to check font type (system or otf)",
+            "line": " src/typography/attributes.js:271"
         },
         {
-            "message": "Missing item type\nHelper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
-            "line": " src/typography/attributes.js:217"
+            "message": "Missing item type\nHelper fxn to measure ascent and descent.",
+            "line": " src/typography/attributes.js:280"
         },
         {
-            "message": "Missing item type\nHelper fxn to measure ascent and descent. \nAdapted from http://stackoverflow.com/a/25355178",
-            "line": " src/typography/attributes.js:258"
+            "message": "Missing item type\nHelper fxn to measure ascent and descent.\nAdapted from http://stackoverflow.com/a/25355178",
+            "line": " src/typography/attributes.js:331"
+        },
+        {
+            "message": "Missing item type\nThis module defines the p5.Font class and P5 methods for\ndrawing text to the main display canvas.",
+            "line": " src/typography/p5.Font.js:9"
+        },
+        {
+            "message": "Missing item type\nRenders a set of glyph paths to the current graphics context",
+            "line": " src/typography/p5.Font.js:52"
+        },
+        {
+            "message": "Missing item type\nReturns a tight bounding box for the given text string using this font",
+            "line": " src/typography/p5.Font.js:121"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:50"
+            "line": " src/app.js:49"
         },
         {
             "message": "Missing item type\nHelper function for getElement and getElements.",
@@ -16440,6 +16812,18 @@
         {
             "message": "Missing item type",
             "line": " lib/addons/p5.dom.js:426"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/addons/p5.dom.js:1043"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/addons/p5.dom.js:1114"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/addons/p5.dom.js:1137"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",

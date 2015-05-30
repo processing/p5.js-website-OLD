@@ -13,6 +13,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.FFT",
         "p5.File",
         "p5.Filter",
+        "p5.Font",
         "p5.Graphics",
         "p5.Graphics2D",
         "p5.Image",
@@ -43,14 +44,13 @@ YUI.add("yuidoc-meta", function(Y) {
         "Color",
         "Constants",
         "Conversion",
-        "Core",
         "Creating & Reading",
         "Curves",
         "DOM",
         "Data",
         "Environment",
         "Events",
-        "Helpers",
+        "Font",
         "IO",
         "Image",
         "Input",
@@ -110,10 +110,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Conversion"
         },
         {
-            "displayName": "Core",
-            "name": "Core"
-        },
-        {
             "displayName": "Creating & Reading",
             "name": "Creating & Reading"
         },
@@ -139,8 +135,9 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Events"
         },
         {
-            "displayName": "Helpers",
-            "name": "Helpers"
+            "displayName": "Font",
+            "name": "Font",
+            "description": "Base class for font handling"
         },
         {
             "displayName": "Image",
@@ -201,7 +198,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Rendering",
             "name": "Rendering",
-            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for \nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         {
             "displayName": "Setting",
