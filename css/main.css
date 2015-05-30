@@ -128,7 +128,7 @@
     GET STARTED
   //////////////////////////////////////////////////
 */
-.tutorial-btn {
+/*.tutorial-btn {
     background: white;
     color: black !important;
     padding: 7px;
@@ -146,7 +146,7 @@
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
-}
+}*/
 
 /*
   //////////////////////////////////////////////////
@@ -658,6 +658,21 @@ img.gallery-img:hover {
 .gallery-source:hover {
     color: #AFAFAF;
     font-size: .7em;
+}
+
+/*
+  //////////////////////////////////////////////////
+    COMMUNITY
+  //////////////////////////////////////////////////
+*/
+
+ul.statement-list {
+    margin-left: 45px;
+}
+
+.bullets li {
+    margin-bottom: 0 !important;
+    padding: none !important;
 }
 
 
@@ -1294,7 +1309,7 @@ footer {
         /*content:" Â»";*/
         }
 
-    #menu li:nth-child(9) {
+    #menu li:nth-child(10) {
         margin-top:3em;
         padding-top: 0.5em;
         /*border-top: 0.06em solid rgba(51,51,51,0.25);*/
