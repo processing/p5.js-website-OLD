@@ -11,6 +11,8 @@
           <p id="backlink"><a href="../#demos">< Back to Demos</a></p>
           <h2>Interactivity 1</h2>
           <p>The circle changes color when you click on it.
+ <p><em><span class="small"> To run this example locally, you will need the
+ <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>.
  </p>
 
           <div id="exampleDisplay">

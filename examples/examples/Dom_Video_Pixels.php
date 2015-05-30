@@ -10,10 +10,10 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Video Pixels</h2>
-          <p><p>Load a video, manipulate it's pixels and draw to canvas. 
- You will need to include the 
+          <p><p>Load a video, manipulate it's pixels and draw to canvas.
+ <p><em><span class="small"> To run this example locally, you will need the
  <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
- for this example to work in your own project.</p>
+ at least one video file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  </p>
 
           <div id="exampleDisplay">

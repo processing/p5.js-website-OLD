@@ -10,8 +10,10 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Brightness</h2>
-          <p>By Dan Shiffman. This program adjusts the brightness of a part 
+          <p>By Dan Shiffman. This program adjusts the brightness of a part
  of the image by calculating the distance of each pixel to the mouse.
+ <p><em><span class="small"> To run this example locally, you will need
+ at least an image file and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  </p>
 
           <div id="exampleDisplay">

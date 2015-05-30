@@ -10,8 +10,12 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Load and Display Image</h2>
-          <p>Images can be loaded and displayed to the screen at their 
+          <p>Images can be loaded and displayed to the screen at their
  actual size or any other size.
+ <p><em><span class="small"> To run this example locally, you will need an 
+ image file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">
+ local server</a>.</span></em></p>
+
  </p>
 
           <div id="exampleDisplay">

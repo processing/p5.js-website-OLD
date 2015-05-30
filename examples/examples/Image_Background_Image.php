@@ -10,9 +10,12 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Background Image</h2>
-          <p>This example presents the fastest way to load a 
- background image into Processing. To load an image as the background, 
+          <p>This example presents the fastest way to load a
+ background image into Processing. To load an image as the background,
  it must be the same width and height as the program.
+ <p><em><span class="small"> To run this example locally, you will need an
+ image file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">
+ local server</a>.</span></em></p>
  </p>
 
           <div id="exampleDisplay">
