@@ -5166,21 +5166,26 @@ define('listView',[
               };
             }
 
-            if (item.file.indexOf('objects') === -1) {
+            if (item.file.indexOf('p5.') === -1) {
+
               self.groups[group].subgroups[subgroup].items.push(item);
+
             } else {
-              var found = _.find(self.groups[group].subgroups[subgroup].items, 
+
+              var found = _.find(self.groups[group].subgroups[subgroup].items,
                 function(i){ return i.name == item.class; });
 
               if (!found) {
-                var hash = item.hash;
+
+                // FIX TO INVISIBLE OBJECTS: DH (see also router.js)
                 var ind = hash.lastIndexOf('/');
-                hash = hash.substring(0, ind);
+                hash = item.hash.substring(0, ind).replace('p5/','p5.');
                 self.groups[group].subgroups[subgroup].items.push({
                   name: item.class,
                   hash: hash
                 });
               }
+
             }
           }
         });
@@ -5229,6 +5234,7 @@ define('listView',[
   return listView;
 
 });
+
 
 define('text!tpl/item.html',[],function () { return '<h3><%=item.name%><% if (item.isMethod) { %>()<% } %></h3>\n\n<% if (item.example) { %>\n<div class="example">\n  <h4>Example</h4>\n\n\t<div class="example-content">\n    <%= item.example %>\n  </div>\n</div> \n<% } %>\n\n\n<div class="description">\n  <h4>Description</h4>\n  <p><%= item.description %></p>\n</div>\n\n\n<div>\n  <h4>Syntax</h4>\n<p><pre><code class="language-javascript"><%= syntax %></code></pre></p>\n</div>\n\n\n<% if (item.return) { %>\n<span class="returns-inline">\n  <span class="type"></span>\n</span>\n<% } %>\n\n<% if (item.deprecated) { %>\n<span class="flag deprecated"<% if (item.deprecationMessage) { %> title="<%=item.deprecationMessage%>"<% } %>>deprecated</span>\n<% } %>\n\n<% if (item.access) { %>\n<span class="flag <%=item.access%>"><%= item.access %></span>\n<% } %>\n\n<% if (item.final) { %>\n<span class="flag final">final</span>\n<% } %>\n\n<% if (item.static) { %>\n<span class="flag static">static</span>\n<% } %>\n\n<% if (item.chainable) { %>\n<span class="label label-success chainable">chainable</span>\n<% } %>\n\n<% if (item.async) { %>\n<span class="flag async">async</span>\n<% } %>\n\n<!--  <div class="meta">\n    {{#if overwritten_from}}\n    <p>Inherited from\n      <a href="#">\n        {{overwritten_from/class}}\n      </a>\n      {{#if foundAt}}\n      but overwritten in\n      {{/if}}\n      {{else}}\n      {{#if extended_from}}\n    <p>Inherited from\n      <a href="#">{{extended_from}}</a>:\n      {{else}}\n      {{#providedBy}}\n    <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n    {{/providedBy}}\n    <p>\n      {{#if foundAt}}\n      Defined in\n      {{/if}}\n      {{/if}}\n      {{/if}}\n      {{#if foundAt}}\n      <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n      {{/if}}\n    </p>\n\n    {{#if deprecationMessage}}\n    <p>Deprecated: {{deprecationMessage}}</p>\n    {{/if}}\n\n    {{#if since}}\n    <p>Available since {{since}}</p>\n    {{/if}}\n  </div>-->\n\n<% if (item.params) { %>\n<div class="params">\n  <h4>Parameters</h4>\n  <table>\n  <% for (var i=0; i<item.params.length; i++) { %>\n    <tr>\n    <td>\n    <% var p = item.params[i] %>\n    <% if (p.optional) { %>\n      <code class="language-javascript">[<%=p.name%>]</code>\n    <% } else { %>\n      <code class="language-javascript"><%=p.name%></code>\n    <% } %> \n    <%if (p.optdefault) { %>=<%=p.optdefault%><% } %>\n    </td>\n    <td>\n    <% if (p.type) { %>\n      <span class="param-type label label-info"><%=p.type%></span>: <%=p.description%></span> \n    <% } %>\n    <% if (p.multiple) {%>\n      <span class="flag multiple" title="This argument may occur one or more times.">multiple</span>\n    <% } %>\n    </td>\n    </tr>\n  <% } %>\n  </table>\n</div>\n<% } %>\n\n<% if (item.return) { %>\n<div>\n  <h4>Returns</h4>\n    <% if (item.return.type) { %>\n      <p><span class="param-type label label-info"><%=item.return.type%></span>: <%= item.return.description %></p>\n    <% } %>\n</div>\n<% } %>\n\n';});
 
@@ -7333,7 +7339,7 @@ define('router',[
   'use strict'; //
 
   var Router = Backbone.Router.extend({
-    
+
     routes: {
       '': 'list',
       'p5': 'list',
@@ -7396,7 +7402,7 @@ define('router',[
           && !searchItem) {
         window.location.hash = '/libraries/'+searchClass;
         return;
-      } 
+      }
 
       var self = this;
       this.init(function() {
@@ -7443,7 +7449,7 @@ define('router',[
         // Search for a class item
       } else if (className && itemName) {
         for (var i = 0; i < itemsCount; i++) {
-          if (items[i].class.toLowerCase() === className && 
+          if (items[i].class.toLowerCase() === className &&
             items[i].name.toLowerCase() === itemName) {
             found = items[i];
             break;
@@ -7491,27 +7497,25 @@ define('router',[
         App.pageView.hideContentViews();
       });
     },
+
     /**
      * Create an hash/url for the item.
      * @param {Object} item A class, method, property or event object.
      * @returns {String} The hash string, including the '#'.
      */
-    getHash: function(item) {
-      if (!item.hash) {
-        var hash = '#/';
-        var isClass = item.hasOwnProperty('classitems');
-        var c = (item.file.indexOf('objects') === -1 && item.file.indexOf('addons') === -1 ) ? 'p5' : item.class;
-        // Create hash for links
-        if (isClass) {
-          hash += item.name;
-        } else {
-          hash += c + '/' + item.name;
-        }
-        item.hash = hash;
-      }
-      return item.hash;
-    }
-  });
+     getHash: function(item) {
+
+       if (!item.hash) {
+
+         // FIX TO INVISIBLE OBJECTS: DH (see also listView.js)
+         var clsFunc = '#/' + item.class + '.' + item.name;
+         var idx = clsFunc.lastIndexOf('.');
+         item.hash = clsFunc.substring(0,idx) + '/' + clsFunc.substring(idx+1);
+       }
+
+       return item.hash;
+     }
+   });
 
 
   // Get the router

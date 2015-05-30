@@ -4296,7 +4296,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 331,
+            "line": 343,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -4702,11 +4702,11 @@
         {
             "file": "src/core/environment.js",
             "line": 81,
-            "description": "Confirms if a p5.js program is \"focused,\" meaning that it is active and\nwill accept mouse or keyboard input. This variable is \"true\" if it is\nfocused and \"false\" if not.",
+            "description": "Confirms if the window a p5.js program is in is \"focused,\" meaning that \nthe sketch will accept mouse or keyboard input. This variable is \n\"true\" if the window is focused and \"false\" if not.",
             "itemtype": "property",
             "name": "focused",
             "example": [
-                "\n  <div><code>\n    if (focused) {  // or \"if (focused === true)\"\n      ellipse(25, 25, 50, 50);\n    } else {\n      line(0, 0, 100, 100);\n      line(100, 0, 0, 100);\n    }\n  </code></div>"
+                "\n<div><code>\n// To demonstrate, put two windows side by side. \n// Click on the window that the p5 sketch isn't in!\nfunction draw() {\n  if (focused) {  // or \"if (focused === true)\"\n    noStroke();\n    fill(0, 200, 0);\n    ellipse(25, 25, 50, 50);\n  } else {\n    stroke(200,0,0); \n    line(0, 0, 100, 100);\n    line(100, 0, 0, 100);\n  }\n}\n    \n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -4714,7 +4714,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 99,
+            "line": 107,
             "description": "Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.",
             "itemtype": "method",
             "name": "cursor",
@@ -4746,7 +4746,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 153,
+            "line": 161,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().",
             "itemtype": "method",
             "name": "frameRate",
@@ -4771,7 +4771,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 210,
+            "line": 218,
             "description": "Returns the current framerate.",
             "return": {
                 "description": "current frameRate",
@@ -4783,7 +4783,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 219,
+            "line": 227,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
             "params": [
                 {
@@ -4799,7 +4799,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 234,
+            "line": 242,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
             "name": "noCursor",
@@ -4812,7 +4812,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 255,
+            "line": 263,
             "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayWidth",
@@ -4825,7 +4825,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 267,
+            "line": 275,
             "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayHeight",
@@ -4838,7 +4838,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 279,
+            "line": 287,
             "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
             "itemtype": "property",
             "name": "windowWidth",
@@ -4851,7 +4851,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 290,
+            "line": 298,
             "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
@@ -4864,7 +4864,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 302,
+            "line": 310,
             "description": "The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other \nadjustements to accomodate the new window size.",
             "itemtype": "property",
             "name": "windowResized",
@@ -4877,7 +4877,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 336,
+            "line": 344,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -4887,7 +4887,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 347,
+            "line": 355,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -4897,7 +4897,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 358,
+            "line": 366,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullscreen",
@@ -4922,7 +4922,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 400,
+            "line": 408,
             "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.\nThis devicePixelScaling() function must be the first line of code\ninside setup().",
             "itemtype": "method",
             "name": "devicePixelScaling",
@@ -4943,7 +4943,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 476,
+            "line": 484,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -4960,7 +4960,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 503,
+            "line": 511,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -4977,7 +4977,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 520,
+            "line": 528,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -5589,7 +5589,7 @@
         },
         {
             "file": "src/core/shim.js",
-            "line": 30,
+            "line": 66,
             "description": "shim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
             "class": "p5",
             "module": "Rendering"
@@ -5609,7 +5609,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 77,
+            "line": 74,
             "description": "By default, p5.js loops through draw() continuously, executing the code\nwithin it. However, the draw() loop may be stopped by calling noLoop().\nIn that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
             "name": "loop",
@@ -5622,7 +5622,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 115,
+            "line": 112,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "push",
@@ -5635,7 +5635,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 183,
+            "line": 180,
             "description": "The push() function saves the current drawing style settings and \ntransformations, while pop() restores these settings. Note that these \nfunctions are always used together. They allow you to change the style \nand transformation settings and later return to what you had. When a new \nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide \nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(), \nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(), \nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(), \ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -5648,7 +5648,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 258,
+            "line": 255,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs. \nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n \n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -6582,11 +6582,11 @@
         {
             "file": "src/events/mouse.js",
             "line": 630,
-            "description": "The event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.\n\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
+            "description": "The function mouseWheel is executed every time a scroll event is detected\neither triggered by an actual mouse wheel or by a touchpad.<br>\nThe event.delta property returns -1 or +1 depending on the scroll \ndirection and the user's settings. (on OS X with \"natural\" scrolling \nenabled, the values are inverted).<br><br>\nBrowsers may have different default behaviors attached to various \nmouse events. To prevent any default behavior for this event, add \n`return false` to the end of the method.\n\nThe event.wheelDelta or event.detail properties can also be accessed but\ntheir behavior may differ depending on the browser.\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
             "example": [
-                "\n<div>\n<code>\nvar pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  //browsers have different ways to detect scroll\n  //this delta variable is -1 or +1 depending on the\n  //direction\n  var min = Math.min(1, (event.wheelDelta || -event.detail));\n  var delta = Math.max(-1, min);\n  //move the square one pixel up or down\n  pos += delta;\n\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  //event.delta can be +1 or -1 depending\n  //on the wheel/scroll direction\n  print(event.delta);\n  //move the square one pixel up or down\n  pos += event.delta;\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Events",
@@ -8004,7 +8004,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 507,
+            "line": 510,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -8039,7 +8039,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 526,
+            "line": 529,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -8074,7 +8074,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 544,
+            "line": 547,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
@@ -8115,7 +8115,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 702,
+            "line": 705,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save() \nwithin draw if it's looping, as the save() function will open a new save \ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename. \nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n \n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Graphics object as an image\n \nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n \nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n \nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -8142,7 +8142,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 822,
+            "line": 825,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveJSON",
@@ -8173,7 +8173,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 878,
+            "line": 881,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveStrings",
@@ -8198,7 +8198,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 930,
+            "line": 933,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveTable",
@@ -8228,7 +8228,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1059,
+            "line": 1062,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8255,7 +8255,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1080,
+            "line": 1083,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8280,7 +8280,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1116,
+            "line": 1119,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -8301,7 +8301,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1148,
+            "line": 1151,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -8315,7 +8315,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1160,
+            "line": 1163,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -10126,7 +10126,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = p5.Vector.fromAngle(PI / 2); \n// v has components [0, 1, 0]\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction draw() {\n  background (200); \n  \n  // Create a variable, proportional to the mouseX, \n  // varying from 0-360, to represent an angle in degrees.\n  angleMode(DEGREES);\n  var myDegrees = map(mouseX, 0,width, 0,360);\n  \n  // Display that variable in an onscreen text.\n  // (Note the nfc() function to truncate additional decimal places, \n  // and the \"\\xB0\" character for the degree symbol.)\n  var readout = \"angle = \" + nfc(myDegrees,1,1) + \"\\xB0\"\n  noStroke();\n  fill (0);\n  text (readout, 5, 15);\n  \n  // Create a p5.Vector using the fromAngle function,\n  // and extract its x and y components. \n  var v = p5.Vector.fromAngle(radians(myDegrees));\n  var vx = v.x;\n  var vy = v.y;\n  \n  push();\n  translate (width/2, height/2);\n  noFill();\n  stroke (150); \n  line (0,0, 30,0);\n  stroke (0); \n  line (0,0, 30*vx, 30*vy); \n  pop()\n}\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10134,7 +10134,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 770,
+            "line": 799,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -10152,7 +10152,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 803,
+            "line": 832,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -10170,7 +10170,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 840,
+            "line": 869,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -10200,7 +10200,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 861,
+            "line": 890,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -10230,7 +10230,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 883,
+            "line": 912,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -10260,7 +10260,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 902,
+            "line": 931,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -10290,7 +10290,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 922,
+            "line": 951,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -10315,7 +10315,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 934,
+            "line": 963,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -10340,7 +10340,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 946,
+            "line": 975,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -10365,7 +10365,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 959,
+            "line": 988,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -10391,7 +10391,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 980,
+            "line": 1009,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "itemtype": "method",
             "name": "angleBetween",
@@ -11662,13 +11662,16 @@
                 "description": "formatted String",
                 "type": "String|Array"
             },
+            "example": [
+                "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num = 112.53106115;\n\n  noStroke();\n  fill(0);\n  textSize(14);\n  // Draw formatted numbers\n  text(nf(num, 5, 2), 10, 20);\n\n  text(nf(num, 4, 3), 10, 55);\n\n  text(nf(num, 3, 6), 10, 85);\n\n  // Draw dividing lines\n  stroke(120);\n  line(0, 30, width, 30);\n  line(0, 65, width, 65);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 199,
+            "line": 223,
             "description": "Utility function for formatting numbers into strings and placing\nappropriate commas to mark units of 1000. There are two versions: one\nfor formatting ints, and one for formatting an array of ints. The value\nfor the right parameter should always be a positive integer.",
             "itemtype": "method",
             "name": "nfc",
@@ -11690,7 +11693,7 @@
                 "type": "String|Array"
             },
             "example": [
-                "\n<div>\n<code>\nvar num = nfc(1000.02, 1);\ntext(num, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num = 11253106.115;\n  var numArr = new Array(1,1,2);\n  \n  noStroke();\n  fill(0); \n  textSize(12);\n  \n  // Draw formatted numbers\n  text(nfc(num, 4, 2), 10, 30);\n  text(nfc(numArr, 2, 1), 10, 80);\n  \n  // Draw dividing line\n  stroke(120);\n  line(0, 50, width, 50);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11698,8 +11701,8 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 252,
-            "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
+            "line": 291,
+            "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for left, and right parameters\nshould always be positive integers.",
             "itemtype": "method",
             "name": "nfp",
             "params": [
@@ -11725,14 +11728,17 @@
                 "description": "formatted String",
                 "type": "String|Array"
             },
+            "example": [
+                "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num1 = 11253106.115;\n  var num2 = -11253106.115;\n  \n  noStroke();\n  fill(0); \n  textSize(12);\n  \n  // Draw formatted numbers\n  text(nfp(num1, 4, 2), 10, 30);\n  text(nfp(num2, 4, 2), 10, 80);\n  \n  // Draw dividing line\n  stroke(120);\n  line(0, 50, width, 50);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 283,
-            "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \"+\" in front of positive numbers and a \"-\" in front of negative\nnumbers. There are two versions: one for formatting floats, and one for\nformatting ints. The values for the digits, left, and right parameters\nshould always be positive integers.",
+            "line": 344,
+            "description": "Utility function for formatting numbers into strings. Similar to nf() but\nputs a \" \" (space) in front of positive numbers and a \"-\" in front of \nnegative numbers. There are two versions: one for formatting floats, and \none for formatting ints. The values for the digits, left, and right \nparameters should always be positive integers.",
             "itemtype": "method",
             "name": "nfs",
             "params": [
@@ -11758,13 +11764,16 @@
                 "description": "formatted String",
                 "type": "String|Array"
             },
+            "example": [
+                "\n<div>\n<code>\nfunction setup() {\n  background(200);\n  var num1 = 11253106.115;\n  var num2 = -11253106.115;\n  \n  noStroke();\n  fill(0); \n  textSize(12);\n  // Draw formatted numbers\n  text(nfs(num1, 4, 2), 10, 30);\n  \n  text(nfs(num2, 4, 2), 10, 80);\n  \n  // Draw dividing line\n  stroke(120);\n  line(0, 50, width, 50);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 314,
+            "line": 397,
             "description": "The split() function maps to String.split(), it breaks a String into\npieces using a character or string as the delimiter. The delim parameter\nspecifies the character or characters that mark the boundaries between\neach piece. A String[] array is returned that contains each of the pieces.\n\nThe splitTokens() function works in a similar fashion, except that it\nsplits using a range of characters instead of a specific character or\nsequence.",
             "itemtype": "method",
             "name": "split",
@@ -11793,7 +11802,7 @@
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 343,
+            "line": 426,
             "description": "The splitTokens() function splits a String at one or many character\ndelimiters or \"tokens.\" The delim parameter specifies the character or\ncharacters to be used as a boundary.\n\nIf no delim characters are specified, any whitespace character is used to\nsplit. Whitespace characters include tab (\\t), line feed (\\n), carriage\nreturn (\\r), form feed (\\f), and space.",
             "itemtype": "method",
             "name": "splitTokens",
@@ -11814,13 +11823,16 @@
                 "description": "Array of Strings",
                 "type": "Array"
             },
+            "example": [
+                "\n<div class = \"norender\">\n<code> \nfunction setup() {\n  var myStr = \"Mango, Banana, Lime\";\n  var myStrArr = splitTokens(myStr, \",\");\n  \n  print(myStrArr); // prints : [\"Mango\",\" Banana\",\" Lime\"]\n}\n</div>\n</code> "
+            ],
             "class": "p5",
             "module": "Data",
             "submodule": "String Functions"
         },
         {
             "file": "src/utilities/string_functions.js",
-            "line": 364,
+            "line": 457,
             "description": "Removes whitespace characters from the beginning and end of a String. In\naddition to standard whitespace characters such as space, carriage return,\nand tab, this function also removes the Unicode \"nbsp\" character.",
             "itemtype": "method",
             "name": "trim",
@@ -16547,11 +16559,11 @@
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/core/environment.js:210"
+            "line": " src/core/environment.js:218"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/core/environment.js:219"
+            "line": " src/core/environment.js:227"
         },
         {
             "message": "Missing item type",
@@ -16595,7 +16607,7 @@
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
-            "line": " src/core/shim.js:30"
+            "line": " src/core/shim.js:66"
         },
         {
             "message": "Missing item type\n[rotateX description]",
@@ -16695,23 +16707,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1059"
+            "line": " src/io/files.js:1062"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1080"
+            "line": " src/io/files.js:1083"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1116"
+            "line": " src/io/files.js:1119"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1148"
+            "line": " src/io/files.js:1151"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1160"
+            "line": " src/io/files.js:1163"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
@@ -16723,35 +16735,35 @@
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/p5.Vector.js:840"
+            "line": " src/math/p5.Vector.js:869"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/p5.Vector.js:861"
+            "line": " src/math/p5.Vector.js:890"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/p5.Vector.js:883"
+            "line": " src/math/p5.Vector.js:912"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/p5.Vector.js:902"
+            "line": " src/math/p5.Vector.js:931"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/p5.Vector.js:922"
+            "line": " src/math/p5.Vector.js:951"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/p5.Vector.js:934"
+            "line": " src/math/p5.Vector.js:963"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/math/p5.Vector.js:946"
+            "line": " src/math/p5.Vector.js:975"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/math/p5.Vector.js:959"
+            "line": " src/math/p5.Vector.js:988"
         },
         {
             "message": "Missing item type\nReturns ascent of the current font at its current size.",
