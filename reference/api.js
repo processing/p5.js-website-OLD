@@ -13,6 +13,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.FFT",
         "p5.File",
         "p5.Filter",
+        "p5.Font",
         "p5.Graphics",
         "p5.Graphics2D",
         "p5.Image",
@@ -141,7 +142,8 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Font",
-            "name": "Font"
+            "name": "Font",
+            "description": "Base class for font handling"
         },
         {
             "displayName": "Helpers",
