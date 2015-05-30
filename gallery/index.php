@@ -18,6 +18,8 @@
         <a href="mailto:feature@p5js.org">feature@p5js.org</a>.
       </p>
 
+      
+
       <div class = "gallery-item">
         <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
         target="_blank">
@@ -34,6 +36,7 @@
          <a class = "gallery-source"> Christine de Carteret, 2015 </a>
         </p>
       </div>
+
       <div class = "gallery-item">
         <a href="http://samanthaticknor.com/images/scroll/two.html"
         target="_blank">
@@ -122,6 +125,113 @@
       </div>
 
       <div class="spacer"></div>
+
+      <div class = "gallery-item">
+        <a href="http://the816.com/neobrush/"
+        target="_blank">
+           <img class = "gallery-img" src="../img/gallery-images/neobrush.png" 
+           width = "5" alt = "preview image" title = "Neobrush">
+        </a>
+        <br>
+        <p>
+         <a href="http://the816.com/neobrush/"
+         target="_blank">
+            Neobrush
+         </a>
+         <br>
+         <a class = "gallery-source"> Chris Riebschlager, 2014 </a>
+        </p>
+      </div>
+
+      <div class = "gallery-item">
+        <a href="http://b2renger.github.io/pages_p5js/organic_motion/index.html"
+        target="_blank">
+           <img class = "gallery-img" src="../img/gallery-images/organic-motion-sonification.png" 
+           width = "5" alt = "preview image" title = "Neobrush">
+        </a>
+        <br>
+        <p>
+         <a href="http://b2renger.github.io/pages_p5js/organic_motion/index.html"
+         target="_blank">
+            Organic Motion
+         </a>
+         <br>
+         <a class = "gallery-source"> Berenger Recoules, 2015 </a>
+        </p>
+      </div>
+
+      <div class = "gallery-item">
+        <a href="http://b2renger.github.io/pages_p5js/springs/index.html"
+        target="_blank">
+           <img class = "gallery-img" src="../img/gallery-images/springs.png" 
+           width = "5" alt = "preview image" title = "springs">
+        </a>
+        <br>
+        <p>
+         <a href="http://b2renger.github.io/pages_p5js/springs/index.html"
+         target="_blank">
+            Springs
+         </a>
+         <br>
+         <a class = "gallery-source"> Berenger Recoules, 2014 </a>
+        </p>
+      </div>
+
+      <div class="spacer"></div>
+
+         <div class = "gallery-item">
+        <a href="http://cell-flight.com/mural.html"
+        target="_blank">
+           <img class = "gallery-img" src="../img/gallery-images/cell-flight.png" 
+           width = "5" alt = "preview image" title = "Cell-Flight">
+        </a>
+        <br>
+        <p>
+         <a href="http://cell-flight.com/mural.html"
+         target="_blank">
+            Cell-Flight
+         </a>
+         <br>
+         <a class = "gallery-source"> kawandeep virdee, 2014 </a>
+        </p>
+      </div>
+
+      <div class = "gallery-item">
+        <a href="http://104.236.250.114:3000/emoji_new/"
+        target="_blank">
+           <img class = "gallery-img" src="../img/gallery-images/magic-is-real-emoji.png" 
+           width = "5" alt = "preview image" title = "Magic is real-Emoji">
+        </a>
+        <br>
+        <p>
+         <a href="http://104.236.250.114:3000/emoji_new/"
+         target="_blank">
+            Magic is real-Emoji
+         </a>
+         <br>
+         <a class = "gallery-source"> Marc Abbey, 2015 </a>
+        </p>
+      </div>
+
+      <div class = "gallery-item">
+        <a href="http://nithi-p.github.io/finalproject/"
+        target="_blank">
+           <img class = "gallery-img" src="../img/gallery-images/nithi-prasanpanich.png" 
+           width = "5" alt = "preview image" title = "Face Sound Visualization">
+        </a>
+        <br>
+        <p>
+         <a href="http://nithi-p.github.io/finalproject/"
+         target="_blank">
+            Face Sound Visualization
+         </a>
+         <br>
+         <a class = "gallery-source">Nithi Prasanpanich, 2015</a>
+        </p>
+      </div>
+
+      <div class="spacer"></div>
+
 
     </section>
 

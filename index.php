@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <div id="credits"><em>RainyTypewriter</em><br>by <a target=_blank href="http://kimsehyun.kr">AV(Sehyun Kim)</a></div>
+  <div id="credits"><em>Social Tension</em><br>by <a target=_blank href="http://stinedec.com/">stinedec(Christine de Carteret)</a></div>
  
   <?php include('heading.php'); ?>
 
@@ -52,7 +52,7 @@
 
   <?php include('end.php'); ?>
 
-  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/15May_AV'></iframe>
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/Christine_Social_June'></iframe>
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
