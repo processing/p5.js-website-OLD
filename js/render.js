@@ -186,6 +186,9 @@ function renderCode(sel) {
     if (typeof Prism !== 'undefined') Prism.highlightAll();
 
     $( document ).ready(function() {
+
+      registerHashChange();
+
       setTimeout(function() {
         var myp5 = new _p5(s, cnv);      
         $( ".example-content" ).find('div').each(function() {
@@ -200,6 +203,17 @@ function renderCode(sel) {
     });
 
   }
+
+  // when a hash is changed, remove all the sounds,
+  // even tho the p5 sketch has been disposed.
+  function registerHashChange() {
+    window.onhashchange = function(e) {
+      for (var i = 0; i < instances.length; i++) {
+        instances[i].remove();
+      }
+    }
+  }
+
 
 }
 
