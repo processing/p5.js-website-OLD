@@ -19,7 +19,7 @@ var EOL = (process.platform === 'win32' ? '\r\n' : '\n')
  
 // build the templates
 var example_template = ejs.compile(fs.readFileSync("example_template.ejs", 'utf8'));
-var learn_template = ejs.compile(fs.readFileSync("learn_template.ejs", 'utf8'));
+var all_examples_template = ejs.compile(fs.readFileSync("all_examples_template.ejs", 'utf8'));
  
 var all = { examples: [], demos: [] };
 var total = { examples: 0, demos: 0 };
