@@ -24,8 +24,8 @@
       <div id = "contribute-item" class="dev0">
         <div class="contribute-item-container">
          <h3 class = "contribute-title"> Develop </h3>
-         <p>Develop &#8212; <a href="https://github.com/processing/p5.js">Github</a> is the main place where code is collected,
-             issues are documented, and discussions about code are had. Check out the <a href="https://github.com/processing/p5.js/wiki/Development">
+         <p><a href="https://github.com/processing/p5.js" target="blank_">Github</a> is the main place where code is collected,
+             issues are documented, and discussions about code are had. Check out the <a href="https://github.com/processing/p5.js/wiki/Development" target="blank_">
              development tutorial</a> to get started, or <a href="../libraries/#create-your-own">
              create your own library.</a>
          </p>
@@ -36,8 +36,8 @@
       <div id = "contribute-item" class="dev1">
         <div class="contribute-item-container">
          <h3 class = "contribute-title"> Document </h3>
-         <p>Create documentation &#8212; Everyone loves documentation.
-           Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples">porting examples</a>, and <a href="https://github.com/processing/p5.js/wiki/Inline-documentation">
+         <p>Everyone loves documentation.
+           Help is needed <a href="https://github.com/lmccart/p5js.org/wiki/Adding-examples" target="blank_">porting examples</a>, and <a href="https://github.com/processing/p5.js/wiki/Inline-documentation" target="blank_">
           adding documentation</a>, and creating tutorials.
          </p>
        </div>
@@ -52,7 +52,7 @@
       <div id = "contribute-item" class="dev2">
         <div class="contribute-item-container">
           <h3 class = "contribute-title"> Teach </h3>
-              <p>Teach &#8212; Check out the <a href="https://github.com/processing/p5.js/wiki/Education">education page</a>
+              <p>Check out the <a href="https://github.com/processing/p5.js/wiki/Education" target="blank_">education page</a>
                 on the wiki to view resources from past classes, workshops,
                 and events. Add your own links!
              </p>
@@ -64,7 +64,7 @@
       <div id = "contribute-item" class="dev3">
         <div class="contribute-item-container">
           <h3 class = "contribute-title"> Create </h3>
-          <p>Create &#8212; p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show
+          <p>p5.js is looking for designers, artists, coders, programmers to bring your creative and amazing work to show
             on the front page and inspire other people.
             <a href="<?php echo getRoot(); ?>form/">Submit your work!</a> Get in touch at  <a href="mailto:feature@p5js.org">feature@p5js.org</a>.
          </p>

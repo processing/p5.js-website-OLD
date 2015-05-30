@@ -15,7 +15,6 @@ var sketch0 = function( p ) {
     p.background(255);
 
     if (circleMake && p.millis() > next){
-      console.log('total', circles.length)
       circles.push( new circle(p.mouseX, p.mouseY));
       next = p.millis() + 300
     }
@@ -75,7 +74,6 @@ var sketch1 = function( p ) {
     p.background(255);
 
     if (circleMake && p.millis() > next){
-      console.log('total', circles.length)
       circles.push( new circle(p.mouseX, p.mouseY));
       next = p.millis() + 300
     }
@@ -128,7 +126,6 @@ var sketch2 = function( p ) {
     p.background(255);
 
     if (circleMake && p.millis() > next){
-      console.log('total', circles.length)
       circles.push( new circle(p.mouseX, p.mouseY));
       next = p.millis() + 300
     }
