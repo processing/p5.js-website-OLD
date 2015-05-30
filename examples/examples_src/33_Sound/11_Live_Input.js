@@ -5,9 +5,9 @@
  * <p>Note: p5.AudioIn contains its own p5.Amplitude object,
  * so you can call getLevel on p5.AudioIn without
  * creating a p5.Amplitude.</p>
- * <p><em><span class="small">You will need to include the 
+ * <p><em><span class="small"> To run this example locally, you will need the
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</span></em></p>
+ * and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  */
 var input;
 var analyzer;

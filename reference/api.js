@@ -50,6 +50,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Data",
         "Environment",
         "Events",
+        "Font",
         "Helpers",
         "IO",
         "Image",
@@ -139,6 +140,10 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Events"
         },
         {
+            "displayName": "Font",
+            "name": "Font"
+        },
+        {
             "displayName": "Helpers",
             "name": "Helpers"
         },
@@ -201,7 +206,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Rendering",
             "name": "Rendering",
-            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for \nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         {
             "displayName": "Setting",

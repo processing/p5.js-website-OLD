@@ -1,9 +1,9 @@
 /**
  * @name Frequency Spectrum
  * @description <p>Visualize the frequency spectrum of live audio input.</p>
- * <p><em><span class="small">You will need to include the 
+ * <p><em><span class="small"> To run this example locally, you will need the
  * <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- * for this example to work in your own project.</em></span></p>
+ * and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.</span></em></p>
  */
 var mic, fft;
 

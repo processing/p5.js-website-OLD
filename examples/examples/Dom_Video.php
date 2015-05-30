@@ -11,9 +11,10 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Video</h2>
           <p><p>Load a video with multiple formats and toggle between playing
- and paused with a button press. You will need to include the 
- <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>
- for this example to work in your own project.</p>
+ and paused with a button press. 
+ <p><em><span class="small"> To run this example locally, you will need at least
+ one video file, and the
+ <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>.</span></em></p>
  </p>
 
           <div id="exampleDisplay">
