@@ -20,9 +20,9 @@
   be reset with the osc.amp() method. Or, in this example, an
   Envelope takes control of that node, turning the amplitude
   up and down like a volume knob.</p>
- <p><em><span class="small">You will need to include the 
- <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a>
- for this example to work in your own project.</em></span></p>
+ <p><em><span class="small"> To run this example locally, you will need the
+ <a href="http://p5js.org/reference/#/libraries/p5.sound">p5.sound library</a> and a
+ sound file.</span></em></p>
  </p>
 
           <div id="exampleDisplay">
