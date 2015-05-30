@@ -24,21 +24,26 @@ TO DO:
 
 $(function() {
 
-    var $sidebar   = $("#menu"),
-        $window    = $(window),
-        offset     = $sidebar.offset(),
-        topPadding = 0;
+  var $sidebar   = $("#menu"),
+      $window    = $(window),
+      offset     = $sidebar.offset(),
+      topPadding = 0;
 
+
+  if (window.matchMedia("min-width:720px").matches) {
     $window.scroll(function() {
-        if ($window.scrollTop() > offset.top) {
-            $sidebar.stop().animate({
-                marginTop: $window.scrollTop() //- offset.top + topPadding
-            });
-        } else {
-            $sidebar.stop().animate({
-                marginTop: 0
-            });
-        }
-    });
+      if ($window.scrollTop() > offset.top) {
+        $sidebar.stop().animate({
+          marginTop: $window.scrollTop() - offset.top + topPadding
+        });
+      }
 
+      else {
+        $sidebar.stop().animate({
+          marginTop: 0
+        });
+      }
+
+    });
+  }
 });

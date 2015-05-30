@@ -10,9 +10,12 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Transparency</h2>
-          <p>Move the pointer left and right across the image to change its 
- position. This program overlays one image over another by modifying the 
+          <p>Move the pointer left and right across the image to change its
+ position. This program overlays one image over another by modifying the
  alpha value of the image with the tint() function.
+ <p><em><span class="small"> To run this example locally, you will need an
+ image file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">
+ local server</a>.</span></em></p>
  </p>
 
           <div id="exampleDisplay">

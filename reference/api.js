@@ -1,6 +1,7 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
+        "4x4 Matrix",
         "p5",
         "p5.Amplitude",
         "p5.AudioIn",
@@ -12,8 +13,11 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.FFT",
         "p5.File",
         "p5.Filter",
+        "p5.Font",
         "p5.Graphics",
+        "p5.Graphics2D",
         "p5.Image",
+        "p5.Matrix",
         "p5.MediaElement",
         "p5.Noise",
         "p5.Oscillator",
@@ -45,7 +49,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "DOM",
         "Data",
         "Environment",
-        "Files",
+        "Events",
+        "Font",
+        "IO",
         "Image",
         "Input",
         "Keyboard",
@@ -62,7 +68,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "String Functions",
         "Structure",
         "Table",
-        "Time & Date",
         "Touch",
         "Transform",
         "Trigonometry",
@@ -114,8 +119,7 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Data",
-            "name": "Data",
-            "description": "Base class for a file\nUsing this for createFileInput"
+            "name": "Data"
         },
         {
             "displayName": "DOM",
@@ -127,8 +131,13 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Environment"
         },
         {
-            "displayName": "Files",
-            "name": "Files"
+            "displayName": "Events",
+            "name": "Events"
+        },
+        {
+            "displayName": "Font",
+            "name": "Font",
+            "description": "Base class for font handling"
         },
         {
             "displayName": "Image",
@@ -138,6 +147,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Input",
             "name": "Input"
+        },
+        {
+            "displayName": "IO",
+            "name": "IO"
         },
         {
             "displayName": "Keyboard",
@@ -185,7 +198,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Rendering",
             "name": "Rendering",
-            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". Use this class if you need to draw into\nan off-screen graphics buffer. A p5.Graphics object can be constructed\nwith the <code>createGraphics()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
+            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
         },
         {
             "displayName": "Setting",
@@ -207,10 +220,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "Table",
             "name": "Table",
             "description": "Table objects store data with multiple rows and columns, much\nlike in a traditional spreadsheet. Tables can be generated from\nscratch, dynamically, or using data from an existing file."
-        },
-        {
-            "displayName": "Text Area",
-            "name": "Text Area"
         },
         {
             "displayName": "Time & Date",

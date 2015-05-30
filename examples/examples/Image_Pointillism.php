@@ -10,9 +10,12 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Pointillism</h2>
-          <p>By Dan Shiffman. Mouse horizontal location controls size of 
- dots. Creates a simple pointillist effect using ellipses colored according 
+          <p>By Dan Shiffman. Mouse horizontal location controls size of
+ dots. Creates a simple pointillist effect using ellipses colored according
  to pixels in an image.
+ <p><em><span class="small"> To run this example locally, you will need an
+ image file, and a running <a href="https://github.com/processing/p5.js/wiki/Local-server">
+ local server</a>.</span></em></p>
  </p>
 
           <div id="exampleDisplay">
