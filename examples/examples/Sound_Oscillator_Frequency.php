@@ -46,7 +46,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/33_Sound/10_Oscillator_FFT.js');
+          examples.init('../examples_src/33_Sound/10_Oscillator_Waveform.js');
       });
     </script>
   </body>
