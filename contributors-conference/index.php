@@ -23,6 +23,9 @@
       </p>
       </div>
 
+      <div style='position: relative; margin-top: -30px; padding-bottom: 76%; height: 0; overflow: hidden;'><iframe id='iframe' src='http://flickrit.com/slideshowholder.php?height=75&size=big&count=50&setId=72157653238862069&credit=2&trans=1&theme=1&thumbnails=0&transition=0&layoutType=responsive&sort=0' scrolling='no' frameborder='0'style='width:100%; height:100%; position: absolute; top:0; left:0;' ></iframe></div>
+
+
       <div id="contributors-subsection">
       <h3>Participants</h3>
       <p>
@@ -61,22 +64,6 @@
       </p>
       </div>
 
- 
-
-      <div id="contributors-subsection">
-      <h3>Participate Remotely</h3>
-
-      <p>We welcome virtual participate from afar! We will typically be working 10am-6pm EDT 5/26-30. To follow along, you can:
-      <ul>
-      <li>Join the p5.js Contributors Conference <a href='https://groups.google.com/forum/#!forum/p5js-contributors-conference' target='_blank'>mailing list</a>
-      for updates.</li>
-      <li>Follow <a href='http://twitter.com/p5xjs' target='_blank'>@p5xjs</a> on Twitter.</li>
-      <li>Participate in conversation on <a href='https://github.com/processing/p5.js/issues' target='_blank'>Github</a>.</li>
-      <li>Join the conversation on Freenode IRC in the <a href='http://webchat.freenode.net/?channels=p5js' target='_blank'>#p5js channel</a>.</li>
-      </ul>
-      </p>
-
-      </div> 
 
 
       <div id="contributors-subsection">
