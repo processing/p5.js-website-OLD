@@ -54,17 +54,19 @@
         </ul>
       </div>
 
+      <h3> Get Involved </h3>
+      <p> To learn more about getting involved in p5.js, check out our <a href="http://p5js.org/contribute"> contribute page</a>. Our community is always looking for enthusiasts to help in all different ways.</p>
+      <p> If you're wondering where to start, take a look at our existing <a href="http://p5js.org/tutorials"> tutorials</a>, browse our <a href="http://p5js.org/gallery">gallery</a> of p5.js projects, or play with <a href="http://p5js.org/examples">examples</a>.</p>
+
+      <p>Follow us on Twitter at <a href="https://twitter.com/p5xjs">@p5xjs</a>!</p>
+
+      
 
       <h3> Contributors Conference </h3>
       <p> This year, p5.js held its first-ever <a href="http://p5js.org/contributors-conference"> contributors conference</a>. Artists, designers, developers, educators, and more joined forces at <a href="http://studioforcreativeinquiry.org/">CMU's Studio for Creative Inquiry</a> to make p5.js awesome. </p>
 
       <div style='position: relative; padding-bottom: 76%; height: 0; overflow: hidden;'><iframe id='iframe' src='http://flickrit.com/slideshowholder.php?height=75&size=big&count=50&setId=72157653238862069&credit=2&trans=1&theme=1&thumbnails=0&transition=0&layoutType=responsive&sort=0' scrolling='no' frameborder='0'style='width:100%; height:100%; position: absolute; top:0; left:0;' ></iframe></div>
 
-      <h3> Get Involved </h3>
-      <p> To learn more about getting involved in p5.js, check out our <a href="http://p5js.org/contribute"> contribute page</a>. Our community is always looking for enthusiasts to help in all different ways.</p>
-      <p> If you're wondering where to start, take a look at our existing <a href="http://p5js.org/tutorials"> tutorials</a>, browse our <a href="http://p5js.org/gallery">gallery</a> of p5.js projects, or play with <a href="http://p5js.org/examples">examples</a>.</p>
-
-      <p>Follow us on Twitter at <a href="https://twitter.com/p5xjs">@p5xjs</a>!</p>
     </section>
 
 
