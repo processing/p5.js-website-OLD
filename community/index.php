@@ -27,7 +27,7 @@
         <div class = "bullets">
         <li> We are not code snobs. We do not assume knowledge or imply there are things that somebody should know. </li>
         <li> We insist on actively engaging with requests for feedback regardless of their complexity. </li>
-        <li>We welcome newcomers and prioritize the education of other people. We strive to approach all tasks with the enthusiasm of a newcomer. Because we believe that newcomers are just as valuable in this effort as experts. </li>
+        <li>We welcome newcomers and prioritize the education of others. We strive to approach all tasks with the enthusiasm of a newcomer. Because we believe that newcomers are just as valuable in this effort as experts. </li>
         <li>We consistently make the effort to actively recognize and validate multiple types of contributions. </li>
         <li>We are always willing to offer help or guidance. </li>
         </div>
