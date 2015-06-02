@@ -10,6 +10,7 @@
 <script src="<?php echo getRoot(); ?>js/p5.sound.js"></script>
 <script src="<?php echo getRoot(); ?>js/render.js"></script>
 <script src="<?php echo getRoot(); ?>js/main.js"></script>
+<script src="<?php echo getRoot(); ?>js/logo.js"></script>
 <script>
 <!--renderCode('bg_code');-->
 renderCode();
