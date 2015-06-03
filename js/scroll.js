@@ -45,6 +45,13 @@ $(function() {
         });
       }
 
+      // rotate
+      var rotation = $(window).scrollTop() / 40 - 21;
+      $('#download-page #asterisk-design-element, #reference-page #asterisk-design-element').css({
+        '-ms-transform': 'rotate(' + rotation + 'deg)',
+        '-webkit-transform': 'rotate(' + rotation + 'deg)',
+        'transform': 'rotate(' + rotation + 'deg)'
+      });
     });
   }
 });
