@@ -1,4 +1,4 @@
-/*! p5.sound.js v0.2.0 2015-05-30 */
+/*! p5.sound.js v0.2.11 2015-05-31 */
 (function (root, factory) {
   if (typeof define === 'function' && define.amd)
     define('p5.sound', ['p5'], function (p5) { (factory(p5));});
@@ -504,6 +504,7 @@ panner = function () {
     this.left.connect(this.output, 0, 1);
     this.right.connect(this.output, 0, 0);
     this.output.connect(output);
+    console.log(input, output);
   };
   // -1 is left, +1 is right
   p5.Panner.prototype.pan = function (val, tFromNow) {
@@ -717,6 +718,7 @@ soundfile = function () {
       // decode asyncrohonously
       var self = this;
       request.onload = function () {
+        console.log('loaded data');
         ac.decodeAudioData(request.response, function (buff) {
           self.buffer = buff;
           self.panner.inputChannels(buff.numberOfChannels);
@@ -812,25 +814,32 @@ soundfile = function () {
       } else {
         duration = this.buffer.duration - cueStart;
       }
+      // TO DO: Fix this. It broke in Safari
+      // 
       // method of controlling gain for individual bufferSourceNodes, without resetting overall soundfile volume
-      if (!this.bufferSourceNode.gain) {
-        this.bufferSourceNode.gain = p5sound.audiocontext.createGain();
-        this.bufferSourceNode.connect(this.bufferSourceNode.gain);
-        // set local amp if provided, otherwise 1
-        var a = amp || 1;
-        this.bufferSourceNode.gain.gain.setValueAtTime(a, p5sound.audiocontext.currentTime);
-        this.bufferSourceNode.gain.connect(this.output);
-      }
+      // if (typeof(this.bufferSourceNode.gain === 'undefined' ) ) {
+      //   this.bufferSourceNode.gain = p5sound.audiocontext.createGain();
+      // }
+      // this.bufferSourceNode.connect(this.bufferSourceNode.gain);
+      // set local amp if provided, otherwise 1
+      var a = amp || 1;
+      // console.log(a);
+      // this.bufferSourceNode.gain.gain.setValueAtTime(a, p5sound.audiocontext.currentTime);
+      // this.bufferSourceNode.gain.connect(this.output); 
+      this.bufferSourceNode.connect(this.output);
+      this.output.gain.value = a;
       // not necessary with _initBufferSource ?
       // this.bufferSourceNode.playbackRate.cancelScheduledValues(now);
       rate = rate || Math.abs(this.playbackRate);
       this.bufferSourceNode.playbackRate.setValueAtTime(rate, now);
       // if it was paused, play at the pause position
       if (this._paused) {
+        console.log(time, this.pauseTime, duration);
         this.bufferSourceNode.start(time, this.pauseTime, duration);
         this._counterNode.start(time, this.pauseTime, duration);
       } else {
         // this.pauseTime = 0;
+        console.log('start');
         this.bufferSourceNode.start(time, cueStart, duration);
         this._counterNode.start(time, cueStart, duration);
       }
@@ -1519,12 +1528,15 @@ soundfile = function () {
    *                     a mono source.
    */
   p5.SoundFile.prototype.setBuffer = function (buf) {
-    var newBuffer = ac.createBuffer(2, buf[0].length, ac.sampleRate);
-    var numChannels = 0;
-    for (var channelNum = 0; channelNum < buf.length; channelNum++) {
+    var numChannels = buf.length;
+    var size = buf[0].length;
+    var newBuffer = ac.createBuffer(numChannels, size, ac.sampleRate);
+    if (!buf[0] instanceof Float32Array) {
+      buf[0] = new Float32Array(buf[0]);
+    }
+    for (var channelNum = 0; channelNum < numChannels; channelNum++) {
       var channel = newBuffer.getChannelData(channelNum);
       channel.set(buf[channelNum]);
-      numChannels++;
     }
     this.buffer = newBuffer;
     // set numbers of channels on input to the panner
@@ -3299,6 +3311,43 @@ oscillator = function () {
    *                         'sine' (default), 'triangle',
    *                         'sawtooth', 'square'
    *  @return {Object}    Oscillator object
+   *  @example
+   *  <div><code>
+   *  var osc;
+   *  var playing = false;
+   *  
+   *  function setup() {
+   *    backgroundColor = color(255,0,255);
+   *    textAlign(CENTER);
+   *    
+   *    osc = new p5.Oscillator();
+   *    osc.setType('sine');
+   *    osc.freq(240);
+   *    osc.amp(0);
+   *    osc.start();
+   *  }
+   *
+   *  function draw() {
+   *    background(backgroundColor)
+   *    text('click to play', width/2, height/2);
+   *  }
+   *
+   *  function mouseClicked() {
+   *    if (mouseX > 0 && mouseX < width && mouseY < height && mouseY > 0) {
+   *      if (!playing) {
+   *        // ramp amplitude to 0.5 over 0.1 seconds
+   *        osc.amp(0.5, 0.05);
+   *        playing = true;
+   *        backgroundColor = color(0,255,255);
+   *      } else {
+   *        // ramp amplitude to 0 over 0.5 seconds
+   *        osc.amp(0, 0.5);
+   *        playing = false;
+   *        backgroundColor = color(255,0,255);
+   *      }
+   *    }
+   *  }
+   *  </code> </div>
    */
   p5.Oscillator = function (freq, type) {
     if (typeof freq === 'string') {
@@ -5406,8 +5455,10 @@ reverb = function () {
     this.convolverNode.buffer = impulse;
   };
   p5.Reverb.prototype.dispose = function () {
-    this.convolverNode.buffer = null;
-    this.convolverNode = null;
+    if (this.convolverNode) {
+      this.convolverNode.buffer = null;
+      this.convolverNode = null;
+    }
     if (typeof this.output !== 'undefined') {
       this.output.disconnect();
       this.output = null;
@@ -5905,7 +5956,9 @@ looper = function () {
    *                             will call. Typically it will play a sound,
    *                             and accept two parameters: a time at which
    *                             to play the sound (in seconds from now),
-   *                             and a value from the sequence array.
+   *                             and a value from the sequence array. The
+   *                             time should be passed into the play() or
+   *                             start() method to ensure precision.
    *  @param {Array}   sequence    Array of values to pass into the callback
    *                            at each step of the phrase.
    *  @example
@@ -5922,6 +5975,7 @@ looper = function () {
    *    noStroke();
    *    fill(255);
    *    textAlign(CENTER);
+   *    masterVolume(0.1);
    *    
    *    myPhrase = new p5.Phrase('bbox', makeSound, pattern);
    *    myPart = new p5.Part();
@@ -5965,8 +6019,10 @@ looper = function () {
     this.sequence = sequence;
   };
   /**
-   *  A p5.Part plays back one or more p5.Phrases. Instantiate a part
-   *  with steps and tatums. By default, each step represents 1/16th note.
+   *  <p>A p5.Part plays back one or more p5.Phrases. Instantiate a part
+   *  with steps and tatums. By default, each step represents 1/16th note.</p>
+   *
+   *  <p>See p5.Phrase for more about musical timing.</p>
    *  
    *  @class p5.Part
    *  @constructor
@@ -5977,6 +6033,7 @@ looper = function () {
    *  var box, drum, myPart;
    *  var boxPat = [1,0,0,2,0,2,0,0];
    *  var drumPat = [0,1,1,0,2,0,1,0];
+   *  var msg = 'click to play';
    *  
    *  function preload() {
    *    box = loadSound('assets/beatbox.mp3');
@@ -5984,13 +6041,23 @@ looper = function () {
    *  }
    *  
    *  function setup() {
+   *    noStroke();
+   *    fill(255);
+   *    textAlign(CENTER);
+   *    masterVolume(0.1);
+   *
    *    var boxPhrase = new p5.Phrase('box', playBox, boxPat);
    *    var drumPhrase = new p5.Phrase('drum', playDrum, drumPat);
    *    myPart = new p5.Part();
    *    myPart.addPhrase(boxPhrase);
    *    myPart.addPhrase(drumPhrase);
    *    myPart.setBPM(60);
-   *    myPart.start();
+   *    masterVolume(0.1);
+   *  }
+   *
+   *  function draw() {
+   *    background(0);
+   *    text(msg, width/2, height/2);
    *  }
    *
    *  function playBox(time, playbackRate) {
@@ -6006,7 +6073,7 @@ looper = function () {
    *  function mouseClicked() {
    *    if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
    *      myPart.start();
-   *      msg = 'playing pattern';
+   *      msg = 'playing part';
    *    }
    *  }
    *  </code></div>
@@ -6217,40 +6284,8 @@ looper = function () {
    *
    *  @class p5.Score
    *  @constructor
-   *  @param {p5.Part} part(s) Parts to add to the score.
-   *  @example
-   *  <div><code>
-   *  var box, drum;
-   *  var boxPat = [1,0,0,2,0,2,0,0];
-   *  var drumPat = [0,1,1,0,2,0,1,0];
-   *  var osc, env;
-   *  
-   *  function preload() {
-   *    box = loadSound('assets/beatbox.mp3');
-   *    drum = loadSound('assets/drum.mp3');
-   *  }
-   *  
-   *  function setup() {
-   *    var myPart = new p5.Part();
-   *    myPart.addPhrase('box', playBox, boxPat);
-   *    myPart.addPhrase('drum', playDrum, drumPat);
-   *    myPart.setBPM(60);
-   *    myPart.start();
-   *
-   *    osc = new p5.Oscillator();
-   *    env = new p5.Env(0.01, 1, 0.2, 0);
-   *  }
-   *
-   *  function playBox(time, playbackRate) {
-   *    box.rate(playbackRate);
-   *    box.play(time);
-   *  }
-   *  
-   *  function playDrum(time, playbackRate) {
-   *    drum.rate(playbackRate)
-   *    drum.play(time);
-   *  }
-   *  </code></div>
+   *  @param {p5.Part} part(s) One or multiple parts, to be played in sequence.
+   *  @return {p5.Score}
    */
   p5.Score = function () {
     // for all of the arguments
