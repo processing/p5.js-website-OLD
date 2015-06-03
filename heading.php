@@ -17,7 +17,7 @@
 <div id="container">
 <!-- identity -->
 <div id="lockup">
-  <a href="<?php echo getRoot(); ?>">
+  <a id='logo_container' href="<?php echo getRoot(); ?>">
   <img type="image/svg+xml" src="<?php echo getRoot(); ?>img/p5js-beta.svg" id="logo_image" class="logo" />
   <div id="p5_logo"></div>
   </a>
