@@ -16,8 +16,8 @@
       <div id="contributors-subsection">
       <h3>Frank-Ratchye STUDIO for Creative Inquiry<br>Carnegie Mellon University<br>May 25-31</h3>
 
-      <p>A diverse group of approximately 30 participants gathered spent a week at the Frank-Ratchye STUDIO
-      for Creative Inquiry, advancing the code, documentation, and community outreach tools of the p5.js
+      <p>A diverse group of approximately 30 participants gathered spent a week at the <a href='http://studioforcreativeinquiry.org' target=_blank >Frank-Ratchye
+      STUDIO for Creative Inquiry</a>, advancing the code, documentation, and community outreach tools of the p5.js
       programming environment. Participants came from as far away as Hong Kong, Seattle, Los Angeles,
       Boston and New York. Most were working professionals in the fields of creative technology,
       interaction design, and new-media arts, but the group also included a half-dozen undergraduate and
