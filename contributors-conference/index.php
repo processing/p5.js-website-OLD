@@ -3,7 +3,7 @@
   <?php include('../header.php'); ?>
   <body id="libraries-page">
 
-    <?php include('../sidebar-minimal.php'); ?>
+    <?php include('../sidebar.php'); ?>
 
     <!-- content sections -->
     <div class="column-span">
