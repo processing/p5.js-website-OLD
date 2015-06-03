@@ -11,7 +11,7 @@
       snapStrength = 100;
       increment = 1;
       p.frameRate(30);
-      p.noCursor();
+      //p.noCursor();
       p.noStroke();
       p.fill(237, 34, 93);
       logoPaths = toAbsoluteSVG(logoJSON, 0.78);
