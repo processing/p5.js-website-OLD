@@ -723,15 +723,13 @@ variable */
     margin: 10px;
 }
 
-.gallery-item:hover {
-    font-size: .75em;
-    text-align: center;
-    display: inline-block;
-    margin: 10px;
-}
-
 .gallery-item a:hover {
     border: none;
+    opacity: .8;
+}
+
+.gallery-item p {
+    margin: 5px;
 }
 
 img.gallery-img {
@@ -739,20 +737,11 @@ img.gallery-img {
     height: 200px;
 }
 
-img.gallery-img:hover {
-    width: 200px;
-    height: 200px;
-    opacity: .8;
-}
 
 .gallery-source {
     color: #AFAFAF;
-    font-size: .7em;
-}
-
-.gallery-source:hover {
-    color: #AFAFAF;
-    font-size: .7em;
+    font-size: 1em;
+    margin: 0px !important;
 }
 
 /*
