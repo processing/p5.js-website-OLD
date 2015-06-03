@@ -5,7 +5,8 @@
     return v !== '';
   });
 
-  if (url_parts.length > 2 || (url_parts.length === 2 &&
+  if (url_parts.length > 2 || (url_parts.length === 1 &&
+    url_parts[0].indexOf('index') === -1) || (url_parts.length === 2 &&
     url_parts[1].indexOf('index') === -1)) { // check if homepage
 
     var logoSketch = function(p) {
