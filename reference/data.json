@@ -8048,7 +8048,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n\n<p>Calling loadFont() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar myFont;\nfunction preload() {\n  myFont = loadFont('./assets/fonts/AvenirNextLTPro-Demi.otf');\n}\n\nfunction setup() {\n  fill('#ED225D');\n  textFont(myFont);\n  textSize(36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\n<p>Outside preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadFont('./assets/fonts/AvenirNextLTPro-Demi.otf', drawText);\n}\n\nfunction drawText(font) {\n  fill('#ED225D');\n  textFont(font, 36);\n  text('p5*js', 10, 50);\n}\nfunction draw(){\n}\n</code></div>\n"
+                "\n\n<p>Calling loadFont() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar myFont;\nfunction preload() {\n  myFont = loadFont('assets/AvenirNextLTPro-Demi.otf');\n}\n\nfunction setup() {\n  fill('#ED225D');\n  textFont(myFont);\n  textSize(36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\n<p>Outside preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadFont('assets/AvenirNextLTPro-Demi.otf', drawText);\n}\n\nfunction drawText(font) {\n  fill('#ED225D');\n  textFont(font, 36);\n  text('p5*js', 10, 50);\n}\nfunction draw(){\n}\n</code></div>\n"
             ],
             "class": "p5",
             "module": "IO",
@@ -11208,7 +11208,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\nfill(0);\ntextSize(12);\ntextFont(\"Georgia\");\ntext(\"Georgia\", 12, 30);\ntextFont(\"Helvetica\");\ntext(\"Helvetica\", 12, 60);\n</code>\n</div>\n<div>\n<code>\nvar fontRegular, fontItalic, fontBold;\nfunction preload() {\n   fontRegular = loadFont(\"./assets/fonts/Regular.otf\");\n   fontItalic = loadFont(\"./assets/fonts/Italic.ttf\");\n   fontBold = loadFont(\"./assets/fonts/Bold.ttf\");\n}\nfunction setup() {\n   background(210);\n   fill(0).strokeWeight(0).textSize(10);\n   textFont(fontRegular);\n   text(\"Font Style Normal\", 10, 30);\n   textFont(fontItalic);\n   text(\"Font Style Italic\", 10, 50);\n   textFont(fontBold);\n   text(\"Font Style Bold\", 10, 70);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfill(0);\ntextSize(12);\ntextFont(\"Georgia\");\ntext(\"Georgia\", 12, 30);\ntextFont(\"Helvetica\");\ntext(\"Helvetica\", 12, 60);\n</code>\n</div>\n<div>\n<code>\nvar fontRegular, fontItalic, fontBold;\nfunction preload() {\n   fontRegular = loadFont(\"assets/Regular.otf\");\n   fontItalic = loadFont(\"assets/Italic.ttf\");\n   fontBold = loadFont(\"assets/Bold.ttf\");\n}\nfunction setup() {\n   background(210);\n   fill(0).strokeWeight(0).textSize(10);\n   textFont(fontRegular);\n   text(\"Font Style Normal\", 10, 30);\n   textFont(fontItalic);\n   text(\"Font Style Italic\", 10, 50);\n   textFont(fontBold);\n   text(\"Font Style Bold\", 10, 70);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
