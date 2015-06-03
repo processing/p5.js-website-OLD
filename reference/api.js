@@ -22,6 +22,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Noise",
         "p5.Oscillator",
         "p5.Part",
+        "p5.PeakDetect",
         "p5.Phrase",
         "p5.Pulse",
         "p5.Reverb",
@@ -124,7 +125,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "DOM",
             "name": "DOM",
-            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in brown are added\nwith the <a href=\"http://p5js.org/libraries/\">p5.dom library</a>. \nIt is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
+            "description": "Base class for all elements added to a sketch, including canvas,\ngraphics buffers, and other HTML elements. Methods in blue are\nincluded in the core functionality, methods in brown are added\nwith the <a href=\"http://p5js.org/libraries/\">p5.dom library</a>.\nIt is not called directly, but p5.Element\nobjects are created by calling createCanvas, createGraphics,\nor in the p5.dom library, createDiv, createImg, createInput, etc."
         },
         {
             "displayName": "Environment",
@@ -137,7 +138,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Font",
             "name": "Font",
-            "description": "Base class for font handling"
+            "description": "This module defines the p5.Font class and P5 methods for\ndrawing text to the main display canvas."
         },
         {
             "displayName": "Image",
