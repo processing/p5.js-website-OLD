@@ -23,7 +23,7 @@
       </p>
       </div>
 
-      <div style='position: relative; margin-top: -30px; padding-bottom: 76%; height: 0; overflow: hidden;'><iframe id='iframe' src='http://flickrit.com/slideshowholder.php?height=75&size=big&count=50&setId=72157653238862069&credit=2&trans=1&theme=1&thumbnails=0&transition=0&layoutType=responsive&sort=0' scrolling='no' frameborder='0'style='width:100%; height:100%; position: absolute; top:0; left:0;' ></iframe></div>
+      <div style='position: relative; margin-top: -30px; margin-bottom: -30px; padding-bottom: 76%; height: 0; overflow: hidden;'><iframe id='iframe' src='http://flickrit.com/slideshowholder.php?height=75&size=big&count=50&setId=72157653238862069&credit=2&trans=1&theme=1&thumbnails=0&transition=0&layoutType=responsive&sort=0' scrolling='no' frameborder='0'style='width:100%; height:100%; position: absolute; top:0; left:0;' ></iframe></div>
 
 
       <div id="contributors-subsection">
@@ -57,7 +57,6 @@
         <a href='http://mileshiroo.info/' target='_blank'>Miles Peyton</a>,
         <a href='http://carolinerecord.com/' target='_blank'>Caroline Record</a>,
         <a href='https://pibloginthesky.wordpress.com/' target='_blank'>Stephanie Pi</a>,
-        <a href='http://shiffman.net/' target='_blank'>Daniel Shiffman</a>,
         <a href='http://jasonsigal.cc' target='_blank'>Jason Sigal</a>,
         <a href='http://studioindefinit.com/' target='_blank'>Kevin Siwoff</a>,
         <a href='http://charlottestiles.com/' target='_blank'>Charlotte Stiles</a>
@@ -68,23 +67,54 @@
 
       <div id="contributors-subsection">
       <h3>Diversity</h3>
-      <p>
-        Along with all the technical development, one of our main focuses of this conference will be 
-        outreach, community, and diversity. We will kick off the conference
-        with a panel—<a target=_blank href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet">Diversity: 
-        Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and the Internet</a>. It will take place
-        Tuesday, May 25 6-7:30pm EDT in Kresge Auditorium at Carnegie Mellon University. Speakers include 
-        Maya Man, <a href='http://reas.com/'>Casey Reas</a>, <a href='http://johannahedva.com'>Johanna Hedva</a>, 
-        <a href='https://pibloginthesky.wordpress.com/'>Stephanie Pi</a>, <a href='http://phoenixperry.com'>Phoenix Perry</a>,
-        <a href='http://taeyoonchoi.com/'>Taeyoon Choi</a>, <a href='http://ablersite.org'>Sara Hendren</a>,
-        <a href='http://www.epicjefferson.com'>Epic Jefferson</a>, and <a href='http://chandlermcwilliams.com/'>Chandler
-        McWilliams</a>.
-      </p>
-
-      <p>This panel will open a discussion we'll continue throughout the week as we draft a code
-      of conduct and community statement for the p5.js project.
-      </p>
+        <p>Alongside technical development, one of the main focuses of this conference was outreach, community, and diversity.
+        The conference began with a panel—<a href="http://studioforcreativeinquiry.org/events/diversity-seven-voices-on-race-gender-ability-class-for-floss-and-the-internet" target="_blank">Diversity:
+        Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and the Internet</a>. Organized by <a href="http://johannahedva.com/" target='_blank'>Johanna Hedva</a>
+        and <a  href="http://lauren-mccarthy.com" target="_blank">Lauren McCarthy</a>, the panel took place Tuesday, 25 May 2015 in 
+        Kresge Auditorium at Carnegie Mellon University. Speakers included Maya Man, <a href="http://reas.com/" target='_blank'>Casey 
+        Reas</a>, <a href="http://johannahedva.com/" target='_blank'>Johanna Hedva</a>, <a href="https://pibloginthesky.wordpress.com/" target='_blank'>Stephanie Pi</a>,
+        <a href="http://phoenixperry.com/" target='_blank'>Phoenix Perry</a>, <a href="http://taeyoonchoi.com/" target='_blank'>Taeyoon Choi</a>,
+        <a href="http://ablersite.org/" target='_blank'>Sara Hendren</a>, <a href="http://www.epicjefferson.com/" target='_blank'>Epic Jefferson</a>,
+        and <a href="http://chandlermcwilliams.com/" target='_blank'>Chandler McWilliams</a>.</p>
+        <p><img class="alignleft size-full wp-image-8423" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_640.jpg" alt="diversity_640"/></p>
+        
+        <p><iframe src="https://player.vimeo.com/video/129140298?color=ffffff&amp;byline=0&amp;portrait=0" width="720" height="405" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+        <small>
+        <table style="background-color: #ffffff; border-collapse: collapse; border: 0px; width: 720;" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+        <tr>
+        <td><iframe src="https://player.vimeo.com/video/129151416?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Casey Reas</td>
+        <td width="11"></td>
+        <td><iframe src="https://player.vimeo.com/video/129151418?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Johanna Hedva</td>
+        </tr>
+        <tr>
+        <td><iframe src="https://player.vimeo.com/video/129160951?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Stephanie Pi</td>
+        <td width="11"></td>
+        <td><iframe src="https://player.vimeo.com/video/129163155?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Phoenix Perry</td>
+        </tr>
+        <tr>
+        <td><iframe src="https://player.vimeo.com/video/129173628?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe><a href="https://medium.com/@tchoi8/diversity-at-sfpc-d494d7390375" target="_blank">Taeyoon Choi</a></td>
+        <td width="11"></td>
+        <td><iframe src="https://player.vimeo.com/video/129177689?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Sara Hendren</td>
+        </tr>
+        <tr>
+        <td><iframe src="https://player.vimeo.com/video/129183825?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Epic Jefferson</td>
+        <td width="11"></td>
+        <td><iframe src="https://player.vimeo.com/video/129187909?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Chandler McWilliams</td>
+        </tr>
+        </tbody>
+        </table></small>
+        <p><iframe src="https://player.vimeo.com/video/129192014?color=ffffff&amp;title=1&amp;byline=0&amp;portrait=0" width="720" height="405" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
       </div>
+
+
+<!--       <div id="contributors-subsection">
+      <h3>Documentation</h3>
+      <p><a href='https://medium.com/@tchoi8/diversity-at-sfpc-d494d7390375' target=_blank>Diversity at SFPC 
+      (talk by Taeyoon Choi at “Diversity: Seven Voices on Race, Gender, Ability &amp; Class for FLOSS and 
+      the Internet”)</a></p>
+      </div> -->
+      
 
       <div id="contributors-subsection">
       <h3>Support</h3>
@@ -112,8 +142,8 @@
       </div> 
 
 
-    </section>
 
+    </section>
   
     <?php include('../footer.php'); ?>
     <!-- outside of column for footer to go across both -->
