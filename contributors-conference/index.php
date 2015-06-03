@@ -16,10 +16,12 @@
       <div id="contributors-subsection">
       <h3>Frank-Ratchye STUDIO for Creative Inquiry<br>Carnegie Mellon University<br>May 25-31</h3>
 
-      <p>For one week, an enthusiastic group of participants with a range of skills, backgrounds, and styles
-      will gather to work on all aspects of p5.js, 
-      including (but not limited to) new features, bug fixing, documentation, outreach, community, 
-      design, and internationalization.
+      <p>A diverse group of approximately 30 participants gathered spent a week at the Frank-Ratchye STUDIO
+      for Creative Inquiry, advancing the code, documentation, and community outreach tools of the p5.js
+      programming environment. Participants came from as far away as Hong Kong, Seattle, Los Angeles,
+      Boston and New York. Most were working professionals in the fields of creative technology,
+      interaction design, and new-media arts, but the group also included a half-dozen undergraduate and
+      graduate students from Carnegie Mellon’s Schools of Art and Architecture.
       </p>
       </div>
 
@@ -75,12 +77,12 @@
         Reas</a>, <a href="http://johannahedva.com/" target='_blank'>Johanna Hedva</a>, <a href="https://pibloginthesky.wordpress.com/" target='_blank'>Stephanie Pi</a>,
         <a href="http://phoenixperry.com/" target='_blank'>Phoenix Perry</a>, <a href="http://taeyoonchoi.com/" target='_blank'>Taeyoon Choi</a>,
         <a href="http://ablersite.org/" target='_blank'>Sara Hendren</a>, <a href="http://www.epicjefferson.com/" target='_blank'>Epic Jefferson</a>,
-        and <a href="http://chandlermcwilliams.com/" target='_blank'>Chandler McWilliams</a>.</p>
-        <p><img class="alignleft size-full wp-image-8423" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_640.jpg" alt="diversity_640"/></p>
-        
-        <p><iframe src="https://player.vimeo.com/video/129140298?color=ffffff&amp;byline=0&amp;portrait=0" width="720" height="405" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+        and <a href="http://chandlermcwilliams.com/" target='_blank'>Chandler McWilliams</a>.
+        <img class="alignleft size-full wp-image-8423" src="http://studioforcreativeinquiry.org/wp-content/uploads/2015/05/diversity_640.jpg" alt="diversity_640"/>
+        </p>
+        <iframe src="https://player.vimeo.com/video/129140298?color=ffffff&amp;byline=0&amp;portrait=0" width="720" height="405" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
         <small>
-        <table style="background-color: #ffffff; border-collapse: collapse; border: 0px; width: 720;" border="0" cellspacing="0" cellpadding="0">
+        <table style="margin-top: 10px; background-color: #ffffff; border-collapse: collapse; border: 0px; width: 720;" border="0" cellspacing="0" cellpadding="0">
         <tbody>
         <tr>
         <td><iframe src="https://player.vimeo.com/video/129151416?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Casey Reas</td>
@@ -104,7 +106,7 @@
         </tr>
         </tbody>
         </table></small>
-        <p><iframe src="https://player.vimeo.com/video/129192014?color=ffffff&amp;title=1&amp;byline=0&amp;portrait=0" width="720" height="405" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+        <iframe src="https://player.vimeo.com/video/129192014?color=ffffff&amp;title=1&amp;byline=0&amp;portrait=0" width="720" height="405" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
       </div>
 
 
