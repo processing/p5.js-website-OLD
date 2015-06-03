@@ -17,6 +17,22 @@
   //////////////////////////////////////////////////
 */
 
+#lockup > a {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 90px;
+}
+
+#logo_image {
+  position: absolute;
+  top: 0;
+}
+
+#p5_logo {
+  position: absolute;
+}
+
 #menu.top_menu, #menu {
     list-style: none;
     font-family: "AvenirNextLTW01-Medium";

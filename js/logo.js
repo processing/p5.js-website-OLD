@@ -27,7 +27,7 @@
         //p.noCursor();
         p.noStroke();
         p.fill(237, 34, 93);
-        logoPaths = toAbsoluteSVG(logoJSON, 0.78);
+        logoPaths = toAbsoluteSVG(logoJSON, 0.78, 0.4);
       };
 
       p.draw = function() {
@@ -100,7 +100,7 @@
        *
        */
 
-      function toAbsoluteSVG(data, scale) {
+      function toAbsoluteSVG(data, scale, offsetY) {
         var results = [];
         for (var i = 0; i < data.length; i++) {
           var letter = [];
@@ -112,7 +112,7 @@
               case 'M':
                 command.code = 'M';
                 command.x = curX = one.x * scale;
-                command.y = curY = one.y * scale;
+                command.y = curY = one.y * scale + offsetY;
                 break;
               case 'l':
                 command.code = 'L';
@@ -122,7 +122,7 @@
               case 'L':
                 command.code = 'L';
                 command.x = curX = one.x * scale;
-                command.y = curY = one.y * scale;
+                command.y = curY = one.y * scale + offsetY;
                 break;
               case 'v':
                 command.code = 'L';
@@ -132,7 +132,7 @@
               case 'V':
                 command.code = 'L';
                 command.x = curX;
-                command.y = curY = one.y * scale;
+                command.y = curY = one.y * scale + offsetY;
                 break;
               case 'h':
                 command.code = 'L';
@@ -156,18 +156,18 @@
               case 'C':
                 command.code = 'C';
                 command.x1 = one.x1 * scale;
-                command.y1 = one.y1 * scale;
+                command.y1 = one.y1 * scale + offsetY;
                 command.x2 = ctrX = one.x2 * scale;
-                command.y2 = ctrY = one.y2 * scale;
-                command.x = curX = one.x * scale;
-                command.y = curY = one.y * scale;
+                command.y2 = ctrY = one.y2 * scale + offsetY;
+                command.x = curX = one.x * scale ;
+                command.y = curY = one.y * scale + offsetY;
                 break;
               case 's':
                 command.code = 'C';
                 command.x1 = curX * 2 - ctrX;
                 command.y1 = curY * 2 - ctrY;
                 command.x2 = ctrX = curX + one.x2 * scale;
-                command.y2 = ctrY = curY + one.y2 * scale;
+                command.y2 = ctrY = curY + one.y2 * scale ;
                 command.x = curX += one.x * scale;
                 command.y = curY += one.y * scale;
                 break;
