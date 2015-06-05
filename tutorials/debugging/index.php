@@ -13,6 +13,9 @@
 
       <h2>Field Guide to Debugging</h2>
 
+     <div class="attribution">
+      This tutorial was written during the first p5.js developers conference by Jason Alderman, Tega Brain, Taeyoon Choi and Luisa Pereira.
+      </div>
       <p>Hi! Meet everyone!  </p>
       <img src="assets1/everyone.jpg" />
       <p>
