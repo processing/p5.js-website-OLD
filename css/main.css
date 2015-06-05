@@ -379,6 +379,34 @@ hr {
 img {
     vertical-align: middle;
 }
+img.med_left  {
+  width: 300px;
+  float: left;
+  }
+  img.med_right  {
+    width: 300px;
+    float: right;
+    }
+img.small_left  {
+  width: 200px;
+  float: left;
+  }
+  img.smaller_left  {
+    width: 140px;
+    float: left;
+    }
+img.small_right  {
+  width: 200px;
+  float: right;
+  }
+  img.smaller_right  {
+    width: 140px;
+    float: right;
+    }
+img.small  {
+  width: 160px;
+
+  }
 
 /*
  * Remove default fieldset styles.
@@ -482,6 +510,7 @@ textarea {
 .label:hover h4 {
     color:#ED225D;
 }
+
 
 #exampleDisplay, #exampleFrame, #exampleEditor {
     width: 36em;
