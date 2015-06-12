@@ -19,7 +19,7 @@
       <p>Hi! Meet everyone!  </p>
       <img src="assets1/everyone.jpg" />
       <p>
-This is a field guide for debugging for everyone - whether you are
+This is a field guide for debugging for everyone. Whether you are
 beginning to code or whether you have been coding for a long time, this guide
 breaks down the mysterious process of solving problems. It was made by the Education
 Working Group, during the p5.js contributor conference at the Frank-Rytche Studio for
