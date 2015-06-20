@@ -26,7 +26,6 @@ Working Group, during the p5.js contributor conference at the Frank-Rytche Studi
 Creative Inquiry, Carnegie Mellon University in May of 2015. The contributors of this
 tutorial is Luisa, Jason, Tega, Taeyoon and many more.
 
-
       </p>
       <a class="anchor" href="#file-setup"><h3 class = "start-element tutorial-btn" id = "introduction">Debugging is a Creative Act</h3></a>
     <div class="info" id="introduction">
