@@ -11,6 +11,10 @@
     <section>
       <h2>Examples</h2>
 
+      <p>These examples provide short demonstrations of various p5.js topics. Check out the
+      <a href='../tutorials/'>tutorials page</a> for more in-depth or step-by-step overviews of 
+      particular topics. </p>
+
       <div class="column_0">
       
         <p>

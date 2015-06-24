@@ -52,7 +52,7 @@
         <a class="nounderline" href="https://github.com/jagracar/grafica.js"><h4>grafica.js</h4></a>
         </div>
         <p>grafica.js lets you add simple but highly configurable 2D plots to your p5.js sketches.
-        Created by <a target='_blank' href='http://jagracar.com/'>Javier Graciá Carpio</a>.</p> 
+        Created by <a target='_blank' href='http://jagracar.com/p5jsSketches.php'>Javier Graciá Carpio</a>.</p> 
       </div>
 
       <div class="left-column">

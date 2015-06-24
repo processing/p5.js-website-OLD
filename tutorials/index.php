@@ -12,8 +12,8 @@
       <h2>Tutorials</h2>
       
       <p>These tutorials provide more in-depth or step-by-step overviews of 
-      particular topics. Click here to see <a href="http://p5js.org/examples">examples</a> demonstrating a variety
-      of p5.js topics.</p>
+      particular topics. Check out the <a href="../examples">examples page</a> 
+      to see short demonstrations of various p5.js topics.</p>
 
       <div class="left-column">
         <a class="nounderline" href="http://hello.p5js.org/">
@@ -25,7 +25,7 @@
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="http://p5js.org/get-started/">
+        <a class="nounderline" href="../get-started/">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="http://p5js.org/get-started/"><h4>Getting Started</h4></a>
