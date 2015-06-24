@@ -38,10 +38,11 @@
       <div class="left-column">
         <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/">
         <div class="label">
-        <img src="../img/libraries/p5.gibber.logo.jpg"></a>
+        <img src="../img/libraries/p5.gibber.jpg"></a>
         <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/"><h4>p5.gibber</h4></a>
         </div>
-        <p>p5.gibber provides rapid music sequencing and audio synthesis capabilities.</p> 
+        <p>p5.gibber provides rapid music sequencing and audio synthesis capabilities.
+        Created by <a target='_blank' href='http://charlie-roberts.com'>Charlie Roberts</a>.</p> 
       </div>
 
       <div class="right-column">
@@ -50,10 +51,19 @@
         <img src="../img/libraries/grafica.jpg"></a>
         <a class="nounderline" href="https://github.com/jagracar/grafica.js"><h4>grafica.js</h4></a>
         </div>
-        <p>grafica.js lets you add simple but highly configurable 2D plots to your p5.js sketches.</p> 
+        <p>grafica.js lets you add simple but highly configurable 2D plots to your p5.js sketches.
+        Created by <a target='_blank' href='http://jagracar.com/'>Javier Graciá Carpio</a>.</p> 
       </div>
 
-
+      <div class="left-column">
+        <a class="nounderline" href="http://p5play.molleindustria.org">
+        <div class="label">
+        <img src="../img/libraries/p5.play3.png"></a>
+        <a class="nounderline" href="http://p5play.molleindustria.org"><h4>p5.play</h4></a>
+        </div>
+        <p>p5.play provides sprites, animations, input and collision functions for games and gamelike applications.
+        Created by <a target='_blank' href='http://www.molleindustria.org/'>Paolo Pedercini</a>.</p> 
+      </div>
       <div class="spacer"></div>
 
       <a name="using-a-library" class="anchor"><h3>Using a library</h3></a>

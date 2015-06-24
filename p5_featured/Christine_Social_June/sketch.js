@@ -4,7 +4,7 @@ var BobsUno, options, sliderValue, sketch, slider,
 function setup() {
 
   sketch = createCanvas(windowWidth, windowHeight)
-    .parent("sketch-container");
+  sketch.id("p5Canvas");
 
   colorMode(HSB);
   frameRate(30);
