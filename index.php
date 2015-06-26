@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <div id="credits"><em>Social Tension</em><br>by <a target=_blank href="http://stinedec.com/">stinedec(Christine de Carteret)</a></div>
+  <div id="credits"><em>Love Wins</em><!-- <br>by <a target=_blank href="http://stinedec.com/">stinedec(Christine de Carteret)</a> --></div>
  
   <?php include('heading.php'); ?>
 
@@ -54,12 +54,12 @@
 
   <?php include('end.php'); ?>
 
-  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/Christine_Social_June'></iframe>
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/love1'></iframe>
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
 
-    $('#home-sketch-frame').css('position', 'absolute');
+    $('#home-sketch-frame').css('position', 'fixed');
     $('#home-sketch-frame').css('top', '0px');
     $('#home-sketch-frame').css('left', '0px');
     $('#home-sketch-frame').css('z-index', '-2');
