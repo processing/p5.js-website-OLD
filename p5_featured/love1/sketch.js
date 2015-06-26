@@ -1,4 +1,4 @@
-var numBalls = 32;
+var numBalls = 12;
 var spring = 0.05;
 var gravity = -0.00005;
 var friction = -0.9;
@@ -17,7 +17,7 @@ function setup() {
     color(117, 7, 135, a)
   ];
   for (var i = 0; i < numBalls; i++) {
-    balls[i] = new Ball(random(width), (i%6)*height*0.133+height*0.15, 40, i, balls);
+    balls[i] = new Ball(width/2, (i%6)*height*0.133+height*0.15, 60, i, balls);
   }
   noStroke();
   noFill();
@@ -43,8 +43,6 @@ function Ball(xin, yin, din, idin, oin) {
   this.others = oin;
   this.vx = 0;
   this.vy = 0;
-  this.rot = 0;
-  //this.vrot = random(-0.01, 0.01);
 
   this.collide = function() {
     for (var i = this.id + 1; i < numBalls; i++) {
@@ -57,7 +55,7 @@ function Ball(xin, yin, din, idin, oin) {
         var targetX = this.x + cos(angle) * minDist;
         var targetY = this.y + sin(angle) * minDist;
         var ax = (targetX - this.others[i].x) * spring;
-        var ay = (targetY - this.others[i].y) * spring + random(-0.03, 0.03);
+        var ay = (targetY - this.others[i].y) * spring + random(-0.01, 0.01);
         this.vx -= ax;
         this.vy -= ay;
         this.others[i].vx += ax;
@@ -70,7 +68,6 @@ function Ball(xin, yin, din, idin, oin) {
     this.vy += gravity;
     this.x += this.vx;
     this.y += this.vy;
-    //this.rot += this.vrot;
     if (this.x + this.diameter/2 > width) {
       this.x = width - this.diameter/2;
       this.vx *= friction; 
@@ -94,7 +91,7 @@ function Ball(xin, yin, din, idin, oin) {
     fill(colors[this.id%6]);
     //ellipse(this.x, this.y, this.diameter, this.diameter);
     translate(this.x-50, this.y-this.diameter/2);
-    //rotate(this.rot);
+    scale(1.5)
     beginShape();
     vertex(50, 15); 
     bezierVertex(50, -5, 90, 5, 50, 40); 
