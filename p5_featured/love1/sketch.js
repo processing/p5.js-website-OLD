@@ -1,4 +1,4 @@
-var numBalls = 40;
+var numBalls = 32;
 var spring = 0.05;
 var gravity = -0.00005;
 var friction = -0.9;
