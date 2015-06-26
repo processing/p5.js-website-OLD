@@ -1,9 +1,23 @@
-var numBalls = 12;
+var numBalls = 24;
 var spring = 0.05;
 var gravity = -0.00005;
-var friction = -0.9;
+var friction = -0.5;
 var balls = [];
 var colors;
+var partners = {
+  0: 13,
+  1: 15,
+  2: 17,
+  3: 19,
+  4: 21,
+  5: 23,
+  6: 14,
+  7: 18,
+  8: 22,
+  9: 16,
+  10: 20,
+  11: 12
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -18,6 +32,11 @@ function setup() {
   ];
   for (var i = 0; i < numBalls; i++) {
     balls[i] = new Ball(width/2, (i%6)*height*0.133+height*0.15, 60, i, balls);
+  }
+  for (var i = 0; i < numBalls/2; i++) {
+    balls[i].p = partners[i];
+    balls[partners[i]].p = i;
+    console.log('partners '+partners[i]+" "+i)
   }
   noStroke();
   noFill();
@@ -43,23 +62,26 @@ function Ball(xin, yin, din, idin, oin) {
   this.others = oin;
   this.vx = 0;
   this.vy = 0;
+  this.collided = false;
 
   this.collide = function() {
     for (var i = this.id + 1; i < numBalls; i++) {
-      var dx = this.others[i].x - this.x;
-      var dy = this.others[i].y - this.y;
-      var distance = sqrt(dx*dx + dy*dy);
-      var minDist = this.others[i].diameter/2 + this.diameter/2;
-      if (distance < minDist) { 
-        var angle = atan2(dy, dx);
-        var targetX = this.x + cos(angle) * minDist;
-        var targetY = this.y + sin(angle) * minDist;
-        var ax = (targetX - this.others[i].x) * spring;
-        var ay = (targetY - this.others[i].y) * spring + random(-0.01, 0.01);
-        this.vx -= ax;
-        this.vy -= ay;
-        this.others[i].vx += ax;
-        this.others[i].vy += ay;
+      if (this.others[i].id !== this.p) {
+        var dx = this.others[i].x - this.x;
+        var dy = this.others[i].y - this.y;
+        var distance = sqrt(dx*dx + dy*dy);
+        var minDist = this.others[i].diameter/2 + this.diameter/2;
+        if (distance < minDist) {
+          var angle = atan2(dy, dx);
+          var targetX = this.x + cos(angle) * minDist;
+          var targetY = this.y + sin(angle) * minDist;
+          var ax = (targetX - this.others[i].x) * spring;
+          var ay = (targetY - this.others[i].y) * spring + random(-0.01, 0.01);
+          this.vx -= ax;
+          this.vy -= ay;
+          this.others[i].vx += ax;
+          this.others[i].vy += ay;
+        }
       }
     }   
   }
@@ -84,6 +106,8 @@ function Ball(xin, yin, din, idin, oin) {
       this.y = this.diameter/2;
       this.vy *= friction;
     }
+    this.vx += (balls[this.p].x - this.x) * 0.0001;
+    this.vy += (balls[this.p].y - this.y) * 0.0001;
   }
    
   this.display = function() {
