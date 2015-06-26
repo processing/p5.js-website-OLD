@@ -7,7 +7,7 @@ var colors;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  var a = 155;  // change this to lighten
+  var a = 255;  // change this to lighten
   colors = [
     color(228, 3, 3, a),
     color(255, 140, 0, a),
