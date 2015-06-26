@@ -89,6 +89,7 @@ function Ball(xin, yin, din, idin, oin) {
   this.display = function() {
     push();  
     fill(colors[this.id%6]);
+    stroke(colors[this.id%6]);
     //ellipse(this.x, this.y, this.diameter, this.diameter);
     translate(this.x-50, this.y-this.diameter/2);
     scale(1.5)
