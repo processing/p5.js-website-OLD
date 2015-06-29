@@ -23,7 +23,7 @@
       <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
     </ul>
 
-    <section id="home">
+    <section id="home" style='pointer-events:none;'>
       <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of 
       <a href="http://processing.org">Processing</a>, to make coding accessible 
       for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web. 
@@ -63,6 +63,10 @@
     $('#home-sketch-frame').css('top', '0px');
     $('#home-sketch-frame').css('left', '0px');
     $('#home-sketch-frame').css('z-index', '-2');
+    $('body').css('pointer-events', 'none');
+    $('iframe').css('pointer-events', 'auto');
+    $('a').css('pointer-events', 'auto');
+
   </script>
 </body>
 </html>
