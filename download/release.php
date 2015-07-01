@@ -51,9 +51,9 @@ function getPackageVersion($f) {
 
 function updateFiles() {
   $r = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/'.$lib_version;
-  download($r.'p5.min.js', '../js/p5.min.js');
-  download($r.'addons/p5.dom.js', '../js/p5.dom.js');
-  download($r.'addons/p5.sound.js', '../js/p5.sound.js');
+  download($r.'/p5.min.js', '../js/p5.min.js');
+  download($r.'/addons/p5.dom.js', '../js/p5.dom.js');
+  download($r.'/addons/p5.sound.js', '../js/p5.sound.js');
 }
 
 function updateLib($p5jseditor_v) {
