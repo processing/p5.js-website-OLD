@@ -50,7 +50,7 @@ function getPackageVersion($f) {
 }
 
 function updateFiles() {
-  globals $lib_version;
+  global $lib_version;
   $r = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/'.$lib_version;
   download($r.'/p5.min.js', '../js/p5.min.js');
   download($r.'/addons/p5.dom.js', '../js/p5.dom.js');
@@ -61,8 +61,8 @@ function updateFiles() {
 
 function updateLib($p5jseditor_v) {
 
-  globals $lib_version;
-  
+  global $lib_version;
+
   $r = 'https://raw.githubusercontent.com/processing/p5.js/master/';
   download($r.'package.json', 'package.json');
   $lib_version = getPackageVersion('package.json');
