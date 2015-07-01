@@ -55,8 +55,6 @@ function updateFiles() {
   download($r.'/p5.min.js', '../js/p5.min.js');
   download($r.'/addons/p5.dom.js', '../js/p5.dom.js');
   download($r.'/addons/p5.sound.js', '../js/p5.sound.js');
-
-  echo 'donwloaded '.$r.'/p5.min.js';
 }
 
 function updateLib($p5jseditor_v) {
@@ -69,7 +67,7 @@ function updateLib($p5jseditor_v) {
   unlink('package.json');
 
   updateFiles();
-  $v = getLibVersion('../js/p5.min.js');
+  $v = getLibVersion('../js/p5.min.js'); // this should just be taken from package.json eventually
   echo 'updating library version to v'.$lib_version.' ('.$v[1].')';
   $contents = '<?php $version = "'.$lib_version.'"; $date = "'.$v[1].'"; $p5jseditor_version = "'.$p5jseditor_v.'"; ?>';
 
