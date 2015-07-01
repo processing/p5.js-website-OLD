@@ -13,10 +13,11 @@
           <p>The circle changes color when you click on it.
  <p><em><span class="small"> To run this example locally, you will need the
  <a href="http://p5js.org/reference/#/libraries/p5.dom">p5.dom library</a>.
+ </em></p>
  </p>
 
           <div id="exampleDisplay">
-            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <iframe id="exampleFrame" src="../example.html" ></iframe>
             <div class="edit_space">
               <button id="runButton" class="edit_button">run</button>
               <button id="resetButton" class="reset_button">reset</button>

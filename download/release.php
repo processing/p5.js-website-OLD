@@ -1,6 +1,8 @@
 <?php include('version.php'); ?>
 <?php
 
+$lib_version;
+
 function download($url, $path) {
   # open file to write
   $fp = fopen ($path, 'w+');
@@ -25,16 +27,16 @@ function download($url, $path) {
   if (filesize($path) > 0) return true;
 }
 
-// function getLibVersion($f) {
-//   $handle = fopen($f, 'r');
-//   $line = fgets($handle);
-//   fclose($handle);
-//   preg_match('/v([^ ]*)/', $line, $matches);
-//   $v = $matches[1];
-//   preg_match('/v[^ ]* (.*) \*\//', $line, $matches);
-//   $d = $matches[1];
-//   return array($v, $d);
-// }
+function getLibVersion($f) {
+  $handle = fopen($f, 'r');
+  $line = fgets($handle);
+  fclose($handle);
+  preg_match('/v([^ ]*)/', $line, $matches);
+  $v = $matches[1];
+  preg_match('/v[^ ]* (.*) \*\//', $line, $matches);
+  $d = $matches[1];
+  return array($v, $d);
+}
 
 function getPackageVersion($f) {
   $handle = fopen($f, 'r');
@@ -44,26 +46,27 @@ function getPackageVersion($f) {
   }
   fclose($handle);
   preg_match('/"version": "(.*)".*/', $line, $matches);
-  return array($matches[1], 'June 24, 2005');
+  return $matches[1];
 }
 
-// function updateFiles() {
-//   $r = 'https://raw.githubusercontent.com/processing/p5.js/master/';
-//   download($r.'lib/p5.min.js', '../js/p5.min.js');
-//   download($r.'lib/addons/p5.dom.js', '../js/p5.dom.js');
-//   download($r.'lib/addons/p5.sound.js', '../js/p5.sound.js');
-// }
+function updateFiles() {
+  $r = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/'.$lib_version;
+  download($r.'p5.min.js', '../js/p5.min.js');
+  download($r.'addons/p5.dom.js', '../js/p5.dom.js');
+  download($r.'addons/p5.sound.js', '../js/p5.sound.js');
+}
 
 function updateLib($p5jseditor_v) {
 
   $r = 'https://raw.githubusercontent.com/processing/p5.js/master/';
   download($r.'package.json', 'package.json');
-  $v = getPackageVersion('package.json');
+  $lib_version = getPackageVersion('package.json');
   unlink('package.json');
 
-  //unlink('p5.min.js');
-  echo 'updating library version to v'.$v[0].' ('.$v[1].')';
-  $contents = '<?php $version = "'.$v[0].'"; $date = "'.$v[1].'"; $p5jseditor_version = "'.$p5jseditor_v.'"; ?>';
+  updateFiles();
+  $v = getLibVersion('../js/p5.min.js');
+  echo 'updating library version to v'.$lib_version.' ('.$v[1].')';
+  $contents = '<?php $version = "'.$lib_version.'"; $date = "'.$v[1].'"; $p5jseditor_version = "'.$p5jseditor_v.'"; ?>';
 
   file_put_contents('version.php', $contents);
 }
