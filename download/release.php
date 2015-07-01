@@ -54,6 +54,8 @@ function updateFiles() {
   download($r.'/p5.min.js', '../js/p5.min.js');
   download($r.'/addons/p5.dom.js', '../js/p5.dom.js');
   download($r.'/addons/p5.sound.js', '../js/p5.sound.js');
+
+  echo 'donwloaded '.$r.'/p5.min.js';
 }
 
 function updateLib($p5jseditor_v) {
