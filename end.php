@@ -5,9 +5,9 @@
 
 <!-- boilerplate suggestions
 <script src="js/plugins.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/addons/p5.dom.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/addons/p5.sound.js"></script>
+<script src="<?php echo getRoot(); ?>js/p5.min.js"></script>
+<script src="<?php echo getRoot(); ?>js/addons/p5.dom.js"></script>
+<script src="<?php echo getRoot(); ?>js/addons/p5.sound.js"></script>
 <script src="<?php echo getRoot(); ?>js/render.js"></script>
 <script src="<?php echo getRoot(); ?>js/main.js"></script>
 <script src="<?php echo getRoot(); ?>js/logo.js"></script>
