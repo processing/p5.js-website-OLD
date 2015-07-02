@@ -6,8 +6,8 @@
 <!-- boilerplate suggestions
 <script src="js/plugins.js"></script> -->
 <script src="<?php echo getRoot(); ?>js/p5.min.js"></script>
-<script src="<?php echo getRoot(); ?>js/addons/p5.dom.js"></script>
-<script src="<?php echo getRoot(); ?>js/addons/p5.sound.js"></script>
+<script src="<?php echo getRoot(); ?>js/p5.dom.js"></script>
+<script src="<?php echo getRoot(); ?>js/p5.sound.js"></script>
 <script src="<?php echo getRoot(); ?>js/render.js"></script>
 <script src="<?php echo getRoot(); ?>js/main.js"></script>
 <script src="<?php echo getRoot(); ?>js/logo.js"></script>
