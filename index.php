@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <div id="credits"><em>Aurora II</em><br>by <a target=_blank href="http://www.chriseugenemills.com/">Chris Eugene Mills</a></div>
+  <div id="credits"><em>Aurora II</em><br>by <a target=_blank href="http://www.chriseugenemills.com/">Chris Eugene Mills</a> </div>
  
   <?php include('heading.php'); ?>
 
