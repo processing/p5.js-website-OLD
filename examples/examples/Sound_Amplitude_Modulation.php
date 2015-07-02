@@ -39,7 +39,7 @@
  </p>
 
           <div id="exampleDisplay">
-            <iframe id="exampleFrame" src="../example.html" ></iframe>
+            <iframe id="exampleFrame" src="example.html" ></iframe>
             <div class="edit_space">
               <button id="runButton" class="edit_button">run</button>
               <button id="resetButton" class="reset_button">reset</button>
