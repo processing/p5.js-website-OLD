@@ -24,6 +24,13 @@
     </ul>
 
     <section id="home" style='pointer-events:none;'>
+
+      
+      <div class='focus_blue'>
+        <p><a href='http://goo.gl/forms/vJYdqTQVdS'>Call for artists and coders: help us make our community video!</a></p>
+      </div>
+
+
       <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of 
       <a href="http://processing.org">Processing</a>, to make coding accessible 
       for artists, designers, educators, and beginners, and reinterprets this for today&#8217;s web. 
