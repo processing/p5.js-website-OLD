@@ -167,9 +167,9 @@
            <img class="gallery-img nounderline" src="../img/gallery-images/hardmarubox2D.png" 
            width="5" alt="preview image">
         <br>
-        <p>Self Balancing Inverted Pendulum</p>
+        <p> Self Balancing Inverted Pendulum </p>
          </a>
-         <p class="gallery-source">David Ha, 2015</p>
+         <p class="gallery-source"> David Ha, 2015 </p>
       </div>
 
       <div class="gallery-item">
@@ -178,9 +178,9 @@
            <img class="gallery-img nounderline" src="../img/gallery-images/hardmaruplanks.png" 
            width="5" alt="preview image">
         <br>
-        <p>Creatures Avoiding Planks</p>
+        <p> Creatures Avoiding Planks </p>
          </a>
-         <p class="gallery-source">David Ha, 2015</p>
+         <p class="gallery-source"> David Ha, 2015 </p>
       </div>
 
     </section>

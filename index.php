@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <div id="credits"><em>Love Wins</em><!-- <br>by <a target=_blank href="http://stinedec.com/">stinedec(Christine de Carteret)</a> --></div>
+  <div id="credits"><em>Aurora II</em><br>by <a target=_blank href="http://www.chriseugenemills.com/">Chris Eugene Mills</a> </div>
  
   <?php include('heading.php'); ?>
 
@@ -54,7 +54,7 @@
 
   <?php include('end.php'); ?>
 
-  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/love1'></iframe>
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/ChirsMill_AuroraII'></iframe>
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
