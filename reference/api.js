@@ -14,8 +14,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.File",
         "p5.Filter",
         "p5.Font",
+        "p5.Gain",
         "p5.Graphics",
-        "p5.Graphics2D",
         "p5.Image",
         "p5.Matrix",
         "p5.MediaElement",
@@ -25,6 +25,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.PeakDetect",
         "p5.Phrase",
         "p5.Pulse",
+        "p5.Renderer",
+        "p5.Renderer2D",
         "p5.Reverb",
         "p5.Score",
         "p5.Signal",
@@ -38,6 +40,7 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
+        "3D Primitives",
         "Acceleration",
         "Array Functions",
         "Attributes",
@@ -52,6 +55,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Environment",
         "Events",
         "Font",
+        "Geometry3D",
         "IO",
         "Image",
         "Input",
@@ -81,6 +85,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "2D Primitives",
             "name": "2D Primitives"
+        },
+        {
+            "displayName": "3D Primitives",
+            "name": "3D Primitives"
         },
         {
             "displayName": "Acceleration",
@@ -141,6 +149,10 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "This module defines the p5.Font class and P5 methods for\ndrawing text to the main display canvas."
         },
         {
+            "displayName": "Geometry3D",
+            "name": "Geometry3D"
+        },
+        {
             "displayName": "Image",
             "name": "Image",
             "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage. p5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image. The methods described below allow\neasy access to the image's pixels and alpha channel and simplify the\nprocess of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded."
@@ -199,7 +211,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Rendering",
             "name": "Rendering",
-            "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nGraphics2D and Graphics3D classes, respecitvely. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5."
+            "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are \nextensive, but mirror the normal drawing API for p5."
         },
         {
             "displayName": "Setting",
