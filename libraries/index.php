@@ -35,17 +35,33 @@
 
       <a name="contributed" class="anchor"><h3>Contributed</h3></a>
 
+
       <div class="left-column">
-        <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/">
+        <a class="nounderline" href="https://github.com/IDMNYU/p5.js-speech">
         <div class="label">
-        <img src="../img/libraries/p5.gibber.jpg"></a>
-        <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/"><h4>p5.gibber</h4></a>
+        <img src="../img/libraries/p5.speech.jpg"></a>
+        <a class="nounderline" href="https://github.com/IDMNYU/p5.js-speech"><h4>p5.speech</h4></a>
         </div>
-        <p>p5.gibber provides rapid music sequencing and audio synthesis capabilities.
-        Created by <a target='_blank' href='http://charlie-roberts.com'>Charlie Roberts</a>.</p> 
+        <p>p5.speech provides simple, clear access to the Web Speech and Speech
+        Recognition APIs, allowing for the easy creation of sketches that can
+        talk and listen.
+        Created by <a target='_blank' href='http://lukedubois.com/'>R. Luke DuBois</a>.</p> 
       </div>
 
       <div class="right-column">
+        <a class="nounderline" href="http://p5play.molleindustria.org">
+        <div class="label">
+        <img src="../img/libraries/p5.play3.png"></a>
+        <a class="nounderline" href="http://p5play.molleindustria.org"><h4>p5.play</h4></a>
+        </div>
+        <p>p5.play provides sprites, animations, input and collision functions for games and gamelike applications.
+        Created by <a target='_blank' href='http://www.molleindustria.org/'>Paolo Pedercini</a>.</p> 
+      </div>
+
+
+      <div class="spacer"></div>
+      
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/jagracar/grafica.js">
         <div class="label">
         <img src="../img/libraries/grafica.jpg"></a>
@@ -55,15 +71,17 @@
         Created by <a target='_blank' href='http://jagracar.com/p5jsSketches.php'>Javier Graciá Carpio</a>.</p> 
       </div>
 
-      <div class="left-column">
-        <a class="nounderline" href="http://p5play.molleindustria.org">
+      <div class="right-column">
+        <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/">
         <div class="label">
-        <img src="../img/libraries/p5.play3.png"></a>
-        <a class="nounderline" href="http://p5play.molleindustria.org"><h4>p5.play</h4></a>
+        <img src="../img/libraries/p5.gibber.jpg"></a>
+        <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/"><h4>p5.gibber</h4></a>
         </div>
-        <p>p5.play provides sprites, animations, input and collision functions for games and gamelike applications.
-        Created by <a target='_blank' href='http://www.molleindustria.org/'>Paolo Pedercini</a>.</p> 
+        <p>p5.gibber provides rapid music sequencing and audio synthesis capabilities.
+        Created by <a target='_blank' href='http://charlie-roberts.com'>Charlie Roberts</a>.</p> 
       </div>
+
+
       <div class="spacer"></div>
 
       <a name="using-a-library" class="anchor"><h3>Using a library</h3></a>
