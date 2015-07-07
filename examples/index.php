@@ -208,6 +208,9 @@
           <a href="examples/Math_Noise_Wave.php">Noise Wave</a><br>
           
         
+          <a href="examples/Math_Arctangent.php">Arctangent</a><br>
+          
+        
         </p>
         
       
@@ -227,6 +230,9 @@
           
         
           <a href="examples/Simulate_Game_of_Life.php">Game of Life</a><br>
+          
+        
+          <a href="examples/Simulate_Multiple_Particle_Systems.php">Multiple Particle Systems</a><br>
           
         
         </p>
