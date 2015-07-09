@@ -9,10 +9,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2></h2>
-          <p>Write a description of your example here. This gets displayed
- on the page underneath your example. You can use <br><br> to add a line
- break. Please limit lines to 80 columns (total characters) long.
+          <h2>Acceleration Ball Bounce</h2>
+          <p>Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
+ <br><br>Best view on mobile devices. 
  </p>
 
           <div id="exampleDisplay">
