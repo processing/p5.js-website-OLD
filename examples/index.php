@@ -31,6 +31,15 @@
           <a href="examples/Structure_Loop.php">Loop</a><br>
           
         
+          <a href="examples/Structure_Redraw.php">Redraw</a><br>
+          
+        
+          <a href="examples/Structure_Functions.php">Functions</a><br>
+          
+        
+          <a href="examples/Structure_Functions.php">Functions</a><br>
+          
+        
         </p>
         
       
@@ -135,6 +144,9 @@
         
         </p>
         
+          </div>
+          <div class="column_1">
+        
       
         <p>
         <strong>Color</strong><br>
@@ -161,9 +173,6 @@
           
         
         </p>
-        
-          </div>
-          <div class="column_1">
         
       
         <p>
@@ -264,6 +273,9 @@
         
         </p>
         
+          </div>
+          <div class="column_2">
+        
       
         <p>
         <strong>Dom</strong><br>
@@ -293,9 +305,6 @@
           
         
         </p>
-        
-          </div>
-          <div class="column_2">
         
       
         <p>
@@ -380,6 +389,9 @@
           
         
         </p>
+        
+          </div>
+          <div class="column_3">
         
       
       </div>
