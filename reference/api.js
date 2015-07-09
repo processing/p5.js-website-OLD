@@ -211,7 +211,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Rendering",
             "name": "Rendering",
-            "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are \nextensive, but mirror the normal drawing API for p5."
+            "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are\nextensive, but mirror the normal drawing API for p5."
         },
         {
             "displayName": "Setting",
