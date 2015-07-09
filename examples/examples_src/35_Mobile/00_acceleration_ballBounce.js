@@ -1,8 +1,7 @@
 /*
  * @name Acceleration Ball Bounce
- * @description Write a description of your example here. This gets displayed
- * on the page underneath your example. You can use <br><br> to add a line
- * break. Please limit lines to 80 columns (total characters) long.
+ * @description Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
+ * <br><br>Best view on mobile devices. 
  */
 
 // Position Variables
