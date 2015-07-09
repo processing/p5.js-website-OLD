@@ -60,7 +60,3 @@ function ballMove() {
  	}
 	
 }
-
-function touchStarted() {
-  fullscreen(true);
-}
