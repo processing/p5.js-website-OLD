@@ -373,6 +373,15 @@
         </p>
         
       
+        <p>
+        <strong>Mobile</strong><br>
+        
+          <a href="examples/Mobile_.php"></a><br>
+          
+        
+        </p>
+        
+      
       </div>
 
       <div class="spacer"></div>
