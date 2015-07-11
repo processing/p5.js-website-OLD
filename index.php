@@ -26,9 +26,9 @@
     <section id="home" style='pointer-events:none;'>
 
       
-      <div class='focus_blue'>
+<!--       <div class='focus_blue'>
         <p><a href='http://goo.gl/forms/vJYdqTQVdS'>Call for artists and coders: help us make our community video!</a></p>
-      </div>
+      </div> -->
 
 
       <p><a href="http://hello.p5js.org">Hello!</a> p5.js is a JavaScript library that starts with the original goal of 
