@@ -40,7 +40,6 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
-        "3D Primitives",
         "Acceleration",
         "Array Functions",
         "Attributes",
@@ -55,7 +54,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "Environment",
         "Events",
         "Font",
-        "Geometry3D",
         "IO",
         "Image",
         "Input",
@@ -85,10 +83,6 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "2D Primitives",
             "name": "2D Primitives"
-        },
-        {
-            "displayName": "3D Primitives",
-            "name": "3D Primitives"
         },
         {
             "displayName": "Acceleration",
@@ -146,11 +140,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Font",
             "name": "Font",
-            "description": "This module defines the p5.Font class and P5 methods for\ndrawing text to the main display canvas."
-        },
-        {
-            "displayName": "Geometry3D",
-            "name": "Geometry3D"
+            "description": "This module defines the p5.Font class and functions for\ndrawing text to the display canvas."
         },
         {
             "displayName": "Image",

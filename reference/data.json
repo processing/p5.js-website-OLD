@@ -8,13 +8,9 @@
     "files": {
         "src/3d/3d_primitives.js": {
             "name": "src/3d/3d_primitives.js",
-            "modules": {
-                "3D Primitives": 1
-            },
+            "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/mat4.js": {
@@ -26,15 +22,18 @@
             "fors": {},
             "namespaces": {}
         },
+        "src/3d/material.js": {
+            "name": "src/3d/material.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "src/3d/p5.Geometry3D.js": {
             "name": "src/3d/p5.Geometry3D.js",
-            "modules": {
-                "Geometry3D": 1
-            },
+            "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/p5.Matrix.js": {
@@ -594,61 +593,6 @@
         }
     },
     "modules": {
-        "Shape": {
-            "name": "Shape",
-            "submodules": {
-                "2D Primitives": 1,
-                "Curves": 1,
-                "Vertex": 1
-            },
-            "classes": {
-                "4x4 Matrix": 1
-            },
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {},
-            "file": "src/3d/mat4.js",
-            "line": 18
-        },
-        "3D Primitives": {
-            "name": "3D Primitives",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "IO",
-            "namespace": "",
-            "file": "src/3d/3d_primitives.js",
-            "line": 1,
-            "requires": [
-                "core",
-                "canvas",
-                "constants"
-            ]
-        },
-        "Geometry3D": {
-            "name": "Geometry3D",
-            "submodules": {},
-            "classes": {
-                "p5.Matrix": 1
-            },
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {},
-            "tag": "module",
-            "file": "src/3d/p5.Matrix.js",
-            "line": 15,
-            "requires": [
-                "core",
-                "canvas",
-                "constants"
-            ]
-        },
         "Color": {
             "name": "Color",
             "submodules": {
@@ -656,6 +600,8 @@
                 "Setting": 1
             },
             "classes": {
+                "4x4 Matrix": 1,
+                "p5.Matrix": 1,
                 "p5.Color": 1
             },
             "fors": {
@@ -701,6 +647,19 @@
                 "core",
                 "constants"
             ]
+        },
+        "Shape": {
+            "name": "Shape",
+            "submodules": {
+                "2D Primitives": 1,
+                "Curves": 1,
+                "Vertex": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
         },
         "2D Primitives": {
             "name": "2D Primitives",
@@ -1004,7 +963,7 @@
         "IO": {
             "name": "IO",
             "submodules": {
-                "3D Primitives": 1,
+                "undefined": 1,
                 "Input": 1,
                 "Output": 1,
                 "Table": 1
@@ -1184,7 +1143,7 @@
             },
             "namespaces": {},
             "file": "src/typography/p5.Font.js",
-            "line": 37
+            "line": 32
         },
         "Font": {
             "name": "Font",
@@ -1198,8 +1157,8 @@
             "module": "Typography",
             "namespace": "",
             "file": "src/typography/p5.Font.js",
-            "line": 37,
-            "description": "This module defines the p5.Font class and P5 methods for\ndrawing text to the main display canvas.",
+            "line": 32,
+            "description": "This module defines the p5.Font class and functions for\ndrawing text to the display canvas.",
             "requires": [
                 "core",
                 "constants"
@@ -1301,7 +1260,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 1390,
+            "line": 1422,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1344,18 +1303,6 @@
         }
     },
     "classes": {
-        "p5": {
-            "name": "p5",
-            "shortname": "p5",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "IO",
-            "submodule": "Output",
-            "namespace": ""
-        },
         "4x4 Matrix": {
             "name": "4x4 Matrix",
             "shortname": "4x4 Matrix",
@@ -1364,8 +1311,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "Shape",
-            "namespace": "",
+            "module": "Color",
             "file": "src/3d/mat4.js",
             "line": 18
         },
@@ -1377,8 +1323,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "Geometry3D",
-            "namespace": "",
+            "module": "Color",
             "file": "src/3d/p5.Matrix.js",
             "line": 15,
             "description": "A class to describe a 4x4 matrix\nfor model and view matrix manipulation in the p5js webgl renderer.",
@@ -1392,6 +1337,17 @@
                 }
             ]
         },
+        "p5": {
+            "name": "p5",
+            "shortname": "p5",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "IO",
+            "submodule": "Output"
+        },
         "p5.Color": {
             "name": "p5.Color",
             "shortname": "p5.Color",
@@ -1402,7 +1358,6 @@
             "extension_for": [],
             "module": "Color",
             "submodule": "Creating & Reading",
-            "namespace": "",
             "file": "src/color/p5.Color.js",
             "line": 11,
             "is_constructor": 1
@@ -1446,7 +1401,6 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Graphics.js",
             "line": 10,
             "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are\nextensive, but mirror the normal drawing API for p5.",
@@ -1481,7 +1435,6 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Renderer.js",
             "line": 9,
             "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nRenderer2D and Renderer3D classes, respecitvely.",
@@ -1515,7 +1468,6 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Renderer2D.js",
             "line": 9,
             "description": "2D graphics renderer class.  Can also be used as an off-screen\ngraphics buffer. A p5.Renderer2D object can be constructed\nwith the <code>createRenderer2D()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
@@ -1680,7 +1632,7 @@
             "submodule": "Font",
             "namespace": "",
             "file": "src/typography/p5.Font.js",
-            "line": 37,
+            "line": 32,
             "description": "Base class for font handling",
             "is_constructor": 1,
             "params": [
@@ -1716,7 +1668,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 987,
+            "line": 1019,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -1745,7 +1697,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1390,
+            "line": 1422,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -2373,8 +2325,8 @@
     "classitems": [
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 15,
-            "description": "generate plane geomery",
+            "line": 6,
+            "description": "draw a plane with given a width and height",
             "params": [
                 {
                     "name": "width",
@@ -2387,188 +2339,147 @@
                     "type": "Number"
                 },
                 {
-                    "name": "detailX",
-                    "description": "how many segments in the x axis",
+                    "name": "detailX(optional)",
+                    "description": "number of vertices on horizontal surface",
                     "type": "Number"
                 },
                 {
-                    "name": "detailY",
-                    "description": "how many segments in the y axis",
+                    "name": "detailY(optional)",
+                    "description": "number of vertices on horizontal surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  plane(100, 100);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
                     "type": "Number"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 56,
-            "description": "[sphere description]",
+            "line": 67,
+            "description": "draw a sphere with given raduis",
             "params": [
                 {
                     "name": "radius",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "radius of the sphere",
+                    "type": "Number"
                 },
                 {
-                    "name": "detailX",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "detailX(optional)",
+                    "description": "number of vertices on horizontal surface",
+                    "type": "Number"
                 },
                 {
-                    "name": "detailY",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "detailY(optional)",
+                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  sphere(100);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
+                    "type": "Number"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 97,
-            "description": "[cylinder description]",
+            "line": 128,
+            "description": "draw a cylinder with given radius and height",
             "params": [
                 {
                     "name": "radius",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "detailX",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "detailY",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
-            "file": "src/3d/3d_primitives.js",
-            "line": 142,
-            "description": "[cone description]",
-            "params": [
-                {
-                    "name": "radius",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "radius of the surface",
+                    "type": "Number"
                 },
                 {
                     "name": "height",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "height of the cylinder",
+                    "type": "Number"
                 },
                 {
-                    "name": "detailX",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "detailX(optional)",
+                    "description": "number of vertices on horizontal surface",
+                    "type": "Number"
                 },
                 {
-                    "name": "detailY",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "detailY(optional)",
+                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  cylinder(100, 200);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
+                    "type": "Number"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 186,
-            "description": "[torus description]",
+            "line": 223,
+            "description": "draw a cone with given radius and height",
             "params": [
                 {
                     "name": "radius",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "radius of the bottom surface",
+                    "type": "Number"
                 },
                 {
                     "name": "height",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "height of the cone",
+                    "type": "Number"
                 },
                 {
-                    "name": "detailX",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "detailX(optional)",
+                    "description": "number of vertices on horizontal surface",
+                    "type": "Number"
                 },
                 {
-                    "name": "detailY",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "detailY(optional)",
+                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  cone(100, 200);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
+                    "type": "Number"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 229,
-            "description": "[cube description]",
+            "line": 298,
+            "description": "draw a torus with given radius and tube radius",
+            "params": [
+                {
+                    "name": "radius",
+                    "description": "radius of the whole ring",
+                    "type": "Number"
+                },
+                {
+                    "name": "tubeRadius",
+                    "description": "radius of the tube",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailX(optional)",
+                    "description": "number of vertices on horizontal surface",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailY(optional)",
+                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  torus(100, 20);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
+                    "type": "Number"
+                }
+            ],
+            "class": "4x4 Matrix"
+        },
+        {
+            "file": "src/3d/3d_primitives.js",
+            "line": 361,
+            "description": "draw a box with given widht, height and depth",
             "params": [
                 {
                     "name": "width",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "width of the box",
+                    "type": "Number"
                 },
                 {
                     "name": "height",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "height of the box",
+                    "type": "Number"
                 },
                 {
                     "name": "depth",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "detailX",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "detailY",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "depth of the box\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  box(100, 100, 100);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
+                    "type": "Number"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2578,8 +2489,7 @@
                 "description": "a new 4x4 matrix",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2596,8 +2506,7 @@
                 "description": "a new 4x4 matrix",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2619,8 +2528,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2637,8 +2545,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2660,8 +2567,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2683,8 +2589,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2706,8 +2611,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2734,15 +2638,13 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
             "line": 378,
             "description": "Alias for {@link mat4.multiply}",
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2769,8 +2671,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2797,8 +2698,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2830,8 +2730,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2858,8 +2757,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2886,8 +2784,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2914,8 +2811,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -2962,8 +2858,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -3000,8 +2895,7 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
             "file": "src/3d/mat4.js",
@@ -3048,38 +2942,40 @@
                 "description": "out",
                 "type": "Mat4"
             },
-            "class": "4x4 Matrix",
-            "module": "Shape"
+            "class": "4x4 Matrix"
         },
         {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 12,
-            "description": "p5 Geometry3D class",
-            "class": "p5",
-            "module": "Geometry3D"
+            "file": "src/3d/material.js",
+            "line": 5,
+            "description": "[normal description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5.Matrix"
         },
         {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 33,
-            "description": "[parametricGeometry description]",
+            "file": "src/3d/material.js",
+            "line": 23,
+            "description": "[basic description]",
             "params": [
                 {
-                    "name": "func",
+                    "name": "r",
                     "description": "[description]",
                     "type": "[type]"
                 },
                 {
-                    "name": "detailX",
+                    "name": "g",
                     "description": "[description]",
                     "type": "[type]"
                 },
                 {
-                    "name": "detailY",
+                    "name": "b",
                     "description": "[description]",
                     "type": "[type]"
                 },
                 {
-                    "name": "offset",
+                    "name": "a",
                     "description": "[description]",
                     "type": "[type]"
                 }
@@ -3088,56 +2984,69 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 88,
-            "description": "[mergeVertices description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
+            "line": 5,
+            "description": "p5 Geometry3D class",
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 158,
-            "description": "[computeFaceNormals description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
+            "line": 26,
+            "description": "generate geometriy with parametric method",
+            "params": [
+                {
+                    "name": "func",
+                    "description": "callback function for how to generate geometry",
+                    "type": "Function"
+                },
+                {
+                    "name": "detailX",
+                    "description": "number of vertices on horizontal surface",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailY",
+                    "description": "number of vertices on horizontal surface",
+                    "type": "Number"
+                },
+                {
+                    "name": "offset",
+                    "description": "offset of vertices index",
+                    "type": "Number"
+                }
+            ],
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 185,
-            "description": "[computeVertexNormals description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
+            "line": 75,
+            "description": "merge duplicated vertices",
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 230,
-            "description": "[generateObj description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
+            "line": 144,
+            "description": "compute faceNormals for a geometry",
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 250,
+            "line": 169,
+            "description": "compute vertexNormals for a geometry",
+            "class": "p5.Matrix"
+        },
+        {
+            "file": "src/3d/p5.Geometry3D.js",
+            "line": 213,
+            "description": "generate an object containing information needed to create buffer",
+            "class": "p5.Matrix"
+        },
+        {
+            "file": "src/3d/p5.Geometry3D.js",
+            "line": 232,
             "description": "turn a two dimensional array into one dimensional array",
             "params": [
                 {
@@ -3150,12 +3059,11 @@
                 "description": "1-dimensional array\n[[1, 2, 3],[4, 5, 6]] -> [1, 2, 3, 4, 5, 6]",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 262,
+            "line": 244,
             "description": "turn an array of Vector into a one dimensional array of numbers",
             "params": [
                 {
@@ -3168,8 +3076,7 @@
                 "description": "a one dimensional array of numbers\n[p5.Vector(1, 2, 3), p5.Vector(4, 5, 6)] ->\n[1, 2, 3, 4, 5, 6]",
                 "type": "Array]"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3180,8 +3087,7 @@
             "todo": [
                 "see methods below needing further implementation."
             ],
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3195,8 +3101,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3206,76 +3111,71 @@
                 "description": "the copy of the p5.Matrix object",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 74,
-            "description": "Copies the mat4",
+            "description": "return a copy of a matrix",
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "the result matrix",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 99,
             "description": "return an identity matrix",
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "the result matrix",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 107,
-            "description": "[transpose description]",
+            "description": "transpose according to a given matrix",
             "params": [
                 {
                     "name": "a",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "the matrix to be based on to transpose",
+                    "type": "p5.Matrix | Typed Array"
                 }
             ],
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "this",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 167,
-            "description": "[invert description]",
+            "description": "invert  matrix according to a give matrix",
             "params": [
                 {
                     "name": "a",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "the matrix to be based on to invert",
+                    "type": "p5.Matrix or Typed Array"
                 }
             ],
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "this",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 252,
+            "description": "inspired by Toji's mat4 determinant",
             "return": {
-                "description": "Determinant of our 4x4 matrix\ninspired by Toji's mat4 determinant",
+                "description": "Determinant of our 4x4 matrix",
                 "type": "Number"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3289,11 +3189,10 @@
                 }
             ],
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "this",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3307,11 +3206,10 @@
                 }
             ],
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "this",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3330,11 +3228,10 @@
                 }
             ],
             "return": {
-                "description": "[description]\ninspired by Toji's gl-matrix lib, mat4 rotation",
-                "type": "[type]"
+                "description": "this\ninspired by Toji's gl-matrix lib, mat4 rotation",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3350,291 +3247,14 @@
                 }
             ],
             "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "this",
+                "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
         },
         {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 19,
-            "description": "3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 54,
-            "description": "[prototype description]",
-            "type": "{[type]}",
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 60,
-            "description": "[_applyDefaults description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 68,
-            "description": "[resize description]",
-            "params": [
-                {
-                    "name": "w",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "h",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 79,
-            "description": "[initShaders description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 147,
-            "description": "[initBuffer description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 156,
-            "description": "[initMatrix description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 167,
-            "description": "resets the model view matrix to a mat4 identity\nmatrix.",
-            "return": {
-                "description": "",
-                "type": "Void"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 180,
-            "description": "[background description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 206,
-            "description": "[stroke description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 262,
-            "description": "[translate description]",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "y",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "z",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "todo": [
-                "implement handle for components or vector as args"
-            ],
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 278,
-            "description": "Scales the Model View Matrix by a vector",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "[description]",
-                    "type": "Number"
-                },
-                {
-                    "name": "y",
-                    "description": "[description]",
-                    "type": "Number"
-                },
-                {
-                    "name": "z",
-                    "description": "[description]",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "This"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 290,
-            "description": "[rotateX description]",
-            "params": [
-                {
-                    "name": "rad",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 300,
-            "description": "[rotateY description]",
-            "params": [
-                {
-                    "name": "rad",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 310,
-            "description": "[rotateZ description]",
-            "params": [
-                {
-                    "name": "rad",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 320,
-            "description": "pushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 330,
-            "description": "[pop description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 341,
-            "description": "Sets the Matrix Uniforms inside our default shader.",
-            "params": [
-                {
-                    "name": "projection",
-                    "description": "projection matrix",
-                    "type": "Array float"
-                },
-                {
-                    "name": "modelView",
-                    "description": "model view matrix",
-                    "type": "Array float"
-                }
-            ],
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 357,
-            "description": "PRIVATE",
-            "class": "p5",
-            "module": "Geometry3D"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 409,
+            "file": "src/3d/p5.Matrix.js",
+            "line": 492,
             "description": "sets the perspective matrix",
             "params": [
                 {
@@ -3662,22 +3282,420 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5.Matrix"
+        },
+        {
+            "file": "src/3d/p5.Matrix.js",
+            "line": 526,
+            "description": "sets the ortho matrix",
+            "params": [
+                {
+                    "name": "left",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "right",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "bottom",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "top",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "near",
+                    "description": "near clipping plane",
+                    "type": "Number"
+                },
+                {
+                    "name": "far",
+                    "description": "far clipping plane",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "p5.Matrix"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 21,
+            "description": "3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 55,
+            "description": "[prototype description]",
+            "type": "{[type]}",
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 61,
+            "description": "[_applyDefaults description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 69,
+            "description": "[resize description]",
+            "params": [
+                {
+                    "name": "w",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "h",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 84,
+            "description": "[background description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 115,
+            "description": "[initShaders description]",
+            "params": [
+                {
+                    "name": "vertId",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "fragId",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 189,
+            "description": "[saveShaders description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 197,
+            "description": "[emptyShaderStack description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 205,
+            "description": "[getCurShader description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 224,
+            "description": "[initBuffer description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 233,
+            "description": "[geometryInHash description]",
+            "params": [
+                {
+                    "name": "gId",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 242,
+            "description": "[materialInHash description]",
+            "params": [
+                {
+                    "name": "mId",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 255,
+            "description": "[initBuffer description]",
+            "params": [
+                {
+                    "name": "gId",
+                    "description": "key of the geometry object",
+                    "type": "String"
+                },
+                {
+                    "name": "obj",
+                    "description": "an object containing geometry information",
+                    "type": "Object"
+                }
+            ],
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 289,
+            "description": "[drawBuffer description]",
+            "params": [
+                {
+                    "name": "gId",
+                    "description": "key of the geometery object",
+                    "type": "String"
+                }
+            ],
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 317,
+            "description": "Sets the Matrix Uniforms inside our default shader.",
+            "params": [
+                {
+                    "name": "shaderKey",
+                    "description": "key of current shader",
+                    "type": "String"
+                }
+            ],
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 348,
+            "description": "[initMatrix description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 361,
+            "description": "resets the model view matrix to a mat4 identity\nmatrix.",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 370,
+            "description": "[translate description]",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "y",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "z",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "todo": [
+                "implement handle for components or vector as args"
+            ],
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 387,
+            "description": "Scales the Model View Matrix by a vector",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "[description]",
+                    "type": "Number"
+                },
+                {
+                    "name": "z",
+                    "description": "[description]",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "This"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 399,
+            "description": "[rotateX description]",
+            "params": [
+                {
+                    "name": "rad",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 409,
+            "description": "[rotateY description]",
+            "params": [
+                {
+                    "name": "rad",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 419,
+            "description": "[rotateZ description]",
+            "params": [
+                {
+                    "name": "rad",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 429,
+            "description": "pushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 439,
+            "description": "[pop description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 450,
+            "description": "[orbitControl description]",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 463,
+            "description": "PRIVATE",
+            "class": "p5"
         },
         {
             "file": "src/3d/shaders.js",
             "line": 20,
             "description": "Default full shaders for our WebGL context",
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
             "line": 1,
             "description": "module Utils\nsubmodule Color Utils",
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3699,8 +3717,7 @@
                 "description": "an array of RGBA values, on a scale of 0-255",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3722,8 +3739,7 @@
                 "description": "an array of HSB values, scaled by the HSB-space maxes",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3745,8 +3761,7 @@
                 "description": "an array of RGBA values, on a scale of 0-255",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3768,8 +3783,7 @@
                 "description": "an array of HSL values, scaled by the HSL-space maxes",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Geometry3D"
+            "class": "p5"
         },
         {
             "file": "src/color/creating_reading.js",
@@ -7619,6 +7633,11 @@
             "name": "saveCanvas",
             "params": [
                 {
+                    "name": "canvas",
+                    "description": "a variable representing a\n                           specific html5 canvas (optional)",
+                    "type": "[selectedCanvas]"
+                },
+                {
                     "name": "filename",
                     "description": "",
                     "type": "[String]"
@@ -7627,12 +7646,10 @@
                     "name": "extension",
                     "description": "'jpg' or 'png'",
                     "type": "[String]"
-                },
-                {
-                    "name": "canvas",
-                    "description": "a variable representing a\n                           specific html5 canvas (optional).",
-                    "type": "[selectedCanvas]"
                 }
+            ],
+            "example": [
+                "\n<div class='norender'><code>\nfunction setup() {\n  var c = createCanvas(100, 100);\n  background(255, 0, 0);\n  saveCanvas(c, 'myCanvas', 'jpg');\n}\n</code></div>\n<div class='norender'><code>\n// note that this example has the same result as above\n// if no canvas is specified, defaults to main canvas\nfunction setup() {\n  createCanvas(100, 100);\n  background(255, 0, 0);\n  saveCanvas('myCanvas', 'jpg');\n}\n</code></div>\n<div class='norender'><code>\n// all of the following are valid\nsaveCanvas(c, 'myCanvas', 'jpg');\nsaveCanvas(c, 'myCanvas');\nsaveCanvas(c);\nsaveCanvas('myCanvas', 'png');\nsaveCanvas('myCanvas');\nsaveCanvas();\n</code></div>"
             ],
             "class": "p5",
             "module": "Image",
@@ -7640,7 +7657,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 164,
+            "line": 219,
             "description": "Capture a sequence of frames that can be used to create a movie.\nAccepts a callback. For example, you may wish to send the frames\nto a server where they can be stored or converted into a movie.\nIf no callback is provided, the browser will attempt to download\nall of the images that have just been created.",
             "itemtype": "method",
             "name": "saveFrames",
@@ -11697,7 +11714,7 @@
         },
         {
             "file": "src/typography/p5.Font.js",
-            "line": 49,
+            "line": 44,
             "description": "Underlying opentype font implementation",
             "itemtype": "property",
             "name": "font",
@@ -11707,7 +11724,7 @@
         },
         {
             "file": "src/typography/p5.Font.js",
-            "line": 62,
+            "line": 57,
             "description": "Returns a tight bounding box for the given text string using this\nfont (currently only supports single lines)",
             "itemtype": "method",
             "name": "textBounds",
@@ -11751,7 +11768,7 @@
         },
         {
             "file": "src/typography/p5.Font.js",
-            "line": 167,
+            "line": 149,
             "description": "Returns the set of opentype glyphs for the supplied string.\n\nNote that there is not a strict one-to-one mapping between characters\nand glyphs, so the list of returned glyphs can be larger or smaller\n than the length of the given string.",
             "params": [
                 {
@@ -11770,7 +11787,7 @@
         },
         {
             "file": "src/typography/p5.Font.js",
-            "line": 182,
+            "line": 164,
             "description": "Returns an opentype path for the supplied string and position.",
             "params": [
                 {
@@ -12710,7 +12727,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 54,
+            "line": 55,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -12722,13 +12739,13 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 40,
-            "description": "Searches the page for an element with given ID and returns it as\na p5.Element. The DOM node itself can be accessed with .elt.\nReturns null if none found.",
+            "description": "Searches the page for an element with the given ID, class, or tag name (using the '#' or '.' \nprefixes to specify an ID or class respectively, and none for a tag) and returns it as\na p5.Element. If a class or tag name is given with more than 1 element, \nonly the first element will be returned.\nThe DOM node itself can be accessed with .elt. \nReturns null if none found.",
             "itemtype": "method",
-            "name": "getElement",
+            "name": "select",
             "params": [
                 {
-                    "name": "id",
-                    "description": "id of element to search for",
+                    "name": "name",
+                    "description": "id, class, or tag name of element to search for",
                     "type": "String"
                 }
             ],
@@ -12742,20 +12759,20 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 58,
-            "description": "Searches the page for elements with given class and returns an\narray of p5.Elements. The DOM nodes themselves can be accessed\nwith .elt. Returns an empty array if none found.",
+            "line": 81,
+            "description": "Searches the page for elements with the given class or tag name (using the '.' prefix \nto specify a class and no prefix for a tag) and returns them as p5.Elements \nin an array. \nThe DOM node itself can be accessed with .elt. \nReturns null if none found.",
             "itemtype": "method",
-            "name": "getElements",
+            "name": "selectAll",
             "params": [
                 {
-                    "name": "class",
-                    "description": "class name of elements to search for",
+                    "name": "name",
+                    "description": "class or tag name of elements to search for",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "array of p5.Element wrapped nodes found",
-                "type": "Array"
+                "description": "p5.Element containing node found",
+                "type": "Object/p5.Element|Null"
             },
             "class": "p5.dom",
             "module": "p5.dom",
@@ -12763,7 +12780,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 79,
+            "line": 111,
             "description": "Helper function for getElement and getElements.",
             "class": "p5.dom",
             "module": "p5.dom",
@@ -12771,7 +12788,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 90,
+            "line": 122,
             "description": "Removes all elements created by p5, except any canvas / graphics\nelements created by createCanvas or createGraphics.\nEvent handlers are removed, and element is removed from the DOM.",
             "itemtype": "method",
             "name": "removeElements",
@@ -12784,7 +12801,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 116,
+            "line": 148,
             "description": "Helpers for create methods.",
             "class": "p5.dom",
             "module": "p5.dom",
@@ -12792,7 +12809,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 127,
+            "line": 159,
             "description": "Creates a &lt;div&gt;&lt;/div&gt; element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createDiv",
@@ -12813,7 +12830,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 138,
+            "line": 170,
             "description": "Creates a &lt;p&gt;&lt;/p&gt; element in the DOM with given inner HTML. Used\nfor paragraph length text.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createP",
@@ -12834,7 +12851,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 150,
+            "line": 182,
             "description": "Creates a &lt;span&gt;&lt;/span&gt; element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createSpan",
@@ -12855,7 +12872,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 170,
+            "line": 202,
             "description": "Creates an &lt;img /&gt; element in the DOM with given src and\nalternate text.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createImg",
@@ -12888,7 +12905,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 210,
+            "line": 242,
             "description": "Creates an &lt;a&gt;&lt;/a&gt; element in the DOM for including a hyperlink.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createA",
@@ -12920,14 +12937,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 231,
+            "line": 263,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 234,
+            "line": 266,
             "description": "Creates a slider &lt;input&gt;&lt;/input&gt; element in the DOM.\nUse .size() to set the display length of the slider.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createSlider",
@@ -12959,7 +12976,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 257,
+            "line": 289,
             "description": "Creates a &lt;button&gt;&lt;/button&gt; element in the DOM.\nUse .size() to set the display size of the button.\nUse .mousePressed() to specify behavior on press.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createButton",
@@ -12986,7 +13003,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 278,
+            "line": 310,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM for text input.\nUse .size() to set the display length of the box.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createInput",
@@ -13008,7 +13025,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 296,
+            "line": 328,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM of type 'file'.  \nThis allows users to select local files for use in a sketch.",
             "itemtype": "method",
             "name": "createFileInput",
@@ -13036,14 +13053,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 360,
+            "line": 392,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 389,
+            "line": 421,
             "description": "Creates an HTML5 &lt;video&gt; element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body. The first parameter\ncan be either a single string path to a video file, or an array of string\npaths to different formats of the same video. This is useful for ensuring\nthat your video can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
             "itemtype": "method",
             "name": "createVideo",
@@ -13070,14 +13087,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 415,
+            "line": 447,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 417,
+            "line": 449,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio\nplayback. Appends to the container node if one is specified,\notherwise appends to body. The first parameter\ncan be either a single string path to a audio file, or an array of string\npaths to different formats of the same audio. This is useful for ensuring\nthat your audio can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
             "itemtype": "method",
             "name": "createAudio",
@@ -13104,14 +13121,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 443,
+            "line": 475,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 453,
+            "line": 485,
             "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video(). More\nspecific properties of the stream can be passing in a Constraints object.\nSee the \n<a href=\"http://w3c.github.io/mediacapture-main/getusermedia.html\">W3C \nspec</a> for possible properties. Note that not all of these are supported\nby all browsers.",
             "itemtype": "method",
             "name": "createCapture",
@@ -13140,7 +13157,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 549,
+            "line": 581,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -13167,7 +13184,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 572,
+            "line": 604,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -13188,7 +13205,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 594,
+            "line": 626,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -13209,7 +13226,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 609,
+            "line": 641,
             "description": "Attaches the element  as a child to the parent specified.\n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
@@ -13233,7 +13250,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 647,
+            "line": 679,
             "description": "If an argument is given, sets the inner HTML of the element,\n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -13255,7 +13272,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 667,
+            "line": 699,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style. If no arguments given returns the x and y position\n of the element in an object.",
             "itemtype": "method",
             "name": "position",
@@ -13286,7 +13303,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 701,
+            "line": 733,
             "description": "Translates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "translate",
@@ -13327,7 +13344,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 743,
+            "line": 775,
             "description": "Rotates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "rotate",
@@ -13362,7 +13379,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 791,
+            "line": 823,
             "description": "Sets the given style (css) property of the element with the given value.\nIf no value is specified, returns the value of the given property,\nor undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -13392,7 +13409,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 828,
+            "line": 860,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -13422,7 +13439,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 855,
+            "line": 887,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -13444,7 +13461,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 876,
+            "line": 908,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -13458,7 +13475,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 888,
+            "line": 920,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -13472,7 +13489,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 899,
+            "line": 931,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.",
             "itemtype": "method",
             "name": "size",
@@ -13500,7 +13517,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 960,
+            "line": 992,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -13513,7 +13530,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1012,
+            "line": 1044,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -13527,7 +13544,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1033,
+            "line": 1065,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -13541,7 +13558,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1045,
+            "line": 1077,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -13555,7 +13572,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1056,
+            "line": 1088,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -13569,7 +13586,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1067,
+            "line": 1099,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -13583,7 +13600,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1080,
+            "line": 1112,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -13604,7 +13621,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1092,
+            "line": 1124,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -13626,7 +13643,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1108,
+            "line": 1140,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -13648,7 +13665,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1125,
+            "line": 1157,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -13662,14 +13679,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1165,
+            "line": 1197,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1167,
+            "line": 1199,
             "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
             "itemtype": "method",
             "name": "connect",
@@ -13686,7 +13703,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1220,
+            "line": 1252,
             "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
             "itemtype": "method",
             "name": "disconnect",
@@ -13696,14 +13713,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1236,
+            "line": 1268,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1238,
+            "line": 1270,
             "description": "Show the default MediaElement controls, as determined by the web browser.",
             "itemtype": "method",
             "name": "showControls",
@@ -13713,7 +13730,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1249,
+            "line": 1281,
             "description": "Hide the default mediaElement controls.",
             "itemtype": "method",
             "name": "hideControls",
@@ -13723,14 +13740,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1259,
+            "line": 1291,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1261,
+            "line": 1293,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -13765,7 +13782,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1323,
+            "line": 1355,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -13782,7 +13799,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1343,
+            "line": 1375,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -13792,7 +13809,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1400,
+            "line": 1432,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -13802,7 +13819,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1412,
+            "line": 1444,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -13812,7 +13829,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1418,
+            "line": 1450,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -13822,7 +13839,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1424,
+            "line": 1456,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -13832,7 +13849,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1430,
+            "line": 1462,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -17353,28 +17370,28 @@
             "line": " lib/addons/p5.sound.js:4931"
         },
         {
-            "message": "Missing item type\ngenerate plane geomery",
-            "line": " src/3d/3d_primitives.js:15"
+            "message": "Missing item type\ndraw a plane with given a width and height",
+            "line": " src/3d/3d_primitives.js:6"
         },
         {
-            "message": "Missing item type\n[sphere description]",
-            "line": " src/3d/3d_primitives.js:56"
+            "message": "Missing item type\ndraw a sphere with given raduis",
+            "line": " src/3d/3d_primitives.js:67"
         },
         {
-            "message": "Missing item type\n[cylinder description]",
-            "line": " src/3d/3d_primitives.js:97"
+            "message": "Missing item type\ndraw a cylinder with given radius and height",
+            "line": " src/3d/3d_primitives.js:128"
         },
         {
-            "message": "Missing item type\n[cone description]",
-            "line": " src/3d/3d_primitives.js:142"
+            "message": "Missing item type\ndraw a cone with given radius and height",
+            "line": " src/3d/3d_primitives.js:223"
         },
         {
-            "message": "Missing item type\n[torus description]",
-            "line": " src/3d/3d_primitives.js:186"
+            "message": "Missing item type\ndraw a torus with given radius and tube radius",
+            "line": " src/3d/3d_primitives.js:298"
         },
         {
-            "message": "Missing item type\n[cube description]",
-            "line": " src/3d/3d_primitives.js:229"
+            "message": "Missing item type\ndraw a box with given widht, height and depth",
+            "line": " src/3d/3d_primitives.js:361"
         },
         {
             "message": "Missing item type\nCreates a new identity mat4",
@@ -17449,36 +17466,44 @@
             "line": " src/3d/mat4.js:750"
         },
         {
+            "message": "Missing item type\n[normal description]",
+            "line": " src/3d/material.js:5"
+        },
+        {
+            "message": "Missing item type\n[basic description]",
+            "line": " src/3d/material.js:23"
+        },
+        {
             "message": "Missing item type\np5 Geometry3D class",
-            "line": " src/3d/p5.Geometry3D.js:12"
+            "line": " src/3d/p5.Geometry3D.js:5"
         },
         {
-            "message": "Missing item type\n[parametricGeometry description]",
-            "line": " src/3d/p5.Geometry3D.js:33"
+            "message": "Missing item type\ngenerate geometriy with parametric method",
+            "line": " src/3d/p5.Geometry3D.js:26"
         },
         {
-            "message": "Missing item type\n[mergeVertices description]",
-            "line": " src/3d/p5.Geometry3D.js:88"
+            "message": "Missing item type\nmerge duplicated vertices",
+            "line": " src/3d/p5.Geometry3D.js:75"
         },
         {
-            "message": "Missing item type\n[computeFaceNormals description]",
-            "line": " src/3d/p5.Geometry3D.js:158"
+            "message": "Missing item type\ncompute faceNormals for a geometry",
+            "line": " src/3d/p5.Geometry3D.js:144"
         },
         {
-            "message": "Missing item type\n[computeVertexNormals description]",
-            "line": " src/3d/p5.Geometry3D.js:185"
+            "message": "Missing item type\ncompute vertexNormals for a geometry",
+            "line": " src/3d/p5.Geometry3D.js:169"
         },
         {
-            "message": "Missing item type\n[generateObj description]",
-            "line": " src/3d/p5.Geometry3D.js:230"
+            "message": "Missing item type\ngenerate an object containing information needed to create buffer",
+            "line": " src/3d/p5.Geometry3D.js:213"
         },
         {
             "message": "Missing item type\nturn a two dimensional array into one dimensional array",
-            "line": " src/3d/p5.Geometry3D.js:250"
+            "line": " src/3d/p5.Geometry3D.js:232"
         },
         {
             "message": "Missing item type\nturn an array of Vector into a one dimensional array of numbers",
-            "line": " src/3d/p5.Geometry3D.js:262"
+            "line": " src/3d/p5.Geometry3D.js:244"
         },
         {
             "message": "Missing item type",
@@ -17493,7 +17518,7 @@
             "line": " src/3d/p5.Matrix.js:65"
         },
         {
-            "message": "Missing item type\nCopies the mat4",
+            "message": "Missing item type\nreturn a copy of a matrix",
             "line": " src/3d/p5.Matrix.js:74"
         },
         {
@@ -17501,15 +17526,15 @@
             "line": " src/3d/p5.Matrix.js:99"
         },
         {
-            "message": "Missing item type\n[transpose description]",
+            "message": "Missing item type\ntranspose according to a given matrix",
             "line": " src/3d/p5.Matrix.js:107"
         },
         {
-            "message": "Missing item type\n[invert description]",
+            "message": "Missing item type\ninvert  matrix according to a give matrix",
             "line": " src/3d/p5.Matrix.js:167"
         },
         {
-            "message": "Missing item type",
+            "message": "Missing item type\ninspired by Toji's mat4 determinant",
             "line": " src/3d/p5.Matrix.js:252"
         },
         {
@@ -17529,84 +17554,116 @@
             "line": " src/3d/p5.Matrix.js:462"
         },
         {
+            "message": "Missing item type\nsets the perspective matrix",
+            "line": " src/3d/p5.Matrix.js:492"
+        },
+        {
+            "message": "Missing item type\nsets the ortho matrix",
+            "line": " src/3d/p5.Matrix.js:526"
+        },
+        {
             "message": "Missing item type\n3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
-            "line": " src/3d/p5.Renderer3D.js:19"
+            "line": " src/3d/p5.Renderer3D.js:21"
         },
         {
             "message": "Missing item type\n[prototype description]",
-            "line": " src/3d/p5.Renderer3D.js:54"
+            "line": " src/3d/p5.Renderer3D.js:55"
         },
         {
             "message": "Missing item type\n[_applyDefaults description]",
-            "line": " src/3d/p5.Renderer3D.js:60"
+            "line": " src/3d/p5.Renderer3D.js:61"
         },
         {
             "message": "Missing item type\n[resize description]",
-            "line": " src/3d/p5.Renderer3D.js:68"
-        },
-        {
-            "message": "Missing item type\n[initShaders description]",
-            "line": " src/3d/p5.Renderer3D.js:79"
-        },
-        {
-            "message": "Missing item type\n[initBuffer description]",
-            "line": " src/3d/p5.Renderer3D.js:147"
-        },
-        {
-            "message": "Missing item type\n[initMatrix description]",
-            "line": " src/3d/p5.Renderer3D.js:156"
-        },
-        {
-            "message": "Missing item type\nresets the model view matrix to a mat4 identity\nmatrix.",
-            "line": " src/3d/p5.Renderer3D.js:167"
+            "line": " src/3d/p5.Renderer3D.js:69"
         },
         {
             "message": "Missing item type\n[background description]",
-            "line": " src/3d/p5.Renderer3D.js:180"
+            "line": " src/3d/p5.Renderer3D.js:84"
         },
         {
-            "message": "Missing item type\n[stroke description]",
-            "line": " src/3d/p5.Renderer3D.js:206"
+            "message": "Missing item type\n[initShaders description]",
+            "line": " src/3d/p5.Renderer3D.js:115"
         },
         {
-            "message": "Missing item type\n[translate description]",
-            "line": " src/3d/p5.Renderer3D.js:262"
+            "message": "Missing item type\n[saveShaders description]",
+            "line": " src/3d/p5.Renderer3D.js:189"
         },
         {
-            "message": "Missing item type\nScales the Model View Matrix by a vector",
-            "line": " src/3d/p5.Renderer3D.js:278"
+            "message": "Missing item type\n[emptyShaderStack description]",
+            "line": " src/3d/p5.Renderer3D.js:197"
         },
         {
-            "message": "Missing item type\n[rotateX description]",
-            "line": " src/3d/p5.Renderer3D.js:290"
+            "message": "Missing item type\n[getCurShader description]",
+            "line": " src/3d/p5.Renderer3D.js:205"
         },
         {
-            "message": "Missing item type\n[rotateY description]",
-            "line": " src/3d/p5.Renderer3D.js:300"
+            "message": "Missing item type\n[initBuffer description]",
+            "line": " src/3d/p5.Renderer3D.js:224"
         },
         {
-            "message": "Missing item type\n[rotateZ description]",
-            "line": " src/3d/p5.Renderer3D.js:310"
+            "message": "Missing item type\n[geometryInHash description]",
+            "line": " src/3d/p5.Renderer3D.js:233"
         },
         {
-            "message": "Missing item type\npushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
-            "line": " src/3d/p5.Renderer3D.js:320"
+            "message": "Missing item type\n[materialInHash description]",
+            "line": " src/3d/p5.Renderer3D.js:242"
         },
         {
-            "message": "Missing item type\n[pop description]",
-            "line": " src/3d/p5.Renderer3D.js:330"
+            "message": "Missing item type\n[initBuffer description]",
+            "line": " src/3d/p5.Renderer3D.js:255"
+        },
+        {
+            "message": "Missing item type\n[drawBuffer description]",
+            "line": " src/3d/p5.Renderer3D.js:289"
         },
         {
             "message": "Missing item type\nSets the Matrix Uniforms inside our default shader.",
-            "line": " src/3d/p5.Renderer3D.js:341"
+            "line": " src/3d/p5.Renderer3D.js:317"
+        },
+        {
+            "message": "Missing item type\n[initMatrix description]",
+            "line": " src/3d/p5.Renderer3D.js:348"
+        },
+        {
+            "message": "Missing item type\nresets the model view matrix to a mat4 identity\nmatrix.",
+            "line": " src/3d/p5.Renderer3D.js:361"
+        },
+        {
+            "message": "Missing item type\n[translate description]",
+            "line": " src/3d/p5.Renderer3D.js:370"
+        },
+        {
+            "message": "Missing item type\nScales the Model View Matrix by a vector",
+            "line": " src/3d/p5.Renderer3D.js:387"
+        },
+        {
+            "message": "Missing item type\n[rotateX description]",
+            "line": " src/3d/p5.Renderer3D.js:399"
+        },
+        {
+            "message": "Missing item type\n[rotateY description]",
+            "line": " src/3d/p5.Renderer3D.js:409"
+        },
+        {
+            "message": "Missing item type\n[rotateZ description]",
+            "line": " src/3d/p5.Renderer3D.js:419"
+        },
+        {
+            "message": "Missing item type\npushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
+            "line": " src/3d/p5.Renderer3D.js:429"
+        },
+        {
+            "message": "Missing item type\n[pop description]",
+            "line": " src/3d/p5.Renderer3D.js:439"
+        },
+        {
+            "message": "Missing item type\n[orbitControl description]",
+            "line": " src/3d/p5.Renderer3D.js:450"
         },
         {
             "message": "Missing item type\nPRIVATE",
-            "line": " src/3d/p5.Renderer3D.js:357"
-        },
-        {
-            "message": "Missing item type\nsets the perspective matrix",
-            "line": " src/3d/p5.Renderer3D.js:409"
+            "line": " src/3d/p5.Renderer3D.js:463"
         },
         {
             "message": "Missing item type\nDefault full shaders for our WebGL context",
@@ -17918,51 +17975,51 @@
         },
         {
             "message": "Missing item type\nReturns the set of opentype glyphs for the supplied string.\n\nNote that there is not a strict one-to-one mapping between characters\nand glyphs, so the list of returned glyphs can be larger or smaller\n than the length of the given string.",
-            "line": " src/typography/p5.Font.js:167"
+            "line": " src/typography/p5.Font.js:149"
         },
         {
             "message": "Missing item type\nReturns an opentype path for the supplied string and position.",
-            "line": " src/typography/p5.Font.js:182"
+            "line": " src/typography/p5.Font.js:164"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:54"
+            "line": " src/app.js:55"
         },
         {
             "message": "Missing item type\nHelper function for getElement and getElements.",
-            "line": " lib/addons/p5.dom.js:79"
+            "line": " lib/addons/p5.dom.js:111"
         },
         {
             "message": "Missing item type\nHelpers for create methods.",
-            "line": " lib/addons/p5.dom.js:116"
+            "line": " lib/addons/p5.dom.js:148"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:231"
+            "line": " lib/addons/p5.dom.js:263"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:360"
+            "line": " lib/addons/p5.dom.js:392"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:415"
+            "line": " lib/addons/p5.dom.js:447"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:443"
+            "line": " lib/addons/p5.dom.js:475"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1165"
+            "line": " lib/addons/p5.dom.js:1197"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1236"
+            "line": " lib/addons/p5.dom.js:1268"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1259"
+            "line": " lib/addons/p5.dom.js:1291"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
