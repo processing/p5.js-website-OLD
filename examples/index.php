@@ -391,6 +391,9 @@
           <a href="examples/Mobile_Simple_Draw.php">Simple Draw</a><br>
           
         
+          <a href="examples/Mobile_Acceleration_Color.php">Acceleration Color</a><br>
+          
+        
         </p>
         
       
