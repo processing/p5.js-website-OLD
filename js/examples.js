@@ -19,35 +19,24 @@ var examples = {
     examples.resetExample();        
     });
 
-    // Example Frame
+    // Mobile Button
     
-    $('#exampleFrame').load(function() {
-      var exampleCode = examples.editor.getSession().getValue();
+    $('#isMobile-displayButton').click( function() { 
+      $('#popupExampleFrame').html('<iframe id="exampleFrame" src="example.html" ></iframe>').show();
+      $('body').addClass('freeze');
 
-      try {       
-
-        if (exampleCode.indexOf('new p5()') === -1) {
-          exampleCode += '\nnew p5();';
-        }
-
-        if (examples.dims.length < 2) {
-          var re = /createCanvas\((.*),(.*)\)/g;
-          var arr = exampleCode.split(re);
-         $('#exampleFrame').height(arr[2]+'px');
-       } else {
-         $('#exampleFrame').height(examples.dims[1]+'px');
-       }
-
-        var userScript = $('#exampleFrame')[0].contentWindow.document.createElement('script');
-        userScript.type = 'text/javascript';
-        userScript.text = exampleCode;
-        userScript.async = false;
-        $('#exampleFrame')[0].contentWindow.document.body.appendChild(userScript);
-
-      } catch (e) {
-        console.log(e.message);
-      }
+      $('#exampleFrame').load(function() {
+        examples.loadExample(true);
+      });
+       
     });
+
+    // Example Frame
+
+    $('#exampleFrame').load(function() {
+      examples.loadExample(false);
+    });
+
 
   // Capture clicks
 
@@ -90,5 +79,46 @@ var examples = {
   },
   resetExample: function() {
     examples.showExample();
+  },
+  loadExample: function(isMobile) {
+    var exampleCode = examples.editor.getSession().getValue();
+
+    try {       
+
+      if (exampleCode.indexOf('new p5()') === -1) {
+        exampleCode += '\nnew p5();';
+      }
+
+      if(isMobile) {
+        var re = /createCanvas\((.*),(.*)\)/g;
+        var arr = exampleCode.split(re);
+        $('#exampleFrame').height('100%');
+        $('#exampleFrame').width('100%');
+
+        if (examples.dims.length < 2) {
+          var re = /createCanvas\((.*),(.*)\)/g;
+          exampleCode = exampleCode.replace(re, 'createCanvas(windowWidth, windowHeight)');
+        }
+      } else {
+        if (examples.dims.length < 2) {
+          var re = /createCanvas\((.*),(.*)\)/g;
+          var arr = exampleCode.split(re);
+          $('#exampleFrame').height(arr[2]+'px');
+        } else {
+          $('#exampleFrame').height(examples.dims[1]+'px');
+        }
+
+      }
+
+      var userScript = $('#exampleFrame')[0].contentWindow.document.createElement('script');
+      userScript.type = 'text/javascript';
+      userScript.text = exampleCode;
+      userScript.async = false;
+      $('#exampleFrame')[0].contentWindow.document.body.appendChild(userScript);
+
+    } catch (e) {
+      console.log(e.message);
+    }
   }
+
 }

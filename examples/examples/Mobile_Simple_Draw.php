@@ -5,17 +5,19 @@
 
     <?php include('../../sidebar.php'); ?>
 
+    <div id="popupExampleFrame"></div>
+
     <!-- content sections -->
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Simple Draw</h2>
           <p>Touch to draw on the screen using touchX, touchY, ptouchX, and ptouchY values. 
- <br><br>View on mobile devices. 
  </p>
+          <button id="isMobile-displayButton" class="display_button">display sketch</button>
 
           <div id="exampleDisplay">
-            <iframe id="exampleFrame" src="example.html" ></iframe>
+            <p id="notMobile-message">Open this page on a mobile device to display the sketch</p>
             <div class="edit_space">
               <button id="runButton" class="edit_button">run</button>
               <button id="resetButton" class="reset_button">reset</button>
@@ -43,7 +45,18 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
+          var isMobile = window.matchMedia("only screen and (max-width: 480px)");
           examples.init('../examples_src/35_Mobile/01_simpleDraw.js');
+          if (isMobile.matches) {
+          //Conditional script here
+            $('#notMobile-message').hide();
+            $('#isMobile-displayButton').show();           
+          } else {
+            $('#notMobile-message').show();
+            $('#isMobile-displayButton').hide();
+            $('#runButton').hide();
+            $('#resetButton').hide();
+          }
       });
     </script>
   </body>
