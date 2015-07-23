@@ -252,6 +252,12 @@ pre.norender {
 
 .display_button {
   margin-bottom: 2em;
+  font-family: "AvenirNextLTW01-Medium";
+  font-size: 1em;
+  color: #2D7BB6;
+  border: 1px solid rgba(45,123,182, .25);
+  background: transparent;
+  outline: none;
 }
 
 .example_container {
