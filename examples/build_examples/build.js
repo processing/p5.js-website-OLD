@@ -19,6 +19,7 @@ var EOL = (process.platform === 'win32' ? '\r\n' : '\n')
  
 // build the templates
 var example_template = ejs.compile(fs.readFileSync("example_template.ejs", 'utf8'));
+var mobile_example_template = ejs.compile(fs.readFileSync("mobile_example_template.ejs", 'utf8'));
 var all_examples_template = ejs.compile(fs.readFileSync("all_examples_template.ejs", 'utf8'));
  
 var all = { examples: [], demos: [] };
@@ -96,12 +97,28 @@ function buildFolder(type, inputRoot, outputRoot, folder, cb0) {
           var code = data.substring(endDesc+2);
 
           var formattedType = type.charAt(0).toUpperCase() + type.substring(1);
-          var content = example_template({'type':type, 
-                                          'formattedType':formattedType, 
-                                          'name':name, 
-                                          'desc':desc, 
-                                          'js':code, 
-                                          'file':inputRoot+folder+'/'+file});
+
+
+          var content;
+          
+          // If this is for Mobile examples, use mobile_example_template
+          if (folderName.indexOf('Mobile') >= 0) {
+            content = mobile_example_template({'type':type, 
+                                            'formattedType':formattedType, 
+                                            'name':name, 
+                                            'desc':desc, 
+                                            'js':code, 
+                                            'file':inputRoot+folder+'/'+file});
+          
+          // Otherwise use regular example template
+          } else {
+            content = example_template({'type':type, 
+                                            'formattedType':formattedType, 
+                                            'name':name, 
+                                            'desc':desc, 
+                                            'js':code, 
+                                            'file':inputRoot+folder+'/'+file});
+          }
           var outputFile = outputRoot+folderName+'_'+name.replace(spaceReg, '_')+'.php';
           console.log(outputFile);
 

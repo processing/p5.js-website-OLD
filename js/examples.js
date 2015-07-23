@@ -19,6 +19,40 @@ var examples = {
     examples.resetExample();        
     });
 
+    $('#isMobile-displayButton').click( function() { 
+      $('#popupExampleFrame').html('<iframe id="exampleFrame" src="example.html" ></iframe>').show();
+      $('body').addClass('freeze');
+
+      $('#exampleFrame').load(function() {
+        var exampleCode = examples.editor.getSession().getValue();
+
+        try {       
+
+          if (exampleCode.indexOf('new p5()') === -1) {
+            exampleCode += '\nnew p5();';
+          }
+          var re = /createCanvas\((.*),(.*)\)/g;
+          var arr = exampleCode.split(re);
+          $('#exampleFrame').height('100%');
+          $('#exampleFrame').width('100%');
+
+          if (examples.dims.length < 2) {
+            var re = /createCanvas\((.*),(.*)\)/g;
+            exampleCode = exampleCode.replace(re, 'createCanvas(windowWidth, windowHeight)');
+         }
+
+          var userScript = $('#exampleFrame')[0].contentWindow.document.createElement('script');
+          userScript.type = 'text/javascript';
+          userScript.text = exampleCode;
+          userScript.async = false;
+          $('#exampleFrame')[0].contentWindow.document.body.appendChild(userScript);
+
+        } catch (e) {
+          console.log(e.message);
+        }
+      });       
+    });
+
     // Example Frame
     
     $('#exampleFrame').load(function() {

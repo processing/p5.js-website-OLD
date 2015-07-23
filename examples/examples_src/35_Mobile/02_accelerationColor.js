@@ -1,7 +1,6 @@
 /*
  * @name Acceleration Color
  * @description Use deviceMoved() to detect when the device is rotated. The background RGB color values are mapped to accelerationX, accelerationY, and accelerationZ values.  
- * <br><br>View on mobile devices. 
  */
 
 var bgColor;
