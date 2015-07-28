@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script language="javascript" type="text/javascript" src="p5.min.js"></script>
+  <style> body {padding: 0; margin: 0;} </style>
+  <script language="javascript" type="text/javascript">
+  var dim;
+ 
+  function setup() {
+    createCanvas(600, 400);
+    dim = width/2;
+    background(0);
+    colorMode(HSB, 360, 100, 100);
+    noStroke();
+    ellipseMode(RADIUS);
+    frameRate(1);
+  }
+   
+  function draw() {
+    background(0);
+    for (var x = 0; x <= width; x+=dim) {
+      drawGradient(x, height/2);
+    } 
+  }
+   
+  function drawGradient(x, y) {
+    var radius = dim/2;
+    var h = random(0, 360);
+    for (var r = radius; r > 0; --r) {
+      fill(h, 90, 90);
+      ellipse(x, y, r, r);
+      h = (h + 1) % 360;
+    }
+  }
+  </script>
+</head>
+
+<body>
+</body>
+</html>
