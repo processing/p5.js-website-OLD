@@ -5,8 +5,9 @@
 
     <?php include('../../sidebar.php'); ?>
 
-    <div id="popupExampleFrame"></div>
-
+    <!-- <div id="popupExampleFrame"></div> -->
+    <iframe id="exampleFrame" src="example.html" ></iframe>
+    <!-- <iframe id="popupExampleFrame" src="example.html" ></iframe> -->
     <!-- content sections -->
     <div class="column-span">
       <section>
@@ -18,6 +19,7 @@
 
           <div id="exampleDisplay">
             <p id="notMobile-message">Open this page on a mobile device to display the sketch</p>
+            
             <div class="edit_space">
               <button id="runButton" class="edit_button">run</button>
               <button id="resetButton" class="reset_button">reset</button>
@@ -45,8 +47,10 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
+          //examples.init('../examples_src/35_Mobile/00_acceleration_ballBounce.js');
           var isMobile = window.matchMedia("only screen and (max-width: 480px)");
-          examples.init('../examples_src/35_Mobile/00_acceleration_ballBounce.js');
+          $('#exampleFrame').hide();
+          // $('#popupExampleFrame').hide();
           if (isMobile.matches) {
           //Conditional script here
             $('#notMobile-message').hide();
@@ -57,7 +61,25 @@
             $('#runButton').hide();
             $('#resetButton').hide();
           }
+
+          $('#isMobile-displayButton').click( function() { 
+            $('#exampleFrame').show();
+            // $('#popupExampleFrame').show();
+           examples.init('../examples_src/35_Mobile/00_acceleration_ballBounce.js');
+          });
+
+          // $('#exampleFrame').width('100%');
+          // $('#exampleFrame').height('100%');
+           //$('#exampleFrame').height(window.innerHeight);
+
+          // $('#exampleFrame').css('position', 'fixed');
+          // $('#exampleFrame').css('top', '0px');
+          // $('#exampleFrame').css('left', '0px');
+          // $('#exampleFrame').css('z-index', '999');
+           
       });
+
+
     </script>
   </body>
 </html>

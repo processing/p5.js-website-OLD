@@ -4,7 +4,7 @@
  */
 
  function setup() {
- 	createCanvas(710, 400);
+ 	createCanvas(windowWidth, windowHeight);
 	strokeWeight(10)
 	stroke(0);
 }

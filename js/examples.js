@@ -21,15 +21,20 @@ var examples = {
 
     // Mobile Button
     
-    $('#isMobile-displayButton').click( function() { 
-      $('#popupExampleFrame').html('<iframe id="exampleFrame" src="example.html" ></iframe>').show();
-      $('body').addClass('freeze');
+    // $('#isMobile-displayButton').click( function() { 
+    //   // $('#popupExampleFrame').html('<iframe id="exampleFrame" src="example.html" ></iframe>').show();
+    //   // $('body').addClass('freeze');
+    //   $('#popupExampleFrame').html('<iframe id="exampleFrame" src="example.html" ></iframe>').show();
 
-      $('#exampleFrame').load(function() {
-        examples.loadExample(true);
-      });
+    //   $('#exampleFrame').load(function() {
+    //     examples.loadExample(true);
+    //   });
        
-    });
+    // });
+
+    // $('#popupExampleFrame').load(function() {
+    //   examples.loadExample(true);
+    // });
 
     // Example Frame
 
@@ -51,6 +56,7 @@ var examples = {
       var frameRe = /@frame (.*),(.*)/g;
       //var re = /createCanvas\((.*),(.*)\)/g;
       var arr = data.split(frameRe);
+      //var arr = data.split(re);
       if (arr.length > 2) {
         examples.dims[0] = arr[1];
         examples.dims[1] = arr[2];
@@ -74,12 +80,14 @@ var examples = {
     examples.runExample();
     $('#exampleDisplay').show();
   },
+  // display iframe
   runExample: function() {
     $('#exampleFrame').attr('src', $('#exampleFrame').attr('src'));
   },
   resetExample: function() {
     examples.showExample();
   },
+  // load script into iframe
   loadExample: function(isMobile) {
     var exampleCode = examples.editor.getSession().getValue();
 
@@ -90,15 +98,25 @@ var examples = {
       }
 
       if(isMobile) {
-        var re = /createCanvas\((.*),(.*)\)/g;
-        var arr = exampleCode.split(re);
+        // var re = /createCanvas\((.*),(.*)\)/g;
+        // var arr = exampleCode.split(re);
         $('#exampleFrame').height('100%');
         $('#exampleFrame').width('100%');
-
-        if (examples.dims.length < 2) {
-          var re = /createCanvas\((.*),(.*)\)/g;
-          exampleCode = exampleCode.replace(re, 'createCanvas(windowWidth, windowHeight)');
-        }
+        $('#exampleFrame').css('position', 'fixed');
+          $('#exampleFrame').css('top', '0px');
+          $('#exampleFrame').css('left', '0px');
+          $('#exampleFrame').css('z-index', '999');
+        // if (examples.dims.length < 2) {
+        //   var re = /createCanvas\((.*),(.*)\)/g;
+        //   exampleCode = exampleCode.replace(re, 'createCanvas(windowWidth, windowHeight)');
+        // }
+        // if (examples.dims.length < 2) {
+        //   var re = /createCanvas\((.*),(.*)\)/g;
+        //   var arr = exampleCode.split(re);
+        //   $('#exampleFrame').height(arr[2]+'px');
+        // } else {
+        //   $('#exampleFrame').height(examples.dims[1]+'px');
+        // }
       } else {
         if (examples.dims.length < 2) {
           var re = /createCanvas\((.*),(.*)\)/g;
