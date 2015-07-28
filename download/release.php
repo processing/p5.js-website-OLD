@@ -31,9 +31,10 @@ function getLibVersion($f) {
   $handle = fopen($f, 'r');
   $line = fgets($handle);
   fclose($handle);
-  preg_match('/v([^ ]*)/', $line, $matches);
+  preg_match('/v([^ ]*) /', $line, $matches);
   $v = $matches[1];
-  preg_match('/v[^ ]* (.*) \*\//', $line, $matches);
+  preg_match('/v[^ ]* ([^ ]* [^ ]* [^ ]*) /', $line, $matches);
+  echo "hi".$matches[0];
   $d = $matches[1];
   return array($v, $d);
 }

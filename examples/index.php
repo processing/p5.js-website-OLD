@@ -144,9 +144,6 @@
         
         </p>
         
-          </div>
-          <div class="column_1">
-        
       
         <p>
         <strong>Color</strong><br>
@@ -173,6 +170,9 @@
           
         
         </p>
+        
+          </div>
+          <div class="column_1">
         
       
         <p>
@@ -273,9 +273,6 @@
         
         </p>
         
-          </div>
-          <div class="column_2">
-        
       
         <p>
         <strong>Dom</strong><br>
@@ -305,6 +302,9 @@
           
         
         </p>
+        
+          </div>
+          <div class="column_2">
         
       
         <p>
@@ -388,10 +388,13 @@
           <a href="examples/Mobile_Acceleration_Ball_Bounce.php">Acceleration Ball Bounce</a><br>
           
         
-        </p>
+          <a href="examples/Mobile_Simple_Draw.php">Simple Draw</a><br>
+          
         
-          </div>
-          <div class="column_3">
+          <a href="examples/Mobile_Acceleration_Color.php">Acceleration Color</a><br>
+          
+        
+        </p>
         
       
       </div>

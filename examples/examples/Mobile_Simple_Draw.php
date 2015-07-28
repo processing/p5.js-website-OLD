@@ -11,8 +11,8 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Acceleration Ball Bounce</h2>
-          <p>Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
+          <h2>Simple Draw</h2>
+          <p>Touch to draw on the screen using touchX, touchY, ptouchX, and ptouchY values. 
  </p>
           <button id="isMobile-displayButton" class="display_button">display sketch</button>
 
@@ -46,7 +46,7 @@
     <script>
       $(document).ready( function () {
           var isMobile = window.matchMedia("only screen and (max-width: 480px)");
-          examples.init('../examples_src/35_Mobile/00_acceleration_ballBounce.js');
+          examples.init('../examples_src/35_Mobile/01_simpleDraw.js');
           if (isMobile.matches) {
           //Conditional script here
             $('#notMobile-message').hide();

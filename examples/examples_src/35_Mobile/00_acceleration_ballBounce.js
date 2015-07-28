@@ -1,7 +1,6 @@
 /*
  * @name Acceleration Ball Bounce
  * @description Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
- * <br><br>Best view on mobile devices. 
  */
 
 // Position Variables

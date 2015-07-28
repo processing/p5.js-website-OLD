@@ -10,10 +10,9 @@
     <!-- content sections -->
     <div class="column-span">
       <section>
-          <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Acceleration Ball Bounce</h2>
-          <p>Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
- </p>
+          <p id="backlink"><a href="../#<%=type%>">< Back to <%=formattedType%></a></p>
+          <h2><%=name%></h2>
+          <p><%-desc%></p>
           <button id="isMobile-displayButton" class="display_button">display sketch</button>
 
           <div id="exampleDisplay">
@@ -46,7 +45,7 @@
     <script>
       $(document).ready( function () {
           var isMobile = window.matchMedia("only screen and (max-width: 480px)");
-          examples.init('../examples_src/35_Mobile/00_acceleration_ballBounce.js');
+          examples.init('<%=file%>');
           if (isMobile.matches) {
           //Conditional script here
             $('#notMobile-message').hide();
