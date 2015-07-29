@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <div id="credits"><em>Aurora II</em><br>by <a target=_blank href="http://www.chriseugenemills.com/">Chris Eugene Mills</a> </div>
+  <div id="credits"><em>Slippy Voronoi</em><br>by <a target=_blank href="http://sarahgp.com/">Sarah Groff-Palermo</a> </div>
  
   <?php include('heading.php'); ?>
 
@@ -54,7 +54,7 @@
 
   <?php include('end.php'); ?>
 
-  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/ChirsMill_AuroraII'></iframe>
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/Sarah_voronoi'></iframe>
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
