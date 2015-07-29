@@ -19,9 +19,7 @@ var vMultiplier = 0.007;
 var bMultiplier = 0.6;
 
 function setup() {
-    // createCanvas(windowWidth, windowHeight);
-    createCanvas(windowWidth, windowHeight);
-    //frameRate(2000);
+    createCanvas(displayWidth, displayHeight);
     fill(0);
 }
 
@@ -60,3 +58,4 @@ function ballMove() {
  	}
 	
 }
+

@@ -6,7 +6,7 @@
     <?php include('../../sidebar.php'); ?>
 
     <!-- <div id="popupExampleFrame"></div> -->
-    <iframe id="exampleFrame" src="example.html" ></iframe>
+    <!-- <iframe id="exampleFrame" src="example.html" ></iframe> -->
     <!-- <iframe id="popupExampleFrame" src="example.html" ></iframe> -->
     <!-- content sections -->
     <div class="column-span">
@@ -18,6 +18,7 @@
           <button id="isMobile-displayButton" class="display_button">display sketch</button>
 
           <div id="exampleDisplay">
+            <iframe id="exampleFrame" src="example.html" ></iframe>
             <p id="notMobile-message">Open this page on a mobile device to display the sketch</p>
             
             <div class="edit_space">
@@ -62,20 +63,12 @@
             $('#resetButton').hide();
           }
 
-          $('#isMobile-displayButton').click( function() { 
-            $('#exampleFrame').show();
-            // $('#popupExampleFrame').show();
-           examples.init('../examples_src/35_Mobile/02_accelerationColor.js');
-          });
-
-          // $('#exampleFrame').width('100%');
-          // $('#exampleFrame').height('100%');
-           //$('#exampleFrame').height(window.innerHeight);
-
-          // $('#exampleFrame').css('position', 'fixed');
-          // $('#exampleFrame').css('top', '0px');
-          // $('#exampleFrame').css('left', '0px');
-          // $('#exampleFrame').css('z-index', '999');
+          // $('#isMobile-displayButton').click( function() { 
+          //   $('#exampleFrame').show();
+          //   // $('#popupExampleFrame').show();
+          //  examples.init('../examples_src/35_Mobile/02_accelerationColor.js');
+          // });
+          examples.init('../examples_src/35_Mobile/02_accelerationColor.js');
            
       });
 
