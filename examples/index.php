@@ -394,6 +394,9 @@
           <a href="examples/Mobile_Acceleration_Color.php">Acceleration Color</a><br>
           
         
+          <a href="examples/Mobile_Shake_Ball_Bounce.php">Shake Ball Bounce</a><br>
+          
+        
         </p>
         
       

@@ -107,11 +107,11 @@ var examples = {
         $('#exampleFrame').css('z-index', '999');
         // var re = /createCanvas\((.*),(.*)\)/g;
         //   var arr = exampleCode.split(re);
-        var height = $(screen).height();
-        var width = $(screen).width()
-          $('#exampleFrame').css('height', height+'px');
-          $('#exampleFrame').css('width', width+'px');
-          console.log(height + ' ,' + width);
+        // var height = $(screen).height();
+        // var width = $(screen).width()
+        //   $('#exampleFrame').css('height', height+'px');
+        //   $('#exampleFrame').css('width', width+'px');
+        //   console.log(height + ' ,' + width);
         //exampleCode = exampleCode.replace(/windowWidth/, winWidth).replace(/windowHeight/, winHeight);
 
       // var userCSS = $('#exampleFrame')[0].contentWindow.document.createElement('style');
