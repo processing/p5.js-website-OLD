@@ -1313,9 +1313,9 @@ footer {
 
 @media (max-width: 719px) {
 
-        #family p.left {
-            margin:0.375em 0 0.375em 1em !important;
-        }
+    #family p.left {
+        margin:0.375em 0 0.375em 1em !important;
+    }
 
 
     .download_box {
@@ -1377,15 +1377,32 @@ footer {
     }
 
     #home-sketch-frame {
-        position: absolute;
-        top: 0;
-        left: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #exampleDisplay, #exampleFrame, #exampleEditor {
+      width: 100%;
     }
 
 
+    #exampleDisplay .edit_button {
+      left: -0.5em;
+    }
+
+    #exampleDisplay .reset_button {
+      left: 2.5em;
+    }
+
+    #exampleEditor {
+      margin-top: 3em;
+      width: 100%;
+    }
+
 
     small, .small, footer, #family {
-        font-size: 0.5em;
+      font-size: 0.5em;
     }
 }
 
