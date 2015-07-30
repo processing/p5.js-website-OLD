@@ -18,24 +18,29 @@ var examples = {
     $('#resetButton').click( function() { 
     examples.resetExample();        
     });
-
-    // Mobile Button
     
-    $('#isMobile-displayButton').click( function() { 
-      $('#popupExampleFrame').html('<iframe id="exampleFrame" src="example.html" ></iframe>').show();
-      $('body').addClass('freeze');
-
-      $('#exampleFrame').load(function() {
-        examples.loadExample(true);
-      });
-       
-    });
 
     // Example Frame
+    if($("#isMobile-displayButton").length == 0) {
+      //it not mobile
+      
+      $('#exampleFrame').load(function() {
+          examples.loadExample(false);
+      });
+    } else {
+      $('#isMobile-displayButton').click( function() { 
+            
+           $('#exampleFrame').show();
+           $('#exampleFrame').ready(function() {
+              // alert('exampleFrame load')
+              examples.loadExample(true);
+            });
+                      
+      });
+      
+      
+    }
 
-    $('#exampleFrame').load(function() {
-      examples.loadExample(false);
-    });
 
 
   // Capture clicks
@@ -51,6 +56,7 @@ var examples = {
       var frameRe = /@frame (.*),(.*)/g;
       //var re = /createCanvas\((.*),(.*)\)/g;
       var arr = data.split(frameRe);
+      //var arr = data.split(re);
       if (arr.length > 2) {
         examples.dims[0] = arr[1];
         examples.dims[1] = arr[2];
@@ -74,15 +80,17 @@ var examples = {
     examples.runExample();
     $('#exampleDisplay').show();
   },
+  // display iframe
   runExample: function() {
     $('#exampleFrame').attr('src', $('#exampleFrame').attr('src'));
   },
   resetExample: function() {
     examples.showExample();
   },
+  // load script into iframe
   loadExample: function(isMobile) {
     var exampleCode = examples.editor.getSession().getValue();
-
+    
     try {       
 
       if (exampleCode.indexOf('new p5()') === -1) {
@@ -90,15 +98,27 @@ var examples = {
       }
 
       if(isMobile) {
-        var re = /createCanvas\((.*),(.*)\)/g;
-        var arr = exampleCode.split(re);
-        $('#exampleFrame').height('100%');
-        $('#exampleFrame').width('100%');
 
-        if (examples.dims.length < 2) {
-          var re = /createCanvas\((.*),(.*)\)/g;
-          exampleCode = exampleCode.replace(re, 'createCanvas(windowWidth, windowHeight)');
-        }
+        $('#exampleFrame').css('position', 'fixed');
+        $('#exampleFrame').css('top', '0px');
+        $('#exampleFrame').css('left', '0px');
+        $('#exampleFrame').css('right', '0px');
+        $('#exampleFrame').css('bottom', '0px');
+        $('#exampleFrame').css('z-index', '999');
+        // var re = /createCanvas\((.*),(.*)\)/g;
+        //   var arr = exampleCode.split(re);
+        // var height = $(screen).height();
+        // var width = $(screen).width()
+        //   $('#exampleFrame').css('height', height+'px');
+        //   $('#exampleFrame').css('width', width+'px');
+        //   console.log(height + ' ,' + width);
+        //exampleCode = exampleCode.replace(/windowWidth/, winWidth).replace(/windowHeight/, winHeight);
+
+      // var userCSS = $('#exampleFrame')[0].contentWindow.document.createElement('style');
+      // userCSS.type = 'text/css';
+      // userCSS.innerHTML = 'html, body, canvas { width: 100% !important; height: 100% !important;}';
+      //$('#exampleFrame')[0].contentWindow.document.head.appendChild(userCSS);
+
       } else {
         if (examples.dims.length < 2) {
           var re = /createCanvas\((.*),(.*)\)/g;
@@ -109,12 +129,14 @@ var examples = {
         }
 
       }
-
+      
       var userScript = $('#exampleFrame')[0].contentWindow.document.createElement('script');
       userScript.type = 'text/javascript';
       userScript.text = exampleCode;
       userScript.async = false;
       $('#exampleFrame')[0].contentWindow.document.body.appendChild(userScript);
+
+
 
     } catch (e) {
       console.log(e.message);
