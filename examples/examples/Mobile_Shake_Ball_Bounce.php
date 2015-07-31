@@ -12,8 +12,9 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Acceleration Color</h2>
-          <p>Use deviceMoved() to detect when the device is rotated. The background RGB color values are mapped to accelerationX, accelerationY, and accelerationZ values.  
+          <h2>Shake Ball Bounce</h2>
+          <p>Create a Ball class, instantiate multiple objects, move it around the screen, and bounce when touch the edge of the canvas.
+ Detect shake event based on total change in accelerationX and accelerationY and speed up or slow down objects based on detection. 
  </p>
           <button id="isMobile-displayButton" class="display_button">display sketch</button>
 
@@ -48,7 +49,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          //examples.init('../examples_src/35_Mobile/02_accelerationColor.js');
+          //examples.init('../examples_src/35_Mobile/03_shake_ballBounce.js');
           var isMobile = window.matchMedia("only screen and (max-width: 480px)");
           $('#exampleFrame').hide();
           // $('#popupExampleFrame').hide();
@@ -66,9 +67,9 @@
           // $('#isMobile-displayButton').click( function() { 
           //   $('#exampleFrame').show();
           //   // $('#popupExampleFrame').show();
-          //  examples.init('../examples_src/35_Mobile/02_accelerationColor.js');
+          //  examples.init('../examples_src/35_Mobile/03_shake_ballBounce.js');
           // });
-          examples.init('../examples_src/35_Mobile/02_accelerationColor.js');
+          examples.init('../examples_src/35_Mobile/03_shake_ballBounce.js');
            
       });
 

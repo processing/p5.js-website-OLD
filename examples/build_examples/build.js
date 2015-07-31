@@ -101,7 +101,7 @@ function buildFolder(type, inputRoot, outputRoot, folder, cb0) {
 
           var content;
           
-          // If this is for Mobile examples, use mobile_example_template
+          //If this is for Mobile examples, use mobile_example_template
           if (folderName.indexOf('Mobile') >= 0) {
             content = mobile_example_template({'type':type, 
                                             'formattedType':formattedType, 
@@ -110,7 +110,7 @@ function buildFolder(type, inputRoot, outputRoot, folder, cb0) {
                                             'js':code, 
                                             'file':inputRoot+folder+'/'+file});
           
-          // Otherwise use regular example template
+          //Otherwise use regular example template
           } else {
             content = example_template({'type':type, 
                                             'formattedType':formattedType, 
