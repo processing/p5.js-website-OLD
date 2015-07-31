@@ -24,6 +24,7 @@ function setup() {
 
   colorMode(HSL);
   c = createCanvas(width, height);
+  c.parent('home-sketch-frame');
 
   colorArr = [color(240, 5, 29, .05),
               color(240, 5, 29, .1),
@@ -81,6 +82,7 @@ if (!iOS) {
 }
 
 function windowResized(){  
+  console.log("resize")
   width = getWidth();
   height = getHeight();
   resizeCanvas(width, height);
