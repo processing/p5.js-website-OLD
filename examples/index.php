@@ -37,9 +37,6 @@
           <a href="examples/Structure_Functions.php">Functions</a><br>
           
         
-          <a href="examples/Structure_Functions.php">Functions</a><br>
-          
-        
         </p>
         
       
