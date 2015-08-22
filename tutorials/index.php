@@ -108,7 +108,7 @@
         </div>
         <p>Getting started and overview for contributing to development.</p>
       </div>
-      
+
 
       <div class="right-column">
         <a class="nounderline" href="debugging/">
@@ -120,6 +120,15 @@
       </div>
 
       <div class="spacer"></div>
+
+      <div class="left-column">
+        <a class="nounderline" href="trigonometry/">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="trigonometry/"><h4>Trigonometry</h4></a>
+        </div>
+        <p>Beginners Guide to Debugging.</p>
+      </div>
 
       <!--<li><a href="https://github.com/processing/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
 
