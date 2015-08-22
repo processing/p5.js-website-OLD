@@ -4,8 +4,8 @@
   <!-- uncomment lines below to include extra p5 libraries -->
   <script language="javascript" src="../../js/p5.dom.js"></script>
   <!--<script language="javascript" src="../addons/p5.sound.js"></script>-->
-  <script language="javascript" src="assets/unitCircle.js"></script>
-    <script language="javascript" src="assets/sincoscurves.js"></script>
+  <script language="javascript" src="assets/sketch.js"></script>
+    <script language="javascript" src="assets/sketch.js"></script>
   <!-- this line removes any default padding and style. you might only need one of these values set. -->
   <style> body {padding: 0; margin: 0;} </style>
 </head>
