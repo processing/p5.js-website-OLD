@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <head>
-  <script language="javascript" src="../../js/p5.min.js"></script>
-  <!-- uncomment lines below to include extra p5 libraries -->
-  <script language="javascript" src="../../js/p5.dom.js"></script>
-
   <!-- this line removes any default padding and style. you might only need one of these values set. -->
   <style> body {padding: 0; margin: 0;} </style>
 </head>
