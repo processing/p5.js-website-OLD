@@ -34,15 +34,16 @@
 
           <p>Right angled triangles are special because their angles have a specific relationship to the ratio of their sides. This is what sine, cosine and tangent functions describe - they are functions that give us the relationship between an angle and ratio of the sides of the triangle. You might remember the acronym: SOH-CAH-TOA that helps you remember how sinθ, cosθ and tanθ relate to the ratio of the triangle sides.   </p>
           <img class="image" img src="assets/images/sohcahtoa.jpg" />
-          <p>These triangles are helpful as they help us to map and understand coordinates of points on curves and circles. A point on a circle can be understood in two ways. It can be described using polar coordinates, using an angle and the distance from the center of the circle and of course, by an x and y co-ordinate.   </p>
+          <p>These triangles are helpful as they help us to map and understand the coordinates of points along curves and circles. A point on a circle can be understood in two ways. It can be described using polar coordinates which is an angle and the distance from the center of the circle, and it can be decribed by Cartesian coordinate which are of course, an x and y co-ordinate.   </p>
 
           <a name="1" class="anchor"><h3 class = "start-element tutorial-btn" id = "Polar Coordinates">Polar Coordinates</h3></a>
           <div class="info" id = "Polar Coordinates">
             <p>
-              Polar coordinates describe a point by an angle and a distance from the origin. This is useful when you are coding something like an analog clock. When drawing a clock, you would want each hand at a particular angle and distance from the center, however when coding this, you would need to describe these hands with lines which require the x,y coordinates of two points.
+              Polar coordinates describe a point using an angle and a distance from the origin. This is useful when you are coding something like an analog clock. When drawing a clock, you would want each hand at a particular angle and distance from the center, however when coding this onto a screen, you would need to describe these hands with lines which require the x,y coordinates of two points. Putting anything on a screen always requires you to describe it in terms of x and y.
             </p>
             <p>
-              So how do we convert between polar coordinates and x-y coordinates?
+              So how do we convert between polar coordinates and x-y coordinates?</p>
+              <p>
               The relationship between polar coordinates and x,y coordinates can be calculated using a unit circle. This is a circle that has a radius of 1 unit which is useful because it means the hypotenuse is always 1.
             </p>
 
@@ -55,7 +56,7 @@
 
             <p>
 
-              <iframe src="assets/sincoscurves/embed.html" width="800px" height="600px"></iframe>
+              <iframe src="assets/sincoscurves/embed.html" width="800px" height="750px"></iframe>
             </p>
           </div>
 
