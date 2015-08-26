@@ -88,7 +88,7 @@ function draw() {
         left and 50 pixels down from the top, with a width and height of 80 pixels.&#8221;
       </p>
       <p>
-        Save your sketch and refresh your page view in your browser, if you&#8217;ve typed 
+        Save your sketch and refresh your page view in your browser. If you&#8217;ve typed 
         everything correctly, you&#8217;ll see this appear in the display window: 
       </p>
       <img src="../img/get-started/first-sketch.png" />
