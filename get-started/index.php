@@ -48,8 +48,10 @@
         You can use the <a href="http://en.wikipedia.org/wiki/Source_code_editor" 
         target="_blank">code editor</a> of your choice. Instructions for getting set up 
         with <a href="http://www.sublimetext.com/2" target="_blank"> Sublime Text 2</a> are  
-        included below. (An official p5 editor is in development, you can test out the
-        alpha version <a href="../download/#editor">here</a>.)
+        included below, other good editor options include <a href='http://brackets.io/' target=_blank>Brackets</a>, 
+        <a href='https://atom.io/' target=_blank>Atom</a>, and <a href='http://limetext.org/' target=_blank>Lime Text</a>. 
+        (An official p5 editor is in development, you can test out the
+        beta version <a href="../download/#editor">here</a>.)
       </p>
 
       <p>
