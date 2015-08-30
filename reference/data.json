@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.7",
+        "version": "0.4.8",
         "url": ""
     },
     "files": {
@@ -1257,7 +1257,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 1423,
+            "line": 1496,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1653,7 +1653,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1019,
+            "line": 1093,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -1682,7 +1682,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1423,
+            "line": 1496,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -3231,88 +3231,102 @@
                     "name": "hsba",
                     "description": "An 'array' object that represents a list of HSB colors",
                     "type": "Array"
-                },
-                {
-                    "name": "maxes",
-                    "description": "An 'array' object that represents the HSB range maxes",
-                    "type": "Array"
                 }
             ],
             "return": {
-                "description": "an array of RGBA values, on a scale of 0-255",
+                "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
             "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
-            "line": 80,
+            "line": 70,
             "description": "For a color expressed as an RGBA array, return the corresponding HSBA value",
             "params": [
                 {
                     "name": "rgba",
                     "description": "An 'array' object that represents a list of RGB colors",
                     "type": "Array"
-                },
-                {
-                    "name": "maxes",
-                    "description": "An 'array' object that represents the RGB range maxes",
-                    "type": "Array"
                 }
             ],
             "return": {
-                "description": "an array of HSB values, scaled by the HSB-space maxes",
+                "description": "an array of HSB values",
                 "type": "Array"
             },
             "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
-            "line": 135,
+            "line": 119,
             "description": "For a color expressed as an HSLA array, return the corresponding RGBA value",
             "params": [
                 {
                     "name": "hsla",
                     "description": "An 'array' object that represents a list of HSL colors",
                     "type": "Array"
-                },
-                {
-                    "name": "maxes",
-                    "description": "An 'array' object that represents the HSL range maxes",
-                    "type": "Array"
                 }
             ],
             "return": {
-                "description": "an array of RGBA values, on a scale of 0-255",
+                "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
             "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
-            "line": 198,
+            "line": 170,
             "description": "For a color expressed as an RGBA array, return the corresponding HSBA value",
             "params": [
                 {
                     "name": "rgba",
                     "description": "An 'array' object that represents a list of RGB colors",
                     "type": "Array"
-                },
+                }
+            ],
+            "return": {
+                "description": "an array of HSL values",
+                "type": "Array"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/color/color_utils.js",
+            "line": 229,
+            "description": "For a color expressed as an hsla array, return the corresponding HSBA value",
+            "params": [
                 {
-                    "name": "maxes",
-                    "description": "An 'array' object that represents the RGB range maxes",
+                    "name": "hsla",
+                    "description": "An 'array' object that represents a list of HSLA colors",
                     "type": "Array"
                 }
             ],
             "return": {
-                "description": "an array of HSL values, scaled by the HSL-space maxes",
+                "description": "an array of HSBA values",
+                "type": "Array"
+            },
+            "class": "p5"
+        },
+        {
+            "file": "src/color/color_utils.js",
+            "line": 251,
+            "description": "For a color expressed as an hsba array, return the corresponding HSLA value",
+            "params": [
+                {
+                    "name": "hsba",
+                    "description": "An 'array' object that represents a list of HSBA colors",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "an array of HSLA values",
                 "type": "Array"
             },
             "class": "p5"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 13,
+            "line": 14,
             "description": "Extracts the alpha value from a color or pixel array.",
             "itemtype": "method",
             "name": "alpha",
@@ -3332,7 +3346,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 39,
+            "line": 40,
             "description": "Extracts the blue value from a color or a pixel array.",
             "itemtype": "method",
             "name": "blue",
@@ -3352,7 +3366,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 66,
+            "line": 67,
             "description": "Extracts the brightness value from a color.",
             "itemtype": "method",
             "name": "brightness",
@@ -3372,7 +3386,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 93,
+            "line": 94,
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency. If a single string parameter is provided it will be\ninterpreted as a CSS-compatible color string.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
@@ -3406,7 +3420,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(30, 20, 55, 55);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80);  // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nc = color(65);  // Update 'c' with grayscale value\nfill(c);  // Use updated 'c' as fill color\nellipse(75, 75, 80, 80);  // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG & CSS colors may be used,\nc = color('magenta');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// as can hex color codes:\nc = color('#4F66A1');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// RGB and RGBA color strings are also supported:\n// these all set 'c' to the same color (solid blue)\nc = color('rgb(0,0,255)');\nc = color('rgb(0%, 0%, 100%)');\nc = color('rgba(0, 0, 255, 1)');\nc = color('rgba(0%, 0%, 100%, 1)');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n\n<div>\n<code>\n// HSL color is also supported and can be specified\n// by value\ncolorMode(HSL)\nc = color(156, 100, 50, 1);\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// or by string\nc = color('hsla(156, 100%, 50%, 1)');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n\n// if switching from RGB to HSB or HSL both modes must be declared\ncolorMode(RGB, 255);  // Use RGB with scale of 0-255\nc = color(50, 55, 100);  // Create a color for 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(0, 10, 45, 80);  // Draw left rect\n\ncolorMode(HSB, 100);  // Use HSB with scale of 0-100\nc = color(50, 55, 100);  // Update 'c' with new color\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw right rect\n</code>\n</div>"
+                "\n<div>\n<code>\nvar c = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(30, 20, 55, 55);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nvar c = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80);  // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nvar c = color(65);  // Update 'c' with grayscale value\nfill(c);  // Use updated 'c' as fill color\nellipse(75, 75, 80, 80);  // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG & CSS colors may be used,\nvar c = color('magenta');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// as can hex color codes:\nnoStroke();  // Don't draw a stroke around shapes\nvar c = color('#0f0');\nfill(c);  // Use 'c' as fill color\nrect(0, 10, 45, 80);  // Draw rectangle\n\nc = color('#00ff00');\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// RGB and RGBA color strings are also supported:\n// these all set to the same color (solid blue)\nvar c;\nnoStroke();  // Don't draw a stroke around shapes\nc = color('rgb(0,0,255)');\nfill(c); // Use 'c' as fill color\nrect(10, 10, 35, 35);  // Draw rectangle\n\nc = color('rgb(0%, 0%, 100%)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 35, 35);  // Draw rectangle\n\nc = color('rgba(0, 0, 255, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(10, 55, 35, 35);  // Draw rectangle\n\nc = color('rgba(0%, 0%, 100%, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 55, 35, 35);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSL color is also supported and can be specified\n// by value\nvar c;\nnoStroke();  // Don't draw a stroke around shapes\nc = color('hsl(160, 100%, 50%)');\nfill(c);  // Use 'c' as fill color\nrect(0, 10, 45, 80);  // Draw rectangle\n\nc = color('hsla(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSB color is also supported and can be specified\n// by value\nvar c;\nnoStroke();  // Don't draw a stroke around shapes\nc = color('hsb(160, 100%, 50%)');\nfill(c);  // Use 'c' as fill color\nrect(0, 10, 45, 80);  // Draw rectangle\n\nc = color('hsba(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nvar c;  // Declare color 'c'\nnoStroke();  // Don't draw a stroke around shapes\n\n// If no colorMode is specified, then the\n// default of RGB with scale of 0-255 is used.\nc = color(50, 55, 100);  // Create a color for 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(0, 10, 45, 80);  // Draw left rect\n\ncolorMode(HSB, 100);  // Use HSB with scale of 0-100\nc = color(50, 55, 100);  // Update 'c' with new color\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw right rect\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -3414,7 +3428,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 226,
+            "line": 254,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
@@ -3434,7 +3448,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 253,
+            "line": 281,
             "description": "Extracts the hue value from a color.",
             "itemtype": "method",
             "name": "hue",
@@ -3454,7 +3468,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 279,
+            "line": 307,
             "description": "Calculates a color or colors between two color at a specific increment,\nusing gamma correction to blend colors in the linear RGB space.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.\n\nThe regular RGB color representation stores the square root of the\ndisplayed color, not the value itself. Your monitor behaves as if it\nsquares the color values before displaying it. lerpColor first transforms\ncolors into the linear color space before blending, to correctly mix the\ncolors as two rays of light.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -3488,7 +3502,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 342,
+            "line": 374,
             "description": "Extracts the lightness value from a color.",
             "itemtype": "method",
             "name": "lightness",
@@ -3508,7 +3522,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 370,
+            "line": 402,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -3520,7 +3534,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nredValue = red(c);  // Get red in 'c'\nprintln(redValue);  // Print \"255.0\"\nfill(redValue, 0, 0);  // Use 'redValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>"
+                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nredValue = red(c);  // Get red in 'c'\nprintln(redValue);  // Print \"255.0\"\nfill(redValue, 0, 0);  // Use 'redValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\ncolorMode(RGB, 1);\nvar myColor = red(c);\nprint(myColor);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -3528,7 +3542,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 397,
+            "line": 439,
             "description": "Extracts the saturation value from a color.",
             "itemtype": "method",
             "name": "saturation",
@@ -3548,7 +3562,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 114,
+            "line": 112,
             "description": "These Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
             "class": "p5.Color",
             "module": "Color",
@@ -3556,7 +3570,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 282,
+            "line": 280,
             "description": "Regular expression for matching colors in format #XXX,\ne.g. #416",
             "class": "p5.Color",
             "module": "Color",
@@ -3564,7 +3578,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 288,
+            "line": 286,
             "description": "Regular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
             "class": "p5.Color",
             "module": "Color",
@@ -3572,7 +3586,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 294,
+            "line": 292,
             "description": "Regular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
             "class": "p5.Color",
             "module": "Color",
@@ -3580,7 +3594,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 311,
+            "line": 309,
             "description": "Regular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
             "class": "p5.Color",
             "module": "Color",
@@ -3588,7 +3602,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 327,
+            "line": 325,
             "description": "Regular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
             "class": "p5.Color",
             "module": "Color",
@@ -3596,7 +3610,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 343,
+            "line": 341,
             "description": "Regular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
             "class": "p5.Color",
             "module": "Color",
@@ -3604,15 +3618,15 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 359,
-            "description": "Regular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%,)",
+            "line": 357,
+            "description": "Regular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%)",
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 373,
+            "line": 371,
             "description": "Regular expression for matching colors in format hsla(H, S%, L%, A),\ne.g. hsla(100, 40%, 28.9%, 0.5)",
             "class": "p5.Color",
             "module": "Color",
@@ -3620,8 +3634,24 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 391,
-            "description": "For a number of different inputs, returns a color formatted as\n[r, g, b, a].",
+            "line": 387,
+            "description": "Regular expression for matching colors in format hsb(H, S%, B%),\ne.g. hsb(100, 40%, 28.9%)",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/color/p5.Color.js",
+            "line": 401,
+            "description": "Regular expression for matching colors in format hsba(H, S%, B%, A),\ne.g. hsba(100, 40%, 28.9%, 0.5)",
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/color/p5.Color.js",
+            "line": 418,
+            "description": "For a number of different inputs, returns a color formatted as\nnormalized [r, g, b, a], maxes [255, 255, 255, 255]",
             "params": [
                 {
                     "name": "args",
@@ -3725,7 +3755,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nnoStroke();\ncolorMode(RGB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 0);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 100);\n    point(i, j);\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nnoStroke();\ncolorMode(RGB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 0);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 100);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\n\ncolorMode(RGB, 1);\nvar myColor = c.getRed();\ntext(myColor, 10, 10, 80, 80);\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\ncolorMode(RGB, 255, 255, 255, 1);\nbackground(255);\n\nstrokeWeight(4);\nstroke(255, 0 , 10, 0.3);\nellipse(40, 40, 50, 50);\nellipse(50, 50, 40, 40);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -3733,7 +3763,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 224,
+            "line": 251,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.) If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the fill color.",
             "itemtype": "method",
             "name": "fill",
@@ -3771,7 +3801,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 343,
+            "line": 370,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -3784,7 +3814,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 362,
+            "line": 389,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -3797,7 +3827,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 380,
+            "line": 407,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255). If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the stroke color.",
             "itemtype": "method",
             "name": "stroke",
@@ -3969,7 +3999,7 @@
         {
             "file": "src/core/2d_primitives.js",
             "line": 229,
-            "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point.",
+            "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point. The color of the point is\ndetermined by the current stroke.",
             "itemtype": "method",
             "name": "point",
             "params": [
@@ -3997,7 +4027,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 278,
+            "line": 279,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -4056,7 +4086,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 349,
+            "line": 350,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function. If provided, the fifth, sixth\nseventh and eighth parameters, if specified, determine corner radius for\nthe top-right, top-left, lower-right and lower-left corners, respectively.\nAn omitted corner radius parameter is set to the value of the previously\nspecified radius value in the parameter list.",
             "itemtype": "method",
             "name": "rect",
@@ -4119,7 +4149,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 412,
+            "line": 413,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -4465,7 +4495,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 343,
+            "line": 356,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -4479,7 +4509,7 @@
         {
             "file": "src/core/curves.js",
             "line": 18,
-            "description": "Draws a Bezier curve on the screen. These curves are defined by a series\nof anchor and control points. The first two parameters specify the first\nanchor point and the last two parameters specify the other anchor point.\nThe middle parameters specify the control points which define the shape\nof the curve. Bezier curves were developed by French engineer Pierre\nBezier.",
+            "description": "Draws a cubic Bezier curve on the screen. These curves are defined by a\nseries of anchor and control points. The first two parameters specify\nthe first anchor point and the last two parameters specify the other\nanchor point, which become the first and last points on the curve. The\nmiddle parameters specify the two control points which define the shape\nof the curve. Approximately speaking, control points \"pull\" the curve\ntowards them.<br /><br />Bezier curves were developed by French\nautomotive engineer Pierre Bezier, and are commonly used in computer\ngraphics to define gently sloping curves. See also curve().",
             "itemtype": "method",
             "name": "bezier",
             "params": [
@@ -4537,7 +4567,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 63,
+            "line": 66,
             "description": "Sets the resolution at which Beziers display.\n\nThe default value is 20.",
             "params": [
                 {
@@ -4559,8 +4589,8 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 84,
-            "description": "Calculate a point on the Bezier Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a bezier curve at t.",
+            "line": 87,
+            "description": "Evaluates the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a bezier curve at t.",
             "itemtype": "method",
             "name": "bezierPoint",
             "params": [
@@ -4591,11 +4621,11 @@
                 }
             ],
             "return": {
-                "description": "the value of the Bezier at point t",
+                "description": "the value of the Bezier at position t",
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nnoFill();\nbezier(85, 20, 10, 10, 90, 90, 15, 80);\nfill(255);\nsteps = 10;\nfor (i = 0; i <= steps; i++) {\n  t = i / steps;\n  x = bezierPoint(85, 10, 90, 15, t);\n  y = bezierPoint(20, 10, 90, 80, t);\n  ellipse(x, y, 5, 5);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nnoFill();\nx1 = 85, x2 = 10, x3 = 90, x4 = 15;\ny1 = 20, y2 = 10, y3 = 90, y4 = 80;\nbezier(x1, y1, x2, y2, x3, y3, x4, y4);\nfill(255);\nsteps = 10;\nfor (i = 0; i <= steps; i++) {\n  t = i / steps;\n  x = bezierPoint(x1, x2, x3, x4, t);\n  y = bezierPoint(y1, y2, y3, y4, t);\n  ellipse(x, y, 5, 5);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -4603,8 +4633,8 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 124,
-            "description": "Calculates the tangent of a point on a Bezier curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
+            "line": 128,
+            "description": "Evaluates the tangent to the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.",
             "itemtype": "method",
             "name": "bezierTangent",
             "params": [
@@ -4635,7 +4665,7 @@
                 }
             ],
             "return": {
-                "description": "the tangent at point t",
+                "description": "the tangent at position t",
                 "type": "Number"
             },
             "example": [
@@ -4647,8 +4677,8 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 196,
-            "description": "Draws a curved line on the screen. The first and second parameters specify\nthe beginning control point and the last two parameters specify the ending\ncontrol point. The middle parameters specify the start and stop of the\ncurve. Longer curves can be created by putting a series of curve()\nfunctions together or using curveVertex(). An additional function called\ncurveTightness() provides control for the visual quality of the curve.\nThe curve() function is an implementation of Catmull-Rom splines.",
+            "line": 199,
+            "description": "Draws a curved line on the screen between two points, given as the\nmiddle four parameters. The first two parameters are a control point, as\nif the curve came from this point even though it's not drawn. The last\ntwo parameters similarly describe the other control point. <br /><br />\nLonger curves can be created by putting a series of curve() functions\ntogether or using curveVertex(). An additional function called\ncurveTightness() provides control for the visual quality of the curve.\nThe curve() function is an implementation of Catmull-Rom splines.",
             "itemtype": "method",
             "name": "curve",
             "params": [
@@ -4698,7 +4728,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\ncurve(5, 26, 5, 26, 73, 24, 73, 61);\nstroke(0);\ncurve(5, 26, 73, 24, 73, 61, 15, 65);\nstroke(255, 102, 0);\ncurve(73, 24, 73, 61, 15, 65, 15, 65);\n</code>\n</div>"
+                "\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\ncurve(5, 26, 5, 26, 73, 24, 73, 61);\nstroke(0);\ncurve(5, 26, 73, 24, 73, 61, 15, 65);\nstroke(255, 102, 0);\ncurve(73, 24, 73, 61, 15, 65, 15, 65);\n</code>\n</div>\n<div>\n<code>\n// Define the curve points as JavaScript objects\np1 = {x: 5, y: 26}, p2 = {x: 73, y: 24}\np3 = {x: 73, y: 61}, p4 = {x: 15, y: 65}\nnoFill();\nstroke(255, 102, 0);\ncurve(p1.x, p1.y, p1.x, p1.y, p2.x, p2.y)\nstroke(0);\ncurve(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y)\nstroke(255, 102, 0);\ncurve(p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p4.x, p4.y)\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -4706,7 +4736,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 243,
+            "line": 261,
             "description": "Sets the resolution at which curves display.\n\nThe default value is 20.",
             "params": [
                 {
@@ -4728,7 +4758,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 264,
+            "line": 282,
             "description": "Modifies the quality of forms created with curve() and curveVertex().\nThe parameter tightness determines how the curve fits to the vertex\npoints. The value 0.0 is the default value for tightness (this value\ndefines the curves to be Catmull-Rom splines) and the value 1.0 connects\nall the points with straight lines. Values within the range -5.0 and 5.0\nwill deform the curves but will leave them recognizable and as values\nincrease in magnitude, they will continue to deform.",
             "itemtype": "method",
             "name": "curveTightness",
@@ -4752,8 +4782,8 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 306,
-            "description": "Calculate a point on the Curve\n\nEvaluates the Bezier at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.",
+            "line": 324,
+            "description": "Evaluates the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.",
             "itemtype": "method",
             "name": "curvePoint",
             "params": [
@@ -4784,7 +4814,7 @@
                 }
             ],
             "return": {
-                "description": "bezier value at point t",
+                "description": "bezier value at position t",
                 "type": "Number"
             },
             "example": [
@@ -4796,8 +4826,8 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 353,
-            "description": "Calculates the tangent of a point on a curve\n\nEvaluates the tangent at point t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points",
+            "line": 369,
+            "description": "Evaluates the tangent to the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points on the curve,\nand b and c are the control points",
             "itemtype": "method",
             "name": "curveTangent",
             "params": [
@@ -4828,7 +4858,7 @@
                 }
             ],
             "return": {
-                "description": "the tangent at point t",
+                "description": "the tangent at position t",
                 "type": "Number"
             },
             "example": [
@@ -5459,7 +5489,28 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 234,
+            "line": 235,
+            "description": "The .changed() function is called when the value of an element is changed.\nThis can be used to attach an element specific event listener.",
+            "itemtype": "method",
+            "name": "changed",
+            "params": [
+                {
+                    "name": "fxn",
+                    "description": "function to be fired when mouse is\n                   moved over the element.",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Element"
+            },
+            "class": "p5.Element",
+            "module": "DOM",
+            "submodule": "DOM"
+        },
+        {
+            "file": "src/core/p5.Element.js",
+            "line": 249,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5480,7 +5531,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 249,
+            "line": 264,
             "description": "The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -5504,7 +5555,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 293,
+            "line": 308,
             "description": "The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -5528,7 +5579,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 329,
+            "line": 344,
             "description": "The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -5552,7 +5603,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 375,
+            "line": 390,
             "description": "The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragOver",
@@ -5573,7 +5624,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 390,
+            "line": 405,
             "description": "The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragLeave",
@@ -5594,7 +5645,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 405,
+            "line": 420,
             "description": "The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can\noptionally pass two callbacks, the first one (required) is triggered\nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.",
             "itemtype": "method",
             "name": "drop",
@@ -5620,7 +5671,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 493,
+            "line": 508,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -5677,7 +5728,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 101,
+            "line": 104,
             "description": "Resizes the canvas to given width and height. Note that the\ncanvas will be cleared so anything drawn previously in setup\nor draw will disappear on resize. Setup will not be called\nagain.",
             "itemtype": "method",
             "name": "resizeCanvas",
@@ -5690,7 +5741,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 133,
+            "line": 136,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -5703,7 +5754,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 152,
+            "line": 155,
             "description": "Creates and returns a new p5.Renderer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -5737,7 +5788,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 186,
+            "line": 189,
             "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -8376,7 +8427,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 927,
+            "line": 928,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveJSON",
@@ -8407,7 +8458,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 983,
+            "line": 984,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveStrings",
@@ -8432,7 +8483,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1048,
+            "line": 1049,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveTable",
@@ -8462,7 +8513,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1164,
+            "line": 1165,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8489,7 +8540,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1185,
+            "line": 1186,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8514,7 +8565,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1221,
+            "line": 1222,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -8535,7 +8586,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1253,
+            "line": 1254,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -8549,7 +8600,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1265,
+            "line": 1266,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -9455,7 +9506,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  background(200);\n  var a = 20;\n  var b = 80;\n  var c = lerp(a,b, .2);\n  var d = lerp(a,b, .5);\n  var e = lerp(a,b, .8);\n\n  var y = 50\n\n  strokeWeight(5);\n  stroke(0); // Draw the original points in black\n  point(a, y);\n  int(b, y);\n\n  stroke(100); // Draw the lerp points in gray\n  point(c, y);\n  point(d, y);\n  point(e, y);\n}\n</div></code>"
+                "\n<div><code>\nfunction setup() {\n  background(200);\n  var a = 20;\n  var b = 80;\n  var c = lerp(a,b, .2);\n  var d = lerp(a,b, .5);\n  var e = lerp(a,b, .8);\n\n  var y = 50\n\n  strokeWeight(5);\n  stroke(0); // Draw the original points in black\n  point(a, y);\n  point(b, y);\n\n  stroke(100); // Draw the lerp points in gray\n  point(c, y);\n  point(d, y);\n  point(e, y);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -9773,8 +9824,8 @@
         },
         {
             "file": "src/math/noise.js",
-            "line": 53,
-            "description": "Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program).\nThe resulting value will always be between 0.0 and 1.0. p5.js can\ncompute 1D, 2D and 3D noise, depending on the number of coordinates\ngiven. The noise value can be animated by moving through the noise space\nas demonstrated in the example above. The 2nd and 3rd dimension can also\nbe interpreted as time.<br /><br />The actual noise is structured\nsimilar to an audio signal, in respect to the function's use of\nfrequencies. Similar to the concept of harmonics in physics, perlin\nnoise is computed over several octaves which are added together for the\nfinal result. <br /><br />Another way to adjust the character of the\nresulting sequence is the scale of the input coordinates. As the\nfunction works within an infinite space the value of the coordinates\ndoesn't matter as such, only the distance between successive coordinates\ndoes (eg. when using <b>noise()</b> within a loop). As a general rule\nthe smaller the difference between coordinates, the smoother the\nresulting noise sequence will be. Steps of 0.005-0.03 work best for most\napplications, but this will differ depending on use.",
+            "line": 41,
+            "description": "Returns the Perlin noise value at specified coordinates. Perlin noise is\na random sequence generator producing a more natural ordered, harmonic\nsuccession of numbers compared to the standard <b>random()</b> function.\nIt was invented by Ken Perlin in the 1980s and been used since in\ngraphical applications to produce procedural textures, natural motion,\nshapes, terrains etc.<br /><br /> The main difference to the\n<b>random()</b> function is that Perlin noise is defined in an infinite\nn-dimensional space where each pair of coordinates corresponds to a\nfixed semi-random value (fixed only for the lifespan of the program; see\nthe noiseSeed() function). p5.js can compute 1D, 2D and 3D noise,\ndepending on the number of coordinates given. The resulting value will\nalways be between 0.0 and 1.0. The noise value can be animated by moving\nthrough the noise space as demonstrated in the example above. The 2nd\nand 3rd dimension can also be interpreted as time.<br /><br />The actual\nnoise is structured similar to an audio signal, in respect to the\nfunction's use of frequencies. Similar to the concept of harmonics in\nphysics, perlin noise is computed over several octaves which are added\ntogether for the final result. <br /><br />Another way to adjust the\ncharacter of the resulting sequence is the scale of the input\ncoordinates. As the function works within an infinite space the value of\nthe coordinates doesn't matter as such, only the distance between\nsuccessive coordinates does (eg. when using <b>noise()</b> within a\nloop). As a general rule the smaller the difference between coordinates,\nthe smoother the resulting noise sequence will be. Steps of 0.005-0.03\nwork best for most applications, but this will differ depending on use.",
             "itemtype": "method",
             "name": "noise",
             "params": [
@@ -9807,7 +9858,7 @@
         },
         {
             "file": "src/math/noise.js",
-            "line": 195,
+            "line": 165,
             "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overall intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
             "itemtype": "method",
             "name": "noiseDetail",
@@ -9832,7 +9883,7 @@
         },
         {
             "file": "src/math/noise.js",
-            "line": 251,
+            "line": 221,
             "description": "Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\nproduces different results each time the program is run. Set the\n<b>value</b> parameter to a constant to return the same pseudo-random\nnumbers each time the software is run.",
             "itemtype": "method",
             "name": "noiseSeed",
@@ -12326,8 +12377,8 @@
                 }
             ],
             "return": {
-                "description": "p5.Element containing node found",
-                "type": "Object/p5.Element|Null"
+                "description": "Array of p5.Elements containing nodes found",
+                "type": "Array"
             },
             "class": "p5.dom",
             "module": "p5.dom",
@@ -12376,7 +12427,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12385,7 +12436,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 170,
+            "line": 169,
             "description": "Creates a &lt;p&gt;&lt;/p&gt; element in the DOM with given inner HTML. Used\nfor paragraph length text.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createP",
@@ -12397,7 +12448,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12406,7 +12457,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 182,
+            "line": 180,
             "description": "Creates a &lt;span&gt;&lt;/span&gt; element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createSpan",
@@ -12418,7 +12469,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12427,7 +12478,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 202,
+            "line": 199,
             "description": "Creates an &lt;img /&gt; element in the DOM with given src and\nalternate text.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createImg",
@@ -12451,7 +12502,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12460,7 +12511,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 242,
+            "line": 238,
             "description": "Creates an &lt;a&gt;&lt;/a&gt; element in the DOM for including a hyperlink.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createA",
@@ -12483,7 +12534,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12492,14 +12543,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 263,
+            "line": 258,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 266,
+            "line": 261,
             "description": "Creates a slider &lt;input&gt;&lt;/input&gt; element in the DOM.\nUse .size() to set the display length of the slider.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createSlider",
@@ -12522,7 +12573,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12531,7 +12582,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 289,
+            "line": 283,
             "description": "Creates a &lt;button&gt;&lt;/button&gt; element in the DOM.\nUse .size() to set the display size of the button.\nUse .mousePressed() to specify behavior on press.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createButton",
@@ -12549,7 +12600,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12558,7 +12609,57 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 310,
+            "line": 303,
+            "description": "Creates a checkbox &lt;input&gt;&lt;/input&gt; element in the DOM.",
+            "itemtype": "method",
+            "name": "createCheckbox",
+            "params": [
+                {
+                    "name": "label",
+                    "description": "label displayed after checkbox",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "value",
+                    "description": "value of the checkbox; checked is true, unchecked is false. Unchecked if no value given",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to p5.Element holding created node",
+                "type": "Object/p5.Element"
+            },
+            "class": "p5.dom",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 345,
+            "description": "Creates a dropdown menu &lt;select&gt;&lt;/select&gt; element in the DOM.",
+            "itemtype": "method",
+            "name": "createSelect",
+            "params": [
+                {
+                    "name": "multiple",
+                    "description": "[true if dropdown should support multiple selections]",
+                    "type": "Boolean",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to p5.Element holding created node",
+                "type": "Object/p5.Element"
+            },
+            "class": "p5.dom",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 389,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM for text input.\nUse .size() to set the display length of the box.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createInput",
@@ -12571,7 +12672,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12580,7 +12681,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 328,
+            "line": 406,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM of type 'file'.  \nThis allows users to select local files for use in a sketch.",
             "itemtype": "method",
             "name": "createFileInput",
@@ -12608,14 +12709,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 392,
+            "line": 469,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 421,
+            "line": 498,
             "description": "Creates an HTML5 &lt;video&gt; element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body. The first parameter\ncan be either a single string path to a video file, or an array of string\npaths to different formats of the same video. This is useful for ensuring\nthat your video can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
             "itemtype": "method",
             "name": "createVideo",
@@ -12642,14 +12743,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 447,
+            "line": 524,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 449,
+            "line": 526,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio\nplayback. Appends to the container node if one is specified,\notherwise appends to body. The first parameter\ncan be either a single string path to a audio file, or an array of string\npaths to different formats of the same audio. This is useful for ensuring\nthat your audio can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
             "itemtype": "method",
             "name": "createAudio",
@@ -12676,14 +12777,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 475,
+            "line": 552,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 485,
+            "line": 562,
             "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video(). More\nspecific properties of the stream can be passing in a Constraints object.\nSee the \n<a href=\"http://w3c.github.io/mediacapture-main/getusermedia.html\">W3C \nspec</a> for possible properties. Note that not all of these are supported\nby all browsers.",
             "itemtype": "method",
             "name": "createCapture",
@@ -12691,7 +12792,7 @@
                 {
                     "name": "type",
                     "description": "type of capture, either VIDEO or\n                                   AUDIO if none specified, default both,\n                                   or a Constraints boject",
-                    "type": "String/Constant|Object"
+                    "type": "String|Constant|Object"
                 },
                 {
                     "name": "callback",
@@ -12712,7 +12813,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 581,
+            "line": 658,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -12730,7 +12831,7 @@
                 }
             ],
             "return": {
-                "description": "pointer to p5.Element holding created\n                          node",
+                "description": "pointer to p5.Element holding created node",
                 "type": "Object/p5.Element"
             },
             "class": "p5.dom",
@@ -12739,7 +12840,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 604,
+            "line": 680,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -12752,7 +12853,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -12760,7 +12861,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 626,
+            "line": 702,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -12773,7 +12874,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -12781,7 +12882,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 641,
+            "line": 717,
             "description": "Attaches the element  as a child to the parent specified.\n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
@@ -12789,7 +12890,7 @@
                 {
                     "name": "child",
                     "description": "the ID, DOM node, or p5.Element\n                         to add to the current element",
-                    "type": "String|Object"
+                    "type": "String|Object/p5.Element"
                 }
             ],
             "return": {
@@ -12805,7 +12906,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 679,
+            "line": 755,
             "description": "If an argument is given, sets the inner HTML of the element,\n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -12819,7 +12920,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element|String"
+                "type": "Object/p5.Element|String"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -12827,7 +12928,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 699,
+            "line": 775,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style. If no arguments given returns the x and y position\n of the element in an object.",
             "itemtype": "method",
             "name": "position",
@@ -12847,7 +12948,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "example": [
                 "\n <div><code class='norender'>\n function setup() {\n   var cnv = createCanvas(100, 100);\n   // positions canvas 50px to the right and 100px\n   // below upper left corner of the window\n   cnv.position(50, 100);\n }\n </code></div>"
@@ -12858,7 +12959,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 733,
+            "line": 809,
             "description": "Translates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "translate",
@@ -12888,10 +12989,10 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "example": [
-                "\n<div><code class='norender'>\nfunction setup() {\n  var cnv = createCanvas(100,100);\n  //translates canvas 50px to the right and 100px down\n  cnv.translate(50,100);\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  createCanvas(100,100);\n  //translates canvas 50px down\n  select('canvas').translate(0,50);\n}\n</code></div>"
             ],
             "class": "p5.Element",
             "module": "p5.dom",
@@ -12899,7 +13000,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 775,
+            "line": 851,
             "description": "Rotates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "rotate",
@@ -12912,7 +13013,8 @@
                 {
                     "name": "y",
                     "description": "amount of degrees to rotate the element along the y-axis in deg",
-                    "type": "Number"
+                    "type": "Number",
+                    "optional": true
                 },
                 {
                     "name": "z",
@@ -12923,10 +13025,10 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "example": [
-                "\n<div><code class='norender'>\nvar cnv,\n    x = 0,\n    y = 0,\n    z = 0;\nfunction setup(){\n  cnv = createCanvas(100,100);\n}\nfunction draw(){\n  x+=.5 % 360;\n  y+=.5 % 360;\n  z+=.5 % 360;\n  //rotates the canvas .5deg (degrees) on every axis each frame.\n  cnv.rotate(x,y,z);\n}\n</code></div>"
+                "\n<div><code>\nvar x = 0,\n    y = 0,\n    z = 0;\nfunction setup(){\n  createCanvas(100,100);\n}\nfunction draw(){\n  x+=.5 % 360;\n  y+=.5 % 360;\n  z+=.5 % 360;\n  //rotates the canvas .5deg (degrees) on every axis each frame.\n  select('canvas').rotate(x,y,z);\n}\n</code></div>"
             ],
             "class": "p5.Element",
             "module": "p5.dom",
@@ -12934,7 +13036,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 823,
+            "line": 898,
             "description": "Sets the given style (css) property of the element with the given value.\nIf no value is specified, returns the value of the given property,\nor undefined if the property is not.",
             "itemtype": "method",
             "name": "style",
@@ -12953,7 +13055,7 @@
             ],
             "return": {
                 "description": "value of property, if no value is specified\n                            or p5.Element",
-                "type": "String|p5.Element"
+                "type": "String|Object/p5.Element"
             },
             "example": [
                 "\n<div><code class=\"norender\">\nvar myDiv = createDiv(\"I like pandas.\");\nmyDiv.style(\"color\", \"#ff0000\");\nmyDiv.style(\"font-size\", \"18px\");\n</code></div>"
@@ -12964,7 +13066,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 860,
+            "line": 935,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -12983,7 +13085,7 @@
             ],
             "return": {
                 "description": "value of attribute, if no value is\n                             specified or p5.Element",
-                "type": "String|p5.Element"
+                "type": "String|Object/p5.Element"
             },
             "example": [
                 "\n <div class=\"norender\"><code>\n var myDiv = createDiv(\"I like pandas.\");\nmyDiv.attribute(\"align\", \"center\");\n </code></div>"
@@ -12994,7 +13096,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 887,
+            "line": 962,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -13007,8 +13109,8 @@
                 }
             ],
             "return": {
-                "description": "value of element, if no value is\n                            specified or p5.Element",
-                "type": "String|p5.Element"
+                "description": "value of element if no value is specified or p5.Element",
+                "type": "String|Object/p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -13016,13 +13118,13 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 908,
+            "line": 982,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -13030,13 +13132,13 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 920,
+            "line": 994,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -13044,7 +13146,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 931,
+            "line": 1005,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.",
             "itemtype": "method",
             "name": "size",
@@ -13064,7 +13166,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.Element",
             "module": "p5.dom",
@@ -13072,7 +13174,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 992,
+            "line": 1066,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -13085,13 +13187,13 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1045,
+            "line": 1119,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -13099,13 +13201,13 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1066,
+            "line": 1140,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -13113,13 +13215,13 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1078,
+            "line": 1152,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -13127,13 +13229,13 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1089,
+            "line": 1163,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -13141,13 +13243,13 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1100,
+            "line": 1174,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -13155,7 +13257,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1113,
+            "line": 1187,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -13168,7 +13270,7 @@
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "Object/p5.Element"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -13176,7 +13278,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1125,
+            "line": 1199,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -13198,7 +13300,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1141,
+            "line": 1215,
             "description": "If no arguments are given, returns the current time of the elmeent.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -13212,7 +13314,7 @@
             ],
             "return": {
                 "description": "current time (in seconds)\n                                 or p5.MediaElement",
-                "type": "Number|p5.MediaElement"
+                "type": "Number|Object/p5.MediaElement"
             },
             "class": "p5.MediaElement",
             "module": "p5.dom",
@@ -13220,7 +13322,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1158,
+            "line": 1232,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -13234,21 +13336,21 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1198,
+            "line": 1272,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1200,
+            "line": 1274,
             "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
             "itemtype": "method",
             "name": "connect",
             "params": [
                 {
                     "name": "audioNode",
-                    "description": "AudioNode from the Web\n                                    Audio API, or an object from the\n                                    p5.sound library",
+                    "description": "AudioNode from the Web Audio API,\nor an object from the p5.sound library",
                     "type": "AudioNode|p5.sound object"
                 }
             ],
@@ -13258,7 +13360,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1253,
+            "line": 1326,
             "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
             "itemtype": "method",
             "name": "disconnect",
@@ -13268,14 +13370,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1269,
+            "line": 1342,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1271,
+            "line": 1344,
             "description": "Show the default MediaElement controls, as determined by the web browser.",
             "itemtype": "method",
             "name": "showControls",
@@ -13285,7 +13387,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1282,
+            "line": 1355,
             "description": "Hide the default mediaElement controls.",
             "itemtype": "method",
             "name": "hideControls",
@@ -13295,14 +13397,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1292,
+            "line": 1365,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1294,
+            "line": 1367,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -13337,7 +13439,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1356,
+            "line": 1429,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -13354,7 +13456,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1376,
+            "line": 1449,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -13364,7 +13466,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1433,
+            "line": 1506,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -13374,7 +13476,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1445,
+            "line": 1518,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -13384,7 +13486,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1451,
+            "line": 1524,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -13394,7 +13496,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1457,
+            "line": 1530,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -13404,7 +13506,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1463,
+            "line": 1536,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -17094,55 +17196,71 @@
         },
         {
             "message": "Missing item type\nFor a color expressed as an RGBA array, return the corresponding HSBA value",
-            "line": " src/color/color_utils.js:80"
+            "line": " src/color/color_utils.js:70"
         },
         {
             "message": "Missing item type\nFor a color expressed as an HSLA array, return the corresponding RGBA value",
-            "line": " src/color/color_utils.js:135"
+            "line": " src/color/color_utils.js:119"
         },
         {
             "message": "Missing item type\nFor a color expressed as an RGBA array, return the corresponding HSBA value",
-            "line": " src/color/color_utils.js:198"
+            "line": " src/color/color_utils.js:170"
+        },
+        {
+            "message": "Missing item type\nFor a color expressed as an hsla array, return the corresponding HSBA value",
+            "line": " src/color/color_utils.js:229"
+        },
+        {
+            "message": "Missing item type\nFor a color expressed as an hsba array, return the corresponding HSLA value",
+            "line": " src/color/color_utils.js:251"
         },
         {
             "message": "Missing item type\nThese Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
-            "line": " src/color/p5.Color.js:114"
+            "line": " src/color/p5.Color.js:112"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format #XXX,\ne.g. #416",
-            "line": " src/color/p5.Color.js:282"
+            "line": " src/color/p5.Color.js:280"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
-            "line": " src/color/p5.Color.js:288"
+            "line": " src/color/p5.Color.js:286"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
-            "line": " src/color/p5.Color.js:294"
+            "line": " src/color/p5.Color.js:292"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
-            "line": " src/color/p5.Color.js:311"
+            "line": " src/color/p5.Color.js:309"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
-            "line": " src/color/p5.Color.js:327"
+            "line": " src/color/p5.Color.js:325"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
-            "line": " src/color/p5.Color.js:343"
+            "line": " src/color/p5.Color.js:341"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%,)",
-            "line": " src/color/p5.Color.js:359"
+            "message": "Missing item type\nRegular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%)",
+            "line": " src/color/p5.Color.js:357"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format hsla(H, S%, L%, A),\ne.g. hsla(100, 40%, 28.9%, 0.5)",
-            "line": " src/color/p5.Color.js:373"
+            "line": " src/color/p5.Color.js:371"
         },
         {
-            "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\n[r, g, b, a].",
-            "line": " src/color/p5.Color.js:391"
+            "message": "Missing item type\nRegular expression for matching colors in format hsb(H, S%, B%),\ne.g. hsb(100, 40%, 28.9%)",
+            "line": " src/color/p5.Color.js:387"
+        },
+        {
+            "message": "Missing item type\nRegular expression for matching colors in format hsba(H, S%, B%, A),\ne.g. hsba(100, 40%, 28.9%, 0.5)",
+            "line": " src/color/p5.Color.js:401"
+        },
+        {
+            "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\nnormalized [r, g, b, a], maxes [255, 255, 255, 255]",
+            "line": " src/color/p5.Color.js:418"
         },
         {
             "message": "Missing item type",
@@ -17154,11 +17272,11 @@
         },
         {
             "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:63"
+            "line": " src/core/curves.js:66"
         },
         {
             "message": "Missing item type\nSets the resolution at which curves display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:243"
+            "line": " src/core/curves.js:261"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
@@ -17198,7 +17316,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:493"
+            "line": " src/core/p5.Element.js:508"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
@@ -17310,23 +17428,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1164"
+            "line": " src/io/files.js:1165"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1185"
+            "line": " src/io/files.js:1186"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1221"
+            "line": " src/io/files.js:1222"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1253"
+            "line": " src/io/files.js:1254"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1265"
+            "line": " src/io/files.js:1266"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
@@ -17410,31 +17528,31 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:263"
+            "line": " lib/addons/p5.dom.js:258"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:392"
+            "line": " lib/addons/p5.dom.js:469"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:447"
+            "line": " lib/addons/p5.dom.js:524"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:475"
+            "line": " lib/addons/p5.dom.js:552"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1198"
+            "line": " lib/addons/p5.dom.js:1272"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1269"
+            "line": " lib/addons/p5.dom.js:1342"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1292"
+            "line": " lib/addons/p5.dom.js:1365"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
