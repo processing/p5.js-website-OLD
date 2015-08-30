@@ -2,7 +2,7 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <div id="credits"><em>Slippy Voronoi</em><br>by <a target=_blank href="http://sarahgp.com/">Sarah Groff-Palermo</a> </div>
+  <div id="credits"><em>Flow Field</em><br>by <a target=_blank href="http://unanything.com/">Harvey Moon</a> </div>
  
   <?php include('heading.php'); ?>
 
@@ -61,10 +61,7 @@
 
   <?php include('end.php'); ?>
 
-  <!--<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/Sarah_voronoi'></iframe>-->
-  <div id='home-sketch-frame'></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-  <script src='./p5_featured/Sarah_voronoi/sgp_background_sketch.js'></script>
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/HarverMoon_Perlin'></iframe>
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
