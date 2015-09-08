@@ -39,10 +39,12 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
+        "3D Primitives",
         "Acceleration",
         "Array Functions",
         "Attributes",
         "Calculation",
+        "Camera",
         "Color",
         "Constants",
         "Conversion",
@@ -57,7 +59,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "Image",
         "Input",
         "Keyboard",
+        "Lights",
+        "Lights, Camera",
         "Loading & Displaying",
+        "Material",
         "Math",
         "Mouse",
         "Noise",
@@ -84,6 +89,10 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "2D Primitives"
         },
         {
+            "displayName": "3D Primitives",
+            "name": "3D Primitives"
+        },
+        {
             "displayName": "Acceleration",
             "name": "Acceleration"
         },
@@ -98,6 +107,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Calculation",
             "name": "Calculation"
+        },
+        {
+            "displayName": "Camera",
+            "name": "Camera"
         },
         {
             "displayName": "Color",
@@ -159,8 +172,20 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Keyboard"
         },
         {
+            "displayName": "Lights",
+            "name": "Lights"
+        },
+        {
+            "displayName": "Lights, Camera",
+            "name": "Lights, Camera"
+        },
+        {
             "displayName": "Loading & Displaying",
             "name": "Loading & Displaying"
+        },
+        {
+            "displayName": "Material",
+            "name": "Material"
         },
         {
             "displayName": "Math",
@@ -182,7 +207,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "p5.dom",
             "name": "p5.dom",
-            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>"
+            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a>"
         },
         {
             "displayName": "p5.sound",

@@ -2,29 +2,52 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.8",
+        "version": "0.4.9",
         "url": ""
     },
     "files": {
         "src/3d/3d_primitives.js": {
             "name": "src/3d/3d_primitives.js",
-            "modules": {},
+            "modules": {
+                "3D Primitives": 1
+            },
             "classes": {},
-            "fors": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
+        "src/3d/camera.js": {
+            "name": "src/3d/camera.js",
+            "modules": {
+                "Camera": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
             "namespaces": {}
         },
         "src/3d/light.js": {
             "name": "src/3d/light.js",
-            "modules": {},
+            "modules": {
+                "Lights": 1
+            },
             "classes": {},
-            "fors": {},
+            "fors": {
+                "p5": 1
+            },
             "namespaces": {}
         },
         "src/3d/material.js": {
             "name": "src/3d/material.js",
-            "modules": {},
+            "modules": {
+                "Material": 1
+            },
             "classes": {},
-            "fors": {},
+            "fors": {
+                "p5": 1
+            },
             "namespaces": {}
         },
         "src/3d/p5.Geometry3D.js": {
@@ -591,6 +614,105 @@
         }
     },
     "modules": {
+        "Shape": {
+            "name": "Shape",
+            "submodules": {
+                "2D Primitives": 1,
+                "Curves": 1,
+                "Vertex": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
+        "3D Primitives": {
+            "name": "3D Primitives",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "IO",
+            "namespace": "",
+            "file": "src/3d/3d_primitives.js",
+            "line": 1,
+            "requires": [
+                "core",
+                "p5.Geometry3D"
+            ]
+        },
+        "Lights, Camera": {
+            "name": "Lights, Camera",
+            "submodules": {
+                "Camera": 1,
+                "Lights": 1,
+                "Material": 1
+            },
+            "classes": {
+                "p5.Matrix": 1
+            },
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {},
+            "file": "src/3d/p5.Matrix.js",
+            "line": 15
+        },
+        "Camera": {
+            "name": "Camera",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Lights, Camera",
+            "namespace": "",
+            "file": "src/3d/camera.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
+        },
+        "Lights": {
+            "name": "Lights",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Lights, Camera",
+            "namespace": "",
+            "file": "src/3d/light.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
+        },
+        "Material": {
+            "name": "Material",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Lights, Camera",
+            "namespace": "",
+            "file": "src/3d/material.js",
+            "line": 1,
+            "requires": [
+                "core"
+            ]
+        },
         "Color": {
             "name": "Color",
             "submodules": {
@@ -598,7 +720,6 @@
                 "Setting": 1
             },
             "classes": {
-                "p5.Matrix": 1,
                 "p5.Color": 1
             },
             "fors": {
@@ -644,19 +765,6 @@
                 "core",
                 "constants"
             ]
-        },
-        "Shape": {
-            "name": "Shape",
-            "submodules": {
-                "2D Primitives": 1,
-                "Curves": 1,
-                "Vertex": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
         },
         "2D Primitives": {
             "name": "2D Primitives",
@@ -960,7 +1068,7 @@
         "IO": {
             "name": "IO",
             "submodules": {
-                "undefined": 1,
+                "3D Primitives": 1,
                 "Input": 1,
                 "Output": 1,
                 "Table": 1
@@ -1258,7 +1366,7 @@
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
             "line": 1496,
-            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas]</a>\nfor more info on how to use this libary.</a>",
+            "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
         },
@@ -1300,6 +1408,18 @@
         }
     },
     "classes": {
+        "p5": {
+            "name": "p5",
+            "shortname": "p5",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "IO",
+            "submodule": "Output",
+            "namespace": ""
+        },
         "p5.Matrix": {
             "name": "p5.Matrix",
             "shortname": "p5.Matrix",
@@ -1308,7 +1428,8 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "Color",
+            "module": "Lights, Camera",
+            "namespace": "",
             "file": "src/3d/p5.Matrix.js",
             "line": 15,
             "description": "A class to describe a 4x4 matrix\nfor model and view matrix manipulation in the p5js webgl renderer.",
@@ -1322,17 +1443,6 @@
                 }
             ]
         },
-        "p5": {
-            "name": "p5",
-            "shortname": "p5",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "IO",
-            "submodule": "Output"
-        },
         "p5.Color": {
             "name": "p5.Color",
             "shortname": "p5.Color",
@@ -1343,6 +1453,7 @@
             "extension_for": [],
             "module": "Color",
             "submodule": "Creating & Reading",
+            "namespace": "",
             "file": "src/color/p5.Color.js",
             "line": 11,
             "is_constructor": 1
@@ -1386,6 +1497,7 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
+            "namespace": "",
             "file": "src/core/p5.Graphics.js",
             "line": 10,
             "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are\nextensive, but mirror the normal drawing API for p5.",
@@ -1420,8 +1532,9 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
+            "namespace": "",
             "file": "src/core/p5.Renderer.js",
-            "line": 9,
+            "line": 10,
             "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nRenderer2D and Renderer3D classes, respecitvely.",
             "is_constructor": 1,
             "extends": "p5.Element",
@@ -1453,6 +1566,7 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Rendering",
+            "namespace": "",
             "file": "src/core/p5.Renderer2D.js",
             "line": 9,
             "description": "2D graphics renderer class.  Can also be used as an off-screen\ngraphics buffer. A p5.Renderer2D object can be constructed\nwith the <code>createRenderer2D()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
@@ -2310,59 +2424,69 @@
     "classitems": [
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 6,
+            "line": 14,
             "description": "draw a plane with given a width and height",
+            "itemtype": "method",
+            "name": "plane",
             "params": [
                 {
                     "name": "width",
-                    "description": "the width of the plane",
+                    "description": "width of the plane",
                     "type": "Number"
                 },
                 {
                     "name": "height",
-                    "description": "the height of the plane",
-                    "type": "Number"
-                },
-                {
-                    "name": "detailX(optional)",
-                    "description": "number of vertices on horizontal surface",
-                    "type": "Number"
-                },
-                {
-                    "name": "detailY(optional)",
-                    "description": "number of vertices on horizontal surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  plane(100, 100);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
+                    "description": "height of the plane",
                     "type": "Number"
                 }
             ],
-            "class": "p5.Matrix"
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining plane with width 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateY(frameCount * 0.02);\n  plane(100, 100);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 67,
+            "line": 70,
             "description": "draw a sphere with given raduis",
+            "itemtype": "method",
+            "name": "sphere",
             "params": [
                 {
                     "name": "radius",
-                    "description": "radius of the sphere",
+                    "description": "radius of circle",
                     "type": "Number"
                 },
                 {
-                    "name": "detailX(optional)",
-                    "description": "number of vertices on horizontal surface",
-                    "type": "Number"
-                },
-                {
-                    "name": "detailY(optional)",
-                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  sphere(100);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
-                    "type": "Number"
+                    "name": "detail",
+                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
-            "class": "p5.Matrix"
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n// draw a sphere with radius 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  sphere(100);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 128,
+            "line": 127,
             "description": "draw a cylinder with given radius and height",
+            "itemtype": "method",
+            "name": "cylinder",
             "params": [
                 {
                     "name": "radius",
@@ -2375,22 +2499,29 @@
                     "type": "Number"
                 },
                 {
-                    "name": "detailX(optional)",
-                    "description": "number of vertices on horizontal surface",
-                    "type": "Number"
-                },
-                {
-                    "name": "detailY(optional)",
-                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  cylinder(100, 200);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
-                    "type": "Number"
+                    "name": "detail",
+                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
-            "class": "p5.Matrix"
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining sylinder with radius 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  cylinder(100, 100);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 223,
+            "line": 218,
             "description": "draw a cone with given radius and height",
+            "itemtype": "method",
+            "name": "cone",
             "params": [
                 {
                     "name": "radius",
@@ -2403,22 +2534,29 @@
                     "type": "Number"
                 },
                 {
-                    "name": "detailX(optional)",
-                    "description": "number of vertices on horizontal surface",
-                    "type": "Number"
-                },
-                {
-                    "name": "detailY(optional)",
-                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  cone(100, 200);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
-                    "type": "Number"
+                    "name": "detail",
+                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
-            "class": "p5.Matrix"
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining cone with radius 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  cone(100, 200);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 298,
+            "line": 289,
             "description": "draw a torus with given radius and tube radius",
+            "itemtype": "method",
+            "name": "torus",
             "params": [
                 {
                     "name": "radius",
@@ -2431,22 +2569,29 @@
                     "type": "Number"
                 },
                 {
-                    "name": "detailX(optional)",
-                    "description": "number of vertices on horizontal surface",
-                    "type": "Number"
-                },
-                {
-                    "name": "detailY(optional)",
-                    "description": "number of vertices on vertical surface\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  torus(100, 20);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
-                    "type": "Number"
+                    "name": "detail",
+                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
-            "class": "p5.Matrix"
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining torus with radius 100 and tube radius 20\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  torus(100, 20);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 361,
-            "description": "draw a box with given widht, height and depth",
+            "line": 350,
+            "description": "draw a box with given width, height and depth",
+            "itemtype": "method",
+            "name": "box",
             "params": [
                 {
                     "name": "width",
@@ -2460,47 +2605,341 @@
                 },
                 {
                     "name": "depth",
-                    "description": "depth of the box\nexample\n<div class=\"norender\">\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nvar theta = 0;\n\nfunction draw(){\n  background(255, 255, 255, 255);\n  translate(0, 0, -100);\n  push();\n  rotateZ(theta);\n  rotateX(theta);\n  rotateY(theta);\n  box(100, 100, 100);\n  pop();\n  theta += 0.05;\n</code>\n</div>",
+                    "description": "depth of the box",
                     "type": "Number"
                 }
             ],
-            "class": "p5.Matrix"
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining box with width, height and depth 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  box(100, 100, 100);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
+        },
+        {
+            "file": "src/3d/camera.js",
+            "line": 12,
+            "description": "sets camera position",
+            "itemtype": "method",
+            "name": "camera",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "camera postion value on x axis",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "camera postion value on y axis",
+                    "type": "Number"
+                },
+                {
+                    "name": "z",
+                    "description": "camera postion value on z axis",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n camera(0, 0, 800);\n sphere(100);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Camera"
+        },
+        {
+            "file": "src/3d/camera.js",
+            "line": 42,
+            "description": "sets perspective camera",
+            "itemtype": "method",
+            "name": "perspective",
+            "params": [
+                {
+                    "name": "fovy",
+                    "description": "camera frustum vertical field of view,\n                        from bottom to top of view, in degrees",
+                    "type": "Number"
+                },
+                {
+                    "name": "aspect",
+                    "description": "camera frustum aspect ratio",
+                    "type": "Number"
+                },
+                {
+                    "name": "near",
+                    "description": "frustum near plane length",
+                    "type": "Number"
+                },
+                {
+                    "name": "far",
+                    "description": "frustum far plane length",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//drag mouse to toggle the world\n//you will see there's a vanish point\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  perspective(60 / 180 * PI, width/height, 0.1, 100);\n}\nfunction draw(){\n background(0);\n orbitControl();\n for(var i = -5; i < 6; i++){\n    for(var j = -5; j < 6; j++){\n      push();\n      translate(i*100, 0, j*100);\n      sphere(20);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Camera"
+        },
+        {
+            "file": "src/3d/camera.js",
+            "line": 86,
+            "description": "setup ortho camera",
+            "itemtype": "method",
+            "name": "ortho",
+            "params": [
+                {
+                    "name": "left",
+                    "description": "camera frustum left plane",
+                    "type": "Number"
+                },
+                {
+                    "name": "right",
+                    "description": "camera frustum right plane",
+                    "type": "Number"
+                },
+                {
+                    "name": "bottom",
+                    "description": "camera frustum bottom plane",
+                    "type": "Number"
+                },
+                {
+                    "name": "top",
+                    "description": "camera frustum top plane",
+                    "type": "Number"
+                },
+                {
+                    "name": "near",
+                    "description": "camera frustum near plane",
+                    "type": "Number"
+                },
+                {
+                    "name": "far",
+                    "description": "camera frustum far plane",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  ortho(-width/2, width/2, height/2, -height/2, 0.1, 100);\n}\nfunction draw(){\n background(0);\n orbitControl();\n for(var i = -5; i < 6; i++){\n    for(var j = -5; j < 6; j++){\n      push();\n      translate(i*100, 0, j*100);\n      sphere(20);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Camera"
         },
         {
             "file": "src/3d/light.js",
-            "line": 2,
-            "todo": [
-                "WIP"
+            "line": 12,
+            "description": "creates an ambient light with a color",
+            "itemtype": "method",
+            "name": "ambientLight",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string",
+                    "type": "Number|Array|String|p5.Color"
+                },
+                {
+                    "name": "v2",
+                    "description": "optional: green or saturation value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "optional: blue or brightness value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "optional: opacity",
+                    "type": "Number",
+                    "optional": true
+                }
             ],
-            "class": "p5.Matrix"
-        },
-        {
-            "file": "src/3d/material.js",
-            "line": 5,
-            "description": "[normal description]",
             "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5.Matrix"
-        },
-        {
-            "file": "src/3d/material.js",
-            "line": 14,
-            "description": "[textureMaterial description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
+                "description": "",
+                "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nvar img;\nvar theta = 0;\nimg = loadImage(\"assets/cat.jpg\");\nbackground(255, 255, 255, 255);\ntranslate(0, 0, -200);\npush();\nrotateZ(theta * mouseX * 0.001);\nrotateX(theta * mouseX * 0.001);\nrotateY(theta * mouseX * 0.001);\n// pass image as texture\ntexture(img);\nbox(40);\npop();\ntheta += 0.05;\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  ambientLight(150);\n  ambientMaterial(250);\n  sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5.Matrix"
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Lights"
+        },
+        {
+            "file": "src/3d/light.js",
+            "line": 68,
+            "description": "creates a directional light with a color and a direction",
+            "itemtype": "method",
+            "name": "directionalLight",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string",
+                    "type": "Number|Array|String|p5.Color"
+                },
+                {
+                    "name": "v2",
+                    "description": "optional: green or saturation value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "optional: blue or brightness value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "optional: opacity",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "x",
+                    "description": "x axis direction or a p5.Vector",
+                    "type": "Number|p5.Vector"
+                },
+                {
+                    "name": "y",
+                    "description": "optional: y axis direction",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "optional: z axis direction",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light direction\n  var dirX = (mouseX / width - 0.5) *2;\n  var dirY = (mouseY / height - 0.5) *(-2);\n  directionalLight(250, 250, 250, dirX, dirY, 0.25);\n  ambientMaterial(250);\n  sphere(100, 128);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Lights"
+        },
+        {
+            "file": "src/3d/light.js",
+            "line": 183,
+            "description": "creates a point light with a color and a light position",
+            "itemtype": "method",
+            "name": "pointLight",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string",
+                    "type": "Number|Array|String|p5.Color"
+                },
+                {
+                    "name": "v2",
+                    "description": "optional: green or saturation value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "optional: blue or brightness value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "optional: opacity",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "x",
+                    "description": "x axis position or a p5.Vector",
+                    "type": "Number|p5.Vector"
+                },
+                {
+                    "name": "y",
+                    "description": "optional: y axis position",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "z",
+                    "description": "optional: z axis position",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light position\n  var locY = (mouseY / height - 0.5) *(-2);\n  var locX = (mouseX / width - 0.5) *2;\n  //to set the light position,\n  //think of the world's coordinate as:\n  // -1,1 -------- 1,1\n  //   |            |\n  //   |            |\n  //   |            |\n  // -1,-1---------1,-1\n  pointLight(250, 250, 250, locX, locY, 0);\n  ambientMaterial(250);\n  sphere(100, 128);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Lights"
         },
         {
             "file": "src/3d/material.js",
-            "line": 73,
-            "description": "Helper function; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
+            "line": 13,
+            "description": "normal material for geometry",
+            "itemtype": "method",
+            "name": "normalMaterial",
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//please call this function before doing any transformation\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(255);\n normalMaterial();\n sphere(100);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
+        },
+        {
+            "file": "src/3d/material.js",
+            "line": 37,
+            "description": "texture for geometry",
+            "itemtype": "method",
+            "name": "texture",
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  img = loadImage(\"assets/cat.jpg\");\n}\nfunction draw(){\n  background(255);\n  rotateZ(frameCount * 0.02);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  // pass image as texture\n  texture(img);\n  box(60);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
+        },
+        {
+            "file": "src/3d/material.js",
+            "line": 114,
+            "description": "Helper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
             "params": [
                 {
                     "name": "value",
@@ -2512,13 +2951,161 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "p5.Matrix"
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
+        },
+        {
+            "file": "src/3d/material.js",
+            "line": 125,
+            "description": "returns the next highest power of 2 value",
+            "params": [
+                {
+                    "name": "value",
+                    "description": "[description]",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "Number"
+            },
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
+        },
+        {
+            "file": "src/3d/material.js",
+            "line": 138,
+            "description": "basic material for geometry with a given color",
+            "itemtype": "method",
+            "name": "basicMaterial",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string",
+                    "type": "Number|Array|String|p5.Color"
+                },
+                {
+                    "name": "v2",
+                    "description": "optional: green or saturation value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "optional: blue or brightness value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "optional: opacity",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n rotateX(frameCount * 0.02);\n rotateZ(frameCount * 0.02);\n basicMaterial(250, 0, 0);\n box(100);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
+        },
+        {
+            "file": "src/3d/material.js",
+            "line": 184,
+            "description": "ambient material for geometry with a given color",
+            "itemtype": "method",
+            "name": "ambientMaterial",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string",
+                    "type": "Number|Array|String|p5.Color"
+                },
+                {
+                    "name": "v2",
+                    "description": "optional: green or saturation value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "optional: blue or brightness value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "optional: opacity",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n pointLight(250, 250, 250, 100, 100, 0);\n ambientMaterial(250);\n sphere(100, 128);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
+        },
+        {
+            "file": "src/3d/material.js",
+            "line": 231,
+            "description": "specular material for geometry with a given color",
+            "itemtype": "method",
+            "name": "specularMaterial",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string",
+                    "type": "Number|Array|String|p5.Color"
+                },
+                {
+                    "name": "v2",
+                    "description": "optional: green or saturation value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "optional: blue or brightness value",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "optional: opacity",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n pointLight(250, 250, 250, 100, 100, 0);\n specularMaterial(250);\n sphere(100, 128);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 5,
             "description": "p5 Geometry3D class",
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
@@ -2546,57 +3133,40 @@
                     "type": "Number"
                 }
             ],
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 76,
             "description": "merge duplicated vertices",
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 145,
             "description": "compute faceNormals for a geometry",
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 170,
             "description": "compute vertexNormals for a geometry",
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 214,
-            "description": "[generateUV description]",
-            "params": [
-                {
-                    "name": "faces",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "uvs",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5.Matrix"
-        },
-        {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 232,
+            "line": 226,
             "description": "generate an object containing information needed to create buffer",
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 252,
+            "line": 246,
             "description": "turn a two dimensional array into one dimensional array",
             "params": [
                 {
@@ -2609,11 +3179,12 @@
                 "description": "1-dimensional array\n[[1, 2, 3],[4, 5, 6]] -> [1, 2, 3, 4, 5, 6]",
                 "type": "Array"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 264,
+            "line": 258,
             "description": "turn an array of Vector into a one dimensional array of numbers",
             "params": [
                 {
@@ -2626,7 +3197,8 @@
                 "description": "a one dimensional array of numbers\n[p5.Vector(1, 2, 3), p5.Vector(4, 5, 6)] ->\n[1, 2, 3, 4, 5, 6]",
                 "type": "Array]"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2637,7 +3209,8 @@
             "todo": [
                 "see methods below needing further implementation."
             ],
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2651,7 +3224,8 @@
                     "optional": true
                 }
             ],
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2661,7 +3235,8 @@
                 "description": "the copy of the p5.Matrix object",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2671,7 +3246,8 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2681,7 +3257,8 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2698,7 +3275,8 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2715,7 +3293,8 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2725,7 +3304,8 @@
                 "description": "Determinant of our 4x4 matrix",
                 "type": "Number"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2742,7 +3322,8 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2759,7 +3340,8 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2781,7 +3363,8 @@
                 "description": "this\ninspired by Toji's gl-matrix lib, mat4 rotation",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2800,7 +3383,8 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2832,7 +3416,8 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -2874,40 +3459,26 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 561,
             "description": "PRIVATE",
-            "class": "p5.Matrix"
+            "class": "p5.Matrix",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 21,
+            "line": 20,
             "description": "3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 60,
-            "description": "[prototype description]",
-            "type": "{[type]}",
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 66,
-            "description": "[_applyDefaults description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 74,
+            "line": 89,
             "description": "[resize description]",
             "params": [
                 {
@@ -2917,28 +3488,31 @@
                 },
                 {
                     "name": "h",
-                    "description": "[description]"
+                    "description": "[description]",
+                    "type": "[tyoe]"
                 }
             ],
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 90,
+            "line": 101,
             "description": "[background description]",
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 117,
+            "line": 126,
             "description": "[initShaders description]",
             "params": [
                 {
@@ -2956,88 +3530,12 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 218,
-            "description": "Sets the Matrix Uniforms inside our default shader.",
-            "params": [
-                {
-                    "name": "shaderKey",
-                    "description": "key of current shader",
-                    "type": "String"
-                }
-            ],
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 293,
-            "description": "[initBuffer description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 302,
-            "description": "[geometryInHash description]",
-            "params": [
-                {
-                    "name": "gId",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 311,
-            "description": "[materialInHash description]",
-            "params": [
-                {
-                    "name": "mId",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 324,
-            "description": "[initMatrix description]",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 337,
-            "description": "resets the model view matrix to a mat4 identity\nmatrix.",
-            "return": {
-                "description": "",
-                "type": "Void"
-            },
-            "class": "p5"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 346,
+            "line": 317,
             "description": "[translate description]",
             "params": [
                 {
@@ -3063,11 +3561,12 @@
             "todo": [
                 "implement handle for components or vector as args"
             ],
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 363,
+            "line": 334,
             "description": "Scales the Model View Matrix by a vector",
             "params": [
                 {
@@ -3090,105 +3589,131 @@
                 "description": "[description]",
                 "type": "This"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 375,
+            "line": 346,
+            "description": "[rotate description]",
+            "params": [
+                {
+                    "name": "rad",
+                    "description": "angle in radians",
+                    "type": "Number"
+                },
+                {
+                    "name": "axis",
+                    "description": "axis to rotate around",
+                    "type": "p5.Vector | Array"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "p5.Renderer3D"
+            },
+            "class": "p5",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 357,
             "description": "[rotateX description]",
             "params": [
                 {
                     "name": "rad",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "radians to rotate",
+                    "type": "Number"
                 }
             ],
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 385,
+            "line": 367,
             "description": "[rotateY description]",
             "params": [
                 {
                     "name": "rad",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "rad radians to rotate",
+                    "type": "Number"
                 }
             ],
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 395,
+            "line": 377,
             "description": "[rotateZ description]",
             "params": [
                 {
                     "name": "rad",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "rad radians to rotate",
+                    "type": "Number"
                 }
             ],
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 405,
+            "line": 387,
             "description": "pushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 415,
+            "line": 397,
             "description": "[pop description]",
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/retainedMode3D.js",
             "line": 7,
-            "description": "[createBuffer description]",
+            "description": "createBuffer",
             "params": [
                 {
                     "name": "gId",
                     "description": "[description]",
-                    "type": "[type]"
+                    "type": "String"
                 },
                 {
                     "name": "obj",
                     "description": "[description]",
-                    "type": "[type]"
+                    "type": "String"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/retainedMode3D.js",
-            "line": 23,
-            "description": "[initBuffer description]",
+            "line": 22,
+            "description": "initBuffer description",
             "params": [
                 {
                     "name": "gId",
@@ -3201,12 +3726,13 @@
                     "type": "Object"
                 }
             ],
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/3d/retainedMode3D.js",
             "line": 60,
-            "description": "[drawBuffer description]",
+            "description": "drawBuffer",
             "params": [
                 {
                     "name": "gId",
@@ -3214,13 +3740,15 @@
                     "type": "String"
                 }
             ],
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/color_utils.js",
             "line": 1,
             "description": "module Utils\nsubmodule Color Utils",
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3237,7 +3765,8 @@
                 "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3254,7 +3783,8 @@
                 "description": "an array of HSB values",
                 "type": "Array"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3271,7 +3801,8 @@
                 "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3288,7 +3819,8 @@
                 "description": "an array of HSL values",
                 "type": "Array"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3305,7 +3837,8 @@
                 "description": "an array of HSBA values",
                 "type": "Array"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3322,7 +3855,8 @@
                 "description": "an array of HSLA values",
                 "type": "Array"
             },
-            "class": "p5"
+            "class": "p5",
+            "module": "Lights, Camera"
         },
         {
             "file": "src/color/creating_reading.js",
@@ -3562,7 +4096,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 112,
+            "line": 119,
             "description": "These Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
             "class": "p5.Color",
             "module": "Color",
@@ -3570,7 +4104,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 280,
+            "line": 287,
             "description": "Regular expression for matching colors in format #XXX,\ne.g. #416",
             "class": "p5.Color",
             "module": "Color",
@@ -3578,7 +4112,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 286,
+            "line": 293,
             "description": "Regular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
             "class": "p5.Color",
             "module": "Color",
@@ -3586,7 +4120,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 292,
+            "line": 299,
             "description": "Regular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
             "class": "p5.Color",
             "module": "Color",
@@ -3594,7 +4128,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 309,
+            "line": 316,
             "description": "Regular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
             "class": "p5.Color",
             "module": "Color",
@@ -3602,7 +4136,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 325,
+            "line": 332,
             "description": "Regular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
             "class": "p5.Color",
             "module": "Color",
@@ -3610,7 +4144,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 341,
+            "line": 348,
             "description": "Regular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
             "class": "p5.Color",
             "module": "Color",
@@ -3618,7 +4152,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 357,
+            "line": 364,
             "description": "Regular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%)",
             "class": "p5.Color",
             "module": "Color",
@@ -3626,7 +4160,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 371,
+            "line": 378,
             "description": "Regular expression for matching colors in format hsla(H, S%, L%, A),\ne.g. hsla(100, 40%, 28.9%, 0.5)",
             "class": "p5.Color",
             "module": "Color",
@@ -3634,7 +4168,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 387,
+            "line": 394,
             "description": "Regular expression for matching colors in format hsb(H, S%, B%),\ne.g. hsb(100, 40%, 28.9%)",
             "class": "p5.Color",
             "module": "Color",
@@ -3642,7 +4176,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 401,
+            "line": 408,
             "description": "Regular expression for matching colors in format hsba(H, S%, B%, A),\ne.g. hsba(100, 40%, 28.9%, 0.5)",
             "class": "p5.Color",
             "module": "Color",
@@ -3650,7 +4184,7 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 418,
+            "line": 425,
             "description": "For a number of different inputs, returns a color formatted as\nnormalized [r, g, b, a], maxes [255, 255, 255, 255]",
             "params": [
                 {
@@ -3672,7 +4206,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 26,
+            "line": 15,
             "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the background need only be set once.",
             "itemtype": "method",
             "name": "background",
@@ -3710,7 +4244,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 134,
+            "line": 123,
             "description": "Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
@@ -3723,7 +4257,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 154,
+            "line": 143,
             "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems. Regardless of color system, all value ranges\nare presumed to be 0–255 unless explicitly set otherwise. That is,\nfor a standard HSB range, one would pass colorMode(HSB, 360, 100, 100, 1).",
             "itemtype": "method",
             "name": "colorMode",
@@ -3763,7 +4297,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 251,
+            "line": 240,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.) If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the fill color.",
             "itemtype": "method",
             "name": "fill",
@@ -3801,7 +4335,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 370,
+            "line": 359,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -3814,7 +4348,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 389,
+            "line": 378,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -3827,7 +4361,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 407,
+            "line": 396,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255). If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the stroke color.",
             "itemtype": "method",
             "name": "stroke",
@@ -3998,7 +4532,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 229,
+            "line": 234,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point. The color of the point is\ndetermined by the current stroke.",
             "itemtype": "method",
             "name": "point",
@@ -4027,7 +4561,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 279,
+            "line": 289,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -4086,7 +4620,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 350,
+            "line": 365,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function. If provided, the fifth, sixth\nseventh and eighth parameters, if specified, determine corner radius for\nthe top-right, top-left, lower-right and lower-left corners, respectively.\nAn omitted corner radius parameter is set to the value of the previously\nspecified radius value in the parameter list.",
             "itemtype": "method",
             "name": "rect",
@@ -4149,7 +4683,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 413,
+            "line": 428,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -4198,7 +4732,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 17,
+            "line": 14,
             "description": "Modifies the location from which ellipses are drawn by changing the way\nin which parameters given to ellipse() are interpreted.\n\nThe default mode is ellipseMode(CENTER), which interprets the first two\nparameters of ellipse() as the shape's center point, while the third and\nfourth parameters are its width and height.\n\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as\nthe shape's center point, but uses the third and fourth parameters to\nspecify half of the shapes's width and height.\n\nellipseMode(CORNER) interprets the first two parameters of ellipse() as\nthe upper-left corner of the shape, while the third and fourth parameters\nare its width and height.\n\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as\nthe location of one corner of the ellipse's bounding box, and the third\nand fourth parameters as the location of the opposite corner.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
             "itemtype": "method",
             "name": "ellipseMode",
@@ -4222,7 +4756,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 78,
+            "line": 75,
             "description": "Draws all geometry with jagged (aliased) edges. Note that smooth() is\nactive by default, so it is necessary to call noSmooth() to disable\nsmoothing of geometry, images, and fonts.",
             "itemtype": "method",
             "name": "noSmooth",
@@ -4239,7 +4773,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 102,
+            "line": 99,
             "description": "Modifies the location from which rectangles are drawn by changing the way\nin which parameters given to rect() are interpreted.\n\nThe default mode is rectMode(CORNER), which interprets the first two\nparameters of rect() as the upper-left corner of the shape, while the\nthird and fourth parameters are its width and height.\n\nrectMode(CORNERS) interprets the first two parameters of rect() as the\nlocation of one corner, and the third and fourth parameters as the\nlocation of the opposite corner.\n\nrectMode(CENTER) interprets the first two parameters of rect() as the\nshape's center point, while the third and fourth parameters are its\nwidth and height.\n\nrectMode(RADIUS) also uses the first two parameters of rect() as the\nshape's center point, but uses the third and fourth parameters to specify\nhalf of the shapes's width and height.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
             "itemtype": "method",
             "name": "rectMode",
@@ -4263,7 +4797,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 163,
+            "line": 160,
             "description": "Draws all geometry with smooth (anti-aliased) edges. smooth() will also\nimprove image quality of resized images. Note that smooth() is active by\ndefault; noSmooth() can be used to disable smoothing of geometry,\nimages, and fonts.",
             "itemtype": "method",
             "name": "smooth",
@@ -4280,7 +4814,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 188,
+            "line": 185,
             "description": "Sets the style for rendering line endings. These ends are either squared,\nextended, or rounded, each of which specified with the corresponding\nparameters: SQUARE, PROJECT, and ROUND. The default cap is ROUND.",
             "itemtype": "method",
             "name": "strokeCap",
@@ -4304,7 +4838,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 218,
+            "line": 215,
             "description": "Sets the style of the joints which connect line segments. These joints\nare either mitered, beveled, or rounded and specified with the\ncorresponding parameters MITER, BEVEL, and ROUND. The default joint is\nMITER.",
             "itemtype": "method",
             "name": "strokeJoin",
@@ -4328,7 +4862,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 276,
+            "line": 273,
             "description": "Sets the width of the stroke used for lines, points, and the border\naround shapes. All widths are set in units of pixels.",
             "itemtype": "method",
             "name": "strokeWeight",
@@ -4495,7 +5029,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 356,
+            "line": 361,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -4508,7 +5042,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 18,
+            "line": 17,
             "description": "Draws a cubic Bezier curve on the screen. These curves are defined by a\nseries of anchor and control points. The first two parameters specify\nthe first anchor point and the last two parameters specify the other\nanchor point, which become the first and last points on the curve. The\nmiddle parameters specify the two control points which define the shape\nof the curve. Approximately speaking, control points \"pull\" the curve\ntowards them.<br /><br />Bezier curves were developed by French\nautomotive engineer Pierre Bezier, and are commonly used in computer\ngraphics to define gently sloping curves. See also curve().",
             "itemtype": "method",
             "name": "bezier",
@@ -4567,7 +5101,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 66,
+            "line": 65,
             "description": "Sets the resolution at which Beziers display.\n\nThe default value is 20.",
             "params": [
                 {
@@ -4589,7 +5123,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 87,
+            "line": 86,
             "description": "Evaluates the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a bezier curve at t.",
             "itemtype": "method",
             "name": "bezierPoint",
@@ -4633,7 +5167,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 128,
+            "line": 127,
             "description": "Evaluates the tangent to the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.",
             "itemtype": "method",
             "name": "bezierTangent",
@@ -4677,7 +5211,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 199,
+            "line": 198,
             "description": "Draws a curved line on the screen between two points, given as the\nmiddle four parameters. The first two parameters are a control point, as\nif the curve came from this point even though it's not drawn. The last\ntwo parameters similarly describe the other control point. <br /><br />\nLonger curves can be created by putting a series of curve() functions\ntogether or using curveVertex(). An additional function called\ncurveTightness() provides control for the visual quality of the curve.\nThe curve() function is an implementation of Catmull-Rom splines.",
             "itemtype": "method",
             "name": "curve",
@@ -4728,7 +5262,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\ncurve(5, 26, 5, 26, 73, 24, 73, 61);\nstroke(0);\ncurve(5, 26, 73, 24, 73, 61, 15, 65);\nstroke(255, 102, 0);\ncurve(73, 24, 73, 61, 15, 65, 15, 65);\n</code>\n</div>\n<div>\n<code>\n// Define the curve points as JavaScript objects\np1 = {x: 5, y: 26}, p2 = {x: 73, y: 24}\np3 = {x: 73, y: 61}, p4 = {x: 15, y: 65}\nnoFill();\nstroke(255, 102, 0);\ncurve(p1.x, p1.y, p1.x, p1.y, p2.x, p2.y)\nstroke(0);\ncurve(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y)\nstroke(255, 102, 0);\ncurve(p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p4.x, p4.y)\n</code>\n</div>"
+                "\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\ncurve(5, 26, 5, 26, 73, 24, 73, 61);\nstroke(0);\ncurve(5, 26, 73, 24, 73, 61, 15, 65);\nstroke(255, 102, 0);\ncurve(73, 24, 73, 61, 15, 65, 15, 65);\n</code>\n</div>\n<div>\n<code>\n// Define the curve points as JavaScript objects\np1 = {x: 5, y: 26}, p2 = {x: 73, y: 24}\np3 = {x: 73, y: 61}, p4 = {x: 15, y: 65}\nnoFill();\nstroke(255, 102, 0);\ncurve(p1.x, p1.y, p1.x, p1.y, p2.x, p2.y, p3.x, p3.y)\nstroke(0);\ncurve(p1.x, p1.y, p2.x, p2.y, p3.x, p3.y, p4.x, p4.y)\nstroke(255, 102, 0);\ncurve(p2.x, p2.y, p3.x, p3.y, p4.x, p4.y, p4.x, p4.y)\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -4736,7 +5270,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 261,
+            "line": 260,
             "description": "Sets the resolution at which curves display.\n\nThe default value is 20.",
             "params": [
                 {
@@ -4758,7 +5292,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 282,
+            "line": 281,
             "description": "Modifies the quality of forms created with curve() and curveVertex().\nThe parameter tightness determines how the curve fits to the vertex\npoints. The value 0.0 is the default value for tightness (this value\ndefines the curves to be Catmull-Rom splines) and the value 1.0 connects\nall the points with straight lines. Values within the range -5.0 and 5.0\nwill deform the curves but will leave them recognizable and as values\nincrease in magnitude, they will continue to deform.",
             "itemtype": "method",
             "name": "curveTightness",
@@ -4782,7 +5316,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 324,
+            "line": 323,
             "description": "Evaluates the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.",
             "itemtype": "method",
             "name": "curvePoint",
@@ -4826,7 +5360,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 369,
+            "line": 368,
             "description": "Evaluates the tangent to the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points on the curve,\nand b and c are the control points",
             "itemtype": "method",
             "name": "curveTangent",
@@ -4871,7 +5405,7 @@
         {
             "file": "src/core/environment.js",
             "line": 22,
-            "description": "The print() function writes to the console area of your browser.\nThis function is often helpful for looking at the data a program is\nproducing. This function creates a new line of text for each call to\nthe function. More than one parameter can be passed into the function by\nseparating them with commas. Alternatively, individual elements can be\nseparated with quotes (\"\") and joined with the addition operator (+).\n\nWhile print() is similar to console.log(), it does not directly map to\nit in order to simulate easier to understand behavior than\nconsole.log(). Due to this, it is slower. For fastest results, use\nconsole.log().",
+            "description": "The print() function writes to the console area of your browser.\nThis function is often helpful for looking at the data a program is\nproducing. This function creates a new line of text for each call to\nthe function. Individual elements can be\nseparated with quotes (\"\") and joined with the addition operator (+).\n\nWhile print() is similar to console.log(), it does not directly map to\nit in order to simulate easier to understand behavior than\nconsole.log(). Due to this, it is slower. For fastest results, use\nconsole.log().",
             "itemtype": "method",
             "name": "print",
             "params": [
@@ -4881,13 +5415,16 @@
                     "type": "Any"
                 }
             ],
+            "example": [
+                "\n<div><code class='norender'>\nvar x = 10;\nprint(\"The value of x is \"+x);\n// prints \"The value of x is 10\"\n</code></div>"
+            ],
             "class": "p5",
             "module": "Environment",
             "submodule": "Environment"
         },
         {
             "file": "src/core/environment.js",
-            "line": 57,
+            "line": 62,
             "description": "The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.",
             "itemtype": "property",
             "name": "frameCount",
@@ -4900,7 +5437,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 80,
+            "line": 85,
             "description": "Confirms if the window a p5.js program is in is \"focused,\" meaning that\nthe sketch will accept mouse or keyboard input. This variable is\n\"true\" if the window is focused and \"false\" if not.",
             "itemtype": "property",
             "name": "focused",
@@ -4913,7 +5450,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 106,
+            "line": 111,
             "description": "Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.",
             "itemtype": "method",
             "name": "cursor",
@@ -4945,7 +5482,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 160,
+            "line": 165,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().",
             "itemtype": "method",
             "name": "frameRate",
@@ -4970,7 +5507,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 217,
+            "line": 222,
             "description": "Returns the current framerate.",
             "return": {
                 "description": "current frameRate",
@@ -4982,7 +5519,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 226,
+            "line": 231,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
             "params": [
                 {
@@ -4998,7 +5535,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 241,
+            "line": 246,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
             "name": "noCursor",
@@ -5011,7 +5548,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 262,
+            "line": 267,
             "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayWidth",
@@ -5024,7 +5561,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 274,
+            "line": 279,
             "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayHeight",
@@ -5037,7 +5574,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 286,
+            "line": 291,
             "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
             "itemtype": "property",
             "name": "windowWidth",
@@ -5050,7 +5587,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 297,
+            "line": 302,
             "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
@@ -5063,10 +5600,10 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 309,
+            "line": 314,
             "description": "The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other\nadjustements to accomodate the new window size.",
             "itemtype": "method",
-            "name": "windowResized()",
+            "name": "windowResized",
             "example": [
                 "\n<div class=\"norender\"><code>\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);\n}\n\nfunction draw() {\n background(0, 100, 200);\n}\n\nfunction windowResized() {\n  resizeCanvas(windowWidth, windowHeight);\n}\n</code></div>"
             ],
@@ -5076,7 +5613,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 343,
+            "line": 348,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -5086,7 +5623,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 354,
+            "line": 359,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -5096,7 +5633,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 365,
+            "line": 370,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullScreen",
@@ -5113,7 +5650,7 @@
                 "type": "Boolean"
             },
             "example": [
-                "\n<div>\n<code>\n// Clicking in the box toggles fullscreen on and off.\nfunction setup() {\n  background(200);\n}\nfunction mousePressed() {\n  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {\n    var fs = fullScreen();\n    fullscreen(!fs);\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Clicking in the box toggles fullscreen on and off.\nfunction setup() {\n  background(200);\n}\nfunction mousePressed() {\n  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {\n    var fs = fullScreen();\n    fullScreen(!fs);\n  }\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -5121,7 +5658,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 407,
+            "line": 412,
             "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.\nThis devicePixelScaling() function must be the first line of code\ninside setup().",
             "itemtype": "method",
             "name": "devicePixelScaling",
@@ -5142,7 +5679,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 483,
+            "line": 488,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -5159,7 +5696,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 510,
+            "line": 515,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -5176,7 +5713,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 527,
+            "line": 532,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -5237,7 +5774,7 @@
         {
             "file": "src/core/error_helpers.js",
             "line": 105,
-            "description": "Validate all the parameters of a function for number and type",
+            "description": "Validate all the parameters of a function for number and type\nNOTE THIS FUNCTION IS TEMPORARILY DISABLED UNTIL FURTHER WORK\nAND UPDATES ARE IMPLEMENTED. -LMCCART",
             "params": [
                 {
                     "name": "func",
@@ -5263,21 +5800,7 @@
         },
         {
             "file": "src/core/error_helpers.js",
-            "line": 122,
-            "description": "Check number of parameters\n\nExample: \"You wrote ellipse(X,X,X). ellipse was expecting 4\n          parameters. Try ellipse(X,X,X,X).\"",
-            "class": "p5",
-            "module": "Environment"
-        },
-        {
-            "file": "src/core/error_helpers.js",
-            "line": 158,
-            "description": "Type checking\n\nExample: \"It looks like ellipse received an empty variable in spot #2.\"\nExample: \"ellipse was expecting a number for parameter #1,\n          received \"foo\" instead.\"",
-            "class": "p5",
-            "module": "Environment"
-        },
-        {
-            "file": "src/core/error_helpers.js",
-            "line": 239,
+            "line": 243,
             "description": "Prints out all the colors in the color pallete with white text.\nFor color blindness testing.",
             "class": "p5",
             "module": "Environment"
@@ -5679,15 +6202,31 @@
         },
         {
             "file": "src/core/p5.Renderer.js",
-            "line": 40,
+            "line": 71,
             "description": "Resize our canvas element.",
             "class": "p5.Renderer",
             "module": "Rendering",
             "submodule": "Rendering"
         },
         {
+            "file": "src/core/p5.Renderer.js",
+            "line": 141,
+            "description": "Helper fxn to check font type (system or otf)",
+            "class": "p5.Renderer",
+            "module": "Rendering",
+            "submodule": "Rendering"
+        },
+        {
+            "file": "src/core/p5.Renderer.js",
+            "line": 197,
+            "description": "Helper fxn to measure ascent and descent.\nAdapted from http://stackoverflow.com/a/25355178",
+            "class": "p5.Renderer",
+            "module": "Rendering",
+            "submodule": "Rendering"
+        },
+        {
             "file": "src/core/p5.Renderer2D.js",
-            "line": 352,
+            "line": 357,
             "description": "Generate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
             "class": "p5.Renderer2D",
             "module": "Rendering"
@@ -5970,7 +6509,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 106,
+            "line": 113,
             "description": "[rotateX description]",
             "params": [
                 {
@@ -5989,7 +6528,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 120,
+            "line": 134,
             "description": "[rotateY description]",
             "params": [
                 {
@@ -6008,7 +6547,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 134,
+            "line": 155,
             "description": "[rotateZ description]",
             "params": [
                 {
@@ -6027,7 +6566,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 148,
+            "line": 176,
             "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with push() and pop().",
             "itemtype": "method",
             "name": "scale",
@@ -6057,7 +6596,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 196,
+            "line": 240,
             "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearX",
@@ -6081,7 +6620,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 233,
+            "line": 277,
             "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearY",
@@ -6105,7 +6644,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 270,
+            "line": 314,
             "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().",
             "itemtype": "method",
             "name": "translate",
@@ -7204,7 +7743,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 27,
+            "line": 24,
             "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.\n\n.pixels gives access to an array containing the values for all the pixels\nin the display window.\nThese values are numbers. This array is the size (including an appropriate\nfactor for the pixelDensity) of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from\nleft to right across each row, then down each column. See .pixels for\nmore info. It may also be simpler to use set() or get().\n<br><br>\nBefore accessing the pixels of an image, the data must loaded with the\nloadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "method",
             "name": "createImage",
@@ -7233,7 +7772,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 101,
+            "line": 98,
             "description": "Save the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
             "itemtype": "method",
             "name": "saveCanvas",
@@ -7263,7 +7802,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 219,
+            "line": 216,
             "description": "Capture a sequence of frames that can be used to create a movie.\nAccepts a callback. For example, you may wish to send the frames\nto a server where they can be stored or converted into a movie.\nIf no callback is provided, the browser will attempt to download\nall of the images that have just been created.",
             "itemtype": "method",
             "name": "saveFrames",
@@ -11073,18 +11612,18 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 21,
-            "description": "Sets the current alignment for drawing text. The parameters LEFT, CENTER,\nand RIGHT set the display characteristics of the letters in relation to\nthe values for the x and y parameters of the text() function.",
+            "line": 13,
+            "description": "Sets the current alignment for drawing text. The parameters LEFT, CENTER,\nand RIGHT set the alignment of text in relation to the values for\nthe x and y parameters of the text() function.",
             "itemtype": "method",
             "name": "textAlign",
             "params": [
                 {
-                    "name": "h",
+                    "name": "horizAlign",
                     "description": "horizontal alignment, either LEFT,\n                           CENTER, or RIGHT",
                     "type": "Number/Constant"
                 },
                 {
-                    "name": "v",
+                    "name": "vertAlign",
                     "description": "vertical alignment, either TOP,\n                           BOTTOM, CENTER, or BASELINE",
                     "type": "Number/Constant"
                 }
@@ -11102,13 +11641,13 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 50,
-            "description": "Sets/gets the spacing between lines of text in units of pixels. This\nsetting will be used in all subsequent calls to the text() function.",
+            "line": 41,
+            "description": "Sets/gets the spacing, in pixels, between lines of text. This\nsetting will be used in all subsequent calls to the text() function.",
             "itemtype": "method",
             "name": "textLeading",
             "params": [
                 {
-                    "name": "l",
+                    "name": "leading",
                     "description": "the size in pixels for spacing between lines",
                     "type": "Number"
                 }
@@ -11118,7 +11657,7 @@
                 "type": "Object|Number"
             },
             "example": [
-                "\n<div>\n<code>\n// Text to display. The \"\\n\" is a \"new line\" character\nlines = \"L1\\nL2\\nL3\";\ntextSize(12);\nfill(0);  // Set fill to black\n\ntextLeading(10);  // Set leading to 10\ntext(lines, 10, 25);\n\ntextLeading(20);  // Set leading to 20\ntext(lines, 40, 25);\n\ntextLeading(30);  // Set leading to 30\ntext(lines, 70, 25);\n</code>\n</div>"
+                "\n<div>\n<code>\n// Text to display. The \"\\n\" is a \"new line\" character\nlines = \"L1\\nL2\\nL3\";\ntextSize(12);\n\ntextLeading(10);  // Set leading to 10\ntext(lines, 10, 25);\n\ntextLeading(20);  // Set leading to 20\ntext(lines, 40, 25);\n\ntextLeading(30);  // Set leading to 30\ntext(lines, 70, 25);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
@@ -11126,13 +11665,13 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 87,
-            "description": "Sets/gets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in units of pixels.",
+            "line": 70,
+            "description": "Sets/gets the current font size. This size will be used in all subsequent\ncalls to the text() function. Font size is measured in pixels.",
             "itemtype": "method",
             "name": "textSize",
             "params": [
                 {
-                    "name": "s",
+                    "name": "theSize",
                     "description": "the size of the letters in units of pixels",
                     "type": "Number"
                 }
@@ -11150,13 +11689,13 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 118,
-            "description": "Sets/gets the style of the text to NORMAL, ITALIC, or BOLD. Note this is\noverridden by CSS styling.\n(Style only apply to system font, for custom fonts, please load styled\nfonts instead.)",
+            "line": 93,
+            "description": "Sets/gets the style of the text for system fonts to NORMAL, ITALIC, or BOLD.\nNote: this may be is overridden by CSS styling. For non-system fonts\n(opentype, truetype, etc.) please load styled fonts instead.",
             "itemtype": "method",
             "name": "textStyle",
             "params": [
                 {
-                    "name": "s",
+                    "name": "theStyle",
                     "description": "styling for text, either NORMAL,\n                           ITALIC, or BOLD",
                     "type": "Number/Constant"
                 }
@@ -11166,7 +11705,7 @@
                 "type": "Object|String"
             },
             "example": [
-                "\n<div>\n<code>\nfill(0);\nstrokeWeight(0);\ntextSize(12);\ntextStyle(NORMAL);\ntext(\"Font Style Normal\", 10, 30);\ntextStyle(ITALIC);\ntext(\"Font Style Italic\", 10, 60);\ntextStyle(BOLD);\ntext(\"Font Style Bold\", 10, 90);\n</code>\n</div>"
+                "\n<div>\n<code>\nstrokeWeight(0);\ntextSize(12);\ntextStyle(NORMAL);\ntext(\"Font Style Normal\", 10, 30);\ntextStyle(ITALIC);\ntext(\"Font Style Italic\", 10, 60);\ntextStyle(BOLD);\ntext(\"Font Style Bold\", 10, 90);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
@@ -11174,13 +11713,13 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 159,
+            "line": 120,
             "description": "Calculates and returns the width of any character or text string.",
             "itemtype": "method",
             "name": "textWidth",
             "params": [
                 {
-                    "name": "s",
+                    "name": "theText",
                     "description": "the String of characters to measure",
                     "type": "String"
                 }
@@ -11190,7 +11729,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\ntextSize(28);\n\nvar c = 'P';\nvar cw = textWidth(c);\ntext(c, 0, 40);\nline(cw, 0, cw, 50);\n\nvar s = \"p5.js\";\nvar sw = textWidth(s);\ntext(s, 0, 85);\nline(sw, 50, sw, 100);\n</code>\n</div>"
+                "\n<div>\n<code>\ntextSize(28);\n\nvar aChar = 'P';\nvar cWidth = textWidth(aChar);\ntext(aChar, 0, 40);\nline(cWidth, 0, cWidth, 50);\n\nvar aString = \"p5.js\";\nvar sWidth = textWidth(aString);\ntext(aString, 0, 85);\nline(sWidth, 50, sWidth, 100);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
@@ -11198,14 +11737,14 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 187,
-            "description": "Returns ascent of the current font at its current size.",
+            "line": 147,
+            "description": "Returns the ascent of the current font at its current size. The ascent\nrepresents the distance, in pixels, of the tallest character above\nthe baseline.",
             "return": {
                 "description": "",
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textAscent() * scalar;  // Calc ascent\nline(0, base-a, width, base-a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textAscent() * scalar;  // Recalc ascent\nline(40, base-a, width, base-a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
+                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar asc = textAscent() * scalar;  // Calc ascent\nline(0, base - asc, width, base - asc);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\nasc = textAscent() * scalar;  // Recalc ascent\nline(40, base - asc, width, base - asc);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
@@ -11213,14 +11752,14 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 248,
-            "description": "Returns descent of the current font at its current size.",
+            "line": 175,
+            "description": "Returns the descent of the current font at its current size. The descent\nrepresents the distance, in pixels, of the character with the longest\ndescender below the baseline.",
             "return": {
                 "description": "",
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar a = textDescent() * scalar;  // Calc ascent\nline(0, base+a, width, base+a);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\na = textDescent() * scalar;  // Recalc ascent\nline(40, base+a, width, base+a);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
+                "\n<div>\n<code>\nvar base = height * 0.75;\nvar scalar = 0.8; // Different for each font\n\ntextSize(32);  // Set initial text size\nvar desc = textDescent() * scalar;  // Calc ascent\nline(0, base+desc, width, base+desc);\ntext(\"dp\", 0, base);  // Draw text on baseline\n\ntextSize(64);  // Increase text size\ndesc = textDescent() * scalar;  // Recalc ascent\nline(40, base + desc, width, base + desc);\ntext(\"dp\", 40, base);  // Draw text on baseline\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Typography",
@@ -11228,24 +11767,8 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 277,
-            "description": "Helper fxn to check font type (system or otf)",
-            "class": "p5",
-            "module": "Typography",
-            "submodule": "Attributes"
-        },
-        {
-            "file": "src/typography/attributes.js",
-            "line": 286,
-            "description": "Helper fxn to measure ascent and descent.",
-            "class": "p5",
-            "module": "Typography",
-            "submodule": "Attributes"
-        },
-        {
-            "file": "src/typography/attributes.js",
-            "line": 336,
-            "description": "Helper fxn to measure ascent and descent.\nAdapted from http://stackoverflow.com/a/25355178",
+            "line": 203,
+            "description": "Helper function to measure ascent and descent.",
             "class": "p5",
             "module": "Typography",
             "submodule": "Attributes"
@@ -12333,7 +12856,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 59,
+            "line": 60,
             "description": "_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
             "return": {
                 "description": "",
@@ -16963,44 +17486,12 @@
             "line": " lib/addons/p5.sound.js:4997"
         },
         {
-            "message": "Missing item type\ndraw a plane with given a width and height",
-            "line": " src/3d/3d_primitives.js:6"
+            "message": "Missing item type\nHelper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
+            "line": " src/3d/material.js:114"
         },
         {
-            "message": "Missing item type\ndraw a sphere with given raduis",
-            "line": " src/3d/3d_primitives.js:67"
-        },
-        {
-            "message": "Missing item type\ndraw a cylinder with given radius and height",
-            "line": " src/3d/3d_primitives.js:128"
-        },
-        {
-            "message": "Missing item type\ndraw a cone with given radius and height",
-            "line": " src/3d/3d_primitives.js:223"
-        },
-        {
-            "message": "Missing item type\ndraw a torus with given radius and tube radius",
-            "line": " src/3d/3d_primitives.js:298"
-        },
-        {
-            "message": "Missing item type\ndraw a box with given widht, height and depth",
-            "line": " src/3d/3d_primitives.js:361"
-        },
-        {
-            "message": "Missing item type",
-            "line": " src/3d/light.js:2"
-        },
-        {
-            "message": "Missing item type\n[normal description]",
-            "line": " src/3d/material.js:5"
-        },
-        {
-            "message": "Missing item type\n[textureMaterial description]",
-            "line": " src/3d/material.js:14"
-        },
-        {
-            "message": "Missing item type\nHelper function; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
-            "line": " src/3d/material.js:73"
+            "message": "Missing item type\nreturns the next highest power of 2 value",
+            "line": " src/3d/material.js:125"
         },
         {
             "message": "Missing item type\np5 Geometry3D class",
@@ -17023,20 +17514,16 @@
             "line": " src/3d/p5.Geometry3D.js:170"
         },
         {
-            "message": "Missing item type\n[generateUV description]",
-            "line": " src/3d/p5.Geometry3D.js:214"
-        },
-        {
             "message": "Missing item type\ngenerate an object containing information needed to create buffer",
-            "line": " src/3d/p5.Geometry3D.js:232"
+            "line": " src/3d/p5.Geometry3D.js:226"
         },
         {
             "message": "Missing item type\nturn a two dimensional array into one dimensional array",
-            "line": " src/3d/p5.Geometry3D.js:252"
+            "line": " src/3d/p5.Geometry3D.js:246"
         },
         {
             "message": "Missing item type\nturn an array of Vector into a one dimensional array of numbers",
-            "line": " src/3d/p5.Geometry3D.js:264"
+            "line": " src/3d/p5.Geometry3D.js:258"
         },
         {
             "message": "Missing item type",
@@ -17100,90 +17587,62 @@
         },
         {
             "message": "Missing item type\n3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
-            "line": " src/3d/p5.Renderer3D.js:21"
-        },
-        {
-            "message": "Missing item type\n[prototype description]",
-            "line": " src/3d/p5.Renderer3D.js:60"
-        },
-        {
-            "message": "Missing item type\n[_applyDefaults description]",
-            "line": " src/3d/p5.Renderer3D.js:66"
+            "line": " src/3d/p5.Renderer3D.js:20"
         },
         {
             "message": "Missing item type\n[resize description]",
-            "line": " src/3d/p5.Renderer3D.js:74"
+            "line": " src/3d/p5.Renderer3D.js:89"
         },
         {
             "message": "Missing item type\n[background description]",
-            "line": " src/3d/p5.Renderer3D.js:90"
+            "line": " src/3d/p5.Renderer3D.js:101"
         },
         {
             "message": "Missing item type\n[initShaders description]",
-            "line": " src/3d/p5.Renderer3D.js:117"
-        },
-        {
-            "message": "Missing item type\nSets the Matrix Uniforms inside our default shader.",
-            "line": " src/3d/p5.Renderer3D.js:218"
-        },
-        {
-            "message": "Missing item type\n[initBuffer description]",
-            "line": " src/3d/p5.Renderer3D.js:293"
-        },
-        {
-            "message": "Missing item type\n[geometryInHash description]",
-            "line": " src/3d/p5.Renderer3D.js:302"
-        },
-        {
-            "message": "Missing item type\n[materialInHash description]",
-            "line": " src/3d/p5.Renderer3D.js:311"
-        },
-        {
-            "message": "Missing item type\n[initMatrix description]",
-            "line": " src/3d/p5.Renderer3D.js:324"
-        },
-        {
-            "message": "Missing item type\nresets the model view matrix to a mat4 identity\nmatrix.",
-            "line": " src/3d/p5.Renderer3D.js:337"
+            "line": " src/3d/p5.Renderer3D.js:126"
         },
         {
             "message": "Missing item type\n[translate description]",
-            "line": " src/3d/p5.Renderer3D.js:346"
+            "line": " src/3d/p5.Renderer3D.js:317"
         },
         {
             "message": "Missing item type\nScales the Model View Matrix by a vector",
-            "line": " src/3d/p5.Renderer3D.js:363"
+            "line": " src/3d/p5.Renderer3D.js:334"
+        },
+        {
+            "message": "Missing item type\n[rotate description]",
+            "line": " src/3d/p5.Renderer3D.js:346"
         },
         {
             "message": "Missing item type\n[rotateX description]",
-            "line": " src/3d/p5.Renderer3D.js:375"
+            "line": " src/3d/p5.Renderer3D.js:357"
         },
         {
             "message": "Missing item type\n[rotateY description]",
-            "line": " src/3d/p5.Renderer3D.js:385"
+            "line": " src/3d/p5.Renderer3D.js:367"
         },
         {
             "message": "Missing item type\n[rotateZ description]",
-            "line": " src/3d/p5.Renderer3D.js:395"
+            "line": " src/3d/p5.Renderer3D.js:377"
         },
         {
             "message": "Missing item type\npushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
-            "line": " src/3d/p5.Renderer3D.js:405"
+            "line": " src/3d/p5.Renderer3D.js:387"
         },
         {
             "message": "Missing item type\n[pop description]",
-            "line": " src/3d/p5.Renderer3D.js:415"
+            "line": " src/3d/p5.Renderer3D.js:397"
         },
         {
-            "message": "Missing item type\n[createBuffer description]",
+            "message": "Missing item type\ncreateBuffer",
             "line": " src/3d/retainedMode3D.js:7"
         },
         {
-            "message": "Missing item type\n[initBuffer description]",
-            "line": " src/3d/retainedMode3D.js:23"
+            "message": "Missing item type\ninitBuffer description",
+            "line": " src/3d/retainedMode3D.js:22"
         },
         {
-            "message": "Missing item type\n[drawBuffer description]",
+            "message": "Missing item type\ndrawBuffer",
             "line": " src/3d/retainedMode3D.js:60"
         },
         {
@@ -17216,51 +17675,51 @@
         },
         {
             "message": "Missing item type\nThese Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
-            "line": " src/color/p5.Color.js:112"
+            "line": " src/color/p5.Color.js:119"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format #XXX,\ne.g. #416",
-            "line": " src/color/p5.Color.js:280"
+            "line": " src/color/p5.Color.js:287"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
-            "line": " src/color/p5.Color.js:286"
+            "line": " src/color/p5.Color.js:293"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
-            "line": " src/color/p5.Color.js:292"
+            "line": " src/color/p5.Color.js:299"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
-            "line": " src/color/p5.Color.js:309"
+            "line": " src/color/p5.Color.js:316"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
-            "line": " src/color/p5.Color.js:325"
+            "line": " src/color/p5.Color.js:332"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
-            "line": " src/color/p5.Color.js:341"
+            "line": " src/color/p5.Color.js:348"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%)",
-            "line": " src/color/p5.Color.js:357"
+            "line": " src/color/p5.Color.js:364"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format hsla(H, S%, L%, A),\ne.g. hsla(100, 40%, 28.9%, 0.5)",
-            "line": " src/color/p5.Color.js:371"
+            "line": " src/color/p5.Color.js:378"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format hsb(H, S%, B%),\ne.g. hsb(100, 40%, 28.9%)",
-            "line": " src/color/p5.Color.js:387"
+            "line": " src/color/p5.Color.js:394"
         },
         {
             "message": "Missing item type\nRegular expression for matching colors in format hsba(H, S%, B%, A),\ne.g. hsba(100, 40%, 28.9%, 0.5)",
-            "line": " src/color/p5.Color.js:401"
+            "line": " src/color/p5.Color.js:408"
         },
         {
             "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\nnormalized [r, g, b, a], maxes [255, 255, 255, 255]",
-            "line": " src/color/p5.Color.js:418"
+            "line": " src/color/p5.Color.js:425"
         },
         {
             "message": "Missing item type",
@@ -17272,19 +17731,19 @@
         },
         {
             "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:66"
+            "line": " src/core/curves.js:65"
         },
         {
             "message": "Missing item type\nSets the resolution at which curves display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:261"
+            "line": " src/core/curves.js:260"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/core/environment.js:217"
+            "line": " src/core/environment.js:222"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/core/environment.js:226"
+            "line": " src/core/environment.js:231"
         },
         {
             "message": "Missing item type",
@@ -17299,20 +17758,12 @@
             "line": " src/core/error_helpers.js:59"
         },
         {
-            "message": "Missing item type\nValidate all the parameters of a function for number and type",
+            "message": "Missing item type\nValidate all the parameters of a function for number and type\nNOTE THIS FUNCTION IS TEMPORARILY DISABLED UNTIL FURTHER WORK\nAND UPDATES ARE IMPLEMENTED. -LMCCART",
             "line": " src/core/error_helpers.js:105"
         },
         {
-            "message": "Missing item type\nCheck number of parameters\n\nExample: \"You wrote ellipse(X,X,X). ellipse was expecting 4\n          parameters. Try ellipse(X,X,X,X).\"",
-            "line": " src/core/error_helpers.js:122"
-        },
-        {
-            "message": "Missing item type\nType checking\n\nExample: \"It looks like ellipse received an empty variable in spot #2.\"\nExample: \"ellipse was expecting a number for parameter #1,\n          received \"foo\" instead.\"",
-            "line": " src/core/error_helpers.js:158"
-        },
-        {
             "message": "Missing item type\nPrints out all the colors in the color pallete with white text.\nFor color blindness testing.",
-            "line": " src/core/error_helpers.js:239"
+            "line": " src/core/error_helpers.js:243"
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
@@ -17320,11 +17771,19 @@
         },
         {
             "message": "Missing item type\nResize our canvas element.",
-            "line": " src/core/p5.Renderer.js:40"
+            "line": " src/core/p5.Renderer.js:71"
+        },
+        {
+            "message": "Missing item type\nHelper fxn to check font type (system or otf)",
+            "line": " src/core/p5.Renderer.js:141"
+        },
+        {
+            "message": "Missing item type\nHelper fxn to measure ascent and descent.\nAdapted from http://stackoverflow.com/a/25355178",
+            "line": " src/core/p5.Renderer.js:197"
         },
         {
             "message": "Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "line": " src/core/p5.Renderer2D.js:352"
+            "line": " src/core/p5.Renderer2D.js:357"
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
@@ -17332,15 +17791,15 @@
         },
         {
             "message": "Missing item type\n[rotateX description]",
-            "line": " src/core/transform.js:106"
+            "line": " src/core/transform.js:113"
         },
         {
             "message": "Missing item type\n[rotateY description]",
-            "line": " src/core/transform.js:120"
+            "line": " src/core/transform.js:134"
         },
         {
             "message": "Missing item type\n[rotateZ description]",
-            "line": " src/core/transform.js:134"
+            "line": " src/core/transform.js:155"
         },
         {
             "message": "Missing item type\n_updatePAccelerations updates the pAcceleration values",
@@ -17487,24 +17946,16 @@
             "line": " src/math/p5.Vector.js:987"
         },
         {
-            "message": "Missing item type\nReturns ascent of the current font at its current size.",
-            "line": " src/typography/attributes.js:187"
+            "message": "Missing item type\nReturns the ascent of the current font at its current size. The ascent\nrepresents the distance, in pixels, of the tallest character above\nthe baseline.",
+            "line": " src/typography/attributes.js:147"
         },
         {
-            "message": "Missing item type\nReturns descent of the current font at its current size.",
-            "line": " src/typography/attributes.js:248"
+            "message": "Missing item type\nReturns the descent of the current font at its current size. The descent\nrepresents the distance, in pixels, of the character with the longest\ndescender below the baseline.",
+            "line": " src/typography/attributes.js:175"
         },
         {
-            "message": "Missing item type\nHelper fxn to check font type (system or otf)",
-            "line": " src/typography/attributes.js:277"
-        },
-        {
-            "message": "Missing item type\nHelper fxn to measure ascent and descent.",
-            "line": " src/typography/attributes.js:286"
-        },
-        {
-            "message": "Missing item type\nHelper fxn to measure ascent and descent.\nAdapted from http://stackoverflow.com/a/25355178",
-            "line": " src/typography/attributes.js:336"
+            "message": "Missing item type\nHelper function to measure ascent and descent.",
+            "line": " src/typography/attributes.js:203"
         },
         {
             "message": "Missing item type\nReturns the set of opentype glyphs for the supplied string.\n\nNote that there is not a strict one-to-one mapping between characters\nand glyphs, so the list of returned glyphs can be larger or smaller\n than the length of the given string.",
@@ -17516,7 +17967,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:59"
+            "line": " src/app.js:60"
         },
         {
             "message": "Missing item type\nHelper function for getElement and getElements.",
