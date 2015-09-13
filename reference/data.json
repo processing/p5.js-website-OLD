@@ -2,15 +2,13 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.9",
+        "version": "0.4.10",
         "url": ""
     },
     "files": {
         "src/3d/3d_primitives.js": {
             "name": "src/3d/3d_primitives.js",
-            "modules": {
-                "3D Primitives": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "p5": 1
@@ -19,9 +17,7 @@
         },
         "src/3d/camera.js": {
             "name": "src/3d/camera.js",
-            "modules": {
-                "Camera": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "p5": 1
@@ -30,9 +26,7 @@
         },
         "src/3d/light.js": {
             "name": "src/3d/light.js",
-            "modules": {
-                "Lights": 1
-            },
+            "modules": {},
             "classes": {},
             "fors": {
                 "p5": 1
@@ -60,9 +54,7 @@
         "src/3d/p5.Matrix.js": {
             "name": "src/3d/p5.Matrix.js",
             "modules": {},
-            "classes": {
-                "p5.Matrix": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -614,87 +606,16 @@
         }
     },
     "modules": {
-        "Shape": {
-            "name": "Shape",
+        "Lights, Camera": {
+            "name": "Lights, Camera",
             "submodules": {
-                "2D Primitives": 1,
-                "Curves": 1,
-                "Vertex": 1
+                "Material": 1
             },
             "classes": {},
             "fors": {
                 "p5": 1
             },
             "namespaces": {}
-        },
-        "3D Primitives": {
-            "name": "3D Primitives",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "IO",
-            "namespace": "",
-            "file": "src/3d/3d_primitives.js",
-            "line": 1,
-            "requires": [
-                "core",
-                "p5.Geometry3D"
-            ]
-        },
-        "Lights, Camera": {
-            "name": "Lights, Camera",
-            "submodules": {
-                "Camera": 1,
-                "Lights": 1,
-                "Material": 1
-            },
-            "classes": {
-                "p5.Matrix": 1
-            },
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {},
-            "file": "src/3d/p5.Matrix.js",
-            "line": 15
-        },
-        "Camera": {
-            "name": "Camera",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Lights, Camera",
-            "namespace": "",
-            "file": "src/3d/camera.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
-        "Lights": {
-            "name": "Lights",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Lights, Camera",
-            "namespace": "",
-            "file": "src/3d/light.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
         },
         "Material": {
             "name": "Material",
@@ -765,6 +686,19 @@
                 "core",
                 "constants"
             ]
+        },
+        "Shape": {
+            "name": "Shape",
+            "submodules": {
+                "2D Primitives": 1,
+                "Curves": 1,
+                "Vertex": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
         },
         "2D Primitives": {
             "name": "2D Primitives",
@@ -1068,7 +1002,7 @@
         "IO": {
             "name": "IO",
             "submodules": {
-                "3D Primitives": 1,
+                "undefined": 1,
                 "Input": 1,
                 "Output": 1,
                 "Table": 1
@@ -1417,31 +1351,7 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "IO",
-            "submodule": "Output",
-            "namespace": ""
-        },
-        "p5.Matrix": {
-            "name": "p5.Matrix",
-            "shortname": "p5.Matrix",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Lights, Camera",
-            "namespace": "",
-            "file": "src/3d/p5.Matrix.js",
-            "line": 15,
-            "description": "A class to describe a 4x4 matrix\nfor model and view matrix manipulation in the p5js webgl renderer.",
-            "is_constructor": 1,
-            "params": [
-                {
-                    "name": "mat4",
-                    "description": "array literal of our 4x4 matrix",
-                    "type": "Array",
-                    "optional": true
-                }
-            ]
+            "submodule": "Output"
         },
         "p5.Color": {
             "name": "p5.Color",
@@ -1453,7 +1363,6 @@
             "extension_for": [],
             "module": "Color",
             "submodule": "Creating & Reading",
-            "namespace": "",
             "file": "src/color/p5.Color.js",
             "line": 11,
             "is_constructor": 1
@@ -1497,7 +1406,6 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Graphics.js",
             "line": 10,
             "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are\nextensive, but mirror the normal drawing API for p5.",
@@ -1532,7 +1440,6 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Renderer.js",
             "line": 10,
             "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nRenderer2D and Renderer3D classes, respecitvely.",
@@ -1566,7 +1473,6 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Renderer2D.js",
             "line": 9,
             "description": "2D graphics renderer class.  Can also be used as an off-screen\ngraphics buffer. A p5.Renderer2D object can be constructed\nwith the <code>createRenderer2D()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
@@ -2424,10 +2330,18 @@
     "classitems": [
         {
             "file": "src/3d/3d_primitives.js",
+            "line": 1,
+            "description": "module Shape\nsubmodule 3D Primitives",
+            "requires": [
+                "core",
+                "p5.Geometry3D"
+            ],
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/3d_primitives.js",
             "line": 14,
-            "description": "draw a plane with given a width and height",
-            "itemtype": "method",
-            "name": "plane",
+            "description": "draw a plane with given a width and height\nmethod plane",
             "params": [
                 {
                     "name": "width",
@@ -2447,16 +2361,12 @@
             "example": [
                 "\n<div>\n<code>\n//draw a spining plane with width 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateY(frameCount * 0.02);\n  plane(100, 100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
             "line": 70,
-            "description": "draw a sphere with given raduis",
-            "itemtype": "method",
-            "name": "sphere",
+            "description": "draw a sphere with given raduis\nmethod sphere",
             "params": [
                 {
                     "name": "radius",
@@ -2477,16 +2387,12 @@
             "example": [
                 "\n<div>\n<code>\n// draw a sphere with radius 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
             "line": 127,
-            "description": "draw a cylinder with given radius and height",
-            "itemtype": "method",
-            "name": "cylinder",
+            "description": "draw a cylinder with given radius and height\nmethod  cylinder",
             "params": [
                 {
                     "name": "radius",
@@ -2512,16 +2418,12 @@
             "example": [
                 "\n<div>\n<code>\n//draw a spining sylinder with radius 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  cylinder(100, 100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
             "line": 218,
-            "description": "draw a cone with given radius and height",
-            "itemtype": "method",
-            "name": "cone",
+            "description": "draw a cone with given radius and height\nmethod cone",
             "params": [
                 {
                     "name": "radius",
@@ -2547,16 +2449,12 @@
             "example": [
                 "\n<div>\n<code>\n//draw a spining cone with radius 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  cone(100, 200);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
             "line": 289,
-            "description": "draw a torus with given radius and tube radius",
-            "itemtype": "method",
-            "name": "torus",
+            "description": "draw a torus with given radius and tube radius\nmethod torus",
             "params": [
                 {
                     "name": "radius",
@@ -2582,16 +2480,12 @@
             "example": [
                 "\n<div>\n<code>\n//draw a spining torus with radius 100 and tube radius 20\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  torus(100, 20);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
             "line": 350,
-            "description": "draw a box with given width, height and depth",
-            "itemtype": "method",
-            "name": "box",
+            "description": "draw a box with given width, height and depth\nmethod  box",
             "params": [
                 {
                     "name": "width",
@@ -2616,16 +2510,21 @@
             "example": [
                 "\n<div>\n<code>\n//draw a spining box with width, height and depth 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  box(100, 100, 100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/camera.js",
+            "line": 1,
+            "description": "module Lights, Camera\nsubmodule Camera",
+            "requires": [
+                "core"
+            ],
+            "class": "p5"
         },
         {
             "file": "src/3d/camera.js",
             "line": 12,
-            "description": "sets camera position",
-            "itemtype": "method",
-            "name": "camera",
+            "description": "sets camera position\nmethod camera",
             "params": [
                 {
                     "name": "x",
@@ -2650,16 +2549,12 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n camera(0, 0, 800);\n sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/camera.js",
             "line": 42,
-            "description": "sets perspective camera",
-            "itemtype": "method",
-            "name": "perspective",
+            "description": "sets perspective camera\nmethod  perspective",
             "params": [
                 {
                     "name": "fovy",
@@ -2689,16 +2584,12 @@
             "example": [
                 "\n<div>\n<code>\n//drag mouse to toggle the world\n//you will see there's a vanish point\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  perspective(60 / 180 * PI, width/height, 0.1, 100);\n}\nfunction draw(){\n background(0);\n orbitControl();\n for(var i = -5; i < 6; i++){\n    for(var j = -5; j < 6; j++){\n      push();\n      translate(i*100, 0, j*100);\n      sphere(20);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/camera.js",
             "line": 86,
-            "description": "setup ortho camera",
-            "itemtype": "method",
-            "name": "ortho",
+            "description": "setup ortho camera\nmethod  ortho",
             "params": [
                 {
                     "name": "left",
@@ -2738,16 +2629,21 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  ortho(-width/2, width/2, height/2, -height/2, 0.1, 100);\n}\nfunction draw(){\n background(0);\n orbitControl();\n for(var i = -5; i < 6; i++){\n    for(var j = -5; j < 6; j++){\n      push();\n      translate(i*100, 0, j*100);\n      sphere(20);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Camera"
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/light.js",
+            "line": 1,
+            "description": "module Lights, Camera\nsubmodule Lights",
+            "requires": [
+                "core"
+            ],
+            "class": "p5"
         },
         {
             "file": "src/3d/light.js",
             "line": 12,
-            "description": "creates an ambient light with a color",
-            "itemtype": "method",
-            "name": "ambientLight",
+            "description": "creates an ambient light with a color\nmethod  ambientLight",
             "params": [
                 {
                     "name": "v1",
@@ -2780,16 +2676,12 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  ambientLight(150);\n  ambientMaterial(250);\n  sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Lights"
+            "class": "p5"
         },
         {
             "file": "src/3d/light.js",
             "line": 68,
-            "description": "creates a directional light with a color and a direction",
-            "itemtype": "method",
-            "name": "directionalLight",
+            "description": "creates a directional light with a color and a direction\nmethod  directionalLight",
             "params": [
                 {
                     "name": "v1",
@@ -2839,16 +2731,12 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light direction\n  var dirX = (mouseX / width - 0.5) *2;\n  var dirY = (mouseY / height - 0.5) *(-2);\n  directionalLight(250, 250, 250, dirX, dirY, 0.25);\n  ambientMaterial(250);\n  sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Lights"
+            "class": "p5"
         },
         {
             "file": "src/3d/light.js",
             "line": 183,
-            "description": "creates a point light with a color and a light position",
-            "itemtype": "method",
-            "name": "pointLight",
+            "description": "creates a point light with a color and a light position\nmethod  pointLight",
             "params": [
                 {
                     "name": "v1",
@@ -2898,9 +2786,7 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light position\n  var locY = (mouseY / height - 0.5) *(-2);\n  var locX = (mouseX / width - 0.5) *2;\n  //to set the light position,\n  //think of the world's coordinate as:\n  // -1,1 -------- 1,1\n  //   |            |\n  //   |            |\n  //   |            |\n  // -1,-1---------1,-1\n  pointLight(250, 250, 250, locX, locY, 0);\n  ambientMaterial(250);\n  sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Lights"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
@@ -3104,7 +2990,7 @@
             "file": "src/3d/p5.Geometry3D.js",
             "line": 5,
             "description": "p5 Geometry3D class",
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3133,35 +3019,35 @@
                     "type": "Number"
                 }
             ],
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 76,
             "description": "merge duplicated vertices",
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 145,
             "description": "compute faceNormals for a geometry",
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 170,
             "description": "compute vertexNormals for a geometry",
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 226,
             "description": "generate an object containing information needed to create buffer",
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3179,7 +3065,7 @@
                 "description": "1-dimensional array\n[[1, 2, 3],[4, 5, 6]] -> [1, 2, 3, 4, 5, 6]",
                 "type": "Array"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3197,7 +3083,7 @@
                 "description": "a one dimensional array of numbers\n[p5.Vector(1, 2, 3), p5.Vector(4, 5, 6)] ->\n[1, 2, 3, 4, 5, 6]",
                 "type": "Array]"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3209,7 +3095,23 @@
             "todo": [
                 "see methods below needing further implementation."
             ],
-            "class": "p5.Matrix",
+            "class": "p5",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Matrix.js",
+            "line": 15,
+            "description": "A class to describe a 4x4 matrix\nfor model and view matrix manipulation in the p5js webgl renderer.\nclass p5.Matrix",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "mat4",
+                    "description": "array literal of our 4x4 matrix",
+                    "type": "Array",
+                    "optional": true
+                }
+            ],
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3224,7 +3126,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3235,7 +3137,7 @@
                 "description": "the copy of the p5.Matrix object",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3246,7 +3148,7 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3257,7 +3159,7 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3275,7 +3177,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3293,7 +3195,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3304,7 +3206,7 @@
                 "description": "Determinant of our 4x4 matrix",
                 "type": "Number"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3322,7 +3224,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3340,7 +3242,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3363,7 +3265,7 @@
                 "description": "this\ninspired by Toji's gl-matrix lib, mat4 rotation",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3383,7 +3285,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3416,7 +3318,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -3459,14 +3361,14 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 561,
             "description": "PRIVATE",
-            "class": "p5.Matrix",
+            "class": "p5",
             "module": "Lights, Camera"
         },
         {
@@ -6226,7 +6128,7 @@
         },
         {
             "file": "src/core/p5.Renderer2D.js",
-            "line": 357,
+            "line": 359,
             "description": "Generate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
             "class": "p5.Renderer2D",
             "module": "Rendering"
@@ -13328,7 +13230,7 @@
                 "type": "Object/p5.Element"
             },
             "example": [
-                "\n<div><class='norender'><code>\nvar capture;\n\nfunction setup() {\n  createCanvas(480, 120);\n  capture = createCapture(VIDEO);\n}\n\nfunction draw() {\n  image(capture, 0, 0, width, width*capture.height/capture.width);\n  filter(INVERT);\n}\n</code></div>\n<div><class='norender'><code>\nfunction setup() {\n  createCanvas(480, 120);\n  var constraints = {\n    video: {\n      mandatory: {\n        minWidth: 1280,\n        minHeight: 720\n      },\n      optional: [\n        { maxFrameRate: 10 }\n      ]\n    },\n    audio: true\n  };\n  createCapture(constraints, function(stream) {\n    console.log(stream);\n  });\n}\n</code></div>"
+                "\n<div class='norender'><code>\nvar capture;\n\nfunction setup() {\n  createCanvas(480, 120);\n  capture = createCapture(VIDEO);\n}\n\nfunction draw() {\n  image(capture, 0, 0, width, width*capture.height/capture.width);\n  filter(INVERT);\n}\n</code></div>\n<div class='norender'><code>\nfunction setup() {\n  createCanvas(480, 120);\n  var constraints = {\n    video: {\n      mandatory: {\n        minWidth: 1280,\n        minHeight: 720\n      },\n      optional: [\n        { maxFrameRate: 10 }\n      ]\n    },\n    audio: true\n  };\n  createCapture(constraints, function(stream) {\n    console.log(stream);\n  });\n}\n</code></div>"
             ],
             "class": "p5.dom",
             "module": "p5.dom",
@@ -17486,6 +17388,66 @@
             "line": " lib/addons/p5.sound.js:4997"
         },
         {
+            "message": "Missing item type\nmodule Shape\nsubmodule 3D Primitives",
+            "line": " src/3d/3d_primitives.js:1"
+        },
+        {
+            "message": "Missing item type\ndraw a plane with given a width and height\nmethod plane",
+            "line": " src/3d/3d_primitives.js:14"
+        },
+        {
+            "message": "Missing item type\ndraw a sphere with given raduis\nmethod sphere",
+            "line": " src/3d/3d_primitives.js:70"
+        },
+        {
+            "message": "Missing item type\ndraw a cylinder with given radius and height\nmethod  cylinder",
+            "line": " src/3d/3d_primitives.js:127"
+        },
+        {
+            "message": "Missing item type\ndraw a cone with given radius and height\nmethod cone",
+            "line": " src/3d/3d_primitives.js:218"
+        },
+        {
+            "message": "Missing item type\ndraw a torus with given radius and tube radius\nmethod torus",
+            "line": " src/3d/3d_primitives.js:289"
+        },
+        {
+            "message": "Missing item type\ndraw a box with given width, height and depth\nmethod  box",
+            "line": " src/3d/3d_primitives.js:350"
+        },
+        {
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Camera",
+            "line": " src/3d/camera.js:1"
+        },
+        {
+            "message": "Missing item type\nsets camera position\nmethod camera",
+            "line": " src/3d/camera.js:12"
+        },
+        {
+            "message": "Missing item type\nsets perspective camera\nmethod  perspective",
+            "line": " src/3d/camera.js:42"
+        },
+        {
+            "message": "Missing item type\nsetup ortho camera\nmethod  ortho",
+            "line": " src/3d/camera.js:86"
+        },
+        {
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Lights",
+            "line": " src/3d/light.js:1"
+        },
+        {
+            "message": "Missing item type\ncreates an ambient light with a color\nmethod  ambientLight",
+            "line": " src/3d/light.js:12"
+        },
+        {
+            "message": "Missing item type\ncreates a directional light with a color and a direction\nmethod  directionalLight",
+            "line": " src/3d/light.js:68"
+        },
+        {
+            "message": "Missing item type\ncreates a point light with a color and a light position\nmethod  pointLight",
+            "line": " src/3d/light.js:183"
+        },
+        {
             "message": "Missing item type\nHelper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
             "line": " src/3d/material.js:114"
         },
@@ -17528,6 +17490,10 @@
         {
             "message": "Missing item type",
             "line": " src/3d/p5.Matrix.js:1"
+        },
+        {
+            "message": "Missing item type\nA class to describe a 4x4 matrix\nfor model and view matrix manipulation in the p5js webgl renderer.\nclass p5.Matrix",
+            "line": " src/3d/p5.Matrix.js:15"
         },
         {
             "message": "Missing item type\nSets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Matrix, or the values from a float array.",
@@ -17783,7 +17749,7 @@
         },
         {
             "message": "Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "line": " src/core/p5.Renderer2D.js:357"
+            "line": " src/core/p5.Renderer2D.js:359"
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",

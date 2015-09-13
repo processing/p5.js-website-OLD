@@ -16,7 +16,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Gain",
         "p5.Graphics",
         "p5.Image",
-        "p5.Matrix",
         "p5.MediaElement",
         "p5.Noise",
         "p5.Oscillator",
@@ -39,12 +38,10 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
-        "3D Primitives",
         "Acceleration",
         "Array Functions",
         "Attributes",
         "Calculation",
-        "Camera",
         "Color",
         "Constants",
         "Conversion",
@@ -59,7 +56,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "Image",
         "Input",
         "Keyboard",
-        "Lights",
         "Lights, Camera",
         "Loading & Displaying",
         "Material",
@@ -89,10 +85,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "2D Primitives"
         },
         {
-            "displayName": "3D Primitives",
-            "name": "3D Primitives"
-        },
-        {
             "displayName": "Acceleration",
             "name": "Acceleration"
         },
@@ -107,10 +99,6 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Calculation",
             "name": "Calculation"
-        },
-        {
-            "displayName": "Camera",
-            "name": "Camera"
         },
         {
             "displayName": "Color",
@@ -170,10 +158,6 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Keyboard",
             "name": "Keyboard"
-        },
-        {
-            "displayName": "Lights",
-            "name": "Lights"
         },
         {
             "displayName": "Lights, Camera",
