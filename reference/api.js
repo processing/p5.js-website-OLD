@@ -56,9 +56,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Image",
         "Input",
         "Keyboard",
-        "Lights, Camera",
         "Loading & Displaying",
-        "Material",
         "Math",
         "Mouse",
         "Noise",
@@ -160,16 +158,8 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Keyboard"
         },
         {
-            "displayName": "Lights, Camera",
-            "name": "Lights, Camera"
-        },
-        {
             "displayName": "Loading & Displaying",
             "name": "Loading & Displaying"
-        },
-        {
-            "displayName": "Material",
-            "name": "Material"
         },
         {
             "displayName": "Math",

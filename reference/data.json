@@ -10,38 +10,28 @@
             "name": "src/3d/3d_primitives.js",
             "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/camera.js": {
             "name": "src/3d/camera.js",
             "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/light.js": {
             "name": "src/3d/light.js",
             "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/material.js": {
             "name": "src/3d/material.js",
-            "modules": {
-                "Material": 1
-            },
+            "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/p5.Geometry3D.js": {
@@ -606,34 +596,6 @@
         }
     },
     "modules": {
-        "Lights, Camera": {
-            "name": "Lights, Camera",
-            "submodules": {
-                "Material": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
-        "Material": {
-            "name": "Material",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Lights, Camera",
-            "namespace": "",
-            "file": "src/3d/material.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
         "Color": {
             "name": "Color",
             "submodules": {
@@ -2331,7 +2293,7 @@
         {
             "file": "src/3d/3d_primitives.js",
             "line": 1,
-            "description": "module Shape\nsubmodule 3D Primitives",
+            "description": "module Shape\nsubmodule 3D Primitives\nfor p5",
             "requires": [
                 "core",
                 "p5.Geometry3D"
@@ -2515,7 +2477,7 @@
         {
             "file": "src/3d/camera.js",
             "line": 1,
-            "description": "module Lights, Camera\nsubmodule Camera",
+            "description": "module Lights, Camera\nsubmodule Camera\nfor p5",
             "requires": [
                 "core"
             ],
@@ -2634,7 +2596,7 @@
         {
             "file": "src/3d/light.js",
             "line": 1,
-            "description": "module Lights, Camera\nsubmodule Lights",
+            "description": "module Lights, Camera\nsubmodule Lights\nfor p5",
             "requires": [
                 "core"
             ],
@@ -2790,10 +2752,17 @@
         },
         {
             "file": "src/3d/material.js",
+            "line": 1,
+            "description": "module Lights, Camera\nsubmodule Material\nfor p5",
+            "requires": [
+                "core"
+            ],
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/material.js",
             "line": 13,
-            "description": "normal material for geometry",
-            "itemtype": "method",
-            "name": "normalMaterial",
+            "description": "normal material for geometry\nmethod normalMaterial",
             "return": {
                 "description": "",
                 "type": "P5"
@@ -2801,16 +2770,12 @@
             "example": [
                 "\n<div>\n<code>\n//please call this function before doing any transformation\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(255);\n normalMaterial();\n sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
             "line": 37,
-            "description": "texture for geometry",
-            "itemtype": "method",
-            "name": "texture",
+            "description": "texture for geometry\nmethod texture",
             "return": {
                 "description": "",
                 "type": "P5"
@@ -2818,9 +2783,7 @@
             "example": [
                 "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  img = loadImage(\"assets/cat.jpg\");\n}\nfunction draw(){\n  background(255);\n  rotateZ(frameCount * 0.02);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  // pass image as texture\n  texture(img);\n  box(60);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
@@ -2837,9 +2800,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
@@ -2856,16 +2817,12 @@
                 "description": "[description]",
                 "type": "Number"
             },
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
             "line": 138,
-            "description": "basic material for geometry with a given color",
-            "itemtype": "method",
-            "name": "basicMaterial",
+            "description": "basic material for geometry with a given color\nmethod  basicMaterial",
             "params": [
                 {
                     "name": "v1",
@@ -2898,16 +2855,12 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n rotateX(frameCount * 0.02);\n rotateZ(frameCount * 0.02);\n basicMaterial(250, 0, 0);\n box(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
             "line": 184,
-            "description": "ambient material for geometry with a given color",
-            "itemtype": "method",
-            "name": "ambientMaterial",
+            "description": "ambient material for geometry with a given color\nmethod  ambientMaterial",
             "params": [
                 {
                     "name": "v1",
@@ -2940,16 +2893,12 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n pointLight(250, 250, 250, 100, 100, 0);\n ambientMaterial(250);\n sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
             "line": 231,
-            "description": "specular material for geometry with a given color",
-            "itemtype": "method",
-            "name": "specularMaterial",
+            "description": "specular material for geometry with a given color\nmethod specularMaterial",
             "params": [
                 {
                     "name": "v1",
@@ -2982,16 +2931,13 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n pointLight(250, 250, 250, 100, 100, 0);\n specularMaterial(250);\n sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 5,
             "description": "p5 Geometry3D class",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
@@ -3019,36 +2965,31 @@
                     "type": "Number"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 76,
             "description": "merge duplicated vertices",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 145,
             "description": "compute faceNormals for a geometry",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 170,
             "description": "compute vertexNormals for a geometry",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
             "line": 226,
             "description": "generate an object containing information needed to create buffer",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
@@ -3065,8 +3006,7 @@
                 "description": "1-dimensional array\n[[1, 2, 3],[4, 5, 6]] -> [1, 2, 3, 4, 5, 6]",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
@@ -3083,8 +3023,7 @@
                 "description": "a one dimensional array of numbers\n[p5.Vector(1, 2, 3), p5.Vector(4, 5, 6)] ->\n[1, 2, 3, 4, 5, 6]",
                 "type": "Array]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3095,8 +3034,7 @@
             "todo": [
                 "see methods below needing further implementation."
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3111,8 +3049,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3126,8 +3063,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3137,8 +3073,7 @@
                 "description": "the copy of the p5.Matrix object",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3148,8 +3083,7 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3159,8 +3093,7 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3177,8 +3110,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3195,8 +3127,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3206,8 +3137,7 @@
                 "description": "Determinant of our 4x4 matrix",
                 "type": "Number"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3224,8 +3154,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3242,8 +3171,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3265,8 +3193,7 @@
                 "description": "this\ninspired by Toji's gl-matrix lib, mat4 rotation",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3285,8 +3212,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3318,8 +3244,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3361,22 +3286,19 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 561,
             "description": "PRIVATE",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
             "line": 20,
             "description": "3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3398,8 +3320,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3409,8 +3330,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3432,8 +3352,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3463,8 +3382,7 @@
             "todo": [
                 "implement handle for components or vector as args"
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3491,8 +3409,7 @@
                 "description": "[description]",
                 "type": "This"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3514,8 +3431,7 @@
                 "description": "[description]",
                 "type": "p5.Renderer3D"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3532,8 +3448,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3550,8 +3465,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3568,8 +3482,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3579,8 +3492,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3590,8 +3502,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/retainedMode3D.js",
@@ -3609,8 +3520,7 @@
                     "type": "String"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/retainedMode3D.js",
@@ -3628,8 +3538,7 @@
                     "type": "Object"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/retainedMode3D.js",
@@ -3642,15 +3551,13 @@
                     "type": "String"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
             "line": 1,
             "description": "module Utils\nsubmodule Color Utils",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3667,8 +3574,7 @@
                 "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3685,8 +3591,7 @@
                 "description": "an array of HSB values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3703,8 +3608,7 @@
                 "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3721,8 +3625,7 @@
                 "description": "an array of HSL values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3739,8 +3642,7 @@
                 "description": "an array of HSBA values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3757,8 +3659,7 @@
                 "description": "an array of HSLA values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/creating_reading.js",
@@ -17388,7 +17289,7 @@
             "line": " lib/addons/p5.sound.js:4997"
         },
         {
-            "message": "Missing item type\nmodule Shape\nsubmodule 3D Primitives",
+            "message": "Missing item type\nmodule Shape\nsubmodule 3D Primitives\nfor p5",
             "line": " src/3d/3d_primitives.js:1"
         },
         {
@@ -17416,7 +17317,7 @@
             "line": " src/3d/3d_primitives.js:350"
         },
         {
-            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Camera",
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Camera\nfor p5",
             "line": " src/3d/camera.js:1"
         },
         {
@@ -17432,7 +17333,7 @@
             "line": " src/3d/camera.js:86"
         },
         {
-            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Lights",
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Lights\nfor p5",
             "line": " src/3d/light.js:1"
         },
         {
@@ -17448,12 +17349,36 @@
             "line": " src/3d/light.js:183"
         },
         {
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Material\nfor p5",
+            "line": " src/3d/material.js:1"
+        },
+        {
+            "message": "Missing item type\nnormal material for geometry\nmethod normalMaterial",
+            "line": " src/3d/material.js:13"
+        },
+        {
+            "message": "Missing item type\ntexture for geometry\nmethod texture",
+            "line": " src/3d/material.js:37"
+        },
+        {
             "message": "Missing item type\nHelper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
             "line": " src/3d/material.js:114"
         },
         {
             "message": "Missing item type\nreturns the next highest power of 2 value",
             "line": " src/3d/material.js:125"
+        },
+        {
+            "message": "Missing item type\nbasic material for geometry with a given color\nmethod  basicMaterial",
+            "line": " src/3d/material.js:138"
+        },
+        {
+            "message": "Missing item type\nambient material for geometry with a given color\nmethod  ambientMaterial",
+            "line": " src/3d/material.js:184"
+        },
+        {
+            "message": "Missing item type\nspecular material for geometry with a given color\nmethod specularMaterial",
+            "line": " src/3d/material.js:231"
         },
         {
             "message": "Missing item type\np5 Geometry3D class",
