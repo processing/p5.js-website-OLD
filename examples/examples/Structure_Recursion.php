@@ -9,10 +9,10 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Functions</h2>
-          <p>The drawTarget() function makes it easy to draw many distinct 
- *targets. Each call to drawTarget() specifies the position, size, and number of
- *rings for each target.
+          <h2>Recursion</h2>
+          <p>A demonstration of recursion, which means functions call themselves.
+ Notice how the drawCircle() function calls itself at the end of its block.
+ It continues to do this until the variable "level" is equal to 1.
 </p>
 
           <div id="exampleDisplay">
@@ -44,7 +44,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/00_Structure/06_Functions.js');
+          examples.init('../examples_src/00_Structure/07_Recursion.js');
       });
     </script>
   </body>
