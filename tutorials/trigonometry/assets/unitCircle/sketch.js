@@ -121,7 +121,7 @@ function arcCalc(){
 }
 
 function trigCalcs(){
-var l =18;
+  var l =18;
   //lables for trig calculations
   text("r = 1",tx,ty+140);
 

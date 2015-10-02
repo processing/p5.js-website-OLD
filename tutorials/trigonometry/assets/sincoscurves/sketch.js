@@ -19,6 +19,9 @@ var ay = 80;
 
 var play = 1;
 
+var ex =465;
+var ey =480;
+
 
 function setup() {
 
@@ -39,8 +42,9 @@ function draw() {
   circleEllipses();
   waves();
   circleLabels();
-  pLabels();
+
   bgLabels();
+  pLabels();
   console.log("p="+p);
   console.log("angle="+angle);
 
@@ -52,21 +56,22 @@ function buttons(){
 
   //button
   fill(237,34,93);
-  ellipse(50,50,30,30);
-  ellipse(50,90,30,30);
+  ellipse(ex,ey,30,30);
+
   stroke(255);
   fill(255);
-  text("II",46,94);
-  text(">",47,53);
+
+
 
   if(play===1){
     angle=angle-f;
-
+    text("II",ex-4,ey+4);
   }else{
-
+    text(">",ex-4,ey+4);
     stroke(255);
 
   }
+
 }
 
 
@@ -189,6 +194,7 @@ function track(){
 
   fill(0);
   stroke(200);
+  line(cx,cy,x1,y1)
   line(x1,y1,cx + d/2+p, y1);//sin tracker
   line(x1,y1,x1,cy+p+d/2);//cos tracker
 
@@ -227,10 +233,8 @@ function bgLabels(){
 }
 
 function mousePressed() {
-  if(dist(mouseX,mouseY,50,50)<30){
-    play=1;
+  if(dist(mouseX,mouseY,ex,ey)<30){
+    play=play*-1;
   }
-  if(dist(mouseX,mouseY,50,90)<30){
-    play=0;
-  }
+
 }

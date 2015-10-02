@@ -834,7 +834,7 @@ p {
 
 .highlight {background-color: rgba(237,34,93,0.15);}
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5{
   margin: 1.414em 0 0.5em 0;
   font-weight: inherit;
   line-height: 1.2;
@@ -853,6 +853,15 @@ h2 {
 h3 {
     font-size: 1.5em; /* 1.777em */
     margin: 1em 0 0 0;
+}
+
+h5 {
+    font-size: 1.5em; /* 1.777em */
+    margin: 1em 0 0 0;
+    border-bottom-style: dashed;
+    border-bottom-color: #ED225D;
+    padding-bottom:5px;
+    margin-bottom:20px;
 }
 
 #item h3 {
