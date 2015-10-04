@@ -11700,7 +11700,7 @@
         {
             "file": "src/typography/loading_displaying.js",
             "line": 80,
-            "description": "Sets the current font that will be drawn with the text() function.\n<br><br>\nThe path to the font should be relative to the HTML file\nthat links in your sketch. Loading an from a URL or other\nremote location may be blocked due to your browser's built-in\nsecurity.",
+            "description": "Sets the current font that will be drawn with the text() function.",
             "itemtype": "method",
             "name": "textFont",
             "params": [
