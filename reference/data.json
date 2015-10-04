@@ -1015,7 +1015,7 @@
             "module": "IO",
             "namespace": "",
             "file": "src/io/files.js",
-            "line": 714
+            "line": 719
         },
         "Table": {
             "name": "Table",
@@ -8550,7 +8550,7 @@
         {
             "file": "src/io/files.js",
             "line": 16,
-            "description": "Loads an opentype font file (.otf, .ttf) from a file or a URL,\nand returns a PFont Object. This method is asynchronous,\nmeaning it may not finish before the next line in your sketch\nis executed.",
+            "description": "Loads an opentype font file (.otf, .ttf) from a file or a URL,\nand returns a PFont Object. This method is asynchronous,\nmeaning it may not finish before the next line in your sketch\nis executed.\n<br><br>\nThe path to the font should be relative to the HTML file\nthat links in your sketch. Loading an from a URL or other\nremote location may be blocked due to your browser's built-in\nsecurity.",
             "itemtype": "method",
             "name": "loadFont",
             "params": [
@@ -8579,7 +8579,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 105,
+            "line": 110,
             "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadJSON",
@@ -8615,7 +8615,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 192,
+            "line": 197,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -8645,7 +8645,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 266,
+            "line": 271,
             "description": "<p>Reads the contents of a file or URL and creates a p5.Table object with\nits values. If a file is specified, it must be located in the sketch's\n\"data\" folder. The filename parameter can also be a URL to a file found\nonline. By default, the file is assumed to be comma-separated (in CSV\nformat). Table only looks for a header row if the 'header' option is\nincluded.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas. For example:\n<br><br>\n<code>\n  loadTable(\"my_csv_file.csv\", \"csv\", \"header\")\n</code>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadTable() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.\n</p>",
             "itemtype": "method",
             "name": "loadTable",
@@ -8681,7 +8681,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 545,
+            "line": 550,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.",
             "itemtype": "method",
             "name": "loadXML",
@@ -8708,7 +8708,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 611,
+            "line": 616,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -8743,7 +8743,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 630,
+            "line": 635,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -8778,7 +8778,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 648,
+            "line": 653,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
@@ -8819,7 +8819,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 806,
+            "line": 811,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save()\nwithin draw if it's looping, as the save() function will open a new save\ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename.\nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n\n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Renderer object as an image\n\nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n\nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n\nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -8846,7 +8846,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 927,
+            "line": 932,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveJSON",
@@ -8877,7 +8877,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 983,
+            "line": 988,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveStrings",
@@ -8902,7 +8902,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1048,
+            "line": 1053,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveTable",
@@ -8932,7 +8932,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1164,
+            "line": 1169,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8959,7 +8959,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1185,
+            "line": 1190,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -8984,7 +8984,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1221,
+            "line": 1226,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -9005,7 +9005,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1253,
+            "line": 1258,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -9019,7 +9019,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1265,
+            "line": 1270,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -17855,23 +17855,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1164"
+            "line": " src/io/files.js:1169"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1185"
+            "line": " src/io/files.js:1190"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1221"
+            "line": " src/io/files.js:1226"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1253"
+            "line": " src/io/files.js:1258"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1265"
+            "line": " src/io/files.js:1270"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
