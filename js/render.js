@@ -114,7 +114,7 @@ function renderCode(sel) {
           });
           edit_button.innerHTML = 'edit';
           edit_area.style.display = 'none';
-          sketch.innerHTML = edit_area.value;
+          sketch.textContent = edit_area.value;
           runCode(sketch, true, i);
         }
       }
