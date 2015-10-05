@@ -58,6 +58,15 @@
       <div class="spacer"></div>
 
       <div class="left-column">
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">
+        <div class="label">
+        <img src="../img/learn/3d.jpg"></a>
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5"><h4>Getting started with WebGL</h4></a>
+        </div>
+        <p>Developing advanced graphics applications in p5.js using WEBGL mode.</p> 
+      </div>
+
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas">
         <div class="label">
         <img src="../img/learn/dom.jpg"></a>
@@ -67,7 +76,9 @@
         beyond the canvas.</p> 
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Integrating-other-libraries">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -76,10 +87,7 @@
         <p>Finding, adding, and integrating other JS libraries.</p> 
       </div>
 
-
-      <div class="spacer"></div>
-
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Local-server">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -88,7 +96,9 @@
         <p>How to set up a local server on Mac OSX, Windows, or Linux.</p> 
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js,-node.js,-socket.io">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -97,10 +107,8 @@
         <p>Using a node.js server with p5.js, communcation via socket.io.</p> 
       </div>
 
-      <div class="spacer"></div>
 
-
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Development">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>

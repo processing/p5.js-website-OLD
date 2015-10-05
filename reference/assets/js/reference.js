@@ -7065,7 +7065,7 @@ define('itemView',[
 
 });
 
-define('text!tpl/menu.html',[],function () { return '\n<% var i=0; %>\n<% var max=Math.floor(groups.length/4); %>\n<% var rem=groups.length%max; %>\n\n<% _.each(groups, function(group){ %>\n  <% var m = rem > 0 ? 1 : 0 %>\n  <% if (i === 0) { %>\n    <dl>\n  <% } %>\n  <dd><a href="#group-<%=group%>"><%=group%></a></dd>\n  <% if (i === (max+m-1)) { %>\n    </dl>\n  \t<% rem-- %>\n  \t<% i=0 %>\n  <% } else { %>\n  \t<% i++ %>\n  <% } %>\n<% }); %>';});
+define('text!tpl/menu.html',[],function () { return '\n<% var i=0; %>\n<% var max=Math.floor(groups.length/4); %>\n<% var rem=groups.length%4; %>\n\n<% _.each(groups, function(group){ %>\n  <% var m = rem > 0 ? 1 : 0 %>\n  <% if (i === 0) { %>\n    <dl>\n  <% } %>\n  <dd><a href="#group-<%=group%>"><%=group%></a></dd>\n  <% if (i === (max+m-1)) { %>\n    </dl>\n  \t<% rem-- %>\n  \t<% i=0 %>\n  <% } else { %>\n  \t<% i++ %>\n  <% } %>\n<% }); %>';});
 
 define('menuView',[
   'underscore',
@@ -7135,7 +7135,7 @@ define('menuView',[
 
 });
 
-define('text!tpl/library.html',[],function () { return '<h3><%= module.name %> library</h3>\n\n<p><%= module.description %></p>\n\n<div id="library-page" class="reference-group clearfix">  \n\n<% var t = 0; col = 0; %>\n\n<% _.each(groups, function(group){ %>\n  <% if (t == 0) { %> \n    <div class="column_<%=col%>">\n  <% } %>\n  <% if (group.name !== module.name && group.name !== \'p5\') { %>\n    <a href="<%=group.hash%>" <% if (group.module !== module.name) { %>class="core"<% } %>><h4 class="group-name <% if (t == 0) { %> first<%}%>"><%=group.name%></h4></a>\n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <a href="<%=item.hash%>" <% if (item.module !== module.name) { %>class="core"<% } %>><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a><br>\n    <% t++; %>\n  <% }); %>\n  <% if (t >= totalItems/4) { col++; t = 0; %>\n    </div>\n  <% } %>\n<% }); %>\n</div>';});
+define('text!tpl/library.html',[],function () { return '<h3><%= module.name %> library</h3>\n\n<p><%= module.description %></p>\n\n<div id="library-page" class="reference-group clearfix">  \n\n<% var t = 0; col = 0; %>\n\n<% _.each(groups, function(group){ %>\n  <% if (t == 0) { %> \n    <div class="column_<%=col%>">\n  <% } %>\n  <% if (group.name !== module.name && group.name !== \'p5\') { %>\n    <a href="<%=group.hash%>" <% if (group.module !== module.name) { %>class="core"<% } %>><h4 class="group-name <% if (t == 0) { %> first<%}%>"><%=group.name%></h4></a>\n  <% } %>\n  <% _.each(group.items, function(item) { %>\n    <a href="<%=item.hash%>" <% if (item.module !== module.name) { %>class="core"<% } %>><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a><br>\n    <% t++; %>\n  <% }); %>\n  <% if (t >= ceil(totalItems/4)) { col++; t = 0; %>\n    </div>\n  <% } %>\n<% }); %>\n</div>';});
 
 define('libraryView',[
   'underscore',
