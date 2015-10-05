@@ -12,10 +12,10 @@ function renderCode(sel) {
       var rc = (s.parentNode.className.indexOf('norender') === -1);
       setupCode(s, rc, i);
       runCode(s, rc, i);
-      // gross hack to get webgl examples working, runcode needs to get called twice??
-      if (s.textContent.indexOf('WEBGL') !== -1) {
-        setTimeout(function() {runCode(s, rc, i);}, 300);
-      };
+      // // gross hack to get webgl examples working, runcode needs to get called twice??
+      // if (s.textContent.indexOf('WEBGL') !== -1) {
+      //   setTimeout(function() {runCode(s, rc, i);}, 300);
+      // };
 
       i++;
     });
