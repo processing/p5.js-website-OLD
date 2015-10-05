@@ -12,6 +12,11 @@ function renderCode(sel) {
       var rc = (s.parentNode.className.indexOf('norender') === -1);
       setupCode(s, rc, i);
       runCode(s, rc, i);
+      // gross hack to get webgl examples working, runcode needs to get called twice??
+      if (s.textContent.indexOf('WEBGL') !== -1) {
+        setTimeout(function() {runCode(s, rc, i);}, 300);
+      };
+
       i++;
     });
   }
@@ -169,7 +174,7 @@ function renderCode(sel) {
             // this is a gross hack within a hacky script that
             // ensures the function names found are not substrings
             // proper use of regex would be preferable...
-            if (ind !== -1 && runnable[ind+f.length] === '(') {
+            if (ind !== -1) {//} && runnable[ind+f.length] === '(') {
               with (p) {
                 p[f] = eval(f);
               }
