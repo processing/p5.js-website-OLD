@@ -61,7 +61,7 @@
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">
         <div class="label">
         <img src="../img/learn/3d.jpg"></a>
-        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5"><h4>Getting started with WebGL</h4></a>
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5"><h4>WebGL</h4></a>
         </div>
         <p>Developing advanced graphics applications in p5.js using WEBGL mode.</p> 
       </div>
