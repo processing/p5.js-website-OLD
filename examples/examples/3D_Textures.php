@@ -11,7 +11,6 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Textures</h2>
           <p>Images and videos are supported for texture.
- (video source: https://vimeo.com/90312869)
  </p>
 
           <div id="exampleDisplay">

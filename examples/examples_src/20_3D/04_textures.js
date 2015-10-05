@@ -1,8 +1,8 @@
 /*
  * @name Textures
  * @description Images and videos are supported for texture.
- * (video source: https://vimeo.com/90312869)
  */
+// video source: https://vimeo.com/90312869
 var img;
 var vid;
 var theta = 0;
