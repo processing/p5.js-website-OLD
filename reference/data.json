@@ -8,46 +8,30 @@
     "files": {
         "src/3d/3d_primitives.js": {
             "name": "src/3d/3d_primitives.js",
-            "modules": {
-                "3D Primitives": 1
-            },
+            "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/camera.js": {
             "name": "src/3d/camera.js",
-            "modules": {
-                "Camera": 1
-            },
+            "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/light.js": {
             "name": "src/3d/light.js",
-            "modules": {
-                "Lights": 1
-            },
+            "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/material.js": {
             "name": "src/3d/material.js",
-            "modules": {
-                "Material": 1
-            },
+            "modules": {},
             "classes": {},
-            "fors": {
-                "p5": 1
-            },
+            "fors": {},
             "namespaces": {}
         },
         "src/3d/p5.Geometry3D.js": {
@@ -612,101 +596,6 @@
         }
     },
     "modules": {
-        "Shape": {
-            "name": "Shape",
-            "submodules": {
-                "2D Primitives": 1,
-                "Curves": 1,
-                "Vertex": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
-        "3D Primitives": {
-            "name": "3D Primitives",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "IO",
-            "namespace": "",
-            "file": "src/3d/3d_primitives.js",
-            "line": 1,
-            "requires": [
-                "core",
-                "p5.Geometry3D"
-            ]
-        },
-        "Lights, Camera": {
-            "name": "Lights, Camera",
-            "submodules": {
-                "Camera": 1,
-                "Lights": 1,
-                "Material": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
-        "Camera": {
-            "name": "Camera",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Lights, Camera",
-            "namespace": "",
-            "file": "src/3d/camera.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
-        "Lights": {
-            "name": "Lights",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Lights, Camera",
-            "namespace": "",
-            "file": "src/3d/light.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
-        "Material": {
-            "name": "Material",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "Lights, Camera",
-            "namespace": "",
-            "file": "src/3d/material.js",
-            "line": 1,
-            "requires": [
-                "core"
-            ]
-        },
         "Color": {
             "name": "Color",
             "submodules": {
@@ -759,6 +648,19 @@
                 "core",
                 "constants"
             ]
+        },
+        "Shape": {
+            "name": "Shape",
+            "submodules": {
+                "2D Primitives": 1,
+                "Curves": 1,
+                "Vertex": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
         },
         "2D Primitives": {
             "name": "2D Primitives",
@@ -1062,7 +964,7 @@
         "IO": {
             "name": "IO",
             "submodules": {
-                "3D Primitives": 1,
+                "undefined": 1,
                 "Input": 1,
                 "Output": 1,
                 "Table": 1
@@ -1113,7 +1015,7 @@
             "module": "IO",
             "namespace": "",
             "file": "src/io/files.js",
-            "line": 787
+            "line": 719
         },
         "Table": {
             "name": "Table",
@@ -1411,8 +1313,7 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "IO",
-            "submodule": "Output",
-            "namespace": ""
+            "submodule": "Output"
         },
         "p5.Color": {
             "name": "p5.Color",
@@ -1424,7 +1325,6 @@
             "extension_for": [],
             "module": "Color",
             "submodule": "Creating & Reading",
-            "namespace": "",
             "file": "src/color/p5.Color.js",
             "line": 11,
             "is_constructor": 1
@@ -1468,7 +1368,6 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Graphics.js",
             "line": 10,
             "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are\nextensive, but mirror the normal drawing API for p5.",
@@ -1503,7 +1402,6 @@
             "extension_for": [],
             "module": "Rendering",
             "submodule": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Renderer.js",
             "line": 10,
             "description": "Main graphics and rendering context, as well as the base API\nimplementation for p5.js \"core\". To be used as the superclass for\nRenderer2D and Renderer3D classes, respecitvely.",
@@ -1537,7 +1435,6 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Rendering",
-            "namespace": "",
             "file": "src/core/p5.Renderer2D.js",
             "line": 9,
             "description": "2D graphics renderer class.  Can also be used as an off-screen\ngraphics buffer. A p5.Renderer2D object can be constructed\nwith the <code>createRenderer2D()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
@@ -2395,10 +2292,18 @@
     "classitems": [
         {
             "file": "src/3d/3d_primitives.js",
+            "line": 1,
+            "description": "module Shape\nsubmodule 3D Primitives\nfor p5",
+            "requires": [
+                "core",
+                "p5.Geometry3D"
+            ],
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/3d_primitives.js",
             "line": 14,
-            "description": "Draw a plane with given a width and height",
-            "itemtype": "method",
-            "name": "plane",
+            "description": "draw a plane with given a width and height\nmethod plane",
             "params": [
                 {
                     "name": "width",
@@ -2412,22 +2317,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a plane with width 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  plane(200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spining plane with width 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateY(frameCount * 0.02);\n  plane(100, 100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 69,
-            "description": "Draw a sphere with given raduis",
-            "itemtype": "method",
-            "name": "sphere",
+            "line": 70,
+            "description": "draw a sphere with given raduis\nmethod sphere",
             "params": [
                 {
                     "name": "radius",
@@ -2442,22 +2343,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n// draw a sphere with radius 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  sphere(200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// draw a sphere with radius 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 126,
-            "description": "Draw a cylinder with given radius and height",
-            "itemtype": "method",
-            "name": "cylinder",
+            "line": 127,
+            "description": "draw a cylinder with given radius and height\nmethod  cylinder",
             "params": [
                 {
                     "name": "radius",
@@ -2477,22 +2374,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining sylinder with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cylinder(200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spining sylinder with radius 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  cylinder(100, 100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 219,
-            "description": "Draw a cone with given radius and height",
-            "itemtype": "method",
-            "name": "cone",
+            "line": 218,
+            "description": "draw a cone with given radius and height\nmethod cone",
             "params": [
                 {
                     "name": "radius",
@@ -2512,22 +2405,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spining cone with radius 100 and height 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  cone(100, 200);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 292,
-            "description": "Draw a torus with given radius and tube radius",
-            "itemtype": "method",
-            "name": "torus",
+            "line": 289,
+            "description": "draw a torus with given radius and tube radius\nmethod torus",
             "params": [
                 {
                     "name": "radius",
@@ -2547,22 +2436,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spining torus with radius 100 and tube radius 20\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  torus(100, 20);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 353,
-            "description": "Draw a box with given width, height and depth",
-            "itemtype": "method",
-            "name": "box",
+            "line": 350,
+            "description": "draw a box with given width, height and depth\nmethod  box",
             "params": [
                 {
                     "name": "width",
@@ -2581,22 +2466,27 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining box with width, height and depth 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(200, 200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spining box with width, height and depth 100\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\n\nfunction draw(){\n  background(255);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  box(100, 100, 100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/camera.js",
+            "line": 1,
+            "description": "module Lights, Camera\nsubmodule Camera\nfor p5",
+            "requires": [
+                "core"
+            ],
+            "class": "p5"
         },
         {
             "file": "src/3d/camera.js",
             "line": 12,
-            "description": "Sets camera position",
-            "itemtype": "method",
-            "name": "camera",
+            "description": "sets camera position\nmethod camera",
             "params": [
                 {
                     "name": "x",
@@ -2615,22 +2505,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw(){\n //move the camera away from the plane by a sin wave\n camera(0, 0, sin(frameCount * 0.01) * 100);\n plane(120, 120);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n camera(0, 0, 800);\n sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/camera.js",
-            "line": 47,
-            "description": "Sets perspective camera",
-            "itemtype": "method",
-            "name": "perspective",
+            "line": 46,
+            "description": "sets perspective camera\nmethod  perspective",
             "params": [
                 {
                     "name": "fovy",
@@ -2654,22 +2540,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//drag mouse to toggle the world!\n//you will see there's a vanish point\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  perspective(60 / 180 * PI, width/height, 0.1, 100);\n}\nfunction draw(){\n background(200);\n orbitControl();\n for(var i = -1; i < 2; i++){\n    for(var j = -2; j < 3; j++){\n      push();\n      translate(i*160, 0, j*160);\n      box(40, 40, 40);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//drag mouse to toggle the world\n//you will see there's a vanish point\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  perspective(60 / 180 * PI, width/height, 0.1, 100);\n}\nfunction draw(){\n background(0);\n orbitControl();\n for(var i = -5; i < 6; i++){\n    for(var j = -5; j < 6; j++){\n      push();\n      translate(i*100, 0, j*100);\n      sphere(20);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/camera.js",
-            "line": 95,
-            "description": "Setup ortho camera",
-            "itemtype": "method",
-            "name": "ortho",
+            "line": 94,
+            "description": "setup ortho camera\nmethod  ortho",
             "params": [
                 {
                     "name": "left",
@@ -2703,22 +2585,27 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//drag mouse to toggle the world!\n//there's no vanish point\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  ortho(-width/2, width/2, height/2, -height/2, 0.1, 100);\n}\nfunction draw(){\n background(200);\n orbitControl();\n for(var i = -1; i < 2; i++){\n    for(var j = -2; j < 3; j++){\n      push();\n      translate(i*160, 0, j*160);\n      box(40, 40, 40);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  ortho(-width/2, width/2, height/2, -height/2, 0.1, 100);\n}\nfunction draw(){\n background(0);\n orbitControl();\n for(var i = -5; i < 6; i++){\n    for(var j = -5; j < 6; j++){\n      push();\n      translate(i*100, 0, j*100);\n      sphere(20);\n      pop();\n    }\n  }\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Camera"
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/light.js",
+            "line": 1,
+            "description": "module Lights, Camera\nsubmodule Lights\nfor p5",
+            "requires": [
+                "core"
+            ],
+            "class": "p5"
         },
         {
             "file": "src/3d/light.js",
             "line": 12,
-            "description": "Creates an ambient light with a color",
-            "itemtype": "method",
-            "name": "ambientLight",
+            "description": "creates an ambient light with a color\nmethod  ambientLight",
             "params": [
                 {
                     "name": "v1",
@@ -2745,22 +2632,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw(){\n  background(0);\n  ambientLight(150);\n  ambientMaterial(250);\n  sphere(200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  ambientLight(150);\n  ambientMaterial(250);\n  sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Lights"
+            "class": "p5"
         },
         {
             "file": "src/3d/light.js",
             "line": 68,
-            "description": "Creates a directional light with a color and a direction",
-            "itemtype": "method",
-            "name": "directionalLight",
+            "description": "creates a directional light with a color and a direction\nmethod  directionalLight",
             "params": [
                 {
                     "name": "v1",
@@ -2804,22 +2687,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light direction\n  var dirX = (mouseX / width - 0.5) *2;\n  var dirY = (mouseY / height - 0.5) *(-2);\n  directionalLight(250, 250, 250, dirX, dirY, 0.25);\n  ambientMaterial(250);\n  sphere(200, 128);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light direction\n  var dirX = (mouseX / width - 0.5) *2;\n  var dirY = (mouseY / height - 0.5) *(-2);\n  directionalLight(250, 250, 250, dirX, dirY, 0.25);\n  ambientMaterial(250);\n  sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Lights"
+            "class": "p5"
         },
         {
             "file": "src/3d/light.js",
             "line": 188,
-            "description": "Creates a point light with a color and a light position",
-            "itemtype": "method",
-            "name": "pointLight",
+            "description": "creates a point light with a color and a light position\nmethod  pointLight",
             "params": [
                 {
                     "name": "v1",
@@ -2863,53 +2742,52 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light position\n  var locY = (mouseY / height - 0.5) *(-2);\n  var locX = (mouseX / width - 0.5) *2;\n  //to set the light position,\n  //think of the world's coordinate as:\n  // -1,1 -------- 1,1\n  //   |            |\n  //   |            |\n  //   |            |\n  // -1,-1---------1,-1\n  pointLight(250, 250, 250, locX, locY, 0);\n  ambientMaterial(250);\n  sphere(200, 128);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n  background(0);\n  //move your mouse to change light position\n  var locY = (mouseY / height - 0.5) *(-2);\n  var locX = (mouseX / width - 0.5) *2;\n  //to set the light position,\n  //think of the world's coordinate as:\n  // -1,1 -------- 1,1\n  //   |            |\n  //   |            |\n  //   |            |\n  // -1,-1---------1,-1\n  pointLight(250, 250, 250, locX, locY, 0);\n  ambientMaterial(250);\n  sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Lights"
+            "class": "p5"
+        },
+        {
+            "file": "src/3d/material.js",
+            "line": 1,
+            "description": "module Lights, Camera\nsubmodule Material\nfor p5",
+            "requires": [
+                "core"
+            ],
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
             "line": 13,
-            "description": "Normal material for geometry",
-            "itemtype": "method",
-            "name": "normalMaterial",
+            "description": "normal material for geometry\nmethod normalMaterial",
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n background(0);\n normalMaterial();\n sphere(200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//please call this function before doing any transformation\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(255);\n normalMaterial();\n sphere(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
             "line": 37,
-            "description": "Texture for geometry",
-            "itemtype": "method",
-            "name": "texture",
+            "description": "texture for geometry\nmethod texture",
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  img = loadImage(\"assets/cat.jpg\");\n}\n\nfunction draw(){\n  background(0);\n  rotateZ(frameCount * 0.01);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  //pass image as texture\n  texture(img);\n  box(200, 200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n  img = loadImage(\"assets/cat.jpg\");\n}\nfunction draw(){\n  background(255);\n  rotateZ(frameCount * 0.02);\n  rotateX(frameCount * 0.02);\n  rotateY(frameCount * 0.02);\n  // pass image as texture\n  texture(img);\n  box(60);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
-            "line": 116,
+            "line": 114,
             "description": "Helper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
             "params": [
                 {
@@ -2922,13 +2800,11 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
-            "line": 127,
+            "line": 125,
             "description": "returns the next highest power of 2 value",
             "params": [
                 {
@@ -2941,16 +2817,12 @@
                 "description": "[description]",
                 "type": "Number"
             },
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
-            "line": 140,
-            "description": "Basic material for geometry with a given color",
-            "itemtype": "method",
-            "name": "basicMaterial",
+            "line": 138,
+            "description": "basic material for geometry with a given color\nmethod  basicMaterial",
             "params": [
                 {
                     "name": "v1",
@@ -2977,22 +2849,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n background(0);\n basicMaterial(250, 0, 0);\n rotateX(frameCount * 0.01);\n rotateY(frameCount * 0.01);\n rotateZ(frameCount * 0.01);\n box(200, 200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n rotateX(frameCount * 0.02);\n rotateZ(frameCount * 0.02);\n basicMaterial(250, 0, 0);\n box(100);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
-            "line": 188,
-            "description": "Ambient material for geometry with a given color",
-            "itemtype": "method",
-            "name": "ambientMaterial",
+            "line": 184,
+            "description": "ambient material for geometry with a given color\nmethod  ambientMaterial",
             "params": [
                 {
                     "name": "v1",
@@ -3019,22 +2887,18 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw(){\n background(0);\n ambientLight(100);\n pointLight(250, 250, 250, 100, 100, 0);\n ambientMaterial(250);\n sphere(200, 128);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n pointLight(250, 250, 250, 100, 100, 0);\n ambientMaterial(250);\n sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/material.js",
-            "line": 238,
-            "description": "Specular material for geometry with a given color",
-            "itemtype": "method",
-            "name": "specularMaterial",
+            "line": 231,
+            "description": "specular material for geometry with a given color\nmethod specularMaterial",
             "params": [
                 {
                     "name": "v1",
@@ -3061,26 +2925,23 @@
                 }
             ],
             "return": {
-                "description": "the p5 object",
+                "description": "",
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw(){\n background(0);\n ambientLight(100);\n pointLight(250, 250, 250, 100, 100, 0);\n specularMaterial(250);\n sphere(200, 128);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(windowWidth, windowHeight, 'webgl');\n}\nfunction draw(){\n background(0);\n pointLight(250, 250, 250, 100, 100, 0);\n specularMaterial(250);\n sphere(100, 128);\n}\n</code>\n</div>"
             ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 7,
+            "line": 5,
             "description": "p5 Geometry3D class",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 29,
+            "line": 27,
             "description": "generate geometriy with parametric method",
             "params": [
                 {
@@ -3104,40 +2965,35 @@
                     "type": "Number"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 78,
+            "line": 76,
             "description": "merge duplicated vertices",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 147,
+            "line": 145,
             "description": "compute faceNormals for a geometry",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 172,
+            "line": 170,
             "description": "compute vertexNormals for a geometry",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 228,
+            "line": 226,
             "description": "generate an object containing information needed to create buffer",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 248,
+            "line": 246,
             "description": "turn a two dimensional array into one dimensional array",
             "params": [
                 {
@@ -3150,12 +3006,11 @@
                 "description": "1-dimensional array\n[[1, 2, 3],[4, 5, 6]] -> [1, 2, 3, 4, 5, 6]",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 260,
+            "line": 258,
             "description": "turn an array of Vector into a one dimensional array of numbers",
             "params": [
                 {
@@ -3168,8 +3023,7 @@
                 "description": "a one dimensional array of numbers\n[p5.Vector(1, 2, 3), p5.Vector(4, 5, 6)] ->\n[1, 2, 3, 4, 5, 6]",
                 "type": "Array]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3180,8 +3034,7 @@
             "todo": [
                 "see methods below needing further implementation.\nfuture consideration: implement SIMD optimizations\nwhen browser compatibility becomes available\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/\n  Reference/Global_Objects/SIMD"
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3196,8 +3049,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3211,8 +3063,7 @@
                     "optional": true
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3222,8 +3073,7 @@
                 "description": "the copy of the p5.Matrix object",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3233,8 +3083,7 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3244,8 +3093,7 @@
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3262,8 +3110,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3280,8 +3127,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3291,8 +3137,7 @@
                 "description": "Determinant of our 4x4 matrix",
                 "type": "Number"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3309,8 +3154,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3327,8 +3171,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3350,8 +3193,7 @@
                 "description": "this\ninspired by Toji's gl-matrix lib, mat4 rotation",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3370,8 +3212,7 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3403,8 +3244,7 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
@@ -3446,22 +3286,19 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Matrix.js",
             "line": 559,
             "description": "PRIVATE",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
             "line": 20,
             "description": "3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3483,8 +3320,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3494,8 +3330,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3517,8 +3352,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3548,8 +3382,7 @@
             "todo": [
                 "implement handle for components or vector as args"
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3578,8 +3411,7 @@
                 "description": "[description]",
                 "type": "This"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3601,8 +3433,7 @@
                 "description": "[description]",
                 "type": "p5.Renderer3D"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3619,8 +3450,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3637,8 +3467,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3655,8 +3484,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3666,8 +3494,7 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
@@ -3677,12 +3504,11 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/retainedMode3D.js",
-            "line": 8,
+            "line": 7,
             "description": "createBuffer",
             "params": [
                 {
@@ -3696,12 +3522,11 @@
                     "type": "String"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/retainedMode3D.js",
-            "line": 31,
+            "line": 22,
             "description": "initBuffer description",
             "params": [
                 {
@@ -3715,12 +3540,11 @@
                     "type": "Object"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/3d/retainedMode3D.js",
-            "line": 69,
+            "line": 60,
             "description": "drawBuffer",
             "params": [
                 {
@@ -3729,15 +3553,13 @@
                     "type": "String"
                 }
             ],
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
             "line": 1,
             "description": "module Utils\nsubmodule Color Utils",
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3754,8 +3576,7 @@
                 "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3772,8 +3593,7 @@
                 "description": "an array of HSB values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3790,8 +3610,7 @@
                 "description": "an array of RGBA values, on a scale of 0-1",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3808,8 +3627,7 @@
                 "description": "an array of HSL values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3826,8 +3644,7 @@
                 "description": "an array of HSBA values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/color_utils.js",
@@ -3844,8 +3661,7 @@
                 "description": "an array of HSLA values",
                 "type": "Array"
             },
-            "class": "p5",
-            "module": "Lights, Camera"
+            "class": "p5"
         },
         {
             "file": "src/color/creating_reading.js",
@@ -5018,7 +4834,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 367,
+            "line": 361,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -6215,7 +6031,7 @@
         },
         {
             "file": "src/core/p5.Renderer2D.js",
-            "line": 361,
+            "line": 359,
             "description": "Generate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
             "class": "p5.Renderer2D",
             "module": "Rendering"
@@ -6395,7 +6211,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 246,
+            "line": 254,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs.\nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\nThe redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -7908,7 +7724,7 @@
         {
             "file": "src/image/loading_displaying.js",
             "line": 17,
-            "description": "Loads an image from a path and creates a p5.Image from it.\n<br><br>\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it, place the loadImage() call in preload().\nYou may also supply a callback function to handle the image when it's ready.\n<br><br>\nThe path to the image should be relative to the HTML file\nthat links in your sketch. Loading an from a URL or other\nremote location may be blocked due to your browser's built-in\nsecurity.",
+            "description": "Loads an image from a path and creates a p5.Image from it.\n<br><br>\nThe image may not be immediately available for rendering\nIf you want to ensure that the image is ready before doing\nanything with it you can do perform those operations in the\ncallback, or place the loadImage() call in preload().\n<br><br>\nThe path to the image should be relative to the HTML file\nthat links in your sketch. Loading an from a URL or other\nremote location may be blocked due to your browser's built-in\nsecurity.",
             "itemtype": "method",
             "name": "loadImage",
             "params": [
@@ -7943,99 +7759,45 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 104,
-            "description": "Validates clipping params. Per drawImage spec sWidth and sHight cannot be\nnegative or greater than image intrinsic width and height",
-            "access": "private",
-            "tagname": "",
-            "params": [
-                {
-                    "name": "sVal",
-                    "description": "",
-                    "type": "Number"
-                },
-                {
-                    "name": "iVal",
-                    "description": "",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Number"
-            },
-            "class": "p5",
-            "module": "Image",
-            "submodule": "Loading & Displaying"
-        },
-        {
-            "file": "src/image/loading_displaying.js",
-            "line": 122,
+            "line": 98,
             "description": "Draw an image to the main canvas of the p5js sketch",
             "itemtype": "method",
             "name": "image",
             "params": [
                 {
-                    "name": "img",
+                    "name": "image",
                     "description": "the image to display",
                     "type": "p5.Image"
                 },
                 {
-                    "name": "sx",
-                    "description": "The X coordinate of the top left corner of the\n                            sub-rectangle of the source image to draw into\n                            the destination canvas.",
+                    "name": "x",
+                    "description": "x-coordinate of the image",
                     "type": "Number",
                     "optional": true,
                     "optdefault": "0"
                 },
                 {
-                    "name": "sy",
-                    "description": "The Y coordinate of the top left corner of the\n                            sub-rectangle of the source image to draw into\n                            the destination canvas.",
+                    "name": "y",
+                    "description": "y-coordinate of the image",
                     "type": "Number",
                     "optional": true,
                     "optdefault": "0"
                 },
                 {
-                    "name": "sWidth",
-                    "description": "The width of the sub-rectangle of the\n                                   source image to draw into the destination\n                                   canvas.",
-                    "type": "Number",
-                    "optional": true,
-                    "optdefault": "img.width"
-                },
-                {
-                    "name": "sHeight",
-                    "description": "The height of the sub-rectangle of the\n                                     source image to draw into the\n                                     destination context.",
-                    "type": "Number",
-                    "optional": true,
-                    "optdefault": "img.height"
-                },
-                {
-                    "name": "dx",
-                    "description": "The X coordinate in the destination canvas at\n                             which to place the top-left corner of the\n                             source image.",
-                    "type": "Number",
-                    "optional": true,
-                    "optdefault": "0"
-                },
-                {
-                    "name": "dy",
-                    "description": "The Y coordinate in the destination canvas at\n                             which to place the top-left corner of the\n                             source image.",
-                    "type": "Number",
-                    "optional": true,
-                    "optdefault": "0"
-                },
-                {
-                    "name": "dWidth",
-                    "description": "The width to draw the image in the destination\n                             canvas. This allows scaling of the drawn image.",
+                    "name": "width",
+                    "description": "width to display the image",
                     "type": "Number",
                     "optional": true
                 },
                 {
-                    "name": "dHeight",
-                    "description": "The height to draw the image in the destination\n                             canvas. This allows scaling of the drawn image.",
+                    "name": "height",
+                    "description": "height to display the image",
                     "type": "Number",
                     "optional": true
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/laDefense.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n  image(img, 0, 0, 100, 100);\n  image(img, 0, 0, 100, 100, 0, 0, 100, 100);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  // here we use a callback to display the image after loading\n  loadImage(\"assets/laDefense.jpg\", function(img) {\n    image(img, 0, 0);\n  });\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/laDefense.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  // here we use a callback to display the image after loading\n  loadImage(\"assets/laDefense.jpg\", function(img) {\n    image(img, 0, 0);\n  });\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Image",
@@ -8043,7 +7805,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 222,
+            "line": 155,
             "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use\nwhite as the tint color and specify an alpha value. For instance,\ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()).\n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
             "itemtype": "method",
             "name": "tint",
@@ -8081,7 +7843,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 291,
+            "line": 224,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -8094,7 +7856,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 316,
+            "line": 249,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -8113,7 +7875,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 352,
+            "line": 285,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -8788,16 +8550,6 @@
         {
             "file": "src/io/files.js",
             "line": 16,
-            "description": "Checks if we are in preload and returns the last arg which will be the\n_decrementPreload function if called from a loadX() function.  Should\nonly be used in loadX() functions.",
-            "access": "private",
-            "tagname": "",
-            "class": "p5",
-            "module": "IO",
-            "submodule": "Input"
-        },
-        {
-            "file": "src/io/files.js",
-            "line": 35,
             "description": "Loads an opentype font file (.otf, .ttf) from a file or a URL,\nand returns a PFont Object. This method is asynchronous,\nmeaning it may not finish before the next line in your sketch\nis executed.\n<br><br>\nThe path to the font should be relative to the HTML file\nthat links in your sketch. Loading an from a URL or other\nremote location may be blocked due to your browser's built-in\nsecurity.",
             "itemtype": "method",
             "name": "loadFont",
@@ -8819,7 +8571,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n\n<p>Calling loadFont() inside preload() guarantees that the load\noperation will have completed before setup() and draw() are called.</p>\n\n<div><code>\nvar myFont;\nfunction preload() {\n  myFont = loadFont('assets/AvenirNextLTPro-Demi.otf');\n}\n\nfunction setup() {\n  fill('#ED225D');\n  textFont(myFont);\n  textSize(36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadFont('assets/AvenirNextLTPro-Demi.otf', drawText);\n}\n\nfunction drawText(font) {\n  fill('#ED225D');\n  textFont(font, 36);\n  text('p5*js', 10, 50);\n}\n\n</code></div>\n"
+                "\n\n<p>Calling loadFont() inside preload() guarantees that the load\noperation will have completed before setup() and draw() are called.</p>\n\n<div><code>\nvar myFont;\nfunction preload() {\n  myFont = loadFont('assets/AvenirNextLTPro-Demi.otf');\n}\n\nfunction setup() {\n  fill('#ED225D');\n  textFont(myFont);\n  textSize(36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\n<p>Outside preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadFont('assets/AvenirNextLTPro-Demi.otf', drawText);\n}\n\nfunction drawText(font) {\n  fill('#ED225D');\n  textFont(font, 36);\n  text('p5*js', 10, 50);\n}\n\n</code></div>\n"
             ],
             "class": "p5",
             "module": "IO",
@@ -8827,7 +8579,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 134,
+            "line": 110,
             "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadJSON",
@@ -8855,7 +8607,7 @@
                 "type": "Object|Array"
             },
             "example": [
-                "\n\n<p>Calling loadJSON() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar weather;\nfunction preload() {\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,UK';\n  weather = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n<div><code>\nfunction setup() {\n  noLoop();\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA';\n  loadJSON(url, drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n"
+                "\n\n<p>Calling loadJSON() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar weather;\nfunction preload() {\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,UK';\n  weather = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n<p>Outside preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  noLoop();\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA';\n  loadJSON(url, drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n"
             ],
             "class": "p5",
             "module": "IO",
@@ -8863,7 +8615,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 239,
+            "line": 197,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -8885,7 +8637,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n\n<p>Calling loadStrings() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar result;\nfunction preload() {\n  result = loadStrings('assets/test.txt');\n}\n\nfunction setup() {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadStrings('assets/test.txt', pickString);\n}\n\nfunction pickString(result) {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>"
+                "\n\n<p>Calling loadStrings() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar result;\nfunction preload() {\n  result = loadStrings('assets/test.txt');\n}\n\nfunction setup() {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>\n\n<p>Outside preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadStrings('assets/test.txt', pickString);\n}\n\nfunction pickString(result) {\n  background(200);\n  var ind = floor(random(result.length));\n  text(result[ind], 10, 10, 80, 80);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "IO",
@@ -8893,8 +8645,8 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 323,
-            "description": "<p>Reads the contents of a file or URL and creates a p5.Table object with\nits values. If a file is specified, it must be located in the sketch's\n\"data\" folder. The filename parameter can also be a URL to a file found\nonline. By default, the file is assumed to be comma-separated (in CSV\nformat). Table only looks for a header row if the 'header' option is\nincluded.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas. For example:\n<br><br>\n<code>\n  loadTable(\"my_csv_file.csv\", \"csv\", \"header\")\n</code>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadTable() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n</p>",
+            "line": 271,
+            "description": "<p>Reads the contents of a file or URL and creates a p5.Table object with\nits values. If a file is specified, it must be located in the sketch's\n\"data\" folder. The filename parameter can also be a URL to a file found\nonline. By default, the file is assumed to be comma-separated (in CSV\nformat). Table only looks for a header row if the 'header' option is\nincluded.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas. For example:\n<br><br>\n<code>\n  loadTable(\"my_csv_file.csv\", \"csv\", \"header\")\n</code>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadTable() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.\n</p>",
             "itemtype": "method",
             "name": "loadTable",
             "params": [
@@ -8929,8 +8681,8 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 611,
-            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>",
+            "line": 550,
+            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\nOutside preload(), you may supply a callback function to handle the object.",
             "itemtype": "method",
             "name": "loadXML",
             "params": [
@@ -8956,7 +8708,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 684,
+            "line": 616,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -8991,7 +8743,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 703,
+            "line": 635,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -9026,7 +8778,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 721,
+            "line": 653,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpDo",
@@ -9067,7 +8819,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 879,
+            "line": 811,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save()\nwithin draw if it's looping, as the save() function will open a new save\ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename.\nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n\n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Renderer object as an image\n\nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n\nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n\nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -9094,7 +8846,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1000,
+            "line": 932,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveJSON",
@@ -9125,7 +8877,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1056,
+            "line": 988,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveStrings",
@@ -9150,7 +8902,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1121,
+            "line": 1053,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveTable",
@@ -9180,7 +8932,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1237,
+            "line": 1169,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -9207,7 +8959,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1258,
+            "line": 1190,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -9232,7 +8984,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1294,
+            "line": 1226,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -9253,7 +9005,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1326,
+            "line": 1258,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -9267,7 +9019,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1338,
+            "line": 1270,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -9994,7 +9746,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var x = -3;\n  var y = abs(x);\n\n  print(x); // -3\n  print(y); // 3\n}\n</code></div>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var x = -3;\n  var y = abs(x);\n\n  print(x); // -3\n  print(y); // 3\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10018,7 +9770,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  // map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the ceiling of the mapped number.\n  var bx = ceil(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5);\n  text(nfc(bx,1,1), bx, by - 5);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  // map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the ceiling of the mapped number.\n  var bx = ceil(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5);\n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10052,7 +9804,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n\n  var leftWall = 25;\n  var rightWall = 75;\n\n  // xm is just the mouseX, while\n  // xc is the mouseX, but constrained\n  // between the leftWall and rightWall!\n  var xm = mouseX;\n  var xc = constrain(mouseX, leftWall, rightWall);\n\n  // Draw the walls.\n  stroke(150);\n  line(leftWall, 0, leftWall, height);\n  line(rightWall, 0, rightWall, height);\n\n  // Draw xm and xc as circles.\n  noStroke();\n  fill(150);\n  ellipse(xm, 33, 9,9); // Not Constrained\n  fill(0);\n  ellipse(xc, 66, 9,9); // Constrained\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n\n  var leftWall = 25;\n  var rightWall = 75;\n\n  // xm is just the mouseX, while\n  // xc is the mouseX, but constrained\n  // between the leftWall and rightWall!\n  var xm = mouseX;\n  var xc = constrain(mouseX, leftWall, rightWall);\n\n  // Draw the walls.\n  stroke(150);\n  line(leftWall, 0, leftWall, height);\n  line(rightWall, 0, rightWall, height);\n\n  // Draw xm and xc as circles.\n  noStroke();\n  fill(150);\n  ellipse(xm, 33, 9,9); // Not Constrained\n  fill(0);\n  ellipse(xc, 66, 9,9); // Constrained\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10091,7 +9843,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\n// Move your mouse inside the canvas to see the\n// change in distance between two points!\nfunction draw() {\n  background(200);\n  fill(0);\n\n  var x1 = 10;\n  var y1 = 90;\n  var x2 = mouseX;\n  var y2 = mouseY;\n\n  line(x1, y1, x2, y2);\n  ellipse(x1, y1, 7, 7);\n  ellipse(x2, y2, 7, 7);\n\n  // d is the length of the line\n  // the distance from point 1 to point 2.\n  var d = int(dist(x1, y1, x2, y2));\n\n  // Let's write d along the line we are drawing!\n  push();\n  translate( (x1+x2)/2, (y1+y2)/2 );\n  rotate( atan2(y2-y1,x2-x1) );\n  text(nfc(d,1,1), 0, -5);\n  pop();\n  // Fancy!\n}\n</code></div>"
+                "\n<div><code>\n// Move your mouse inside the canvas to see the\n// change in distance between two points!\nfunction draw() {\n  background(200);\n  fill(0);\n\n  var x1 = 10;\n  var y1 = 90;\n  var x2 = mouseX;\n  var y2 = mouseY;\n\n  line(x1, y1, x2, y2);\n  ellipse(x1, y1, 7, 7);\n  ellipse(x2, y2, 7, 7);\n\n  // d is the length of the line\n  // the distance from point 1 to point 2.\n  var d = int(dist(x1, y1, x2, y2));\n\n  // Let's write d along the line we are drawing!\n  push();\n  translate( (x1+x2)/2, (y1+y2)/2 );\n  rotate( atan2(y2-y1,x2-x1) );\n  text(nfc(d,1,1), 0, -5);\n  pop();\n  // Fancy!\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10115,7 +9867,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n\n  // Compute the exp() function with a value between 0 and 2\n  var xValue = map(mouseX, 0, width, 0, 2);\n  var yValue = exp(xValue);\n\n  var y = map(yValue, 0, 8, height, 0);\n\n  var legend = \"exp (\" + nfc(xValue, 3) +\")\\n= \" + nf(yValue, 1, 4);\n  stroke(150);\n  line(mouseX, y, mouseX, height);\n  fill(0);\n  text(legend, 5, 15);\n  noStroke();\n  ellipse (mouseX,y, 7, 7);\n\n  // Draw the exp(x) curve,\n  // over the domain of x from 0 to 2\n  noFill();\n  stroke(0);\n  beginShape();\n  for (var x = 0; x < width; x++) {\n    xValue = map(x, 0, width, 0, 2);\n    yValue = exp(xValue);\n    y = map(yValue, 0, 8, height, 0);\n    vertex(x, y);\n  }\n\n  endShape();\n  line(0, 0, 0, height);\n  line(0, height-1, width, height-1);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n\n  // Compute the exp() function with a value between 0 and 2\n  var xValue = map(mouseX, 0, width, 0, 2);\n  var yValue = exp(xValue);\n\n  var y = map(yValue, 0, 8, height, 0);\n\n  var legend = \"exp (\" + nfc(xValue, 3) +\")\\n= \" + nf(yValue, 1, 4);\n  stroke(150);\n  line(mouseX, y, mouseX, height);\n  fill(0);\n  text(legend, 5, 15);\n  noStroke();\n  ellipse (mouseX,y, 7, 7);\n\n  // Draw the exp(x) curve,\n  // over the domain of x from 0 to 2\n  noFill();\n  stroke(0);\n  beginShape();\n  for (var x = 0; x < width; x++) {\n    xValue = map(x, 0, width, 0, 2);\n    yValue = exp(xValue);\n    y = map(yValue, 0, 8, height, 0);\n    vertex(x, y);\n  }\n\n  endShape();\n  line(0, 0, 0, height);\n  line(0, height-1, width, height-1);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10139,7 +9891,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the floor of the mapped number.\n  var bx = floor(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5);\n  text(nfc(bx,1,1), bx, by - 5);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  //Get the floor of the mapped number.\n  var bx = floor(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5);\n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10173,7 +9925,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  background(200);\n  var a = 20;\n  var b = 80;\n  var c = lerp(a,b, .2);\n  var d = lerp(a,b, .5);\n  var e = lerp(a,b, .8);\n\n  var y = 50\n\n  strokeWeight(5);\n  stroke(0); // Draw the original points in black\n  point(a, y);\n  point(b, y);\n\n  stroke(100); // Draw the lerp points in gray\n  point(c, y);\n  point(d, y);\n  point(e, y);\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  background(200);\n  var a = 20;\n  var b = 80;\n  var c = lerp(a,b, .2);\n  var d = lerp(a,b, .5);\n  var e = lerp(a,b, .8);\n\n  var y = 50\n\n  strokeWeight(5);\n  stroke(0); // Draw the original points in black\n  point(a, y);\n  point(b, y);\n\n  stroke(100); // Draw the lerp points in gray\n  point(c, y);\n  point(d, y);\n  point(e, y);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10197,7 +9949,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  var maxX = 2.8;\n  var maxY = 1.5;\n\n  // Compute the natural log of a value between 0 and maxX\n  var xValue = map(mouseX, 0, width, 0, maxX);\n  if (xValue > 0) { // Cannot take the log of a negative number.\n    var yValue = log(xValue);\n    var y = map(yValue, -maxY, maxY, height, 0);\n\n    // Display the calculation occurring.\n    var legend = \"log(\" + nf(xValue, 1, 2) + \")\\n= \" + nf(yValue, 1, 3);\n    stroke(150);\n    line(mouseX, y, mouseX, height);\n    fill(0);\n    text (legend, 5, 15);\n    noStroke();\n    ellipse (mouseX, y, 7, 7);\n  }\n\n  // Draw the log(x) curve,\n  // over the domain of x from 0 to maxX\n  noFill();\n  stroke(0);\n  beginShape();\n  for(var x=0; x < width; x++) {\n    xValue = map(x, 0, width, 0, maxX);\n    yValue = log(xValue);\n    y = map(yValue, -maxY, maxY, height, 0);\n    vertex(x, y);\n  }\n  endShape();\n  line(0,0,0,height);\n  line(0,height/2,width, height/2);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  var maxX = 2.8;\n  var maxY = 1.5;\n\n  // Compute the natural log of a value between 0 and maxX\n  var xValue = map(mouseX, 0, width, 0, maxX);\n  if (xValue > 0) { // Cannot take the log of a negative number.\n    var yValue = log(xValue);\n    var y = map(yValue, -maxY, maxY, height, 0);\n\n    // Display the calculation occurring.\n    var legend = \"log(\" + nf(xValue, 1, 2) + \")\\n= \" + nf(yValue, 1, 3);\n    stroke(150);\n    line(mouseX, y, mouseX, height);\n    fill(0);\n    text (legend, 5, 15);\n    noStroke();\n    ellipse (mouseX, y, 7, 7);\n  }\n\n  // Draw the log(x) curve,\n  // over the domain of x from 0 to maxX\n  noFill();\n  stroke(0);\n  beginShape();\n  for(var x=0; x<width; x++) {\n    xValue = map(x, 0, width, 0, maxX);\n    yValue = log(xValue);\n    y = map(yValue, -maxY, maxY, height, 0);\n    vertex(x, y);\n  }\n  endShape();\n  line(0,0,0,height);\n  line(0,height/2,width, height/2);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10226,7 +9978,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  var x1 = 20;\n  var x2 = 80;\n  var y1 = 30;\n  var y2 = 70;\n\n  line(0, 0, x1, y1);\n  print(mag(x1, y1));  // Prints \"36.05551\"\n  line(0, 0, x2, y1);\n  print(mag(x2, y1));  // Prints \"85.44004\"\n  line(0, 0, x1, y2);\n  print(mag(x1, y2));  // Prints \"72.8011\"\n  line(0, 0, x2, y2);\n  print(mag(x2, y2));  // Prints \"106.30146\"\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  var x1 = 20;\n  var x2 = 80;\n  var y1 = 30;\n  var y2 = 70;\n\n  line(0, 0, x1, y1);\n  print(mag(x1, y1));  // Prints \"36.05551\"\n  line(0, 0, x2, y1);\n  print(mag(x2, y1));  // Prints \"85.44004\"\n  line(0, 0, x1, y2);\n  print(mag(x1, y2));  // Prints \"72.8011\"\n  line(0, 0, x2, y2);\n  print(mag(x2, y2));  // Prints \"106.30146\"\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10270,7 +10022,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n  <div><code>\n    createCanvas(200, 200);\n    var value = 25;\n    var m = map(value, 0, 100, 0, width);\n    ellipse(m, 200, 10, 10);\n  </code></div>\n\n  <div><code>\n    function setup() {\n      createCanvs(200, 200);\n      noStroke();\n    }\n\n    function draw() {\n      background(204);\n      var x1 = map(mouseX, 0, width, 50, 150);\n      ellipse(x1, 75, 50, 50);\n      var x2 = map(mouseX, 0, width, 0, 200);\n      ellipse(x2, 125, 50, 50);\n    }\n  </code></div>"
+                "\n  <div><code>\n    createCanvas(200, 200);\n    var value = 25;\n    var m = map(value, 0, 100, 0, width);\n    ellipse(m, 200, 10, 10);\n  </code></div>\n\n  <div><code>\n    function setup() {\n      createCanvs(200, 200);\n      noStroke();\n    }\n\n    function draw() {\n      background(204);\n      var x1 = map(mouseX, 0, width, 50, 150);\n      ellipse(x1, 75, 50, 50);\n      var x2 = map(mouseX, 0, width, 0, 200);\n      ellipse(x2, 125, 50, 50);\n    }\n  </div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10294,7 +10046,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how max() works!\n  numArray = new Array(2,1,5,4,8,9);\n  fill(0);\n  noStroke();\n  text(\"Array Elements\", 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15;\n  var elemsY = 25;\n  for(var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  maxX = 33;\n  maxY = 80;\n  // Draw the Maximum value in the array.\n  textSize(32);\n  text(max(numArray), maxX, maxY);\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how max() works!\n  numArray = new Array(2,1,5,4,8,9);\n  fill(0);\n  noStroke();\n  text(\"Array Elements\", 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15;\n  var elemsY = 25;\n  for(var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  maxX = 33;\n  maxY = 80;\n  // Draw the Maximum value in the array.\n  textSize(32);\n  text(max(numArray), maxX, maxY);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10318,7 +10070,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how min() works!\n  numArray = new Array(2,1,5,4,8,9);\n  fill(0);\n  noStroke();\n  text(\"Array Elements\", 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15;\n  var elemsY = 25;\n  for(var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  maxX = 33;\n  maxY = 80;\n  // Draw the Minimum value in the array.\n  textSize(32);\n  text(min(numArray), maxX, maxY);\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  // Change the elements in the array and run the sketch\n  // to show how min() works!\n  numArray = new Array(2,1,5,4,8,9);\n  fill(0);\n  noStroke();\n  text(\"Array Elements\", 0, 10);\n  // Draw all numbers in the array\n  var spacing = 15;\n  var elemsY = 25;\n  for(var i = 0; i < numArray.length; i++) {\n    text(numArray[i], i * spacing, elemsY);\n  }\n  maxX = 33;\n  maxY = 80;\n  // Draw the Minimum value in the array.\n  textSize(32);\n  text(min(numArray), maxX, maxY);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10352,7 +10104,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  currentNum = mouseX;\n  lowerBound = 0;\n  upperBound = width; //100;\n  normalized = norm(currentNum, lowerBound, upperBound);\n  lineY = 70\n  line(0, lineY, width, lineY);\n  //Draw an ellipse mapped to the non-normalized value.\n  noStroke();\n  fill(50)\n  var s = 7; // ellipse size\n  ellipse(currentNum, lineY, s, s);\n\n  // Draw the guide\n  guideY = lineY + 15;\n  text(\"0\", 0, guideY);\n  textAlign(RIGHT);\n  text(\"100\", width, guideY);\n\n  // Draw the normalized value\n  textAlign(LEFT);\n  fill(0);\n  textSize(32);\n  normalY = 40;\n  normalX = 20;\n  text(normalized, normalX, normalY);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  currentNum = mouseX;\n  lowerBound = 0;\n  upperBound = width; //100;\n  normalized = norm(currentNum, lowerBound, upperBound);\n  lineY = 70\n  line(0, lineY, width, lineY);\n  //Draw an ellipse mapped to the non-normalized value.\n  noStroke();\n  fill(50)\n  var s = 7; // ellipse size\n  ellipse(currentNum, lineY, s, s);\n\n  // Draw the guide\n  guideY = lineY + 15;\n  text(\"0\", 0, guideY);\n  textAlign(RIGHT);\n  text(\"100\", width, guideY);\n\n  // Draw the normalized value\n  textAlign(LEFT);\n  fill(0);\n  textSize(32);\n  normalY = 40;\n  normalX = 20;\n  text(normalized, normalX, normalY);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10381,7 +10133,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  //Exponentially increase the size of an ellipse.\n  eSize = 3; // Original Size\n  eLoc = 10; // Original Location\n\n  ellipse(eLoc, eLoc, eSize, eSize);\n\n  ellipse(eLoc*2, eLoc*2, pow(eSize, 2), pow(eSize, 2));\n\n  ellipse(eLoc*4, eLoc*4, pow(eSize, 3), pow(eSize, 3));\n\n  ellipse(eLoc*8, eLoc*8, pow(eSize, 4), pow(eSize, 4));\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  //Exponentially increase the size of an ellipse.\n  eSize = 3; // Original Size\n  eLoc = 10; // Original Location\n\n  ellipse(eLoc, eLoc, eSize, eSize);\n\n  ellipse(eLoc*2, eLoc*2, pow(eSize, 2), pow(eSize, 2));\n\n  ellipse(eLoc*4, eLoc*4, pow(eSize, 3), pow(eSize, 3));\n\n  ellipse(eLoc*8, eLoc*8, pow(eSize, 4), pow(eSize, 4));\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10405,7 +10157,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  // Round the mapped number.\n  var bx = round(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5);\n  text(nfc(bx,1,1), bx, by - 5);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  //map, mouseX between 0 and 5.\n  var ax = map(mouseX, 0, 100, 0, 5);\n  var ay = 66;\n\n  // Round the mapped number.\n  var bx = round(map(mouseX, 0, 100, 0,5));\n  var by = 33;\n\n  // Multiply the mapped numbers by 20 to more easily\n  // see the changes.\n  stroke(0);\n  fill(0);\n  line(0, ay, ax * 20, ay);\n  line(0, by, bx * 20, by);\n\n  // Reformat the float returned by map and draw it.\n  noStroke();\n  text(nfc(ax, 2,2), ax, ay - 5);\n  text(nfc(bx,1,1), bx, by - 5);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10429,7 +10181,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = map(mouseX, 0, width, 0, 10);\n  y1 = 80;\n  x2 = sq(x1);\n  y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100)\n  line(0, height/2, width, height/2);\n\n  // Draw text.\n  noStroke();\n  fill(0);\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sqrt(x) = \" + x2, 0, y2 + spacing);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = map(mouseX, 0, width, 0, 10);\n  y1 = 80;\n  x2 = sq(x1);\n  y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100)\n  line(0, height/2, width, height/2);\n\n  // Draw text.\n  noStroke();\n  fill(0);\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sqrt(x) = \" + x2, 0, y2 + spacing);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10453,7 +10205,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = mouseX;\n  y1 = 80;\n  x2 = sqrt(x1);\n  y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100)\n  line(0, height/2, width, height/2);\n\n  // Draw text.\n  noStroke();\n  fill(0);\n  var spacing = 15;\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sqrt(x) = \" + x2, 0, y2 + spacing);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = mouseX;\n  y1 = 80;\n  x2 = sqrt(x1);\n  y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100)\n  line(0, height/2, width, height/2);\n\n  // Draw text.\n  noStroke();\n  fill(0);\n  var spacing = 15;\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sqrt(x) = \" + x2, 0, y2 + spacing);\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Math",
@@ -17602,10 +17354,6 @@
             "line": " src/image/filters.js:240"
         },
         {
-            "message": "replacing incorrect tag: returns with return",
-            "line": " src/image/loading_displaying.js:104"
-        },
-        {
             "message": "replacing incorrect tag: params with param",
             "line": " lib/addons/p5.sound.js:1356"
         },
@@ -17618,44 +17366,128 @@
             "line": " lib/addons/p5.sound.js:4997"
         },
         {
+            "message": "Missing item type\nmodule Shape\nsubmodule 3D Primitives\nfor p5",
+            "line": " src/3d/3d_primitives.js:1"
+        },
+        {
+            "message": "Missing item type\ndraw a plane with given a width and height\nmethod plane",
+            "line": " src/3d/3d_primitives.js:14"
+        },
+        {
+            "message": "Missing item type\ndraw a sphere with given raduis\nmethod sphere",
+            "line": " src/3d/3d_primitives.js:70"
+        },
+        {
+            "message": "Missing item type\ndraw a cylinder with given radius and height\nmethod  cylinder",
+            "line": " src/3d/3d_primitives.js:127"
+        },
+        {
+            "message": "Missing item type\ndraw a cone with given radius and height\nmethod cone",
+            "line": " src/3d/3d_primitives.js:218"
+        },
+        {
+            "message": "Missing item type\ndraw a torus with given radius and tube radius\nmethod torus",
+            "line": " src/3d/3d_primitives.js:289"
+        },
+        {
+            "message": "Missing item type\ndraw a box with given width, height and depth\nmethod  box",
+            "line": " src/3d/3d_primitives.js:350"
+        },
+        {
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Camera\nfor p5",
+            "line": " src/3d/camera.js:1"
+        },
+        {
+            "message": "Missing item type\nsets camera position\nmethod camera",
+            "line": " src/3d/camera.js:12"
+        },
+        {
+            "message": "Missing item type\nsets perspective camera\nmethod  perspective",
+            "line": " src/3d/camera.js:46"
+        },
+        {
+            "message": "Missing item type\nsetup ortho camera\nmethod  ortho",
+            "line": " src/3d/camera.js:94"
+        },
+        {
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Lights\nfor p5",
+            "line": " src/3d/light.js:1"
+        },
+        {
+            "message": "Missing item type\ncreates an ambient light with a color\nmethod  ambientLight",
+            "line": " src/3d/light.js:12"
+        },
+        {
+            "message": "Missing item type\ncreates a directional light with a color and a direction\nmethod  directionalLight",
+            "line": " src/3d/light.js:68"
+        },
+        {
+            "message": "Missing item type\ncreates a point light with a color and a light position\nmethod  pointLight",
+            "line": " src/3d/light.js:188"
+        },
+        {
+            "message": "Missing item type\nmodule Lights, Camera\nsubmodule Material\nfor p5",
+            "line": " src/3d/material.js:1"
+        },
+        {
+            "message": "Missing item type\nnormal material for geometry\nmethod normalMaterial",
+            "line": " src/3d/material.js:13"
+        },
+        {
+            "message": "Missing item type\ntexture for geometry\nmethod texture",
+            "line": " src/3d/material.js:37"
+        },
+        {
             "message": "Missing item type\nHelper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
-            "line": " src/3d/material.js:116"
+            "line": " src/3d/material.js:114"
         },
         {
             "message": "Missing item type\nreturns the next highest power of 2 value",
-            "line": " src/3d/material.js:127"
+            "line": " src/3d/material.js:125"
+        },
+        {
+            "message": "Missing item type\nbasic material for geometry with a given color\nmethod  basicMaterial",
+            "line": " src/3d/material.js:138"
+        },
+        {
+            "message": "Missing item type\nambient material for geometry with a given color\nmethod  ambientMaterial",
+            "line": " src/3d/material.js:184"
+        },
+        {
+            "message": "Missing item type\nspecular material for geometry with a given color\nmethod specularMaterial",
+            "line": " src/3d/material.js:231"
         },
         {
             "message": "Missing item type\np5 Geometry3D class",
-            "line": " src/3d/p5.Geometry3D.js:7"
+            "line": " src/3d/p5.Geometry3D.js:5"
         },
         {
             "message": "Missing item type\ngenerate geometriy with parametric method",
-            "line": " src/3d/p5.Geometry3D.js:29"
+            "line": " src/3d/p5.Geometry3D.js:27"
         },
         {
             "message": "Missing item type\nmerge duplicated vertices",
-            "line": " src/3d/p5.Geometry3D.js:78"
+            "line": " src/3d/p5.Geometry3D.js:76"
         },
         {
             "message": "Missing item type\ncompute faceNormals for a geometry",
-            "line": " src/3d/p5.Geometry3D.js:147"
+            "line": " src/3d/p5.Geometry3D.js:145"
         },
         {
             "message": "Missing item type\ncompute vertexNormals for a geometry",
-            "line": " src/3d/p5.Geometry3D.js:172"
+            "line": " src/3d/p5.Geometry3D.js:170"
         },
         {
             "message": "Missing item type\ngenerate an object containing information needed to create buffer",
-            "line": " src/3d/p5.Geometry3D.js:228"
+            "line": " src/3d/p5.Geometry3D.js:226"
         },
         {
             "message": "Missing item type\nturn a two dimensional array into one dimensional array",
-            "line": " src/3d/p5.Geometry3D.js:248"
+            "line": " src/3d/p5.Geometry3D.js:246"
         },
         {
             "message": "Missing item type\nturn an array of Vector into a one dimensional array of numbers",
-            "line": " src/3d/p5.Geometry3D.js:260"
+            "line": " src/3d/p5.Geometry3D.js:258"
         },
         {
             "message": "Missing item type",
@@ -17771,15 +17603,15 @@
         },
         {
             "message": "Missing item type\ncreateBuffer",
-            "line": " src/3d/retainedMode3D.js:8"
+            "line": " src/3d/retainedMode3D.js:7"
         },
         {
             "message": "Missing item type\ninitBuffer description",
-            "line": " src/3d/retainedMode3D.js:31"
+            "line": " src/3d/retainedMode3D.js:22"
         },
         {
             "message": "Missing item type\ndrawBuffer",
-            "line": " src/3d/retainedMode3D.js:69"
+            "line": " src/3d/retainedMode3D.js:60"
         },
         {
             "message": "Missing item type\nmodule Utils\nsubmodule Color Utils",
@@ -17919,7 +17751,7 @@
         },
         {
             "message": "Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "line": " src/core/p5.Renderer2D.js:361"
+            "line": " src/core/p5.Renderer2D.js:359"
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
@@ -18010,12 +17842,8 @@
             "line": " src/image/image.js:8"
         },
         {
-            "message": "Missing item type\nValidates clipping params. Per drawImage spec sWidth and sHight cannot be\nnegative or greater than image intrinsic width and height",
-            "line": " src/image/loading_displaying.js:104"
-        },
-        {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:316"
+            "line": " src/image/loading_displaying.js:249"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
@@ -18026,28 +17854,24 @@
             "line": " src/image/p5.Image.js:121"
         },
         {
-            "message": "Missing item type\nChecks if we are in preload and returns the last arg which will be the\n_decrementPreload function if called from a loadX() function.  Should\nonly be used in loadX() functions.",
-            "line": " src/io/files.js:16"
-        },
-        {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1237"
+            "line": " src/io/files.js:1169"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1258"
+            "line": " src/io/files.js:1190"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1294"
+            "line": " src/io/files.js:1226"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1326"
+            "line": " src/io/files.js:1258"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1338"
+            "line": " src/io/files.js:1270"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
