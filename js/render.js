@@ -160,7 +160,6 @@ function renderCode(sel) {
             eval(runnable);
           }
 
-          console.log(runnable)
           var fxns = ['setup', 'draw', 'preload', 'mousePressed', 'mouseReleased', 
           'mouseMoved', 'mouseDragged', 'mouseClicked', 'mouseWheel', 
           'touchStarted', 'touchMoved', 'touchEnded', 
