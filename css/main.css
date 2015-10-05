@@ -1318,6 +1318,10 @@ footer {
 
 @media (max-width: 719px) {
 
+    #home-sketch-frame {
+      display: none;
+    }
+
     #family p.left {
         margin:0.375em 0 0.375em 1em !important;
     }
