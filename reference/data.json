@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.13",
+        "version": "0.4.14",
         "url": ""
     },
     "files": {
@@ -5807,7 +5807,7 @@
         {
             "file": "src/core/p5.Element.js",
             "line": 36,
-            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID, DOM\n node, or p5.Element.",
+            "description": "Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID, DOM\n node, or p5.Element. If no arguments given, parent node is returned.",
             "itemtype": "method",
             "name": "parent",
             "params": [
@@ -5830,7 +5830,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 81,
+            "line": 85,
             "description": "Sets the ID of the element",
             "itemtype": "method",
             "name": "id",
@@ -5851,7 +5851,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 94,
+            "line": 98,
             "description": "Adds given class to the element",
             "itemtype": "method",
             "name": "class",
@@ -5872,7 +5872,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 107,
+            "line": 111,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5896,7 +5896,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 152,
+            "line": 156,
             "description": "The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5917,7 +5917,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 171,
+            "line": 175,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5938,7 +5938,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 188,
+            "line": 192,
             "description": "The .mouseClicked() function is called once after a mouse button is\npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5959,7 +5959,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 203,
+            "line": 207,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5980,7 +5980,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 219,
+            "line": 223,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -6001,7 +6001,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 235,
+            "line": 239,
             "description": "The .changed() function is called when the value of an element is changed.\nThis can be used to attach an element specific event listener.",
             "itemtype": "method",
             "name": "changed",
@@ -6022,7 +6022,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 249,
+            "line": 253,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -6043,7 +6043,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 264,
+            "line": 268,
             "description": "The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -6067,7 +6067,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 308,
+            "line": 312,
             "description": "The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -6091,7 +6091,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 344,
+            "line": 348,
             "description": "The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -6115,7 +6115,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 390,
+            "line": 394,
             "description": "The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragOver",
@@ -6136,7 +6136,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 405,
+            "line": 409,
             "description": "The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragLeave",
@@ -6157,7 +6157,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 420,
+            "line": 424,
             "description": "The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can\noptionally pass two callbacks, the first one (required) is triggered\nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.",
             "itemtype": "method",
             "name": "drop",
@@ -6183,7 +6183,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 508,
+            "line": 512,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -17903,7 +17903,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:508"
+            "line": " src/core/p5.Element.js:512"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
