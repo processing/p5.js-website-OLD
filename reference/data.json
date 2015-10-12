@@ -13294,7 +13294,7 @@
                 "type": "Object/p5.Element"
             },
             "example": [
-                "\n<div><code>\nvar button;\nfunction setup() {\n  createCanvas(100, 100);\n  background(0);\n  button = createButton('click me');\n  button.position(19, 19);\n  button.mousePressed(changeBG);\n}\n\nfunction changeBG() {\n  var val = random(255);\n  background(val);\n}\n</code></div>"
+                "\n<div class='norender'><code>\nvar button;\nfunction setup() {\n  createCanvas(100, 100);\n  background(0);\n  button = createButton('click me');\n  button.position(19, 19);\n  button.mousePressed(changeBG);\n}\n\nfunction changeBG() {\n  var val = random(255);\n  background(val);\n}\n</code></div>"
             ],
             "class": "p5.dom",
             "module": "p5.dom",
