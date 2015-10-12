@@ -93,6 +93,17 @@
         Created by <a target='_blank' href='http://charlie-roberts.com'>Charlie Roberts</a>.</p> 
       </div>
 
+      <div class="right-column">
+        <a class="nounderline" href="https://github.com/bobcgausa/cook-js">
+        <div class="label">
+        <img src="../img/libraries/p5.particle.png"></a>
+        <a class="nounderline" href="https://github.com/bobcgausa/cook-js"><h4>p5.particle</h4></a>
+        </div>
+        <p>The Particle and Fountain objects can be used to create data-driven effects that are defined
+        through user structures or JSON input and user-draw functions.
+        Created by <a target='_blank' href='http://professorcook.org/'>Robert Cook</a>.</p> 
+      </div>
+
       <div class="spacer"></div>
 
 
