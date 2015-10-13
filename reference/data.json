@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.15",
+        "version": "0.4.17",
         "url": ""
     },
     "files": {
@@ -6243,7 +6243,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 13,
+            "line": 14,
             "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).<br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
@@ -6277,7 +6277,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 104,
+            "line": 110,
             "description": "Resizes the canvas to given width and height. Note that the\ncanvas will be cleared so anything drawn previously in setup\nor draw will disappear on resize. Setup will not be called\nagain.",
             "itemtype": "method",
             "name": "resizeCanvas",
@@ -6290,7 +6290,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 136,
+            "line": 142,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -6303,7 +6303,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 155,
+            "line": 161,
             "description": "Creates and returns a new p5.Renderer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -6337,7 +6337,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 189,
+            "line": 195,
             "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -8876,7 +8876,7 @@
                 "type": "Object|Array"
             },
             "example": [
-                "\n\n<p>Calling loadJSON() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar weather;\nfunction preload() {\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,UK';\n  weather = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n<div><code>\nfunction setup() {\n  noLoop();\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA';\n  loadJSON(url, drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n"
+                "\n\n<p>Calling loadJSON() inside preload() guarantees to complete the\noperation before setup() and draw() are called.</p>\n\n<div><code>\nvar weather;\nfunction preload() {\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,UK&APPID=7bbbb47522848e8b9c26ba35c226c734';\n  weather = loadJSON(url);\n}\n\nfunction setup() {\n  noLoop();\n}\n\nfunction draw() {\n  background(200);\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n<div><code>\nfunction setup() {\n  noLoop();\n  var url = 'http://api.openweathermap.org/data/2.5/weather?q=NewYork,USA&APPID=7bbbb47522848e8b9c26ba35c226c734';\n  loadJSON(url, drawWeather);\n}\n\nfunction draw() {\n  background(200);\n}\n\nfunction drawWeather(weather) {\n  // get the humidity value out of the loaded JSON\n  var humidity = weather.main.humidity;\n  fill(0, humidity); // use the humidity value to set the alpha\n  ellipse(width/2, height/2, 50, 50);\n}\n</code></div>\n"
             ],
             "class": "p5",
             "module": "IO",
