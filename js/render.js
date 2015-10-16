@@ -173,8 +173,9 @@ function renderCode(sel) {
             var ind = runnable.indexOf(f);
             // this is a gross hack within a hacky script that
             // ensures the function names found are not substrings
+            // or methods of a p5.Element like cnv.mouseClicked().
             // proper use of regex would be preferable...
-            if (ind !== -1) {//} && runnable[ind+f.length] === '(') {
+            if (ind !== -1 && runnable[ind - 1] !== '.') {//} && runnable[ind+f.length] === '(') {
               with (p) {
                 p[f] = eval(f);
               }
