@@ -403,10 +403,28 @@ img.small_right  {
     width: 140px;
     float: right;
     }
+    img.small_center  {
+      width: 200px;
+    margin-left:250px;
+      }
 img.small  {
   width: 160px;
 
   }
+  img.med {
+
+    width: 400px;
+
+  
+
+    }
+  img.med_center  {
+
+    width: 400px;
+
+     margin-left: 150px;
+
+    }
 
 /*
  * Remove default fieldset styles.
