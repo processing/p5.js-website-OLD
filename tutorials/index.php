@@ -77,28 +77,10 @@
                         <img src="../img/learn/lib_placeholder.jpg"></a>
                         <a class="nounderline" href="debugging/"><h4>Debugging</h4></a>
                       </div>
-                      <p>Beginners Guide to Debugging.</p>
+                      <p>Field Guide to Debugging.</p>
                     </div>
 
-                    <div class="right-column">
-                      <a class="nounderline" href="trigonometry/">
-                        <div class="label">
-                          <img src="../img/learn/lib_placeholder.jpg"></a>
-                          <a class="nounderline" href="trigonometry/"><h4>Trigonometry</h4></a>
-                        </div>
-                        <p>Trigonometry primer</p>
-                      </div>
 
-                      <div class="spacer"></div>
-                      <div class="left-column">
-                        <a class="nounderline" href="interactivity/">
-                          <div class="label">
-                            <img src="../img/learn/lib_placeholder.jpg"></a>
-                            <a class="nounderline" href="interactivity/"><h4>Interactivity</h4></a>
-                          </div>
-
-                          <p>Programming interactivity.</p>
-                        </div>
 
 
                         <div class="right-column">
