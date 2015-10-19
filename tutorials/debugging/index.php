@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
   <?php include('../../header.php'); ?>
-  <body id="get-started-page">
+  <body id="learn-page">
 
     <?php include('../../sidebar.php'); ?>
     <?php include('../../download/version.php'); ?>
