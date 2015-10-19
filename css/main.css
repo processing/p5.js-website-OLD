@@ -413,6 +413,34 @@ hr {
 img {
     vertical-align: middle;
 }
+img.med_left  {
+  width: 300px;
+  float: left;
+  }
+  img.med_right  {
+    width: 300px;
+    float: right;
+    }
+img.small_left  {
+  width: 200px;
+  float: left;
+  }
+  img.smaller_left  {
+    width: 140px;
+    float: left;
+    }
+img.small_right  {
+  width: 200px;
+  float: right;
+  }
+  img.smaller_right  {
+    width: 140px;
+    float: right;
+    }
+img.small  {
+  width: 160px;
+
+  }
 
 /*
  * Remove default fieldset styles.
@@ -766,6 +794,14 @@ variable */
 .ace_content {
     padding: 0em 0.5em !important;
 }
+
+.attribution {
+    background-color: #eee;
+    font-size: 15px;
+    padding: 10px;
+    margin:30px 0px 30px 0px;
+}
+
 
 /*
   //////////////////////////////////////////////////

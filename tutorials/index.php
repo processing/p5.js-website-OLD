@@ -10,7 +10,7 @@
 
     <section>
       <h2>Tutorials</h2>
-      
+
       <p>These tutorials provide more in-depth or step-by-step overviews of 
       particular topics. Check out the <a href="../examples">examples page</a> 
       to see short demonstrations of various p5.js topics.</p>
@@ -21,7 +21,7 @@
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="http://hello.p5js.org/"><h4>Hello p5.js</h4></a>
         </div>
-        <p>This short video will introduce you to the library and what you can do with it.</p> 
+        <p>This short video will introduce you to the library and what you can do with it.</p>
       </div>
 
       <div class="right-column">
@@ -30,7 +30,7 @@
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="http://p5js.org/get-started/"><h4>Getting Started</h4></a>
         </div>
-        <p>Welcome to p5.js! <br> This introduction covers the basics of setting up a p5.js project.</p> 
+        <p>Welcome to p5.js! <br> This introduction covers the basics of setting up a p5.js project.</p>
       </div>
 
 
@@ -42,79 +42,91 @@
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js-overview"><h4>p5.js overview</h4></a>
         </div>
-        <p>An overview of the main features of p5.js.</p> 
+        <p>An overview of the main features of p5.js.</p>
       </div>
-      
+
       <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Processing-transition">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Processing-transition"><h4>p5.js and Processing</h4></a>
         </div>
-        <p>The main differences between the two, and how to convert from one to the other.</p> 
+        <p>The main differences between the two, and how to convert from one to the other.</p>
       </div>
 
 
       <div class="spacer"></div>
 
       <div class="left-column">
+        <a class="nounderline" href="debugging/">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="debugging/"><h4>Debugging</h4></a>
+        </div>
+        <p>Beginners guide to debugging.</p>
+      </div>
+
+
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">
         <div class="label">
         <img src="../img/learn/3d.jpg"></a>
-        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5"><h4>WebGL</h4></a>
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5"><h4>3D/WebGL</h4></a>
         </div>
         <p>Developing advanced graphics applications in p5.js using WEBGL mode.</p> 
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas">
         <div class="label">
         <img src="../img/learn/dom.jpg"></a>
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas"><h4>Beyond the canvas</h4></a>
         </div>
-        <p>Creating and manipulating elements on the page 
-        beyond the canvas.</p> 
+        <p>Creating and manipulating elements on the page
+        beyond the canvas.</p>
       </div>
 
-      <div class="spacer"></div>
 
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Integrating-other-libraries">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Integrating-other-libraries"><h4>Adding libraries</h4></a>
         </div>
-        <p>Finding, adding, and integrating other JS libraries.</p> 
-      </div>
-
-      <div class="right-column">
-        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Local-server">
-        <div class="label">
-        <img src="../img/learn/lib_placeholder.jpg"></a>
-        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Local-server"><h4>Using a local server</h4></a>
-        </div>
-        <p>How to set up a local server on Mac OSX, Windows, or Linux.</p> 
+        <p>Finding, adding, and integrating other JS libraries.</p>
       </div>
 
       <div class="spacer"></div>
 
       <div class="left-column">
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Local-server">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Local-server"><h4>Using a local server</h4></a>
+        </div>
+        <p>How to set up a local server on Mac OSX, Windows, or Linux.</p>
+      </div>
+
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js,-node.js,-socket.io">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js,-node.js,-socket.io"><h4>node.js and socket.io</h4></a>
         </div>
-        <p>Using a node.js server with p5.js, communcation via socket.io.</p> 
+        <p>Using a node.js server with p5.js, communcation via socket.io.</p>
       </div>
 
+      <div class="spacer"></div>
 
-      <div class="right-column">
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Development">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Development"><h4>Development</h4></a>
         </div>
-        <p>Getting started and overview for contributing to development.</p> 
+        <p>Getting started and overview for contributing to development.</p>
       </div>
 
       <div class="spacer"></div>
