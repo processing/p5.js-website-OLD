@@ -16,15 +16,15 @@
       <img src="assets/0-0.jpg" />
 
       <p>
-        This is a field guide for debugging for everyone - whether you are beginning to code or whether you have been coding for a long time, this guide breaks down the mysterious process of solving problems.
+        This is a field guide for debugging for everyone—whether you are beginning to code or whether you have been coding for a long time, this guide breaks down the mysterious process of solving problems.
       </p>
       
       <a name="introduction" class="anchor" href="#introduction"><h3 class="start-element tutorial-btn" id="introduction">0. Debugging is a Creative Act</h3></a>
       <div class="info">
-        <p>At all levels programmers encounter bugs and will often spend more time debugging than actually programming the application. You can expect to spend a lot of time doing this and so it is important to develop good strategies for identifying and working through bugs as you learn to program in p5.js.</p>
+        <p>At all levels, programmers encounter bugs and will often spend more time debugging than actually programming the application. You can expect to spend a lot of time doing this and so it is important to develop good strategies for identifying and working through bugs as you learn to program in p5.js.</p>
         <p>
-          A bug is a gap between what you think your system is doing, and what it is actually doing. As <a target="_blank"
-          href="https://vimeo.com/channels/debugging" >Clay Shirky aptly describes </a>a bug as "the moment when there is both a technical problem with your code as well as a problem with your mental picture of what is happening in your  code." </p>
+          A bug is a gap between what you think your system is doing, and what it is actually doing. <a target="_blank"
+          href="https://vimeo.com/channels/debugging" >Clay Shirky aptly describes </a>a bug as "the moment when there is both a technical problem with your code as well as a problem with your mental picture of what is happening in your code." </p>
           <img src="assets/0-1.jpg" />
         </p>
 
@@ -68,14 +68,14 @@
         <img class="small_center" img src="assets/3-2.png" />
         <p>If you make a mistake or your problem gets more worse, you can always UNDO or revert back to your saved file.</p>
         <img class="med_center" img src="assets/3-3.jpg" /></br>
-        <p>You can try version control such as Github.</p>
+        <p>You can try version control such as <a href="http://github.com">Github</a>.</p>
         <img src="assets/3-4.png" />
         <p>Write a list of what you are trying, so you can keep track of what still needs to be checked. Be  methodical, it will save you a lot of time in the long run.</p>
         <p>
           Only ever change one thing at a time.
           <img class="med_right" img src="assets/3-5.jpg" />
-          As you debug you will be turning parts of your code on and off.
-          Every time you make a change, test your program. If you make multiple changes before testing, you will not know which change has what affect and are likely to break things further.
+          As you debug, you will be turning parts of your code on and off.
+          Every time you make a change, test your program. If you make multiple changes before testing, you will not know which change has what effect and are likely to break things further.
         </p>
       </div>
 
@@ -129,11 +129,11 @@
             <li>Search the <a href="http://forum.processing.org/two/categories/p5-js">Processing forum</a> using the p5.js tag.</li>
             <li>Search development forums like <a href="http://stackoverflow.com/">Stack Overflow</a>.</li>
           </ul>
-          <p> More general javascript resources.</p>
+          <p> More general javascript resources:</p>
           <ul>
             <li>First chapter of Bocoup's and Rebecca Murphey's interactive textbook, <a href="http://jqfundamentals.com/chapter/javascript-basics">jQuery Fundamentals</a>.</li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">  Mozilla's JavaScript Guide</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference ">JavaScript Reference </a>(this is really helpful for finding all of the built-in methods for, say a String).</li>
-            <li><a href="https://github.com/lmccart/itp-creative-js#js-learning--intro">Resources from Lauren.</a></li>
+            <li>Resources from the <a href="https://github.com/processing/p5.js/wiki/Education">p5.js Education page.</a></li>
           </ul>
           <img class="med_center" img src="assets/7-1.jpg" />
         </div>
@@ -147,7 +147,7 @@
           </p>
           <p>
             Send that email you wrote at the start.<br/>
-            Post to the Processing forum succinctly articulating your problem and what you want to know. <br/>
+            Post to the <a href="http://forum.processing.org/two/categories/p5-js">Processing forum</a> succinctly articulating your problem and what you want to know. <br/>
           </p>
         </div>
         
@@ -155,8 +155,8 @@
         <div class="info" id="prevent">
           <p>
             <ul>
-              <li>Do not optimize prematurely. Clear code is more important than high-performing code as you're building your program.<br/></li>
-              <li>Do not abstract prematurely. You don't need to make functions for things you think you're going to use multiple times...until you actually have to use it more than once twice. <br/></li>
+              <li>Do not optimize prematurely. Clear code is more important than high-performing code as you're building your program.</li>
+              <li>Do not abstract prematurely. You don't need to make functions for things you think you're going to use multiple times...until you actually have to use it more than once.</li>
               <li>
                 Start with pseudocode as comments, then add code underneath each step.<br/>
                 Put console.log()s in your code as you develop (and test frequently—so if something changes, you know what you did since the last time you tested).<br/>
