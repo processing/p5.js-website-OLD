@@ -63,7 +63,7 @@
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="debugging/"><h4>Debugging</h4></a>
         </div>
-        <p>Field Guide to Debugging.</p>
+        <p>Field Guide to Debugging for Everyone.</p>
       </div>
 
 
