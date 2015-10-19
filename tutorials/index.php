@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-  <?php include('../header.php'); ?>
-  <body id="learn-page">
+<?php include('../header.php'); ?>
+<body id="learn-page">
 
-    <?php include('../sidebar.php'); ?>
+  <?php include('../sidebar.php'); ?>
 
-    <!-- content sections -->
-    <div class="column-span">
+  <!-- content sections -->
+  <div class="column-span">
 
     <section>
       <h2>Tutorials</h2>
@@ -63,7 +63,7 @@
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="debugging/"><h4>Debugging</h4></a>
         </div>
-        <p>Beginners guide to debugging.</p>
+        <p>Field Guide to Debugging.</p>
       </div>
 
 
