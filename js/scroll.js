@@ -29,10 +29,8 @@ $(function() {
       offset     = $sidebar.offset(),
       topPadding = 0;
 
-
-  if (window.matchMedia("(min-width: 720px)").matches) {
-
-    $window.scroll(function() {
+  $window.scroll(function() {
+    if (window.matchMedia("(min-width: 720px)").matches) {  
       if ($window.scrollTop() > offset.top) {
         $sidebar.stop().animate({
           marginTop: $window.scrollTop() - offset.top + topPadding
@@ -52,6 +50,6 @@ $(function() {
         '-webkit-transform': 'rotate(' + rotation + 'deg)',
         'transform': 'rotate(' + rotation + 'deg)'
       });
-    });
-  }
+    }
+  });
 });
