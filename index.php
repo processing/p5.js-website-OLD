@@ -2,10 +2,10 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <!--<div id="credits">
+  <div id="credits">
     <em><a href='https://paom.com/profiles/processing/#/profile-apps' target=_blank>Print All Over Me x Processing Foundation</a></em><br>
-    collab with <a target=_blank href="https://paom.com/profiles/processing/#/profile-apps">Sosolimited</a> and <a target=_blank href="http://liaworks.com/">LIA</a>
-  </div>-->
+    collab with <a target=_blank href='http://sosolimited.com'>Sosolimited</a> and <a target=_blank href='http://liaworks.com/'>LIA</a>
+  </div>
  
   <?php include('heading.php'); ?>
 
@@ -64,7 +64,7 @@
 
   <?php include('end.php'); ?>
 
-  <!--<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/paom'></iframe>-->
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/paom'></iframe>
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
