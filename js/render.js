@@ -12,11 +12,6 @@ function renderCode(sel) {
       var rc = (s.parentNode.className.indexOf('norender') === -1);
       setupCode(s, rc, i);
       runCode(s, rc, i);
-      // gross hack to get webgl examples working, runcode needs to get called twice??
-      if (s.textContent.indexOf('WEBGL') !== -1) {
-        setTimeout(function() {runCode(s, rc, i);}, 200);
-      };
-
       i++;
     });
   }
@@ -35,9 +30,6 @@ function renderCode(sel) {
       sketchContainer.appendChild(pre);
       sketchContainer.className = 'example_container'
       sketch.className = 'language-javascript';
-      if (!rc) {
-        pre.className += ' norender';
-      }
     }
 
 
@@ -119,7 +111,7 @@ function renderCode(sel) {
           });
           edit_button.innerHTML = 'edit';
           edit_area.style.display = 'none';
-          sketch.textContent = edit_area.value;
+          sketch.innerHTML = edit_area.value;
           runCode(sketch, true, i);
         }
       }
@@ -173,9 +165,8 @@ function renderCode(sel) {
             var ind = runnable.indexOf(f);
             // this is a gross hack within a hacky script that
             // ensures the function names found are not substrings
-            // or methods of a p5.Element like cnv.mouseClicked().
             // proper use of regex would be preferable...
-            if (ind !== -1 && runnable[ind - 1] !== '.') {//} && runnable[ind+f.length] === '(') {
+            if (ind !== -1 && runnable[ind+f.length] === '(') {
               with (p) {
                 p[f] = eval(f);
               }
@@ -196,9 +187,6 @@ function renderCode(sel) {
     if (typeof Prism !== 'undefined') Prism.highlightAll();
 
     $( document ).ready(function() {
-
-      registerHashChange();
-
       setTimeout(function() {
         var myp5 = new _p5(s, cnv);      
         $( ".example-content" ).find('div').each(function() {
@@ -213,17 +201,6 @@ function renderCode(sel) {
     });
 
   }
-
-  // when a hash is changed, remove all the sounds,
-  // even tho the p5 sketch has been disposed.
-  function registerHashChange() {
-    window.onhashchange = function(e) {
-      for (var i = 0; i < instances.length; i++) {
-        instances[i].remove();
-      }
-    }
-  }
-
 
 }
 
