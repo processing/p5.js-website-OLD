@@ -166,7 +166,8 @@ function renderCode(sel) {
             // this is a gross hack within a hacky script that
             // ensures the function names found are not substrings
             // proper use of regex would be preferable...
-            if (ind !== -1 && runnable[ind+f.length] === '(') {
+            if (ind !== -1 && runnable[ind+f.length] === '(' &&
+                eval('typeof ' + f) !== 'undefined') {
               with (p) {
                 p[f] = eval(f);
               }
