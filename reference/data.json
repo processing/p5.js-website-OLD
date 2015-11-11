@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.17",
+        "version": "0.4.19",
         "url": ""
     },
     "files": {
@@ -78,8 +78,8 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/color/color_utils.js": {
-            "name": "src/color/color_utils.js",
+        "src/color/color_conversion.js": {
+            "name": "src/color/color_conversion.js",
             "modules": {},
             "classes": {},
             "fors": {
@@ -721,7 +721,7 @@
             },
             "namespaces": {},
             "file": "src/color/p5.Color.js",
-            "line": 11
+            "line": 14
         },
         "Creating & Reading": {
             "name": "Creating & Reading",
@@ -737,10 +737,12 @@
             "module": "Color",
             "namespace": "",
             "file": "src/color/p5.Color.js",
-            "line": 11,
+            "line": 14,
             "requires": [
-                "core"
-            ]
+                "core",
+                "constants"
+            ],
+            "description": "We define colors to be immutable objects. Each color stores the color mode\nand level maxes that applied at the time of its construction. These are\nused to interpret the input arguments and to format the output e.g. when\nsaturation() is requested.\n\nInternally we store an array representing the ideal RGBA values in floating\npoint form, normalized from 0 to 1. From this we calculate the closest\nscreen color (RGBA levels from 0 to 255) and expose this to the renderer.\n\nWe also cache normalized, floating point components of the color in various\nrepresentations as they are calculated. This is done to prevent repeating a\nconversion that has already been performed."
         },
         "Setting": {
             "name": "Setting",
@@ -1113,7 +1115,7 @@
             "module": "IO",
             "namespace": "",
             "file": "src/io/files.js",
-            "line": 847
+            "line": 875
         },
         "Table": {
             "name": "Table",
@@ -1359,7 +1361,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 1768,
+            "line": 1910,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1395,7 +1397,7 @@
             "namespaces": {},
             "module": "p5.sound",
             "file": "lib/addons/p5.sound.js",
-            "line": 7087,
+            "line": 7090,
             "description": "p5.sound extends p5 with <a href=\"http://caniuse.com/audio-api\"\ntarget=\"_blank\">Web Audio</a> functionality including audio input,\nplayback, analysis and synthesis.\n<br/><br/>\n<a href=\"#/p5.SoundFile\"><b>p5.SoundFile</b></a>: Load and play sound files.<br/>\n<a href=\"#/p5.Amplitude\"><b>p5.Amplitude</b></a>: Get the current volume of a sound.<br/>\n<a href=\"#/p5.AudioIn\"><b>p5.AudioIn</b></a>: Get sound from an input source, typically\n  a computer microphone.<br/>\n<a href=\"#/p5.FFT\"><b>p5.FFT</b></a>: Analyze the frequency of sound. Returns\n  results from the frequency spectrum or time domain (waveform).<br/>\n<a href=\"#/p5.Oscillator\"><b>p5.Oscillator</b></a>: Generate Sine,\n  Triangle, Square and Sawtooth waveforms. Base class of\n  <a href=\"#/p5.Noise\">p5.Noise</a> and <a href=\"#/p5.Pulse\">p5.Pulse</a>.\n  <br/>\n<a href=\"#/p5.Env\"><b>p5.Env</b></a>: An Envelope is a series\n  of fades over time. Often used to control an object's\n  output gain level as an \"ADSR Envelope\" (Attack, Decay,\n  Sustain, Release). Can also modulate other parameters.<br/>\n<a href=\"#/p5.Delay\"><b>p5.Delay</b></a>: A delay effect with\n  parameters for feedback, delayTime, and lowpass filter.<br/>\n<a href=\"#/p5.Filter\"><b>p5.Filter</b></a>: Filter the frequency range of a\n  sound.\n<br/>\n<a href=\"#/p5.Reverb\"><b>p5.Reverb</b></a>: Add reverb to a sound by specifying\n  duration and decay. <br/>\n<b><a href=\"#/p5.Convolver\">p5.Convolver</a>:</b> Extends\n<a href=\"#/p5.Reverb\">p5.Reverb</a> to simulate the sound of real\n  physical spaces through convolution.<br/>\n<b><a href=\"#/p5.SoundRecorder\">p5.SoundRecorder</a></b>: Record sound for playback \n  / save the .wav file.\n<b><a href=\"#/p5.Phrase\">p5.Phrase</a></b>, <b><a href=\"#/p5.Part\">p5.Part</a></b> and\n<b><a href=\"#/p5.Score\">p5.Score</a></b>: Compose musical sequences.\n<br/><br/>\np5.sound is on <a href=\"https://github.com/therewasaguy/p5.sound/\">GitHub</a>.\nDownload the latest version \n<a href=\"https://github.com/therewasaguy/p5.sound/blob/master/lib/p5.sound.js\">here</a>.",
             "tag": "main",
             "itemtype": "main"
@@ -1426,7 +1428,8 @@
             "submodule": "Creating & Reading",
             "namespace": "",
             "file": "src/color/p5.Color.js",
-            "line": 11,
+            "line": 14,
+            "description": "We define colors to be immutable objects. Each color stores the color mode\nand level maxes that applied at the time of its construction. These are\nused to interpret the input arguments and to format the output e.g. when\nsaturation() is requested.\n\nInternally we store an array representing the ideal RGBA values in floating\npoint form, normalized from 0 to 1. From this we calculate the closest\nscreen color (RGBA levels from 0 to 255) and expose this to the renderer.\n\nWe also cache normalized, floating point components of the color in various\nrepresentations as they are calculated. This is done to prevent repeating a\nconversion that has already been performed.",
             "is_constructor": 1
         },
         "p5.Element": {
@@ -1738,7 +1741,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1361,
+            "line": 1503,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -1767,7 +1770,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1768,
+            "line": 1910,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -1844,7 +1847,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 2052,
+            "line": 2055,
             "description": "Amplitude measures volume between 0.0 and 1.0.\nListens to all p5sound by default, or use setInput()\nto listen to a specific sound source. Accepts an optional\nsmoothing value, which defaults to 0.",
             "is_constructor": 1,
             "params": [
@@ -1875,7 +1878,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 2314,
+            "line": 2317,
             "description": "<p>FFT (Fast Fourier Transform) is an analysis algorithm that\nisolates individual\n<a href=\"https://en.wikipedia.org/wiki/Audio_frequency\">\naudio frequencies</a> within a waveform.</p>\n\n<p>Once instantiated, a p5.FFT object can return an array based on\ntwo types of analyses: <br> • <code>FFT.waveform()</code> computes\namplitude values along the time domain. The array indices correspond\nto samples across a brief moment in time. Each value represents\namplitude of the waveform at that sample of time.<br>\n• <code>FFT.analyze() </code> computes amplitude values along the\nfrequency domain. The array indices correspond to frequencies (i.e.\npitches), from the lowest to the highest that humans can hear. Each\nvalue represents amplitude at that slice of the frequency spectrum.\nUse with <code>getEnergy()</code> to measure amplitude at specific\nfrequencies, or within a range of frequencies. </p>\n\n<p>FFT analyzes a very short snapshot of sound called a sample\nbuffer. It returns an array of amplitude measurements, referred\nto as <code>bins</code>. The array is 1024 bins long by default.\nYou can change the bin array length, but it must be a power of 2\nbetween 16 and 1024 in order for the FFT algorithm to function\ncorrectly. The actual size of the FFT buffer is twice the \nnumber of bins, so given a standard sample rate, the buffer is\n2048/44100 seconds long.</p>",
             "is_constructor": 1,
             "params": [
@@ -1912,7 +1915,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 3285,
+            "line": 3288,
             "description": "<p>p5.Signal is a constant audio-rate signal used by p5.Oscillator\nand p5.Envelope for modulation math.</p>\n\n<p>This is necessary because Web Audio is processed on a seprate clock.\nFor example, the p5 draw loop runs about 60 times per second. But\nthe audio clock must process samples 44100 times per second. If we\nwant to add a value to each of those samples, we can't do it in the\ndraw loop, but we can do it by adding a constant-rate audio signal.</p.\n\n<p>This class mostly functions behind the scenes in p5.sound, and returns\na Tone.Signal from the Tone.js library by Yotam Mann.\nIf you want to work directly with audio signals for modular\nsynthesis, check out\n<a href='http://bit.ly/1oIoEng' target=_'blank'>tone.js.</a></p>",
             "is_constructor": 1,
             "return": {
@@ -1935,7 +1938,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 3431,
+            "line": 3434,
             "description": "<p>Creates a signal that oscillates between -1.0 and 1.0.\nBy default, the oscillation takes the form of a sinusoidal\nshape ('sine'). Additional types include 'triangle',\n'sawtooth' and 'square'. The frequency defaults to\n440 oscillations per second (440Hz, equal to the pitch of an\n'A' note).</p> \n\n<p>Set the type of oscillation with setType(), or by creating a\nspecific oscillator.</p> For example:\n<code>new p5.SinOsc(freq)</code>\n<code>new p5.TriOsc(freq)</code>\n<code>new p5.SqrOsc(freq)</code>\n<code>new p5.SawOsc(freq)</code>.\n</p>",
             "is_constructor": 1,
             "params": [
@@ -1972,7 +1975,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 3929,
+            "line": 3932,
             "description": "<p>Envelopes are pre-defined amplitude distribution over time. \nThe p5.Env accepts up to four time/level pairs, where time\ndetermines how long of a ramp before value reaches level.\nTypically, envelopes are used to control the output volume\nof an object, a series of fades referred to as Attack, Decay,\nSustain and Release (ADSR). But p5.Env can control any\nWeb Audio Param, for example it can be passed to an Oscillator\nfrequency like osc.freq(env) </p>",
             "is_constructor": 1,
             "params": [
@@ -2038,7 +2041,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 4297,
+            "line": 4300,
             "description": "Creates a Pulse object, an oscillator that implements\nPulse Width Modulation.\nThe pulse is created with two oscillators.\nAccepts a parameter for frequency, and to set the\nwidth between the pulses. See <a href=\"\nhttp://p5js.org/reference/#/p5.Oscillator\">\n<code>p5.Oscillator</code> for a full list of methods.",
             "is_constructor": 1,
             "params": [
@@ -2071,7 +2074,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 4473,
+            "line": 4476,
             "description": "Noise is a type of oscillator that generates a buffer with random values.",
             "is_constructor": 1,
             "params": [
@@ -2098,7 +2101,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 4648,
+            "line": 4651,
             "description": "<p>Get audio from an input, i.e. your computer's microphone.</p>\n\n<p>Turn the mic on/off with the start() and stop() methods. When the mic\nis on, its volume can be measured with getLevel or by connecting an\nFFT object.</p>\n\n<p>If you want to hear the AudioIn, use the .connect() method. \nAudioIn does not connect to p5.sound output by default to prevent\nfeedback.</p> \n\n<p><em>Note: This uses the <a href=\"http://caniuse.com/stream\">getUserMedia/\nStream</a> API, which is not supported by certain browsers.</em></p>",
             "is_constructor": 1,
             "return": {
@@ -2121,7 +2124,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 4943,
+            "line": 4946,
             "description": "A p5.Filter uses a Web Audio Biquad Filter to filter\nthe frequency response of an input source. Inheriting\nclasses include:<br/>\n* <code>p5.LowPass</code> - allows frequencies below\nthe cutoff frequency to pass through, and attenuates\nfrequencies above the cutoff.<br/>\n* <code>p5.HighPass</code> - the opposite of a lowpass\nfilter. <br/>\n* <code>p5.BandPass</code> -  allows a range of\nfrequencies to pass through and attenuates the frequencies\nbelow and above this frequency range.<br/>\n\nThe <code>.res()</code> method controls either width of the\nbandpass, or resonance of the low/highpass cutoff frequency.",
             "is_constructor": 1,
             "params": [
@@ -2151,7 +2154,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 5203,
+            "line": 5206,
             "description": "Delay is an echo effect. It processes an existing sound source,\nand outputs a delayed version of that sound. The p5.Delay can\nproduce different effects depending on the delayTime, feedback,\nfilter, and type. In the example below, a feedback of 0.5 will\nproduce a looping delay that decreases in volume by\n50% each repeat. A filter will cut out the high frequencies so\nthat the delay does not sound as piercing as the original source.",
             "is_constructor": 1,
             "return": {
@@ -2174,7 +2177,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 5476,
+            "line": 5479,
             "description": "Reverb adds depth to a sound through a large number of decaying\nechoes. It creates the perception that sound is occurring in a\nphysical space. The p5.Reverb has paramters for Time (how long does the\nreverb last) and decayRate (how much the sound decays with each echo)\nthat can be set with the .set() or .process() methods. The p5.Convolver\nextends p5.Reverb allowing you to recreate the sound of actual physical\nspaces through convolution.",
             "is_constructor": 1,
             "example": [
@@ -2193,7 +2196,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 5655,
+            "line": 5658,
             "description": "<p>p5.Convolver extends p5.Reverb. It can emulate the sound of real\nphysical spaces through a process called <a href=\"\nhttps://en.wikipedia.org/wiki/Convolution_reverb#Real_space_simulation\">\nconvolution</a>.</p>\n\n<p>Convolution multiplies any audio input by an \"impulse response\"\nto simulate the dispersion of sound over time. The impulse response is\ngenerated from an audio file that you provide. One way to\ngenerate an impulse response is to pop a balloon in a reverberant space\nand record the echo. Convolution can also be used to experiment with\nsound.</p>\n\n<p>Use the method <code>createConvolution(path)</code> to instantiate a\np5.Convolver with a path to your impulse response audio file.</p>",
             "is_constructor": 1,
             "params": [
@@ -2224,7 +2227,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 6116,
+            "line": 6119,
             "description": "<p>A phrase is a pattern of musical events over time, i.e.\na series of notes and rests.</p>\n\n<p>Phrases must be added to a p5.Part for playback, and\neach part can play multiple phrases at the same time.\nFor example, one Phrase might be a kick drum, another\ncould be a snare, and another could be the bassline.</p>\n\n<p>The first parameter is a name so that the phrase can be\nmodified or deleted later. The callback is a a function that\nthis phrase will call at every step—for example it might be\ncalled <code>playNote(value){}</code>. The array determines\nwhich value is passed into the callback at each step of the\nphrase. It can be numbers, an object with multiple numbers,\nor a zero (0) indicates a rest so the callback won't be called).</p>",
             "is_constructor": 1,
             "params": [
@@ -2260,7 +2263,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 6202,
+            "line": 6205,
             "description": "<p>A p5.Part plays back one or more p5.Phrases. Instantiate a part\nwith steps and tatums. By default, each step represents 1/16th note.</p>\n\n<p>See p5.Phrase for more about musical timing.</p>",
             "is_constructor": 1,
             "params": [
@@ -2293,7 +2296,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 6460,
+            "line": 6463,
             "description": "A Score consists of a series of Parts. The parts will\nbe played back in order. For example, you could have an\nA part, a B part, and a C part, and play them back in this order\n<code>new p5.Score(a, a, b, a, c)</code>",
             "is_constructor": 1,
             "params": [
@@ -2320,7 +2323,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 6584,
+            "line": 6587,
             "description": "<p>Record sounds for playback and/or to save as a .wav file.\nThe p5.SoundRecorder records all sound output from your sketch,\nor can be assigned a specific source with setInput().</p>\n<p>The record() method accepts a p5.SoundFile as a parameter.\nWhen playback is stopped (either after the given amount of time,\nor with the stop() method), the p5.SoundRecorder will send its\nrecording to that p5.SoundFile for playback.</p>",
             "is_constructor": 1,
             "example": [
@@ -2339,7 +2342,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 6865,
+            "line": 6868,
             "description": "<p>PeakDetect works in conjunction with p5.FFT to\nlook for onsets in some or all of the frequency spectrum.\n</p>\n<p>\nTo use p5.PeakDetect, call <code>update</code> in the draw loop\nand pass in a p5.FFT object.\n</p>\n<p>\nYou can listen for a specific part of the frequency spectrum by\nsetting the range between <code>freq1</code> and <code>freq2</code>.\n</p>\n\n<p><code>threshold</code> is the threshold for detecting a peak,\nscaled between 0 and 1. It is logarithmic, so 0.1 is half as loud\nas 1.0.</p>\n\n<p>\nThe update method is meant to be run in the draw loop, and\n<b>frames</b> determines how many loops must pass before\nanother peak can be detected.\nFor example, if the frameRate() = 60, you could detect the beat of a\n120 beat-per-minute song with this equation:\n<code> framesPerPeak = 60 / (estimatedBPM / 60 );</code>\n</p>\n\n<p>\nBased on example contribtued by @b2renger, and a simple beat detection\nexplanation by <a\nhref=\"http://www.airtightinteractive.com/2013/10/making-audio-reactive-visuals/\"\ntarget=\"_blank\">Felix Turner</a>.\n</p>",
             "is_constructor": 1,
             "params": [
@@ -2384,7 +2387,7 @@
             "submodule": "p5.sound",
             "namespace": "",
             "file": "lib/addons/p5.sound.js",
-            "line": 7087,
+            "line": 7090,
             "description": "A gain node is usefull to set the relative volume of sound.\nIt's typically used to build mixers.",
             "is_constructor": 1,
             "example": [
@@ -2489,7 +2492,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 219,
+            "line": 222,
             "description": "Draw a cone with given radius and height",
             "itemtype": "method",
             "name": "cone",
@@ -2524,7 +2527,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 292,
+            "line": 295,
             "description": "Draw a torus with given radius and tube radius",
             "itemtype": "method",
             "name": "torus",
@@ -2559,7 +2562,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 353,
+            "line": 356,
             "description": "Draw a box with given width, height and depth",
             "itemtype": "method",
             "name": "box",
@@ -2909,7 +2912,7 @@
         },
         {
             "file": "src/3d/material.js",
-            "line": 116,
+            "line": 124,
             "description": "Helper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
             "params": [
                 {
@@ -2928,7 +2931,7 @@
         },
         {
             "file": "src/3d/material.js",
-            "line": 127,
+            "line": 135,
             "description": "returns the next highest power of 2 value",
             "params": [
                 {
@@ -2947,7 +2950,7 @@
         },
         {
             "file": "src/3d/material.js",
-            "line": 140,
+            "line": 148,
             "description": "Basic material for geometry with a given color",
             "itemtype": "method",
             "name": "basicMaterial",
@@ -2989,7 +2992,7 @@
         },
         {
             "file": "src/3d/material.js",
-            "line": 188,
+            "line": 196,
             "description": "Ambient material for geometry with a given color",
             "itemtype": "method",
             "name": "ambientMaterial",
@@ -3031,7 +3034,7 @@
         },
         {
             "file": "src/3d/material.js",
-            "line": 239,
+            "line": 247,
             "description": "Specular material for geometry with a given color",
             "itemtype": "method",
             "name": "specularMaterial",
@@ -3109,35 +3112,47 @@
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 78,
-            "description": "merge duplicated vertices",
-            "class": "p5",
-            "module": "Lights, Camera"
-        },
-        {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 147,
+            "line": 80,
             "description": "compute faceNormals for a geometry",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 172,
+            "line": 105,
             "description": "compute vertexNormals for a geometry",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 228,
+            "line": 189,
+            "description": "[generateUV description]",
+            "params": [
+                {
+                    "name": "faces",
+                    "description": "[description]",
+                    "type": "Array"
+                },
+                {
+                    "name": "uvs",
+                    "description": "[description]",
+                    "type": "Array"
+                }
+            ],
+            "class": "p5",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Geometry3D.js",
+            "line": 206,
             "description": "generate an object containing information needed to create buffer",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 248,
+            "line": 232,
             "description": "turn a two dimensional array into one dimensional array",
             "params": [
                 {
@@ -3155,7 +3170,7 @@
         },
         {
             "file": "src/3d/p5.Geometry3D.js",
-            "line": 260,
+            "line": 244,
             "description": "turn an array of Vector into a one dimensional array of numbers",
             "params": [
                 {
@@ -3522,7 +3537,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 317,
+            "line": 316,
             "description": "[translate description]",
             "params": [
                 {
@@ -3553,7 +3568,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 334,
+            "line": 333,
             "description": "Scales the Model View Matrix by a vector",
             "params": [
                 {
@@ -3583,7 +3598,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 346,
+            "line": 345,
             "description": "[rotate description]",
             "params": [
                 {
@@ -3606,7 +3621,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 357,
+            "line": 356,
             "description": "[rotateX description]",
             "params": [
                 {
@@ -3624,7 +3639,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 367,
+            "line": 366,
             "description": "[rotateY description]",
             "params": [
                 {
@@ -3642,7 +3657,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 377,
+            "line": 376,
             "description": "[rotateZ description]",
             "params": [
                 {
@@ -3660,7 +3675,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 387,
+            "line": 386,
             "description": "pushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
             "return": {
                 "description": "[description]",
@@ -3671,7 +3686,7 @@
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 397,
+            "line": 396,
             "description": "[pop description]",
             "return": {
                 "description": "[description]",
@@ -3687,13 +3702,13 @@
             "params": [
                 {
                     "name": "gId",
-                    "description": "[description]",
+                    "description": "key of the geometry object",
                     "type": "String"
                 },
                 {
-                    "name": "obj",
-                    "description": "[description]",
-                    "type": "String"
+                    "name": "arr",
+                    "description": "array holding bject containing geometry information",
+                    "type": "Array"
                 }
             ],
             "class": "p5",
@@ -3701,7 +3716,7 @@
         },
         {
             "file": "src/3d/retainedMode3D.js",
-            "line": 31,
+            "line": 39,
             "description": "initBuffer description",
             "params": [
                 {
@@ -3710,9 +3725,9 @@
                     "type": "String"
                 },
                 {
-                    "name": "obj",
-                    "description": "an object containing geometry information",
-                    "type": "Object"
+                    "name": "arr",
+                    "description": "array holding bject containing geometry information",
+                    "type": "Array"
                 }
             ],
             "class": "p5",
@@ -3720,7 +3735,7 @@
         },
         {
             "file": "src/3d/retainedMode3D.js",
-            "line": 69,
+            "line": 79,
             "description": "drawBuffer",
             "params": [
                 {
@@ -3733,123 +3748,67 @@
             "module": "Lights, Camera"
         },
         {
-            "file": "src/color/color_utils.js",
+            "file": "src/color/color_conversion.js",
             "line": 1,
-            "description": "module Utils\nsubmodule Color Utils",
+            "description": "module Conversion\nsubmodule Color Conversion",
+            "requires": [
+                "core"
+            ],
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/color/color_utils.js",
-            "line": 11,
-            "description": "For a color expressed as an HSBA array, return the corresponding RGBA value",
-            "params": [
-                {
-                    "name": "hsba",
-                    "description": "An 'array' object that represents a list of HSB colors",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "an array of RGBA values, on a scale of 0-1",
-                "type": "Array"
-            },
+            "file": "src/color/color_conversion.js",
+            "line": 10,
+            "description": "Conversions adapted from <http://www.easyrgb.com/math.html>.\n\nIn these functions, hue is always in the range [0,1); all other components\nare in the range [0,1]. 'Brightness' and 'value' are used interchangeably.",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/color/color_utils.js",
-            "line": 70,
-            "description": "For a color expressed as an RGBA array, return the corresponding HSBA value",
-            "params": [
-                {
-                    "name": "rgba",
-                    "description": "An 'array' object that represents a list of RGB colors",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "an array of HSB values",
-                "type": "Array"
-            },
+            "file": "src/color/color_conversion.js",
+            "line": 22,
+            "description": "Convert an HSBA array to HSLA.",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/color/color_utils.js",
-            "line": 119,
-            "description": "For a color expressed as an HSLA array, return the corresponding RGBA value",
-            "params": [
-                {
-                    "name": "hsla",
-                    "description": "An 'array' object that represents a list of HSL colors",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "an array of RGBA values, on a scale of 0-1",
-                "type": "Array"
-            },
+            "file": "src/color/color_conversion.js",
+            "line": 48,
+            "description": "Convert an HSBA array to RGBA.",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/color/color_utils.js",
-            "line": 170,
-            "description": "For a color expressed as an RGBA array, return the corresponding HSBA value",
-            "params": [
-                {
-                    "name": "rgba",
-                    "description": "An 'array' object that represents a list of RGB colors",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "an array of HSL values",
-                "type": "Array"
-            },
+            "file": "src/color/color_conversion.js",
+            "line": 97,
+            "description": "Convert an HSLA array to HSBA.",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/color/color_utils.js",
-            "line": 229,
-            "description": "For a color expressed as an hsla array, return the corresponding HSBA value",
-            "params": [
-                {
-                    "name": "hsla",
-                    "description": "An 'array' object that represents a list of HSLA colors",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "an array of HSBA values",
-                "type": "Array"
-            },
+            "file": "src/color/color_conversion.js",
+            "line": 120,
+            "description": "Convert an HSLA array to RGBA.\n\nWe need to change basis from HSLA to something that can be more easily be\nprojected onto RGBA. We will choose hue and brightness as our first two\ncomponents, and pick a convenient third one ('zest') so that we don't need\nto calculate formal HSBA saturation.",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/color/color_utils.js",
-            "line": 251,
-            "description": "For a color expressed as an hsba array, return the corresponding HSLA value",
-            "params": [
-                {
-                    "name": "hsba",
-                    "description": "An 'array' object that represents a list of HSBA colors",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "an array of HSLA values",
-                "type": "Array"
-            },
+            "file": "src/color/color_conversion.js",
+            "line": 178,
+            "description": "Convert an RGBA array to HSBA.",
+            "class": "p5",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/color/color_conversion.js",
+            "line": 213,
+            "description": "Convert an RGBA array to HSLA.",
             "class": "p5",
             "module": "Lights, Camera"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 14,
+            "line": 15,
             "description": "Extracts the alpha value from a color or pixel array.",
             "itemtype": "method",
             "name": "alpha",
@@ -3869,8 +3828,8 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 40,
-            "description": "Extracts the blue value from a color or a pixel array.",
+            "line": 41,
+            "description": "Extracts the blue value from a color or pixel array.",
             "itemtype": "method",
             "name": "blue",
             "params": [
@@ -3889,14 +3848,14 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 67,
-            "description": "Extracts the brightness value from a color.",
+            "line": 68,
+            "description": "Extracts the HSB brightness value from a color or pixel array.",
             "itemtype": "method",
             "name": "brightness",
             "params": [
                 {
                     "name": "color",
-                    "description": "p5.Color object",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -3909,7 +3868,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 94,
+            "line": 95,
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency. If a single string parameter is provided it will be\ninterpreted as a CSS-compatible color string.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
@@ -3951,14 +3910,14 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 259,
+            "line": 255,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
             "params": [
                 {
                     "name": "color",
-                    "description": "p5.Color object",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -3971,14 +3930,14 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 286,
-            "description": "Extracts the hue value from a color.",
+            "line": 282,
+            "description": "Extracts the hue value from a color or pixel array.\n\nHue exists in both HSB and HSL. This function will return the\nHSB-normalized hue when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL-normalized hue otherwise. (The values will only be different if the\nmaximum hue setting for each system is different.)",
             "itemtype": "method",
             "name": "hue",
             "params": [
                 {
                     "name": "color",
-                    "description": "p5.Color object",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -3991,8 +3950,8 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 312,
-            "description": "Calculates a color or colors between two color at a specific increment,\nusing gamma correction to blend colors in the linear RGB space.\nThe amt parameter is the amount to interpolate between the two values\nwhere 0.0 equal to the first point, 0.1 is very near the first point,\n0.5 is halfway in between, etc. An amount below 0 will be treated as 0.\nLikewise, amounts above 1 will be capped at 1. This is different from\nthe behavior of lerp(), but necessary because otherwise numbers outside\nthe range will produce strange and unexpected colors.\n\nThe regular RGB color representation stores the square root of the\ndisplayed color, not the value itself. Your monitor behaves as if it\nsquares the color values before displaying it. lerpColor first transforms\ncolors into the linear color space before blending, to correctly mix the\ncolors as two rays of light.",
+            "line": 315,
+            "description": "Blends two colors to find a third color somewhere between them. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first color, 0.1 is very near the first color, 0.5 is halfway\nin between, etc. An amount below 0 will be treated as 0. Likewise, amounts\nabove 1 will be capped at 1. This is different from the behavior of lerp(),\nbut necessary because otherwise numbers outside the range will produce\nstrange and unexpected colors.\n\nThe way that colours are interpolated depends on the current color mode.",
             "itemtype": "method",
             "name": "lerpColor",
             "params": [
@@ -4017,7 +3976,7 @@
                 "type": "Array/Number"
             },
             "example": [
-                "\n<div>\n<code>\nstroke(255);\nbackground(51);\nfrom = color(204, 102, 0);\nto = color(0, 102, 153);\ninterA = lerpColor(from, to, .33);\ninterB = lerpColor(from, to, .66);\nfill(from);\nrect(10, 20, 20, 60);\nfill(interA);\nrect(30, 20, 20, 60);\nfill(interB);\nrect(50, 20, 20, 60);\nfill(to);\nrect(70, 20, 20, 60);\n</code>\n</div>"
+                "\n<div>\n<code>\ncolorMode(RGB);\nstroke(255);\nbackground(51);\nfrom = color(218, 165, 32);\nto = color(72, 61, 139);\ncolorMode(RGB);  // Try changing to HSB.\ninterA = lerpColor(from, to, .33);\ninterB = lerpColor(from, to, .66);\nfill(from);\nrect(10, 20, 20, 60);\nfill(interA);\nrect(30, 20, 20, 60);\nfill(interB);\nrect(50, 20, 20, 60);\nfill(to);\nrect(70, 20, 20, 60);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -4025,14 +3984,14 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 379,
-            "description": "Extracts the lightness value from a color.",
+            "line": 398,
+            "description": "Extracts the HSL lightness value from a color or pixel array.",
             "itemtype": "method",
             "name": "lightness",
             "params": [
                 {
                     "name": "color",
-                    "description": "p5.Color object",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -4045,7 +4004,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 407,
+            "line": 425,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -4065,14 +4024,14 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 444,
-            "description": "Extracts the saturation value from a color.",
+            "line": 462,
+            "description": "Extracts the saturation value from a color or pixel array.\n\nSaturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL saturation otherwise.",
             "itemtype": "method",
             "name": "saturation",
             "params": [
                 {
                     "name": "color",
-                    "description": "p5.Color object",
+                    "description": "p5.Color object or pixel array",
                     "type": "Object"
                 }
             ],
@@ -4085,96 +4044,48 @@
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 119,
-            "description": "These Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
+            "line": 79,
+            "description": "Hue is the same in HSB and HSL, but the maximum value may be different.\nThis function will return the HSB-normalized saturation when supplied with\nan HSB color object, but will default to the HSL-normalized saturation\notherwise.",
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 287,
-            "description": "Regular expression for matching colors in format #XXX,\ne.g. #416",
+            "line": 110,
+            "description": "Saturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object, but will default\nto the HSL saturation otherwise.",
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 293,
-            "description": "Regular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
+            "line": 129,
+            "description": "CSS named colors.",
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 299,
-            "description": "Regular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
+            "line": 282,
+            "description": "These regular expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases the\nlegibility and comprehensibility of the code.\n\nNote that RGB values of .9 are not parsed by IE, but are supported here for\ncolor string consistency.",
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 316,
-            "description": "Regular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
+            "line": 295,
+            "description": "Full color string patterns. The capture groups are necessary.",
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/p5.Color.js",
-            "line": 332,
-            "description": "Regular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
-            "class": "p5.Color",
-            "module": "Color",
-            "submodule": "Creating & Reading"
-        },
-        {
-            "file": "src/color/p5.Color.js",
-            "line": 348,
-            "description": "Regular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
-            "class": "p5.Color",
-            "module": "Color",
-            "submodule": "Creating & Reading"
-        },
-        {
-            "file": "src/color/p5.Color.js",
-            "line": 364,
-            "description": "Regular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%)",
-            "class": "p5.Color",
-            "module": "Color",
-            "submodule": "Creating & Reading"
-        },
-        {
-            "file": "src/color/p5.Color.js",
-            "line": 378,
-            "description": "Regular expression for matching colors in format hsla(H, S%, L%, A),\ne.g. hsla(100, 40%, 28.9%, 0.5)",
-            "class": "p5.Color",
-            "module": "Color",
-            "submodule": "Creating & Reading"
-        },
-        {
-            "file": "src/color/p5.Color.js",
-            "line": 394,
-            "description": "Regular expression for matching colors in format hsb(H, S%, B%),\ne.g. hsb(100, 40%, 28.9%)",
-            "class": "p5.Color",
-            "module": "Color",
-            "submodule": "Creating & Reading"
-        },
-        {
-            "file": "src/color/p5.Color.js",
-            "line": 408,
-            "description": "Regular expression for matching colors in format hsba(H, S%, B%, A),\ne.g. hsba(100, 40%, 28.9%, 0.5)",
-            "class": "p5.Color",
-            "module": "Color",
-            "submodule": "Creating & Reading"
-        },
-        {
-            "file": "src/color/p5.Color.js",
-            "line": 425,
-            "description": "For a number of different inputs, returns a color formatted as\nnormalized [r, g, b, a], maxes [255, 255, 255, 255]",
+            "line": 402,
+            "description": "For a number of different inputs, returns a color formatted as [r, g, b, a]\narrays, with each component normalized between 0 and 1.",
             "params": [
                 {
                     "name": "args",
@@ -4189,6 +4100,14 @@
             "example": [
                 "\n<div>\n<code>\n// todo\n</code>\n</div>"
             ],
+            "class": "p5.Color",
+            "module": "Color",
+            "submodule": "Creating & Reading"
+        },
+        {
+            "file": "src/color/p5.Color.js",
+            "line": 572,
+            "description": "For HSB and HSL, interpret the gray level as a brightness/lightness\nvalue (they are equivalent when chroma is zero). For RGB, normalize the\ngray level according to the blue maximum.",
             "class": "p5.Color",
             "module": "Color",
             "submodule": "Creating & Reading"
@@ -4247,38 +4166,42 @@
         {
             "file": "src/color/setting.js",
             "line": 143,
-            "description": "Changes the way p5.js interprets color data. By default, the parameters\nfor fill(), stroke(), background(), and color() are defined by values\nbetween 0 and 255 using the RGB color model. The colorMode() function is\nused to switch color systems. Regardless of color system, all value ranges\nare presumed to be 0–255 unless explicitly set otherwise. That is,\nfor a standard HSB range, one would pass colorMode(HSB, 360, 100, 100, 1).",
+            "description": "colorMode() changes the way p5.js interprets color data. By default, the\nparameters for fill(), stroke(), background(), and color() are defined by\nvalues between 0 and 255 using the RGB color model. This is equivalent to\nsetting colorMode(RGB, 255). Setting colorMode(HSB) lets you use the HSB\nsystem instead. By default, this is colorMode(HSB, 360, 100, 100, 1). You\ncan also use HSL.\n\nNote: existing color objects remember the mode that they were created in,\nso you can change modes as you like without affecting their appearance.",
             "itemtype": "method",
             "name": "colorMode",
             "params": [
                 {
                     "name": "mode",
-                    "description": "either RGB or HSB, corresponding to\n                              Red/Green/Blue and Hue/Saturation/Brightness",
+                    "description": "either RGB or HSB, corresponding to\n                                Red/Green/Blue and Hue/Saturation/Brightness\n                                (or Lightness)",
                     "type": "Number|Constant"
                 },
                 {
                     "name": "max1",
-                    "description": "range for the red or hue depending on the\n                              current color mode, or range for all values",
-                    "type": "Number|Constant"
+                    "description": "range for the red or hue depending on the\n                                current color mode, or range for all values",
+                    "type": "Number|Constant",
+                    "optional": true
                 },
                 {
                     "name": "max2",
-                    "description": "range for the green or saturation depending\n                              on the current color mode",
-                    "type": "Number|Constant"
+                    "description": "range for the green or saturation depending\n                                on the current color mode",
+                    "type": "Number|Constant",
+                    "optional": true
                 },
                 {
                     "name": "max3",
-                    "description": "range for the blue or brightness depending\n                              on the current color mode",
-                    "type": "Number|Constant"
+                    "description": "range for the blue or brightness/lighntess\n                                depending on the current color mode",
+                    "type": "Number|Constant",
+                    "optional": true
                 },
                 {
                     "name": "maxA",
                     "description": "range for the alpha",
-                    "type": "Number|Constant"
+                    "type": "Number|Constant",
+                    "optional": true
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nnoStroke();\ncolorMode(RGB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 0);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 100);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\n\ncolorMode(RGB, 1);\nvar myColor = c.getRed();\ntext(myColor, 10, 10, 80, 80);\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\ncolorMode(RGB, 255, 255, 255, 1);\nbackground(255);\n\nstrokeWeight(4);\nstroke(255, 0 , 10, 0.3);\nellipse(40, 40, 50, 50);\nellipse(50, 50, 40, 40);\n</code>\n</div>"
+                "\n<div>\n<code>\nnoStroke();\ncolorMode(RGB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 0);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 100);\nfor (i = 0; i < 100; i++) {\n  for (j = 0; j < 100; j++) {\n    stroke(i, j, 100);\n    point(i, j);\n  }\n}\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\n\ncolorMode(RGB, 1);\nvar myColor = c._getRed();\ntext(myColor, 10, 10, 80, 80);\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\ncolorMode(RGB, 255, 255, 255, 1);\nbackground(255);\n\nstrokeWeight(4);\nstroke(255, 0 , 10, 0.3);\nellipse(40, 40, 50, 50);\nellipse(50, 50, 40, 40);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -4286,7 +4209,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 240,
+            "line": 246,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.) If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the fill color.",
             "itemtype": "method",
             "name": "fill",
@@ -4324,7 +4247,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 359,
+            "line": 365,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -4337,7 +4260,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 378,
+            "line": 384,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -4350,7 +4273,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 396,
+            "line": 402,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255). If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the stroke color.",
             "itemtype": "method",
             "name": "stroke",
@@ -5018,7 +4941,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 363,
+            "line": 366,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -5648,19 +5571,23 @@
         {
             "file": "src/core/environment.js",
             "line": 412,
-            "description": "Toggles pixel scaling for high pixel density displays. By default\npixel scaling is on, call devicePixelScaling(false) to turn it off.\nThis devicePixelScaling() function must be the first line of code\ninside setup().",
+            "description": "Sets the pixel scaling for high pixel density displays. By default\npixel density is set to match display density, call pixelDensity(1)\nto turn this off. Calling pixelDensity() with no arguments returns\nthe current pixel density of the sketch.",
             "itemtype": "method",
-            "name": "devicePixelScaling",
+            "name": "pixelDensity",
             "params": [
                 {
                     "name": "val",
                     "description": "whether or how much the sketch should scale",
-                    "type": "Boolean|Number",
+                    "type": "Number",
                     "optional": true
                 }
             ],
+            "return": {
+                "description": "current pixel density of the sketch",
+                "type": "Number"
+            },
             "example": [
-                "\n<div>\n<code>\nfunction setup() {\n  devicePixelScaling(false);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  devicePixelScaling(3.0);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction setup() {\n  pixelDensity(1);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>\n<div>\n<code>\nfunction setup() {\n  pixelDensity(3.0);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -5668,7 +5595,24 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 488,
+            "line": 453,
+            "description": "Returns the pixel density of the current display the sketch is running on.",
+            "itemtype": "method",
+            "name": "displayDensity",
+            "return": {
+                "description": "current pixel density of the display",
+                "type": "Number"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup() {\n  var density = displayDensity();\n  pixelDensity(density);\n  createCanvas(100, 100);\n  background(200);\n  ellipse(width/2, height/2, 50, 50);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Environment",
+            "submodule": "Environment"
+        },
+        {
+            "file": "src/core/environment.js",
+            "line": 507,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -5685,7 +5629,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 515,
+            "line": 534,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -5702,7 +5646,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 532,
+            "line": 551,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -6236,7 +6180,7 @@
         },
         {
             "file": "src/core/p5.Renderer2D.js",
-            "line": 361,
+            "line": 362,
             "description": "Generate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
             "class": "p5.Renderer2D",
             "module": "Rendering"
@@ -7441,7 +7385,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 581,
+            "line": 584,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -7454,7 +7398,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 631,
+            "line": 634,
             "description": "The function mouseWheel is executed every time a scroll event is detected\neither triggered by an actual mouse wheel or by a touchpad.<br>\nThe event.delta property returns -1 or +1 depending on the scroll\ndirection and the user's settings. (on OS X with \"natural\" scrolling\nenabled, the values are inverted).<br><br>\nBrowsers may have different default behaviors attached to various\nmouse events. To prevent any default behavior for this event, add\n`return false` to the end of the method.\n\nThe event.wheelDelta or event.detail properties can also be accessed but\ntheir behavior may differ depending on the browser.\nSee <a href=\"http://www.javascriptkit.com/javatutors/onmousewheel.shtml\">\nmouse wheel event in JS</a>.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -8064,7 +8008,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 222,
+            "line": 231,
             "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use\nwhite as the tint color and specify an alpha value. For instance,\ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()).\n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
             "itemtype": "method",
             "name": "tint",
@@ -8102,7 +8046,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 291,
+            "line": 300,
             "description": "Removes the current fill value for displaying images and reverts to\ndisplaying images with their original hues.",
             "itemtype": "method",
             "name": "noTint",
@@ -8115,7 +8059,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 316,
+            "line": 325,
             "description": "Apply the current tint color to the input image, return the resulting\ncanvas.",
             "params": [
                 {
@@ -8134,7 +8078,7 @@
         },
         {
             "file": "src/image/loading_displaying.js",
-            "line": 352,
+            "line": 361,
             "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
@@ -8182,7 +8126,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 58,
+            "line": 60,
             "description": "Array containing the values for all the pixels in the display window.\nThese values are numbers. This array is the size (include an appropriate\nfactor for pixelDensity) of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from\nleft to right across each row, then down each column. Retina and other\nhigh denisty displays may have more pixels[] (by a factor of\npixelDensity^2).\nFor example, if the image is 100x100 pixels, there will be 40,000. With\npixelDensity = 2, there will be 160,000. The first four values\n(indices 0-3) in the array will be the R, G, B, A values of the pixel at\n(0, 0). The second four values (indices 4-7) will contain the R, G, B, A\nvalues of the pixel at (1, 0). More generally, to set values for a pixel\nat (x, y):\n<code><pre>var d = pixelDensity;\nfor (var i = 0; i < d; i++) {\n  for (var j = 0; j < d; j++) {\n    // loop over\n    idx = 4*((y * d + j) * width * d + (x * d + i));\n    pixels[idx] = r;\n    pixels[idx+1] = g;\n    pixels[idx+2] = b;\n    pixels[idx+3] = a;\n  }\n}\n</pre></code>\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -8195,7 +8139,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 122,
+            "line": 124,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Image",
             "module": "Image",
@@ -8203,7 +8147,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 130,
+            "line": 132,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -8213,7 +8157,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 139,
+            "line": 141,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -8245,7 +8189,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 157,
+            "line": 159,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -8285,7 +8229,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 179,
+            "line": 181,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels().",
             "itemtype": "method",
             "name": "set",
@@ -8315,7 +8259,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 212,
+            "line": 214,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -8340,7 +8284,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 277,
+            "line": 279,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -8397,7 +8341,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 299,
+            "line": 301,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's alpha channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -8414,7 +8358,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 344,
+            "line": 346,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -8436,7 +8380,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 357,
+            "line": 359,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -8498,7 +8442,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 386,
+            "line": 388,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -8514,6 +8458,25 @@
                     "type": "String"
                 }
             ],
+            "class": "p5.Image",
+            "module": "Image",
+            "submodule": "Image"
+        },
+        {
+            "file": "src/image/p5.Image.js",
+            "line": 428,
+            "description": "creates a gl texture\nused in WEBGL mode only",
+            "params": [
+                {
+                    "name": "tex",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
@@ -8740,7 +8703,7 @@
         {
             "file": "src/image/pixels.js",
             "line": 443,
-            "description": "<p>Changes the color of any pixel, or writes an image directly to the\ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.COlor object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>\nAfter using set(), you must call updatePixels() for your changes to\nappear.  This should be called once all pixels have been set.\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. Setting the pixels[]\nvalues directly may be complicated when working with a retina display,\nbut will perform better when lots of pixels need to be set directly on\nevery loop.</p>\n<p>See the reference for pixels[] for more information.</p>",
+            "description": "<p>Changes the color of any pixel, or writes an image directly to the\ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.Color object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>\nAfter using set(), you must call updatePixels() for your changes to\nappear.  This should be called once all pixels have been set.\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. Setting the pixels[]\nvalues directly may be complicated when working with a retina display,\nbut will perform better when lots of pixels need to be set directly on\nevery loop.</p>\n<p>See the reference for pixels[] for more information.</p>",
             "itemtype": "method",
             "name": "set",
             "params": [
@@ -8840,7 +8803,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n\n<p>Calling loadFont() inside preload() guarantees that the load\noperation will have completed before setup() and draw() are called.</p>\n\n<div><code>\nvar myFont;\nfunction preload() {\n  myFont = loadFont('assets/AvenirNextLTPro-Demi.otf');\n}\n\nfunction setup() {\n  fill('#ED225D');\n  textFont(myFont);\n  textSize(36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadFont('assets/AvenirNextLTPro-Demi.otf', drawText);\n}\n\nfunction drawText(font) {\n  fill('#ED225D');\n  textFont(font, 36);\n  text('p5*js', 10, 50);\n}\n\n</code></div>\n"
+                "\n\n<p>Calling loadFont() inside preload() guarantees that the load\noperation will have completed before setup() and draw() are called.</p>\n\n<div><code>\nvar myFont;\nfunction preload() {\n  myFont = loadFont('assets/AvenirNextLTPro-Demi.otf');\n}\n\nfunction setup() {\n  fill('#ED225D');\n  textFont(myFont);\n  textSize(36);\n  text('p5*js', 10, 50);\n}\n</code></div>\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n\n<div><code>\nfunction setup() {\n  loadFont('assets/AvenirNextLTPro-Demi.otf', drawText);\n}\n\nfunction drawText(font) {\n  fill('#ED225D');\n  textFont(font, 36);\n  text('p5*js', 10, 50);\n}\n\n</code></div>\n\n<p>You can also use the string name of the font to style other HTML\nelements.</p>\n\n<div><code>\nvar myFont;\n\nfunction preload() {\n  myFont = loadFont('assets/Avenir.otf');\n}\n\nfunction setup() {\n  var myDiv = createDiv('hello there');\n  myDiv.style('font-family', 'Avenir');\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "IO",
@@ -8848,7 +8811,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 134,
+            "line": 162,
             "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadJSON",
@@ -8890,7 +8853,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 249,
+            "line": 277,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -8926,7 +8889,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 345,
+            "line": 373,
             "description": "<p>Reads the contents of a file or URL and creates a p5.Table object with\nits values. If a file is specified, it must be located in the sketch's\n\"data\" folder. The filename parameter can also be a URL to a file found\nonline. By default, the file is assumed to be comma-separated (in CSV\nformat). Table only looks for a header row if the 'header' option is\nincluded.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas. For example:\n<br><br>\n<code>\n  loadTable(\"my_csv_file.csv\", \"csv\", \"header\")\n</code>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadTable() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n</p>",
             "itemtype": "method",
             "name": "loadTable",
@@ -8962,7 +8925,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 633,
+            "line": 661,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>",
             "itemtype": "method",
             "name": "loadXML",
@@ -8995,7 +8958,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 715,
+            "line": 743,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -9036,7 +8999,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 737,
+            "line": 765,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -9077,7 +9040,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 758,
+            "line": 786,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.<br><br>\nYou may also pass a single object specifying all parameters for the\nrequest following the examples inside the reqwest() calls here:\n<a href='https://github.com/ded/reqwest#api'\n>https://github.com/ded/reqwest#api</a>",
             "itemtype": "method",
             "name": "httpDo",
@@ -9124,7 +9087,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 939,
+            "line": 967,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client's computer. <b>Note that it is not recommended to call save()\nwithin draw if it's looping, as the save() function will open a new save\ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename.\nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave('myCanvas.jpg'); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n\n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Renderer object as an image\n\nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n\nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n\nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -9151,7 +9114,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1060,
+            "line": 1088,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveJSON",
@@ -9182,7 +9145,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1116,
+            "line": 1144,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveStrings",
@@ -9207,7 +9170,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1181,
+            "line": 1209,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveTable",
@@ -9237,7 +9200,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1297,
+            "line": 1325,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -9264,7 +9227,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1318,
+            "line": 1346,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -9289,7 +9252,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1354,
+            "line": 1382,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -9310,7 +9273,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1386,
+            "line": 1414,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -9324,7 +9287,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1398,
+            "line": 1426,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -13065,7 +13028,7 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 40,
-            "description": "Searches the page for an element with the given ID, class, or tag name (using the '#' or '.'\nprefixes to specify an ID or class respectively, and none for a tag) and returns it as\na p5.Element. If a class or tag name is given with more than 1 element,\nonly the first element will be returned.\nThe DOM node itself can be accessed with .elt.\nReturns null if none found.",
+            "description": "Searches the page for an element with the given ID, class, or tag name (using the '#' or '.'\nprefixes to specify an ID or class respectively, and none for a tag) and returns it as\na p5.Element. If a class or tag name is given with more than 1 element,\nonly the first element will be returned.\nThe DOM node itself can be accessed with .elt.\nReturns null if none found. You can also specify a container to search within.",
             "itemtype": "method",
             "name": "select",
             "params": [
@@ -13073,6 +13036,12 @@
                     "name": "name",
                     "description": "id, class, or tag name of element to search for",
                     "type": "String"
+                },
+                {
+                    "name": "container",
+                    "description": "id, p5.Element, or HTML element to search within",
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
@@ -13080,7 +13049,7 @@
                 "type": "Object/p5.Element|Null"
             },
             "example": [
-                "\n<div ><code class='norender'>\nfunction setup() {\n  createCanvas(100,100);\n  //translates canvas 50px down\n  select('canvas').translate(0,50);\n}\n</code></div>\n"
+                "\n<div ><code class='norender'>\nfunction setup() {\n  createCanvas(100,100);\n  //translates canvas 50px down\n  select('canvas').translate(0,50);\n}\n</code></div>\n<div ><code class='norender'>\n// these are all valid calls to select()\nvar a = select('#moo');\nvar b = select('#blah', '#myContainer');\nvar c = select('#foo', b);\nvar d = document.getElementById('beep');\nvar e = select('p', d);\n</code></div>\n"
             ],
             "class": "p5.dom",
             "module": "p5.dom",
@@ -13088,8 +13057,8 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 90,
-            "description": "Searches the page for elements with the given class or tag name (using the '.' prefix\nto specify a class and no prefix for a tag) and returns them as p5.Elements\nin an array.\nThe DOM node itself can be accessed with .elt.\nReturns null if none found.",
+            "line": 99,
+            "description": "Searches the page for elements with the given class or tag name (using the '.' prefix\nto specify a class and no prefix for a tag) and returns them as p5.Elements\nin an array.\nThe DOM node itself can be accessed with .elt.\nReturns an empty array if none found.\nYou can also specify a container to search within.",
             "itemtype": "method",
             "name": "selectAll",
             "params": [
@@ -13097,6 +13066,12 @@
                     "name": "name",
                     "description": "class or tag name of elements to search for",
                     "type": "String"
+                },
+                {
+                    "name": "container",
+                    "description": "id, p5.Element, or HTML element to search within",
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
@@ -13104,7 +13079,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div ><code class='norender'>\nfunction setup() {\n  createButton('btn');\n  createButton('2nd btn');\n  createButton('3rd btn');\n  var buttons = selectAll('button');\n\n  for (var i = 0; i < buttons.length; i++){\n    buttons[i].size(100,100);\n  }\n}\n</code></div>\n"
+                "\n<div ><code class='norender'>\nfunction setup() {\n  createButton('btn');\n  createButton('2nd btn');\n  createButton('3rd btn');\n  var buttons = selectAll('button');\n\n  for (var i = 0; i < buttons.length; i++){\n    buttons[i].size(100,100);\n  }\n}\n</code></div>\n<div ><code class='norender'>\n// these are all valid calls to selectAll()\nvar a = selectAll('.moo');\nvar b = selectAll('div');\nvar c = selectAll('button', '#myContainer');\nvar d = select('#container');\nvar e = selectAll('p', d);\nvar f = document.getElementById('beep');\nvar g = select('.blah', f);\n</code></div>\n"
             ],
             "class": "p5.dom",
             "module": "p5.dom",
@@ -13112,7 +13087,15 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 134,
+            "line": 155,
+            "description": "Helper function for select and selectAll",
+            "class": "p5.dom",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 171,
             "description": "Helper function for getElement and getElements.",
             "class": "p5.dom",
             "module": "p5.dom",
@@ -13120,7 +13103,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 145,
+            "line": 195,
             "description": "Removes all elements created by p5, except any canvas / graphics\nelements created by createCanvas or createGraphics.\nEvent handlers are removed, and element is removed from the DOM.",
             "itemtype": "method",
             "name": "removeElements",
@@ -13133,7 +13116,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 171,
+            "line": 221,
             "description": "Helpers for create methods.",
             "class": "p5.dom",
             "module": "p5.dom",
@@ -13141,7 +13124,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 182,
+            "line": 232,
             "description": "Creates a &lt;div&gt;&lt;/div&gt; element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createDiv",
@@ -13165,7 +13148,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 199,
+            "line": 249,
             "description": "Creates a &lt;p&gt;&lt;/p&gt; element in the DOM with given inner HTML. Used\nfor paragraph length text.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createP",
@@ -13189,7 +13172,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 217,
+            "line": 267,
             "description": "Creates a &lt;span&gt;&lt;/span&gt; element in the DOM with given inner HTML.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createSpan",
@@ -13213,7 +13196,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 243,
+            "line": 293,
             "description": "Creates an &lt;img /&gt; element in the DOM with given src and\nalternate text.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createImg",
@@ -13249,7 +13232,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 288,
+            "line": 338,
             "description": "Creates an &lt;a&gt;&lt;/a&gt; element in the DOM for including a hyperlink.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createA",
@@ -13284,14 +13267,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 315,
+            "line": 365,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 318,
+            "line": 368,
             "description": "Creates a slider &lt;input&gt;&lt;/input&gt; element in the DOM.\nUse .size() to set the display length of the slider.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createSlider",
@@ -13326,7 +13309,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 354,
+            "line": 404,
             "description": "Creates a &lt;button&gt;&lt;/button&gt; element in the DOM.\nUse .size() to set the display size of the button.\nUse .mousePressed() to specify behavior on press.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createButton",
@@ -13356,7 +13339,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 390,
+            "line": 440,
             "description": "Creates a checkbox &lt;input&gt;&lt;/input&gt; element in the DOM.\nCalling .checked() on a checkbox returns if it is checked or not",
             "itemtype": "method",
             "name": "createCheckbox",
@@ -13387,7 +13370,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 450,
+            "line": 500,
             "description": "Creates a dropdown menu &lt;select&gt;&lt;/select&gt; element in the DOM.",
             "itemtype": "method",
             "name": "createSelect",
@@ -13412,7 +13395,29 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 515,
+            "line": 565,
+            "description": "Creates a radio button &lt;input&gt;&lt;/input&gt; element in the DOM.",
+            "itemtype": "method",
+            "name": "createRadio",
+            "params": [
+                {
+                    "name": "divId",
+                    "description": "the id and name of the created div and input field respectively",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "pointer to p5.Element holding created node",
+                "type": "Object/p5.Element"
+            },
+            "class": "p5.dom",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 650,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM for text input.\nUse .size() to set the display length of the box.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createInput",
@@ -13437,7 +13442,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 544,
+            "line": 679,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM of type 'file'.\nThis allows users to select local files for use in a sketch.",
             "itemtype": "method",
             "name": "createFileInput",
@@ -13465,14 +13470,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 607,
+            "line": 742,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 638,
+            "line": 773,
             "description": "Creates an HTML5 &lt;video&gt; element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body. The first parameter\ncan be either a single string path to a video file, or an array of string\npaths to different formats of the same video. This is useful for ensuring\nthat your video can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage</a> for further information about supported formats.",
             "itemtype": "method",
             "name": "createVideo",
@@ -13499,14 +13504,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 664,
+            "line": 799,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 666,
+            "line": 801,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio\nplayback. Appends to the container node if one is specified,\notherwise appends to body. The first parameter\ncan be either a single string path to a audio file, or an array of string\npaths to different formats of the same audio. This is useful for ensuring\nthat your audio can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
             "itemtype": "method",
             "name": "createAudio",
@@ -13533,14 +13538,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 692,
+            "line": 827,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 702,
+            "line": 837,
             "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video(). More\nspecific properties of the stream can be passing in a Constraints object.\nSee the\n<a href=\"http://w3c.github.io/mediacapture-main/getusermedia.html\">W3C\nspec</a> for possible properties. Note that not all of these are supported\nby all browsers.",
             "itemtype": "method",
             "name": "createCapture",
@@ -13569,7 +13574,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 798,
+            "line": 935,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -13599,7 +13604,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 824,
+            "line": 961,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -13623,7 +13628,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 851,
+            "line": 988,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -13644,7 +13649,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 866,
+            "line": 1003,
             "description": "Attaches the element  as a child to the parent specified.\n Accepts either a string ID, DOM node, or p5.Element",
             "itemtype": "method",
             "name": "child",
@@ -13668,7 +13673,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 906,
+            "line": 1043,
             "description": "Centers a p5 Element either vertically, horizontally,\nor both, relative to its parent or according to\nthe body if the Element has no parent. If no argument is passed\nthe Element is aligned both vertically and horizontally.",
             "params": [
                 {
@@ -13690,7 +13695,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 959,
+            "line": 1096,
             "description": "If an argument is given, sets the inner HTML of the element,\n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -13715,7 +13720,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 985,
+            "line": 1122,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style. If no arguments given returns the x and y position\n of the element in an object.",
             "itemtype": "method",
             "name": "position",
@@ -13746,7 +13751,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1019,
+            "line": 1156,
             "description": "Translates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "translate",
@@ -13787,7 +13792,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1061,
+            "line": 1198,
             "description": "Rotates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "rotate",
@@ -13823,7 +13828,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1106,
+            "line": 1243,
             "description": "Sets the given style (css) property (1st arg) of the element with the\ngiven value (2nd arg). If a single argument is given, .style()\nreturns the value of the given property; however, if the single argument\nis given in css syntax ('text-align:center'), .style() sets the css\nappropriatly. .style() also handles 2d and 3d css transforms. If\nthe 1st arg is 'rotate', 'translate', or 'position', the following arguments\naccept Numbers as values. ('translate', 10, 100, 50);",
             "itemtype": "method",
             "name": "style",
@@ -13836,7 +13841,7 @@
                 {
                     "name": "value",
                     "description": "value to assign to property",
-                    "type": "String|Number",
+                    "type": "String|Number|p5.Color",
                     "optional": true
                 },
                 {
@@ -13863,7 +13868,7 @@
                 "type": "String|Object/p5.Element"
             },
             "example": [
-                "\n<div><code class=\"norender\">\nvar myDiv = createDiv(\"I like pandas.\");\nmyDiv.style(\"color\", \"#ff0000\");\nmyDiv.style(\"font-size\", \"18px\");\n</code></div>"
+                "\n<div><code class=\"norender\">\nvar myDiv = createDiv(\"I like pandas.\");\nmyDiv.style(\"font-size\", \"18px\");\nmyDiv.style(\"color\", \"#ff0000\");\nvar col = color(25,23,200,50);\ncreateButton.style(\"background-color\", col);\n</code></div>"
             ],
             "class": "p5.Element",
             "module": "p5.dom",
@@ -13871,7 +13876,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1203,
+            "line": 1345,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -13901,7 +13906,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1230,
+            "line": 1372,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -13923,7 +13928,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1250,
+            "line": 1392,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -13937,7 +13942,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1262,
+            "line": 1404,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -13951,7 +13956,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1273,
+            "line": 1415,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.",
             "itemtype": "method",
             "name": "size",
@@ -13979,7 +13984,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1334,
+            "line": 1476,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -13992,7 +13997,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1387,
+            "line": 1529,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -14006,7 +14011,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1408,
+            "line": 1550,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -14020,7 +14025,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1420,
+            "line": 1562,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -14034,7 +14039,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1431,
+            "line": 1573,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -14048,7 +14053,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1442,
+            "line": 1584,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -14062,7 +14067,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1455,
+            "line": 1597,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -14083,7 +14088,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1467,
+            "line": 1609,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -14105,7 +14110,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1483,
+            "line": 1625,
             "description": "If no arguments are given, returns the current time of the element.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -14127,7 +14132,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1500,
+            "line": 1642,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -14141,14 +14146,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1544,
+            "line": 1686,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1546,
+            "line": 1688,
             "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
             "itemtype": "method",
             "name": "connect",
@@ -14165,7 +14170,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1598,
+            "line": 1740,
             "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
             "itemtype": "method",
             "name": "disconnect",
@@ -14175,14 +14180,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1614,
+            "line": 1756,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1616,
+            "line": 1758,
             "description": "Show the default MediaElement controls, as determined by the web browser.",
             "itemtype": "method",
             "name": "showControls",
@@ -14192,7 +14197,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1627,
+            "line": 1769,
             "description": "Hide the default mediaElement controls.",
             "itemtype": "method",
             "name": "hideControls",
@@ -14202,14 +14207,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1637,
+            "line": 1779,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1639,
+            "line": 1781,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -14244,7 +14249,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1701,
+            "line": 1843,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -14261,7 +14266,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1721,
+            "line": 1863,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -14271,7 +14276,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1778,
+            "line": 1920,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -14281,7 +14286,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1790,
+            "line": 1932,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -14291,7 +14296,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1796,
+            "line": 1938,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -14301,7 +14306,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1802,
+            "line": 1944,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -14311,7 +14316,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1808,
+            "line": 1950,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -14999,7 +15004,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1599,
+            "line": 1602,
             "description": "Connects the output of a p5sound object to input of another\np5.sound object. For example, you may connect a p5.SoundFile to an\nFFT or an Effect. If no parameter is given, it will connect to\nthe master output. Most p5sound objects connect to the master\noutput when they are created.",
             "itemtype": "method",
             "name": "connect",
@@ -15017,7 +15022,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1620,
+            "line": 1623,
             "description": "Disconnects the output of this p5sound object.",
             "itemtype": "method",
             "name": "disconnect",
@@ -15027,7 +15032,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1628,
+            "line": 1631,
             "description": "Read the Amplitude (volume level) of a p5.SoundFile. The\np5.SoundFile class contains its own instance of the Amplitude\nclass to help make it easy to get a SoundFile's volume level.\nAccepts an optional smoothing value (0.0 < 1.0).",
             "itemtype": "method",
             "name": "getLevel",
@@ -15049,7 +15054,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1645,
+            "line": 1648,
             "description": "Reset the source for this SoundFile to a\nnew path (URL).",
             "itemtype": "method",
             "name": "setPath",
@@ -15071,7 +15076,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1658,
+            "line": 1661,
             "description": "Replace the current Audio Buffer with a new Buffer.",
             "params": [
                 {
@@ -15086,7 +15091,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1730,
+            "line": 1733,
             "description": "processPeaks returns an array of timestamps where it thinks there is a beat.\n\nThis is an asynchronous function that processes the soundfile in an offline audio context,\nand sends the results to your callback function.\n\nThe process involves running the soundfile through a lowpass filter, and finding all of the\npeaks above the initial threshold. If the total number of peaks are below the minimum number of peaks,\nit decreases the threshold and re-runs the analysis until either minPeaks or minThreshold are reached.",
             "itemtype": "method",
             "name": "processPeaks",
@@ -15125,14 +15130,14 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1923,
+            "line": 1926,
             "class": "p5.SoundFile",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1924,
+            "line": 1927,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -15167,7 +15172,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 1999,
+            "line": 2002,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -15184,7 +15189,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2016,
+            "line": 2019,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -15194,7 +15199,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2129,
+            "line": 2132,
             "description": "Connects to the p5sound instance (master output) by default.\nOptionally, you can pass in a specific source (i.e. a soundfile).",
             "itemtype": "method",
             "name": "setInput",
@@ -15221,7 +15226,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2234,
+            "line": 2237,
             "description": "Returns a single Amplitude reading at the moment it is called.\nFor continuous readings, run in the draw loop.",
             "itemtype": "method",
             "name": "getLevel",
@@ -15246,7 +15251,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2275,
+            "line": 2278,
             "description": "Determines whether the results of Amplitude.process() will be\nNormalized. To normalize, Amplitude finds the difference the\nloudest reading it has processed and the maximum amplitude of\n1.0. Amplitude adds this difference to all values to produce\nresults that will reliably map between 0.0 and 1.0. However,\nif a louder moment occurs, the amount that Normalize adds to\nall the values will change. Accepts an optional boolean parameter\n(true or false). Normalizing is off by default.",
             "itemtype": "method",
             "name": "toggleNormalize",
@@ -15264,7 +15269,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2295,
+            "line": 2298,
             "description": "Smooth Amplitude analysis by averaging with the last analysis \nframe. Off by default.",
             "itemtype": "method",
             "name": "smooth",
@@ -15281,7 +15286,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2435,
+            "line": 2438,
             "description": "Set the input source for the FFT analysis. If no source is\nprovided, FFT will analyze all sound in the sketch.",
             "itemtype": "method",
             "name": "setInput",
@@ -15299,7 +15304,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2454,
+            "line": 2457,
             "description": "Returns an array of amplitude values (between -1.0 and +1.0) that represent\na snapshot of amplitude readings in a single buffer. Length will be\nequal to bins (defaults to 1024). Can be used to draw the waveform\nof a sound.",
             "itemtype": "method",
             "name": "waveform",
@@ -15327,7 +15332,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2497,
+            "line": 2500,
             "description": "Returns an array of amplitude values (between 0 and 255)\nacross the frequency spectrum. Length is equal to FFT bins\n(1024 by default). The array indices correspond to frequencies\n(i.e. pitches), from the lowest to the highest that humans can\nhear. Each value represents amplitude at that slice of the\nfrequency spectrum. Must be called prior to using\n<code>getEnergy()</code>.",
             "itemtype": "method",
             "name": "analyze",
@@ -15358,7 +15363,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2589,
+            "line": 2592,
             "description": "Returns the amount of energy (volume) at a specific\n<a href=\"en.wikipedia.org/wiki/Audio_frequency\" target=\"_blank\">\nfrequency</a>, or the average amount of energy between two\nfrequencies. Accepts Number(s) corresponding\nto frequency (in Hz), or a String corresponding to predefined\nfrequency ranges (\"bass\", \"lowMid\", \"mid\", \"highMid\", \"treble\").\nReturns a range between 0 (no energy/volume at that frequency) and\n255 (maximum energy). \n<em>NOTE: analyze() must be called prior to getEnergy(). Analyze()\ntells the FFT to analyze frequency data, and getEnergy() uses\nthe results determine the value at a specific frequency or\nrange of frequencies.</em></p>",
             "itemtype": "method",
             "name": "getEnergy",
@@ -15385,7 +15390,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2669,
+            "line": 2672,
             "description": "Smooth FFT analysis by averaging with the last analysis frame.",
             "itemtype": "method",
             "name": "smooth",
@@ -15402,56 +15407,56 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2704,
+            "line": 2707,
             "class": "p5.FFT",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 2993,
+            "line": 2996,
             "class": "p5.FFT",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3013,
+            "line": 3016,
             "class": "p5.FFT",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3061,
+            "line": 3064,
             "class": "p5.FFT",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3187,
+            "line": 3190,
             "class": "p5.FFT",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3218,
+            "line": 3221,
             "class": "p5.FFT",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3239,
+            "line": 3242,
             "class": "p5.FFT",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3330,
+            "line": 3333,
             "description": "Fade to value, for smooth transitions",
             "itemtype": "method",
             "name": "fade",
@@ -15473,7 +15478,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3341,
+            "line": 3344,
             "description": "Connect a p5.sound object or Web Audio node to this\np5.Signal so that its amplitude values can be scaled.",
             "params": [
                 {
@@ -15488,7 +15493,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3354,
+            "line": 3357,
             "description": "Add a constant value to this audio signal,\nand return the resulting audio signal. Does\nnot change the value of the original signal,\ninstead it returns a new p5.SignalAdd.",
             "itemtype": "method",
             "name": "add",
@@ -15509,7 +15514,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3373,
+            "line": 3376,
             "description": "Multiply this signal by a constant value,\nand return the resulting audio signal. Does\nnot change the value of the original signal,\ninstead it returns a new p5.SignalMult.",
             "itemtype": "method",
             "name": "mult",
@@ -15530,7 +15535,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3392,
+            "line": 3395,
             "description": "Scale this signal value to a given range,\nand return the result as an audio signal. Does\nnot change the value of the original signal,\ninstead it returns a new p5.SignalScale.",
             "itemtype": "method",
             "name": "scale",
@@ -15571,7 +15576,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3530,
+            "line": 3533,
             "description": "Start an oscillator. Accepts an optional parameter to\ndetermine how long (in seconds from now) until the\noscillator starts.",
             "itemtype": "method",
             "name": "start",
@@ -15595,7 +15600,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3565,
+            "line": 3568,
             "description": "Stop an oscillator. Accepts an optional parameter\nto determine how long (in seconds from now) until the\noscillator stops.",
             "itemtype": "method",
             "name": "stop",
@@ -15612,7 +15617,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3581,
+            "line": 3584,
             "description": "Set the amplitude between 0 and 1.0. Or, pass in an object\nsuch as an oscillator to modulate amplitude with an audio signal.",
             "itemtype": "method",
             "name": "amp",
@@ -15645,7 +15650,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3620,
+            "line": 3623,
             "description": "Set frequency of an oscillator to a value. Or, pass in an object\nsuch as an oscillator to modulate the frequency with an audio signal.",
             "itemtype": "method",
             "name": "freq",
@@ -15681,7 +15686,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3671,
+            "line": 3674,
             "description": "Set type to 'sine', 'triangle', 'sawtooth' or 'square'.",
             "itemtype": "method",
             "name": "setType",
@@ -15698,7 +15703,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3683,
+            "line": 3686,
             "description": "Connect to a p5.sound / Web Audio object.",
             "itemtype": "method",
             "name": "connect",
@@ -15715,7 +15720,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3700,
+            "line": 3703,
             "description": "Disconnect all outputs",
             "itemtype": "method",
             "name": "disconnect",
@@ -15725,7 +15730,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3711,
+            "line": 3714,
             "description": "Pan between Left (-1) and Right (1)",
             "itemtype": "method",
             "name": "pan",
@@ -15747,7 +15752,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3741,
+            "line": 3744,
             "description": "Set the phase of an oscillator between 0.0 and 1.0",
             "itemtype": "method",
             "name": "phase",
@@ -15764,7 +15769,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3791,
+            "line": 3794,
             "description": "Add a value to the p5.Oscillator's output amplitude,\nand return the oscillator. Calling this method again\nwill override the initial add() with a new value.",
             "itemtype": "method",
             "name": "add",
@@ -15785,7 +15790,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3808,
+            "line": 3811,
             "description": "Multiply the p5.Oscillator's output amplitude\nby a fixed value (i.e. turn it up!). Calling this method\nagain will override the initial mult() with a new value.",
             "itemtype": "method",
             "name": "mult",
@@ -15806,7 +15811,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3824,
+            "line": 3827,
             "description": "Scale this oscillator's amplitude values to a given\nrange, and return the oscillator. Calling this method\nagain will override the initial scale() with new values.",
             "itemtype": "method",
             "name": "scale",
@@ -15842,7 +15847,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3854,
+            "line": 3857,
             "description": "Constructor: <code>new p5.SinOsc()</code>.\nThis creates a Sine Wave Oscillator and is\nequivalent to <code> new p5.Oscillator('sine')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('sine')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.SinOsc",
@@ -15859,7 +15864,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3869,
+            "line": 3872,
             "description": "Constructor: <code>new p5.TriOsc()</code>.\nThis creates a Triangle Wave Oscillator and is\nequivalent to <code>new p5.Oscillator('triangle')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('triangle')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.TriOsc",
@@ -15876,7 +15881,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3884,
+            "line": 3887,
             "description": "Constructor: <code>new p5.SawOsc()</code>.\nThis creates a SawTooth Wave Oscillator and is\nequivalent to <code> new p5.Oscillator('sawtooth')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('sawtooth')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.SawOsc",
@@ -15893,7 +15898,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3899,
+            "line": 3902,
             "description": "Constructor: <code>new p5.SqrOsc()</code>.\nThis creates a Square Wave Oscillator and is\nequivalent to <code> new p5.Oscillator('square')\n</code> or creating a p5.Oscillator and then calling\nits method <code>setType('square')</code>.\nSee p5.Oscillator for methods.",
             "itemtype": "method",
             "name": "p5.SqrOsc",
@@ -15910,7 +15915,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3989,
+            "line": 3992,
             "itemtype": "property",
             "name": "attackTime",
             "class": "p5.Env",
@@ -15919,7 +15924,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3993,
+            "line": 3996,
             "itemtype": "property",
             "name": "attackLevel",
             "class": "p5.Env",
@@ -15928,7 +15933,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 3997,
+            "line": 4000,
             "itemtype": "property",
             "name": "decayTime",
             "class": "p5.Env",
@@ -15937,7 +15942,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4001,
+            "line": 4004,
             "itemtype": "property",
             "name": "decayLevel",
             "class": "p5.Env",
@@ -15946,7 +15951,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4005,
+            "line": 4008,
             "itemtype": "property",
             "name": "sustainTime",
             "class": "p5.Env",
@@ -15955,7 +15960,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4009,
+            "line": 4012,
             "itemtype": "property",
             "name": "sustainLevel",
             "class": "p5.Env",
@@ -15964,7 +15969,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4013,
+            "line": 4016,
             "itemtype": "property",
             "name": "releaseTime",
             "class": "p5.Env",
@@ -15973,7 +15978,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4017,
+            "line": 4020,
             "itemtype": "property",
             "name": "releaseLevel",
             "class": "p5.Env",
@@ -15982,7 +15987,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4031,
+            "line": 4034,
             "description": "Reset the envelope with a series of time/value pairs.",
             "itemtype": "method",
             "name": "set",
@@ -16039,7 +16044,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4057,
+            "line": 4060,
             "description": "Assign a parameter to be controlled by this envelope.\nIf a p5.Sound object is given, then the p5.Env will control its\noutput gain. If multiple inputs are provided, the env will\ncontrol all of them.",
             "itemtype": "method",
             "name": "setInput",
@@ -16056,7 +16061,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4075,
+            "line": 4078,
             "description": "Play tells the envelope to start acting on a given input.\nIf the input is a p5.sound object (i.e. AudioIn, Oscillator,\nSoundFile), then Env will control its output volume.\nEnvelopes can also be used to control any <a href=\"\nhttp://docs.webplatform.org/wiki/apis/webaudio/AudioParam\">\nWeb Audio Audio Param.</a>",
             "itemtype": "method",
             "name": "play",
@@ -16078,7 +16083,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4110,
+            "line": 4113,
             "description": "Trigger the Attack, Decay, and Sustain of the Envelope.\nSimilar to holding down a key on a piano, but it will\nhold the sustain level until you let go. Input can be\nany p5.sound object, or a <a href=\"\nhttp://docs.webplatform.org/wiki/apis/webaudio/AudioParam\">\nWeb Audio Param</a>.",
             "itemtype": "method",
             "name": "triggerAttack",
@@ -16100,7 +16105,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4145,
+            "line": 4148,
             "description": "Trigger the Release of the Envelope. This is similar to releasing\nthe key on a piano and letting the sound fade according to the\nrelease level and release time.",
             "itemtype": "method",
             "name": "triggerRelease",
@@ -16122,7 +16127,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4228,
+            "line": 4231,
             "description": "Add a value to the p5.Oscillator's output amplitude,\nand return the oscillator. Calling this method\nagain will override the initial add() with new values.",
             "itemtype": "method",
             "name": "add",
@@ -16143,7 +16148,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4244,
+            "line": 4247,
             "description": "Multiply the p5.Env's output amplitude\nby a fixed value. Calling this method\nagain will override the initial mult() with new values.",
             "itemtype": "method",
             "name": "mult",
@@ -16164,7 +16169,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4260,
+            "line": 4263,
             "description": "Scale this envelope's amplitude values to a given\nrange, and return the envelope. Calling this method\nagain will override the initial scale() with new values.",
             "itemtype": "method",
             "name": "scale",
@@ -16200,7 +16205,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4360,
+            "line": 4363,
             "description": "Set the width of a Pulse object (an oscillator that implements\nPulse Width Modulation).",
             "itemtype": "method",
             "name": "width",
@@ -16218,7 +16223,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4537,
+            "line": 4540,
             "description": "Set type of noise to 'white', 'pink' or 'brown'.\nWhite is the default.",
             "itemtype": "method",
             "name": "setType",
@@ -16236,7 +16241,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4567,
+            "line": 4570,
             "description": "Start the noise",
             "itemtype": "method",
             "name": "start",
@@ -16246,7 +16251,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4584,
+            "line": 4587,
             "description": "Stop the noise.",
             "itemtype": "method",
             "name": "stop",
@@ -16256,7 +16261,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4596,
+            "line": 4599,
             "description": "Pan the noise.",
             "itemtype": "method",
             "name": "pan",
@@ -16278,7 +16283,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4605,
+            "line": 4608,
             "description": "Set the amplitude of the noise between 0 and 1.0. Or,\nmodulate amplitude with an audio signal such as an oscillator.",
             "params": [
                 {
@@ -16305,7 +16310,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4615,
+            "line": 4618,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -16322,7 +16327,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4621,
+            "line": 4624,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -16332,7 +16337,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4686,
+            "line": 4689,
             "description": "Client must allow browser to access their microphone / audioin source.\nDefault: false. Will become true when the client enables acces.",
             "itemtype": "property",
             "name": "enabled",
@@ -16343,7 +16348,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4707,
+            "line": 4710,
             "description": "Start processing audio input. This enables the use of other\nAudioIn methods like getLevel(). Note that by default, AudioIn\nis not connected to p5.sound's output. So you won't hear\nanything unless you use the connect() method.<br/>",
             "itemtype": "method",
             "name": "start",
@@ -16353,7 +16358,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4750,
+            "line": 4753,
             "description": "Turn the AudioIn off. If the AudioIn is stopped, it cannot getLevel().<br/>",
             "itemtype": "method",
             "name": "stop",
@@ -16363,7 +16368,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4760,
+            "line": 4763,
             "description": "Connect to an audio unit. If no parameter is provided, will\nconnect to the master output (i.e. your speakers).<br/>",
             "itemtype": "method",
             "name": "connect",
@@ -16381,7 +16386,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4781,
+            "line": 4784,
             "description": "Disconnect the AudioIn from all audio units. For example, if\nconnect() had been called, disconnect() will stop sending \nsignal to your speakers.<br/>",
             "itemtype": "method",
             "name": "disconnect",
@@ -16391,7 +16396,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4793,
+            "line": 4796,
             "description": "Read the Amplitude (volume level) of an AudioIn. The AudioIn\nclass contains its own instance of the Amplitude class to help\nmake it easy to get a microphone's volume level. Accepts an\noptional smoothing value (0.0 < 1.0). <em>NOTE: AudioIn must\n.start() before using .getLevel().</em><br/>",
             "itemtype": "method",
             "name": "getLevel",
@@ -16413,7 +16418,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4811,
+            "line": 4814,
             "description": "Add input sources to the list of available sources.",
             "access": "private",
             "tagname": "",
@@ -16423,7 +16428,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4826,
+            "line": 4829,
             "description": "Set amplitude (volume) of a mic input between 0 and 1.0. <br/>",
             "itemtype": "method",
             "name": "amp",
@@ -16446,7 +16451,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4854,
+            "line": 4857,
             "description": "Chrome only. Returns a list of available input sources \nand allows the user to set the media source. Firefox allows \nthe user to choose from input sources in the permissions dialogue\ninstead of enumerating available sources and selecting one.\nNote: in order to have descriptive media names your page must be \nserved over a secure (HTTPS) connection and the page should \nrequest user media before enumerating devices. Otherwise device \nID will be a long device ID number and does not specify device \ntype. For example see \nhttps://simpl.info/getusermedia/sources/index.html vs.\nhttp://simpl.info/getusermedia/sources/index.html",
             "itemtype": "method",
             "name": "getSources",
@@ -16466,7 +16471,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 4905,
+            "line": 4908,
             "description": "Set the input source. Accepts a number representing a\nposition in the array returned by listSources().\nThis is only available in browsers that support \nMediaStreamTrack.getSources(). Instead, some browsers\ngive users the option to set their own media source.<br/>",
             "itemtype": "method",
             "name": "setSource",
@@ -16483,7 +16488,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5017,
+            "line": 5020,
             "description": "The p5.Filter is built with a\n<a href=\"http://www.w3.org/TR/webaudio/#BiquadFilterNode\">\nWeb Audio BiquadFilter Node</a>.",
             "itemtype": "property",
             "name": "biquadFilter",
@@ -16494,7 +16499,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5033,
+            "line": 5036,
             "description": "Filter an audio signal according to a set\nof filter parameters.",
             "itemtype": "method",
             "name": "process",
@@ -16521,7 +16526,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5047,
+            "line": 5050,
             "description": "Set the frequency and the resonance of the filter.",
             "itemtype": "method",
             "name": "set",
@@ -16549,7 +16554,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5064,
+            "line": 5067,
             "description": "Set the filter frequency, in Hz, from 10 to 22050 (the range of\nhuman hearing, although in reality most people hear in a narrower\nrange).",
             "itemtype": "method",
             "name": "freq",
@@ -16576,7 +16581,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5090,
+            "line": 5093,
             "description": "Controls either width of a bandpass frequency,\nor the resonance of a low/highpass cutoff frequency.",
             "itemtype": "method",
             "name": "res",
@@ -16603,7 +16608,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5113,
+            "line": 5116,
             "description": "Set the type of a p5.Filter. Possible types include: \n\"lowpass\" (default), \"highpass\", \"bandpass\", \n\"lowshelf\", \"highshelf\", \"peaking\", \"notch\",\n\"allpass\".",
             "itemtype": "method",
             "name": "setType",
@@ -16620,7 +16625,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5125,
+            "line": 5128,
             "description": "Set the output level of the filter.",
             "itemtype": "method",
             "name": "amp",
@@ -16649,7 +16654,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5143,
+            "line": 5146,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -16666,7 +16671,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5153,
+            "line": 5156,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -16676,7 +16681,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5161,
+            "line": 5164,
             "description": "Constructor: <code>new p5.LowPass()</code> Filter.\nThis is the same as creating a p5.Filter and then calling\nits method <code>setType('lowpass')</code>.\nSee p5.Filter for methods.",
             "itemtype": "method",
             "name": "p5.LowPass",
@@ -16686,7 +16691,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5173,
+            "line": 5176,
             "description": "Constructor: <code>new p5.HighPass()</code> Filter.\nThis is the same as creating a p5.Filter and then calling\nits method <code>setType('highpass')</code>.\nSee p5.Filter for methods.",
             "itemtype": "method",
             "name": "p5.HighPass",
@@ -16696,7 +16701,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5185,
+            "line": 5188,
             "description": "Constructor: <code>new p5.BandPass()</code> Filter.\nThis is the same as creating a p5.Filter and then calling\nits method <code>setType('bandpass')</code>.\nSee p5.Filter for methods.",
             "itemtype": "method",
             "name": "p5.BandPass",
@@ -16706,7 +16711,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5259,
+            "line": 5262,
             "description": "The p5.Delay is built with two\n<a href=\"http://www.w3.org/TR/webaudio/#DelayNode\">\nWeb Audio Delay Nodes</a>, one for each stereo channel.",
             "itemtype": "property",
             "name": "leftDelay",
@@ -16717,7 +16722,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5268,
+            "line": 5271,
             "description": "The p5.Delay is built with two\n<a href=\"http://www.w3.org/TR/webaudio/#DelayNode\">\nWeb Audio Delay Nodes</a>, one for each stereo channel.",
             "itemtype": "property",
             "name": "rightDelay",
@@ -16728,7 +16733,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5281,
+            "line": 5284,
             "description": "Internal filter. Set to lowPass by default, but can be accessed directly.\nSee p5.Filter for methods. Or use the p5.Delay.filter() method to change\nfrequency and q.",
             "itemtype": "property",
             "name": "lowPass",
@@ -16739,7 +16744,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5308,
+            "line": 5311,
             "description": "Add delay to an audio signal according to a set\nof delay parameters.",
             "itemtype": "method",
             "name": "process",
@@ -16774,7 +16779,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5343,
+            "line": 5346,
             "description": "Set the delay (echo) time, in seconds. Usually this value will be\na floating point number between 0.0 and 1.0.",
             "itemtype": "method",
             "name": "delayTime",
@@ -16791,7 +16796,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5362,
+            "line": 5365,
             "description": "Feedback occurs when Delay sends its signal back through its input\nin a loop. The feedback amount determines how much signal to send each\ntime through the loop. A feedback greater than 1.0 is not desirable because\nit will increase the overall output each time through the loop,\ncreating an infinite feedback loop.",
             "itemtype": "method",
             "name": "feedback",
@@ -16808,7 +16813,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5386,
+            "line": 5389,
             "description": "Set a lowpass filter frequency for the delay. A lowpass filter\nwill cut off any frequencies higher than the filter frequency.",
             "itemtype": "method",
             "name": "filter",
@@ -16830,7 +16835,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5403,
+            "line": 5406,
             "description": "Choose a preset type of delay. 'pingPong' bounces the signal\nfrom the left to the right channel to produce a stereo effect.\nAny other parameter will revert to the default delay setting.",
             "itemtype": "method",
             "name": "setType",
@@ -16847,7 +16852,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5435,
+            "line": 5438,
             "description": "Set the output level of the delay effect.",
             "itemtype": "method",
             "name": "amp",
@@ -16876,7 +16881,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5453,
+            "line": 5456,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -16893,7 +16898,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5463,
+            "line": 5466,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -16903,7 +16908,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5522,
+            "line": 5525,
             "description": "Connect a source to the reverb, and assign reverb parameters.",
             "itemtype": "method",
             "name": "process",
@@ -16938,7 +16943,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5551,
+            "line": 5554,
             "description": "Set the reverb settings. Similar to .process(), but without\nassigning a new input.",
             "itemtype": "method",
             "name": "set",
@@ -16968,7 +16973,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5578,
+            "line": 5581,
             "description": "Set the output level of the delay effect.",
             "itemtype": "method",
             "name": "amp",
@@ -16997,7 +17002,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5596,
+            "line": 5599,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -17014,7 +17019,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5606,
+            "line": 5609,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -17024,7 +17029,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5614,
+            "line": 5617,
             "description": "Inspired by Simple Reverb by Jordan Santell\nhttps://github.com/web-audio-components/simple-reverb/blob/master/index.js\n \nUtility function for building an impulse response\nbased on the module parameters.",
             "access": "private",
             "tagname": "",
@@ -17034,7 +17039,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5705,
+            "line": 5708,
             "description": "Internally, the p5.Convolver uses the a\n<a href=\"http://www.w3.org/TR/webaudio/#ConvolverNode\">\nWeb Audio Convolver Node</a>.",
             "itemtype": "property",
             "name": "convolverNode",
@@ -17045,7 +17050,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5735,
+            "line": 5738,
             "description": "Create a p5.Convolver. Accepts a path to a soundfile \nthat will be used to generate an impulse response.",
             "itemtype": "method",
             "name": "createConvolver",
@@ -17074,7 +17079,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5780,
+            "line": 5783,
             "description": "Private method to load a buffer as an Impulse Response,\nassign it to the convolverNode, and add to the Array of .impulses.",
             "params": [
                 {
@@ -17096,7 +17101,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5812,
+            "line": 5815,
             "description": "Connect a source to the reverb, and assign reverb parameters.",
             "itemtype": "method",
             "name": "process",
@@ -17116,7 +17121,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5844,
+            "line": 5847,
             "description": "If you load multiple impulse files using the .addImpulse method,\nthey will be stored as Objects in this Array. Toggle between them\nwith the <code>toggleImpulse(id)</code> method.",
             "itemtype": "property",
             "name": "impulses",
@@ -17127,7 +17132,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5853,
+            "line": 5856,
             "description": "Load and assign a new Impulse Response to the p5.Convolver.\nThe impulse is added to the <code>.impulses</code> array. Previous\nimpulses can be accessed with the <code>.toggleImpulse(id)</code>\nmethod.",
             "itemtype": "method",
             "name": "addImpulse",
@@ -17149,7 +17154,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5870,
+            "line": 5873,
             "description": "Similar to .addImpulse, except that the <code>.impulses</code>\nArray is reset to save memory. A new <code>.impulses</code>\narray is created with this impulse as the only item.",
             "itemtype": "method",
             "name": "resetImpulse",
@@ -17171,7 +17176,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5887,
+            "line": 5890,
             "description": "If you have used <code>.addImpulse()</code> to add multiple impulses\nto a p5.Convolver, then you can use this method to toggle between\nthe items in the <code>.impulses</code> Array. Accepts a parameter\nto identify which impulse you wish to use, identified either by its\noriginal filename (String) or by its position in the <code>.impulses\n</code> Array (Number).<br/>\nYou can access the objects in the .impulses Array directly. Each\nObject has two attributes: an <code>.audioBuffer</code> (type:\nWeb Audio <a href=\"\nhttp://webaudio.github.io/web-audio-api/#the-audiobuffer-interface\">\nAudioBuffer)</a> and a <code>.name</code>, a String that corresponds\nwith the original filename.",
             "itemtype": "method",
             "name": "toggleImpulse",
@@ -17188,14 +17193,14 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 5936,
+            "line": 5939,
             "class": "p5.Convolver",
             "module": "p5.sound",
             "submodule": "p5.sound"
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6103,
+            "line": 6106,
             "description": "Set the global tempo, in beats per minute, for all\np5.Parts. This method will impact all active p5.Parts.",
             "params": [
                 {
@@ -17215,7 +17220,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6190,
+            "line": 6193,
             "description": "Array of values to pass into the callback\nat each step of the phrase. Depending on the callback\nfunction's requirements, these values may be numbers,\nstrings, or an object with multiple parameters.\nZero (0) indicates a rest.",
             "itemtype": "property",
             "name": "sequence",
@@ -17226,7 +17231,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6283,
+            "line": 6286,
             "description": "Set the tempo of this part, in Beats Per Minute.",
             "itemtype": "method",
             "name": "setBPM",
@@ -17249,7 +17254,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6293,
+            "line": 6296,
             "description": "Returns the Beats Per Minute of this currently part.",
             "itemtype": "method",
             "name": "getBPM",
@@ -17263,7 +17268,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6302,
+            "line": 6305,
             "description": "Start playback of this part. It will play\nthrough all of its phrases at a speed\ndetermined by setBPM.",
             "itemtype": "method",
             "name": "start",
@@ -17281,7 +17286,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6318,
+            "line": 6321,
             "description": "Loop playback of this part. It will begin\nlooping through all of its phrases at a speed\ndetermined by setBPM.",
             "itemtype": "method",
             "name": "loop",
@@ -17299,7 +17304,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6335,
+            "line": 6338,
             "description": "Tell the part to stop looping.",
             "itemtype": "method",
             "name": "noLoop",
@@ -17309,7 +17314,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6347,
+            "line": 6350,
             "description": "Stop the part and cue it to step 0.",
             "itemtype": "method",
             "name": "stop",
@@ -17327,7 +17332,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6357,
+            "line": 6360,
             "description": "Pause the part. Playback will resume\nfrom the current step.",
             "itemtype": "method",
             "name": "pause",
@@ -17344,7 +17349,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6369,
+            "line": 6372,
             "description": "Add a p5.Phrase to this Part.",
             "itemtype": "method",
             "name": "addPhrase",
@@ -17361,7 +17366,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6390,
+            "line": 6393,
             "description": "Remove a phrase from this part, based on the name it was\ngiven when it was created.",
             "itemtype": "method",
             "name": "removePhrase",
@@ -17378,7 +17383,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6404,
+            "line": 6407,
             "description": "Get a phrase from this part, based on the name it was\ngiven when it was created. Now you can modify its array.",
             "itemtype": "method",
             "name": "getPhrase",
@@ -17395,7 +17400,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6418,
+            "line": 6421,
             "description": "Get a phrase from this part, based on the name it was\ngiven when it was created. Now you can modify its array.",
             "itemtype": "method",
             "name": "replaceSequence",
@@ -17417,7 +17422,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6446,
+            "line": 6449,
             "description": "Fire a callback function at every step.",
             "itemtype": "method",
             "name": "onStep",
@@ -17434,7 +17439,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6498,
+            "line": 6501,
             "description": "Start playback of the score.",
             "itemtype": "method",
             "name": "start",
@@ -17444,7 +17449,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6507,
+            "line": 6510,
             "description": "Stop playback of the score.",
             "itemtype": "method",
             "name": "stop",
@@ -17454,7 +17459,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6517,
+            "line": 6520,
             "description": "Pause playback of the score.",
             "itemtype": "method",
             "name": "pause",
@@ -17464,7 +17469,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6525,
+            "line": 6528,
             "description": "Loop playback of the score.",
             "itemtype": "method",
             "name": "loop",
@@ -17474,7 +17479,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6534,
+            "line": 6537,
             "description": "Stop looping playback of the score. If it\nis currently playing, this will go into effect\nafter the current round of playback completes.",
             "itemtype": "method",
             "name": "noLoop",
@@ -17484,7 +17489,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6556,
+            "line": 6559,
             "description": "Set the tempo for all parts in the score",
             "params": [
                 {
@@ -17504,7 +17509,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6662,
+            "line": 6665,
             "description": "callback invoked when the recording is over",
             "access": "private",
             "tagname": "",
@@ -17515,7 +17520,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6675,
+            "line": 6678,
             "description": "Connect a specific device to the p5.SoundRecorder.\nIf no parameter is given, p5.SoundRecorer will record\nall audible p5.sound from your sketch.",
             "itemtype": "method",
             "name": "setInput",
@@ -17533,7 +17538,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6696,
+            "line": 6699,
             "description": "Start recording. To access the recording, provide\na p5.SoundFile as the first parameter. The p5.SoundRecorder\nwill send its recording to that p5.SoundFile for playback once\nrecording is complete. Optional parameters include duration\n(in seconds) of the recording, and a callback function that\nwill be called once the complete recording has been\ntransfered to the p5.SoundFile.",
             "itemtype": "method",
             "name": "record",
@@ -17562,7 +17567,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6729,
+            "line": 6732,
             "description": "Stop the recording. Once the recording is stopped,\nthe results will be sent to the p5.SoundFile that\nwas given on .record(), and if a callback function\nwas provided on record, that function will be called.",
             "itemtype": "method",
             "name": "stop",
@@ -17572,7 +17577,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6748,
+            "line": 6751,
             "description": "internal method called on audio process",
             "access": "private",
             "tagname": "",
@@ -17589,7 +17594,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6799,
+            "line": 6802,
             "description": "Save a p5.SoundFile as a .wav audio file.",
             "itemtype": "method",
             "name": "saveSound",
@@ -17611,7 +17616,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6971,
+            "line": 6974,
             "description": "isDetected is set to true when a peak is detected.",
             "itemtype": "attribute",
             "name": "isDetected",
@@ -17623,7 +17628,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 6985,
+            "line": 6988,
             "description": "The update method is run in the draw loop.\n\nAccepts an FFT object. You must call .analyze()\non the FFT object prior to updating the peakDetect\nbecause it relies on a completed FFT analysis.",
             "itemtype": "method",
             "name": "update",
@@ -17640,7 +17645,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 7016,
+            "line": 7019,
             "description": "onPeak accepts two arguments: a function to call when\na peak is detected. The value of the peak,\nbetween 0.0 and 1.0, is passed to the callback.",
             "itemtype": "method",
             "name": "onPeak",
@@ -17666,7 +17671,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 7160,
+            "line": 7163,
             "description": "Connect a source to the gain node.",
             "itemtype": "method",
             "name": "setInput",
@@ -17683,7 +17688,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 7170,
+            "line": 7173,
             "description": "Send output to a p5.sound or web audio object",
             "itemtype": "method",
             "name": "connect",
@@ -17700,7 +17705,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 7180,
+            "line": 7183,
             "description": "Disconnect all output.",
             "itemtype": "method",
             "name": "disconnect",
@@ -17710,7 +17715,7 @@
         },
         {
             "file": "lib/addons/p5.sound.js",
-            "line": 7188,
+            "line": 7191,
             "description": "Set the output level of the gain node.",
             "itemtype": "method",
             "name": "amp",
@@ -17744,6 +17749,14 @@
             "line": " src/3d/p5.Matrix.js:335"
         },
         {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src/core/environment.js:412"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " src/core/environment.js:453"
+        },
+        {
             "message": "param name missing: {Invert}",
             "line": " src/image/filters.js:240"
         },
@@ -17761,15 +17774,15 @@
         },
         {
             "message": "param name missing: {String}",
-            "line": " lib/addons/p5.sound.js:5113"
+            "line": " lib/addons/p5.sound.js:5116"
         },
         {
             "message": "Missing item type\nHelper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
-            "line": " src/3d/material.js:116"
+            "line": " src/3d/material.js:124"
         },
         {
             "message": "Missing item type\nreturns the next highest power of 2 value",
-            "line": " src/3d/material.js:127"
+            "line": " src/3d/material.js:135"
         },
         {
             "message": "Missing item type\np5 Geometry3D class",
@@ -17780,28 +17793,28 @@
             "line": " src/3d/p5.Geometry3D.js:29"
         },
         {
-            "message": "Missing item type\nmerge duplicated vertices",
-            "line": " src/3d/p5.Geometry3D.js:78"
-        },
-        {
             "message": "Missing item type\ncompute faceNormals for a geometry",
-            "line": " src/3d/p5.Geometry3D.js:147"
+            "line": " src/3d/p5.Geometry3D.js:80"
         },
         {
             "message": "Missing item type\ncompute vertexNormals for a geometry",
-            "line": " src/3d/p5.Geometry3D.js:172"
+            "line": " src/3d/p5.Geometry3D.js:105"
+        },
+        {
+            "message": "Missing item type\n[generateUV description]",
+            "line": " src/3d/p5.Geometry3D.js:189"
         },
         {
             "message": "Missing item type\ngenerate an object containing information needed to create buffer",
-            "line": " src/3d/p5.Geometry3D.js:228"
+            "line": " src/3d/p5.Geometry3D.js:206"
         },
         {
             "message": "Missing item type\nturn a two dimensional array into one dimensional array",
-            "line": " src/3d/p5.Geometry3D.js:248"
+            "line": " src/3d/p5.Geometry3D.js:232"
         },
         {
             "message": "Missing item type\nturn an array of Vector into a one dimensional array of numbers",
-            "line": " src/3d/p5.Geometry3D.js:260"
+            "line": " src/3d/p5.Geometry3D.js:244"
         },
         {
             "message": "Missing item type",
@@ -17885,35 +17898,35 @@
         },
         {
             "message": "Missing item type\n[translate description]",
-            "line": " src/3d/p5.Renderer3D.js:317"
+            "line": " src/3d/p5.Renderer3D.js:316"
         },
         {
             "message": "Missing item type\nScales the Model View Matrix by a vector",
-            "line": " src/3d/p5.Renderer3D.js:334"
+            "line": " src/3d/p5.Renderer3D.js:333"
         },
         {
             "message": "Missing item type\n[rotate description]",
-            "line": " src/3d/p5.Renderer3D.js:346"
+            "line": " src/3d/p5.Renderer3D.js:345"
         },
         {
             "message": "Missing item type\n[rotateX description]",
-            "line": " src/3d/p5.Renderer3D.js:357"
+            "line": " src/3d/p5.Renderer3D.js:356"
         },
         {
             "message": "Missing item type\n[rotateY description]",
-            "line": " src/3d/p5.Renderer3D.js:367"
+            "line": " src/3d/p5.Renderer3D.js:366"
         },
         {
             "message": "Missing item type\n[rotateZ description]",
-            "line": " src/3d/p5.Renderer3D.js:377"
+            "line": " src/3d/p5.Renderer3D.js:376"
         },
         {
             "message": "Missing item type\npushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
-            "line": " src/3d/p5.Renderer3D.js:387"
+            "line": " src/3d/p5.Renderer3D.js:386"
         },
         {
             "message": "Missing item type\n[pop description]",
-            "line": " src/3d/p5.Renderer3D.js:397"
+            "line": " src/3d/p5.Renderer3D.js:396"
         },
         {
             "message": "Missing item type\ncreateBuffer",
@@ -17921,87 +17934,71 @@
         },
         {
             "message": "Missing item type\ninitBuffer description",
-            "line": " src/3d/retainedMode3D.js:31"
+            "line": " src/3d/retainedMode3D.js:39"
         },
         {
             "message": "Missing item type\ndrawBuffer",
-            "line": " src/3d/retainedMode3D.js:69"
+            "line": " src/3d/retainedMode3D.js:79"
         },
         {
-            "message": "Missing item type\nmodule Utils\nsubmodule Color Utils",
-            "line": " src/color/color_utils.js:1"
+            "message": "Missing item type\nmodule Conversion\nsubmodule Color Conversion",
+            "line": " src/color/color_conversion.js:1"
         },
         {
-            "message": "Missing item type\nFor a color expressed as an HSBA array, return the corresponding RGBA value",
-            "line": " src/color/color_utils.js:11"
+            "message": "Missing item type\nConversions adapted from <http://www.easyrgb.com/math.html>.\n\nIn these functions, hue is always in the range [0,1); all other components\nare in the range [0,1]. 'Brightness' and 'value' are used interchangeably.",
+            "line": " src/color/color_conversion.js:10"
         },
         {
-            "message": "Missing item type\nFor a color expressed as an RGBA array, return the corresponding HSBA value",
-            "line": " src/color/color_utils.js:70"
+            "message": "Missing item type\nConvert an HSBA array to HSLA.",
+            "line": " src/color/color_conversion.js:22"
         },
         {
-            "message": "Missing item type\nFor a color expressed as an HSLA array, return the corresponding RGBA value",
-            "line": " src/color/color_utils.js:119"
+            "message": "Missing item type\nConvert an HSBA array to RGBA.",
+            "line": " src/color/color_conversion.js:48"
         },
         {
-            "message": "Missing item type\nFor a color expressed as an RGBA array, return the corresponding HSBA value",
-            "line": " src/color/color_utils.js:170"
+            "message": "Missing item type\nConvert an HSLA array to HSBA.",
+            "line": " src/color/color_conversion.js:97"
         },
         {
-            "message": "Missing item type\nFor a color expressed as an hsla array, return the corresponding HSBA value",
-            "line": " src/color/color_utils.js:229"
+            "message": "Missing item type\nConvert an HSLA array to RGBA.\n\nWe need to change basis from HSLA to something that can be more easily be\nprojected onto RGBA. We will choose hue and brightness as our first two\ncomponents, and pick a convenient third one ('zest') so that we don't need\nto calculate formal HSBA saturation.",
+            "line": " src/color/color_conversion.js:120"
         },
         {
-            "message": "Missing item type\nFor a color expressed as an hsba array, return the corresponding HSLA value",
-            "line": " src/color/color_utils.js:251"
+            "message": "Missing item type\nConvert an RGBA array to HSBA.",
+            "line": " src/color/color_conversion.js:178"
         },
         {
-            "message": "Missing item type\nThese Regular Expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases\nthe legibility and comprehensibility of the code",
-            "line": " src/color/p5.Color.js:119"
+            "message": "Missing item type\nConvert an RGBA array to HSLA.",
+            "line": " src/color/color_conversion.js:213"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format #XXX,\ne.g. #416",
-            "line": " src/color/p5.Color.js:287"
+            "message": "Missing item type\nHue is the same in HSB and HSL, but the maximum value may be different.\nThis function will return the HSB-normalized saturation when supplied with\nan HSB color object, but will default to the HSL-normalized saturation\notherwise.",
+            "line": " src/color/p5.Color.js:79"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format #XXXXXX,\ne.g. #b4d455",
-            "line": " src/color/p5.Color.js:293"
+            "message": "Missing item type\nSaturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object, but will default\nto the HSL saturation otherwise.",
+            "line": " src/color/p5.Color.js:110"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B),\ne.g. rgb(255, 0, 128)",
-            "line": " src/color/p5.Color.js:299"
+            "message": "Missing item type\nCSS named colors.",
+            "line": " src/color/p5.Color.js:129"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%),\ne.g. rgb(100%, 0%, 28.9%)",
-            "line": " src/color/p5.Color.js:316"
+            "message": "Missing item type\nThese regular expressions are used to build up the patterns for matching\nviable CSS color strings: fragmenting the regexes in this way increases the\nlegibility and comprehensibility of the code.\n\nNote that RGB values of .9 are not parsed by IE, but are supported here for\ncolor string consistency.",
+            "line": " src/color/p5.Color.js:282"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format rgb(R, G, B, A),\ne.g. rgb(255, 0, 128, 0.25)",
-            "line": " src/color/p5.Color.js:332"
+            "message": "Missing item type\nFull color string patterns. The capture groups are necessary.",
+            "line": " src/color/p5.Color.js:295"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format rgb(R%, G%, B%, A),\ne.g. rgb(100%, 0%, 28.9%. 0.5)",
-            "line": " src/color/p5.Color.js:348"
+            "message": "Missing item type\nFor a number of different inputs, returns a color formatted as [r, g, b, a]\narrays, with each component normalized between 0 and 1.",
+            "line": " src/color/p5.Color.js:402"
         },
         {
-            "message": "Missing item type\nRegular expression for matching colors in format hsla(H, S%, L%),\ne.g. hsl(100, 40%, 28.9%)",
-            "line": " src/color/p5.Color.js:364"
-        },
-        {
-            "message": "Missing item type\nRegular expression for matching colors in format hsla(H, S%, L%, A),\ne.g. hsla(100, 40%, 28.9%, 0.5)",
-            "line": " src/color/p5.Color.js:378"
-        },
-        {
-            "message": "Missing item type\nRegular expression for matching colors in format hsb(H, S%, B%),\ne.g. hsb(100, 40%, 28.9%)",
-            "line": " src/color/p5.Color.js:394"
-        },
-        {
-            "message": "Missing item type\nRegular expression for matching colors in format hsba(H, S%, B%, A),\ne.g. hsba(100, 40%, 28.9%, 0.5)",
-            "line": " src/color/p5.Color.js:408"
-        },
-        {
-            "message": "Missing item type\nFor a number of different inputs, returns a color formatted as\nnormalized [r, g, b, a], maxes [255, 255, 255, 255]",
-            "line": " src/color/p5.Color.js:425"
+            "message": "Missing item type\nFor HSB and HSL, interpret the gray level as a brightness/lightness\nvalue (they are equivalent when chroma is zero). For RGB, normalize the\ngray level according to the blue maximum.",
+            "line": " src/color/p5.Color.js:572"
         },
         {
             "message": "Missing item type",
@@ -18065,7 +18062,7 @@
         },
         {
             "message": "Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "line": " src/core/p5.Renderer2D.js:361"
+            "line": " src/core/p5.Renderer2D.js:362"
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
@@ -18161,7 +18158,7 @@
         },
         {
             "message": "Missing item type\nApply the current tint color to the input image, return the resulting\ncanvas.",
-            "line": " src/image/loading_displaying.js:316"
+            "line": " src/image/loading_displaying.js:325"
         },
         {
             "message": "Missing item type\nThis module defines the p5.Image class and P5 methods for\ndrawing images to the main display canvas.",
@@ -18169,7 +18166,11 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/image/p5.Image.js:122"
+            "line": " src/image/p5.Image.js:124"
+        },
+        {
+            "message": "Missing item type\ncreates a gl texture\nused in WEBGL mode only",
+            "line": " src/image/p5.Image.js:428"
         },
         {
             "message": "Missing item type\nChecks if we are in preload and returns the last arg which will be the\n_decrementPreload function if called from a loadX() function.  Should\nonly be used in loadX() functions.",
@@ -18177,23 +18178,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1297"
+            "line": " src/io/files.js:1325"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1318"
+            "line": " src/io/files.js:1346"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1354"
+            "line": " src/io/files.js:1382"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1386"
+            "line": " src/io/files.js:1414"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1398"
+            "line": " src/io/files.js:1426"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
@@ -18260,44 +18261,48 @@
             "line": " src/app.js:60"
         },
         {
-            "message": "Missing item type\nHelper function for getElement and getElements.",
-            "line": " lib/addons/p5.dom.js:134"
+            "message": "Missing item type\nHelper function for select and selectAll",
+            "line": " lib/addons/p5.dom.js:155"
         },
         {
-            "message": "Missing item type\nHelpers for create methods.",
+            "message": "Missing item type\nHelper function for getElement and getElements.",
             "line": " lib/addons/p5.dom.js:171"
         },
         {
-            "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:315"
+            "message": "Missing item type\nHelpers for create methods.",
+            "line": " lib/addons/p5.dom.js:221"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:607"
+            "line": " lib/addons/p5.dom.js:365"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:664"
+            "line": " lib/addons/p5.dom.js:742"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:692"
+            "line": " lib/addons/p5.dom.js:799"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/addons/p5.dom.js:827"
         },
         {
             "message": "Missing item type\nCenters a p5 Element either vertically, horizontally,\nor both, relative to its parent or according to\nthe body if the Element has no parent. If no argument is passed\nthe Element is aligned both vertically and horizontally.",
-            "line": " lib/addons/p5.dom.js:906"
+            "line": " lib/addons/p5.dom.js:1043"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1544"
+            "line": " lib/addons/p5.dom.js:1686"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1614"
+            "line": " lib/addons/p5.dom.js:1756"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1637"
+            "line": " lib/addons/p5.dom.js:1779"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
@@ -18345,79 +18350,79 @@
         },
         {
             "message": "Missing item type\nReplace the current Audio Buffer with a new Buffer.",
-            "line": " lib/addons/p5.sound.js:1658"
+            "line": " lib/addons/p5.sound.js:1661"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:1923"
+            "line": " lib/addons/p5.sound.js:1926"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:2704"
+            "line": " lib/addons/p5.sound.js:2707"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:2993"
+            "line": " lib/addons/p5.sound.js:2996"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:3013"
+            "line": " lib/addons/p5.sound.js:3016"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:3061"
+            "line": " lib/addons/p5.sound.js:3064"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:3187"
+            "line": " lib/addons/p5.sound.js:3190"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:3218"
+            "line": " lib/addons/p5.sound.js:3221"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:3239"
+            "line": " lib/addons/p5.sound.js:3242"
         },
         {
             "message": "Missing item type\nConnect a p5.sound object or Web Audio node to this\np5.Signal so that its amplitude values can be scaled.",
-            "line": " lib/addons/p5.sound.js:3341"
+            "line": " lib/addons/p5.sound.js:3344"
         },
         {
             "message": "Missing item type\nSet the amplitude of the noise between 0 and 1.0. Or,\nmodulate amplitude with an audio signal such as an oscillator.",
-            "line": " lib/addons/p5.sound.js:4605"
+            "line": " lib/addons/p5.sound.js:4608"
         },
         {
             "message": "Missing item type\nAdd input sources to the list of available sources.",
-            "line": " lib/addons/p5.sound.js:4811"
+            "line": " lib/addons/p5.sound.js:4814"
         },
         {
             "message": "Missing item type\nInspired by Simple Reverb by Jordan Santell\nhttps://github.com/web-audio-components/simple-reverb/blob/master/index.js\n \nUtility function for building an impulse response\nbased on the module parameters.",
-            "line": " lib/addons/p5.sound.js:5614"
+            "line": " lib/addons/p5.sound.js:5617"
         },
         {
             "message": "Missing item type\nPrivate method to load a buffer as an Impulse Response,\nassign it to the convolverNode, and add to the Array of .impulses.",
-            "line": " lib/addons/p5.sound.js:5780"
+            "line": " lib/addons/p5.sound.js:5783"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.sound.js:5936"
+            "line": " lib/addons/p5.sound.js:5939"
         },
         {
             "message": "Missing item type\nSet the global tempo, in beats per minute, for all\np5.Parts. This method will impact all active p5.Parts.",
-            "line": " lib/addons/p5.sound.js:6103"
+            "line": " lib/addons/p5.sound.js:6106"
         },
         {
             "message": "Missing item type\nSet the tempo for all parts in the score",
-            "line": " lib/addons/p5.sound.js:6556"
+            "line": " lib/addons/p5.sound.js:6559"
         },
         {
             "message": "Missing item type\ncallback invoked when the recording is over",
-            "line": " lib/addons/p5.sound.js:6662"
+            "line": " lib/addons/p5.sound.js:6665"
         },
         {
             "message": "Missing item type\ninternal method called on audio process",
-            "line": " lib/addons/p5.sound.js:6748"
+            "line": " lib/addons/p5.sound.js:6751"
         }
     ]
 }
