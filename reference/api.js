@@ -125,7 +125,8 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Creating & Reading",
-            "name": "Creating & Reading"
+            "name": "Creating & Reading",
+            "description": "We define colors to be immutable objects. Each color stores the color mode\nand level maxes that applied at the time of its construction. These are\nused to interpret the input arguments and to format the output e.g. when\nsaturation() is requested.\n\nInternally we store an array representing the ideal RGBA values in floating\npoint form, normalized from 0 to 1. From this we calculate the closest\nscreen color (RGBA levels from 0 to 255) and expose this to the renderer.\n\nWe also cache normalized, floating point components of the color in various\nrepresentations as they are calculated. This is done to prevent repeating a\nconversion that has already been performed."
         },
         {
             "displayName": "Curves",
