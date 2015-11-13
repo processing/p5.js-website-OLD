@@ -382,16 +382,13 @@
           <a href="examples/Sound_Playback_Rate.php">Playback Rate</a><br>
           
         
-          <a href="examples/Sound__Amplitude_Analysis.php"> Amplitude Analysis</a><br>
+          <a href="examples/Sound__Measuring_Amplitude.php"> Measuring Amplitude</a><br>
           
         
           <a href="examples/Sound_Noise_Drum_Envelope.php">Noise Drum Envelope</a><br>
           
         
           <a href="examples/Sound__Note_Envelope.php"> Note Envelope</a><br>
-          
-        
-          <a href="examples/Sound__Amplitude_(Volume).php"> Amplitude (Volume)</a><br>
           
         
           <a href="examples/Sound_Oscillator_Frequency.php">Oscillator Frequency</a><br>

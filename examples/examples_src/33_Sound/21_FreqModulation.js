@@ -69,11 +69,11 @@ var modMaxDepth = 150;
 var modMinDepth = -150;
 
 function setup() {
-  createCanvas(800,400);
+  var cnv = createCanvas(800,400);
   noFill();
 
   carrier = new p5.Oscillator('sine');
-  carrier.amp(1); // set amplitude
+  carrier.amp(0); // set amplitude
   carrier.freq(carrierBaseFreq); // set frequency
   carrier.start(); // start oscillating
 
@@ -87,6 +87,9 @@ function setup() {
 
   // create an FFT to analyze the audio
   analyzer = new p5.FFT();
+
+  // fade carrier in/out on mouseover / touch start
+  toggleAudio(cnv);
 }
 
 function draw() {
@@ -122,4 +125,17 @@ function draw() {
   text('Modulator Amplitude (Modulation Depth): ' + modDepth.toFixed(3), 20, 40);
   text('Carrier Frequency (pre-modulation): ' + carrierBaseFreq + ' Hz', width/2, 20);
 
+}
+
+// helper function to toggle sound
+function toggleAudio(cnv) {
+  cnv.mouseOver(function() {
+    carrier.amp(1.0, 0.01);
+  });
+  cnv.touchStarted(function() {
+    carrier.amp(1.0, 0.01);
+  });
+  cnv.mouseOut(function() {
+    carrier.amp(0.0, 1.0);
+  });
 }
