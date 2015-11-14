@@ -21,8 +21,8 @@
       
 
       <div class="gallery-item">
-        <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
-        target="_blank">
+      <!--   <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
+        target="_blank"> -->
            <img class="gallery-img nounderline" src="../img/gallery-images/social-tension.png" 
            width="5" alt="preview image">
         <br>
@@ -31,9 +31,10 @@
          <p class="gallery-source">
          Christine de Carteret, 2015
       </div>
-
+      
+      
       <div class="gallery-item">
-        <a href="http://samanthaticknor.com/images/scroll/two.html"
+        <a href="http://samt.xyz/images/scroll/one.html"
         target="_blank">
            <img class="gallery-img nounderline" src="../img/gallery-images/ol-scroll.png" 
            width="5" alt="preview image">
