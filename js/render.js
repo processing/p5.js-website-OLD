@@ -12,10 +12,6 @@ function renderCode(sel) {
       var rc = (s.parentNode.className.indexOf('norender') === -1);
       setupCode(s, rc, i);
       runCode(s, rc, i);
-      // weird hack to get webgl examples working, runcode needs to get called twice??
-      if (s.textContent.indexOf('WEBGL') !== -1) {
-        setTimeout(function() {runCode(s, rc, i);}, 200);
-      }
       i++;
     });
   }
@@ -34,6 +30,9 @@ function renderCode(sel) {
       sketchContainer.appendChild(pre);
       sketchContainer.className = 'example_container'
       sketch.className = 'language-javascript';
+      if (!rc) {    
+        pre.className += ' norender';    
+      }
     }
 
 
@@ -115,7 +114,7 @@ function renderCode(sel) {
           });
           edit_button.innerHTML = 'edit';
           edit_area.style.display = 'none';
-          sketch.innerHTML = edit_area.value;
+          sketch.textContent = edit_area.value;
           runCode(sketch, true, i);
         }
       }
@@ -166,18 +165,17 @@ function renderCode(sel) {
           'touchStarted', 'touchMoved', 'touchEnded', 
           'keyPressed', 'keyReleased', 'keyTyped'];
           fxns.forEach(function(f) { 
-            var ind = runnable.indexOf(f);
+            var ind = runnable.indexOf(f+'(');
             // this is a gross hack within a hacky script that
             // ensures the function names found are not substrings
             // proper use of regex would be preferable...
             if (ind !== -1 && runnable[ind+f.length] === '(' &&
-                eval('typeof ' + f) !== 'undefined') {
+              eval('typeof ' + f) !== 'undefined') {
               with (p) {
                 p[f] = eval(f);
               }
             }
           });
-
           if (typeof p.setup === 'undefined') {
             p.setup = function() {
               p.createCanvas(100, 100);
