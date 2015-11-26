@@ -1516,7 +1516,7 @@ footer {
         margin:0 0.75em 0 -1.85em; /* margin-right: 0.75em;  */
         width:7.3em;
         height:100%;
-        float:left;
+        /*float:left;*/
         border-top: transparent;
         border-bottom: transparent;
         height: 14.25em;
