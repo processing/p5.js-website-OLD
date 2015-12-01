@@ -2439,15 +2439,11 @@
                 },
                 {
                     "name": "detail",
-                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "description": "number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above\n                                   150, it may crash the browser.",
                     "type": "Number",
                     "optional": true
                 }
             ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
             "example": [
                 "\n<div>\n<code>\n// draw a sphere with radius 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  sphere(200);\n}\n</code>\n</div>"
             ],
@@ -2479,7 +2475,7 @@
                 },
                 {
                     "name": "detail",
-                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24.Avoid detail number above\n                                   150.It may crash the browser.",
+                    "description": "number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above\n                                   150. It may crash the browser.",
                     "type": "Number",
                     "optional": true
                 }
@@ -2514,7 +2510,7 @@
                 },
                 {
                     "name": "detail",
-                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "description": "number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above\n                                   150. It may crash the browser.",
                     "type": "Number",
                     "optional": true
                 }
@@ -2532,7 +2528,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 286,
+            "line": 287,
             "description": "Draw a cone with given radius and height",
             "itemtype": "method",
             "name": "cone",
@@ -2549,15 +2545,11 @@
                 },
                 {
                     "name": "detail",
-                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "description": "number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above\n                                   150. It may crash the browser.",
                     "type": "Number",
                     "optional": true
                 }
             ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
             "example": [
                 "\n<div>\n<code>\n//draw a spining cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
             ],
@@ -2567,7 +2559,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 359,
+            "line": 360,
             "description": "Draw a torus with given radius and tube radius",
             "itemtype": "method",
             "name": "torus",
@@ -2584,15 +2576,11 @@
                 },
                 {
                     "name": "detail",
-                    "description": "optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24",
+                    "description": "number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above\n                                   150. It may crash the browser.",
                     "type": "Number",
                     "optional": true
                 }
             ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
             "example": [
                 "\n<div>\n<code>\n//draw a spining torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
             ],
@@ -2602,7 +2590,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 420,
+            "line": 421,
             "description": "Draw a box with given width, height and depth",
             "itemtype": "method",
             "name": "box",
