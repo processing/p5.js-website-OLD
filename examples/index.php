@@ -244,6 +244,12 @@
           <a href="examples/Simulate_Multiple_Particle_Systems.php">Multiple Particle Systems</a><br>
           
         
+          <a href="examples/Simulate_Spirograph.php">Spirograph</a><br>
+          
+        
+          <a href="examples/Simulate_L-Systems.php">L-Systems</a><br>
+          
+        
         </p>
         
       
