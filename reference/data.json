@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.19",
+        "version": "0.4.20",
         "url": ""
     },
     "files": {
@@ -1115,7 +1115,7 @@
             "module": "IO",
             "namespace": "",
             "file": "src/io/files.js",
-            "line": 875
+            "line": 869
         },
         "Table": {
             "name": "Table",
@@ -4969,7 +4969,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 362,
+            "line": 364,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -6208,7 +6208,7 @@
         },
         {
             "file": "src/core/p5.Renderer2D.js",
-            "line": 368,
+            "line": 372,
             "description": "Generate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
             "class": "p5.Renderer2D",
             "module": "Rendering"
@@ -7361,7 +7361,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 351,
+            "line": 349,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -7374,7 +7374,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 390,
+            "line": 388,
             "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -7387,7 +7387,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 457,
+            "line": 455,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no\nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -7400,7 +7400,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 520,
+            "line": 518,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -7413,7 +7413,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 584,
+            "line": 581,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -7426,7 +7426,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 634,
+            "line": 631,
             "description": "The function mouseWheel is executed every time a vertical mouse wheel\nevent is detected either triggered by an actual mouse wheel or by a\ntouchpad.<br><br>\nThe event.delta property returns the amount the mouse wheel\nhave scrolled. The values can be positive or negative depending on the\nscroll direction (on OS X with \"natural\" scrolling enabled, the signs\nare inverted).<br><br>\nBrowsers may have different default behaviors attached to various\nmouse events. To prevent any default behavior for this event, add\n`return false` to the end of the method.<br><br>\nDue to the current support of the `wheel` event on Safari, the function\nmay only work as expected if `return false` is included while using Safari.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -7512,7 +7512,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 164,
+            "line": 165,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -7525,7 +7525,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 220,
+            "line": 221,
             "description": "The touchEnded() function is called every time a touch ends. If no\ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -8848,7 +8848,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 162,
+            "line": 165,
             "description": "Loads a JSON file from a file or a URL, and returns an Object or Array.\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadJSON",
@@ -8890,7 +8890,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 277,
+            "line": 280,
             "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadStrings",
@@ -8926,7 +8926,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 373,
+            "line": 376,
             "description": "<p>Reads the contents of a file or URL and creates a p5.Table object with\nits values. If a file is specified, it must be located in the sketch's\n\"data\" folder. The filename parameter can also be a URL to a file found\nonline. By default, the file is assumed to be comma-separated (in CSV\nformat). Table only looks for a header row if the 'header' option is\nincluded.</p>\n\n<p>Possible options include:\n<ul>\n<li>csv - parse the table as comma-separated values</li>\n<li>tsv - parse the table as tab-separated values</li>\n<li>header - this table has a header (title) row</li>\n</ul>\n</p>\n\n<p>When passing in multiple options, pass them in as separate parameters,\nseperated by commas. For example:\n<br><br>\n<code>\n  loadTable(\"my_csv_file.csv\", \"csv\", \"header\")\n</code>\n</p>\n\n<p> All files loaded and saved use UTF-8 encoding.</p>\n\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadTable() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>\n</p>",
             "itemtype": "method",
             "name": "loadTable",
@@ -8962,7 +8962,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 661,
+            "line": 657,
             "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>",
             "itemtype": "method",
             "name": "loadXML",
@@ -8995,7 +8995,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 743,
+            "line": 739,
             "description": "Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpGet",
@@ -9036,7 +9036,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 765,
+            "line": 760,
             "description": "Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.",
             "itemtype": "method",
             "name": "httpPost",
@@ -9077,7 +9077,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 786,
+            "line": 781,
             "description": "Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.<br><br>\nYou may also pass a single object specifying all parameters for the\nrequest following the examples inside the reqwest() calls here:\n<a href='https://github.com/ded/reqwest#api'\n>https://github.com/ded/reqwest#api</a>",
             "itemtype": "method",
             "name": "httpDo",
@@ -9151,7 +9151,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1088,
+            "line": 1084,
             "description": "Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveJSON",
@@ -9182,7 +9182,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1144,
+            "line": 1140,
             "description": "Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveStrings",
@@ -9207,7 +9207,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1209,
+            "line": 1205,
             "description": "Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values ('csv') but can also\nuse tab separation ('tsv'), or generate an HTML table ('html').\nThe file saving process and location of the saved file will\nvary between web browsers.",
             "itemtype": "method",
             "name": "saveTable",
@@ -9237,7 +9237,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1325,
+            "line": 1320,
             "description": "Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -9264,7 +9264,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1346,
+            "line": 1343,
             "description": "Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
             "params": [
                 {
@@ -9289,7 +9289,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1382,
+            "line": 1379,
             "description": "Returns a file extension, or another string\nif the provided parameter has no extension.",
             "params": [
                 {
@@ -9310,7 +9310,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1414,
+            "line": 1411,
             "description": "Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
             "return": {
                 "description": "[description]",
@@ -9324,7 +9324,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1426,
+            "line": 1423,
             "description": "Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
             "access": "private",
             "tagname": "",
@@ -18160,7 +18160,7 @@
         },
         {
             "message": "Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "line": " src/core/p5.Renderer2D.js:368"
+            "line": " src/core/p5.Renderer2D.js:372"
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
@@ -18276,23 +18276,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1325"
+            "line": " src/io/files.js:1320"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1346"
+            "line": " src/io/files.js:1343"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1382"
+            "line": " src/io/files.js:1379"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1414"
+            "line": " src/io/files.js:1411"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1426"
+            "line": " src/io/files.js:1423"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
