@@ -30,10 +30,13 @@ $(function() {
       topPadding = 0;
 
   $window.scroll(function() {
-    if (window.matchMedia("(min-width: 720px)").matches) {  
-      if ($window.scrollTop() > offset.top) {
+    if (window.matchMedia("(min-width: 720px)").matches) { 
+      topPadding = $("#lockup").height(); 
+      
+      if ($window.scrollTop() > offset.top + topPadding) {
+        console.log(topPadding);
         $sidebar.stop().animate({
-          marginTop: $window.scrollTop() - offset.top + topPadding
+          marginTop: $window.scrollTop() - offset.top - topPadding + 18
         });
       }
 
