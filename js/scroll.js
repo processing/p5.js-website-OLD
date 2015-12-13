@@ -34,7 +34,7 @@ $(function() {
       topPadding = $("#lockup").height(); 
       
       if ($window.scrollTop() > offset.top + topPadding) {
-        console.log(topPadding);
+        // console.log(topPadding);
         $sidebar.stop().animate({
           marginTop: $window.scrollTop() - offset.top - topPadding + 18
         });
