@@ -35,9 +35,20 @@
 
       <a name="contributed" class="anchor"><h3>Contributed</h3></a>
 
+
       <div class="left-column">
+        <a class="nounderline" href="https://github.com/bmoren/p5.geolocation">
+        <div class="label">
+        <img src="../img/libraries/p5.geolocation.png"></a>
+        <a class="nounderline" href="https://github.com/bmoren/p5.geolocation"><h4>p5.geolocation</h4></a>
+        </div>
+        <p>p5.geolocation provides techniques for acquiring, watching, calculating, and geofencing user locations for p5.js.
+        Created by <a target="_blank" href="http://www.benmoren.com/">Ben Moren</a>.</p>
+      </div>
+
+      <div class="right-column">
         <a class="nounderline" href="http://rednoise.org/rita">
-        </a><div class="label"><a class="nounderline" href="http://rednoise.org/rita">
+        <div class="label">
         <img src="../img/libraries/rita.png"></a>
         <a class="nounderline" href="http://rednoise.org/rita"><h4>rita.js</h4></a>
         </div>
@@ -45,7 +56,9 @@
         Created by <a target="_blank" href="http://rednoise.org/daniel">Daniel C. Howe</a>.</p>
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/sarahgp/p5bots">
         <div class="label">
         <img src="../img/libraries/p5.bots.jpg"></a>
@@ -56,10 +69,7 @@
         Created by <a target='_blank' href='http://www.sarahgp.com'>Sarah Groff-Palermo</a>.</p> 
       </div>
 
-
-      <div class="spacer"></div>
-
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="http://abilitylab.nyu.edu/p5.js-speech/">
         <div class="label">
         <img src="../img/libraries/p5.speech.jpg"></a>
@@ -71,7 +81,9 @@
         Created by <a target='_blank' href='http://lukedubois.com/'>R. Luke DuBois</a>.</p> 
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="http://p5play.molleindustria.org">
         <div class="label">
         <img src="../img/libraries/p5.play3.png"></a>
@@ -81,9 +93,7 @@
         Created by <a target='_blank' href='http://www.molleindustria.org/'>Paolo Pedercini</a>.</p> 
       </div>
       
-      <div class="spacer"></div>
-
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/jagracar/grafica.js">
         <div class="label">
         <img src="../img/libraries/grafica.jpg"></a>
@@ -93,7 +103,9 @@
         Created by <a target='_blank' href='http://jagracar.com/p5jsSketches.php'>Javier Graciá Carpio</a>.</p> 
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="http://charlie-roberts.com/gibber/p5-gibber/">
         <div class="label">
         <img src="../img/libraries/p5.gibber.jpg"></a>
@@ -103,9 +115,7 @@
         Created by <a target='_blank' href='http://charlie-roberts.com'>Charlie Roberts</a>.</p> 
       </div>
 
-      <div class="spacer"></div>
-
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/bobcgausa/cook-js">
         <div class="label">
         <img src="../img/libraries/p5.particle.png"></a>
