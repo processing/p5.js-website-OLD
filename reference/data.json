@@ -242,9 +242,7 @@
         "src/core/p5.Renderer2D.js": {
             "name": "src/core/p5.Renderer2D.js",
             "modules": {},
-            "classes": {
-                "p5.Renderer2D": 1
-            },
+            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -878,16 +876,15 @@
             "submodules": {},
             "classes": {
                 "p5.Graphics": 1,
-                "p5.Renderer": 1,
-                "p5.Renderer2D": 1
+                "p5.Renderer": 1
             },
             "fors": {
                 "p5": 1
             },
             "namespaces": {},
             "module": "Rendering",
-            "file": "src/core/p5.Renderer2D.js",
-            "line": 9,
+            "file": "src/core/p5.Renderer.js",
+            "line": 10,
             "description": "Thin wrapper around a renderer, to be used for creating a\ngraphics buffer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels. The fields and methods for this class are\nextensive, but mirror the normal drawing API for p5."
         },
         "Transform": {
@@ -1025,7 +1022,7 @@
             "requires": [
                 "core"
             ],
-            "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage. p5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image. The methods described below allow\neasy access to the image's pixels and alpha channel and simplify the\nprocess of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded."
+            "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage.\n<br><br>\np5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image.\n<br><br>\nThe methods described below allow easy access to the image's pixels and\nalpha channel and simplify the process of compositing.\n<br><br>\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded."
         },
         "Loading & Displaying": {
             "name": "Loading & Displaying",
@@ -1157,7 +1154,7 @@
             "requires": [
                 "core"
             ],
-            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class."
+            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x, y for 2D, and x, y, z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading().\n<br><br>\nIn many of the p5.js examples, you will see p5.Vector used to describe a\nposition, velocity, or acceleration. For example, if you consider a rectangle\nmoving across the screen, at any given instant it has a position (a vector\nthat points from the origin to its location), a velocity (the rate at which\nthe object's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector).\n<br><br>\nSince vectors represent groupings of values, we cannot simply use\ntraditional addition/multiplication/etc. Instead, we'll need to do some\n\"vector\" math, which is made easy by the methods inside the p5.Vector class."
         },
         "Calculation": {
             "name": "Calculation",
@@ -1361,7 +1358,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 1978,
+            "line": 1990,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1531,38 +1528,6 @@
                 }
             ]
         },
-        "p5.Renderer2D": {
-            "name": "p5.Renderer2D",
-            "shortname": "p5.Renderer2D",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Rendering",
-            "namespace": "",
-            "file": "src/core/p5.Renderer2D.js",
-            "line": 9,
-            "description": "2D graphics renderer class.  Can also be used as an off-screen\ngraphics buffer. A p5.Renderer2D object can be constructed\nwith the <code>createRenderer2D()</code> function. The fields and methods\nfor this class are extensive, but mirror the normal drawing API for p5.",
-            "is_constructor": 1,
-            "extends": "p5.Renderer",
-            "params": [
-                {
-                    "name": "elt",
-                    "description": "DOM node that is wrapped",
-                    "type": "String"
-                },
-                {
-                    "name": "pInst",
-                    "description": "pointer to p5 instance",
-                    "type": "Object",
-                    "optional": true
-                }
-            ],
-            "example": [
-                "\n<div>\n<code>\nvar pg;\nfunction setup() {\n  createCanvas(100, 100);\n  pg = createRenderer2D(40, 40);\n}\nfunction draw() {\n  background(200);\n  pg.background(100);\n  pg.noStroke();\n  pg.ellipse(pg.width/2, pg.height/2, 50, 50);\n  image(pg, 9, 30);\n  image(pg, 51, 30);\n}\n</code>\n</div>"
-            ]
-        },
         "p5.Image": {
             "name": "p5.Image",
             "shortname": "p5.Image",
@@ -1576,7 +1541,7 @@
             "namespace": "",
             "file": "src/image/p5.Image.js",
             "line": 23,
-            "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage. p5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image. The methods described below allow\neasy access to the image's pixels and alpha channel and simplify the\nprocess of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded.",
+            "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage.\n<br><br>\np5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image.\n<br><br>\nThe methods described below allow easy access to the image's pixels and\nalpha channel and simplify the process of compositing.\n<br><br>\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded.",
             "is_constructor": 1,
             "params": [
                 {
@@ -1667,7 +1632,7 @@
             "namespace": "",
             "file": "src/math/p5.Vector.js",
             "line": 13,
-            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class.",
+            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x, y for 2D, and x, y, z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading().\n<br><br>\nIn many of the p5.js examples, you will see p5.Vector used to describe a\nposition, velocity, or acceleration. For example, if you consider a rectangle\nmoving across the screen, at any given instant it has a position (a vector\nthat points from the origin to its location), a velocity (the rate at which\nthe object's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector).\n<br><br>\nSince vectors represent groupings of values, we cannot simply use\ntraditional addition/multiplication/etc. Instead, we'll need to do some\n\"vector\" math, which is made easy by the methods inside the p5.Vector class.",
             "is_constructor": 1,
             "params": [
                 {
@@ -1741,7 +1706,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1510,
+            "line": 1522,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -1770,7 +1735,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1978,
+            "line": 1990,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -3897,7 +3862,7 @@
         {
             "file": "src/color/creating_reading.js",
             "line": 95,
-            "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency. If a single string parameter is provided it will be\ninterpreted as a CSS-compatible color string.\n\nColors are stored as Numbers or Arrays.",
+            "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n<br><br>\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency. If a single string parameter is provided it will be\ninterpreted as a CSS-compatible color string.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
             "params": [
@@ -3979,7 +3944,7 @@
         {
             "file": "src/color/creating_reading.js",
             "line": 315,
-            "description": "Blends two colors to find a third color somewhere between them. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first color, 0.1 is very near the first color, 0.5 is halfway\nin between, etc. An amount below 0 will be treated as 0. Likewise, amounts\nabove 1 will be capped at 1. This is different from the behavior of lerp(),\nbut necessary because otherwise numbers outside the range will produce\nstrange and unexpected colors.\n\nThe way that colours are interpolated depends on the current color mode.",
+            "description": "Blends two colors to find a third color somewhere between them. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first color, 0.1 is very near the first color, 0.5 is halfway\nin between, etc. An amount below 0 will be treated as 0. Likewise, amounts\nabove 1 will be capped at 1. This is different from the behavior of lerp(),\nbut necessary because otherwise numbers outside the range will produce\nstrange and unexpected colors.\n<br><br>\nThe way that colours are interpolated depends on the current color mode.",
             "itemtype": "method",
             "name": "lerpColor",
             "params": [
@@ -4185,7 +4150,7 @@
             "itemtype": "method",
             "name": "clear",
             "example": [
-                "\n<div>\n<code>\n</code>\n</div>"
+                "\n<div>\n<code>\n// Clear the screen on mouse press.\nfunction setup() {\n  createCanvas(100, 100);\n}\n\nfunction draw() {\n  ellipse(mouseX, mouseY, 20, 20);\n}\n\nfunction mousePressed() {\n  clear();\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -4193,8 +4158,8 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 143,
-            "description": "colorMode() changes the way p5.js interprets color data. By default, the\nparameters for fill(), stroke(), background(), and color() are defined by\nvalues between 0 and 255 using the RGB color model. This is equivalent to\nsetting colorMode(RGB, 255). Setting colorMode(HSB) lets you use the HSB\nsystem instead. By default, this is colorMode(HSB, 360, 100, 100, 1). You\ncan also use HSL.\n\nNote: existing color objects remember the mode that they were created in,\nso you can change modes as you like without affecting their appearance.",
+            "line": 155,
+            "description": "colorMode() changes the way p5.js interprets color data. By default, the\nparameters for fill(), stroke(), background(), and color() are defined by\nvalues between 0 and 255 using the RGB color model. This is equivalent to\nsetting colorMode(RGB, 255). Setting colorMode(HSB) lets you use the HSB\nsystem instead. By default, this is colorMode(HSB, 360, 100, 100, 1). You\ncan also use HSL.\n<br><br>\nNote: existing color objects remember the mode that they were created in,\nso you can change modes as you like without affecting their appearance.",
             "itemtype": "method",
             "name": "colorMode",
             "params": [
@@ -4237,8 +4202,8 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 246,
-            "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255.) If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the fill color.",
+            "line": 258,
+            "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color strings\nand all named color strings are supported. A p5 Color object can also be\nprovided to set the fill color.",
             "itemtype": "method",
             "name": "fill",
             "params": [
@@ -4275,7 +4240,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 365,
+            "line": 379,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -4288,7 +4253,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 384,
+            "line": 398,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -4301,8 +4266,8 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 402,
-            "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255). If a single string argument is provided, RGB,\nRGBA and Hex CSS color strings and all named color strings are supported.\nA p5 Color object can also be provided to set the stroke color.",
+            "line": 416,
+            "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color\nstrings and all named color strings are supported. A p5 Color object\ncan also be provided to set the stroke color.",
             "itemtype": "method",
             "name": "stroke",
             "params": [
@@ -4561,7 +4526,7 @@
         {
             "file": "src/core/2d_primitives.js",
             "line": 390,
-            "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function. If provided, the fifth, sixth\nseventh and eighth parameters, if specified, determine corner radius for\nthe top-right, top-left, lower-right and lower-left corners, respectively.\nAn omitted corner radius parameter is set to the value of the previously\nspecified radius value in the parameter list.",
+            "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.\n<br><br>\nThe fifth, sixth, seventh and eighth parameters, if specified,\ndetermine corner radius for the top-right, top-left, lower-right and\nlower-left corners, respectively. An omitted corner radius parameter is set\nto the value of the previously specified radius value in the parameter list.",
             "itemtype": "method",
             "name": "rect",
             "params": [
@@ -4623,7 +4588,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 457,
+            "line": 458,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -4673,7 +4638,7 @@
         {
             "file": "src/core/attributes.js",
             "line": 14,
-            "description": "Modifies the location from which ellipses are drawn by changing the way\nin which parameters given to ellipse() are interpreted.\n\nThe default mode is ellipseMode(CENTER), which interprets the first two\nparameters of ellipse() as the shape's center point, while the third and\nfourth parameters are its width and height.\n\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as\nthe shape's center point, but uses the third and fourth parameters to\nspecify half of the shapes's width and height.\n\nellipseMode(CORNER) interprets the first two parameters of ellipse() as\nthe upper-left corner of the shape, while the third and fourth parameters\nare its width and height.\n\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as\nthe location of one corner of the ellipse's bounding box, and the third\nand fourth parameters as the location of the opposite corner.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
+            "description": "Modifies the location from which ellipses are drawn by changing the way\nin which parameters given to ellipse() are interpreted.\n<br><br>\nThe default mode is ellipseMode(CENTER), which interprets the first two\nparameters of ellipse() as the shape's center point, while the third and\nfourth parameters are its width and height.\n<br><br>\nellipseMode(RADIUS) also uses the first two parameters of ellipse() as\nthe shape's center point, but uses the third and fourth parameters to\nspecify half of the shapes's width and height.\n<br><br>\nellipseMode(CORNER) interprets the first two parameters of ellipse() as\nthe upper-left corner of the shape, while the third and fourth parameters\nare its width and height.\n<br><br>\nellipseMode(CORNERS) interprets the first two parameters of ellipse() as\nthe location of one corner of the ellipse's bounding box, and the third\nand fourth parameters as the location of the opposite corner.\n<br><br>\nThe parameter must be written in ALL CAPS because Javascript is a\ncase-sensitive language.",
             "itemtype": "method",
             "name": "ellipseMode",
             "params": [
@@ -4714,7 +4679,7 @@
         {
             "file": "src/core/attributes.js",
             "line": 99,
-            "description": "Modifies the location from which rectangles are drawn by changing the way\nin which parameters given to rect() are interpreted.\n\nThe default mode is rectMode(CORNER), which interprets the first two\nparameters of rect() as the upper-left corner of the shape, while the\nthird and fourth parameters are its width and height.\n\nrectMode(CORNERS) interprets the first two parameters of rect() as the\nlocation of one corner, and the third and fourth parameters as the\nlocation of the opposite corner.\n\nrectMode(CENTER) interprets the first two parameters of rect() as the\nshape's center point, while the third and fourth parameters are its\nwidth and height.\n\nrectMode(RADIUS) also uses the first two parameters of rect() as the\nshape's center point, but uses the third and fourth parameters to specify\nhalf of the shapes's width and height.\n\nThe parameter must be written in ALL CAPS because Processing is a\ncase-sensitive language.",
+            "description": "Modifies the location from which rectangles are drawn by changing the way\nin which parameters given to rect() are interpreted.\n<br><br>\nThe default mode is rectMode(CORNER), which interprets the first two\nparameters of rect() as the upper-left corner of the shape, while the\nthird and fourth parameters are its width and height.\n<br><br>\nrectMode(CORNERS) interprets the first two parameters of rect() as the\nlocation of one corner, and the third and fourth parameters as the\nlocation of the opposite corner.\n<br><br>\nrectMode(CENTER) interprets the first two parameters of rect() as the\nshape's center point, while the third and fourth parameters are its\nwidth and height.\n<br><br>\nrectMode(RADIUS) also uses the first two parameters of rect() as the\nshape's center point, but uses the third and fourth parameters to specify\nhalf of the shapes's width and height.\n<br><br>\nThe parameter must be written in ALL CAPS because Javascript is a\ncase-sensitive language.",
             "itemtype": "method",
             "name": "rectMode",
             "params": [
@@ -4944,7 +4909,7 @@
         {
             "file": "src/core/core.js",
             "line": 78,
-            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial environment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution. Note: Variables declared\nwithin setup() are not accessible within other functions, including\ndraw().",
+            "description": "The setup() function is called once when the program starts. It's used to\ndefine initial environment properties such as screen size and background\ncolor and to load media such as images and fonts as the program starts.\nThere can only be one setup() function for each program and it shouldn't\nbe called again after its initial execution.\n<br><br>\nNote: Variables declared within setup() are not accessible within other\nfunctions, including draw().",
             "itemtype": "method",
             "name": "setup",
             "example": [
@@ -4956,8 +4921,8 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 104,
-            "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
+            "line": 105,
+            "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n<br><br>\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n<br><br>\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n<br><br>\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
             "example": [
@@ -4969,7 +4934,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 364,
+            "line": 365,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -5345,7 +5310,7 @@
         {
             "file": "src/core/environment.js",
             "line": 22,
-            "description": "The print() function writes to the console area of your browser.\nThis function is often helpful for looking at the data a program is\nproducing. This function creates a new line of text for each call to\nthe function. Individual elements can be\nseparated with quotes (\"\") and joined with the addition operator (+).\n\nWhile print() is similar to console.log(), it does not directly map to\nit in order to simulate easier to understand behavior than\nconsole.log(). Due to this, it is slower. For fastest results, use\nconsole.log().",
+            "description": "The print() function writes to the console area of your browser.\nThis function is often helpful for looking at the data a program is\nproducing. This function creates a new line of text for each call to\nthe function. Individual elements can be\nseparated with quotes (\"\") and joined with the addition operator (+).\n<br><br>\nWhile print() is similar to console.log(), it does not directly map to\nit in order to simulate easier to understand behavior than\nconsole.log(). Due to this, it is slower. For fastest results, use\nconsole.log().",
             "itemtype": "method",
             "name": "print",
             "params": [
@@ -5356,7 +5321,7 @@
                 }
             ],
             "example": [
-                "\n<div><code class='norender'>\nvar x = 10;\nprint(\"The value of x is \"+x);\n// prints \"The value of x is 10\"\n</code></div>"
+                "\n<div><code class='norender'>\nvar x = 10;\nprint(\"The value of x is \" + x);\n// prints \"The value of x is 10\"\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -5423,7 +5388,7 @@
         {
             "file": "src/core/environment.js",
             "line": 165,
-            "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().\n\nCalling frameRate() with arguments that are not of the type numbers\nor are non positive also returns current framerate.",
+            "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n<br><br>\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().\n<br><br>\nCalling frameRate() with arguments that are not of the type numbers\nor are non positive also returns current framerate.",
             "itemtype": "method",
             "name": "frameRate",
             "params": [
@@ -5447,7 +5412,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 225,
+            "line": 226,
             "description": "Returns the current framerate.",
             "return": {
                 "description": "current frameRate",
@@ -5459,7 +5424,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 234,
+            "line": 235,
             "description": "Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
             "params": [
                 {
@@ -5475,7 +5440,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 249,
+            "line": 250,
             "description": "Hides the cursor from view.",
             "itemtype": "method",
             "name": "noCursor",
@@ -5488,7 +5453,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 270,
+            "line": 271,
             "description": "System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayWidth",
@@ -5501,7 +5466,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 282,
+            "line": 283,
             "description": "System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.",
             "itemtype": "property",
             "name": "displayHeight",
@@ -5514,7 +5479,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 294,
+            "line": 295,
             "description": "System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.",
             "itemtype": "property",
             "name": "windowWidth",
@@ -5527,7 +5492,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 305,
+            "line": 306,
             "description": "System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.",
             "itemtype": "property",
             "name": "windowHeight",
@@ -5540,7 +5505,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 317,
+            "line": 318,
             "description": "The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other\nadjustements to accomodate the new window size.",
             "itemtype": "method",
             "name": "windowResized",
@@ -5553,7 +5518,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 351,
+            "line": 352,
             "description": "System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "width",
@@ -5563,7 +5528,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 362,
+            "line": 363,
             "description": "System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.",
             "itemtype": "property",
             "name": "height",
@@ -5573,7 +5538,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 373,
+            "line": 374,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
             "name": "fullScreen",
@@ -5598,7 +5563,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 415,
+            "line": 416,
             "description": "Sets the pixel scaling for high pixel density displays. By default\npixel density is set to match display density, call pixelDensity(1)\nto turn this off. Calling pixelDensity() with no arguments returns\nthe current pixel density of the sketch.",
             "itemtype": "method",
             "name": "pixelDensity",
@@ -5623,7 +5588,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 456,
+            "line": 457,
             "description": "Returns the pixel density of the current display the sketch is running on.",
             "itemtype": "method",
             "name": "displayDensity",
@@ -5640,7 +5605,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 510,
+            "line": 511,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -5657,7 +5622,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 537,
+            "line": 538,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -5674,7 +5639,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 554,
+            "line": 555,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -6208,15 +6173,22 @@
         },
         {
             "file": "src/core/p5.Renderer2D.js",
-            "line": 372,
+            "line": 9,
+            "description": "p5.Renderer2D\nThe 2D graphics canvas renderer class.\nextends p5.Renderer",
+            "class": "p5",
+            "module": "Rendering"
+        },
+        {
+            "file": "src/core/p5.Renderer2D.js",
+            "line": 350,
             "description": "Generate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "class": "p5.Renderer2D",
+            "class": "p5",
             "module": "Rendering"
         },
         {
             "file": "src/core/rendering.js",
             "line": 14,
-            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).<br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
+            "description": "Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).\n<br><br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
@@ -6249,7 +6221,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 110,
+            "line": 111,
             "description": "Resizes the canvas to given width and height. The canvas will be cleared\nand draw will be called immediately, allowing the sketch to re-render itself\nin the resized canvas.",
             "itemtype": "method",
             "name": "resizeCanvas",
@@ -6262,7 +6234,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 153,
+            "line": 154,
             "description": "Removes the default canvas for a p5 sketch that doesn't\nrequire a canvas",
             "itemtype": "method",
             "name": "noCanvas",
@@ -6275,7 +6247,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 172,
+            "line": 173,
             "description": "Creates and returns a new p5.Renderer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.",
             "itemtype": "method",
             "name": "createGraphics",
@@ -6309,7 +6281,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 206,
+            "line": 207,
             "description": "Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA*factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A*factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon't utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -6337,7 +6309,7 @@
         {
             "file": "src/core/structure.js",
             "line": 15,
-            "description": "<p>Stops p5.js from continuously executing the code within draw().\nIf loop() is called, the code in draw() begins to run continuously again.\nIf using noLoop() in setup(), it should be the last line inside the block.\n</p>\n\n<p>When noLoop() is used, it's not possible to manipulate or access the\nscreen inside event handling functions such as mousePressed() or\nkeyPressed(). Instead, use those functions to call redraw() or loop(),\nwhich will run draw(), which can update the screen properly. This means\nthat when noLoop() has been called, no drawing can happen, and functions\nlike saveFrame() or loadPixels() may not be used.</p>\n\n<p>Note that if the sketch is resized, redraw() will be called to update\nthe sketch, even after noLoop() has been specified. Otherwise, the sketch\nwould enter an odd state until loop() was called.</p>",
+            "description": "Stops p5.js from continuously executing the code within draw().\nIf loop() is called, the code in draw() begins to run continuously again.\nIf using noLoop() in setup(), it should be the last line inside the block.\n<br><br>\nWhen noLoop() is used, it's not possible to manipulate or access the\nscreen inside event handling functions such as mousePressed() or\nkeyPressed(). Instead, use those functions to call redraw() or loop(),\nwhich will run draw(), which can update the screen properly. This means\nthat when noLoop() has been called, no drawing can happen, and functions\nlike saveFrame() or loadPixels() may not be used.\n<br><br>\nNote that if the sketch is resized, redraw() will be called to update\nthe sketch, even after noLoop() has been specified. Otherwise, the sketch\nwould enter an odd state until loop() was called.",
             "itemtype": "method",
             "name": "noLoop",
             "example": [
@@ -6349,7 +6321,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 73,
+            "line": 72,
             "description": "By default, p5.js loops through draw() continuously, executing the code\nwithin it. However, the draw() loop may be stopped by calling noLoop().\nIn that case, the draw() loop can be resumed with loop().",
             "itemtype": "method",
             "name": "loop",
@@ -6362,7 +6334,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 111,
+            "line": 110,
             "description": "The push() function saves the current drawing style settings and\ntransformations, while pop() restores these settings. Note that these\nfunctions are always used together. They allow you to change the style\nand transformation settings and later return to what you had. When a new\nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide\nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(),\nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(),\nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(),\ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "push",
@@ -6375,7 +6347,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 179,
+            "line": 178,
             "description": "The push() function saves the current drawing style settings and\ntransformations, while pop() restores these settings. Note that these\nfunctions are always used together. They allow you to change the style\nand transformation settings and later return to what you had. When a new\nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide\nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(),\nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(),\nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(),\ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -6388,8 +6360,8 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 246,
-            "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs.\nIn structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\nThe redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
+            "line": 245,
+            "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs.\n <br><br>\n In structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n <br><br>\n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
             "example": [
@@ -6468,7 +6440,7 @@
         {
             "file": "src/core/transform.js",
             "line": 69,
-            "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe push() and pop().",
+            "description": "Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n<br><br>\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n<br><br>\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe push() and pop().",
             "itemtype": "method",
             "name": "rotate",
             "params": [
@@ -6549,7 +6521,7 @@
         {
             "file": "src/core/transform.js",
             "line": 188,
-            "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with push() and pop().",
+            "description": "Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n<br><br>\nUsing this fuction with the z parameter requires using P3D as a\nparameter for size(), as shown in the third example above. This function\ncan be further controlled with push() and pop().",
             "itemtype": "method",
             "name": "scale",
             "params": [
@@ -6585,7 +6557,7 @@
         {
             "file": "src/core/transform.js",
             "line": 265,
-            "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
+            "description": "Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again.\n<br><br>\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearX",
             "params": [
@@ -6609,7 +6581,7 @@
         {
             "file": "src/core/transform.js",
             "line": 302,
-            "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.\n\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
+            "description": "Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.\n<br><br>\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.",
             "itemtype": "method",
             "name": "shearY",
             "params": [
@@ -6633,7 +6605,7 @@
         {
             "file": "src/core/transform.js",
             "line": 339,
-            "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().",
+            "description": "Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n<br><br>\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().",
             "itemtype": "method",
             "name": "translate",
             "params": [
@@ -6679,7 +6651,7 @@
         {
             "file": "src/core/vertex.js",
             "line": 65,
-            "description": "Using the beginShape() and endShape() functions allow creating more\ncomplex forms. beginShape() begins recording vertices for a shape and\nendShape() stops recording. The value of the kind parameter tells it which\ntypes of shapes to create from the provided vertices. With no mode\nspecified, the shape can be any irregular polygon. The parameters\navailable for beginShape() are POINTS, LINES, TRIANGLES, TRIANGLE_FAN,\nTRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the beginShape()\nfunction, a series of vertex() commands must follow. To stop drawing the\nshape, call endShape(). Each shape will be outlined with the current\nstroke color and filled with the fill color.\n\nTransformations such as translate(), rotate(), and scale() do not work\nwithin beginShape(). It is also not possible to use other shapes, such as\nellipse() or rect() within beginShape().",
+            "description": "Using the beginShape() and endShape() functions allow creating more\ncomplex forms. beginShape() begins recording vertices for a shape and\nendShape() stops recording. The value of the kind parameter tells it which\ntypes of shapes to create from the provided vertices. With no mode\nspecified, the shape can be any irregular polygon.\n<br><br>\nThe parameters available for beginShape() are POINTS, LINES, TRIANGLES,\nTRIANGLE_FAN, TRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the\nbeginShape() function, a series of vertex() commands must follow. To stop\ndrawing the shape, call endShape(). Each shape will be outlined with the\ncurrent stroke color and filled with the fill color.\n<br><br>\nTransformations such as translate(), rotate(), and scale() do not work\nwithin beginShape(). It is also not possible to use other shapes, such as\nellipse() or rect() within beginShape().",
             "itemtype": "method",
             "name": "beginShape",
             "params": [
@@ -6702,8 +6674,8 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 249,
-            "description": "Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape. The first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().",
+            "line": 250,
+            "description": "Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape.\n<br><br>\nThe first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().",
             "itemtype": "method",
             "name": "bezierVertex",
             "params": [
@@ -6751,8 +6723,8 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 307,
-            "description": "Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape(). The first and\nlast points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.",
+            "line": 310,
+            "description": "Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape().\n<br><br>\nThe first and last points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.",
             "itemtype": "method",
             "name": "curveVertex",
             "params": [
@@ -6780,7 +6752,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 344,
+            "line": 348,
             "description": "Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter 'O'. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must \"wind\" in the opposite\ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices\nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.",
             "itemtype": "method",
             "name": "endContour",
@@ -6797,7 +6769,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 395,
+            "line": 399,
             "description": "The endShape() function is the companion to beginShape() and may only be\ncalled after beginShape(). When endshape() is called, all of image data\ndefined since the previous call to beginShape() is written into the image\nbuffer. The constant CLOSE as the value for the MODE parameter to close\nthe shape (to connect the beginning and the end).",
             "itemtype": "method",
             "name": "endShape",
@@ -6821,7 +6793,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 457,
+            "line": 461,
             "description": "Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -6860,7 +6832,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 529,
+            "line": 533,
             "description": "All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.",
             "itemtype": "method",
             "name": "vertex",
@@ -7187,7 +7159,7 @@
         {
             "file": "src/events/keyboard.js",
             "line": 220,
-            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nwill cause multiple calls to keyTyped(), the rate is set by the operating\nsystem and how each computer is configured.<br><br>\nBrowsers may have different default\nbehaviors attached to various key events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
+            "description": "The keyTyped() function is called once every time a key is pressed, but\naction keys such as Ctrl, Shift, and Alt are ignored. The most recent\nkey pressed will be stored in the key variable.\n<br><br>\nBecause of how operating systems handle key repeats, holding down a key\nwill cause multiple calls to keyTyped() (and keyReleased() as well). The\nrate of repeat is set by the operating system and how each computer is\nconfigured.<br><br>\nBrowsers may have different default behaviors attached to various key\nevents. To prevent any default behavior for this event, add \"return false\"\nto the end of the method.",
             "itemtype": "method",
             "name": "keyTyped",
             "example": [
@@ -7199,7 +7171,7 @@
         },
         {
             "file": "src/events/keyboard.js",
-            "line": 263,
+            "line": 264,
             "description": "The onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will not fire if the user is\nnot focused on the element we must assume all keys currently down have\nbeen released.",
             "class": "p5",
             "module": "Events",
@@ -7207,8 +7179,8 @@
         },
         {
             "file": "src/events/keyboard.js",
-            "line": 273,
-            "description": "The keyIsDown function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally. You can put in any number representing the keyCode of\nthe key, or use any of the variable keyCode names listed\n<a href=\"http://p5js.org/reference/#p5/keyCode\">here</a>.",
+            "line": 274,
+            "description": "The keyIsDown() function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally. You can put in any number representing the keyCode of\nthe key, or use any of the variable keyCode names listed\n<a href=\"http://p5js.org/reference/#p5/keyCode\">here</a>.",
             "itemtype": "method",
             "name": "keyIsDown",
             "params": [
@@ -7362,7 +7334,7 @@
         {
             "file": "src/events/mouse.js",
             "line": 349,
-            "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
             "example": [
@@ -7375,7 +7347,7 @@
         {
             "file": "src/events/mouse.js",
             "line": 388,
-            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
             "example": [
@@ -7388,7 +7360,7 @@
         {
             "file": "src/events/mouse.js",
             "line": 455,
-            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no\nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no\nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
             "example": [
@@ -7401,7 +7373,7 @@
         {
             "file": "src/events/mouse.js",
             "line": 518,
-            "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
             "example": [
@@ -7414,7 +7386,7 @@
         {
             "file": "src/events/mouse.js",
             "line": 581,
-            "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
             "example": [
@@ -7427,7 +7399,7 @@
         {
             "file": "src/events/mouse.js",
             "line": 631,
-            "description": "The function mouseWheel is executed every time a vertical mouse wheel\nevent is detected either triggered by an actual mouse wheel or by a\ntouchpad.<br><br>\nThe event.delta property returns the amount the mouse wheel\nhave scrolled. The values can be positive or negative depending on the\nscroll direction (on OS X with \"natural\" scrolling enabled, the signs\nare inverted).<br><br>\nBrowsers may have different default behaviors attached to various\nmouse events. To prevent any default behavior for this event, add\n`return false` to the end of the method.<br><br>\nDue to the current support of the `wheel` event on Safari, the function\nmay only work as expected if `return false` is included while using Safari.",
+            "description": "The function mouseWheel() is executed every time a vertical mouse wheel\nevent is detected either triggered by an actual mouse wheel or by a\ntouchpad.<br><br>\nThe event.delta property returns the amount the mouse wheel\nhave scrolled. The values can be positive or negative depending on the\nscroll direction (on OS X with \"natural\" scrolling enabled, the signs\nare inverted).<br><br>\nBrowsers may have different default behaviors attached to various\nmouse events. To prevent any default behavior for this event, add\n\"return false\" to the end of the method.<br><br>\nDue to the current support of the \"wheel\" event on Safari, the function\nmay only work as expected if \"return false\" is included while using Safari.",
             "itemtype": "method",
             "name": "mouseWheel",
             "example": [
@@ -7500,7 +7472,7 @@
         {
             "file": "src/events/touch.js",
             "line": 105,
-            "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined. Browsers may have\ndifferent default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add \"return false\"\nto the end of the method.",
             "itemtype": "method",
             "name": "touchStarted",
             "example": [
@@ -7513,7 +7485,7 @@
         {
             "file": "src/events/touch.js",
             "line": 165,
-            "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchStarted() function is defined, the mouseDragged() function will\nbe called instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchMoved() function is defined, the mouseDragged() function will\nbe called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add \"return false\"\nto the end of the method.",
             "itemtype": "method",
             "name": "touchMoved",
             "example": [
@@ -7525,8 +7497,8 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 221,
-            "description": "The touchEnded() function is called every time a touch ends. If no\ntouchStarted() function is defined, the mouseReleased() function will be\ncalled instead if it is defined. Browsers may have different default\nbehaviors attached to various touch events. To prevent any default\nbehavior for this event, add `return false` to the end of the method.",
+            "line": 222,
+            "description": "The touchEnded() function is called every time a touch ends. If no\ntouchEnded() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add \"return false\"\nto the end of the method.",
             "itemtype": "method",
             "name": "touchEnded",
             "example": [
@@ -7801,7 +7773,7 @@
         {
             "file": "src/image/image.js",
             "line": 24,
-            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.\n\n.pixels gives access to an array containing the values for all the pixels\nin the display window.\nThese values are numbers. This array is the size (including an appropriate\nfactor for the pixelDensity) of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from\nleft to right across each row, then down each column. See .pixels for\nmore info. It may also be simpler to use set() or get().\n<br><br>\nBefore accessing the pixels of an image, the data must loaded with the\nloadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
+            "description": "Creates a new p5.Image (the datatype for storing images). This provides a\nfresh buffer of pixels to play with. Set the size of the buffer with the\nwidth and height parameters.\n<br><br>\n.pixels gives access to an array containing the values for all the pixels\nin the display window.\nThese values are numbers. This array is the size (including an appropriate\nfactor for the pixelDensity) of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from\nleft to right across each row, then down each column. See .pixels for\nmore info. It may also be simpler to use set() or get().\n<br><br>\nBefore accessing the pixels of an image, the data must loaded with the\nloadPixels() function. After the array data has been modified, the\nupdatePixels() function must be run to update the changes.",
             "itemtype": "method",
             "name": "createImage",
             "params": [
@@ -7829,8 +7801,8 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 98,
-            "description": "Save the current canvas as an image. In Safari, will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
+            "line": 97,
+            "description": "Save the current canvas as an image. In Safari, this will open the\nimage in the window and the user must provide their own\nfilename on save-as. Other browsers will either save the\nfile immediately, or prompt the user with a dialogue window.",
             "itemtype": "method",
             "name": "saveCanvas",
             "params": [
@@ -7859,7 +7831,7 @@
         },
         {
             "file": "src/image/image.js",
-            "line": 216,
+            "line": 215,
             "description": "Capture a sequence of frames that can be used to create a movie.\nAccepts a callback. For example, you may wish to send the frames\nto a server where they can be stored or converted into a movie.\nIf no callback is provided, the browser will attempt to download\nall of the images that have just been created.",
             "itemtype": "method",
             "name": "saveFrames",
@@ -8037,7 +8009,7 @@
         {
             "file": "src/image/loading_displaying.js",
             "line": 231,
-            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n\nTo apply transparency to an image without affecting its color, use\nwhite as the tint color and specify an alpha value. For instance,\ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()).\n\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
+            "description": "Sets the fill value for displaying images. Images can be tinted to\nspecified colors or made transparent by including an alpha value.\n<br><br>\nTo apply transparency to an image without affecting its color, use\nwhite as the tint color and specify an alpha value. For instance,\ntint(255, 128) will make an image 50% transparent (assuming the default\nalpha range of 0-255, which can be changed with colorMode()).\n<br><br>\nThe value for the gray parameter must be less than or equal to the current\nmaximum value as specified by colorMode(). The default maximum value is\n255.",
             "itemtype": "method",
             "name": "tint",
             "params": [
@@ -8107,7 +8079,7 @@
         {
             "file": "src/image/loading_displaying.js",
             "line": 361,
-            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
+            "description": "Set image mode. Modifies the location from which images are drawn by\nchanging the way in which parameters given to image() are interpreted.\nThe default mode is imageMode(CORNER), which interprets the second and\nthird parameters of image() as the upper-left corner of the image. If\ntwo additional parameters are specified, they are used to set the image's\nwidth and height.\n<br><br>\nimageMode(CORNERS) interprets the second and third parameters of image()\nas the location of one corner, and the fourth and fifth parameters as the\nopposite corner.\n<br><br>\nimageMode(CENTER) interprets the second and third parameters of image()\nas the image's center point. If two additional parameters are specified,\nthey are used to set the image's width and height.",
             "itemtype": "method",
             "name": "imageMode",
             "params": [
@@ -8134,7 +8106,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 43,
+            "line": 46,
             "description": "Image width.",
             "itemtype": "property",
             "name": "width",
@@ -8147,7 +8119,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 65,
+            "line": 68,
             "description": "Image height.",
             "itemtype": "property",
             "name": "height",
@@ -8160,7 +8132,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 94,
+            "line": 97,
             "description": "Array containing the values for all the pixels in the display window.\nThese values are numbers. This array is the size (include an appropriate\nfactor for pixelDensity) of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from\nleft to right across each row, then down each column. Retina and other\nhigh denisty displays may have more pixels[] (by a factor of\npixelDensity^2).\nFor example, if the image is 100x100 pixels, there will be 40,000. With\npixelDensity = 2, there will be 160,000. The first four values\n(indices 0-3) in the array will be the R, G, B, A values of the pixel at\n(0, 0). The second four values (indices 4-7) will contain the R, G, B, A\nvalues of the pixel at (1, 0). More generally, to set values for a pixel\nat (x, y):\n<code><pre>var d = pixelDensity;\nfor (var i = 0; i < d; i++) {\n  for (var j = 0; j < d; j++) {\n    // loop over\n    idx = 4*((y * d + j) * width * d + (x * d + i));\n    pixels[idx] = r;\n    pixels[idx+1] = g;\n    pixels[idx+2] = b;\n    pixels[idx+3] = a;\n  }\n}\n</pre></code>\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.",
             "itemtype": "property",
             "name": "pixels[]",
@@ -8173,7 +8145,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 158,
+            "line": 161,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Image",
             "module": "Image",
@@ -8181,7 +8153,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 166,
+            "line": 169,
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
@@ -8191,7 +8163,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 175,
+            "line": 178,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -8223,7 +8195,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 193,
+            "line": 196,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -8263,7 +8235,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 215,
+            "line": 218,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels().",
             "itemtype": "method",
             "name": "set",
@@ -8293,7 +8265,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 248,
+            "line": 251,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -8318,7 +8290,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 313,
+            "line": 316,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -8375,7 +8347,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 335,
+            "line": 338,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's blue channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -8395,7 +8367,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 393,
+            "line": 396,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -8417,7 +8389,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 406,
+            "line": 409,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -8479,7 +8451,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 435,
+            "line": 438,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -8501,7 +8473,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 475,
+            "line": 478,
             "description": "creates a gl texture\nused in WEBGL mode only",
             "params": [
                 {
@@ -8521,7 +8493,7 @@
         {
             "file": "src/image/pixels.js",
             "line": 14,
-            "description": "<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference\n/Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a>\ncontaining the values for all the pixels in the display window.\nThese values are numbers. This array is the size (include an appropriate\nfactor for pixelDensity) of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from\nleft to right across each row, then down each column. Retina and other\nhigh denisty displays will have more pixels[] (by a factor of\npixelDensity^2).\nFor example, if the image is 100x100 pixels, there will be 40,000. On a\nretina display, there will be 160,000. The first four values\n(indices 0-3) in the array will be the R, G, B, A values of the pixel at\n(0, 0). The second four values (indices 4-7) will contain the R, G, B, A\nvalues of the pixel at (1, 0). More generally, to set values for a pixel\nat (x, y):\n<code><pre>var d = pixelDensity;\nfor (var i = 0; i < d; i++) {\n  for (var j = 0; j < d; j++) {\n    // loop over\n    idx = 4*((y * d + j) * width * d + (x * d + i));\n    pixels[idx] = r;\n    pixels[idx+1] = g;\n    pixels[idx+2] = b;\n    pixels[idx+3] = a;\n  }\n}\n</pre></code>\nWhile the above method is complex, it is flexible enough to work with\nany pixelDensity. Note that set() will automatically take care of\nsetting all the appropriate values in pixels[] for a given (x, y) at\nany pixelDensity, but the performance may not be as fast when lots of\nmodifications are made to the pixel array.\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.\n<br><br>\nNote that this is not a standard javascript array.  This means that\nstandard javascript functions such as <code>slice()</code> or\n<code>arrayCopy()</code> do not\nwork.",
+            "description": "<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference\n/Global_Objects/Uint8ClampedArray' target='_blank'>Uint8ClampedArray</a>\ncontaining the values for all the pixels in the display window.\nThese values are numbers. This array is the size (include an appropriate\nfactor for pixelDensity) of the display window x4,\nrepresenting the R, G, B, A values in order for each pixel, moving from\nleft to right across each row, then down each column. Retina and other\nhigh denisty displays will have more pixels[] (by a factor of\npixelDensity^2).\nFor example, if the image is 100x100 pixels, there will be 40,000. On a\nretina display, there will be 160,000.\n<br><br>\nThe first four values (indices 0-3) in the array will be the R, G, B, A\nvalues of the pixel at (0, 0). The second four values (indices 4-7) will\ncontain the R, G, B, A values of the pixel at (1, 0). More generally, to\nset values for a pixel at (x, y):\n<code><pre>\nvar d = pixelDensity;\nfor (var i = 0; i < d; i++) {\n  for (var j = 0; j < d; j++) {\n    // loop over\n    idx = 4 * ((y * d + j) * width * d + (x * d + i));\n    pixels[idx] = r;\n    pixels[idx+1] = g;\n    pixels[idx+2] = b;\n    pixels[idx+3] = a;\n  }\n}\n</pre></code>\n\n<p>While the above method is complex, it is flexible enough to work with\nany pixelDensity. Note that set() will automatically take care of\nsetting all the appropriate values in pixels[] for a given (x, y) at\nany pixelDensity, but the performance may not be as fast when lots of\nmodifications are made to the pixel array.\n<br><br>\nBefore accessing this array, the data must loaded with the loadPixels()\nfunction. After the array data has been modified, the updatePixels()\nfunction must be run to update the changes.\n<br><br>\nNote that this is not a standard javascript array.  This means that\nstandard javascript functions such as <code>slice()</code> or\n<code>arrayCopy()</code> do not\nwork.</p>",
             "itemtype": "property",
             "name": "pixels[]",
             "example": [
@@ -8533,7 +8505,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 77,
+            "line": 80,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.<br><br>\nAvailable blend modes are: BLEND | DARKEST | LIGHTEST | DIFFERENCE |\nMULTIPLY| EXCLUSION | SCREEN | REPLACE | OVERLAY | HARD_LIGHT |\nSOFT_LIGHT | DODGE | BURN | ADD | NORMAL",
             "itemtype": "method",
             "name": "blend",
@@ -8598,7 +8570,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 148,
+            "line": 151,
             "description": "Copies a region of the canvas to another region of the canvas\nand copies a region of pixels from an image used as the srcImg parameter\ninto the canvas srcImage is specified this is used as the source. If\nthe source and destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -8658,7 +8630,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 189,
+            "line": 192,
             "description": "Applies a filter to the canvas.\n<br><br>\n\nThe presets options are:\n<br><br>\n\nTHRESHOLD\nConverts the image to black and white pixels depending if they are above or\nbelow the threshold defined by the level parameter. The parameter must be\nbetween 0.0 (black) and 1.0 (white). If no level is specified, 0.5 is used.\n<br><br>\n\nGRAY\nConverts any colors in the image to grayscale equivalents. No parameter\nis used.\n<br><br>\n\nOPAQUE\nSets the alpha channel to entirely opaque. No parameter is used.\n<br><br>\n\nINVERT\nSets each pixel to its inverse value. No parameter is used.\n<br><br>\n\nPOSTERIZE\nLimits each channel of the image to the number of colors specified as the\nparameter. The parameter can be set to values between 2 and 255, but\nresults are most noticeable in the lower ranges.\n<br><br>\n\nBLUR\nExecutes a Guassian blur with the level parameter specifying the extent\nof the blurring. If no parameter is used, the blur is equivalent to\nGuassian blur of radius 1. Larger values increase the blur.\n<br><br>\n\nERODE\nReduces the light areas. No parameter is used.\n<br><br>\n\nDILATE\nIncreases the light areas. No parameter is used.",
             "itemtype": "method",
             "name": "filter",
@@ -8683,8 +8655,8 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 349,
-            "description": "Returns an array of [R,G,B,A] values for any pixel or grabs a section of\nan image. If no parameters are specified, the entire image is returned.\nUse the x and y parameters to get the value of one pixel. Get a section of\nthe display window by specifying additional w and h parameters. When\ngetting an image, the x and y parameters define the coordinates for the\nupper-left corner of the image, regardless of the current imageMode().\n\nIf the pixel requested is outside of the image window, [0,0,0,255] is\nreturned. To get the numbers scaled according to the current color ranges\nand taking into account colorMode, use getColor instead of get.\n\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] with pixel density d is\n[pixels[(y*width*d+x)*d],\npixels[(y*width*d+x)*d+1],\npixels[(y*width*d+x)*d+2],\npixels[(y*width*d+x)*d+3] ].\nSee the reference for pixels[] for more information.",
+            "line": 352,
+            "description": "Returns an array of [R,G,B,A] values for any pixel or grabs a section of\nan image. If no parameters are specified, the entire image is returned.\nUse the x and y parameters to get the value of one pixel. Get a section of\nthe display window by specifying additional w and h parameters. When\ngetting an image, the x and y parameters define the coordinates for the\nupper-left corner of the image, regardless of the current imageMode().\n<br><br>\nIf the pixel requested is outside of the image window, [0,0,0,255] is\nreturned. To get the numbers scaled according to the current color ranges\nand taking into account colorMode, use getColor instead of get.\n<br><br>\nGetting the color of a single pixel with get(x, y) is easy, but not as fast\nas grabbing the data directly from pixels[]. The equivalent statement to\nget(x, y) using pixels[] with pixel density d is\n<code>[pixels[(y*width*d+x)*d],\npixels[(y*width*d+x)*d+1],\npixels[(y*width*d+x)*d+2],\npixels[(y*width*d+x)*d+3]]</code>.\n<br><br>\nSee the reference for pixels[] for more information.",
             "itemtype": "method",
             "name": "get",
             "params": [
@@ -8726,7 +8698,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 412,
+            "line": 416,
             "description": "Loads the pixel data for the display window into the pixels[] array. This\nfunction must always be called before reading from or writing to pixels[].",
             "itemtype": "method",
             "name": "loadPixels",
@@ -8739,7 +8711,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 443,
+            "line": 447,
             "description": "<p>Changes the color of any pixel, or writes an image directly to the\ndisplay window.</p>\n<p>The x and y parameters specify the pixel to change and the c parameter\nspecifies the color value. This can be a p5.Color object, or [R, G, B, A]\npixel array. It can also be a single grayscale value.\nWhen setting an image, the x and y parameters define the coordinates for\nthe upper-left corner of the image, regardless of the current imageMode().\n</p>\n<p>\nAfter using set(), you must call updatePixels() for your changes to\nappear.  This should be called once all pixels have been set.\n</p>\n<p>Setting the color of a single pixel with set(x, y) is easy, but not as\nfast as putting the data directly into pixels[]. Setting the pixels[]\nvalues directly may be complicated when working with a retina display,\nbut will perform better when lots of pixels need to be set directly on\nevery loop.</p>\n<p>See the reference for pixels[] for more information.</p>",
             "itemtype": "method",
             "name": "set",
@@ -8769,7 +8741,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 511,
+            "line": 515,
             "description": "Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you're only reading pixels from\nthe array, there's no need to call updatePixels() — updating is only\nnecessary to apply changes. updatePixels() should be called anytime the\npixels array is manipulated or set() is called.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -8891,7 +8863,7 @@
         {
             "file": "src/io/files.js",
             "line": 280,
-            "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
+            "description": "Reads the contents of a file and creates a String array of its individual\nlines. If the name of the file is used as the parameter, as in the above\nexample, the file must be located in the sketch directory/folder.\n<br><br>\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n<br><br>\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed.",
             "itemtype": "method",
             "name": "loadStrings",
             "params": [
@@ -8963,7 +8935,7 @@
         {
             "file": "src/io/files.js",
             "line": 657,
-            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>",
+            "description": "Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.\n<br><br>\nAlternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.\n<br><br>\nThis method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.\n<br><br>\nOutside of preload(), you may supply a callback function to handle the\nobject:",
             "itemtype": "method",
             "name": "loadXML",
             "params": [
@@ -10304,7 +10276,7 @@
         {
             "file": "src/math/calculation.js",
             "line": 364,
-            "description": "Re-maps a number from one range to another.\nIn the first example above, the number 25 is converted from a value in the\nrange of 0 to 100 into a value that ranges from the left edge of the\nwindow (0) to the right edge (width).",
+            "description": "Re-maps a number from one range to another.\n<br><br>\nIn the first example above, the number 25 is converted from a value in the\nrange of 0 to 100 into a value that ranges from the left edge of the\nwindow (0) to the right edge (width).",
             "itemtype": "method",
             "name": "map",
             "params": [
@@ -10339,7 +10311,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n  <div><code>\n    createCanvas(200, 200);\n    var value = 25;\n    var m = map(value, 0, 100, 0, width);\n    ellipse(m, 200, 10, 10);\n  </code></div>\n\n  <div><code>\n    function setup() {\n      createCanvas(200, 200);\n      noStroke();\n    }\n\n    function draw() {\n      background(204);\n      var x1 = map(mouseX, 0, width, 50, 150);\n      ellipse(x1, 75, 50, 50);\n      var x2 = map(mouseX, 0, width, 0, 200);\n      ellipse(x2, 125, 50, 50);\n    }\n  </code></div>"
+                "\n  <div><code>\n    var value = 25;\n    var m = map(value, 0, 100, 0, width);\n    ellipse(m, 50, 10, 10);\n  </code></div>\n\n  <div><code>\n    function setup() {\n      noStroke();\n    }\n\n    function draw() {\n      background(204);\n      var x1 = map(mouseX, 0, width, 25, 75);\n      ellipse(x1, 25, 25, 25);\n      var x2 = map(mouseX, 0, width, 0, 100);\n      ellipse(x2, 75, 25, 25);\n    }\n  </code></div>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10347,7 +10319,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 404,
+            "line": 403,
             "description": "Determines the largest value in a sequence of numbers, and then returns\nthat value. max() accepts any number of Number parameters, or an Array\nof any length.",
             "itemtype": "method",
             "name": "max",
@@ -10371,7 +10343,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 443,
+            "line": 442,
             "description": "Determines the smallest value in a sequence of numbers, and then returns\nthat value. min() accepts any number of Number parameters, or an Array\nof any length.",
             "itemtype": "method",
             "name": "min",
@@ -10395,7 +10367,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 482,
+            "line": 481,
             "description": "Normalizes a number from another range into a value between 0 and 1.\nIdentical to map(value, low, high, 0, 1).\nNumbers outside of the range are not clamped to 0 and 1, because\nout-of-range values are often intentional and useful. (See the second\nexample above.)",
             "itemtype": "method",
             "name": "norm",
@@ -10429,7 +10401,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 530,
+            "line": 529,
             "description": "Facilitates exponential expressions. The pow() function is an efficient\nway of multiplying numbers by themselves (or their reciprocals) in large\nquantities. For example, pow(3, 5) is equivalent to the expression\n3*3*3*3*3 and pow(3, -5) is equivalent to 1 / 3*3*3*3*3. Maps to\nMath.pow().",
             "itemtype": "method",
             "name": "pow",
@@ -10458,7 +10430,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 560,
+            "line": 559,
             "description": "Calculates the integer closest to the n parameter. For example,\nround(133.8) returns the value 134. Maps to Math.round().",
             "itemtype": "method",
             "name": "round",
@@ -10482,7 +10454,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 595,
+            "line": 594,
             "description": "Squares a number (multiplies a number by itself). The result is always a\npositive number, as multiplying two negative numbers always yields a\npositive result. For example, -1 * -1 = 1.",
             "itemtype": "method",
             "name": "sq",
@@ -10506,7 +10478,7 @@
         },
         {
             "file": "src/math/calculation.js",
-            "line": 636,
+            "line": 635,
             "description": "Calculates the square root of a number. The square root of a number is\nalways positive, even though there may be a valid negative root. The\nsquare root s of number a is such that s*s = a. It is the opposite of\nsquaring. Maps to Math.sqrt().",
             "itemtype": "method",
             "name": "sqrt",
@@ -10595,7 +10567,7 @@
         {
             "file": "src/math/noise.js",
             "line": 165,
-            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overall intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence. By default, noise is\n computed over 4 octaves with each octave contributing exactly half than\n its predecessor, starting at 50% strength for the 1st octave. This\n falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.<br /><br\n />By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
+            "description": "Adjusts the character and level of detail produced by the Perlin noise\n function. Similar to harmonics in physics, noise is computed over\n several octaves. Lower octaves contribute more to the output signal and\n as such define the overall intensity of the noise, whereas higher octaves\n create finer grained details in the noise sequence.\n <br><br>\n By default, noise is computed over 4 octaves with each octave contributing\n exactly half than its predecessor, starting at 50% strength for the 1st\n octave. This falloff amount can be changed by adding an additional function\n parameter. Eg. a falloff factor of 0.75 means each octave will now have\n 75% impact (25% less) of the previous lower octave. Any value between\n 0.0 and 1.0 is valid, however note that values greater than 0.5 might\n result in greater than 1.0 values returned by <b>noise()</b>.\n <br><br>\n By changing these parameters, the signal created by the <b>noise()</b>\n function can be adapted to fit very specific needs and characteristics.",
             "itemtype": "method",
             "name": "noiseDetail",
             "params": [
@@ -10619,7 +10591,7 @@
         },
         {
             "file": "src/math/noise.js",
-            "line": 221,
+            "line": 223,
             "description": "Sets the seed value for <b>noise()</b>. By default, <b>noise()</b>\nproduces different results each time the program is run. Set the\n<b>value</b> parameter to a constant to return the same pseudo-random\nnumbers each time the software is run.",
             "itemtype": "method",
             "name": "noiseSeed",
@@ -10639,7 +10611,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 63,
+            "line": 65,
             "description": "The x component of the vector",
             "itemtype": "property",
             "name": "x",
@@ -10650,7 +10622,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 69,
+            "line": 71,
             "description": "The y component of the vector",
             "itemtype": "property",
             "name": "y",
@@ -10661,7 +10633,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 75,
+            "line": 77,
             "description": "The z component of the vector",
             "itemtype": "property",
             "name": "z",
@@ -10672,7 +10644,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 83,
+            "line": 85,
             "description": "Returns a string representation of a vector v by calling String(v)\nor v.toString(). This method is useful for logging vectors in the\nconsole.",
             "itemtype": "method",
             "name": "toString",
@@ -10685,7 +10657,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 101,
+            "line": 103,
             "description": "Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Vector, or the values from a float array.",
             "itemtype": "method",
             "name": "set",
@@ -10718,7 +10690,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 143,
+            "line": 145,
             "description": "Gets a copy of the vector, returns a p5.Vector object.",
             "itemtype": "method",
             "name": "copy",
@@ -10735,7 +10707,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 166,
+            "line": 168,
             "description": "Adds x, y, and z components to a vector, adds one vector to another, or\nadds two independent vectors together. The version of the method that adds\ntwo vectors together is a static method and returns a p5.Vector, the others\nacts directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "add",
@@ -10772,7 +10744,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 219,
+            "line": 221,
             "description": "Subtracts x, y, and z components from a vector, subtracts one vector from\nanother, or subtracts two independent vectors. The version of the method\nthat subtracts two vectors is a static method and returns a p5.Vector, the\nother acts directly on the vector. See the examples for more context.",
             "itemtype": "method",
             "name": "sub",
@@ -10809,7 +10781,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 271,
+            "line": 273,
             "description": "Multiply the vector by a scalar. The static version of this method\ncreates a new p5.Vector while the non static version acts on the vector\ndirectly. See the examples for more context.",
             "itemtype": "method",
             "name": "mult",
@@ -10834,7 +10806,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 305,
+            "line": 307,
             "description": "Divide the vector by a scalar. The static version of this method creates a\nnew p5.Vector while the non static version acts on the vector directly.\nSee the examples for more context.",
             "itemtype": "method",
             "name": "div",
@@ -10859,7 +10831,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 338,
+            "line": 340,
             "description": "Calculates the magnitude (length) of the vector and returns the result as\na float (this is simply the equation sqrt(x*x + y*y + z*z).)",
             "itemtype": "method",
             "name": "mag",
@@ -10876,7 +10848,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 357,
+            "line": 359,
             "description": "Calculates the squared magnitude of the vector and returns the result\nas a float (this is simply the equation <em>(x*x + y*y + z*z)</em>.)\nFaster if the real length is not required in the\ncase of comparing vectors, etc.",
             "itemtype": "method",
             "name": "magSq",
@@ -10893,7 +10865,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 379,
+            "line": 381,
             "description": "Calculates the dot product of two vectors. The version of the method\nthat computes the dot product of two independent vectors is a static\nmethod. See the examples for more context.",
             "itemtype": "method",
             "name": "dot",
@@ -10929,7 +10901,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 419,
+            "line": 421,
             "description": "Calculates and returns a vector composed of the cross product between\ntwo vectors. Both the static and non static methods return a new p5.Vector.\nSee the examples for more context.",
             "itemtype": "method",
             "name": "cross",
@@ -10953,7 +10925,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 459,
+            "line": 461,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "itemtype": "method",
             "name": "dist",
@@ -10977,7 +10949,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 491,
+            "line": 493,
             "description": "Normalize the vector to length 1 (make it a unit vector).",
             "itemtype": "method",
             "name": "normalize",
@@ -10994,7 +10966,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 512,
+            "line": 514,
             "description": "Limit the magnitude of this vector to the value used for the <b>max</b>\nparameter.",
             "itemtype": "method",
             "name": "limit",
@@ -11018,7 +10990,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 539,
+            "line": 541,
             "description": "Set the magnitude of this vector to the value used for the <b>len</b>\nparameter.",
             "itemtype": "method",
             "name": "setMag",
@@ -11042,7 +11014,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 560,
+            "line": 562,
             "description": "Calculate the angle of rotation for this vector (only 2D vectors)",
             "itemtype": "method",
             "name": "heading",
@@ -11059,7 +11031,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 592,
+            "line": 594,
             "description": "Rotate the vector by an angle (only 2D vectors), magnitude remains the\nsame",
             "itemtype": "method",
             "name": "rotate",
@@ -11083,7 +11055,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 622,
+            "line": 624,
             "description": "Linear interpolate the vector to another vector",
             "itemtype": "method",
             "name": "lerp",
@@ -11124,7 +11096,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 662,
+            "line": 664,
             "description": "Return a representation of this vector as a float array. This is only\nfor temporary use. If used in any other fashion, the contents should be\ncopied by using the <b>p5.Vector.copy()</b> method to copy into your own\narray.",
             "itemtype": "method",
             "name": "array",
@@ -11141,7 +11113,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 691,
+            "line": 693,
             "description": "Equality check against a p5.Vector",
             "itemtype": "method",
             "name": "equals",
@@ -11178,7 +11150,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 741,
+            "line": 743,
             "description": "Make a new 2D unit vector from an angle",
             "itemtype": "method",
             "name": "fromAngle",
@@ -11203,7 +11175,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 798,
+            "line": 800,
             "description": "Make a new 2D unit vector from a random angle",
             "itemtype": "method",
             "name": "random2D",
@@ -11221,7 +11193,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 831,
+            "line": 833,
             "description": "Make a new random 3D unit vector.",
             "itemtype": "method",
             "name": "random3D",
@@ -11239,7 +11211,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 868,
+            "line": 870,
             "description": "Adds two vectors together and returns a new one.",
             "static": 1,
             "params": [
@@ -11269,7 +11241,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 889,
+            "line": 891,
             "description": "Subtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
             "static": 1,
             "params": [
@@ -11299,7 +11271,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 911,
+            "line": 913,
             "description": "Multiplies a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -11329,7 +11301,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 930,
+            "line": 932,
             "description": "Divides a vector by a scalar and returns a new vector.",
             "static": 1,
             "params": [
@@ -11359,7 +11331,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 950,
+            "line": 952,
             "description": "Calculates the dot product of two vectors.",
             "static": 1,
             "params": [
@@ -11384,7 +11356,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 962,
+            "line": 964,
             "description": "Calculates the cross product of two vectors.",
             "static": 1,
             "params": [
@@ -11409,7 +11381,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 974,
+            "line": 976,
             "description": "Calculates the Euclidean distance between two points (considering a\npoint as a vector object).",
             "static": 1,
             "params": [
@@ -11434,7 +11406,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 987,
+            "line": 989,
             "description": "Linear interpolate a vector to another vector and return the result as a\nnew vector.",
             "static": 1,
             "params": [
@@ -11460,7 +11432,7 @@
         },
         {
             "file": "src/math/p5.Vector.js",
-            "line": 1008,
+            "line": 1010,
             "description": "Calculates and returns the angle (in radians) between two vectors.",
             "itemtype": "method",
             "name": "angleBetween",
@@ -11540,7 +11512,7 @@
         {
             "file": "src/math/random.js",
             "line": 138,
-            "description": "Returns a random number fitting a Gaussian, or\n normal, distribution. There is theoretically no minimum or maximum\n value that <b>randomGaussian()</b> might return. Rather, there is\n just a very low probability that values far from the mean will be\n returned; and a higher probability that numbers near the mean will\n be returned.\n Takes either 0, 1 or 2 arguments.\n If no args, returns a mean of 0 and standard deviation of 1\n If one arg, that arg is the mean (standard deviation is 1)\n If two args, first is mean, second is standard deviation",
+            "description": "Returns a random number fitting a Gaussian, or\n normal, distribution. There is theoretically no minimum or maximum\n value that randomGaussian() might return. Rather, there is\n just a very low probability that values far from the mean will be\n returned; and a higher probability that numbers near the mean will\n be returned.\n <br><br>\n Takes either 0, 1 or 2 arguments.<br>\n If no args, returns a mean of 0 and standard deviation of 1.<br>\n If one arg, that arg is the mean (standard deviation is 1).<br>\n If two args, first is mean, second is standard deviation.",
             "itemtype": "method",
             "name": "randomGaussian",
             "params": [
@@ -11641,7 +11613,7 @@
         {
             "file": "src/math/trigonometry.js",
             "line": 134,
-            "description": "Calculates the angle (in radians) from a specified point to the coordinate\norigin as measured from the positive x-axis. Values are returned as a\nfloat in the range from PI to -PI. The atan2() function is most often used\nfor orienting geometry to the position of the cursor. Note: The\ny-coordinate of the point is the first parameter, and the x-coordinate is\nthe second parameter, due the the structure of calculating the tangent.",
+            "description": "Calculates the angle (in radians) from a specified point to the coordinate\norigin as measured from the positive x-axis. Values are returned as a\nfloat in the range from PI to -PI. The atan2() function is most often used\nfor orienting geometry to the position of the cursor.\n<br><br>\nNote: The y-coordinate of the point is the first parameter, and the\nx-coordinate is the second parameter, due the the structure of calculating\nthe tangent.",
             "itemtype": "method",
             "name": "atan2",
             "params": [
@@ -11669,7 +11641,7 @@
         },
         {
             "file": "src/math/trigonometry.js",
-            "line": 168,
+            "line": 170,
             "description": "Calculates the cosine of an angle. This function takes into account the\ncurrent angleMode. Values are returned in the range -1 to 1.",
             "itemtype": "method",
             "name": "cos",
@@ -11693,7 +11665,7 @@
         },
         {
             "file": "src/math/trigonometry.js",
-            "line": 197,
+            "line": 199,
             "description": "Calculates the sine of an angle. This function takes into account the\ncurrent angleMode. Values are returned in the range -1 to 1.",
             "itemtype": "method",
             "name": "sin",
@@ -11717,7 +11689,7 @@
         },
         {
             "file": "src/math/trigonometry.js",
-            "line": 225,
+            "line": 227,
             "description": "Calculates the tangent of an angle. This function takes into account\nthe current angleMode. Values are returned in the range -1 to 1.",
             "itemtype": "method",
             "name": "tan",
@@ -11741,7 +11713,7 @@
         },
         {
             "file": "src/math/trigonometry.js",
-            "line": 254,
+            "line": 256,
             "description": "Converts a radian measurement to its corresponding value in degrees.\nRadians and degrees are two ways of measuring the same thing. There are\n360 degrees in a circle and 2*PI radians in a circle. For example,\n90° = PI/2 = 1.5707964.",
             "itemtype": "method",
             "name": "degrees",
@@ -11765,7 +11737,7 @@
         },
         {
             "file": "src/math/trigonometry.js",
-            "line": 280,
+            "line": 282,
             "description": "Converts a degree measurement to its corresponding value in radians.\nRadians and degrees are two ways of measuring the same thing. There are\n360 degrees in a circle and 2*PI radians in a circle. For example,\n90° = PI/2 = 1.5707964.",
             "itemtype": "method",
             "name": "radians",
@@ -11789,7 +11761,7 @@
         },
         {
             "file": "src/math/trigonometry.js",
-            "line": 304,
+            "line": 306,
             "description": "Sets the current mode of p5 to given mode. Default mode is RADIANS.",
             "itemtype": "method",
             "name": "angleMode",
@@ -11973,7 +11945,7 @@
         {
             "file": "src/typography/loading_displaying.js",
             "line": 16,
-            "description": "Draws text to the screen. Displays the information specified in the first\nparameter on the screen in the position specified by the additional\nparameters. A default font will be used unless a font is set with the\ntextFont() function and a default size will be used unless a font is set\nwith textSize(). Change the color of the text with the fill() function.\nChange the outline of the text with the stroke() and strokeWeight()\nfunctions.\n\nThe text displays in relation to the textAlign() function, which gives the\noption to draw to the left, right, and center of the coordinates.\n\nThe x2 and y2 parameters define a rectangular area to display within and\nmay only be used with string data. When these parameters are specified,\nthey are interpreted based on the current rectMode() setting. Text that\ndoes not fit completely within the rectangle specified will not be drawn\nto the screen.",
+            "description": "Draws text to the screen. Displays the information specified in the first\nparameter on the screen in the position specified by the additional\nparameters. A default font will be used unless a font is set with the\ntextFont() function and a default size will be used unless a font is set\nwith textSize(). Change the color of the text with the fill() function.\nChange the outline of the text with the stroke() and strokeWeight()\nfunctions.\n<br><br>\nThe text displays in relation to the textAlign() function, which gives the\noption to draw to the left, right, and center of the coordinates.\n<br><br>\nThe x2 and y2 parameters define a rectangular area to display within and\nmay only be used with string data. When these parameters are specified,\nthey are interpreted based on the current rectMode() setting. Text that\ndoes not fit completely within the rectangle specified will not be drawn\nto the screen.",
             "itemtype": "method",
             "name": "text",
             "params": [
@@ -12094,7 +12066,46 @@
         },
         {
             "file": "src/typography/p5.Font.js",
-            "line": 150,
+            "line": 149,
+            "description": "Computes an array of points following the path for specified text",
+            "params": [
+                {
+                    "name": "txt",
+                    "description": "a line of text",
+                    "type": "String"
+                },
+                {
+                    "name": "x",
+                    "description": "x-position",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y-position",
+                    "type": "Number"
+                },
+                {
+                    "name": "fontSize",
+                    "description": "font size to use (optional)",
+                    "type": "Number"
+                },
+                {
+                    "name": "options",
+                    "description": "an (optional) object that can contain:\n\n<br>sampleFactor - the ratio of path-length to number of samples\n(default=.25); higher values yield more points and are therefore\nmore precise\n\n<br>simplifyThreshold - if set to a non-zero value, collinear points will be\nbe removed from the polygon; the value represents the threshold angle to use\nwhen determining whether two edges are collinear",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "an array of points, each with x, y, alpha (the path angle)",
+                "type": "Array"
+            },
+            "class": "p5.Font",
+            "module": "Typography",
+            "submodule": "Font"
+        },
+        {
+            "file": "src/typography/p5.Font.js",
+            "line": 197,
             "description": "Returns the set of opentype glyphs for the supplied string.\n\nNote that there is not a strict one-to-one mapping between characters\nand glyphs, so the list of returned glyphs can be larger or smaller\n than the length of the given string.",
             "params": [
                 {
@@ -12113,7 +12124,7 @@
         },
         {
             "file": "src/typography/p5.Font.js",
-            "line": 165,
+            "line": 212,
             "description": "Returns an opentype path for the supplied string and position.",
             "params": [
                 {
@@ -12173,7 +12184,7 @@
         {
             "file": "src/utilities/array_functions.js",
             "line": 37,
-            "description": "Copies an array (or part of an array) to another array. The src array is\ncopied to the dst array, beginning at the position specified by\nsrcPosition and into the position specified by dstPosition. The number of\nelements to copy is determined by length. Note that copying values\noverwrites existing values in the destination array. To append values\ninstead of overwriting them, use concat().\n\nThe simplified version with only two arguments — arrayCopy(src, dst) —\ncopies an entire array to another of the same size. It is equivalent to\narrayCopy(src, 0, dst, 0, src.length).\n\nUsing this function is far more efficient for copying array data than\niterating through a for() loop and copying each element individually.",
+            "description": "Copies an array (or part of an array) to another array. The src array is\ncopied to the dst array, beginning at the position specified by\nsrcPosition and into the position specified by dstPosition. The number of\nelements to copy is determined by length. Note that copying values\noverwrites existing values in the destination array. To append values\ninstead of overwriting them, use concat().\n<br><br>\nThe simplified version with only two arguments, arrayCopy(src, dst),\ncopies an entire array to another of the same size. It is equivalent to\narrayCopy(src, 0, dst, 0, src.length).\n<br><br>\nUsing this function is far more efficient for copying array data than\niterating through a for() loop and copying each element individually.",
             "itemtype": "method",
             "name": "arrayCopy",
             "params": [
@@ -12289,7 +12300,7 @@
         {
             "file": "src/utilities/array_functions.js",
             "line": 193,
-            "description": "Randomizes the order of the elements of an array.\nImplements Fisher-Yates Shuffle Algorithm\nhttp://Bost.Ocks.org/mike/shuffle/\nhttp://en.Wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle",
+            "description": "Randomizes the order of the elements of an array. Implements\n<a href=\"http://Bost.Ocks.org/mike/shuffle/\" target=_blank>\nFisher-Yates Shuffle Algorithm</a>.",
             "itemtype": "method",
             "name": "shuffle",
             "params": [
@@ -12655,7 +12666,7 @@
         {
             "file": "src/utilities/string_functions.js",
             "line": 38,
-            "description": "This function is used to apply a regular expression to a piece of text,\nand return matching groups (elements found inside parentheses) as a\nString array. If there are no matches, a null value will be returned.\nIf no groups are specified in the regular expression, but the sequence\nmatches, an array of length 1 (with the matched text as the first element\nof the array) will be returned.\n\nTo use the function, first check to see if the result is null. If the\nresult is null, then the sequence did not match at all. If the sequence\ndid match, an array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular\nexpression, then the contents of each will be returned in the array.\nElement [0] of a regular expression match returns the entire matching\nstring, and the match groups start at element [1] (the first group is [1],\nthe second [2], and so on).",
+            "description": "This function is used to apply a regular expression to a piece of text,\nand return matching groups (elements found inside parentheses) as a\nString array. If there are no matches, a null value will be returned.\nIf no groups are specified in the regular expression, but the sequence\nmatches, an array of length 1 (with the matched text as the first element\nof the array) will be returned.\n<br><br>\nTo use the function, first check to see if the result is null. If the\nresult is null, then the sequence did not match at all. If the sequence\ndid match, an array is returned.\n<br><br>\nIf there are groups (specified by sets of parentheses) in the regular\nexpression, then the contents of each will be returned in the array.\nElement [0] of a regular expression match returns the entire matching\nstring, and the match groups start at element [1] (the first group is [1],\nthe second [2], and so on).",
             "itemtype": "method",
             "name": "match",
             "params": [
@@ -12684,7 +12695,7 @@
         {
             "file": "src/utilities/string_functions.js",
             "line": 74,
-            "description": "This function is used to apply a regular expression to a piece of text,\nand return a list of matching groups (elements found inside parentheses)\nas a two-dimensional String array. If there are no matches, a null value\nwill be returned. If no groups are specified in the regular expression,\nbut the sequence matches, a two dimensional array is still returned, but\nthe second dimension is only of length one.\n\nTo use the function, first check to see if the result is null. If the\nresult is null, then the sequence did not match at all. If the sequence\ndid match, a 2D array is returned.\n\nIf there are groups (specified by sets of parentheses) in the regular\nexpression, then the contents of each will be returned in the array.\nAssuming a loop with counter variable i, element [i][0] of a regular\nexpression match returns the entire matching string, and the match groups\nstart at element [i][1] (the first group is [i][1], the second [i][2],\nand so on).",
+            "description": "This function is used to apply a regular expression to a piece of text,\nand return a list of matching groups (elements found inside parentheses)\nas a two-dimensional String array. If there are no matches, a null value\nwill be returned. If no groups are specified in the regular expression,\nbut the sequence matches, a two dimensional array is still returned, but\nthe second dimension is only of length one.\n<br><br>\nTo use the function, first check to see if the result is null. If the\nresult is null, then the sequence did not match at all. If the sequence\ndid match, a 2D array is returned.\n<br><br>\nIf there are groups (specified by sets of parentheses) in the regular\nexpression, then the contents of each will be returned in the array.\nAssuming a loop with counter variable i, element [i][0] of a regular\nexpression match returns the entire matching string, and the match groups\nstart at element [i][1] (the first group is [i][1], the second [i][2],\nand so on).",
             "itemtype": "method",
             "name": "matchAll",
             "params": [
@@ -12880,7 +12891,7 @@
         {
             "file": "src/utilities/string_functions.js",
             "line": 425,
-            "description": "The splitTokens() function splits a String at one or many character\ndelimiters or \"tokens.\" The delim parameter specifies the character or\ncharacters to be used as a boundary.\n\nIf no delim characters are specified, any whitespace character is used to\nsplit. Whitespace characters include tab (\\t), line feed (\\n), carriage\nreturn (\\r), form feed (\\f), and space.",
+            "description": "The splitTokens() function splits a String at one or many character\ndelimiters or \"tokens.\" The delim parameter specifies the character or\ncharacters to be used as a boundary.\n<br><br>\nIf no delim characters are specified, any whitespace character is used to\nsplit. Whitespace characters include tab (\\t), line feed (\\n), carriage\nreturn (\\r), form feed (\\f), and space.",
             "itemtype": "method",
             "name": "splitTokens",
             "params": [
@@ -12901,7 +12912,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div class = \"norender\">\n<code>\nfunction setup() {\n  var myStr = \"Mango, Banana, Lime\";\n  var myStrArr = splitTokens(myStr, \",\");\n\n  print(myStrArr); // prints : [\"Mango\",\" Banana\",\" Lime\"]\n}\n</div>\n</code>"
+                "\n<div class = \"norender\">\n<code>\nfunction setup() {\n  var myStr = \"Mango, Banana, Lime\";\n  var myStrArr = splitTokens(myStr, \",\");\n\n  print(myStrArr); // prints : [\"Mango\",\" Banana\",\" Lime\"]\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12943,7 +12954,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar day = day();\ntext(\"Current day: \\n\"+day, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nvar day = day();\ntext(\"Current day: \\n\" + day, 5, 50);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -12960,7 +12971,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar hour = hour();\ntext(\"Current hour:\\n\"+hour, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nvar hour = hour();\ntext(\"Current hour:\\n\" + hour, 5, 50);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -12977,7 +12988,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar minute = minute();\ntext(\"Current minute: \\n:\"+minute, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nvar minute = minute();\ntext(\"Current minute: \\n\" + minute, 5, 50);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -12994,7 +13005,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar millisecond = millis();\ntext(\"Milliseconds \\nrunning: \"+millisecond, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nvar millisecond = millis();\ntext(\"Milliseconds \\nrunning: \\n\" + millisecond, 5, 40);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -13011,7 +13022,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar month = month();\ntext(\"Current month: \\n\"+month, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nvar month = month();\ntext(\"Current month: \\n\" + month, 5, 50);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -13028,7 +13039,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar second = second();\ntext(\"Current second: \\n\" +second, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nvar second = second();\ntext(\"Current second: \\n\" + second, 5, 50);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -13045,7 +13056,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div>\n<code>\nvar year = year();\ntext(\"Current year: \\n\" +year, 5, 50);\n</code>\n</div>"
+                "\n<div>\n<code>\nvar year = year();\ntext(\"Current year: \\n\" + year, 5, 50);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Input",
@@ -13830,7 +13841,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1205,
+            "line": 1209,
             "description": "Rotates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "rotate",
@@ -13866,7 +13877,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1250,
+            "line": 1258,
             "description": "Sets the given style (css) property (1st arg) of the element with the\ngiven value (2nd arg). If a single argument is given, .style()\nreturns the value of the given property; however, if the single argument\nis given in css syntax ('text-align:center'), .style() sets the css\nappropriatly. .style() also handles 2d and 3d css transforms. If\nthe 1st arg is 'rotate', 'translate', or 'position', the following arguments\naccept Numbers as values. ('translate', 10, 100, 50);",
             "itemtype": "method",
             "name": "style",
@@ -13914,7 +13925,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1352,
+            "line": 1364,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -13944,7 +13955,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1379,
+            "line": 1391,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -13966,7 +13977,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1399,
+            "line": 1411,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -13980,7 +13991,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1411,
+            "line": 1423,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -13994,7 +14005,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1422,
+            "line": 1434,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.",
             "itemtype": "method",
             "name": "size",
@@ -14022,7 +14033,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1483,
+            "line": 1495,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -14035,7 +14046,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1532,
+            "line": 1544,
             "description": "Path to the media element source.",
             "itemtype": "property",
             "name": "src",
@@ -14049,7 +14060,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1567,
+            "line": 1579,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -14063,7 +14074,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1588,
+            "line": 1600,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -14077,7 +14088,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1600,
+            "line": 1612,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -14091,7 +14102,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1611,
+            "line": 1623,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -14105,7 +14116,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1622,
+            "line": 1634,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -14119,7 +14130,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1635,
+            "line": 1647,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -14140,7 +14151,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1647,
+            "line": 1659,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -14162,7 +14173,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1663,
+            "line": 1675,
             "description": "If no arguments are given, returns the current time of the element.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -14184,7 +14195,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1680,
+            "line": 1692,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -14198,7 +14209,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1723,
+            "line": 1735,
             "description": "Schedule an event to be called when the audio or video\nelement reaches the end. If the element is looping,\nthis will not be called. The element is passed in\nas the argument to the onended callback.",
             "itemtype": "method",
             "name": "onended",
@@ -14222,14 +14233,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1755,
+            "line": 1767,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1757,
+            "line": 1769,
             "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
             "itemtype": "method",
             "name": "connect",
@@ -14246,7 +14257,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1809,
+            "line": 1821,
             "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
             "itemtype": "method",
             "name": "disconnect",
@@ -14256,14 +14267,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1825,
+            "line": 1837,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1827,
+            "line": 1839,
             "description": "Show the default MediaElement controls, as determined by the web browser.",
             "itemtype": "method",
             "name": "showControls",
@@ -14273,7 +14284,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1838,
+            "line": 1850,
             "description": "Hide the default mediaElement controls.",
             "itemtype": "method",
             "name": "hideControls",
@@ -14283,14 +14294,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1847,
+            "line": 1859,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1849,
+            "line": 1861,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -14325,7 +14336,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1911,
+            "line": 1923,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -14342,7 +14353,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1931,
+            "line": 1943,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -14352,7 +14363,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1988,
+            "line": 2000,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -14362,7 +14373,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2000,
+            "line": 2012,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -14372,7 +14383,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2006,
+            "line": 2018,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -14382,7 +14393,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2012,
+            "line": 2024,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -14392,7 +14403,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2018,
+            "line": 2030,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -14402,7 +14413,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2025,
+            "line": 2037,
             "description": "URL string containing image data.",
             "itemtype": "property",
             "name": "data",
@@ -17848,11 +17859,11 @@
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:415"
+            "line": " src/core/environment.js:416"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:456"
+            "line": " src/core/environment.js:457"
         },
         {
             "message": "param name missing: {Invert}",
@@ -18116,11 +18127,11 @@
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/core/environment.js:225"
+            "line": " src/core/environment.js:226"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/core/environment.js:234"
+            "line": " src/core/environment.js:235"
         },
         {
             "message": "Missing item type",
@@ -18159,8 +18170,12 @@
             "line": " src/core/p5.Renderer.js:197"
         },
         {
+            "message": "Missing item type\np5.Renderer2D\nThe 2D graphics canvas renderer class.\nextends p5.Renderer",
+            "line": " src/core/p5.Renderer2D.js:9"
+        },
+        {
             "message": "Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "line": " src/core/p5.Renderer2D.js:372"
+            "line": " src/core/p5.Renderer2D.js:350"
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
@@ -18188,7 +18203,7 @@
         },
         {
             "message": "Missing item type\nThe onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will not fire if the user is\nnot focused on the element we must assume all keys currently down have\nbeen released.",
-            "line": " src/events/keyboard.js:263"
+            "line": " src/events/keyboard.js:264"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
@@ -18264,11 +18279,11 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/image/p5.Image.js:158"
+            "line": " src/image/p5.Image.js:161"
         },
         {
             "message": "Missing item type\ncreates a gl texture\nused in WEBGL mode only",
-            "line": " src/image/p5.Image.js:475"
+            "line": " src/image/p5.Image.js:478"
         },
         {
             "message": "Missing item type\nChecks if we are in preload and returns the last arg which will be the\n_decrementPreload function if called from a loadX() function.  Should\nonly be used in loadX() functions.",
@@ -18304,35 +18319,35 @@
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",
-            "line": " src/math/p5.Vector.js:868"
+            "line": " src/math/p5.Vector.js:870"
         },
         {
             "message": "Missing item type\nSubtracts one p5.Vector from another and returns a new one.  The second\nvector (v2) is subtracted from the first (v1), resulting in v1-v2.",
-            "line": " src/math/p5.Vector.js:889"
+            "line": " src/math/p5.Vector.js:891"
         },
         {
             "message": "Missing item type\nMultiplies a vector by a scalar and returns a new vector.",
-            "line": " src/math/p5.Vector.js:911"
+            "line": " src/math/p5.Vector.js:913"
         },
         {
             "message": "Missing item type\nDivides a vector by a scalar and returns a new vector.",
-            "line": " src/math/p5.Vector.js:930"
+            "line": " src/math/p5.Vector.js:932"
         },
         {
             "message": "Missing item type\nCalculates the dot product of two vectors.",
-            "line": " src/math/p5.Vector.js:950"
+            "line": " src/math/p5.Vector.js:952"
         },
         {
             "message": "Missing item type\nCalculates the cross product of two vectors.",
-            "line": " src/math/p5.Vector.js:962"
+            "line": " src/math/p5.Vector.js:964"
         },
         {
             "message": "Missing item type\nCalculates the Euclidean distance between two points (considering a\npoint as a vector object).",
-            "line": " src/math/p5.Vector.js:974"
+            "line": " src/math/p5.Vector.js:976"
         },
         {
             "message": "Missing item type\nLinear interpolate a vector to another vector and return the result as a\nnew vector.",
-            "line": " src/math/p5.Vector.js:987"
+            "line": " src/math/p5.Vector.js:989"
         },
         {
             "message": "Missing item type\nReturns the ascent of the current font at its current size. The ascent\nrepresents the distance, in pixels, of the tallest character above\nthe baseline.",
@@ -18347,12 +18362,16 @@
             "line": " src/typography/attributes.js:203"
         },
         {
+            "message": "Missing item type\nComputes an array of points following the path for specified text",
+            "line": " src/typography/p5.Font.js:149"
+        },
+        {
             "message": "Missing item type\nReturns the set of opentype glyphs for the supplied string.\n\nNote that there is not a strict one-to-one mapping between characters\nand glyphs, so the list of returned glyphs can be larger or smaller\n than the length of the given string.",
-            "line": " src/typography/p5.Font.js:150"
+            "line": " src/typography/p5.Font.js:197"
         },
         {
             "message": "Missing item type\nReturns an opentype path for the supplied string and position.",
-            "line": " src/typography/p5.Font.js:165"
+            "line": " src/typography/p5.Font.js:212"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
@@ -18392,15 +18411,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1755"
+            "line": " lib/addons/p5.dom.js:1767"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1825"
+            "line": " lib/addons/p5.dom.js:1837"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1847"
+            "line": " lib/addons/p5.dom.js:1859"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",

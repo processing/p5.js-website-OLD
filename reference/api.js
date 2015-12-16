@@ -24,7 +24,6 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Phrase",
         "p5.Pulse",
         "p5.Renderer",
-        "p5.Renderer2D",
         "p5.Reverb",
         "p5.Score",
         "p5.Signal",
@@ -157,7 +156,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Image",
             "name": "Image",
-            "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage. p5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image. The methods described below allow\neasy access to the image's pixels and alpha channel and simplify the\nprocess of compositing.\n\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded."
+            "description": "Creates a new p5.Image. A p5.Image is a canvas backed representation of an\nimage.\n<br><br>\np5 can display .gif, .jpg and .png images. Images may be displayed\nin 2D and 3D space. Before an image is used, it must be loaded with the\nloadImage() function. The p5.Image class contains fields for the width and\nheight of the image, as well as an array called pixels[] that contains the\nvalues for every pixel in the image.\n<br><br>\nThe methods described below allow easy access to the image's pixels and\nalpha channel and simplify the process of compositing.\n<br><br>\nBefore using the pixels[] array, be sure to use the loadPixels() method on\nthe image to make sure that the pixel data is properly loaded."
         },
         {
             "displayName": "Input",
@@ -190,7 +189,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Math",
             "name": "Math",
-            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x,y for 2D, and x,y,z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading(). In many\nof the p5.js examples, you will see p5.Vector used to describe a position,\nvelocity, or acceleration. For example, if you consider a rectangle moving\nacross the screen, at any given instant it has a position (a vector that\npoints from the origin to its location), a velocity (the rate at which the\nobject's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector). Since vectors represent groupings of values,\nwe cannot simply use traditional addition/multiplication/etc. Instead,\nwe'll need to do some \"vector\" math, which is made easy by the methods\ninside the p5.Vector class."
+            "description": "A class to describe a two or three dimensional vector, specifically\na Euclidean (also known as geometric) vector. A vector is an entity\nthat has both magnitude and direction. The datatype, however, stores\nthe components of the vector (x, y for 2D, and x, y, z for 3D). The magnitude\nand direction can be accessed via the methods mag() and heading().\n<br><br>\nIn many of the p5.js examples, you will see p5.Vector used to describe a\nposition, velocity, or acceleration. For example, if you consider a rectangle\nmoving across the screen, at any given instant it has a position (a vector\nthat points from the origin to its location), a velocity (the rate at which\nthe object's position changes per time unit, expressed as a vector), and\nacceleration (the rate at which the object's velocity changes per time\nunit, expressed as a vector).\n<br><br>\nSince vectors represent groupings of values, we cannot simply use\ntraditional addition/multiplication/etc. Instead, we'll need to do some\n\"vector\" math, which is made easy by the methods inside the p5.Vector class."
         },
         {
             "displayName": "Mouse",
