@@ -10,9 +10,8 @@
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Lerp Color</h2>
-          <p>loop random shapes
- lerp color from red to blue
- http://codepen.io/Indiessance/pen/KVpjLj
+          <p>Loop random shapes,
+ lerp color from red to blue.
  </p>
 
           <div id="exampleDisplay">

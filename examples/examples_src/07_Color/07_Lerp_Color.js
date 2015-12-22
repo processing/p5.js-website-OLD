@@ -1,8 +1,7 @@
 /*
  * @name Lerp Color
- * @description loop random shapes
- * lerp color from red to blue
- * http://codepen.io/Indiessance/pen/KVpjLj
+ * @description Loop random shapes,
+ * lerp color from red to blue.
  */
 function setup() {
   createCanvas(720, 400);
@@ -18,17 +17,25 @@ function draw() {
   c2 = lerpColor(from, to, .66);
   for (var i = 0; i < 15; i++) {
     fill(from);
-    quad(random(-40, 220), random(height), random(-40, 220), random(height),
-         random(-40, 220), random(height), random(-40, 220), random(height));
+    quad(random(-40, 220), random(height),
+         random(-40, 220), random(height),
+         random(-40, 220), random(height),
+        random(-40, 220), random(height));
     fill(c1);
-    quad(random(140, 380), random(height), random(140, 380), random(height),
-         random(140, 380), random(height), random(140, 380), random(height));
+    quad(random(140, 380), random(height),
+         random(140, 380), random(height),
+         random(140, 380), random(height), 
+         random(140, 380), random(height));
     fill(c2);
-    quad(random(320, 580), random(height), random(320, 580), random(height),
-         random(320, 580), random(height), random(320, 580), random(height));
+    quad(random(320, 580), random(height), 
+         random(320, 580), random(height),
+         random(320, 580), random(height), 
+         random(320, 580), random(height));
     fill(to);
-    quad(random(500, 760), random(height), random(500, 760), random(height),
-         random(500, 760), random(height), random(500, 760), random(height));
+    quad(random(500, 760), random(height), 
+         random(500, 760), random(height),
+         random(500, 760), random(height), 
+         random(500, 760), random(height));
   }
   frameRate(5);
 }
