@@ -169,6 +169,9 @@
           <a href="examples/Color_Radial_Gradient.php">Radial Gradient</a><br>
           
         
+          <a href="examples/Color_Lerp_Color.php">Lerp Color</a><br>
+          
+        
         </p>
         
           </div>

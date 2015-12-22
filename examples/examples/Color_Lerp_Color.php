@@ -9,12 +9,10 @@
     <div class="column-span">
       <section>
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
-          <h2>Coordinates</h2>
-          <p>All shapes drawn to the screen have a position that is 
- specified as a coordinate. All coordinates are measured as the distance from
- the origin in units of pixels. The origin [0, 0] is the coordinate in the
- upper left of the window and the coordinate in the lower right is [width-1, 
- height-1].
+          <h2>Lerp Color</h2>
+          <p>loop random shapes
+ lerp color from red to blue
+ http://codepen.io/Indiessance/pen/KVpjLj
  </p>
 
           <div id="exampleDisplay">
@@ -46,7 +44,7 @@
     <script src="../../js/examples.js"></script>
     <script>
       $(document).ready( function () {
-          examples.init('../examples_src/00_Structure/00_Coordinates.js');
+          examples.init('../examples_src/07_Color/07_Lerp_Color.js');
       });
     </script>
   </body>
