@@ -66,7 +66,7 @@
           </div>
 
 
-          <?php include('../footer.php'); ?>
+          <?php include('../../footer.php'); ?>
           <!-- outside of column for footer to go across both -->
 
           <p class="clearfix"> &nbsp; </p>
@@ -78,6 +78,6 @@
         </object>
 
 
-        <?php include('../end.php'); ?>
+        <?php include('../../end.php'); ?>
       </body>
       </html>
