@@ -62,14 +62,15 @@ function updateLib($p5jseditor_v) {
 
   global $lib_version;
 
-  $r = 'https://raw.githubusercontent.com/processing/p5.js/master/';
-  download($r.'package.json', 'package.json');
-  $lib_version = getPackageVersion('package.json');
-  unlink('package.json');
+  // $r = 'https://raw.githubusercontent.com/processing/p5.js/master/';
+  // download($r.'package.json', 'package.json');
+  // $lib_version = getPackageVersion('package.json');
+  // unlink('package.json');
 
   updateFiles();
-  $v = getLibVersion('../js/p5.min.js'); // this should just be taken from package.json eventually
-  echo 'updating library version to v'.$lib_version.' ('.$v[1].')';
+  $v = getLibVersion('../js/p5.min.js');
+  $lib_version = $v[0];
+  echo 'updated library version to v'.$lib_version.' ('.$v[1].')';
   $contents = '<?php $version = "'.$lib_version.'"; $date = "'.$v[1].'"; $p5jseditor_version = "'.$p5jseditor_v.'"; ?>';
 
   file_put_contents('version.php', $contents);
