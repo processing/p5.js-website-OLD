@@ -19,14 +19,14 @@ function setup() {
   theta = 0;
   theta_vel = 0;
   theta_acc = 0.0001;
+  
+// Translate the origin point to the center of the screen
+  translate(width/2, height/2);
 }
 
 function draw() {
   
   background(0);
-  
-  // Translate the origin point to the center of the screen
-  translate(width/2, height/2);
   
   // Convert polar to cartesian
   var x = r * cos(theta);
