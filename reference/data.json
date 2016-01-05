@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.20",
+        "version": "0.4.21",
         "url": ""
     },
     "files": {
@@ -1358,7 +1358,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 1990,
+            "line": 1960,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1706,7 +1706,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1522,
+            "line": 1492,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -1735,7 +1735,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1990,
+            "line": 1960,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -7203,7 +7203,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 15,
+            "line": 26,
             "description": "The system variable mouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseX",
@@ -7216,7 +7216,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 34,
+            "line": 45,
             "description": "The system variable mouseY always contains the current vertical position\nof the mouse, relative to (0, 0) of the canvas.",
             "itemtype": "property",
             "name": "mouseY",
@@ -7229,7 +7229,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 53,
+            "line": 64,
             "description": "The system variable pmouseX always contains the horizontal position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the canvas.",
             "itemtype": "property",
             "name": "pmouseX",
@@ -7242,7 +7242,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 80,
+            "line": 91,
             "description": "The system variable pmouseY always contains the vertical position of the\nmouse in the frame previous to the current frame, relative to (0, 0) of\nthe canvas.",
             "itemtype": "property",
             "name": "pmouseY",
@@ -7255,7 +7255,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 105,
+            "line": 116,
             "description": "The system variable winMouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseX",
@@ -7268,7 +7268,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 138,
+            "line": 149,
             "description": "The system variable winMouseY always contains the current vertical\nposition of the mouse, relative to (0, 0) of the window.",
             "itemtype": "property",
             "name": "winMouseY",
@@ -7281,7 +7281,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 171,
+            "line": 182,
             "description": "The system variable pwinMouseX always contains the horizontal position\nof the mouse in the frame previous to the current frame, relative to\n(0, 0) of the window.",
             "itemtype": "property",
             "name": "pwinMouseX",
@@ -7294,7 +7294,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 208,
+            "line": 219,
             "description": "The system variable pwinMouseY always contains the vertical position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the window.",
             "itemtype": "property",
             "name": "pwinMouseY",
@@ -7307,7 +7307,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 246,
+            "line": 257,
             "description": "Processing automatically tracks if the mouse button is pressed and which\nbutton is pressed. The value of the system variable mouseButton is either\nLEFT, RIGHT, or CENTER depending on which button was pressed last.\nWarning: different browsers may track mouseButton differently.",
             "itemtype": "property",
             "name": "mouseButton",
@@ -7320,7 +7320,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 277,
+            "line": 288,
             "description": "The boolean system variable mouseIsPressed is true if the mouse is pressed\nand false if not.",
             "itemtype": "property",
             "name": "mouseIsPressed",
@@ -7333,7 +7333,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 349,
+            "line": 358,
             "description": "The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -7346,7 +7346,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 388,
+            "line": 397,
             "description": "The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -7359,7 +7359,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 455,
+            "line": 464,
             "description": "The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no\nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -7372,7 +7372,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 518,
+            "line": 527,
             "description": "The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -7385,7 +7385,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 581,
+            "line": 590,
             "description": "The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add \"return false\" to the end of the method.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -7398,7 +7398,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 631,
+            "line": 640,
             "description": "The function mouseWheel() is executed every time a vertical mouse wheel\nevent is detected either triggered by an actual mouse wheel or by a\ntouchpad.<br><br>\nThe event.delta property returns the amount the mouse wheel\nhave scrolled. The values can be positive or negative depending on the\nscroll direction (on OS X with \"natural\" scrolling enabled, the signs\nare inverted).<br><br>\nBrowsers may have different default behaviors attached to various\nmouse events. To prevent any default behavior for this event, add\n\"return false\" to the end of the method.<br><br>\nDue to the current support of the \"wheel\" event on Safari, the function\nmay only work as expected if \"return false\" is included while using Safari.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -7411,7 +7411,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 12,
+            "line": 23,
             "description": "The system variable touchX always contains the horizontal position of\none finger, relative to (0, 0) of the canvas. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
             "itemtype": "property",
             "name": "touchX",
@@ -7421,7 +7421,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 22,
+            "line": 33,
             "description": "The system variable touchY always contains the vertical position of\none finger, relative to (0, 0) of the canvas. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.",
             "itemtype": "property",
             "name": "touchY",
@@ -7431,7 +7431,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 32,
+            "line": 43,
             "description": "The system variable ptouchX always contains the horizontal position of\none finger, relative to (0, 0) of the canvas, in the frame previous to the\ncurrent frame.",
             "itemtype": "property",
             "name": "ptouchX",
@@ -7441,7 +7441,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 41,
+            "line": 52,
             "description": "The system variable ptouchY always contains the vertical position of\none finger, relative to (0, 0) of the canvas, in the frame previous to the\ncurrent frame.",
             "itemtype": "property",
             "name": "ptouchY",
@@ -7451,7 +7451,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 50,
+            "line": 61,
             "description": "The system variable touches[] contains an array of the positions of all\ncurrent touch points, relative to (0, 0) of the canvas, and IDs identifying a\nunique touch as it moves. Each element in the array is an object with x, y,\nand id properties.",
             "itemtype": "property",
             "name": "touches[]",
@@ -7461,7 +7461,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 60,
+            "line": 71,
             "description": "The boolean system variable touchIsDown is true if the screen is\ntouched and false if not.",
             "itemtype": "property",
             "name": "touchIsDown",
@@ -7471,7 +7471,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 105,
+            "line": 118,
             "description": "The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add \"return false\"\nto the end of the method.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -7484,7 +7484,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 165,
+            "line": 178,
             "description": "The touchMoved() function is called every time a touch move is registered.\nIf no touchMoved() function is defined, the mouseDragged() function will\nbe called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add \"return false\"\nto the end of the method.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -7497,7 +7497,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 222,
+            "line": 235,
             "description": "The touchEnded() function is called every time a touch ends. If no\ntouchEnded() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add \"return false\"\nto the end of the method.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -13841,7 +13841,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1209,
+            "line": 1205,
             "description": "Rotates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
             "itemtype": "method",
             "name": "rotate",
@@ -13877,7 +13877,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1258,
+            "line": 1250,
             "description": "Sets the given style (css) property (1st arg) of the element with the\ngiven value (2nd arg). If a single argument is given, .style()\nreturns the value of the given property; however, if the single argument\nis given in css syntax ('text-align:center'), .style() sets the css\nappropriatly. .style() also handles 2d and 3d css transforms. If\nthe 1st arg is 'rotate', 'translate', or 'position', the following arguments\naccept Numbers as values. ('translate', 10, 100, 50);",
             "itemtype": "method",
             "name": "style",
@@ -13917,7 +13917,7 @@
                 "type": "String|Object/p5.Element"
             },
             "example": [
-                "\n<div><code class=\"norender\">\nvar myDiv = createDiv(\"I like pandas.\");\nmyDiv.style(\"font-size\", \"18px\");\nmyDiv.style(\"color\", \"#ff0000\");\nvar col = color(25,23,200,50);\ncreateButton('button').style(\"background-color\", col);\n</code></div>"
+                "\n<div><code class=\"norender\">\nvar myDiv = createDiv(\"I like pandas.\");\nmyDiv.style(\"font-size\", \"18px\");\nmyDiv.style(\"color\", \"#ff0000\");\n</code></div>\n<div><code class=\"norender\">\nvar col = color(25,23,200,50);\nvar button = createButton(\"button\");\nbutton.style(\"background-color\", col);\nbutton.position(10, 10);\n</code></div>\n<div><code class=\"norender\">\nvar myDiv = createDiv(\"I like lizards.\");\nmyDiv.style(\"position\", 20, 20);\nmyDiv.style(\"rotate\", 45);\n</code></div>\n<div><code class=\"norender\">\nvar myDiv;\nfunction setup() {\n  background(200);\n  myDiv = createDiv(\"I like gray.\");\n  myDiv.position(20, 20);\n}\n\nfunction draw() {\n  myDiv.style(\"font-size\", mouseX+\"px\");\n}\n</code></div>"
             ],
             "class": "p5.Element",
             "module": "p5.dom",
@@ -13925,7 +13925,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1364,
+            "line": 1334,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -13955,7 +13955,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1391,
+            "line": 1361,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -13977,7 +13977,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1411,
+            "line": 1381,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -13991,7 +13991,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1423,
+            "line": 1393,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -14005,7 +14005,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1434,
+            "line": 1404,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.",
             "itemtype": "method",
             "name": "size",
@@ -14033,7 +14033,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1495,
+            "line": 1465,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -14046,7 +14046,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1544,
+            "line": 1514,
             "description": "Path to the media element source.",
             "itemtype": "property",
             "name": "src",
@@ -14060,7 +14060,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1579,
+            "line": 1549,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -14074,7 +14074,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1600,
+            "line": 1570,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -14088,7 +14088,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1612,
+            "line": 1582,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -14102,7 +14102,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1623,
+            "line": 1593,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -14116,7 +14116,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1634,
+            "line": 1604,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -14130,7 +14130,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1647,
+            "line": 1617,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -14151,7 +14151,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1659,
+            "line": 1629,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -14173,7 +14173,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1675,
+            "line": 1645,
             "description": "If no arguments are given, returns the current time of the element.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -14195,7 +14195,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1692,
+            "line": 1662,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -14209,7 +14209,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1735,
+            "line": 1705,
             "description": "Schedule an event to be called when the audio or video\nelement reaches the end. If the element is looping,\nthis will not be called. The element is passed in\nas the argument to the onended callback.",
             "itemtype": "method",
             "name": "onended",
@@ -14233,14 +14233,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1767,
+            "line": 1737,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1769,
+            "line": 1739,
             "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
             "itemtype": "method",
             "name": "connect",
@@ -14257,7 +14257,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1821,
+            "line": 1791,
             "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
             "itemtype": "method",
             "name": "disconnect",
@@ -14267,14 +14267,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1837,
+            "line": 1807,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1839,
+            "line": 1809,
             "description": "Show the default MediaElement controls, as determined by the web browser.",
             "itemtype": "method",
             "name": "showControls",
@@ -14284,7 +14284,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1850,
+            "line": 1820,
             "description": "Hide the default mediaElement controls.",
             "itemtype": "method",
             "name": "hideControls",
@@ -14294,14 +14294,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1859,
+            "line": 1829,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1861,
+            "line": 1831,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -14336,7 +14336,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1923,
+            "line": 1893,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -14353,7 +14353,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1943,
+            "line": 1913,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -14363,7 +14363,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2000,
+            "line": 1970,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -14373,7 +14373,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2012,
+            "line": 1982,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -14383,7 +14383,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2018,
+            "line": 1988,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -14393,7 +14393,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2024,
+            "line": 1994,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -14403,7 +14403,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2030,
+            "line": 2000,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -14413,7 +14413,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2037,
+            "line": 2007,
             "description": "URL string containing image data.",
             "itemtype": "property",
             "name": "data",
@@ -18411,15 +18411,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1767"
+            "line": " lib/addons/p5.dom.js:1737"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1837"
+            "line": " lib/addons/p5.dom.js:1807"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1859"
+            "line": " lib/addons/p5.dom.js:1829"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
