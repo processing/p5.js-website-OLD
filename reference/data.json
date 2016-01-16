@@ -8290,7 +8290,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 316,
+            "line": 324,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -8347,7 +8347,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 338,
+            "line": 346,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's blue channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -8367,7 +8367,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 396,
+            "line": 404,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -8389,7 +8389,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 409,
+            "line": 417,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -8451,7 +8451,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 438,
+            "line": 446,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -8473,7 +8473,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 478,
+            "line": 486,
             "description": "creates a gl texture\nused in WEBGL mode only",
             "params": [
                 {
@@ -10470,7 +10470,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = map(mouseX, 0, width, 0, 10);\n  y1 = 80;\n  x2 = sq(x1);\n  y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100)\n  line(0, height/2, width, height/2);\n\n  // Draw text.\n  var spacing = 15;\n  noStroke();\n  fill(0);\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sqrt(x) = \" + x2, 0, y2 + spacing);\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(200);\n  eSize = 7;\n  x1 = map(mouseX, 0, width, 0, 10);\n  y1 = 80;\n  x2 = sq(x1);\n  y2 = 20;\n\n  // Draw the non-squared.\n  line(0, y1, width, y1);\n  ellipse(x1, y1, eSize, eSize);\n\n  // Draw the squared.\n  line(0, y2, width, y2);\n  ellipse(x2, y2, eSize, eSize);\n\n  // Draw dividing line.\n  stroke(100)\n  line(0, height/2, width, height/2);\n\n  // Draw text.\n  var spacing = 15;\n  noStroke();\n  fill(0);\n  text(\"x = \" + x1, 0, y1 + spacing);\n  text(\"sq(x) = \" + x2, 0, y2 + spacing);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Math",
@@ -13560,7 +13560,7 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 804,
-            "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio\nplayback. Appends to the container node if one is specified,\notherwise appends to body. The first parameter\ncan be either a single string path to a audio file, or an array of string\npaths to different formats of the same audio. This is useful for ensuring\nthat your audio can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats.",
+            "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio\nplayback. Appends to the container node if one is specified,\notherwise appends to body. The first parameter\ncan be either a single string path to a audio file, or an array of string\npaths to different formats of the same audio. This is useful for ensuring\nthat your audio can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats</a>.",
             "itemtype": "method",
             "name": "createAudio",
             "params": [
@@ -18283,7 +18283,7 @@
         },
         {
             "message": "Missing item type\ncreates a gl texture\nused in WEBGL mode only",
-            "line": " src/image/p5.Image.js:478"
+            "line": " src/image/p5.Image.js:486"
         },
         {
             "message": "Missing item type\nChecks if we are in preload and returns the last arg which will be the\n_decrementPreload function if called from a loadX() function.  Should\nonly be used in loadX() functions.",
