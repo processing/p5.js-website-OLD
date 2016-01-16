@@ -256,6 +256,9 @@
           <a href="examples/Simulate_Spring.php">Spring</a><br>
           
         
+          <a href="examples/Simulate_Soft_Body.php">Soft Body</a><br>
+          
+        
         </p>
         
       
