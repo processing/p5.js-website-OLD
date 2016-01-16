@@ -67,6 +67,9 @@
           <a href="examples/Form_Bezier.php">Bezier</a><br>
           
         
+          <a href="examples/Form_3D_Primitives.php">3D Primitives</a><br>
+          
+        
         </p>
         
       
