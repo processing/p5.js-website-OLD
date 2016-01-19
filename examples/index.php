@@ -310,6 +310,15 @@
         </p>
         
       
+        <p name='lights' class='anchor'>
+        <strong>Lights</strong><br>
+        
+          <a href="examples/Lights_Directional.php">Directional</a><br>
+          
+        
+        </p>
+        
+      
         <p name='instance_mode' class='anchor'>
         <strong>Instance Mode</strong><br>
         
