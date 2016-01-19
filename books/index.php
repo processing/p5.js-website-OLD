@@ -20,7 +20,7 @@
         <p><b>Getting Started with p5.js</b><br>
         Lauren McCarthy, Casey Reas, and Ben Fry.<br>
         Published October 2015, Maker Media. 246 pages. Paperback.<br>
-        <a href="http://shop.oreilly.com/product/0636920032076.do" target="_blank">Order Print/EBook from O'Reilly</a><br>
+        <a href="http://shop.oreilly.com/product/0636920032076.do" target="_blank">Order Print/Ebook from O'Reilly</a><br>
         <a href="http://www.amazon.com/Make-Interactive-Graphics-JavaScript-Processing/dp/1457186772" target="_blank">Order from Amazon</a>
         </p> 
         <p>With p5.js, you can think of your entire Web browser as your canvas for sketching with code! Getting Started with p5.js contains techniques that can be applied to creating games, animations, and interfaces. p5.js is a new interpretation of Processing written in JavaScript that makes it easy to interact with HTML5 objects, including text, input, video, webcam, and sound. Like its older sibling Processing, p5.js makes coding accessible for artists, designers, educators, and beginners.</p>
