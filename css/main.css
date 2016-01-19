@@ -1582,6 +1582,10 @@ footer {
         margin-bottom: 0.25em;
     }
 
+    .book {
+
+      font-size: 0.75em;
+    }
 
     .column_0, .column_1, .column_2 {
         float: left;
