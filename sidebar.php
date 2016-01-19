@@ -37,6 +37,7 @@
   <li><a href="<?php echo getRoot(); ?>libraries/">Libraries</a></li>
   <li><a href="<?php echo getRoot(); ?>tutorials/">Tutorials</a></li>
   <li><a href="<?php echo getRoot(); ?>examples/">Examples</a></li>
+  <li><a href="<?php echo getRoot(); ?>books/">Books</a></li>
   <li><a href="<?php echo getRoot(); ?>community/">Community</a></li>
   <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
   <li><a href="http://forum.processing.org/two/" target=_blank class="other-link">Forum</a></li>

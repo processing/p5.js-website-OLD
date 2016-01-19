@@ -1542,7 +1542,7 @@ footer {
         /*content:" Â»";*/
         }
 
-    #menu li:nth-child(11) {
+    #menu li:nth-child(12) {
         margin-top:3em;
         padding-top: 0.5em;
         /*border-top: 0.06em solid rgba(51,51,51,0.25);*/
@@ -1562,6 +1562,21 @@ footer {
 
     .right-column {
         width:48%;
+        float:right;
+        margin-right: 0;
+        margin-bottom: 0.25em;
+    }
+
+
+
+
+    .narrow-left-column  {
+        width:32%;
+        float: left;
+    }
+
+    .wide-right-column {
+        width:64%;
         float:right;
         margin-right: 0;
         margin-bottom: 0.25em;
