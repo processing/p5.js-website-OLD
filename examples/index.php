@@ -67,6 +67,9 @@
           <a href="examples/Form_Bezier.php">Bezier</a><br>
           
         
+          <a href="examples/Form_3D_Primitives.php">3D Primitives</a><br>
+          
+        
         </p>
         
       
@@ -302,6 +305,15 @@
           
         
           <a href="examples/Objects_Objects_2.php">Objects 2</a><br>
+          
+        
+        </p>
+        
+      
+        <p name='lights' class='anchor'>
+        <strong>Lights</strong><br>
+        
+          <a href="examples/Lights_Directional.php">Directional</a><br>
           
         
         </p>
