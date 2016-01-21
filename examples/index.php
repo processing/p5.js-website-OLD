@@ -316,6 +316,9 @@
           <a href="examples/Lights_Directional.php">Directional</a><br>
           
         
+          <a href="examples/Lights_Mixture.php">Mixture</a><br>
+          
+        
         </p>
         
       
