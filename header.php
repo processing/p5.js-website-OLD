@@ -15,7 +15,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- CSS (order matters): normalize across browsers -->
-    <link rel="stylesheet" href="<?php echo getRoot(); ?>css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/1.1.0/normalize.min.css">
 
     <!-- CSS (order matters): Site styles -->
     <link rel="stylesheet" href="<?php echo getRoot(); ?>css/main.css">
