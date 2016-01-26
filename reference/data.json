@@ -8497,7 +8497,7 @@
             "itemtype": "property",
             "name": "pixels[]",
             "example": [
-                "\n<div>\n<code>\nvar pink = color(255, 102, 204);\nloadPixels();\nvar d = pixelDensity;\nvar halfImage = 4 * (width * d) * (height/2 * d);\nfor (var i = 0; i < halfImage; i+=4) {\n  pixels[i] = red(pink);\n  pixels[i+1] = green(pink);\n  pixels[i+2] = blue(pink);\n  pixels[i+3] = alpha(pink);\n}\nupdatePixels();\n</code>\n</div>"
+                "\n<div>\n<code>\nvar pink = color(255, 102, 204);\nloadPixels();\nvar d = pixelDensity();\nvar halfImage = 4 * (width * d) * (height/2 * d);\nfor (var i = 0; i < halfImage; i+=4) {\n  pixels[i] = red(pink);\n  pixels[i+1] = green(pink);\n  pixels[i+2] = blue(pink);\n  pixels[i+3] = alpha(pink);\n}\nupdatePixels();\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Image",
