@@ -2,10 +2,9 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-  <!--<div id="credits">
-    <em><a href='https://paom.com/profiles/processing/#/profile-apps' target=_blank>Print All Over Me x Processing Foundation</a></em><br>
-    collab with <a target=_blank href='http://sosolimited.com'>Sosolimited</a> and <a target=_blank href='http://liaworks.com/'>LIA</a>
-  </div>-->
+  <div id="credits">
+    <em>Print 15F</em> by <a target=_blank href='http://fengyizhu.com/'>Fengyi Zhu</a>
+  </div>
  
   <?php include('heading.php'); ?>
 
@@ -64,7 +63,9 @@
 
   <?php include('end.php'); ?>
 
-  <!--<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/paom'></iframe>-->
+  <!-- <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/fengyizhu_points'></iframe> -->
+  <div id='home-sketch-frame'></div>
+  <script src='./p5_featured/fengyizhu_points/sketch.js'></script>
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
