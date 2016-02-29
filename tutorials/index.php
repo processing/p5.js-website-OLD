@@ -129,6 +129,15 @@
         <p>Getting started and overview for contributing to development.</p>
       </div>
 
+      <div class="right-column">
+        <a class="nounderline" href="https://vimeo.com/156838703">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="https://vimeo.com/156838703"><h4>Looking inside p5</h4></a>
+        </div>
+        <p>A friendly inro to the file structure and tools for p5.js development. Spanish version <a href="https://vimeo.com/156838984">here</a>.</p>
+      </div>
+
       <div class="spacer"></div>
 
       <!--<li><a href="https://github.com/processing/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
