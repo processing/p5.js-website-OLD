@@ -3,7 +3,7 @@
 <?php include('header.php'); ?>
 <body id="home-page">
   <div id="credits">
-    <em>Print 15F</em> by <a target=_blank href='http://fengyizhu.com/'>Fengyi Zhu</a>
+    <em>Prism Pusher</em> by <a target=_blank href='http://leslieruckman.tumblr.com/'>Leslie Ruckman</a>
   </div>
  
   <?php include('heading.php'); ?>
@@ -63,9 +63,9 @@
 
   <?php include('end.php'); ?>
 
-  <!-- <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/fengyizhu_points'></iframe> -->
+  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/LeslieRuckman_RainbowPixelGrow'></iframe>
   <div id='home-sketch-frame'></div>
-  <script src='./p5_featured/fengyizhu_points/sketch.js'></script>
+  <!--<script src='./p5_featured/LeslieRuckman_RainbowPixelGrow/sketch.js'></script>-->
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
     $('#home-sketch-frame').height(window.innerHeight);
