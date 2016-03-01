@@ -20,16 +20,25 @@
 
       
 
+      <div class="gallery-item">  
+        <a href="http://leslieruckman.tumblr.com/" target="_blank">
+          <img class="gallery-img nounderline" src="../img/gallery-images/PrismPusher.jpg" width="5" alt="preview image">
+          <br>
+          <p>Prism Pusher</p>
+        </a>
+        <p class="gallery-source">Leslie Ruckman, 2016</p>
+      </div>
+      
+
       <div class="gallery-item">
       <!--   <a href="http://stinedec.com/Shape-Intersect-p5js/sketch.html"
         target="_blank"> -->
-           <img class="gallery-img nounderline" src="../img/gallery-images/social-tension.png" 
+          <img class="gallery-img nounderline" src="../img/gallery-images/social-tension.png" 
            width="5" alt="preview image">
-        <br>
-            <p>Social Tension</p>
-         </a>
-         <p class="gallery-source">
-         Christine de Carteret, 2015
+          <br>
+          <p>Social Tension</p>
+         <!-- </a> -->
+        <p class="gallery-source">Christine de Carteret, 2015</p>
       </div>
       
       
@@ -47,15 +56,13 @@
       <div class="gallery-item">
         <a href="http://www.michellechandra.com/portfolio/star-trails/"
         target="_blank">
-           <img class="gallery-img nounderline" src="../img/gallery-images/star-trails.png" 
+          <img class="gallery-img nounderline" src="../img/gallery-images/star-trails.png" 
            width="5" alt="preview image">
-        <br>
-        <p>Star Trails</p>
+          <br>
+          <p>Star Trails</p>
          </a>
-         <p class="gallery-source"> Michelle Chandra, Jason Sigal, 2014 </p>
+         <p class="gallery-source"> Michelle Chandra, Jason Sigal, 2014</p>
       </div>
-
-      <div class="spacer"></div>
 
       <div class="gallery-item">
         <a href="http://emojibooth.biz/"
@@ -90,8 +97,6 @@
          <p class="gallery-source"> Eric Rosenbaum, 2014 </p>
       </div>
 
-      <div class="spacer"></div>
-
       <div class="gallery-item">
         <a href="http://the816.com/neobrush/"
         target="_blank">
@@ -125,7 +130,6 @@
          <p class="gallery-source"> Berenger Recoules, 2014 </p>
       </div>
 
-      <div class="spacer"></div>
 
          <div class="gallery-item">
         <a href="http://cell-flight.com/mural.html"
@@ -160,15 +164,13 @@
          <p class="gallery-source">Nithi Prasanpanich, 2015</p>
       </div>
 
-      <div class="spacer">&nbsp;</div>
-
       <div class="gallery-item">
         <a href="http://otoro.net/ml/pendulum-esp-mobile/index.html"
         target="_blank">
            <img class="gallery-img nounderline" src="../img/gallery-images/hardmarubox2D.png" 
            width="5" alt="preview image">
         <br>
-        <p> Self Balancing Inverted Pendulum </p>
+        <p> Self Balancing Inverted<br>Pendulum</p>
          </a>
          <p class="gallery-source"> David Ha, 2015 </p>
       </div>
@@ -183,6 +185,8 @@
          </a>
          <p class="gallery-source"> David Ha, 2015 </p>
       </div>
+
+      <div class="spacer"><br></div>
 
     </section>
 
