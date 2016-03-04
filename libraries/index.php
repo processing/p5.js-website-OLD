@@ -35,16 +35,13 @@
 
       <a name="contributed" class="anchor"><h3>Contributed</h3></a>
 
-      <div class="spacer"></div>
-
       <div class="left-column">
-        <a class="nounderline" href="https://github.com/antiboredom/p5.gif.js">
+        <a class="nounderline" href="https://github.com/vanevery/p5.serialport">
         <div class="label">
-        <img src="../img/libraries/p5.gif.gif"></a>
-        <a class="nounderline" href="https://github.com/antiboredom/p5.gif.js"><h4>p5.gif</h4></a>
+        <img src="../img/libraries/p5.serial.jpg"></a>
+        <a class="nounderline" href="https://github.com/vanevery/p5.serialport"><h4>p5.serial</h4></a>
         </div>
-        <p>p5.gif let's you play and manipulate animated gifs in p5.js sketches.
-        Created by <a target='_blank' href='http://lav.io/'>Sam Lavigne</a>.</p>
+        <p>p5.serial enables serial communication between devices that support serial (RS-232) and p5 sketches running in the browser. Created by <a target='_blank' href='http://www.walking-productions.com/notslop/abou/'>Shawn Van Every</a>, with contributions from <a href='http://jenkagan.squarespace.com/' target='_blank'>Jen Kagan</a> and <a href='http://tigoe.net/' target='_blank'>Tom Igoe.</a></p>
       </div>
 
       <div class="right-column">
@@ -129,14 +126,13 @@
       <div class="spacer"></div>
 
       <div class="left-column">
-        <a class="nounderline" href="https://github.com/bobcgausa/cook-js">
+        <a class="nounderline" href="https://github.com/antiboredom/p5.gif.js">
         <div class="label">
-        <img src="../img/libraries/p5.particle.png"></a>
-        <a class="nounderline" href="https://github.com/bobcgausa/cook-js"><h4>p5.particle</h4></a>
+        <img src="../img/libraries/p5.gif.gif"></a>
+        <a class="nounderline" href="https://github.com/antiboredom/p5.gif.js"><h4>p5.gif</h4></a>
         </div>
-        <p>The Particle and Fountain objects can be used to create data-driven effects that are defined
-        through user structures or JSON input and user-draw functions.
-        Created by <a target='_blank' href='http://professorcook.org/'>Robert Cook</a>.</p>
+        <p>p5.gif let's you play and manipulate animated gifs in p5.js sketches.
+        Created by <a target='_blank' href='http://lav.io/'>Sam Lavigne</a>.</p>
       </div>
 
       <div class="right-column">
@@ -147,6 +143,20 @@
         </div>
         <p>p5.gibber provides rapid music sequencing and audio synthesis capabilities.
         Created by <a target='_blank' href='http://charlie-roberts.com'>Charlie Roberts</a>.</p>
+      </div>
+
+
+      <div class="spacer"></div>
+
+      <div class="left-column">
+        <a class="nounderline" href="https://github.com/bobcgausa/cook-js">
+        <div class="label">
+        <img src="../img/libraries/p5.particle.png"></a>
+        <a class="nounderline" href="https://github.com/bobcgausa/cook-js"><h4>p5.particle</h4></a>
+        </div>
+        <p>The Particle and Fountain objects can be used to create data-driven effects that are defined
+        through user structures or JSON input and user-draw functions.
+        Created by <a target='_blank' href='http://professorcook.org/'>Robert Cook</a>.</p>
       </div>
 
 
