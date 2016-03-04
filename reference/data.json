@@ -2,7 +2,7 @@
     "project": {
         "name": "p5",
         "description": "",
-        "version": "0.4.21",
+        "version": "0.4.23",
         "url": ""
     },
     "files": {
@@ -1358,7 +1358,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 1960,
+            "line": 1979,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1735,7 +1735,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1960,
+            "line": 1979,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -2391,7 +2391,7 @@
         {
             "file": "src/3d/3d_primitives.js",
             "line": 126,
-            "description": "Draw an ellipsoid with given raduis",
+            "description": "Draw an ellipsoid with given radius",
             "itemtype": "method",
             "name": "ellipsoid",
             "params": [
@@ -2412,7 +2412,7 @@
                 },
                 {
                     "name": "detail",
-                    "description": "number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above\n                                   150. It may crash the browser.",
+                    "description": "Number of segments.\n                                   The more segments, the smoother the\n                                   geometry (default is 24). Avoid detail\n                                   number above 150. It may crash the\n                                   browser.",
                     "type": "Number",
                     "optional": true
                 }
@@ -2422,7 +2422,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n// draw an ellipsoid with radius 200, 300 and 400 .\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  ellipsoid(200,300,400);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// draw an ellipsoid with radius 200, 300 and 400\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  ellipsoid(200,300,400);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -2430,7 +2430,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 190,
+            "line": 191,
             "description": "Draw a cylinder with given radius and height",
             "itemtype": "method",
             "name": "cylinder",
@@ -2457,7 +2457,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining sylinder with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cylinder(200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning cylinder with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cylinder(200, 200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -2465,7 +2465,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 287,
+            "line": 288,
             "description": "Draw a cone with given radius and height",
             "itemtype": "method",
             "name": "cone",
@@ -2488,7 +2488,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\n//draw a spining cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -2496,7 +2496,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 360,
+            "line": 361,
             "description": "Draw a torus with given radius and tube radius",
             "itemtype": "method",
             "name": "torus",
@@ -2519,7 +2519,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\n//draw a spining torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -2527,7 +2527,7 @@
         },
         {
             "file": "src/3d/3d_primitives.js",
-            "line": 421,
+            "line": 422,
             "description": "Draw a box with given width, height and depth",
             "itemtype": "method",
             "name": "box",
@@ -2553,7 +2553,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining box with width, height and depth 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(200, 200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning box with width, height and depth 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(200, 200, 200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -3875,7 +3875,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 255,
+            "line": 263,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
@@ -3895,7 +3895,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 282,
+            "line": 290,
             "description": "Extracts the hue value from a color or pixel array.\n\nHue exists in both HSB and HSL. This function will return the\nHSB-normalized hue when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL-normalized hue otherwise. (The values will only be different if the\nmaximum hue setting for each system is different.)",
             "itemtype": "method",
             "name": "hue",
@@ -3915,7 +3915,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 315,
+            "line": 323,
             "description": "Blends two colors to find a third color somewhere between them. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first color, 0.1 is very near the first color, 0.5 is halfway\nin between, etc. An amount below 0 will be treated as 0. Likewise, amounts\nabove 1 will be capped at 1. This is different from the behavior of lerp(),\nbut necessary because otherwise numbers outside the range will produce\nstrange and unexpected colors.\n<br><br>\nThe way that colours are interpolated depends on the current color mode.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -3949,7 +3949,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 398,
+            "line": 406,
             "description": "Extracts the HSL lightness value from a color or pixel array.",
             "itemtype": "method",
             "name": "lightness",
@@ -3969,7 +3969,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 425,
+            "line": 433,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -3989,7 +3989,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 462,
+            "line": 470,
             "description": "Extracts the saturation value from a color or pixel array.\n\nSaturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL saturation otherwise.",
             "itemtype": "method",
             "name": "saturation",
@@ -4446,42 +4446,42 @@
                 {
                     "name": "x1",
                     "description": "the x-coordinate of the first point",
-                    "type": "Type"
+                    "type": "Number"
                 },
                 {
                     "name": "y1",
                     "description": "the y-coordinate of the first point",
-                    "type": "Type"
+                    "type": "Number"
                 },
                 {
                     "name": "x2",
                     "description": "the x-coordinate of the second point",
-                    "type": "Type"
+                    "type": "Number"
                 },
                 {
                     "name": "y2",
                     "description": "the y-coordinate of the second point",
-                    "type": "Type"
+                    "type": "Number"
                 },
                 {
                     "name": "x3",
                     "description": "the x-coordinate of the third point",
-                    "type": "Type"
+                    "type": "Number"
                 },
                 {
                     "name": "y3",
                     "description": "the y-coordinate of the third point",
-                    "type": "Type"
+                    "type": "Number"
                 },
                 {
                     "name": "x4",
                     "description": "the x-coordinate of the fourth point",
-                    "type": "Type"
+                    "type": "Number"
                 },
                 {
                     "name": "y4",
                     "description": "the y-coordinate of the fourth point",
-                    "type": "Type"
+                    "type": "Number"
                 }
             ],
             "return": {
@@ -5238,7 +5238,7 @@
         {
             "file": "src/core/curves.js",
             "line": 376,
-            "description": "Evaluates the tangent to the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points on the curve,\nand b and c are the control points",
+            "description": "Evaluates the tangent to the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points on the curve,\nand b and c are the control points.",
             "itemtype": "method",
             "name": "curveTangent",
             "params": [
@@ -5513,11 +5513,11 @@
             "line": 374,
             "description": "If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.",
             "itemtype": "method",
-            "name": "fullScreen",
+            "name": "fullscreen",
             "params": [
                 {
                     "name": "val",
-                    "description": "whether the sketch should be fullscreened or not",
+                    "description": "whether the sketch should be in fullscreen mode\nor not",
                     "type": "Boolean",
                     "optional": true
                 }
@@ -5527,7 +5527,7 @@
                 "type": "Boolean"
             },
             "example": [
-                "\n<div>\n<code>\n// Clicking in the box toggles fullscreen on and off.\nfunction setup() {\n  background(200);\n}\nfunction mousePressed() {\n  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {\n    var fs = fullScreen();\n    fullScreen(!fs);\n  }\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n// Clicking in the box toggles fullscreen on and off.\nfunction setup() {\n  background(200);\n}\nfunction mousePressed() {\n  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {\n    var fs = fullscreen();\n    fullscreen(!fs);\n  }\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -5535,7 +5535,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 416,
+            "line": 417,
             "description": "Sets the pixel scaling for high pixel density displays. By default\npixel density is set to match display density, call pixelDensity(1)\nto turn this off. Calling pixelDensity() with no arguments returns\nthe current pixel density of the sketch.",
             "itemtype": "method",
             "name": "pixelDensity",
@@ -5560,7 +5560,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 457,
+            "line": 458,
             "description": "Returns the pixel density of the current display the sketch is running on.",
             "itemtype": "method",
             "name": "displayDensity",
@@ -5577,7 +5577,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 511,
+            "line": 512,
             "description": "Gets the current URL.",
             "itemtype": "method",
             "name": "getURL",
@@ -5594,7 +5594,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 538,
+            "line": 539,
             "description": "Gets the current URL path as an array.",
             "itemtype": "method",
             "name": "getURLPath",
@@ -5611,7 +5611,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 555,
+            "line": 556,
             "description": "Gets the current URL params as an Object.",
             "itemtype": "method",
             "name": "getURLParams",
@@ -5820,13 +5820,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.mouseWheel(changeSize); // attach listener for\n                              // activity on canvas only\n  d = 10;\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n  ellipse(width/2, height/2, d, d);\n}\n\n// this function fires with mousewheel movement\n// anywhere on screen\nfunction mouseWheel() {\n  g = g + 10;\n}\n\n// this function fires with mousewheel movement\n// over canvas only\nfunction changeSize() {\n  if (event.wheelDelta > 0) {\n    d = d + 10;\n  } else {\n    d = d - 10;\n  }\n}\n</code></div>\n"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 190,
+            "line": 225,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5841,13 +5844,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.mouseReleased(changeGray); // attach listener for\n                                 // activity on canvas only\n  d = 10;\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n  ellipse(width/2, height/2, d, d);\n}\n\n// this function fires after the mouse has been\n// released\nfunction mouseReleased() {\n  d = d + 10;\n}\n\n// this function fires after the mouse has been\n// released while on canvas\nfunction changeGray() {\n  g = random(0, 255);\n}\n</code></div>\n"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 207,
+            "line": 273,
             "description": "The .mouseClicked() function is called once after a mouse button is\npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5862,13 +5868,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.mouseClicked(changeGray); // attach listener for\n                                // activity on canvas only\n  d = 10;\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n  ellipse(width/2, height/2, d, d);\n}\n\n// this function fires after the mouse has been\n// clicked anywhere\nfunction mouseClicked() {\n  d = d + 10;\n}\n\n// this function fires after the mouse has been\n// clicked on canvas\nfunction changeGray() {\n  g = random(0, 255);\n}\n</code></div>\n"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 222,
+            "line": 318,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5883,13 +5892,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar d = 30;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.mouseMoved(changeSize); // attach listener for\n                              // activity on canvas only\n  d = 10;\n  g = 100;\n}\n\nfunction draw() {\n  background(g);\n  fill(200);\n  ellipse(width/2, height/2, d, d);\n}\n\n// this function fires when mouse moves anywhere on\n// page\nfunction mouseMoved() {\n  g = g + 5;\n  if (g > 255) {\n    g = 0;\n  }\n}\n\n// this function fires when mouse moves over canvas\nfunction changeSize() {\n  d = d + 2;\n  if (d > 100) {\n    d = 0;\n  }\n}\n</code></div>\n"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 238,
+            "line": 371,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5904,13 +5916,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.mouseOver(changeGray);\n  d = 10;\n}\n\nfunction draw() {\n  ellipse(width/2, height/2, d, d);\n}\n\nfunction changeGray() {\n  d = d + 10;\n  if (d > 100) {\n    d = 0;\n  }\n}\n</code></div>\n"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 254,
+            "line": 410,
             "description": "The .changed() function is called when the value of an\nelement is changed.\nThis can be used to attach an element specific event listener.",
             "itemtype": "method",
             "name": "changed",
@@ -5934,7 +5949,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 315,
+            "line": 471,
             "description": "The .input() function is called when any user input is\ndetected with an element. The input event is often used\nto detect keystrokes in a input element, or changes on a\nslider element. This can be used to attach an element specific\nevent listener.",
             "itemtype": "method",
             "name": "input",
@@ -5949,13 +5964,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\n// Open your console to see the output\nfunction setup() {\n  var inp = createInput('');\n  inp.input(myInputEvent);\n}\n\nfunction myInputEvent() {\n  console.log('you are typing: ', this.value());\n}\n</code></div>\n"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 331,
+            "line": 500,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5970,13 +5988,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\nvar cnv;\nvar d;\nvar g;\nfunction setup() {\n  cnv = createCanvas(100, 100);\n  cnv.mouseOut(changeGray);\n  d = 10;\n}\n\nfunction draw() {\n  ellipse(width/2, height/2, d, d);\n}\n\nfunction changeGray() {\n  d = d + 10;\n  if (d > 100) {\n    d = 0;\n  }\n}\n</code></div>\n"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 346,
+            "line": 538,
             "description": "The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -6000,7 +6021,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 390,
+            "line": 582,
             "description": "The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -6024,7 +6045,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 426,
+            "line": 618,
             "description": "The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -6048,7 +6069,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 472,
+            "line": 664,
             "description": "The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragOver",
@@ -6069,7 +6090,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 487,
+            "line": 679,
             "description": "The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragLeave",
@@ -6090,7 +6111,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 502,
+            "line": 694,
             "description": "The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can\noptionally pass two callbacks, the first one (required) is triggered\nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.",
             "itemtype": "method",
             "name": "drop",
@@ -6116,7 +6137,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 590,
+            "line": 782,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -6178,9 +6199,10 @@
                     "type": "Number"
                 },
                 {
-                    "name": "optional:",
-                    "description": "renderer 'p2d' | 'webgl'",
-                    "type": "String"
+                    "name": "renderer",
+                    "description": "'p2d' | 'webgl'",
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
@@ -6277,7 +6299,7 @@
         {
             "file": "src/core/shim.js",
             "line": 65,
-            "description": "shim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
+            "description": "shim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/\nEnumerable set to false to protect for...in from\nUint8ClampedArray.prototype pollution.",
             "class": "p5",
             "module": "Rendering"
         },
@@ -6917,7 +6939,10 @@
         {
             "file": "src/events/acceleration.js",
             "line": 83,
-            "description": "The system variable rotationX always contains the rotation of the\ndevice along the x axis. Value is represented as 0 to +/-180 degrees.",
+            "description": "The system variable rotationX always contains the rotation of the\ndevice along the x axis. Value is represented as 0 to +/-180 degrees.\n<br><br>\nNote: The order the rotations are called is important, ie. if used\ntogether, it must be called in the order Z-X-Y or there might be\nunexpected behaviour.",
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  //rotateZ(radians(rotationZ));\n  rotateX(radians(rotationX));\n  //rotateY(radians(rotationY));\n  box(200, 200, 200);\n}\n</code>\n</div>"
+            ],
             "itemtype": "property",
             "name": "rotationX",
             "class": "p5",
@@ -6926,8 +6951,11 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 91,
-            "description": "The system variable rotationY always contains the rotation of the\ndevice along the y axis. Value is represented as 0 to +/-180 degrees.",
+            "line": 112,
+            "description": "The system variable rotationY always contains the rotation of the\ndevice along the y axis. Value is represented as 0 to +/-90 degrees.\n<br><br>\nNote: The order the rotations are called is important, ie. if used\ntogether, it must be called in the order Z-X-Y or there might be\nunexpected behaviour.",
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  //rotateZ(radians(rotationZ));\n  //rotateX(radians(rotationX));\n  rotateY(radians(rotationY));\n  box(200, 200, 200);\n}\n</code>\n</div>"
+            ],
             "itemtype": "property",
             "name": "rotationY",
             "class": "p5",
@@ -6936,8 +6964,11 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 99,
-            "description": "The system variable rotationZ always contains the rotation of the\ndevice along the z axis. Value is represented as 0 to 359 degrees.\n<br><br>\nUnlike rotationX and rotationY, this variable is available for devices\nwith a built-in compass only.",
+            "line": 141,
+            "description": "The system variable rotationZ always contains the rotation of the\ndevice along the z axis. Value is represented as 0 to 359 degrees.\n<br><br>\nUnlike rotationX and rotationY, this variable is available for devices\nwith a built-in compass only.\n<br><br>\nNote: The order the rotations are called is important, ie. if used\ntogether, it must be called in the order Z-X-Y or there might be\nunexpected behaviour.",
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateZ(radians(rotationZ));\n  //rotateX(radians(rotationX));\n  //rotateY(radians(rotationY));\n  box(200, 200, 200);\n}\n</code>\n</div>"
+            ],
             "itemtype": "property",
             "name": "rotationZ",
             "class": "p5",
@@ -6946,7 +6977,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 110,
+            "line": 173,
             "description": "The system variable pRotationX always contains the rotation of the\ndevice along the x axis in the frame previous to the current frame. Value\nis represented as 0 to +/-180 degrees.\n<br><br>\npRotationX can also be used with rotationX to determine the rotate\ndirection of the device along the X-axis.",
             "example": [
                 "\n<div class='norender'>\n<code>\n// A simple if statement looking at whether\n// rotationX - pRotationX < 0 is true or not will be\n// sufficient for determining the rotate direction\n// in most cases.\n\n// Some extra logic is needed to account for cases where\n// the angles wrap around.\nvar rotateDirection = 'clockwise';\n\n// Simple range conversion to make things simpler.\n// This is not absolutely neccessary but the logic\n// will be different in that case.\n\nvar rX = rotationX + 180;\nvar pRX = pRotationX + 180;\n\nif ((rX - pRX > 0 && rX - pRX < 270)|| rX - pRX < -270){\n  rotateDirection = 'clockwise';\n} else if (rX - pRX < 0 || rX - pRX > 270){\n  rotateDirection = 'counter-clockwise';\n}\n</code>\n</div>"
@@ -6959,8 +6990,8 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 148,
-            "description": "The system variable pRotationY always contains the rotation of the\ndevice along the y axis in the frame previous to the current frame. Value\nis represented as 0 to +/-180 degrees.\n<br><br>\npRotationY can also be used with rotationY to determine the rotate\ndirection of the device along the Y-axis.",
+            "line": 211,
+            "description": "The system variable pRotationY always contains the rotation of the\ndevice along the y axis in the frame previous to the current frame. Value\nis represented as 0 to +/-90 degrees.\n<br><br>\npRotationY can also be used with rotationY to determine the rotate\ndirection of the device along the Y-axis.",
             "example": [
                 "\n<div class='norender'>\n<code>\n// A simple if statement looking at whether\n// rotationY - pRotationY < 0 is true or not will be\n// sufficient for determining the rotate direction\n// in most cases.\n\n// Some extra logic is needed to account for cases where\n// the angles wrap around.\nvar rotateDirection = 'clockwise';\n\n// Simple range conversion to make things simpler.\n// This is not absolutely neccessary but the logic\n// will be different in that case.\n\nvar rY = rotationY + 180;\nvar pRY = pRotationY + 180;\n\nif ((rY - pRY > 0 && rY - pRY < 270)|| rY - pRY < -270){\n  rotateDirection = 'clockwise';\n} else if (rY - pRY < 0 || rY - pRY > 270){\n  rotateDirection = 'counter-clockwise';\n}\n</code>\n</div>"
             ],
@@ -6972,7 +7003,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 186,
+            "line": 249,
             "description": "The system variable pRotationZ always contains the rotation of the\ndevice along the z axis in the frame previous to the current frame. Value\nis represented as 0 to 359 degrees.\n<br><br>\npRotationZ can also be used with rotationZ to determine the rotate\ndirection of the device along the Z-axis.",
             "example": [
                 "\n<div class='norender'>\n<code>\n// A simple if statement looking at whether\n// rotationZ - pRotationZ < 0 is true or not will be\n// sufficient for determining the rotate direction\n// in most cases.\n\n// Some extra logic is needed to account for cases where\n// the angles wrap around.\nvar rotateDirection = 'clockwise';\n\nif ((rotationZ - pRotationZ > 0 &&\n  rotationZ - pRotationZ < 270)||\n  rotationZ - pRotationZ < -270){\n\n  rotateDirection = 'clockwise';\n\n} else if (rotationZ - pRotationZ < 0 ||\n  rotationZ - pRotationZ > 270){\n\n  rotateDirection = 'counter-clockwise';\n\n}\n</code>\n</div>"
@@ -6985,7 +7016,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 247,
+            "line": 310,
             "description": "The setMoveThreshold() function is used to set the movement threshold for\nthe deviceMoved() function. The default threshold is set to 0.5.",
             "itemtype": "method",
             "name": "setMoveThreshold",
@@ -7002,7 +7033,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 260,
+            "line": 323,
             "description": "The setShakeThreshold() function is used to set the movement threshold for\nthe deviceShaken() function. The default threshold is set to 30.",
             "itemtype": "method",
             "name": "setShakeThreshold",
@@ -7019,7 +7050,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 273,
+            "line": 336,
             "description": "The deviceMoved() function is called when the device is moved by more than\nthe threshold value along X, Y or Z axis. The default threshold is set to\n0.5.",
             "itemtype": "method",
             "name": "deviceMoved",
@@ -7032,7 +7063,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 300,
+            "line": 363,
             "description": "The deviceTurned() function is called when the device rotates by\nmore than 90 degrees continuously.\n<br><br>\nThe axis that triggers the deviceTurned() method is stored in the turnAxis\nvariable. The deviceTurned() method can be locked to trigger on any axis:\nX, Y or Z by comparing the turnAxis variable to 'X', 'Y' or 'Z'.",
             "itemtype": "method",
             "name": "deviceTurned",
@@ -7045,7 +7076,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 354,
+            "line": 417,
             "description": "The deviceShaken() function is called when the device total acceleration\nchanges of accelerationX and accelerationY values is more than\nthe threshold value. The default threshold is set to 30.",
             "itemtype": "method",
             "name": "deviceShaken",
@@ -7813,34 +7844,31 @@
             "params": [
                 {
                     "name": "filename",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "",
+                    "type": "String"
                 },
                 {
                     "name": "extension",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "description": "'jpg' or 'png'",
+                    "type": "String"
                 },
                 {
-                    "name": "_duration",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "duration",
+                    "description": "Duration in seconds to save the frames for.",
+                    "type": "Number"
                 },
                 {
-                    "name": "_fps",
-                    "description": "[description]",
-                    "type": "[type]"
+                    "name": "framerate",
+                    "description": "Framerate to save the frames in.",
+                    "type": "Number"
                 },
                 {
                     "name": "callback",
-                    "description": "[description]",
-                    "type": "[Function]"
+                    "description": "A callback function that will be executed\n                                to handle the image data. This function\n                                should accept an array as argument. The\n                                array will contain the spcecified number of\n                                frames of objects. Each object have three\n                                properties: imageData - an\n                                image/octet-stream, filename and extension.",
+                    "type": "Function",
+                    "optional": true
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
             "class": "p5",
             "module": "Image",
             "submodule": "Image"
@@ -8132,13 +8160,16 @@
             "description": "Loads the pixels data for this image into the [pixels] attribute.",
             "itemtype": "method",
             "name": "loadPixels",
+            "example": [
+                "\n<div><code>\nvar myImage;\nvar halfImage;\n\nfunction preload() {\n  myImage = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  myImage.loadPixels();\n  halfImage = 4 * width * height/2;\n  for(var i = 0; i < halfImage; i++){\n    myImage.pixels[i+halfImage] = myImage.pixels[i];\n  }\n  myImage.updatePixels();\n}\n\nfunction draw() {\n  image(myImage, 0, 0);\n}\n</code></div>"
+            ],
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 178,
+            "line": 200,
             "description": "Updates the backing canvas for this image with the contents of\nthe [pixels] array.",
             "itemtype": "method",
             "name": "updatePixels",
@@ -8164,13 +8195,16 @@
                     "type": "Integer|undefined"
                 }
             ],
+            "example": [
+                "\n<div><code>\nvar myImage;\nvar halfImage;\n\nfunction preload() {\n  myImage = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  myImage.loadPixels();\n  halfImage = 4 * width * height/2;\n  for(var i = 0; i < halfImage; i++){\n    myImage.pixels[i+halfImage] = myImage.pixels[i];\n  }\n  myImage.updatePixels();\n}\n\nfunction draw() {\n  image(myImage, 0, 0);\n}\n</code></div>"
+            ],
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 196,
+            "line": 240,
             "description": "Get a region of pixels from an image.\n\nIf no params are passed, those whole image is returned,\nif x and y are the only params passed a single pixel is extracted\nif all params are passed a rectangle region is extracted and a p5.Image\nis returned.\n\nReturns undefined if the region is outside the bounds of the image",
             "itemtype": "method",
             "name": "get",
@@ -8204,13 +8238,16 @@
                 "description": "color of pixel at x,y in array format\n                                   [R, G, B, A] or p5.Image",
                 "type": "Array/Color | p5.Image"
             },
+            "example": [
+                "\n<div><code>\nvar myImage;\nvar c;\n\nfunction preload() {\n  myImage = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  background(myImage);\n  noStroke();\n  c = myImage.get(60, 90);\n  fill(c);\n  rect(25, 25, 50, 50);\n}\n\n//get() returns color here\n</code></div>"
+            ],
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 218,
+            "line": 281,
             "description": "Set the color of a single pixel or write an image into\nthis p5.Image.\n\nNote that for a large number of pixels this will\nbe slower than directly manipulating the pixels array\nand then calling updatePixels().",
             "itemtype": "method",
             "name": "set",
@@ -8240,7 +8277,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 251,
+            "line": 314,
             "description": "Resize the image to a new width and height. To make the image scale\nproportionally, use 0 as the value for the wide or high parameter.\nFor instance, to make the width of an image 150 pixels, and change\nthe height using the same proportion, use resize(150, 0).",
             "itemtype": "method",
             "name": "resize",
@@ -8265,7 +8302,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 324,
+            "line": 387,
             "description": "Copies a region of pixels from one image to another. If no\nsrcImage is specified this is used as the source. If the source\nand destination regions aren't the same size, it will\nautomatically resize source pixels to fit the specified\ntarget region.",
             "itemtype": "method",
             "name": "copy",
@@ -8316,13 +8353,16 @@
                     "type": "Integer"
                 }
             ],
+            "example": [
+                "\n<div><code>\nvar photo;\nvar bricks;\nvar x;\nvar y;\n\nfunction preload() {\n  photo = loadImage(\"assets/rockies.jpg\");\n  bricks = loadImage(\"assets/bricks.jpg\");\n}\n\nfunction setup() {\n  x = bricks.width/2;\n  y = bricks.height/2;\n  photo.copy(bricks, 0, 0, x, y, 0, 0, x, y);\n  image(photo, 0, 0);\n}\n</code></div>"
+            ],
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 346,
+            "line": 428,
             "description": "Masks part of an image from displaying by loading another\nimage and using it's blue channel as an alpha channel for\nthis image.",
             "itemtype": "method",
             "name": "mask",
@@ -8342,7 +8382,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 404,
+            "line": 486,
             "description": "Applies an image filter to a p5.Image",
             "itemtype": "method",
             "name": "filter",
@@ -8358,13 +8398,16 @@
                     "type": "Number|undefined"
                 }
             ],
+            "example": [
+                "\n<div><code>\nvar photo1;\nvar photo2;\n\nfunction preload() {\n  photo1 = loadImage(\"assets/rockies.jpg\");\n  photo2 = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  photo2.filter(\"gray\");\n  image(photo1, 0, 0);\n  image(photo2, width/2, 0);\n}\n</code></div>"
+            ],
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 417,
+            "line": 515,
             "description": "Copies a region of pixels from one image to another, using a specified\nblend mode to do the operation.",
             "itemtype": "method",
             "name": "blend",
@@ -8426,7 +8469,7 @@
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 446,
+            "line": 544,
             "description": "Saves the image to a file and force the browser to download it.\nAccepts two strings for filename and file extension\nSupports png (default) and jpg.",
             "itemtype": "method",
             "name": "save",
@@ -8442,13 +8485,16 @@
                     "type": "String"
                 }
             ],
+            "example": [
+                "\n<div><code>\nvar photo;\n\nfunction preload() {\n  photo = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction draw() {\n  image(photo, 0, 0);\n}\n\nfunction keyTyped() {\n  if (key == 's') {\n    photo.save(\"photo\", \"png\");\n  }\n}\n</code></div>"
+            ],
             "class": "p5.Image",
             "module": "Image",
             "submodule": "Image"
         },
         {
             "file": "src/image/p5.Image.js",
-            "line": 486,
+            "line": 602,
             "description": "creates a gl texture\nused in WEBGL mode only",
             "params": [
                 {
@@ -9172,7 +9218,8 @@
                 {
                     "name": "options",
                     "description": "can be one of \"tsv\", \"csv\", or \"html\"",
-                    "type": "[String]"
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "example": [
@@ -12188,7 +12235,7 @@
                 {
                     "name": "length",
                     "description": "number of Array elements to be copied",
-                    "type": "Nimber",
+                    "type": "Number",
                     "optional": true
                 }
             ],
@@ -13072,7 +13119,7 @@
                 "type": "Object/p5.Element|Null"
             },
             "example": [
-                "\n<div ><code class='norender'>\nfunction setup() {\n  createCanvas(100,100);\n  //translates canvas 50px down\n  select('canvas').translate(0,50);\n}\n</code></div>\n<div ><code class='norender'>\n// these are all valid calls to select()\nvar a = select('#moo');\nvar b = select('#blah', '#myContainer');\nvar c = select('#foo', b);\nvar d = document.getElementById('beep');\nvar e = select('p', d);\n</code></div>\n"
+                "\n<div ><code class='norender'>\nfunction setup() {\n  createCanvas(100,100);\n  //translates canvas 50px down\n  select('canvas').position(100, 100);\n}\n</code></div>\n<div ><code class='norender'>\n// these are all valid calls to select()\nvar a = select('#moo');\nvar b = select('#blah', '#myContainer');\nvar c = select('#foo', b);\nvar d = document.getElementById('beep');\nvar e = select('p', d);\n</code></div>\n"
             ],
             "class": "p5.dom",
             "module": "p5.dom",
@@ -13575,7 +13622,7 @@
             "params": [
                 {
                     "name": "type",
-                    "description": "type of capture, either VIDEO or\n                                   AUDIO if none specified, default both,\n                                   or a Constraints boject",
+                    "description": "type of capture, either VIDEO or\n                                   AUDIO if none specified, default both,\n                                   or a Constraints object",
                     "type": "String|Constant|Object"
                 },
                 {
@@ -13775,84 +13822,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1163,
-            "description": "Translates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
-            "itemtype": "method",
-            "name": "translate",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "x-position in px",
-                    "type": "Number"
-                },
-                {
-                    "name": "y",
-                    "description": "y-position in px",
-                    "type": "Number"
-                },
-                {
-                    "name": "z",
-                    "description": "z-position in px",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "perspective",
-                    "description": "sets the perspective of the parent element in px,\ndefault value set to 1000px",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Object/p5.Element"
-            },
-            "example": [
-                "\n<div ><code class='norender'>\nfunction setup() {\n  var cnv = createCanvas(100,100);\n  //translates canvas 50px down\n  cnv.translate(0,50);\n}\n</code></div>"
-            ],
-            "class": "p5.Element",
-            "module": "p5.dom",
-            "submodule": "p5.dom"
-        },
-        {
-            "file": "lib/addons/p5.dom.js",
-            "line": 1205,
-            "description": "Rotates an element with css transforms in either 2d (if 2 arguments given)\nor 3d (if 3 arguments given) space.",
-            "itemtype": "method",
-            "name": "rotate",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "amount of degrees to rotate the element along the x-axis in deg",
-                    "type": "Number"
-                },
-                {
-                    "name": "y",
-                    "description": "amount of degrees to rotate the element along the y-axis in deg",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "z",
-                    "description": "amount of degrees to rotate the element along the z-axis in deg",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Object/p5.Element"
-            },
-            "example": [
-                "\n<div><code>\nvar x = 0,\n    y = 0,\n    z = 0;\n\nfunction draw(){\n  x+=.5 % 360;\n  y+=.5 % 360;\n  z+=.5 % 360;\n  //rotates p5.js logo .5 degrees on every axis each frame.\n  select('canvas').rotate(x,y,z);\n}\n</code></div>"
-            ],
-            "class": "p5.Element",
-            "module": "p5.dom",
-            "submodule": "p5.dom"
-        },
-        {
-            "file": "lib/addons/p5.dom.js",
-            "line": 1250,
+            "line": 1210,
             "description": "Sets the given style (css) property (1st arg) of the element with the\ngiven value (2nd arg). If a single argument is given, .style()\nreturns the value of the given property; however, if the single argument\nis given in css syntax ('text-align:center'), .style() sets the css\nappropriatly. .style() also handles 2d and 3d css transforms. If\nthe 1st arg is 'rotate', 'translate', or 'position', the following arguments\naccept Numbers as values. ('translate', 10, 100, 50);",
             "itemtype": "method",
             "name": "style",
@@ -13900,7 +13870,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1334,
+            "line": 1295,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -13922,7 +13892,7 @@
                 "type": "String|Object/p5.Element"
             },
             "example": [
-                "\n <div class=\"norender\"><code>\n var myDiv = createDiv(\"I like pandas.\");\nmyDiv.attribute(\"align\", \"center\");\n </code></div>"
+                "\n <div class=\"norender\"><code>\n var myDiv = createDiv(\"I like pandas.\");\n myDiv.attribute(\"align\", \"center\");\n </code></div>"
             ],
             "class": "p5.Element",
             "module": "p5.dom",
@@ -13930,7 +13900,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1361,
+            "line": 1322,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -13946,13 +13916,16 @@
                 "description": "value of element if no value is specified or p5.Element",
                 "type": "String|Object/p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\n// gets the value\nvar inp;\nfunction setup() {\n  inp = createInput('');\n}\n\nfunction mousePressed() {\n  print(inp.value());\n}\n</code></div>\n<div class='norender'><code>\n// sets the value\nvar inp;\nfunction setup() {\n  inp = createInput('myValue');\n}\n\nfunction mousePressed() {\n  inp.value(\"myValue\");\n}\n</code></div>"
+            ],
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1381,
+            "line": 1365,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -13960,13 +13933,16 @@
                 "description": "",
                 "type": "Object/p5.Element"
             },
+            "example": [
+                "\n <div class='norender'><code>\n var div = createDiv('div');\n div.attribute(\"display\", \"none\");\n div.show(); // turns display to block\n </code></div>"
+            ],
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1393,
+            "line": 1383,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -13974,13 +13950,16 @@
                 "description": "",
                 "type": "Object/p5.Element"
             },
+            "example": [
+                "\n<div class='norender'><code>\nvar div = createDiv('this is a div');\ndiv.hide();\n</code></div>"
+            ],
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1404,
+            "line": 1399,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.",
             "itemtype": "method",
             "name": "size",
@@ -14002,6 +13981,9 @@
                 "description": "",
                 "type": "Object/p5.Element"
             },
+            "example": [
+                "\n <div class='norender'><code>\n var div = createDiv('this is a div');\n div.size(100, 100);\n </code></div>"
+            ],
             "class": "p5.Element",
             "module": "p5.dom",
             "submodule": "p5.dom"
@@ -14149,6 +14131,28 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 1645,
+            "description": "If no arguments are given, returns the current playback speed of the\nelement. The speed parameter sets the speed where 2.0 will play the\nelement twice as fast, 0.5 will play at half the speed, and -1 will play\nthe element in normal speed in reverse.(Note that not all browsers support\nbackward playback and even if they do, playback might not be smooth.)",
+            "itemtype": "method",
+            "name": "speed",
+            "params": [
+                {
+                    "name": "speed",
+                    "description": "speed multiplier for element playback",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "current playback speed or p5.MediaElement",
+                "type": "Number|Object/p5.MediaElement"
+            },
+            "class": "p5.MediaElement",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1664,
             "description": "If no arguments are given, returns the current time of the element.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -14170,7 +14174,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1662,
+            "line": 1681,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -14184,7 +14188,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1705,
+            "line": 1724,
             "description": "Schedule an event to be called when the audio or video\nelement reaches the end. If the element is looping,\nthis will not be called. The element is passed in\nas the argument to the onended callback.",
             "itemtype": "method",
             "name": "onended",
@@ -14208,14 +14212,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1737,
+            "line": 1756,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1739,
+            "line": 1758,
             "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
             "itemtype": "method",
             "name": "connect",
@@ -14232,7 +14236,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1791,
+            "line": 1810,
             "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
             "itemtype": "method",
             "name": "disconnect",
@@ -14242,14 +14246,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1807,
+            "line": 1826,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1809,
+            "line": 1828,
             "description": "Show the default MediaElement controls, as determined by the web browser.",
             "itemtype": "method",
             "name": "showControls",
@@ -14259,7 +14263,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1820,
+            "line": 1839,
             "description": "Hide the default mediaElement controls.",
             "itemtype": "method",
             "name": "hideControls",
@@ -14269,14 +14273,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1829,
+            "line": 1848,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1831,
+            "line": 1850,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -14311,7 +14315,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1893,
+            "line": 1912,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -14328,7 +14332,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1913,
+            "line": 1932,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -14338,7 +14342,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1970,
+            "line": 1989,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -14348,7 +14352,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1982,
+            "line": 2001,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -14358,7 +14362,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1988,
+            "line": 2007,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -14368,7 +14372,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1994,
+            "line": 2013,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -14378,7 +14382,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2000,
+            "line": 2019,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -14388,7 +14392,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2007,
+            "line": 2026,
             "description": "URL string containing image data.",
             "itemtype": "property",
             "name": "data",
@@ -18057,11 +18061,11 @@
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:416"
+            "line": " src/core/environment.js:417"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:457"
+            "line": " src/core/environment.js:458"
         },
         {
             "message": "param name missing: {Invert}",
@@ -18353,7 +18357,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:590"
+            "line": " src/core/p5.Element.js:782"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
@@ -18376,7 +18380,7 @@
             "line": " src/core/p5.Renderer2D.js:350"
         },
         {
-            "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/",
+            "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/\nEnumerable set to false to protect for...in from\nUint8ClampedArray.prototype pollution.",
             "line": " src/core/shim.js:65"
         },
         {
@@ -18481,7 +18485,7 @@
         },
         {
             "message": "Missing item type\ncreates a gl texture\nused in WEBGL mode only",
-            "line": " src/image/p5.Image.js:486"
+            "line": " src/image/p5.Image.js:602"
         },
         {
             "message": "Missing item type\nChecks if we are in preload and returns the last arg which will be the\n_decrementPreload function if called from a loadX() function.  Should\nonly be used in loadX() functions.",
@@ -18609,15 +18613,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1737"
+            "line": " lib/addons/p5.dom.js:1756"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1807"
+            "line": " lib/addons/p5.dom.js:1826"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1829"
+            "line": " lib/addons/p5.dom.js:1848"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
