@@ -5109,7 +5109,7 @@ define('searchView',[
 });
 
 
-define('text!tpl/list.html',[],function () { return '<% _.each(groups, function(group){ %>\n  <h4 class="group-name" id="group-<%=group.name%>"><%=group.name%></h4>\n  <div class="reference-group clearfix main-ref-page">  \n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <dl>\n    <% if (subgroup.name !== \'0\') { %>\n        <dt class="subgroup-<%=subgroup.name%>"><%=subgroup.name%></dt>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n    <dd><a href="<%=item.hash%>" title="<%=item.description%>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></dd>\n    <% }); %>\n    </dl>\n  <% }); %>\n  </div>\n<% }); %>\n';});
+define('text!tpl/list.html',[],function () { return '<% _.each(groups, function(group){ %>\n  <h4 class="group-name" id="group-<%=group.name%>"><%=group.name%></h4>\n  <div class="reference-group clearfix main-ref-page">  \n  <% _.each(group.subgroups, function(subgroup, ind) { %>\n    <dl>\n    <% if (subgroup.name !== \'0\') { %>\n        <dt class="subgroup-<%=subgroup.name%>"><%=subgroup.name%></dt>\n    <% } %>\n    <% _.each(subgroup.items, function(item) { %>\n    <dd><a href="<%=item.hash%>" title="<%- striptags(item.description) %>"><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></dd>\n    <% }); %>\n    </dl>\n  <% }); %>\n  </div>\n<% }); %>\n';});
 
 define('listView',[
   'underscore',
@@ -5118,6 +5118,11 @@ define('listView',[
   // Templates
   'text!tpl/list.html'
 ], function (_, Backbone, App, listTpl) {
+  var striptags = function(html) {
+    var div = document.createElement('div');
+    div.innerHTML = html;
+    return div.textContent;
+  };
 
   var listView = Backbone.View.extend({
     el: '#list',
@@ -5192,6 +5197,7 @@ define('listView',[
 
         // Put the <li> items html into the list <ul>
         var listHtml = self.listTpl({
+          'striptags': striptags,
           'title': self.capitalizeFirst(listCollection),
           'groups': self.groups,
           'listCollection': listCollection
