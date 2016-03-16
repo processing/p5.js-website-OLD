@@ -135,7 +135,7 @@
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="https://vimeo.com/156838703"><h4>Looking inside p5</h4></a>
         </div>
-        <p>A friendly inro to the file structure and tools for p5.js development, by Luisa Pereira.</p>
+        <p>A friendly intro to the file structure and tools for p5.js development, by Luisa Pereira.</p>
       </div>
 
       <div class="spacer"></div>
