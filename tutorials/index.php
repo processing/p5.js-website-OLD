@@ -130,12 +130,12 @@
       </div>
 
       <div class="right-column">
-        <a class="nounderline" href="https://vimeo.com/156838703">
+        <a class="nounderline" href="http://www.luisapereira.net/teaching/looking-inside-p5/">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
         <a class="nounderline" href="https://vimeo.com/156838703"><h4>Looking inside p5</h4></a>
         </div>
-        <p>A friendly inro to the file structure and tools for p5.js development. Spanish version <a href="https://vimeo.com/156838984">here</a>.</p>
+        <p>A friendly intro to the file structure and tools for p5.js development, by Luisa Pereira.</p>
       </div>
 
       <div class="spacer"></div>
