@@ -11,7 +11,7 @@
     <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
     <meta name="viewport" content="width=device-width">
 
-    <script type="text/javascript" src="http://fast.fonts.net/jsapi/5ace315e-3b19-4568-9e85-5bfcb29004c0.js"></script>
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/5ace315e-3b19-4568-9e85-5bfcb29004c0.js"></script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- CSS (order matters): normalize across browsers -->
