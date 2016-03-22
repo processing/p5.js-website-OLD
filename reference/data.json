@@ -1358,7 +1358,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 1982,
+            "line": 1991,
             "description": "<p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p>\n<p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.\n\n<p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p>\n<p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a>",
             "tag": "main",
             "itemtype": "main"
@@ -1706,7 +1706,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1495,
+            "line": 1504,
             "description": "Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.",
             "is_constructor": 1,
             "params": [
@@ -1735,7 +1735,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1982,
+            "line": 1991,
             "description": "Base class for a file\nUsing this for createFileInput",
             "is_constructor": 1,
             "params": [
@@ -4331,7 +4331,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 128,
+            "line": 133,
             "description": "Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape's width and height. The\norigin may be changed with the ellipseMode() function.",
             "itemtype": "method",
             "name": "ellipse",
@@ -4370,7 +4370,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 169,
+            "line": 174,
             "description": "Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.",
             "itemtype": "method",
             "name": "line",
@@ -4409,7 +4409,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 251,
+            "line": 256,
             "description": "Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point. The color of the point is\ndetermined by the current stroke.",
             "itemtype": "method",
             "name": "point",
@@ -4438,7 +4438,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 310,
+            "line": 315,
             "description": "Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.",
             "itemtype": "method",
             "name": "quad",
@@ -4497,7 +4497,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 390,
+            "line": 395,
             "description": "Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.\n<br><br>\nThe fifth, sixth, seventh and eighth parameters, if specified,\ndetermine corner radius for the top-right, top-left, lower-right and\nlower-left corners, respectively. An omitted corner radius parameter is set\nto the value of the previously specified radius value in the parameter list.",
             "itemtype": "method",
             "name": "rect",
@@ -4560,7 +4560,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 458,
+            "line": 463,
             "description": "A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.",
             "itemtype": "method",
             "name": "triangle",
@@ -4894,7 +4894,7 @@
         {
             "file": "src/core/core.js",
             "line": 105,
-            "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. draw() is called automatically and should never be\ncalled explicitly.\n<br><br>\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n<br><br>\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n<br><br>\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
+            "description": "Called directly after setup(), the draw() function continuously executes\nthe lines of code contained inside its block until the program is stopped\nor noLoop() is called. Note if noLoop() is called in setup(), draw() will\nstill be executed once before stopping. draw() is called automatically and\nshould never be called explicitly.\n<br><br>\nIt should always be controlled with noLoop(), redraw() and loop(). After\nnoLoop() stops the code in draw() from executing, redraw() causes the\ncode inside draw() to execute once, and loop() will cause the code\ninside draw() to resume executing continuously.\n<br><br>\nThe number of times draw() executes in each second may be controlled with\nthe frameRate() function.\n<br><br>\nThere can only be one draw() function for each sketch, and draw() must\nexist if you want the code to run continuously, or to process events such\nas mousePressed(). Sometimes, you might have an empty call to draw() in\nyour program, as shown in the above example.",
             "itemtype": "method",
             "name": "draw",
             "example": [
@@ -4906,7 +4906,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 368,
+            "line": 364,
             "description": "Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.",
             "itemtype": "method",
             "name": "remove",
@@ -5781,7 +5781,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 126,
+            "line": 124,
             "description": "The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5805,7 +5805,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 171,
+            "line": 169,
             "description": "The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with \"natural\" scrolling enabled, the values are\nopposite.",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5829,7 +5829,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 225,
+            "line": 223,
             "description": "The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5853,7 +5853,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 273,
+            "line": 271,
             "description": "The .mouseClicked() function is called once after a mouse button is\npressed and released over the element. This can be used to\nattach element specific event listeners.",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5877,7 +5877,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 318,
+            "line": 316,
             "description": "The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -5901,7 +5901,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 371,
+            "line": 369,
             "description": "The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOver",
@@ -5925,7 +5925,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 410,
+            "line": 408,
             "description": "The .changed() function is called when the value of an\nelement is changed.\nThis can be used to attach an element specific event listener.",
             "itemtype": "method",
             "name": "changed",
@@ -5949,7 +5949,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 471,
+            "line": 469,
             "description": "The .input() function is called when any user input is\ndetected with an element. The input event is often used\nto detect keystrokes in a input element, or changes on a\nslider element. This can be used to attach an element specific\nevent listener.",
             "itemtype": "method",
             "name": "input",
@@ -5973,7 +5973,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 500,
+            "line": 498,
             "description": "The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5997,7 +5997,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 538,
+            "line": 536,
             "description": "The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchStarted",
@@ -6021,7 +6021,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 582,
+            "line": 580,
             "description": "The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchMoved",
@@ -6045,7 +6045,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 618,
+            "line": 616,
             "description": "The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.",
             "itemtype": "method",
             "name": "touchEnded",
@@ -6069,7 +6069,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 664,
+            "line": 662,
             "description": "The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragOver",
@@ -6090,7 +6090,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 679,
+            "line": 677,
             "description": "The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.",
             "itemtype": "method",
             "name": "dragLeave",
@@ -6111,7 +6111,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 694,
+            "line": 692,
             "description": "The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can\noptionally pass two callbacks, the first one (required) is triggered\nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.",
             "itemtype": "method",
             "name": "drop",
@@ -6137,7 +6137,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 782,
+            "line": 780,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -7169,7 +7169,7 @@
             "itemtype": "method",
             "name": "keyTyped",
             "example": [
-                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyTyped() {\n  if (key === 'a') {\n    value = 255;\n  } else if (key === 'b') {\n    value = 0;\n  }\n  return false; // prevent any default behavior\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction keyTyped() {\n  if (key === 'a') {\n    value = 255;\n  } else if (key === 'b') {\n    value = 0;\n  }\n  // uncomment to prevent any default behavior\n  // return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Events",
@@ -7177,7 +7177,7 @@
         },
         {
             "file": "src/events/keyboard.js",
-            "line": 272,
+            "line": 273,
             "description": "The onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will not fire if the user is\nnot focused on the element we must assume all keys currently down have\nbeen released.",
             "class": "p5",
             "module": "Events",
@@ -7185,7 +7185,7 @@
         },
         {
             "file": "src/events/keyboard.js",
-            "line": 282,
+            "line": 283,
             "description": "The keyIsDown() function checks if the key is currently down, i.e. pressed.\nIt can be used if you have an object that moves, and you want several keys\nto be able to affect its behaviour simultaneously, such as moving a\nsprite diagonally. You can put in any number representing the keyCode of\nthe key, or use any of the variable keyCode names listed\n<a href=\"http://p5js.org/reference/#p5/keyCode\">here</a>.",
             "itemtype": "method",
             "name": "keyIsDown",
@@ -10323,7 +10323,7 @@
                     "type": "Number"
                 },
                 {
-                    "name": "stop",
+                    "name": "stop2",
                     "description": "upper bound of the value's target range",
                     "type": "Number"
                 }
@@ -12017,7 +12017,7 @@
             "params": [
                 {
                     "name": "f",
-                    "description": "a font loaded via loadFont(), or a String\n representing a browser-based dfault font.",
+                    "description": "a font loaded via loadFont(), or a String\n representing a browser-based default font.",
                     "type": "Object|String"
                 }
             ],
@@ -13432,7 +13432,7 @@
                 "type": "Object/p5.Element"
             },
             "example": [
-                "\n<div class='norender'><code>\nvar checkbox;\n\nfunction setup() {\n  checkbox = createCheckbox('label', false);\n  checkbox.changed(myCheckedEvent);\n}\n\nfunction myCheckedEvent() {\n  if (this.checked()) {\n    console.log(\"Unchecking!\");\n  } else {\n    console.log(\"Checking!\");\n  }\n\n</code></div>"
+                "\n<div class='norender'><code>\nvar checkbox;\n\nfunction setup() {\n  checkbox = createCheckbox('label', false);\n  checkbox.changed(myCheckedEvent);\n}\n\nfunction myCheckedEvent() {\n  if (this.checked()) {\n    console.log(\"Checking!\");\n  } else {\n    console.log(\"Unchecking!\");\n  }\n}\n</code></div>"
             ],
             "class": "p5.dom",
             "module": "p5.dom",
@@ -13440,7 +13440,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 500,
+            "line": 505,
             "description": "Creates a dropdown menu &lt;select&gt;&lt;/select&gt; element in the DOM.",
             "itemtype": "method",
             "name": "createSelect",
@@ -13465,7 +13465,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 565,
+            "line": 570,
             "description": "Creates a radio button &lt;input&gt;&lt;/input&gt; element in the DOM.",
             "itemtype": "method",
             "name": "createRadio",
@@ -13487,7 +13487,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 650,
+            "line": 655,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM for text input.\nUse .size() to set the display length of the box.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createInput",
@@ -13512,7 +13512,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 679,
+            "line": 684,
             "description": "Creates an &lt;input&gt;&lt;/input&gt; element in the DOM of type 'file'.\nThis allows users to select local files for use in a sketch.",
             "itemtype": "method",
             "name": "createFileInput",
@@ -13540,14 +13540,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 742,
+            "line": 747,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 779,
+            "line": 784,
             "description": "Creates an HTML5 &lt;video&gt; element in the DOM for simple playback\nof audio/video. Shown by default, can be hidden with .hide()\nand drawn into canvas using video(). Appends to the container\nnode if one is specified, otherwise appends to body. The first parameter\ncan be either a single string path to a video file, or an array of string\npaths to different formats of the same video. This is useful for ensuring\nthat your video can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage</a> for further information about supported formats.",
             "itemtype": "method",
             "name": "createVideo",
@@ -13574,14 +13574,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 805,
+            "line": 810,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 807,
+            "line": 812,
             "description": "Creates a hidden HTML5 &lt;audio&gt; element in the DOM for simple audio\nplayback. Appends to the container node if one is specified,\notherwise appends to body. The first parameter\ncan be either a single string path to a audio file, or an array of string\npaths to different formats of the same audio. This is useful for ensuring\nthat your audio can play across different browsers, as each supports\ndifferent formats. See <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats\">this\npage for further information about supported formats</a>.",
             "itemtype": "method",
             "name": "createAudio",
@@ -13608,15 +13608,15 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 833,
+            "line": 838,
             "class": "p5.dom",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 843,
-            "description": "Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video(). More\nspecific properties of the stream can be passing in a Constraints object.\nSee the\n<a href=\"http://w3c.github.io/mediacapture-main/getusermedia.html\">W3C\nspec</a> for possible properties. Note that not all of these are supported\nby all browsers.",
+            "line": 848,
+            "description": "<p>Creates a new &lt;video&gt; element that contains the audio/video feed\nfrom a webcam. This can be drawn onto the canvas using video().</p>\n<p>More specific properties of the feed can be passing in a Constraints object.\nSee the\n<a href=\"http://w3c.github.io/mediacapture-main/getusermedia.html#media-track-constraints\"> W3C\nspec</a> for possible properties. Note that not all of these are supported\nby all browsers.</p>\n<p>Security note: A new browser security specification requires that getUserMedia, \nwhich is behind createCapture(), only works when you're running the code locally, \nor on HTTPS. Learn more <a href=\"http://stackoverflow.com/questions/34197653/getusermedia-in-chrome-47-without-using-https\">here</a>\nand <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia\">here</a>.</p>",
             "itemtype": "method",
             "name": "createCapture",
             "params": [
@@ -13644,7 +13644,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 941,
+            "line": 950,
             "description": "Creates element with given tag in the DOM with given content.\nAppends to the container node if one is specified, otherwise\nappends to body.",
             "itemtype": "method",
             "name": "createElement",
@@ -13674,7 +13674,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 967,
+            "line": 976,
             "description": "Adds specified class to the element.",
             "itemtype": "method",
             "name": "addClass",
@@ -13698,7 +13698,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 994,
+            "line": 1003,
             "description": "Removes specified class from the element.",
             "itemtype": "method",
             "name": "removeClass",
@@ -13719,7 +13719,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1009,
+            "line": 1018,
             "description": "Attaches the element  as a child to the parent specified.\n Accepts either a string ID, DOM node, or p5.Element.\n If no argument is specified, an array of children DOM nodes is returned.",
             "itemtype": "method",
             "name": "child",
@@ -13744,7 +13744,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1053,
+            "line": 1062,
             "description": "Centers a p5 Element either vertically, horizontally,\nor both, relative to its parent or according to\nthe body if the Element has no parent. If no argument is passed\nthe Element is aligned both vertically and horizontally.",
             "params": [
                 {
@@ -13766,7 +13766,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1106,
+            "line": 1115,
             "description": "If an argument is given, sets the inner HTML of the element,\n replacing any existing html. If no arguments are given, returns\n the inner HTML of the element.",
             "itemtype": "method",
             "name": "html",
@@ -13791,7 +13791,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1132,
+            "line": 1141,
             "description": "Sets the position of the element relative to (0, 0) of the\n window. Essentially, sets position:absolute and left and top\n properties of style. If no arguments given returns the x and y position\n of the element in an object.",
             "itemtype": "method",
             "name": "position",
@@ -13822,7 +13822,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1213,
+            "line": 1222,
             "description": "Sets the given style (css) property (1st arg) of the element with the\ngiven value (2nd arg). If a single argument is given, .style()\nreturns the value of the given property; however, if the single argument\nis given in css syntax ('text-align:center'), .style() sets the css\nappropriatly. .style() also handles 2d and 3d css transforms. If\nthe 1st arg is 'rotate', 'translate', or 'position', the following arguments\naccept Numbers as values. ('translate', 10, 100, 50);",
             "itemtype": "method",
             "name": "style",
@@ -13870,7 +13870,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1298,
+            "line": 1307,
             "description": "Adds a new attribute or changes the value of an existing attribute\n on the specified element. If no value is specified, returns the\n value of the given attribute, or null if attribute is not set.",
             "itemtype": "method",
             "name": "attribute",
@@ -13900,7 +13900,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1325,
+            "line": 1334,
             "description": "Either returns the value of the element if no arguments\ngiven, or sets the value of the element.",
             "itemtype": "method",
             "name": "value",
@@ -13925,7 +13925,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1368,
+            "line": 1377,
             "description": "Shows the current element. Essentially, setting display:block for the style.",
             "itemtype": "method",
             "name": "show",
@@ -13942,7 +13942,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1386,
+            "line": 1395,
             "description": "Hides the current element. Essentially, setting display:none for the style.",
             "itemtype": "method",
             "name": "hide",
@@ -13959,7 +13959,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1402,
+            "line": 1411,
             "description": "Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.",
             "itemtype": "method",
             "name": "size",
@@ -13990,7 +13990,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1468,
+            "line": 1477,
             "description": "Removes the element and deregisters all listeners.",
             "itemtype": "method",
             "name": "remove",
@@ -14003,7 +14003,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1517,
+            "line": 1526,
             "description": "Path to the media element source.",
             "itemtype": "property",
             "name": "src",
@@ -14017,7 +14017,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1552,
+            "line": 1561,
             "description": "Play an HTML5 media element.",
             "itemtype": "method",
             "name": "play",
@@ -14031,7 +14031,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1573,
+            "line": 1582,
             "description": "Stops an HTML5 media element (sets current time to zero).",
             "itemtype": "method",
             "name": "stop",
@@ -14045,7 +14045,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1585,
+            "line": 1594,
             "description": "Pauses an HTML5 media element.",
             "itemtype": "method",
             "name": "pause",
@@ -14059,7 +14059,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1596,
+            "line": 1605,
             "description": "Set 'loop' to true for an HTML5 media element, and starts playing.",
             "itemtype": "method",
             "name": "loop",
@@ -14073,7 +14073,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1607,
+            "line": 1616,
             "description": "Set 'loop' to false for an HTML5 media element. Element will stop\nwhen it reaches the end.",
             "itemtype": "method",
             "name": "noLoop",
@@ -14087,7 +14087,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1620,
+            "line": 1629,
             "description": "Set HTML5 media element to autoplay or not.",
             "itemtype": "method",
             "name": "autoplay",
@@ -14108,7 +14108,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1632,
+            "line": 1641,
             "description": "Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.",
             "params": [
                 {
@@ -14130,7 +14130,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1648,
+            "line": 1657,
             "description": "If no arguments are given, returns the current playback speed of the\nelement. The speed parameter sets the speed where 2.0 will play the\nelement twice as fast, 0.5 will play at half the speed, and -1 will play\nthe element in normal speed in reverse.(Note that not all browsers support\nbackward playback and even if they do, playback might not be smooth.)",
             "itemtype": "method",
             "name": "speed",
@@ -14152,7 +14152,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1667,
+            "line": 1676,
             "description": "If no arguments are given, returns the current time of the element.\nIf an argument is given the current time of the element is set to it.",
             "itemtype": "method",
             "name": "time",
@@ -14174,7 +14174,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1684,
+            "line": 1693,
             "description": "Returns the duration of the HTML5 media element.",
             "itemtype": "method",
             "name": "duration",
@@ -14188,7 +14188,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1727,
+            "line": 1736,
             "description": "Schedule an event to be called when the audio or video\nelement reaches the end. If the element is looping,\nthis will not be called. The element is passed in\nas the argument to the onended callback.",
             "itemtype": "method",
             "name": "onended",
@@ -14212,14 +14212,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1759,
+            "line": 1768,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1761,
+            "line": 1770,
             "description": "Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5's master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.\n\nThis method is meant to be used with the p5.sound.js addon library.",
             "itemtype": "method",
             "name": "connect",
@@ -14236,7 +14236,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1813,
+            "line": 1822,
             "description": "Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.",
             "itemtype": "method",
             "name": "disconnect",
@@ -14246,14 +14246,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1829,
+            "line": 1838,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1831,
+            "line": 1840,
             "description": "Show the default MediaElement controls, as determined by the web browser.",
             "itemtype": "method",
             "name": "showControls",
@@ -14263,7 +14263,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1842,
+            "line": 1851,
             "description": "Hide the default mediaElement controls.",
             "itemtype": "method",
             "name": "hideControls",
@@ -14273,14 +14273,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1851,
+            "line": 1860,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1853,
+            "line": 1862,
             "description": "Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.\n\nAccepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.\n\nTime will be passed as the first parameter to the callback function,\nand param will be the second parameter.",
             "itemtype": "method",
             "name": "addCue",
@@ -14315,7 +14315,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1915,
+            "line": 1924,
             "description": "Remove a callback based on its ID. The ID is returned by the\naddCue method.",
             "itemtype": "method",
             "name": "removeCue",
@@ -14332,7 +14332,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1935,
+            "line": 1944,
             "description": "Remove all of the callbacks that had originally been scheduled\nvia the addCue method.",
             "itemtype": "method",
             "name": "clearCues",
@@ -14342,7 +14342,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1992,
+            "line": 2001,
             "description": "Underlying File object. All normal File methods can be called on this.",
             "itemtype": "property",
             "name": "file",
@@ -14352,7 +14352,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2004,
+            "line": 2013,
             "description": "File type (image, text, etc.)",
             "itemtype": "property",
             "name": "type",
@@ -14362,7 +14362,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2010,
+            "line": 2019,
             "description": "File subtype (usually the file extension jpg, png, xml, etc.)",
             "itemtype": "property",
             "name": "subtype",
@@ -14372,7 +14372,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2016,
+            "line": 2025,
             "description": "File name",
             "itemtype": "property",
             "name": "name",
@@ -14382,7 +14382,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2022,
+            "line": 2031,
             "description": "File size",
             "itemtype": "property",
             "name": "size",
@@ -14392,7 +14392,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2029,
+            "line": 2038,
             "description": "URL string containing image data.",
             "itemtype": "property",
             "name": "data",
@@ -18357,7 +18357,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:782"
+            "line": " src/core/p5.Element.js:780"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
@@ -18405,7 +18405,7 @@
         },
         {
             "message": "Missing item type\nThe onblur function is called when the user is no longer focused\non the p5 element. Because the keyup events will not fire if the user is\nnot focused on the element we must assume all keys currently down have\nbeen released.",
-            "line": " src/events/keyboard.js:272"
+            "line": " src/events/keyboard.js:273"
         },
         {
             "message": "Missing item type\nThis module defines the filters for use with image buffers.\n\nThis module is basically a collection of functions stored in an object\nas opposed to modules. The functions are destructive, modifying\nthe passed in canvas rather than creating a copy.\n\nGenerally speaking users of this module will use the Filters.apply method\non a canvas to create an effect.\n\nA number of functions are borrowed/adapted from\nhttp://www.html5rocks.com/en/tutorials/canvas/imagefilters/\nor the java processing implementation.",
@@ -18597,31 +18597,31 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:742"
+            "line": " lib/addons/p5.dom.js:747"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:805"
+            "line": " lib/addons/p5.dom.js:810"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:833"
+            "line": " lib/addons/p5.dom.js:838"
         },
         {
             "message": "Missing item type\nCenters a p5 Element either vertically, horizontally,\nor both, relative to its parent or according to\nthe body if the Element has no parent. If no argument is passed\nthe Element is aligned both vertically and horizontally.",
-            "line": " lib/addons/p5.dom.js:1053"
+            "line": " lib/addons/p5.dom.js:1062"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1759"
+            "line": " lib/addons/p5.dom.js:1768"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1829"
+            "line": " lib/addons/p5.dom.js:1838"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1851"
+            "line": " lib/addons/p5.dom.js:1860"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
