@@ -1,10 +1,5 @@
 {
-    "project": {
-        "name": "p5",
-        "description": "",
-        "version": "0.4.23",
-        "url": ""
-    },
+    "project": {},
     "files": {
         "src/3d/3d_primitives.js": {
             "name": "src/3d/3d_primitives.js",
@@ -2365,7 +2360,7 @@
         {
             "file": "src/3d/3d_primitives.js",
             "line": 69,
-            "description": "Draw a sphere with given raduis",
+            "description": "Draw a sphere with given radius",
             "itemtype": "method",
             "name": "sphere",
             "params": [
@@ -3837,31 +3832,6 @@
             "description": "Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n<br><br>\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency. If a single string parameter is provided it will be\ninterpreted as a CSS-compatible color string.\n\nColors are stored as Numbers or Arrays.",
             "itemtype": "method",
             "name": "color",
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "gray value or red or hue value relative to\n                                the current color range, or a color string",
-                    "type": "Number|String"
-                },
-                {
-                    "name": "v2",
-                    "description": "gray value or green or saturation value\n                                relative to the current color range (or\n                                alpha value if first param is gray value)",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "v3",
-                    "description": "gray value or blue or brightness value\n                                relative to the current color range",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "alpha",
-                    "description": "alpha value relative to current color range",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
             "return": {
                 "description": "resulting color",
                 "type": "Array"
@@ -3871,11 +3841,55 @@
             ],
             "class": "p5",
             "module": "Color",
-            "submodule": "Creating & Reading"
+            "submodule": "Creating & Reading",
+            "overloads": [
+                {
+                    "line": 95,
+                    "params": [
+                        {
+                            "name": "gray",
+                            "description": "number specifying value between white\n                                and black.",
+                            "type": "Number|String"
+                        },
+                        {
+                            "name": "alpha",
+                            "description": "alpha value relative to current color range",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "line": 241,
+                    "params": [
+                        {
+                            "name": "v1",
+                            "description": "red or hue value relative to\n                                the current color range, or a color string",
+                            "type": "Number|String"
+                        },
+                        {
+                            "name": "v2",
+                            "description": "green or saturation value\n                                relative to the current color range",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "v3",
+                            "description": "blue or brightness value\n                                relative to the current color range",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "alpha",
+                            "description": "",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 263,
+            "line": 270,
             "description": "Extracts the green value from a color or pixel array.",
             "itemtype": "method",
             "name": "green",
@@ -3895,7 +3909,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 290,
+            "line": 297,
             "description": "Extracts the hue value from a color or pixel array.\n\nHue exists in both HSB and HSL. This function will return the\nHSB-normalized hue when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL-normalized hue otherwise. (The values will only be different if the\nmaximum hue setting for each system is different.)",
             "itemtype": "method",
             "name": "hue",
@@ -3915,7 +3929,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 323,
+            "line": 330,
             "description": "Blends two colors to find a third color somewhere between them. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first color, 0.1 is very near the first color, 0.5 is halfway\nin between, etc. An amount below 0 will be treated as 0. Likewise, amounts\nabove 1 will be capped at 1. This is different from the behavior of lerp(),\nbut necessary because otherwise numbers outside the range will produce\nstrange and unexpected colors.\n<br><br>\nThe way that colours are interpolated depends on the current color mode.",
             "itemtype": "method",
             "name": "lerpColor",
@@ -3949,7 +3963,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 406,
+            "line": 413,
             "description": "Extracts the HSL lightness value from a color or pixel array.",
             "itemtype": "method",
             "name": "lightness",
@@ -3969,7 +3983,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 433,
+            "line": 440,
             "description": "Extracts the red value from a color or pixel array.",
             "itemtype": "method",
             "name": "red",
@@ -3989,7 +4003,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 470,
+            "line": 477,
             "description": "Extracts the saturation value from a color or pixel array.\n\nSaturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL saturation otherwise.",
             "itemtype": "method",
             "name": "saturation",
@@ -4083,41 +4097,108 @@
             "description": "The background() function sets the color used for the background of the\np5.js canvas. The default background is light gray. This function is\ntypically used within draw() to clear the display window at the beginning\nof each frame, but it can be used inside setup() to set the background on\nthe first frame of animation or if the background need only be set once.",
             "itemtype": "method",
             "name": "background",
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "gray value, red or hue value\n                                              (depending on the current\n                                              color mode), color string,\n                                              p5.Color, or p5.Image",
-                    "type": "Number|String|p5.Color|p5.Image"
-                },
-                {
-                    "name": "v2",
-                    "description": "green or saturation value\n                                              (depending on the current\n                                              color mode)",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "v3",
-                    "description": "blue or brightness value\n                                              (depending on the current\n                                              color mode)",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "a",
-                    "description": "opacity of the background",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
             "example": [
                 "\n<div>\n<code>\n// Grayscale integer value\nbackground(51);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nbackground(255, 204, 0);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nbackground(255, 204, 100);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nbackground('red');\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nbackground('#fae');\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nbackground('#222222');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nbackground('rgb(0,255,0)');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nbackground('rgba(0,255,0, 0.25)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nbackground('rgb(100%,0%,10%)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nbackground('rgba(100%,0%,100%,0.5)');\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nbackground(color(0, 0, 255));\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
-            "submodule": "Setting"
+            "submodule": "Setting",
+            "overloads": [
+                {
+                    "line": 15,
+                    "params": [
+                        {
+                            "name": "color",
+                            "description": "any value created by the color() function",
+                            "type": "p5.Color"
+                        },
+                        {
+                            "name": "a",
+                            "description": "opacity of the background",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "line": 106,
+                    "params": [
+                        {
+                            "name": "colorstring",
+                            "description": "color string, possible formats include: integer\n                        rgb() or rgba(), percentage rgb() or rgba(),\n                        3-digit hex, 6-digit hex",
+                            "type": "String"
+                        },
+                        {
+                            "name": "a",
+                            "description": "",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "line": 114,
+                    "params": [
+                        {
+                            "name": "gray",
+                            "description": "specifies a value between white and black",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "a",
+                            "description": "",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "line": 120,
+                    "params": [
+                        {
+                            "name": "v1",
+                            "description": "red or hue value (depending on the current color\n                       mode)",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "v2",
+                            "description": "green or saturation value (depending on the current\n                       color mode)",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "v3",
+                            "description": "blue or brightness value (depending on the current\n                       color mode)",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "a",
+                            "description": "",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "line": 131,
+                    "params": [
+                        {
+                            "name": "image",
+                            "description": "image created with loadImage() or createImage(),\n                            to set as background\n                            (must be same size as the sketch window)",
+                            "type": "p5.Image"
+                        },
+                        {
+                            "name": "a",
+                            "description": "",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/color/setting.js",
-            "line": 123,
+            "line": 147,
             "description": "Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won't work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.",
             "itemtype": "method",
             "name": "clear",
@@ -4130,7 +4211,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 155,
+            "line": 179,
             "description": "colorMode() changes the way p5.js interprets color data. By default, the\nparameters for fill(), stroke(), background(), and color() are defined by\nvalues between 0 and 255 using the RGB color model. This is equivalent to\nsetting colorMode(RGB, 255). Setting colorMode(HSB) lets you use the HSB\nsystem instead. By default, this is colorMode(HSB, 360, 100, 100, 1). You\ncan also use HSL.\n<br><br>\nNote: existing color objects remember the mode that they were created in,\nso you can change modes as you like without affecting their appearance.",
             "itemtype": "method",
             "name": "colorMode",
@@ -4174,7 +4255,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 258,
+            "line": 282,
             "description": "Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color strings\nand all named color strings are supported. A p5 Color object can also be\nprovided to set the fill color.",
             "itemtype": "method",
             "name": "fill",
@@ -4212,7 +4293,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 379,
+            "line": 403,
             "description": "Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noFill",
@@ -4225,7 +4306,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 398,
+            "line": 422,
             "description": "Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.",
             "itemtype": "method",
             "name": "noStroke",
@@ -4238,7 +4319,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 416,
+            "line": 440,
             "description": "Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color\nstrings and all named color strings are supported. A p5 Color object\ncan also be provided to set the stroke color.",
             "itemtype": "method",
             "name": "stroke",
@@ -4552,7 +4633,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n// Draw a rectangle at location (30, 20) with a width and height of 55.\nrect(30, 20, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners, each having a radius of 20.\nrect(30, 20, 55, 55, 20);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners having the following radii:\n// top-left = 20, top-right = 15, bottom-right = 10, bottom-left = 5.\nrect(30, 20, 55, 55, 20, 15, 10, 5)\n</code>\n</div>"
+                "\n<div>\n<code>\n// Draw a rectangle at location (30, 20) with a width and height of 55.\nrect(30, 20, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners, each having a radius of 20.\nrect(30, 20, 55, 55, 20);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners having the following radii:\n// top-left = 20, top-right = 15, bottom-right = 10, bottom-left = 5.\nrect(30, 20, 55, 55, 20, 15, 10, 5);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -6344,7 +6425,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 178,
+            "line": 180,
             "description": "The push() function saves the current drawing style settings and\ntransformations, while pop() restores these settings. Note that these\nfunctions are always used together. They allow you to change the style\nand transformation settings and later return to what you had. When a new\nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide\nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(),\nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(),\nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(),\ntextFont(), textMode(), textSize(), textLeading().",
             "itemtype": "method",
             "name": "pop",
@@ -6357,7 +6438,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 245,
+            "line": 247,
             "description": "Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs.\n <br><br>\n In structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n <br><br>\n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().",
             "itemtype": "method",
             "name": "redraw",
@@ -12950,8 +13031,7 @@
                 {
                     "name": "str",
                     "description": "a String or Array of Strings to be trimmed",
-                    "type": "String|Array",
-                    "optional": true
+                    "type": "String|Array"
                 }
             ],
             "return": {

@@ -2864,6 +2864,67 @@
   return Backbone;
 }));
 
+// https://github.com/umdjs/umd/blob/master/templates/returnExports.js
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define('documented-method',[], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    module.exports = factory();
+  } else {
+    root.DocumentedMethod = factory();
+  }
+}(this, function () {
+  function extend(target, src) {
+    Object.keys(src).forEach(function(prop) {
+      target[prop] = src[prop];
+    });
+    return target;
+  }
+
+  function DocumentedMethod(classitem) {
+    extend(this, classitem);
+
+    if (this.overloads) {
+      // Make each overload inherit properties from their parent
+      // classitem.
+      this.overloads = this.overloads.map(function(overload) {
+        return extend(Object.create(this), overload);
+      }, this);
+
+      if (this.params) {
+        throw new Error('params for overloaded methods should be undefined');
+      }
+
+      this.params = this._getMergedParams();
+    }
+  }
+
+  DocumentedMethod.prototype = {
+    // Merge parameters across all overloaded versions of this item.
+    _getMergedParams: function() {
+      var paramNames = {};
+      var params = [];
+
+      this.overloads.forEach(function(overload) {
+        if (!overload.params) {
+          return;
+        }
+        overload.params.forEach(function(param) {
+          if (param.name in paramNames) {
+            return;
+          }
+          paramNames[param.name] = param;
+          params.push(param);
+        });
+      });
+
+      return params;
+    }
+  };
+
+  return DocumentedMethod;
+}));
+
 /**
  * @license RequireJS text 2.0.10 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
  * Available via the MIT or new BSD license.
@@ -5242,7 +5303,7 @@ define('listView',[
 });
 
 
-define('text!tpl/item.html',[],function () { return '<h3><%=item.name%><% if (item.isMethod) { %>()<% } %></h3>\n\n<% if (item.example) { %>\n<div class="example">\n  <h4>Example</h4>\n\n\t<div class="example-content">\n    <%= item.example %>\n  </div>\n</div> \n<% } %>\n\n\n<div class="description">\n  <h4>Description</h4>\n  <p><%= item.description %></p>\n\n  <% if (item.module === \'p5.dom\') { %>\n    <p>This function requires you include the p5.dom library.  Add the following into the head of your index.html file:\n      <pre><code class="language-javascript">&lt;script language="javascript" type="text/javascript" src="path/to/p5.dom.js"&gt;&lt;/script&gt;</code></pre>\n    </p>\n  <% } %>\n  <% if (item.module === \'p5.sound\') { %>\n    <p>This function requires you include the p5.sound library.  Add the following into the head of your index.html file:\n      <pre><code class="language-javascript">&lt;script language="javascript" type="text/javascript" src="path/to/p5.sound.js"&gt;&lt;/script&gt;</code></pre>\n    </p>\n  <% } %>\n</div>\n\n\n<div>\n  <h4>Syntax</h4>\n  <p><pre><code class="language-javascript"><%= syntax %></code></pre></p>\n</div>\n\n\n<% if (item.return) { %>\n<span class="returns-inline">\n  <span class="type"></span>\n</span>\n<% } %>\n\n<% if (item.deprecated) { %>\n<span class="flag deprecated"<% if (item.deprecationMessage) { %> title="<%=item.deprecationMessage%>"<% } %>>deprecated</span>\n<% } %>\n\n<% if (item.access) { %>\n<span class="flag <%=item.access%>"><%= item.access %></span>\n<% } %>\n\n<% if (item.final) { %>\n<span class="flag final">final</span>\n<% } %>\n\n<% if (item.static) { %>\n<span class="flag static">static</span>\n<% } %>\n\n<% if (item.chainable) { %>\n<span class="label label-success chainable">chainable</span>\n<% } %>\n\n<% if (item.async) { %>\n<span class="flag async">async</span>\n<% } %>\n\n<!--  <div class="meta">\n    {{#if overwritten_from}}\n    <p>Inherited from\n      <a href="#">\n        {{overwritten_from/class}}\n      </a>\n      {{#if foundAt}}\n      but overwritten in\n      {{/if}}\n      {{else}}\n      {{#if extended_from}}\n    <p>Inherited from\n      <a href="#">{{extended_from}}</a>:\n      {{else}}\n      {{#providedBy}}\n    <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n    {{/providedBy}}\n    <p>\n      {{#if foundAt}}\n      Defined in\n      {{/if}}\n      {{/if}}\n      {{/if}}\n      {{#if foundAt}}\n      <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n      {{/if}}\n    </p>\n\n    {{#if deprecationMessage}}\n    <p>Deprecated: {{deprecationMessage}}</p>\n    {{/if}}\n\n    {{#if since}}\n    <p>Available since {{since}}</p>\n    {{/if}}\n  </div>-->\n\n<% if (item.params) { %>\n<div class="params">\n  <h4>Parameters</h4>\n  <table>\n  <% for (var i=0; i<item.params.length; i++) { %>\n    <tr>\n    <td>\n    <% var p = item.params[i] %>\n    <% if (p.optional) { %>\n      <code class="language-javascript">[<%=p.name%>]</code>\n    <% } else { %>\n      <code class="language-javascript"><%=p.name%></code>\n    <% } %> \n    <%if (p.optdefault) { %>=<%=p.optdefault%><% } %>\n    </td>\n    <td>\n    <% if (p.type) { %>\n      <span class="param-type label label-info"><%=p.type%></span>: <%=p.description%></span> \n    <% } %>\n    <% if (p.multiple) {%>\n      <span class="flag multiple" title="This argument may occur one or more times.">multiple</span>\n    <% } %>\n    </td>\n    </tr>\n  <% } %>\n  </table>\n</div>\n<% } %>\n\n<% if (item.return) { %>\n<div>\n  <h4>Returns</h4>\n    <% if (item.return.type) { %>\n      <p><span class="param-type label label-info"><%=item.return.type%></span>: <%= item.return.description %></p>\n    <% } %>\n</div>\n<% } %>\n\n';});
+define('text!tpl/item.html',[],function () { return '<h3><%=item.name%><% if (item.isMethod) { %>()<% } %></h3>\n\n<% if (item.example) { %>\n<div class="example">\n  <h4>Example</h4>\n\n\t<div class="example-content">\n    <%= item.example %>\n  </div>\n</div> \n<% } %>\n\n\n<div class="description">\n  <h4>Description</h4>\n  <p><%= item.description %></p>\n\n  <% if (item.module === \'p5.dom\') { %>\n    <p>This function requires you include the p5.dom library.  Add the following into the head of your index.html file:\n      <pre><code class="language-javascript">&lt;script language="javascript" type="text/javascript" src="path/to/p5.dom.js"&gt;&lt;/script&gt;</code></pre>\n    </p>\n  <% } %>\n  <% if (item.module === \'p5.sound\') { %>\n    <p>This function requires you include the p5.sound library.  Add the following into the head of your index.html file:\n      <pre><code class="language-javascript">&lt;script language="javascript" type="text/javascript" src="path/to/p5.sound.js"&gt;&lt;/script&gt;</code></pre>\n    </p>\n  <% } %>\n</div>\n\n\n<div>\n  <h4>Syntax</h4>\n  <p>\n    <% syntaxes.forEach(function(syntax) { %>\n    <pre><code class="language-javascript"><%= syntax %></code></pre>\n    <% }) %>\n  </p>\n</div>\n\n\n<% if (item.return) { %>\n<span class="returns-inline">\n  <span class="type"></span>\n</span>\n<% } %>\n\n<% if (item.deprecated) { %>\n<span class="flag deprecated"<% if (item.deprecationMessage) { %> title="<%=item.deprecationMessage%>"<% } %>>deprecated</span>\n<% } %>\n\n<% if (item.access) { %>\n<span class="flag <%=item.access%>"><%= item.access %></span>\n<% } %>\n\n<% if (item.final) { %>\n<span class="flag final">final</span>\n<% } %>\n\n<% if (item.static) { %>\n<span class="flag static">static</span>\n<% } %>\n\n<% if (item.chainable) { %>\n<span class="label label-success chainable">chainable</span>\n<% } %>\n\n<% if (item.async) { %>\n<span class="flag async">async</span>\n<% } %>\n\n<!--  <div class="meta">\n    {{#if overwritten_from}}\n    <p>Inherited from\n      <a href="#">\n        {{overwritten_from/class}}\n      </a>\n      {{#if foundAt}}\n      but overwritten in\n      {{/if}}\n      {{else}}\n      {{#if extended_from}}\n    <p>Inherited from\n      <a href="#">{{extended_from}}</a>:\n      {{else}}\n      {{#providedBy}}\n    <p>Provided by the <a href="../modules/{{.}}.html">{{.}}</a> module.</p>\n    {{/providedBy}}\n    <p>\n      {{#if foundAt}}\n      Defined in\n      {{/if}}\n      {{/if}}\n      {{/if}}\n      {{#if foundAt}}\n      <a href="{{foundAt}}">`{{{file}}}:{{{line}}}`</a>\n      {{/if}}\n    </p>\n\n    {{#if deprecationMessage}}\n    <p>Deprecated: {{deprecationMessage}}</p>\n    {{/if}}\n\n    {{#if since}}\n    <p>Available since {{since}}</p>\n    {{/if}}\n  </div>-->\n\n<% if (item.params) { %>\n<div class="params">\n  <h4>Parameters</h4>\n  <table>\n  <% for (var i=0; i<item.params.length; i++) { %>\n    <tr>\n    <td>\n    <% var p = item.params[i] %>\n    <% if (p.optional) { %>\n      <code class="language-javascript">[<%=p.name%>]</code>\n    <% } else { %>\n      <code class="language-javascript"><%=p.name%></code>\n    <% } %> \n    <%if (p.optdefault) { %>=<%=p.optdefault%><% } %>\n    </td>\n    <td>\n    <% if (p.type) { %>\n      <span class="param-type label label-info"><%=p.type%></span>: <%=p.description%></span> \n    <% } %>\n    <% if (p.multiple) {%>\n      <span class="flag multiple" title="This argument may occur one or more times.">multiple</span>\n    <% } %>\n    </td>\n    </tr>\n  <% } %>\n  </table>\n</div>\n<% } %>\n\n<% if (item.return) { %>\n<div>\n  <h4>Returns</h4>\n    <% if (item.return.type) { %>\n      <p><span class="param-type label label-info"><%=item.return.type%></span>: <%= item.return.description %></p>\n    <% } %>\n</div>\n<% } %>\n\n';});
 
 
 define('text!tpl/class.html',[],function () { return '\n<% if (is_constructor) { %>\n<div class="constructor">\n  <!--<h2>Constructor</h2>--> \n  <%=constructor%>\n</div>\n<% } %>\n\n<% var fields = _.filter(things, function(item) { return item.itemtype === \'property\' }); %>\n<% if (fields.length > 0) { %>\n  <h4>Fields</h4>\n  <p>\n    <% _.each(fields, function(item) { %>\n      <a href="<%=item.hash%>" <% if (item.module !== module) { %>class="addon"<% } %> ><%=item.name%></a>: <%= item.description %>\n      <br>\n    <% }); %>\n  </p>\n<% } %>\n\n<% var methods = _.filter(things, function(item) { return item.itemtype === \'method\' }); %>\n<% if (methods.length > 0) { %>\n  <h4>Methods</h4>\n  <p>\n    <table>\n    <% _.each(methods, function(item) { %>\n      <tr>\n      <td><a href="<%=item.hash%>" <% if (item.module !== module) { %>class="addon"<% } %>><%=item.name%><% if (item.itemtype === \'method\') { %>()<%}%></a></td><td><%= item.description %></td>\n      </tr>\n    <% }); %>\n    </table>\n  </p>\n<% } %>';});
@@ -6935,6 +6996,41 @@ define('itemView',[
 
       return this;
     },
+    getSyntax: function(isMethod, cleanItem) {
+      var isConstructor = cleanItem.is_constructor;
+      var syntax = '';
+      if (isConstructor) syntax += 'new ';
+      syntax += cleanItem.name;
+
+      if (isMethod || isConstructor) {
+        syntax += '(';
+        if (cleanItem.params) {
+          for (var i=0; i<cleanItem.params.length; i++) { 
+            var p = cleanItem.params[i];
+            if (p.optional) syntax += '[';
+            syntax += p.name;
+            if (p.optdefault) syntax += '='+p.optdefault;
+            if (p.optional) syntax += ']';
+            if (i !== cleanItem.params.length-1) {
+              syntax += ',';
+            }
+          }
+        }
+        syntax += ')';
+      }
+
+      return syntax;
+    },
+    // Return a list of valid syntaxes across all overloaded versions of
+    // this item.
+    //
+    // For reference, we ultimately want to replicate something like this:
+    //
+    // https://processing.org/reference/color_.html
+    getSyntaxes: function(isMethod, cleanItem) {
+      var overloads = cleanItem.overloads || [cleanItem];
+      return overloads.map(this.getSyntax.bind(this, isMethod));
+    },
     render: function (item) {
       if (item) {
         var itemHtml = '',
@@ -6944,29 +7040,7 @@ define('itemView',[
             isConstructor = cleanItem.is_constructor;
         cleanItem.isMethod = collectionName === 'Method';
 
-
-        // create syntax string
-        var syntax = '';
-        if (isConstructor) syntax += 'new ';
-        syntax += cleanItem.name;
-
-        if (cleanItem.isMethod || isConstructor) {
-          syntax += '(';
-          if (cleanItem.params) {
-            for (var i=0; i<cleanItem.params.length; i++) { 
-              var p = cleanItem.params[i];
-              if (p.optional) syntax += '[';
-              syntax += p.name;
-              if (p.optdefault) syntax += '='+p.optdefault;
-              if (p.optional) syntax += ']';
-              if (i !== cleanItem.params.length-1) {
-                syntax += ',';
-              }
-            }
-          }
-          syntax += ')';
-        }
-
+        var syntaxes = this.getSyntaxes(cleanItem.isMethod, cleanItem);
 
         // Set the item header (title)
 
@@ -6975,7 +7049,7 @@ define('itemView',[
           if (isConstructor) {
             var constructor = this.tpl({
               item: cleanItem,
-              syntax: syntax
+              syntaxes: syntaxes
             });
             cleanItem.constructor = constructor;
           }
@@ -6988,7 +7062,7 @@ define('itemView',[
         } else {
           itemHtml = this.tpl({
             item: cleanItem,
-            syntax: syntax
+            syntaxes: syntaxes
           });
         }
 
@@ -7552,7 +7626,8 @@ define('App', [],function() {
 require([
   'underscore',
   'backbone',
-  'App'], function(_, Backbone, App) {
+  'App',
+  './documented-method'], function(_, Backbone, App, DocumentedMethod) {
   
   // Set collections
   App.collections = ['allItems', 'classes', 'events', 'methods', 'properties', 'p5.sound', 'p5.dom'];
@@ -7598,9 +7673,9 @@ require([
 
     // Get class items (methods, properties, events)
     _.each(items, function(el, idx, array) {
-
       if (el.itemtype) {
         if (el.itemtype === "method") {
+          el = new DocumentedMethod(el);
           App.methods.push(el);
           App.allItems.push(el);
         } else if (el.itemtype === "property") {
