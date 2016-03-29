@@ -99,7 +99,7 @@
         <p>Older releases / changelog <a href="https://github.com/processing/p5.js/releases">p5</a>, <a href="https://github.com/processing/p5.js-editor/releases">editor</a><br>
         Github <a href="https://github.com/processing/p5.js">p5</a>, <a href="https://github.com/processing/p5.js-editor">editor</a><br>
         Report bugs <a href="https://github.com/processing/p5.js/issues">p5</a>, <a href="https://github.com/processing/p5.js-editor/issues">editor</a><br>
-        Supported browsers <a href="https://github.com/processing/p5.js/wiki/Supported-browsers">editor</a></p>
+        Supported browsers <a href="https://github.com/processing/p5.js/wiki/Supported-browsers">p5</a></p>
         </a>
 
         <!--
