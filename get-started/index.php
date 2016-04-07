@@ -39,7 +39,7 @@
         change the link to:
       </p>
 
-      <pre><code class="language-markup">&lt;script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>
+      <pre><code class="language-markup">&lt;script src="//cdnjs.cloudflare.com/ajax/libs/p5.js/<?php echo $version; ?>/p5.js">&lt;/script></code></pre>
     </div>
 
       <a name="environment" class="anchor"><h3 class = "start-element tutorial-btn" id = "environment">Environment</h3></a>
