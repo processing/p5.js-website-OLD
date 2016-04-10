@@ -6212,13 +6212,16 @@
                 "description": "",
                 "type": "p5.Element"
             },
+            "example": [
+                "\n<div><code>\nfunction setup() {\n  var c = createCanvas(100, 100);\n  background(200);\n  textAlign(CENTER);\n  text('drop image', width/2, height/2);\n  c.drop(gotFile);\n}\n\nfunction gotFile(file) {\n  var img = createImg(file.data).hide();\n  // Draw the image onto the canvas\n  image(img, 0, 0, width, height);\n}\n</code></div>"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 780,
+            "line": 796,
             "description": "Helper fxn for sharing pixel methods",
             "class": "p5.Element",
             "module": "DOM",
@@ -10802,7 +10805,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = v.copy();\nprint(v1.x == v2.x && v1.y == v2.y && v1.z == v2.z);\n// Prints \"true\"\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = v1.copy();\nprint(v1.x == v2.x && v1.y == v2.y && v1.z == v2.z);\n// Prints \"true\"\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -11586,19 +11589,21 @@
         {
             "file": "src/math/random.js",
             "line": 71,
-            "description": "Return a random number.\n\nTakes either 0, 1 or 2 arguments.\nIf no argument is given, returns a random number between 0 and 1.\nIf one argument is given, returns a random number between 0 and the number.\nIf two arguments are given, returns a random number between them,\ninclusive.",
+            "description": "Return a random floating-point number.\n\nTakes either 0, 1 or 2 arguments.\n\nIf no argument is given, returns a random number from 0\nup to (but not including) 1.\n\nIf one argument is given, returns a random number from 0 up to\n(but not including) the number.\n\nIf two arguments are given, returns a random number from the\nfirst argument up to (but not including) the second argument.",
             "itemtype": "method",
             "name": "random",
             "params": [
                 {
                     "name": "min",
-                    "description": "the lower bound",
-                    "type": "Number"
+                    "description": "the lower bound (inclusive)",
+                    "type": "Number",
+                    "optional": true
                 },
                 {
                     "name": "max",
-                    "description": "the upper bound",
-                    "type": "Number"
+                    "description": "the upper bound (exclusive)",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
             "return": {
@@ -11614,7 +11619,7 @@
         },
         {
             "file": "src/math/random.js",
-            "line": 138,
+            "line": 143,
             "description": "Returns a random number fitting a Gaussian, or\n normal, distribution. There is theoretically no minimum or maximum\n value that randomGaussian() might return. Rather, there is\n just a very low probability that values far from the mean will be\n returned; and a higher probability that numbers near the mean will\n be returned.\n <br><br>\n Takes either 0, 1 or 2 arguments.<br>\n If no args, returns a mean of 0 and standard deviation of 1.<br>\n If one arg, that arg is the mean (standard deviation is 1).<br>\n If two args, first is mean, second is standard deviation.",
             "itemtype": "method",
             "name": "randomGaussian",
@@ -18437,7 +18442,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:780"
+            "line": " src/core/p5.Element.js:796"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
