@@ -75,23 +75,22 @@
     $('#home-sketch-frame').css('left', '0px');
     $('#home-sketch-frame').css('z-index', '-2');
 
+    $('body, #home').css('pointer-events', 'none');
+    $('iframe').css('pointer-events', 'auto');
+    $('a').css('pointer-events', 'auto');
 
-    // Microsoft Edge and IE appear to have an implementation of
-    // CSS pointer-events whereby the children of elements with
-    // "pointer-events: none" cannot *ever* receive pointer events,
-    // even if they are explicitly styled as "pointer-events: auto".
-    //
-    // Unfortunately, this means that the following behavior would render
-    // all links inaccessible on IE and Edge, so we'll have to do
-    // user-agent detection (ugh) to disable it on Edge and IE.
+    // Microsoft Edge and IE appear to have a bug whereby
+    // CSS pointer-events don't do anything on purely inline elements.
+    // This means that almost all our links will be inaccessible, so
+    // we'll force them to be styled as inline-block on affected browsers.
+    // This does result in a few visual artifacts, but it's better than
+    // having completely inaccessible links.
 
     // http://stackoverflow.com/a/33505753/2422398
     var EDGE_IE_REGEX = /(?:\b(MS)?IE\s+|\bTrident\/7\.0;.*\s+rv:|\bEdge\/)(\d+)/;
 
-    if (!EDGE_IE_REGEX.test(navigator.userAgent)) {
-      $('body, #home').css('pointer-events', 'none');
-      $('iframe').css('pointer-events', 'auto');
-      $('a').css('pointer-events', 'auto');
+    if (EDGE_IE_REGEX.test(navigator.userAgent)) {
+      $('a').css('display', 'inline-block');
     }
   </script>
 </body>
