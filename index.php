@@ -25,7 +25,7 @@
       <li><a href="<?php echo getRoot(); ?>contribute/">Contribute</a></li>
     </ul>
 
-    <section id="home" style='pointer-events:none;'>
+    <section id="home">
 
       
 <!--       <div class='focus_blue'>
@@ -74,10 +74,25 @@
     $('#home-sketch-frame').css('top', '0px');
     $('#home-sketch-frame').css('left', '0px');
     $('#home-sketch-frame').css('z-index', '-2');
-    $('body').css('pointer-events', 'none');
-    $('iframe').css('pointer-events', 'auto');
-    $('a').css('pointer-events', 'auto');
 
+
+    // Microsoft Edge and IE appear to have an implementation of
+    // CSS pointer-events whereby the children of elements with
+    // "pointer-events: none" cannot *ever* receive pointer events,
+    // even if they are explicitly styled as "pointer-events: auto".
+    //
+    // Unfortunately, this means that the following behavior would render
+    // all links inaccessible on IE and Edge, so we'll have to do
+    // user-agent detection (ugh) to disable it on Edge and IE.
+
+    // http://stackoverflow.com/a/33505753/2422398
+    var EDGE_IE_REGEX = /(?:\b(MS)?IE\s+|\bTrident\/7\.0;.*\s+rv:|\bEdge\/)(\d+)/;
+
+    if (!EDGE_IE_REGEX.test(navigator.userAgent)) {
+      $('body, #home').css('pointer-events', 'none');
+      $('iframe').css('pointer-events', 'auto');
+      $('a').css('pointer-events', 'auto');
+    }
   </script>
 </body>
 </html>
