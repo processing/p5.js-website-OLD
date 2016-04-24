@@ -12,8 +12,8 @@
           <h2>L-Systems</h2>
           <p>This sketch creates an automated drawing based on a Lindenmayer
  or (L-) system. L-systems are often used in procedural graphics to make
- natural, geometric, or interesting "fractal-style" patterns.
- Example created by <a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>.
+ natural, geometric, or interesting "fractal-style" patterns.<br>
+ Example created by <a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>.<br>
  <a href='https://en.wikipedia.org/wiki/L-system'>https://en.wikipedia.org/wiki/L-system</a>
  </p>
 
