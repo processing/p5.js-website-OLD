@@ -13,6 +13,7 @@
           <p>This sketch uses simple transformations to create a
  Spirograph-like effect with interlocking circles (called sines).
  Press the spacebar to switch between tracing and showing the underlying geometry.
+ Example created by <a href='http://lukedubois.com/' target='_blank'>R. Luke DuBois</a>.
  <a href='http://en.wikipedia.org/wiki/Spirograph'>http://en.wikipedia.org/wiki/Spirograph</a>
  </p>
 
