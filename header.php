@@ -15,7 +15,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- CSS (order matters): normalize across browsers -->
-    <link rel="stylesheet" href="<?php echo getRoot(); ?>css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/1.1.0/normalize.min.css">
 
     <!-- CSS (order matters): Site styles -->
     <link rel="stylesheet" href="<?php echo getRoot(); ?>css/main.css">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="<?php echo getRoot(); ?>css/prism.css">
 
     <!-- modernizer (not leveraged, yet) 
-    <script src="<?php echo getRoot(); ?>js/vendor/modernizr-2.6.2.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>-->
     <!-- jquery-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="<?php echo getRoot(); ?>js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
