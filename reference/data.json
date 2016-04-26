@@ -418,7 +418,9 @@
             "modules": {
                 "XML": 1
             },
-            "classes": {},
+            "classes": {
+                "p5.XML": 1
+            },
             "fors": {},
             "namespaces": {}
         },
@@ -1074,13 +1076,14 @@
             "classes": {
                 "p5": 1,
                 "p5.Table": 1,
-                "p5.TableRow": 1
+                "p5.TableRow": 1,
+                "p5.XML": 1
             },
             "fors": {
                 "p5": 1
             },
             "namespaces": {},
-            "file": "src/io/p5.TableRow.js",
+            "file": "src/io/p5.XML.js",
             "line": 11
         },
         "Input": {
@@ -1141,17 +1144,20 @@
         "XML": {
             "name": "XML",
             "submodules": {},
-            "classes": {},
+            "classes": {
+                "p5.XML": 1
+            },
             "fors": {},
             "is_submodule": 1,
             "namespaces": {},
             "module": "IO",
             "namespace": "",
             "file": "src/io/p5.XML.js",
-            "line": 1,
+            "line": 11,
             "requires": [
                 "core"
-            ]
+            ],
+            "description": "<p>XML is a representation of an XML object, able to parse XML code. Use\nloadXML() to load external XML files and create XML objects.</p>\n"
         },
         "Math": {
             "name": "Math",
@@ -1637,6 +1643,29 @@
                     "type": "String",
                     "optional": true
                 }
+            ]
+        },
+        "p5.XML": {
+            "name": "p5.XML",
+            "shortname": "p5.XML",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "IO",
+            "submodule": "XML",
+            "namespace": "",
+            "file": "src/io/p5.XML.js",
+            "line": 11,
+            "description": "<p>XML is a representation of an XML object, able to parse XML code. Use\nloadXML() to load external XML files and create XML objects.</p>\n",
+            "is_constructor": 1,
+            "return": {
+                "description": "p5.XML object generated",
+                "type": "p5.XML"
+            },
+            "example": [
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var children = xml.getChildren(\"animal\");\n\n  for (var i = 0; i < children.length; i++) {\n    var id = children[i].getNumber(\"id\");\n    var coloring = children[i].getString(\"species\");\n    var name = children[i].getContent();\n    print(id + \", \" + coloring + \", \" + name);\n  }\n}\n\n// Sketch prints:\n// 0, Capra hircus, Goat\n// 1, Panthera pardus, Leopard\n// 2, Equus zebra, Zebra\n</code></div>"
             ]
         },
         "p5.Vector": {
@@ -5822,7 +5851,7 @@
         {
             "file": "src/core/p5.Element.js",
             "line": 36,
-            "description": "<p>Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID, DOM\n node, or p5.Element. If no arguments given, parent node is returned.</p>\n",
+            "description": "<p>Attaches the element to the parent specified. A way of setting\n the container for the element. Accepts either a string ID, DOM\n node, or p5.Element. If no arguments given, parent node is returned.\n For more ways to position the canvas, see the\n <a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>\n positioning the canvas</a> wiki page.</p>\n",
             "itemtype": "method",
             "name": "parent",
             "params": [
@@ -5845,7 +5874,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 88,
+            "line": 91,
             "description": "<p>Sets the ID of the element</p>\n",
             "itemtype": "method",
             "name": "id",
@@ -5866,7 +5895,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 107,
+            "line": 110,
             "description": "<p>Adds given class to the element</p>\n",
             "itemtype": "method",
             "name": "class",
@@ -5887,7 +5916,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 124,
+            "line": 127,
             "description": "<p>The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mousePressed",
@@ -5911,7 +5940,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 169,
+            "line": 172,
             "description": "<p>The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with &quot;natural&quot; scrolling enabled, the values are\nopposite.</p>\n",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -5935,7 +5964,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 223,
+            "line": 226,
             "description": "<p>The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -5959,7 +5988,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 271,
+            "line": 274,
             "description": "<p>The .mouseClicked() function is called once after a mouse button is\npressed and released over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -5983,7 +6012,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 316,
+            "line": 319,
             "description": "<p>The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -6007,7 +6036,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 369,
+            "line": 372,
             "description": "<p>The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseOver",
@@ -6031,7 +6060,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 408,
+            "line": 411,
             "description": "<p>The .changed() function is called when the value of an\nelement is changed.\nThis can be used to attach an element specific event listener.</p>\n",
             "itemtype": "method",
             "name": "changed",
@@ -6055,7 +6084,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 469,
+            "line": 472,
             "description": "<p>The .input() function is called when any user input is\ndetected with an element. The input event is often used\nto detect keystrokes in a input element, or changes on a\nslider element. This can be used to attach an element specific\nevent listener.</p>\n",
             "itemtype": "method",
             "name": "input",
@@ -6079,7 +6108,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 498,
+            "line": 501,
             "description": "<p>The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseOut",
@@ -6103,7 +6132,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 536,
+            "line": 539,
             "description": "<p>The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchStarted",
@@ -6127,7 +6156,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 580,
+            "line": 583,
             "description": "<p>The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchMoved",
@@ -6151,7 +6180,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 616,
+            "line": 619,
             "description": "<p>The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchEnded",
@@ -6175,7 +6204,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 662,
+            "line": 665,
             "description": "<p>The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "dragOver",
@@ -6196,7 +6225,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 677,
+            "line": 680,
             "description": "<p>The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "dragLeave",
@@ -6217,7 +6246,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 692,
+            "line": 695,
             "description": "<p>The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can\noptionally pass two callbacks, the first one (required) is triggered\nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.</p>\n",
             "itemtype": "method",
             "name": "drop",
@@ -6246,7 +6275,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 796,
+            "line": 799,
             "description": "<p>Helper fxn for sharing pixel methods</p>\n",
             "class": "p5.Element",
             "module": "DOM",
@@ -6293,7 +6322,7 @@
         {
             "file": "src/core/rendering.js",
             "line": 14,
-            "description": "<p>Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).\n<br><br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.</p>\n",
+            "description": "<p>Creates a canvas element in the document, and sets the dimensions of it\nin pixels. This method should be called only once at the start of setup.\nCalling createCanvas more than once in a sketch will result in very\nunpredicable behavior. If you want more than one drawing canvas\nyou could use createGraphics (hidden by default but it can be shown).\n<br><br>\nThe system variables width and height are set by the parameters passed\nto this function. If createCanvas() is not used, the window will be\ngiven a default size of 100x100 pixels.\n<br><br>\nFor more ways to position the canvas, see the\n<a href='https://github.com/processing/p5.js/wiki/Positioning-your-canvas'>\npositioning the canvas</a> wiki page.</p>\n",
             "itemtype": "method",
             "name": "createCanvas",
             "params": [
@@ -6327,7 +6356,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 111,
+            "line": 115,
             "description": "<p>Resizes the canvas to given width and height. The canvas will be cleared\nand draw will be called immediately, allowing the sketch to re-render itself\nin the resized canvas.</p>\n",
             "itemtype": "method",
             "name": "resizeCanvas",
@@ -6340,7 +6369,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 154,
+            "line": 158,
             "description": "<p>Removes the default canvas for a p5 sketch that doesn&#39;t\nrequire a canvas</p>\n",
             "itemtype": "method",
             "name": "noCanvas",
@@ -6353,7 +6382,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 173,
+            "line": 177,
             "description": "<p>Creates and returns a new p5.Renderer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.</p>\n",
             "itemtype": "method",
             "name": "createGraphics",
@@ -6387,7 +6416,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 207,
+            "line": 211,
             "description": "<p>Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):</p>\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA<em>factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A</em>factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon&#39;t utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -10144,7 +10173,7 @@
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 21,
+            "line": 62,
             "description": "<p>Gets a copy of the element&#39;s parent. Returns the parent as another\np5.XML object.</p>\n",
             "itemtype": "method",
             "name": "getParent",
@@ -10155,13 +10184,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var children = xml.getChildren(\"animal\");\n  var parent = children[1].getParent();\n  print(parent.getName());\n}\n\n// Sketch prints:\n// mammals\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 59,
+            "line": 100,
             "description": "<p>Gets the element&#39;s full name, which is returned as a String.</p>\n",
             "itemtype": "method",
             "name": "getName",
@@ -10172,13 +10201,13 @@
             "example": [
                 "&lt;animal\n <div class='norender'><code>\n // The following short XML file called \"mammals.xml\" is parsed\n // in the code below.\n //\n // <?xml version=\"1.0\"?>\n // &lt;mammals&gt;\n //   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n //   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n //   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n // &lt;/mammals&gt;\n\n var xml;\n\n function preload() {\n xml = loadXML(\"assets/mammals.xml\");\n }\n\n function setup() {\n println(xml.getName());\n }\n\n // Sketch prints:\n // mammals\n </code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 94,
+            "line": 135,
             "description": "<p>Sets the element&#39;s name, which is specified as a String.</p>\n",
             "itemtype": "method",
             "name": "setName",
@@ -10192,13 +10221,13 @@
             "example": [
                 "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  print(xml.getName());\n  xml.setName(\"fish\");\n  print(xml.getName());\n}\n\n// Sketch prints:\n// mammals\n// fish\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 132,
+            "line": 173,
             "description": "<p>Checks whether or not the element has any children, and returns the result\nas a boolean.</p>\n",
             "itemtype": "method",
             "name": "hasChildren",
@@ -10209,13 +10238,13 @@
             "example": [
                 "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  print(xml.hasChildren());\n}\n\n// Sketch prints:\n// true\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 168,
+            "line": 209,
             "description": "<p>Get the names of all of the element&#39;s children, and returns the names as an\narray of Strings. This is the same as looping through and calling getName()\non each child element individually.</p>\n",
             "itemtype": "method",
             "name": "listChildren",
@@ -10226,13 +10255,13 @@
             "example": [
                 "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  print(xml.listChildren());\n}\n\n// Sketch prints:\n// [\"animal\", \"animal\", \"animal\"]\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 205,
+            "line": 246,
             "description": "<p>Returns all of the element&#39;s children as an array of p5.XML objects. When\nthe name parameter is specified, then it will return all children that match\nthat name.</p>\n",
             "itemtype": "method",
             "name": "getChildren",
@@ -10251,13 +10280,13 @@
             "example": [
                 "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var animals = xml.getChildren(\"animal\");\n\n  for (var i = 0; i < animals.length; i++) {\n    print(animals[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Leopard\"\n// \"Zebra\"\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 254,
+            "line": 295,
             "description": "<p>Returns the first of the element&#39;s children that matches the name parameter\nor the child of the given index.It returns undefined if no matching\nchild is found.</p>\n",
             "itemtype": "method",
             "name": "getChild",
@@ -10275,13 +10304,13 @@
             "example": [
                 "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n</code></div>\n<div class='norender'><code>\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var secondChild = xml.getChild(1);\n  print(secondChild.getContent());\n}\n\n// Sketch prints:\n// \"Leopard\"\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 315,
+            "line": 356,
             "description": "<p>Appends a new child to the element. The child can be specified with\neither a String, which will be used as the new tag&#39;s name, or as a\nreference to an existing p5.XML object.\nA reference to the newly created child is returned as an p5.XML object.</p>\n",
             "itemtype": "method",
             "name": "addChild",
@@ -10292,13 +10321,13 @@
                     "type": "Object"
                 }
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 332,
+            "line": 373,
             "description": "<p>Removes the element specified by name or index.</p>\n",
             "itemtype": "method",
             "name": "removeChild",
@@ -10312,13 +10341,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  xml.removeChild(\"animal\");\n  var children = xml.getChildren();\n  for (var i=0; i<children.length; i++) {\n    print(children[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Leopard\"\n// \"Zebra\"\n</code></div>\n<div class='norender'><code>\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  xml.removeChild(1);\n  var children = xml.getChildren();\n  for (var i=0; i<children.length; i++) {\n    print(children[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Zebra\"\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 405,
+            "line": 446,
             "description": "<p>Counts the specified element&#39;s number of attributes, returned as an Number.</p>\n",
             "itemtype": "method",
             "name": "getAttributeCount",
@@ -10329,13 +10358,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getAttributeCount());\n}\n\n// Sketch prints:\n// 2\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 441,
+            "line": 482,
             "description": "<p>Gets all of the specified element&#39;s attributes, and returns them as an\narray of Strings.</p>\n",
             "itemtype": "method",
             "name": "listAttributes",
@@ -10346,13 +10375,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.listAttributes());\n}\n\n// Sketch prints:\n// [\"id\", \"species\"]\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 478,
+            "line": 519,
             "description": "<p>Checks whether or not an element has the specified attribute.</p>\n",
             "itemtype": "method",
             "name": "hasAttribute",
@@ -10370,13 +10399,13 @@
             "example": [
                 "\n <div class='norender'><code>\n // The following short XML file called \"mammals.xml\" is parsed\n // in the code below.\n //\n // <?xml version=\"1.0\"?>\n // &lt;mammals&gt;\n //   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n //   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n //   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n // &lt;/mammals&gt;\n\n var xml;\n\n function preload() {\n xml = loadXML(\"assets/mammals.xml\");\n }\n\n function setup() {\n var firstChild = xml.getChild(\"animal\");\n print(firstChild.hasAttribute(\"species\"));\n print(firstChild.hasAttribute(\"color\"));\n }\n\n // Sketch prints:\n // true\n // false\n </code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 517,
+            "line": 558,
             "description": "<p>Returns an attribute value of the element as an Number. If the defaultValue\nparameter is specified and the attribute doesn&#39;t exist, then defaultValue\nis returned. If no defaultValue is specified and the attribute doesn&#39;t\nexist, the value 0 is returned.</p>\n",
             "itemtype": "method",
             "name": "getNumber",
@@ -10400,13 +10429,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getNumber(\"id\"));\n}\n\n// Sketch prints:\n// 0\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 558,
+            "line": 599,
             "description": "<p>Returns an attribute value of the element as an String. If the defaultValue\nparameter is specified and the attribute doesn&#39;t exist, then defaultValue\nis returned. If no defaultValue is specified and the attribute doesn&#39;t\nexist, null is returned.</p>\n",
             "itemtype": "method",
             "name": "getString",
@@ -10430,13 +10459,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getString(\"species\"));\n}\n\n// Sketch prints:\n// \"Capra hircus\"\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 599,
+            "line": 640,
             "description": "<p>Sets the content of an element&#39;s attribute. The first parameter specifies\nthe attribute name, while the second specifies the new content.</p>\n",
             "itemtype": "method",
             "name": "setAttribute",
@@ -10455,13 +10484,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getString(\"species\"));\n  firstChild.setAttribute(\"species\", \"Jamides zebra\");\n  print(firstChild.getString(\"species\"));\n}\n\n// Sketch prints:\n// \"Capra hircus\"\n// \"Jamides zebra\"\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 642,
+            "line": 683,
             "description": "<p>Returns the content of an element. If there is no such content,\ndefaultValue is returned if specified, otherwise null is returned.</p>\n",
             "itemtype": "method",
             "name": "getContent",
@@ -10480,13 +10509,13 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 680,
+            "line": 721,
             "description": "<p>Sets the element&#39;s content.</p>\n",
             "itemtype": "method",
             "name": "setContent",
@@ -10500,23 +10529,23 @@
             "example": [
                 "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getContent());\n  firstChild.setContent(\"Mountain Goat\");\n  print(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Mountain Goat\"\n</code></div>"
             ],
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 722,
+            "line": 763,
             "description": "<p>This method is called while the parsing of XML (when loadXML() is\ncalled). The difference between this method and the setContent()\nmethod defined later is that this one is used to set the content\nwhen the node in question has more nodes under it and so on and\nnot directly text content. While in the other one is used when\nthe node in question directly has text inside it.</p>\n",
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
         {
             "file": "src/io/p5.XML.js",
-            "line": 739,
+            "line": 780,
             "description": "<p>This method is called while the parsing of XML (when loadXML() is\ncalled). The XML node is passed and its attributes are stored in the\np5.XML&#39;s attribute Object.</p>\n",
-            "class": "p5",
+            "class": "p5.XML",
             "module": "IO",
             "submodule": "XML"
         },
@@ -18854,7 +18883,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:796"
+            "line": " src/core/p5.Element.js:799"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
@@ -19018,11 +19047,11 @@
         },
         {
             "message": "Missing item type\nThis method is called while the parsing of XML (when loadXML() is\ncalled). The difference between this method and the setContent()\nmethod defined later is that this one is used to set the content\nwhen the node in question has more nodes under it and so on and\nnot directly text content. While in the other one is used when\nthe node in question directly has text inside it.",
-            "line": " src/io/p5.XML.js:722"
+            "line": " src/io/p5.XML.js:763"
         },
         {
             "message": "Missing item type\nThis method is called while the parsing of XML (when loadXML() is\ncalled). The XML node is passed and its attributes are stored in the\np5.XML's attribute Object.",
-            "line": " src/io/p5.XML.js:739"
+            "line": " src/io/p5.XML.js:780"
         },
         {
             "message": "Missing item type\nAdds two vectors together and returns a new one.",

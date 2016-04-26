@@ -32,6 +32,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Table",
         "p5.TableRow",
         "p5.Vector",
+        "p5.XML",
         "p5.dom",
         "p5.sound"
     ],
@@ -274,7 +275,8 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "XML",
-            "name": "XML"
+            "name": "XML",
+            "description": "<p>XML is a representation of an XML object, able to parse XML code. Use\nloadXML() to load external XML files and create XML objects.</p>\n"
         }
     ]
 } };
