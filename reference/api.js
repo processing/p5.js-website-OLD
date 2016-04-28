@@ -24,6 +24,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "p5.Phrase",
         "p5.Pulse",
         "p5.Renderer",
+        "p5.Renderer3D",
         "p5.Reverb",
         "p5.Score",
         "p5.Signal",
@@ -38,6 +39,7 @@ YUI.add("yuidoc-meta", function(Y) {
     ],
     "modules": [
         "2D Primitives",
+        "3D Models",
         "3D Primitives",
         "Acceleration",
         "Array Functions",
@@ -87,6 +89,10 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "2D Primitives",
             "name": "2D Primitives"
+        },
+        {
+            "displayName": "3D Models",
+            "name": "3D Models"
         },
         {
             "displayName": "3D Primitives",

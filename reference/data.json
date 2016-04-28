@@ -1,17 +1,6 @@
 {
     "project": {},
     "files": {
-        "src/3d/3d_primitives.js": {
-            "name": "src/3d/3d_primitives.js",
-            "modules": {
-                "3D Primitives": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
         "src/3d/camera.js": {
             "name": "src/3d/camera.js",
             "modules": {
@@ -34,6 +23,17 @@
             },
             "namespaces": {}
         },
+        "src/3d/loading.js": {
+            "name": "src/3d/loading.js",
+            "modules": {
+                "3D Models": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
         "src/3d/material.js": {
             "name": "src/3d/material.js",
             "modules": {
@@ -45,8 +45,8 @@
             },
             "namespaces": {}
         },
-        "src/3d/p5.Geometry3D.js": {
-            "name": "src/3d/p5.Geometry3D.js",
+        "src/3d/p5.Geometry.js": {
+            "name": "src/3d/p5.Geometry.js",
             "modules": {},
             "classes": {},
             "fors": {},
@@ -59,18 +59,38 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/3d/p5.Renderer3D.js": {
-            "name": "src/3d/p5.Renderer3D.js",
+        "src/3d/p5.Renderer3D.Immediate.js": {
+            "name": "src/3d/p5.Renderer3D.Immediate.js",
             "modules": {},
             "classes": {},
             "fors": {},
             "namespaces": {}
         },
-        "src/3d/retainedMode3D.js": {
-            "name": "src/3d/retainedMode3D.js",
+        "src/3d/p5.Renderer3D.Retained.js": {
+            "name": "src/3d/p5.Renderer3D.Retained.js",
             "modules": {},
             "classes": {},
             "fors": {},
+            "namespaces": {}
+        },
+        "src/3d/p5.Renderer3D.js": {
+            "name": "src/3d/p5.Renderer3D.js",
+            "modules": {},
+            "classes": {
+                "p5.Renderer3D": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/3d/primitives.js": {
+            "name": "src/3d/primitives.js",
+            "modules": {
+                "3D Primitives": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
             "namespaces": {}
         },
         "src/color/color_conversion.js": {
@@ -616,49 +636,21 @@
         }
     },
     "modules": {
-        "Shape": {
-            "name": "Shape",
-            "submodules": {
-                "2D Primitives": 1,
-                "Curves": 1,
-                "Vertex": 1
-            },
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "namespaces": {}
-        },
-        "3D Primitives": {
-            "name": "3D Primitives",
-            "submodules": {},
-            "classes": {},
-            "fors": {
-                "p5": 1
-            },
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "IO",
-            "namespace": "",
-            "file": "src/3d/3d_primitives.js",
-            "line": 1,
-            "requires": [
-                "core",
-                "p5.Geometry3D"
-            ]
-        },
         "Lights, Camera": {
             "name": "Lights, Camera",
             "submodules": {
-                "Camera": 1,
                 "Lights": 1,
                 "Material": 1
             },
-            "classes": {},
+            "classes": {
+                "p5.Renderer3D": 1
+            },
             "fors": {
                 "p5": 1
             },
-            "namespaces": {}
+            "namespaces": {},
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 21
         },
         "Camera": {
             "name": "Camera",
@@ -669,7 +661,7 @@
             },
             "is_submodule": 1,
             "namespaces": {},
-            "module": "Lights, Camera",
+            "module": "IO",
             "namespace": "",
             "file": "src/3d/camera.js",
             "line": 1,
@@ -694,6 +686,39 @@
                 "core"
             ]
         },
+        "Shape": {
+            "name": "Shape",
+            "submodules": {
+                "3D Models": 1,
+                "3D Primitives": 1,
+                "2D Primitives": 1,
+                "Curves": 1,
+                "Vertex": 1
+            },
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "namespaces": {}
+        },
+        "3D Models": {
+            "name": "3D Models",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Shape",
+            "namespace": "",
+            "file": "src/3d/loading.js",
+            "line": 1,
+            "requires": [
+                "core",
+                "p5.Geometry3D"
+            ]
+        },
         "Material": {
             "name": "Material",
             "submodules": {},
@@ -709,6 +734,24 @@
             "line": 1,
             "requires": [
                 "core"
+            ]
+        },
+        "3D Primitives": {
+            "name": "3D Primitives",
+            "submodules": {},
+            "classes": {},
+            "fors": {
+                "p5": 1
+            },
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Shape",
+            "namespace": "",
+            "file": "src/3d/primitives.js",
+            "line": 1,
+            "requires": [
+                "core",
+                "p5.Geometry"
             ]
         },
         "Color": {
@@ -1067,7 +1110,7 @@
         "IO": {
             "name": "IO",
             "submodules": {
-                "3D Primitives": 1,
+                "Camera": 1,
                 "Input": 1,
                 "Output": 1,
                 "Table": 1,
@@ -1438,6 +1481,24 @@
             "module": "IO",
             "submodule": "Output",
             "namespace": ""
+        },
+        "p5.Renderer3D": {
+            "name": "p5.Renderer3D",
+            "shortname": "p5.Renderer3D",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Lights, Camera",
+            "namespace": "",
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 21,
+            "is_constructor": 1,
+            "extends": "p5.Renderer\n3D graphics class.",
+            "todo": [
+                "extend class to include public method for offscreen\nrendering (FBO)."
+            ]
         },
         "p5.Color": {
             "name": "p5.Color",
@@ -2383,232 +2444,6 @@
     },
     "classitems": [
         {
-            "file": "src/3d/3d_primitives.js",
-            "line": 14,
-            "description": "<p>Draw a plane with given a width and height</p>\n",
-            "itemtype": "method",
-            "name": "plane",
-            "params": [
-                {
-                    "name": "width",
-                    "description": "<p>width of the plane</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "height",
-                    "description": "<p>height of the plane</p>\n",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
-            "example": [
-                "\n<div>\n<code>\n//draw a plane with width 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  plane(200, 200);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
-            "file": "src/3d/3d_primitives.js",
-            "line": 69,
-            "description": "<p>Draw a sphere with given radius</p>\n",
-            "itemtype": "method",
-            "name": "sphere",
-            "params": [
-                {
-                    "name": "radius",
-                    "description": "<p>radius of circle</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "detail",
-                    "description": "<p>number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above\n                                   150, it may crash the browser.</p>\n",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "example": [
-                "\n<div>\n<code>\n// draw a sphere with radius 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  sphere(200);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
-            "file": "src/3d/3d_primitives.js",
-            "line": 126,
-            "description": "<p>Draw an ellipsoid with given radius</p>\n",
-            "itemtype": "method",
-            "name": "ellipsoid",
-            "params": [
-                {
-                    "name": "radiusx",
-                    "description": "<p>xradius of circle</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "radiusy",
-                    "description": "<p>yradius of circle</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "radiusz",
-                    "description": "<p>zradius of circle</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "detail",
-                    "description": "<p>Number of segments.\n                                   The more segments, the smoother the\n                                   geometry (default is 24). Avoid detail\n                                   number above 150. It may crash the\n                                   browser.</p>\n",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
-            "example": [
-                "\n<div>\n<code>\n// draw an ellipsoid with radius 200, 300 and 400\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  ellipsoid(200,300,400);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
-            "file": "src/3d/3d_primitives.js",
-            "line": 191,
-            "description": "<p>Draw a cylinder with given radius and height</p>\n",
-            "itemtype": "method",
-            "name": "cylinder",
-            "params": [
-                {
-                    "name": "radius",
-                    "description": "<p>radius of the surface</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "height",
-                    "description": "<p>height of the cylinder</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "detail",
-                    "description": "<p>number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above</p>\n<pre><code>                               150. It may crash the browser.\n</code></pre>",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
-            "example": [
-                "\n<div>\n<code>\n//draw a spinning cylinder with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cylinder(200, 200);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
-            "file": "src/3d/3d_primitives.js",
-            "line": 288,
-            "description": "<p>Draw a cone with given radius and height</p>\n",
-            "itemtype": "method",
-            "name": "cone",
-            "params": [
-                {
-                    "name": "radius",
-                    "description": "<p>radius of the bottom surface</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "height",
-                    "description": "<p>height of the cone</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "detail",
-                    "description": "<p>number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above</p>\n<pre><code>                               150. It may crash the browser.\n</code></pre>",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "example": [
-                "\n<div>\n<code>\n//draw a spinning cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
-            "file": "src/3d/3d_primitives.js",
-            "line": 361,
-            "description": "<p>Draw a torus with given radius and tube radius</p>\n",
-            "itemtype": "method",
-            "name": "torus",
-            "params": [
-                {
-                    "name": "radius",
-                    "description": "<p>radius of the whole ring</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "tubeRadius",
-                    "description": "<p>radius of the tube</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "detail",
-                    "description": "<p>number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above</p>\n<pre><code>                               150. It may crash the browser.\n</code></pre>",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "example": [
-                "\n<div>\n<code>\n//draw a spinning torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
-            "file": "src/3d/3d_primitives.js",
-            "line": 422,
-            "description": "<p>Draw a box with given width, height and depth</p>\n",
-            "itemtype": "method",
-            "name": "box",
-            "params": [
-                {
-                    "name": "width",
-                    "description": "<p>width of the box</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "height",
-                    "description": "<p>height of the box</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "depth",
-                    "description": "<p>depth of the box</p>\n",
-                    "type": "Number"
-                }
-            ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
-            "example": [
-                "\n<div>\n<code>\n//draw a spinning box with width, height and depth 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(200, 200, 200);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Shape",
-            "submodule": "3D Primitives"
-        },
-        {
             "file": "src/3d/camera.js",
             "line": 12,
             "description": "<p>Sets camera position</p>\n",
@@ -2891,6 +2726,58 @@
             "submodule": "Lights"
         },
         {
+            "file": "src/3d/loading.js",
+            "line": 14,
+            "description": "<p>Load a 3d model from an OBJ file.</p>\n",
+            "itemtype": "method",
+            "name": "loadModel",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "<p>Path of the model to be loaded</p>\n",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "the p5.Geometry3D object",
+                "type": "p5.Geometry"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n\n  teapot = loadModel('teapot.obj');\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Models"
+        },
+        {
+            "file": "src/3d/loading.js",
+            "line": 51,
+            "description": "<p>Parse OBJ lines into model. For reference, this is what a simple model of a\nsquare might look like:</p>\n<p>v -0.5 -0.5 0.5\nv -0.5 -0.5 -0.5\nv -0.5 0.5 -0.5\nv -0.5 0.5 0.5</p>\n<p>f 4 3 2 1</p>\n",
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Models"
+        },
+        {
+            "file": "src/3d/loading.js",
+            "line": 151,
+            "description": "<p>Render a 3d model to the screen.</p>\n",
+            "itemtype": "method",
+            "name": "model",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "<p>Loaded 3d model to be rendered</p>\n",
+                    "type": "p5.Geometry"
+                }
+            ],
+            "example": [
+                "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n\n  teapot = loadModel('teapot.obj');\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Models"
+        },
+        {
             "file": "src/3d/material.js",
             "line": 13,
             "description": "<p>Normal material for geometry</p>\n",
@@ -2964,49 +2851,7 @@
         },
         {
             "file": "src/3d/material.js",
-            "line": 148,
-            "description": "<p>Basic material for geometry with a given color</p>\n",
-            "itemtype": "method",
-            "name": "basicMaterial",
-            "params": [
-                {
-                    "name": "v1",
-                    "description": "<p>gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string</p>\n",
-                    "type": "Number|Array|String|p5.Color"
-                },
-                {
-                    "name": "v2",
-                    "description": "<p>optional: green or saturation value</p>\n",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "v3",
-                    "description": "<p>optional: blue or brightness value</p>\n",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "a",
-                    "description": "<p>optional: opacity</p>\n",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
-            "return": {
-                "description": "the p5 object",
-                "type": "P5"
-            },
-            "example": [
-                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n background(0);\n basicMaterial(250, 0, 0);\n rotateX(frameCount * 0.01);\n rotateY(frameCount * 0.01);\n rotateZ(frameCount * 0.01);\n box(200, 200, 200);\n}\n</code>\n</div>"
-            ],
-            "class": "p5",
-            "module": "Lights, Camera",
-            "submodule": "Material"
-        },
-        {
-            "file": "src/3d/material.js",
-            "line": 196,
+            "line": 147,
             "description": "<p>Ambient material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "ambientMaterial",
@@ -3048,7 +2893,7 @@
         },
         {
             "file": "src/3d/material.js",
-            "line": 247,
+            "line": 195,
             "description": "<p>Specular material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "specularMaterial",
@@ -3089,115 +2934,100 @@
             "submodule": "Material"
         },
         {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 7,
-            "description": "<p>p5 Geometry3D class</p>\n",
-            "class": "p5",
-            "module": "Lights, Camera"
-        },
-        {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 29,
-            "description": "<p>generate geometriy with parametric method</p>\n",
+            "file": "src/3d/material.js",
+            "line": 239,
+            "access": "private",
+            "tagname": "blends colors according to color components.\nIf alpha value is less than 1, we need to enable blending\non our gl context.  Otherwise opaque objects need to a depthMask.",
             "params": [
                 {
-                    "name": "func",
-                    "description": "<p>callback function for how to generate geometry</p>\n",
-                    "type": "Function"
+                    "name": "v1",
+                    "description": "<p>[description]</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "v2",
+                    "description": "<p>[description]</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "v3",
+                    "description": "<p>[description]</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "a",
+                    "description": "<p>[description]</p>\n",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "Normalized numbers array",
+                "type": "[Number]"
+            },
+            "class": "p5",
+            "module": "Lights, Camera",
+            "submodule": "Material"
+        },
+        {
+            "file": "src/3d/p5.Geometry.js",
+            "line": 7,
+            "description": "<p>p5 Geometry class</p>\n",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "vertData",
+                    "description": "<p>callback function or Object\n                    containing routine(s) for vertex data generation</p>\n",
+                    "type": "Function | Object"
                 },
                 {
                     "name": "detailX",
                     "description": "<p>number of vertices on horizontal surface</p>\n",
-                    "type": "Number"
+                    "type": "Number",
+                    "optional": true
                 },
                 {
                     "name": "detailY",
                     "description": "<p>number of vertices on horizontal surface</p>\n",
-                    "type": "Number"
+                    "type": "Number",
+                    "optional": true
                 },
                 {
-                    "name": "offset",
-                    "description": "<p>offset of vertices index</p>\n",
-                    "type": "Number"
+                    "name": "callback",
+                    "description": "<p>function to call upon object instantiation.</p>\n",
+                    "type": "Function",
+                    "optional": true
                 }
             ],
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 80,
-            "description": "<p>compute faceNormals for a geometry</p>\n",
-            "class": "p5",
+            "file": "src/3d/p5.Geometry.js",
+            "line": 71,
+            "description": "<p>computes smooth normals per vertex as an average of each\nface.</p>\n",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 105,
-            "description": "<p>compute vertexNormals for a geometry</p>\n",
-            "class": "p5",
-            "module": "Lights, Camera"
-        },
-        {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 189,
-            "description": "<p>[generateUV description]</p>\n",
-            "params": [
-                {
-                    "name": "faces",
-                    "description": "<p>[description]</p>\n",
-                    "type": "Array"
-                },
-                {
-                    "name": "uvs",
-                    "description": "<p>[description]</p>\n",
-                    "type": "Array"
-                }
-            ],
-            "class": "p5",
-            "module": "Lights, Camera"
-        },
-        {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 206,
-            "description": "<p>generate an object containing information needed to create buffer</p>\n",
-            "class": "p5",
-            "module": "Lights, Camera"
-        },
-        {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 232,
-            "description": "<p>turn a two dimensional array into one dimensional array</p>\n",
-            "params": [
-                {
-                    "name": "arr",
-                    "description": "<p>2-dimensional array</p>\n",
-                    "type": "Array"
-                }
-            ],
+            "file": "src/3d/p5.Geometry.js",
+            "line": 94,
+            "description": "<p>Averages the vertex normals. Used in curved\nsurfaces</p>\n",
             "return": {
-                "description": "1-dimensional array\n[[1, 2, 3],[4, 5, 6]] -> [1, 2, 3, 4, 5, 6]",
-                "type": "Array"
+                "description": "",
+                "type": "p5.Geometry"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/3d/p5.Geometry3D.js",
-            "line": 244,
-            "description": "<p>turn an array of Vector into a one dimensional array of numbers</p>\n",
-            "params": [
-                {
-                    "name": "arr",
-                    "description": "<p>an array of p5.Vector</p>\n",
-                    "type": "Array"
-                }
-            ],
+            "file": "src/3d/p5.Geometry.js",
+            "line": 113,
+            "description": "<p>Averages pole normals.  Used in spherical primitives</p>\n",
             "return": {
-                "description": "a one dimensional array of numbers\n[p5.Vector(1, 2, 3), p5.Vector(4, 5, 6)] ->\n[1, 2, 3, 4, 5, 6]",
-                "type": "Array]"
+                "description": "",
+                "type": "p5.Geometry"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
@@ -3209,7 +3039,7 @@
             "todo": [
                 "see methods below needing further implementation.\nfuture consideration: implement SIMD optimizations\nwhen browser compatibility becomes available\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/\n  Reference/Global_Objects/SIMD"
             ],
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
@@ -3225,12 +3055,12 @@
                     "optional": true
                 }
             ],
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 50,
+            "line": 74,
             "description": "<p>Sets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Matrix, or the values from a float array.</p>\n",
             "params": [
                 {
@@ -3240,45 +3070,45 @@
                     "optional": true
                 }
             ],
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 69,
+            "line": 93,
             "description": "<p>Gets a copy of the vector, returns a p5.Matrix object.</p>\n",
             "return": {
                 "description": "the copy of the p5.Matrix object",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 78,
+            "line": 102,
             "description": "<p>return a copy of a matrix</p>\n",
             "return": {
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 103,
+            "line": 127,
             "description": "<p>return an identity matrix</p>\n",
             "return": {
                 "description": "the result matrix",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 111,
+            "line": 135,
             "description": "<p>transpose according to a given matrix</p>\n",
             "params": [
                 {
@@ -3291,12 +3121,12 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 171,
+            "line": 195,
             "description": "<p>invert  matrix according to a give matrix</p>\n",
             "params": [
                 {
@@ -3309,23 +3139,73 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 256,
+            "line": 280,
+            "description": "<p>Inverts a 3x3 matrix</p>\n",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Matrix.js",
+            "line": 316,
+            "description": "<p>transposes a 3x3 p5.Matrix by a mat3</p>\n",
+            "params": [
+                {
+                    "name": "mat3",
+                    "description": "<p>1-dimensional array</p>\n",
+                    "type": "[Number]"
+                }
+            ],
+            "return": {
+                "description": "this",
+                "type": "p5.Matrix"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Matrix.js",
+            "line": 332,
+            "description": "<p>converts a 4x4 matrix to its 3x3 inverse tranform\ncommonly used in MVMatrix to NMatrix conversions.</p>\n",
+            "params": [
+                {
+                    "name": "mat4",
+                    "description": "<p>the matrix to be based on to invert</p>\n",
+                    "type": "p5.Matrix"
+                }
+            ],
+            "return": {
+                "description": "this with mat3",
+                "type": "p5.Matrix"
+            },
+            "todo": [
+                "finish implementation"
+            ],
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Matrix.js",
+            "line": 360,
             "description": "<p>inspired by Toji&#39;s mat4 determinant</p>\n",
             "return": {
                 "description": "Determinant of our 4x4 matrix",
                 "type": "Number"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 279,
+            "line": 383,
             "description": "<p>multiply two mat4s</p>\n",
             "params": [
                 {
@@ -3338,12 +3218,12 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 335,
+            "line": 439,
             "description": "<p>scales a p5.Matrix by scalars or a vector</p>\n",
             "params": [
                 {
@@ -3356,12 +3236,12 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 381,
+            "line": 485,
             "description": "<p>rotate our Matrix around an axis by the given angle.</p>\n",
             "params": [
                 {
@@ -3379,12 +3259,12 @@
                 "description": "this\ninspired by Toji's gl-matrix lib, mat4 rotation",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 460,
+            "line": 564,
             "todo": [
                 "finish implementing this method!\ntranslates"
             ],
@@ -3399,12 +3279,12 @@
                 "description": "this",
                 "type": "p5.Matrix"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 490,
+            "line": 594,
             "description": "<p>sets the perspective matrix</p>\n",
             "params": [
                 {
@@ -3432,12 +3312,12 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 524,
+            "line": 628,
             "description": "<p>sets the ortho matrix</p>\n",
             "params": [
                 {
@@ -3475,26 +3355,321 @@
                 "description": "",
                 "type": "Void"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Matrix.js",
-            "line": 559,
+            "line": 663,
             "description": "<p>PRIVATE</p>\n",
-            "class": "p5",
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Immediate.js",
+            "line": 1,
+            "description": "<p>Welcome to RendererGL Immediate Mode.\nImmediate mode is used for drawing custom shapes\nfrom a set of vertices.  Immediate Mode is activated\nwhen you call beginShape() &amp; de-activated when you call endShape().\nImmediate mode is a style of programming borrowed\nfrom OpenGL&#39;s (now-deprecated) immediate mode.\nIt differs from p5.js&#39; default, Retained Mode, which caches\ngeometries and buffers on the CPU to reduce the number of webgl\ndraw calls. Retained mode is more efficient &amp; performative,\nhowever, Immediate Mode is useful for sketching quick\ngeometric ideas.</p>\n",
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Immediate.js",
+            "line": 19,
+            "description": "<p>Begin shape drawing.  This is a helpful way of generating\ncustom shapes quickly.  However in WEBGL mode, application\nperformance will likely drop as a result of too many calls to\nbeginShape() / endShape().  As a high performance alternative,\nplease use p5.js geometry primitives.</p>\n",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "<p>webgl primitives mode.  beginShape supports the\n                      following modes:\n                      POINTS,LINES,LINE_STRIP,LINE_LOOP,TRIANGLES,\n                      TRIANGLE_STRIP,and TRIANGLE_FAN.</p>\n",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Immediate.js",
+            "line": 49,
+            "description": "<p>adds a vertex to be drawn in a custom Shape.</p>\n",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "<p>x-coordinate of vertex</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "<p>y-coordinate of vertex</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "z",
+                    "description": "<p>z-coordinate of vertex</p>\n",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "p5.Renderer3D"
+            },
+            "todo": [
+                "implement handling of p5.Vector args"
+            ],
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Immediate.js",
+            "line": 68,
+            "description": "<p>End shape drawing and render vertices to screen.</p>\n",
+            "return": {
+                "description": "[description]",
+                "type": "p5.Renderer3D"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Immediate.js",
+            "line": 121,
+            "description": "<p>Bind immediateMode buffers to data,\nthen draw gl arrays</p>\n",
+            "params": [
+                {
+                    "name": "vertices",
+                    "description": "<p>Numbers array representing\n                         vertex positions</p>\n",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "p5.Renderer3D"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Retained.js",
+            "line": 7,
+            "description": "<p>initializes buffer defaults. runs each time a new geometry is\nregistered</p>\n",
+            "params": [
+                {
+                    "name": "gId",
+                    "description": "<p>key of the geometry object</p>\n",
+                    "type": "String"
+                }
+            ],
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Retained.js",
+            "line": 30,
+            "description": "<p>createBuffers description</p>\n",
+            "params": [
+                {
+                    "name": "gId",
+                    "description": "<p>key of the geometry object</p>\n",
+                    "type": "String"
+                },
+                {
+                    "name": "obj",
+                    "description": "<p>contains geometry data</p>\n",
+                    "type": "p5.Geometry"
+                }
+            ],
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Retained.js",
+            "line": 93,
+            "description": "<p>Draws buffers given a geometry key ID</p>\n",
+            "params": [
+                {
+                    "name": "gId",
+                    "description": "<p>ID in our geom hash</p>\n",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "this",
+                "type": "p5.Renderer3D"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Retained.js",
+            "line": 129,
+            "description": "<p>turn a two dimensional array into one dimensional array</p>\n",
+            "params": [
+                {
+                    "name": "arr",
+                    "description": "<p>2-dimensional array</p>\n",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "1-dimensional array\n[[1, 2, 3],[4, 5, 6]] -> [1, 2, 3, 4, 5, 6]",
+                "type": "Array"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.Retained.js",
+            "line": 145,
+            "description": "<p>turn a p5.Vector Array into a one dimensional number array</p>\n",
+            "params": [
+                {
+                    "name": "arr",
+                    "description": "<p>an array of p5.Vector</p>\n",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "a one dimensional array of numbers\n[p5.Vector(1, 2, 3), p5.Vector(4, 5, 6)] ->\n[1, 2, 3, 4, 5, 6]",
+                "type": "Array]"
+            },
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 20,
-            "description": "<p>3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed</p>\n",
-            "class": "p5",
+            "line": 43,
+            "description": "<p>model view, projection, &amp; normal\nmatrices</p>\n",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 89,
+            "line": 106,
+            "description": "<p>[background description]</p>\n",
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 130,
+            "description": "<p>[_initShaders description]</p>\n",
+            "params": [
+                {
+                    "name": "vertId",
+                    "description": "<p>[description]</p>\n",
+                    "type": "String"
+                },
+                {
+                    "name": "fragId",
+                    "description": "<p>[description]</p>\n",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 205,
+            "description": "<p>Sets a shader uniform given a shaderProgram and uniform string</p>\n",
+            "params": [
+                {
+                    "name": "shaderKey",
+                    "description": "<p>key to material Hash.</p>\n",
+                    "type": "String"
+                },
+                {
+                    "name": "uniform",
+                    "description": "<p>location in shader.</p>\n",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "<p>data to bind uniform.  Float data type.</p>\n",
+                    "type": "Number"
+                }
+            ],
+            "todo": [
+                "currently this function sets uniform1f data.\nShould generalize function to accept any uniform\ndata type."
+            ],
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 278,
+            "description": "<p>Basic fill material for geometry with a given color</p>\n",
+            "itemtype": "method",
+            "name": "fill",
+            "params": [
+                {
+                    "name": "v1",
+                    "description": "<p>gray value,\nred or hue value (depending on the current color mode),\nor color Array, or CSS color string</p>\n",
+                    "type": "Number|Array|String|p5.Color"
+                },
+                {
+                    "name": "v2",
+                    "description": "<p>optional: green or saturation value</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "v3",
+                    "description": "<p>optional: blue or brightness value</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "a",
+                    "description": "<p>optional: opacity</p>\n",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n background(0);\n fill(250, 0, 0);\n rotateX(frameCount * 0.01);\n rotateY(frameCount * 0.01);\n rotateZ(frameCount * 0.01);\n box(200, 200, 200);\n}\n</code>\n</div>"
+            ],
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 351,
+            "description": "<p>[strokeWeight description]</p>\n",
+            "params": [
+                {
+                    "name": "pointSize",
+                    "description": "<p>stroke point size</p>\n",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "todo": [
+                "strokeWeight currently works on points only.\nimplement on all wireframes and strokes."
+            ],
+            "class": "p5.Renderer3D",
+            "module": "Lights, Camera"
+        },
+        {
+            "file": "src/3d/p5.Renderer3D.js",
+            "line": 374,
             "description": "<p>[resize description]</p>\n",
             "params": [
                 {
@@ -3512,46 +3687,41 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 101,
-            "description": "<p>[background description]</p>\n",
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
-            "module": "Lights, Camera"
-        },
-        {
-            "file": "src/3d/p5.Renderer3D.js",
-            "line": 126,
-            "description": "<p>[initShaders description]</p>\n",
+            "line": 386,
+            "description": "<p>clears color and depth buffers\nwith r,g,b,a</p>\n",
             "params": [
                 {
-                    "name": "vertId",
-                    "description": "<p>[description]</p>\n",
-                    "type": "[type]"
+                    "name": "r",
+                    "description": "<p>normalized red val.</p>\n",
+                    "type": "Number"
                 },
                 {
-                    "name": "fragId",
-                    "description": "<p>[description]</p>\n",
-                    "type": "[type]"
+                    "name": "g",
+                    "description": "<p>normalized green val.</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "b",
+                    "description": "<p>normalized blue val.</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "a",
+                    "description": "<p>normalized alpha val.</p>\n",
+                    "type": "Number"
                 }
             ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 316,
+            "line": 403,
             "description": "<p>[translate description]</p>\n",
             "params": [
                 {
@@ -3577,12 +3747,12 @@
             "todo": [
                 "implement handle for components or vector as args"
             ],
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 333,
+            "line": 420,
             "description": "<p>Scales the Model View Matrix by a vector</p>\n",
             "params": [
                 {
@@ -3607,12 +3777,12 @@
                 "description": "[description]",
                 "type": "This"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 345,
+            "line": 432,
             "description": "<p>[rotate description]</p>\n",
             "params": [
                 {
@@ -3630,12 +3800,12 @@
                 "description": "[description]",
                 "type": "p5.Renderer3D"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 356,
+            "line": 444,
             "description": "<p>[rotateX description]</p>\n",
             "params": [
                 {
@@ -3648,12 +3818,12 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 366,
+            "line": 454,
             "description": "<p>[rotateY description]</p>\n",
             "params": [
                 {
@@ -3666,12 +3836,12 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 376,
+            "line": 464,
             "description": "<p>[rotateZ description]</p>\n",
             "params": [
                 {
@@ -3684,82 +3854,325 @@
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 386,
+            "line": 474,
             "description": "<p>pushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable</p>\n",
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
             "file": "src/3d/p5.Renderer3D.js",
-            "line": 396,
+            "line": 484,
             "description": "<p>[pop description]</p>\n",
             "return": {
                 "description": "[description]",
                 "type": "[type]"
             },
-            "class": "p5",
+            "class": "p5.Renderer3D",
             "module": "Lights, Camera"
         },
         {
-            "file": "src/3d/retainedMode3D.js",
-            "line": 8,
-            "description": "<p>createBuffer</p>\n",
+            "file": "src/3d/primitives.js",
+            "line": 13,
+            "description": "<p>Draw a plane with given a width and height</p>\n",
+            "itemtype": "method",
+            "name": "plane",
             "params": [
                 {
-                    "name": "gId",
-                    "description": "<p>key of the geometry object</p>\n",
-                    "type": "String"
+                    "name": "width",
+                    "description": "<p>width of the plane</p>\n",
+                    "type": "Number"
                 },
                 {
-                    "name": "arr",
-                    "description": "<p>array holding bject containing geometry information</p>\n",
-                    "type": "Array"
-                }
-            ],
-            "class": "p5",
-            "module": "Lights, Camera"
-        },
-        {
-            "file": "src/3d/retainedMode3D.js",
-            "line": 39,
-            "description": "<p>initBuffer description</p>\n",
-            "params": [
-                {
-                    "name": "gId",
-                    "description": "<p>key of the geometry object</p>\n",
-                    "type": "String"
+                    "name": "height",
+                    "description": "<p>height of the plane</p>\n",
+                    "type": "Number"
                 },
                 {
-                    "name": "arr",
-                    "description": "<p>array holding bject containing geometry information</p>\n",
-                    "type": "Array"
+                    "name": "detailX",
+                    "description": "<p>Optional number of triangle\n                            subdivisions in x-dimension</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "detailY",
+                    "description": "<p>Optional number of triangle\n                            subdivisions in y-dimension</p>\n",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a plane with width 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  plane(200, 200);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape",
+            "submodule": "3D Primitives"
         },
         {
-            "file": "src/3d/retainedMode3D.js",
-            "line": 79,
-            "description": "<p>drawBuffer</p>\n",
+            "file": "src/3d/primitives.js",
+            "line": 77,
+            "description": "<p>Draw a box with given width, height and depth</p>\n",
+            "itemtype": "method",
+            "name": "box",
             "params": [
                 {
-                    "name": "gId",
-                    "description": "<p>key of the geometery object</p>\n",
-                    "type": "String"
+                    "name": "width",
+                    "description": "<p>width of the box</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "Height",
+                    "description": "<p>height of the box</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "depth",
+                    "description": "<p>depth of the box</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailX",
+                    "description": "<p>Optional number of triangle\n                           subdivisions in x-dimension</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "detailY",
+                    "description": "<p>Optional number of triangle\n                           subdivisions in y-dimension</p>\n",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining box with width, height and depth 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(200, 200, 200);\n}\n</code>\n</div>"
+            ],
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape",
+            "submodule": "3D Primitives"
+        },
+        {
+            "file": "src/3d/primitives.js",
+            "line": 162,
+            "description": "<p>Draw a sphere with given radius</p>\n",
+            "itemtype": "method",
+            "name": "sphere",
+            "params": [
+                {
+                    "name": "radius",
+                    "description": "<p>radius of circle</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailX",
+                    "description": "<p>optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "detailY",
+                    "description": "<p>optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 16</p>\n",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n// draw a sphere with radius 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  sphere(200);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
+        },
+        {
+            "file": "src/3d/primitives.js",
+            "line": 228,
+            "access": "private",
+            "tagname": "helper function for creating both cones and cyllinders",
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
+        },
+        {
+            "file": "src/3d/primitives.js",
+            "line": 306,
+            "description": "<p>Draw a cylinder with given radius and height</p>\n",
+            "itemtype": "method",
+            "name": "cylinder",
+            "params": [
+                {
+                    "name": "radius",
+                    "description": "<p>radius of the surface</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "<p>height of the cylinder</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailX",
+                    "description": "<p>optional: number of segments,\n                            the more segments the smoother geometry\n                            default is 24</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "detailY",
+                    "description": "<p>optional: number of segments in y-dimension,\n                            the more segments the smoother geometry\n                            default is 16</p>\n",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining sylinder with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cylinder(200, 200);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
+        },
+        {
+            "file": "src/3d/primitives.js",
+            "line": 365,
+            "description": "<p>Draw a cone with given radius and height</p>\n",
+            "itemtype": "method",
+            "name": "cone",
+            "params": [
+                {
+                    "name": "radius",
+                    "description": "<p>radius of the bottom surface</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "<p>height of the cone</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailX",
+                    "description": "<p>optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "detailY",
+                    "description": "<p>optional: number of segments,\n                                   the more segments the smoother geometry\n                                   default is 16</p>\n",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
+        },
+        {
+            "file": "src/3d/primitives.js",
+            "line": 425,
+            "description": "<p>Draw an ellipsoid with given raduis</p>\n",
+            "itemtype": "method",
+            "name": "ellipsoid",
+            "params": [
+                {
+                    "name": "radiusx",
+                    "description": "<p>xradius of circle</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "radiusy",
+                    "description": "<p>yradius of circle</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "radiusz",
+                    "description": "<p>zradius of circle</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "detail",
+                    "description": "<p>number of segments,\n                                   the more segments the smoother geometry\n                                   default is 24. Avoid detail number above</p>\n<pre><code>                               150. It may crash the browser.\n</code></pre>",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n// draw an ellipsoid with radius 200, 300 and 400 .\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  ellipsoid(200,300,400);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
+        },
+        {
+            "file": "src/3d/primitives.js",
+            "line": 496,
+            "description": "<p>Draw a torus with given radius and tube radius</p>\n",
+            "itemtype": "method",
+            "name": "torus",
+            "params": [
+                {
+                    "name": "radius",
+                    "description": "<p>radius of the whole ring</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "tubeRadius",
+                    "description": "<p>radius of the tube</p>\n",
+                    "type": "Number"
+                },
+                {
+                    "name": "detailX",
+                    "description": "<p>optional: number of segments in x-dimension,\n                               the more segments the smoother geometry\n                               default is 24</p>\n",
+                    "type": "Number",
+                    "optional": true
+                },
+                {
+                    "name": "detailY",
+                    "description": "<p>optional: number of segments in y-dimension,\n                               the more segments the smoother geometry\n                               default is 16</p>\n",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "the p5 object",
+                "type": "P5"
+            },
+            "example": [
+                "\n<div>\n<code>\n//draw a spining torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
+            ],
+            "class": "p5",
+            "module": "Shape",
+            "submodule": "3D Primitives"
         },
         {
             "file": "src/color/color_conversion.js",
@@ -3769,56 +4182,56 @@
                 "core"
             ],
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/color_conversion.js",
             "line": 10,
             "description": "<p>Conversions adapted from <a href=\"http://www.easyrgb.com/math.html\">http://www.easyrgb.com/math.html</a>.</p>\n<p>In these functions, hue is always in the range [0,1); all other components\nare in the range [0,1]. &#39;Brightness&#39; and &#39;value&#39; are used interchangeably.</p>\n",
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/color_conversion.js",
             "line": 20,
             "description": "<p>Convert an HSBA array to HSLA.</p>\n",
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/color_conversion.js",
             "line": 46,
             "description": "<p>Convert an HSBA array to RGBA.</p>\n",
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/color_conversion.js",
             "line": 95,
             "description": "<p>Convert an HSLA array to HSBA.</p>\n",
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/color_conversion.js",
             "line": 118,
             "description": "<p>Convert an HSLA array to RGBA.</p>\n<p>We need to change basis from HSLA to something that can be more easily be\nprojected onto RGBA. We will choose hue and brightness as our first two\ncomponents, and pick a convenient third one (&#39;zest&#39;) so that we don&#39;t need\nto calculate formal HSBA saturation.</p>\n",
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/color_conversion.js",
             "line": 176,
             "description": "<p>Convert an RGBA array to HSBA.</p>\n",
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/color_conversion.js",
             "line": 211,
             "description": "<p>Convert an RGBA array to HSLA.</p>\n",
             "class": "p5",
-            "module": "Lights, Camera"
+            "module": "Shape"
         },
         {
             "file": "src/color/creating_reading.js",
@@ -4466,32 +4879,10 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 133,
+            "line": 123,
             "description": "<p>Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape&#39;s width and height. The\norigin may be changed with the ellipseMode() function.</p>\n",
             "itemtype": "method",
             "name": "ellipse",
-            "params": [
-                {
-                    "name": "a",
-                    "description": "<p>x-coordinate of the ellipse.</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "b",
-                    "description": "<p>y-coordinate of the ellipse.</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "c",
-                    "description": "<p>width of the ellipse.</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "d",
-                    "description": "<p>height of the ellipse.</p>\n",
-                    "type": "Number"
-                }
-            ],
             "return": {
                 "description": "the p5 object",
                 "type": "P5"
@@ -4501,11 +4892,68 @@
             ],
             "class": "p5",
             "module": "Shape",
-            "submodule": "2D Primitives"
+            "submodule": "2D Primitives",
+            "overloads": [
+                {
+                    "line": 123,
+                    "params": [
+                        {
+                            "name": "a",
+                            "description": "<p>x-coordinate of the ellipse.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "b",
+                            "description": "<p>y-coordinate of the ellipse.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "c",
+                            "description": "<p>width of the ellipse.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "d",
+                            "description": "<p>height of the ellipse.</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                },
+                {
+                    "line": 142,
+                    "params": [
+                        {
+                            "name": "x",
+                            "description": "<p>x-coordinate of the ellipse.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y",
+                            "description": "<p>y-coordinate of the ellipse.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z",
+                            "description": "<p>z-coordinate of the ellipse.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "w",
+                            "description": "<p>width of the ellipse.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "h",
+                            "description": "<p>height of the ellipse.</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 174,
+            "line": 178,
             "description": "<p>Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.</p>\n",
             "itemtype": "method",
             "name": "line",
@@ -4544,7 +4992,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 256,
+            "line": 246,
             "description": "<p>Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point. The color of the point is\ndetermined by the current stroke.</p>\n",
             "itemtype": "method",
             "name": "point",
@@ -4573,52 +5021,10 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 315,
+            "line": 291,
             "description": "<p>Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.</p>\n",
             "itemtype": "method",
             "name": "quad",
-            "params": [
-                {
-                    "name": "x1",
-                    "description": "<p>the x-coordinate of the first point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y1",
-                    "description": "<p>the y-coordinate of the first point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x2",
-                    "description": "<p>the x-coordinate of the second point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y2",
-                    "description": "<p>the y-coordinate of the second point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x3",
-                    "description": "<p>the x-coordinate of the third point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y3",
-                    "description": "<p>the y-coordinate of the third point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x4",
-                    "description": "<p>the x-coordinate of the fourth point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y4",
-                    "description": "<p>the y-coordinate of the fourth point</p>\n",
-                    "type": "Number"
-                }
-            ],
             "return": {
                 "description": "the p5 object",
                 "type": "P5"
@@ -4628,60 +5034,86 @@
             ],
             "class": "p5",
             "module": "Shape",
-            "submodule": "2D Primitives"
+            "submodule": "2D Primitives",
+            "overloads": [
+                {
+                    "line": 291,
+                    "params": [
+                        {
+                            "name": "x1",
+                            "description": "<p>the x-coordinate of the first point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y1",
+                            "description": "<p>the y-coordinate of the first point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x2",
+                            "description": "<p>the x-coordinate of the second point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y2",
+                            "description": "<p>the y-coordinate of the second point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x3",
+                            "description": "<p>the x-coordinate of the third point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y3",
+                            "description": "<p>the y-coordinate of the third point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x4",
+                            "description": "<p>the x-coordinate of the fourth point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y4",
+                            "description": "<p>the y-coordinate of the fourth point</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                },
+                {
+                    "line": 315,
+                    "params": [
+                        {
+                            "name": "z1",
+                            "description": "<p>the z-coordinate of the first point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z2",
+                            "description": "<p>the z-coordinate of the second point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z3",
+                            "description": "<p>the z-coordinate of the third point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z4",
+                            "description": "<p>the z-coordinate of the fourth point</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 395,
+            "line": 361,
             "description": "<p>Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.\n<br><br>\nThe fifth, sixth, seventh and eighth parameters, if specified,\ndetermine corner radius for the top-right, top-left, lower-right and\nlower-left corners, respectively. An omitted corner radius parameter is set\nto the value of the previously specified radius value in the parameter list.</p>\n",
             "itemtype": "method",
             "name": "rect",
-            "params": [
-                {
-                    "name": "x",
-                    "description": "<p>x-coordinate of the rectangle.</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y",
-                    "description": "<p>y-coordinate of the rectangle.</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "w",
-                    "description": "<p>width of the rectangle.</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "h",
-                    "description": "<p>height of the rectangle.</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "tl",
-                    "description": "<p>optional radius of top-left corner.</p>\n",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "tr",
-                    "description": "<p>optional radius of top-right corner.</p>\n",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "br",
-                    "description": "<p>optional radius of bottom-right corner.</p>\n",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "bl",
-                    "description": "<p>optional radius of bottom-left corner.</p>\n",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
             "return": {
                 "description": "the p5 object.",
                 "type": "P5"
@@ -4691,11 +5123,72 @@
             ],
             "class": "p5",
             "module": "Shape",
-            "submodule": "2D Primitives"
+            "submodule": "2D Primitives",
+            "overloads": [
+                {
+                    "line": 361,
+                    "params": [
+                        {
+                            "name": "x",
+                            "description": "<p>x-coordinate of the rectangle.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y",
+                            "description": "<p>y-coordinate of the rectangle.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "w",
+                            "description": "<p>width of the rectangle.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "h",
+                            "description": "<p>height of the rectangle.</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "tl",
+                            "description": "<p>optional radius of top-left corner.</p>\n",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
+                            "name": "tr",
+                            "description": "<p>optional radius of top-right corner.</p>\n",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
+                            "name": "br",
+                            "description": "<p>optional radius of bottom-right corner.</p>\n",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
+                            "name": "bl",
+                            "description": "<p>optional radius of bottom-left corner.</p>\n",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "line": 406,
+                    "params": [
+                        {
+                            "name": "z",
+                            "description": "<p>z-coordinate of the rectangle.</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 463,
+            "line": 432,
             "description": "<p>A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.</p>\n",
             "itemtype": "method",
             "name": "triangle",
@@ -5058,48 +5551,6 @@
             "description": "<p>Draws a cubic Bezier curve on the screen. These curves are defined by a\nseries of anchor and control points. The first two parameters specify\nthe first anchor point and the last two parameters specify the other\nanchor point, which become the first and last points on the curve. The\nmiddle parameters specify the two control points which define the shape\nof the curve. Approximately speaking, control points &quot;pull&quot; the curve\ntowards them.<br /><br />Bezier curves were developed by French\nautomotive engineer Pierre Bezier, and are commonly used in computer\ngraphics to define gently sloping curves. See also curve().</p>\n",
             "itemtype": "method",
             "name": "bezier",
-            "params": [
-                {
-                    "name": "x1",
-                    "description": "<p>x-coordinate for the first anchor point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y1",
-                    "description": "<p>y-coordinate for the first anchor point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x2",
-                    "description": "<p>x-coordinate for the first control point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y2",
-                    "description": "<p>y-coordinate for the first control point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x3",
-                    "description": "<p>x-coordinate for the second control point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y3",
-                    "description": "<p>y-coordinate for the second control point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x4",
-                    "description": "<p>x-coordinate for the second anchor point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y4",
-                    "description": "<p>y-coordinate for the second anchor point</p>\n",
-                    "type": "Number"
-                }
-            ],
             "return": {
                 "description": "the p5 object",
                 "type": "Object"
@@ -5109,11 +5560,83 @@
             ],
             "class": "p5",
             "module": "Shape",
-            "submodule": "Curves"
+            "submodule": "Curves",
+            "overloads": [
+                {
+                    "line": 17,
+                    "params": [
+                        {
+                            "name": "x1",
+                            "description": "<p>x-coordinate for the first anchor point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y1",
+                            "description": "<p>y-coordinate for the first anchor point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x2",
+                            "description": "<p>x-coordinate for the first control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y2",
+                            "description": "<p>y-coordinate for the first control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x3",
+                            "description": "<p>x-coordinate for the second control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y3",
+                            "description": "<p>y-coordinate for the second control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x4",
+                            "description": "<p>x-coordinate for the second anchor point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y4",
+                            "description": "<p>y-coordinate for the second anchor point</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                },
+                {
+                    "line": 50,
+                    "params": [
+                        {
+                            "name": "z1",
+                            "description": "<p>z-coordinate for the first anchor point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z2",
+                            "description": "<p>z-coordinate for the first control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z3",
+                            "description": "<p>z-coordinate for the first anchor point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z4",
+                            "description": "<p>z-coordinate for the first control point</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/core/curves.js",
-            "line": 69,
+            "line": 106,
             "description": "<p>Sets the resolution at which Beziers display.</p>\n<p>The default value is 20.</p>\n",
             "params": [
                 {
@@ -5135,7 +5658,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 90,
+            "line": 127,
             "description": "<p>Evaluates the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a bezier curve at t.</p>\n",
             "itemtype": "method",
             "name": "bezierPoint",
@@ -5179,7 +5702,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 131,
+            "line": 168,
             "description": "<p>Evaluates the tangent to the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.</p>\n",
             "itemtype": "method",
             "name": "bezierTangent",
@@ -5223,52 +5746,10 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 202,
+            "line": 239,
             "description": "<p>Draws a curved line on the screen between two points, given as the\nmiddle four parameters. The first two parameters are a control point, as\nif the curve came from this point even though it&#39;s not drawn. The last\ntwo parameters similarly describe the other control point. <br /><br />\nLonger curves can be created by putting a series of curve() functions\ntogether or using curveVertex(). An additional function called\ncurveTightness() provides control for the visual quality of the curve.\nThe curve() function is an implementation of Catmull-Rom splines.</p>\n",
             "itemtype": "method",
             "name": "curve",
-            "params": [
-                {
-                    "name": "x1",
-                    "description": "<p>x-coordinate for the beginning control point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y1",
-                    "description": "<p>y-coordinate for the beginning control point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x2",
-                    "description": "<p>x-coordinate for the first point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y2",
-                    "description": "<p>y-coordinate for the first point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x3",
-                    "description": "<p>x-coordinate for the second point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y3",
-                    "description": "<p>y-coordinate for the second point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "x4",
-                    "description": "<p>x-coordinate for the ending control point</p>\n",
-                    "type": "Number"
-                },
-                {
-                    "name": "y4",
-                    "description": "<p>y-coordinate for the ending control point</p>\n",
-                    "type": "Number"
-                }
-            ],
             "return": {
                 "description": "the p5 object",
                 "type": "Object"
@@ -5278,11 +5759,83 @@
             ],
             "class": "p5",
             "module": "Shape",
-            "submodule": "Curves"
+            "submodule": "Curves",
+            "overloads": [
+                {
+                    "line": 239,
+                    "params": [
+                        {
+                            "name": "x1",
+                            "description": "<p>x-coordinate for the beginning control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y1",
+                            "description": "<p>y-coordinate for the beginning control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x2",
+                            "description": "<p>x-coordinate for the first point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y2",
+                            "description": "<p>y-coordinate for the first point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x3",
+                            "description": "<p>x-coordinate for the second point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y3",
+                            "description": "<p>y-coordinate for the second point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "x4",
+                            "description": "<p>x-coordinate for the ending control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y4",
+                            "description": "<p>y-coordinate for the ending control point</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                },
+                {
+                    "line": 286,
+                    "params": [
+                        {
+                            "name": "z1",
+                            "description": "<p>z-coordinate for the beginning control point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z2",
+                            "description": "<p>z-coordinate for the first point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z3",
+                            "description": "<p>z-coordinate for the second point</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z4",
+                            "description": "<p>z-coordinate for the ending control point</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/core/curves.js",
-            "line": 268,
+            "line": 344,
             "description": "<p>Sets the resolution at which curves display.</p>\n<p>The default value is 20.</p>\n",
             "params": [
                 {
@@ -5304,7 +5857,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 289,
+            "line": 365,
             "description": "<p>Modifies the quality of forms created with curve() and curveVertex().\nThe parameter tightness determines how the curve fits to the vertex\npoints. The value 0.0 is the default value for tightness (this value\ndefines the curves to be Catmull-Rom splines) and the value 1.0 connects\nall the points with straight lines. Values within the range -5.0 and 5.0\nwill deform the curves but will leave them recognizable and as values\nincrease in magnitude, they will continue to deform.</p>\n",
             "itemtype": "method",
             "name": "curveTightness",
@@ -5328,7 +5881,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 331,
+            "line": 407,
             "description": "<p>Evaluates the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.</p>\n",
             "itemtype": "method",
             "name": "curvePoint",
@@ -5372,7 +5925,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 376,
+            "line": 452,
             "description": "<p>Evaluates the tangent to the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points on the curve,\nand b and c are the control points.</p>\n",
             "itemtype": "method",
             "name": "curveTangent",
@@ -6291,7 +6844,7 @@
         },
         {
             "file": "src/core/p5.Renderer.js",
-            "line": 141,
+            "line": 145,
             "description": "<p>Helper fxn to check font type (system or otf)</p>\n",
             "class": "p5.Renderer",
             "module": "Rendering",
@@ -6299,7 +6852,7 @@
         },
         {
             "file": "src/core/p5.Renderer.js",
-            "line": 197,
+            "line": 201,
             "description": "<p>Helper fxn to measure ascent and descent.\nAdapted from <a href=\"http://stackoverflow.com/a/25355178\">http://stackoverflow.com/a/25355178</a></p>\n",
             "class": "p5.Renderer",
             "module": "Rendering",
@@ -6928,7 +7481,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 468,
+            "line": 469,
             "description": "<p>Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().</p>\n",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -6967,7 +7520,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 540,
+            "line": 541,
             "description": "<p>All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.</p>\n",
             "itemtype": "method",
             "name": "vertex",
@@ -12005,6 +12558,14 @@
             "submodule": "Math"
         },
         {
+            "file": "src/math/p5.Vector.js",
+            "line": 1038,
+            "static": 1,
+            "class": "p5.Vector",
+            "module": "Math",
+            "submodule": "Math"
+        },
+        {
             "file": "src/math/random.js",
             "line": 45,
             "description": "<p>Sets the seed value for random().</p>\n<p>By default, random() produces different results each time the program\nis run. Set the seed parameter to a constant to return the same\npseudo-random numbers each time the software is run.</p>\n",
@@ -13609,7 +14170,7 @@
         },
         {
             "file": "src/app.js",
-            "line": 61,
+            "line": 62,
             "description": "<p>_globalInit</p>\n<p>TODO: ???\nif sketch is on window\nassume &quot;global&quot; mode\nand instantiate p5 automatically\notherwise do nothing</p>\n",
             "return": {
                 "description": "",
@@ -18583,7 +19144,7 @@
     "warnings": [
         {
             "message": "param name missing: {p5.Vector | Array }\n                     vector to scale by",
-            "line": " src/3d/p5.Matrix.js:335"
+            "line": " src/3d/p5.Matrix.js:439"
         },
         {
             "message": "replacing incorrect tag: returns with return",
@@ -18614,6 +19175,10 @@
             "line": " lib/addons/p5.sound.js:6765"
         },
         {
+            "message": "Missing item type\nParse OBJ lines into model. For reference, this is what a simple model of a\nsquare might look like:\n\nv -0.5 -0.5 0.5\nv -0.5 -0.5 -0.5\nv -0.5 0.5 -0.5\nv -0.5 0.5 0.5\n\nf 4 3 2 1",
+            "line": " src/3d/loading.js:51"
+        },
+        {
             "message": "Missing item type\nHelper functions; Checks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
             "line": " src/3d/material.js:124"
         },
@@ -18622,36 +19187,24 @@
             "line": " src/3d/material.js:135"
         },
         {
-            "message": "Missing item type\np5 Geometry3D class",
-            "line": " src/3d/p5.Geometry3D.js:7"
+            "message": "Missing item type",
+            "line": " src/3d/material.js:239"
         },
         {
-            "message": "Missing item type\ngenerate geometriy with parametric method",
-            "line": " src/3d/p5.Geometry3D.js:29"
+            "message": "Missing item type\np5 Geometry class",
+            "line": " src/3d/p5.Geometry.js:7"
         },
         {
-            "message": "Missing item type\ncompute faceNormals for a geometry",
-            "line": " src/3d/p5.Geometry3D.js:80"
+            "message": "Missing item type\ncomputes smooth normals per vertex as an average of each\nface.",
+            "line": " src/3d/p5.Geometry.js:71"
         },
         {
-            "message": "Missing item type\ncompute vertexNormals for a geometry",
-            "line": " src/3d/p5.Geometry3D.js:105"
+            "message": "Missing item type\nAverages the vertex normals. Used in curved\nsurfaces",
+            "line": " src/3d/p5.Geometry.js:94"
         },
         {
-            "message": "Missing item type\n[generateUV description]",
-            "line": " src/3d/p5.Geometry3D.js:189"
-        },
-        {
-            "message": "Missing item type\ngenerate an object containing information needed to create buffer",
-            "line": " src/3d/p5.Geometry3D.js:206"
-        },
-        {
-            "message": "Missing item type\nturn a two dimensional array into one dimensional array",
-            "line": " src/3d/p5.Geometry3D.js:232"
-        },
-        {
-            "message": "Missing item type\nturn an array of Vector into a one dimensional array of numbers",
-            "line": " src/3d/p5.Geometry3D.js:244"
+            "message": "Missing item type\nAverages pole normals.  Used in spherical primitives",
+            "line": " src/3d/p5.Geometry.js:113"
         },
         {
             "message": "Missing item type",
@@ -18663,119 +19216,175 @@
         },
         {
             "message": "Missing item type\nSets the x, y, and z component of the vector using two or three separate\nvariables, the data from a p5.Matrix, or the values from a float array.",
-            "line": " src/3d/p5.Matrix.js:50"
+            "line": " src/3d/p5.Matrix.js:74"
         },
         {
             "message": "Missing item type\nGets a copy of the vector, returns a p5.Matrix object.",
-            "line": " src/3d/p5.Matrix.js:69"
+            "line": " src/3d/p5.Matrix.js:93"
         },
         {
             "message": "Missing item type\nreturn a copy of a matrix",
-            "line": " src/3d/p5.Matrix.js:78"
+            "line": " src/3d/p5.Matrix.js:102"
         },
         {
             "message": "Missing item type\nreturn an identity matrix",
-            "line": " src/3d/p5.Matrix.js:103"
+            "line": " src/3d/p5.Matrix.js:127"
         },
         {
             "message": "Missing item type\ntranspose according to a given matrix",
-            "line": " src/3d/p5.Matrix.js:111"
+            "line": " src/3d/p5.Matrix.js:135"
         },
         {
             "message": "Missing item type\ninvert  matrix according to a give matrix",
-            "line": " src/3d/p5.Matrix.js:171"
+            "line": " src/3d/p5.Matrix.js:195"
+        },
+        {
+            "message": "Missing item type\nInverts a 3x3 matrix",
+            "line": " src/3d/p5.Matrix.js:280"
+        },
+        {
+            "message": "Missing item type\ntransposes a 3x3 p5.Matrix by a mat3",
+            "line": " src/3d/p5.Matrix.js:316"
+        },
+        {
+            "message": "Missing item type\nconverts a 4x4 matrix to its 3x3 inverse tranform\ncommonly used in MVMatrix to NMatrix conversions.",
+            "line": " src/3d/p5.Matrix.js:332"
         },
         {
             "message": "Missing item type\ninspired by Toji's mat4 determinant",
-            "line": " src/3d/p5.Matrix.js:256"
+            "line": " src/3d/p5.Matrix.js:360"
         },
         {
             "message": "Missing item type\nmultiply two mat4s",
-            "line": " src/3d/p5.Matrix.js:279"
+            "line": " src/3d/p5.Matrix.js:383"
         },
         {
             "message": "Missing item type\nscales a p5.Matrix by scalars or a vector",
-            "line": " src/3d/p5.Matrix.js:335"
+            "line": " src/3d/p5.Matrix.js:439"
         },
         {
             "message": "Missing item type\nrotate our Matrix around an axis by the given angle.",
-            "line": " src/3d/p5.Matrix.js:381"
+            "line": " src/3d/p5.Matrix.js:485"
         },
         {
             "message": "Missing item type",
-            "line": " src/3d/p5.Matrix.js:460"
+            "line": " src/3d/p5.Matrix.js:564"
         },
         {
             "message": "Missing item type\nsets the perspective matrix",
-            "line": " src/3d/p5.Matrix.js:490"
+            "line": " src/3d/p5.Matrix.js:594"
         },
         {
             "message": "Missing item type\nsets the ortho matrix",
-            "line": " src/3d/p5.Matrix.js:524"
+            "line": " src/3d/p5.Matrix.js:628"
         },
         {
             "message": "Missing item type\nPRIVATE",
-            "line": " src/3d/p5.Matrix.js:559"
+            "line": " src/3d/p5.Matrix.js:663"
         },
         {
-            "message": "Missing item type\n3D graphics class.  Can also be used as an off-screen graphics buffer.\nA p5.Renderer3D object can be constructed",
-            "line": " src/3d/p5.Renderer3D.js:20"
+            "message": "Missing item type\nWelcome to RendererGL Immediate Mode.\nImmediate mode is used for drawing custom shapes\nfrom a set of vertices.  Immediate Mode is activated\nwhen you call beginShape() & de-activated when you call endShape().\nImmediate mode is a style of programming borrowed\nfrom OpenGL's (now-deprecated) immediate mode.\nIt differs from p5.js' default, Retained Mode, which caches\ngeometries and buffers on the CPU to reduce the number of webgl\ndraw calls. Retained mode is more efficient & performative,\nhowever, Immediate Mode is useful for sketching quick\ngeometric ideas.",
+            "line": " src/3d/p5.Renderer3D.Immediate.js:1"
         },
         {
-            "message": "Missing item type\n[resize description]",
-            "line": " src/3d/p5.Renderer3D.js:89"
+            "message": "Missing item type\nBegin shape drawing.  This is a helpful way of generating\ncustom shapes quickly.  However in WEBGL mode, application\nperformance will likely drop as a result of too many calls to\nbeginShape() / endShape().  As a high performance alternative,\nplease use p5.js geometry primitives.",
+            "line": " src/3d/p5.Renderer3D.Immediate.js:19"
+        },
+        {
+            "message": "Missing item type\nadds a vertex to be drawn in a custom Shape.",
+            "line": " src/3d/p5.Renderer3D.Immediate.js:49"
+        },
+        {
+            "message": "Missing item type\nEnd shape drawing and render vertices to screen.",
+            "line": " src/3d/p5.Renderer3D.Immediate.js:68"
+        },
+        {
+            "message": "Missing item type\nBind immediateMode buffers to data,\nthen draw gl arrays",
+            "line": " src/3d/p5.Renderer3D.Immediate.js:121"
+        },
+        {
+            "message": "Missing item type\ninitializes buffer defaults. runs each time a new geometry is\nregistered",
+            "line": " src/3d/p5.Renderer3D.Retained.js:7"
+        },
+        {
+            "message": "Missing item type\ncreateBuffers description",
+            "line": " src/3d/p5.Renderer3D.Retained.js:30"
+        },
+        {
+            "message": "Missing item type\nDraws buffers given a geometry key ID",
+            "line": " src/3d/p5.Renderer3D.Retained.js:93"
+        },
+        {
+            "message": "Missing item type\nturn a two dimensional array into one dimensional array",
+            "line": " src/3d/p5.Renderer3D.Retained.js:129"
+        },
+        {
+            "message": "Missing item type\nturn a p5.Vector Array into a one dimensional number array",
+            "line": " src/3d/p5.Renderer3D.Retained.js:145"
+        },
+        {
+            "message": "Missing item type\nmodel view, projection, & normal\nmatrices",
+            "line": " src/3d/p5.Renderer3D.js:43"
         },
         {
             "message": "Missing item type\n[background description]",
-            "line": " src/3d/p5.Renderer3D.js:101"
+            "line": " src/3d/p5.Renderer3D.js:106"
         },
         {
-            "message": "Missing item type\n[initShaders description]",
-            "line": " src/3d/p5.Renderer3D.js:126"
+            "message": "Missing item type\n[_initShaders description]",
+            "line": " src/3d/p5.Renderer3D.js:130"
         },
         {
-            "message": "Missing item type\n[translate description]",
-            "line": " src/3d/p5.Renderer3D.js:316"
+            "message": "Missing item type\nSets a shader uniform given a shaderProgram and uniform string",
+            "line": " src/3d/p5.Renderer3D.js:205"
         },
         {
-            "message": "Missing item type\nScales the Model View Matrix by a vector",
-            "line": " src/3d/p5.Renderer3D.js:333"
+            "message": "Missing item type\n[strokeWeight description]",
+            "line": " src/3d/p5.Renderer3D.js:351"
         },
         {
-            "message": "Missing item type\n[rotate description]",
-            "line": " src/3d/p5.Renderer3D.js:345"
+            "message": "Missing item type\n[resize description]",
+            "line": " src/3d/p5.Renderer3D.js:374"
         },
         {
-            "message": "Missing item type\n[rotateX description]",
-            "line": " src/3d/p5.Renderer3D.js:356"
-        },
-        {
-            "message": "Missing item type\n[rotateY description]",
-            "line": " src/3d/p5.Renderer3D.js:366"
-        },
-        {
-            "message": "Missing item type\n[rotateZ description]",
-            "line": " src/3d/p5.Renderer3D.js:376"
-        },
-        {
-            "message": "Missing item type\npushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
+            "message": "Missing item type\nclears color and depth buffers\nwith r,g,b,a",
             "line": " src/3d/p5.Renderer3D.js:386"
         },
         {
+            "message": "Missing item type\n[translate description]",
+            "line": " src/3d/p5.Renderer3D.js:403"
+        },
+        {
+            "message": "Missing item type\nScales the Model View Matrix by a vector",
+            "line": " src/3d/p5.Renderer3D.js:420"
+        },
+        {
+            "message": "Missing item type\n[rotate description]",
+            "line": " src/3d/p5.Renderer3D.js:432"
+        },
+        {
+            "message": "Missing item type\n[rotateX description]",
+            "line": " src/3d/p5.Renderer3D.js:444"
+        },
+        {
+            "message": "Missing item type\n[rotateY description]",
+            "line": " src/3d/p5.Renderer3D.js:454"
+        },
+        {
+            "message": "Missing item type\n[rotateZ description]",
+            "line": " src/3d/p5.Renderer3D.js:464"
+        },
+        {
+            "message": "Missing item type\npushes a copy of the model view matrix onto the\nMV Matrix stack.\nNOTE to self: could probably make this more readable",
+            "line": " src/3d/p5.Renderer3D.js:474"
+        },
+        {
             "message": "Missing item type\n[pop description]",
-            "line": " src/3d/p5.Renderer3D.js:396"
+            "line": " src/3d/p5.Renderer3D.js:484"
         },
         {
-            "message": "Missing item type\ncreateBuffer",
-            "line": " src/3d/retainedMode3D.js:8"
-        },
-        {
-            "message": "Missing item type\ninitBuffer description",
-            "line": " src/3d/retainedMode3D.js:39"
-        },
-        {
-            "message": "Missing item type\ndrawBuffer",
-            "line": " src/3d/retainedMode3D.js:79"
+            "message": "Missing item type",
+            "line": " src/3d/primitives.js:228"
         },
         {
             "message": "Missing item type\nmodule Conversion\nsubmodule Color Conversion",
@@ -18847,11 +19456,11 @@
         },
         {
             "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:69"
+            "line": " src/core/curves.js:106"
         },
         {
             "message": "Missing item type\nSets the resolution at which curves display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:268"
+            "line": " src/core/curves.js:344"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
@@ -18891,11 +19500,11 @@
         },
         {
             "message": "Missing item type\nHelper fxn to check font type (system or otf)",
-            "line": " src/core/p5.Renderer.js:141"
+            "line": " src/core/p5.Renderer.js:145"
         },
         {
             "message": "Missing item type\nHelper fxn to measure ascent and descent.\nAdapted from http://stackoverflow.com/a/25355178",
-            "line": " src/core/p5.Renderer.js:197"
+            "line": " src/core/p5.Renderer.js:201"
         },
         {
             "message": "Missing item type\np5.Renderer2D\nThe 2D graphics canvas renderer class.\nextends p5.Renderer",
@@ -19086,6 +19695,10 @@
             "line": " src/math/p5.Vector.js:989"
         },
         {
+            "message": "Missing item type",
+            "line": " src/math/p5.Vector.js:1038"
+        },
+        {
             "message": "Missing item type\nReturns the ascent of the current font at its current size. The ascent\nrepresents the distance, in pixels, of the tallest character above\nthe baseline.",
             "line": " src/typography/attributes.js:157"
         },
@@ -19111,7 +19724,7 @@
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
-            "line": " src/app.js:61"
+            "line": " src/app.js:62"
         },
         {
             "message": "Missing item type\nHelper function for select and selectAll",
