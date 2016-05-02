@@ -2,9 +2,9 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-<!--   <div id="credits">
-    <em>Prism Pusher</em> by <a target=_blank href='http://leslieruckman.tumblr.com/'>Leslie Ruckman</a>
-  </div> -->
+<div id="credits">
+    <em>Tea Time</em> by <a target=_blank href='http://mindofmatthew.com/'>Matthew Kaney</a>
+</div>
  
   <?php include('heading.php'); ?>
 
@@ -63,8 +63,8 @@
 
   <?php include('end.php'); ?>
 
-<!--   <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/LeslieRuckman_RainbowPixelGrow'></iframe>
-  <div id='home-sketch-frame'></div> -->
+<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/matthew_kaney_teatime'></iframe>
+  <!-- <div id='home-sketch-frame'></div> -->
   <!--<script src='./p5_featured/LeslieRuckman_RainbowPixelGrow/sketch.js'></script>-->
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);

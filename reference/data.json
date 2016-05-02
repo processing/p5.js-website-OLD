@@ -2743,7 +2743,7 @@
                 "type": "p5.Geometry"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n\n  teapot = loadModel('teapot.obj');\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n\n  teapot = loadModel('assets/teapot.obj');\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -2771,7 +2771,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n\n  teapot = loadModel('teapot.obj');\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n\n  teapot = loadModel('assets/teapot.obj');\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -4898,31 +4898,6 @@
                     "line": 123,
                     "params": [
                         {
-                            "name": "a",
-                            "description": "<p>x-coordinate of the ellipse.</p>\n",
-                            "type": "Number"
-                        },
-                        {
-                            "name": "b",
-                            "description": "<p>y-coordinate of the ellipse.</p>\n",
-                            "type": "Number"
-                        },
-                        {
-                            "name": "c",
-                            "description": "<p>width of the ellipse.</p>\n",
-                            "type": "Number"
-                        },
-                        {
-                            "name": "d",
-                            "description": "<p>height of the ellipse.</p>\n",
-                            "type": "Number"
-                        }
-                    ]
-                },
-                {
-                    "line": 142,
-                    "params": [
-                        {
                             "name": "x",
                             "description": "<p>x-coordinate of the ellipse.</p>\n",
                             "type": "Number"
@@ -4933,11 +4908,6 @@
                             "type": "Number"
                         },
                         {
-                            "name": "z",
-                            "description": "<p>z-coordinate of the ellipse.</p>\n",
-                            "type": "Number"
-                        },
-                        {
                             "name": "w",
                             "description": "<p>width of the ellipse.</p>\n",
                             "type": "Number"
@@ -4945,6 +4915,36 @@
                         {
                             "name": "h",
                             "description": "<p>height of the ellipse.</p>\n",
+                            "type": "Number"
+                        }
+                    ]
+                },
+                {
+                    "line": 142,
+                    "params": [
+                        {
+                            "name": "x",
+                            "description": "",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "y",
+                            "description": "",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z",
+                            "description": "<p>z-coordinate of the ellipse</p>\n",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "w",
+                            "description": "",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "h",
+                            "description": "",
                             "type": "Number"
                         }
                     ]
