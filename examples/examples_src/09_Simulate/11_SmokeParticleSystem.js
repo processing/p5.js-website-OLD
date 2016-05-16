@@ -142,7 +142,6 @@ Particle.prototype.render = function() {
 }
 
 // Method to apply a force vector to the Particle object
-// Note we are ignoring "mass" here - see
 Particle.prototype.applyForce = function(f) {
     this.acc.add(f);
 }
