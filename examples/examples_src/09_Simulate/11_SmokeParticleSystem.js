@@ -39,6 +39,9 @@ function draw() {
     drawVector(wind, createVector(width/2,50,0),500);
 }
 
+/**
+ *  This function draws an arrow showing the direction our "wind" is blowing.
+ */
 function drawVector(v,loc,scale){
     push();
     var arrowsize = 4;
@@ -72,13 +75,13 @@ var ParticleSystem = function(num,v,img_) {
 };
 
 /**
- * Runs the particle system.
+ * This function runs the entire particle system.
  */
 ParticleSystem.prototype.run = function() {
 
-    // cache length into a variable
+    // cache length of the array we're going to loop into a variable
     // You may see <variable>.length in a for loop, from time to time but
-    // we cache it here because otherwise the length is re-calculated for each iteration
+    // we cache it here because otherwise the length is re-calculated for each iteration of a loop
     var len = this.particles.length;
 
     //loop through and run particles
@@ -130,22 +133,34 @@ var Particle = function (pos, img_) {
     this.texture = img_;
 }
 
+/**
+ *  Simulataneously updates and displays a particle.
+ */
 Particle.prototype.run = function() {
     this.update();
     this.render();
 }
 
+/**
+ *  A function to display a particle
+ */
 Particle.prototype.render = function() {
     imageMode(CENTER);
     tint(255,this.lifespan);
     image(this.texture,this.loc.x,this.loc.y);
 }
 
-// Method to apply a force vector to the Particle object
+/**
+ *  A method to apply a force vector to a particle.
+ */
 Particle.prototype.applyForce = function(f) {
     this.acc.add(f);
 }
 
+/**
+ *  This method checks to see if the particle has reached the end of it's lifespan,
+ *  if it has, return true, otherwise return false.
+ */
 Particle.prototype.isDead = function () {
     if (this.lifespan <= 0.0) {
         return true;
@@ -154,6 +169,9 @@ Particle.prototype.isDead = function () {
     }
 }
 
+/**
+ *  This method updates the position of the particle.
+ */
 Particle.prototype.update = function() {
     this.vel.add(this.acc);
     this.loc.add(this.vel);
