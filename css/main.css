@@ -1608,7 +1608,6 @@ footer {
 
     #collection-list-nav dl:nth-child(4),
         .reference-group dl:nth-child(4),
-        .reference-group.main-ref-page dl:nth-child(5),
         #list .column.col_3 {
         margin-right:0;
     }
