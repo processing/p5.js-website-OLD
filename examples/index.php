@@ -262,6 +262,9 @@
           <a href="examples/Simulate_Soft_Body.php">Soft Body</a><br>
           
         
+          <a href="examples/Simulate_SmokeParticles.php">SmokeParticles</a><br>
+          
+        
         </p>
         
       
