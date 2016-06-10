@@ -5674,6 +5674,12 @@
                     "name": "y",
                     "description": "<p>up/down translation</p>\n",
                     "type": "Number"
+                },
+                {
+                    "name": "z",
+                    "description": "<p>forward/backward translation (webgl only)</p>\n",
+                    "type": "Number",
+                    "optional": true
                 }
             ],
             "return": {
