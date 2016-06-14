@@ -12913,7 +12913,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  img = loadImage(\"assets/laDefense.jpg\");\n}\n\nfunction draw(){\n  background(0);\n  rotateZ(frameCount * 0.01);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  //pass image as texture\n  texture(img);\n  box(200, 200, 200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar pg;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  pg = createGraphics(256,256);\n}\n\nfunction draw(){\n  background(0);\n  pg.background(255);\n  pg.text('hello world!');\n  //pass image as texture\n  texture(pg);\n  plane(200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar vid;\nfunction preload(){\n  vid = createVideo(\"assets/fingers.mov\");\n}\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(0);\n  //pass video frame as texture\n  texture(vid);\n  plane(200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  img = loadImage(\"assets/laDefense.jpg\");\n}\n\nfunction draw(){\n  background(0);\n  rotateZ(frameCount * 0.01);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  //pass image as texture\n  texture(img);\n  box(200, 200, 200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar pg;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  pg = createGraphics(256,256);\n}\n\nfunction draw(){\n  background(0);\n  pg.background(255);\n  pg.text('hello world!');\n  //pass image as texture\n  texture(pg);\n  plane(200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar vid;\nfunction preload(){\n  vid = createVideo(\"assets/fingers.mov\");\n  vid.hide();\n  vid.loop();\n}\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(0);\n  //pass video frame as texture\n  texture(vid);\n  plane(200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Lights, Camera",
@@ -12921,7 +12921,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 153,
+            "line": 155,
             "description": "<p>Texture Util functions</p>\n",
             "class": "p5",
             "module": "Lights, Camera",
@@ -12929,7 +12929,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 174,
+            "line": 176,
             "description": "<p>Checks whether val is a pot\nmore info on power of 2 here:\n<a href=\"https://www.opengl.org/wiki/NPOT_Texture\">https://www.opengl.org/wiki/NPOT_Texture</a></p>\n",
             "params": [
                 {
@@ -12948,7 +12948,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 185,
+            "line": 187,
             "description": "<p>returns the next highest power of 2 value</p>\n",
             "params": [
                 {
@@ -12967,7 +12967,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 197,
+            "line": 199,
             "description": "<p>Ambient material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "ambientMaterial",
@@ -13009,7 +13009,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 245,
+            "line": 247,
             "description": "<p>Specular material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "specularMaterial",
@@ -13051,7 +13051,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 289,
+            "line": 291,
             "access": "private",
             "tagname": "blends colors according to color components.\nIf alpha value is less than 1, we need to enable blending\non our gl context.  Otherwise opaque objects need to a depthMask.",
             "params": [
@@ -19564,19 +19564,19 @@
         },
         {
             "message": "Missing item type\nTexture Util functions",
-            "line": " src/webgl/material.js:153"
+            "line": " src/webgl/material.js:155"
         },
         {
             "message": "Missing item type\nChecks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
-            "line": " src/webgl/material.js:174"
+            "line": " src/webgl/material.js:176"
         },
         {
             "message": "Missing item type\nreturns the next highest power of 2 value",
-            "line": " src/webgl/material.js:185"
+            "line": " src/webgl/material.js:187"
         },
         {
             "message": "Missing item type",
-            "line": " src/webgl/material.js:289"
+            "line": " src/webgl/material.js:291"
         },
         {
             "message": "Missing item type\np5 Geometry class",
