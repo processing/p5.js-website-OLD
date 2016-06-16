@@ -1385,6 +1385,10 @@ footer {
       display: none;
     }*/
 
+    #family form {
+      display: none;
+    }
+
     #family p.left {
         margin:0.375em 0 0.375em 1em !important;
     }
