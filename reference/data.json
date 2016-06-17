@@ -1059,7 +1059,7 @@
             "module": "IO",
             "namespace": "",
             "file": "src/io/files.js",
-            "line": 889
+            "line": 895
         },
         "Table": {
             "name": "Table",
@@ -3876,7 +3876,7 @@
         },
         {
             "file": "src/core/core.js",
-            "line": 372,
+            "line": 375,
             "description": "<p>Removes the entire p5 sketch. This will remove the canvas and any\nelements created by p5.js. It will also stop the draw loop and unbind\nany properties or methods from the window global scope. It will\nleave a variable p5 in case you wanted to create a new p5 sketch.\nIf you like, you can set p5 = null to erase it.</p>\n",
             "itemtype": "method",
             "name": "remove",
@@ -5513,7 +5513,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 123,
+            "line": 125,
             "description": "<p>Rotates around X axis.</p>\n",
             "itemtype": "method",
             "name": "rotateX",
@@ -5534,7 +5534,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 149,
+            "line": 151,
             "description": "<p>Rotates around Y axis.</p>\n",
             "itemtype": "method",
             "name": "rotateY",
@@ -5555,7 +5555,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 175,
+            "line": 177,
             "description": "<p>Rotates around Z axis.  Webgl mode only.</p>\n",
             "itemtype": "method",
             "name": "rotateZ",
@@ -5576,7 +5576,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 201,
+            "line": 203,
             "description": "<p>Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n<br><br>\nUsing this function with the z parameter is only available in WEBGL mode.\nThis function can be further controlled with push() and pop().</p>\n",
             "itemtype": "method",
             "name": "scale",
@@ -5612,7 +5612,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 277,
+            "line": 279,
             "description": "<p>Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again.\n<br><br>\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.</p>\n",
             "itemtype": "method",
             "name": "shearX",
@@ -5636,7 +5636,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 314,
+            "line": 316,
             "description": "<p>Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.\n<br><br>\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.</p>\n",
             "itemtype": "method",
             "name": "shearY",
@@ -5660,7 +5660,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 351,
+            "line": 353,
             "description": "<p>Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n<br><br>\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().</p>\n",
             "itemtype": "method",
             "name": "translate",
@@ -6274,7 +6274,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 26,
+            "line": 23,
             "description": "<p>The system variable mouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the canvas.</p>\n",
             "itemtype": "property",
             "name": "mouseX",
@@ -6287,7 +6287,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 45,
+            "line": 42,
             "description": "<p>The system variable mouseY always contains the current vertical position\nof the mouse, relative to (0, 0) of the canvas.</p>\n",
             "itemtype": "property",
             "name": "mouseY",
@@ -6300,7 +6300,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 64,
+            "line": 61,
             "description": "<p>The system variable pmouseX always contains the horizontal position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the canvas.</p>\n",
             "itemtype": "property",
             "name": "pmouseX",
@@ -6313,7 +6313,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 91,
+            "line": 88,
             "description": "<p>The system variable pmouseY always contains the vertical position of the\nmouse in the frame previous to the current frame, relative to (0, 0) of\nthe canvas.</p>\n",
             "itemtype": "property",
             "name": "pmouseY",
@@ -6326,7 +6326,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 116,
+            "line": 113,
             "description": "<p>The system variable winMouseX always contains the current horizontal\nposition of the mouse, relative to (0, 0) of the window.</p>\n",
             "itemtype": "property",
             "name": "winMouseX",
@@ -6339,7 +6339,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 149,
+            "line": 146,
             "description": "<p>The system variable winMouseY always contains the current vertical\nposition of the mouse, relative to (0, 0) of the window.</p>\n",
             "itemtype": "property",
             "name": "winMouseY",
@@ -6352,7 +6352,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 182,
+            "line": 179,
             "description": "<p>The system variable pwinMouseX always contains the horizontal position\nof the mouse in the frame previous to the current frame, relative to\n(0, 0) of the window.</p>\n",
             "itemtype": "property",
             "name": "pwinMouseX",
@@ -6365,7 +6365,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 219,
+            "line": 216,
             "description": "<p>The system variable pwinMouseY always contains the vertical position of\nthe mouse in the frame previous to the current frame, relative to (0, 0)\nof the window.</p>\n",
             "itemtype": "property",
             "name": "pwinMouseY",
@@ -6378,7 +6378,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 257,
+            "line": 254,
             "description": "<p>Processing automatically tracks if the mouse button is pressed and which\nbutton is pressed. The value of the system variable mouseButton is either\nLEFT, RIGHT, or CENTER depending on which button was pressed last.\nWarning: different browsers may track mouseButton differently.</p>\n",
             "itemtype": "property",
             "name": "mouseButton",
@@ -6391,7 +6391,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 288,
+            "line": 285,
             "description": "<p>The boolean system variable mouseIsPressed is true if the mouse is pressed\nand false if not.</p>\n",
             "itemtype": "property",
             "name": "mouseIsPressed",
@@ -6404,7 +6404,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 358,
+            "line": 360,
             "description": "<p>The mouseMoved() function is called every time the mouse moves and a mouse\nbutton is not pressed.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add &quot;return false&quot; to the end of the method.</p>\n",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -6417,7 +6417,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 397,
+            "line": 399,
             "description": "<p>The mouseDragged() function is called once every time the mouse moves and\na mouse button is pressed. If no mouseDragged() function is defined, the\ntouchMoved() function will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add &quot;return false&quot; to the end of the method.</p>\n",
             "itemtype": "method",
             "name": "mouseDragged",
@@ -6430,7 +6430,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 464,
+            "line": 466,
             "description": "<p>The mousePressed() function is called once after every time a mouse button\nis pressed. The mouseButton variable (see the related reference entry)\ncan be used to determine which button has been pressed. If no\nmousePressed() function is defined, the touchStarted() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add &quot;return false&quot; to the end of the method.</p>\n",
             "itemtype": "method",
             "name": "mousePressed",
@@ -6443,7 +6443,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 527,
+            "line": 529,
             "description": "<p>The mouseReleased() function is called every time a mouse button is\nreleased. If no mouseReleased() function is defined, the touchEnded()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add &quot;return false&quot; to the end of the method.</p>\n",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -6456,7 +6456,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 590,
+            "line": 592,
             "description": "<p>The mouseClicked() function is called once after a mouse button has been\npressed and then released.<br><br>\nBrowsers may have different default\nbehaviors attached to various mouse events. To prevent any default\nbehavior for this event, add &quot;return false&quot; to the end of the method.</p>\n",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -6469,7 +6469,7 @@
         },
         {
             "file": "src/events/mouse.js",
-            "line": 640,
+            "line": 642,
             "description": "<p>The function mouseWheel() is executed every time a vertical mouse wheel\nevent is detected either triggered by an actual mouse wheel or by a\ntouchpad.<br><br>\nThe event.delta property returns the amount the mouse wheel\nhave scrolled. The values can be positive or negative depending on the\nscroll direction (on OS X with &quot;natural&quot; scrolling enabled, the signs\nare inverted).<br><br>\nBrowsers may have different default behaviors attached to various\nmouse events. To prevent any default behavior for this event, add\n&quot;return false&quot; to the end of the method.<br><br>\nDue to the current support of the &quot;wheel&quot; event on Safari, the function\nmay only work as expected if &quot;return false&quot; is included while using Safari.</p>\n",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -6482,7 +6482,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 23,
+            "line": 20,
             "description": "<p>The system variable touchX always contains the horizontal position of\none finger, relative to (0, 0) of the canvas. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.</p>\n",
             "itemtype": "property",
             "name": "touchX",
@@ -6492,7 +6492,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 33,
+            "line": 30,
             "description": "<p>The system variable touchY always contains the vertical position of\none finger, relative to (0, 0) of the canvas. This is best used for\nsingle touch interactions. For multi-touch interactions, use the\ntouches[] array.</p>\n",
             "itemtype": "property",
             "name": "touchY",
@@ -6502,7 +6502,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 43,
+            "line": 40,
             "description": "<p>The system variable ptouchX always contains the horizontal position of\none finger, relative to (0, 0) of the canvas, in the frame previous to the\ncurrent frame.</p>\n",
             "itemtype": "property",
             "name": "ptouchX",
@@ -6512,7 +6512,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 52,
+            "line": 49,
             "description": "<p>The system variable ptouchY always contains the vertical position of\none finger, relative to (0, 0) of the canvas, in the frame previous to the\ncurrent frame.</p>\n",
             "itemtype": "property",
             "name": "ptouchY",
@@ -6522,7 +6522,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 61,
+            "line": 58,
             "description": "<p>The system variable touches[] contains an array of the positions of all\ncurrent touch points, relative to (0, 0) of the canvas, and IDs identifying a\nunique touch as it moves. Each element in the array is an object with x, y,\nand id properties.</p>\n",
             "itemtype": "property",
             "name": "touches[]",
@@ -6532,7 +6532,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 71,
+            "line": 68,
             "description": "<p>The boolean system variable touchIsDown is true if the screen is\ntouched and false if not.</p>\n",
             "itemtype": "property",
             "name": "touchIsDown",
@@ -6542,7 +6542,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 118,
+            "line": 122,
             "description": "<p>The touchStarted() function is called once after every time a touch is\nregistered. If no touchStarted() function is defined, the mousePressed()\nfunction will be called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add &quot;return false&quot;\nto the end of the method.</p>\n",
             "itemtype": "method",
             "name": "touchStarted",
@@ -6555,7 +6555,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 178,
+            "line": 182,
             "description": "<p>The touchMoved() function is called every time a touch move is registered.\nIf no touchMoved() function is defined, the mouseDragged() function will\nbe called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add &quot;return false&quot;\nto the end of the method.</p>\n",
             "itemtype": "method",
             "name": "touchMoved",
@@ -6568,7 +6568,7 @@
         },
         {
             "file": "src/events/touch.js",
-            "line": 235,
+            "line": 239,
             "description": "<p>The touchEnded() function is called every time a touch ends. If no\ntouchEnded() function is defined, the mouseReleased() function will be\ncalled instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add &quot;return false&quot;\nto the end of the method.</p>\n",
             "itemtype": "method",
             "name": "touchEnded",
@@ -8081,7 +8081,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 780,
+            "line": 783,
             "description": "<p>Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.</p>\n",
             "itemtype": "method",
             "name": "httpPost",
@@ -8122,7 +8122,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 801,
+            "line": 807,
             "description": "<p>Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.<br><br>\nYou may also pass a single object specifying all parameters for the\nrequest following the examples inside the reqwest() calls here:\n<a href='https://github.com/ded/reqwest#api'>\nhttps://github.com/ded/reqwest#api</a></p>\n",
             "itemtype": "method",
             "name": "httpDo",
@@ -8169,7 +8169,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 987,
+            "line": 993,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client&#39;s computer. <b>Note that it is not recommended to call save()\nwithin draw if it&#39;s looping, as the save() function will open a new save\ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename.\nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave(&#39;myCanvas.jpg&#39;); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n\n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Renderer object as an image\n\nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n\nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n\nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -8196,7 +8196,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1104,
+            "line": 1110,
             "description": "<p>Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.</p>\n",
             "itemtype": "method",
             "name": "saveJSON",
@@ -8227,7 +8227,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1160,
+            "line": 1166,
             "description": "<p>Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.</p>\n",
             "itemtype": "method",
             "name": "saveStrings",
@@ -8252,7 +8252,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1225,
+            "line": 1231,
             "description": "<p>Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values (&#39;csv&#39;) but can also\nuse tab separation (&#39;tsv&#39;), or generate an HTML table (&#39;html&#39;).\nThe file saving process and location of the saved file will\nvary between web browsers.</p>\n",
             "itemtype": "method",
             "name": "saveTable",
@@ -8283,7 +8283,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1340,
+            "line": 1346,
             "description": "<p>Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.</p>\n",
             "params": [
                 {
@@ -8310,7 +8310,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1363,
+            "line": 1369,
             "description": "<p>Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.</p>\n",
             "params": [
                 {
@@ -8335,7 +8335,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1399,
+            "line": 1405,
             "description": "<p>Returns a file extension, or another string\nif the provided parameter has no extension.</p>\n",
             "params": [
                 {
@@ -8356,7 +8356,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1431,
+            "line": 1437,
             "description": "<p>Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.</p>\n",
             "return": {
                 "description": "[description]",
@@ -8370,7 +8370,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1443,
+            "line": 1449,
             "description": "<p>Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.</p>\n",
             "access": "private",
             "tagname": "",
@@ -10946,37 +10946,52 @@
         {
             "file": "src/math/random.js",
             "line": 71,
-            "description": "<p>Return a random floating-point number.</p>\n<p>Takes either 0, 1 or 2 arguments.</p>\n<p>If no argument is given, returns a random number from 0\nup to (but not including) 1.</p>\n<p>If one argument is given, returns a random number from 0 up to\n(but not including) the number.</p>\n<p>If two arguments are given, returns a random number from the\nfirst argument up to (but not including) the second argument.</p>\n",
+            "description": "<p>Return a random floating-point number.</p>\n<p>Takes either 0, 1 or 2 arguments.</p>\n<p>If no argument is given, returns a random number from 0\nup to (but not including) 1.</p>\n<p>If one argument is given and it is a number, returns a random number from 0\nup to (but not including) the number.</p>\n<p>If one argument is given and it is an array, returns a random element from\nthat array.</p>\n<p>If two arguments are given, returns a random number from the\nfirst argument up to (but not including) the second argument.</p>\n",
             "itemtype": "method",
             "name": "random",
-            "params": [
-                {
-                    "name": "min",
-                    "description": "<p>the lower bound (inclusive)</p>\n",
-                    "type": "Number",
-                    "optional": true
-                },
-                {
-                    "name": "max",
-                    "description": "<p>the upper bound (exclusive)</p>\n",
-                    "type": "Number",
-                    "optional": true
-                }
-            ],
             "return": {
-                "description": "the random number",
-                "type": "Number"
+                "description": "the random number or a random element in choices",
+                "type": "Number|mixed"
             },
             "example": [
-                "\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(50);\n  stroke(r*5);\n  line(50, i, 50+r, i);\n}\n</code>\n</div>\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(-50, 50);\n  line(50,i,50+r,i);\n}\n</code>\n</div>\n<div>\n<code>\n// Get a random element from an array\nvar words = [ \"apple\", \"bear\", \"cat\", \"dog\" ];\nvar index = floor(random(words.length));  // Convert to integer\ntext(words[index],10,50);  // Displays one of the four words\n</code>\n</div>"
+                "\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(50);\n  stroke(r*5);\n  line(50, i, 50+r, i);\n}\n</code>\n</div>\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(-50, 50);\n  line(50,i,50+r,i);\n}\n</code>\n</div>\n<div>\n<code>\n// Get a random element from an array using the random(Array) syntax\nvar words = [ \"apple\", \"bear\", \"cat\", \"dog\" ];\nvar word = random(words);  // select random word\ntext(word,10,50);  // draw the word\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Math",
-            "submodule": "Random"
+            "submodule": "Random",
+            "overloads": [
+                {
+                    "line": 71,
+                    "params": [
+                        {
+                            "name": "min",
+                            "description": "<p>the lower bound (inclusive)</p>\n",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
+                            "name": "max",
+                            "description": "<p>the upper bound (exclusive)</p>\n",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "line": 119,
+                    "params": [
+                        {
+                            "name": "choices",
+                            "description": "<p>the array to choose from</p>\n",
+                            "type": "Array"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "file": "src/math/random.js",
-            "line": 143,
+            "line": 156,
             "description": "<p>Returns a random number fitting a Gaussian, or\n normal, distribution. There is theoretically no minimum or maximum\n value that randomGaussian() might return. Rather, there is\n just a very low probability that values far from the mean will be\n returned; and a higher probability that numbers near the mean will\n be returned.\n <br><br>\n Takes either 0, 1 or 2 arguments.<br>\n If no args, returns a mean of 0 and standard deviation of 1.<br>\n If one arg, that arg is the mean (standard deviation is 1).<br>\n If two args, first is mean, second is standard deviation.</p>\n",
             "itemtype": "method",
             "name": "randomGaussian",
@@ -12601,7 +12616,7 @@
         },
         {
             "file": "src/webgl/camera.js",
-            "line": 90,
+            "line": 95,
             "description": "<p>Setup ortho camera</p>\n",
             "itemtype": "method",
             "name": "ortho",
@@ -12751,7 +12766,7 @@
         },
         {
             "file": "src/webgl/light.js",
-            "line": 188,
+            "line": 192,
             "description": "<p>Creates a point light with a color and a light position</p>\n",
             "itemtype": "method",
             "name": "pointLight",
@@ -12921,7 +12936,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 155,
+            "line": 157,
             "description": "<p>Texture Util functions</p>\n",
             "class": "p5",
             "module": "Lights, Camera",
@@ -12929,7 +12944,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 176,
+            "line": 178,
             "description": "<p>Checks whether val is a pot\nmore info on power of 2 here:\n<a href=\"https://www.opengl.org/wiki/NPOT_Texture\">https://www.opengl.org/wiki/NPOT_Texture</a></p>\n",
             "params": [
                 {
@@ -12948,7 +12963,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 187,
+            "line": 189,
             "description": "<p>returns the next highest power of 2 value</p>\n",
             "params": [
                 {
@@ -12967,7 +12982,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 199,
+            "line": 201,
             "description": "<p>Ambient material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "ambientMaterial",
@@ -13009,7 +13024,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 247,
+            "line": 249,
             "description": "<p>Specular material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "specularMaterial",
@@ -13051,7 +13066,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 291,
+            "line": 293,
             "access": "private",
             "tagname": "blends colors according to color components.\nIf alpha value is less than 1, we need to enable blending\non our gl context.  Otherwise opaque objects need to a depthMask.",
             "params": [
@@ -13126,7 +13141,7 @@
         },
         {
             "file": "src/webgl/p5.Geometry.js",
-            "line": 94,
+            "line": 95,
             "description": "<p>Averages the vertex normals. Used in curved\nsurfaces</p>\n",
             "return": {
                 "description": "",
@@ -13137,7 +13152,7 @@
         },
         {
             "file": "src/webgl/p5.Geometry.js",
-            "line": 113,
+            "line": 114,
             "description": "<p>Averages pole normals.  Used in spherical primitives</p>\n",
             "return": {
                 "description": "",
@@ -13148,7 +13163,7 @@
         },
         {
             "file": "src/webgl/p5.Geometry.js",
-            "line": 145,
+            "line": 146,
             "description": "<p>Modifies all vertices to be centered within the range -100 to 100.</p>\n",
             "return": {
                 "description": "",
@@ -13734,7 +13749,7 @@
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 278,
+            "line": 280,
             "description": "<p>Basic fill material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "fill",
@@ -13775,7 +13790,7 @@
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 351,
+            "line": 353,
             "description": "<p>[strokeWeight description]</p>\n",
             "params": [
                 {
@@ -13796,7 +13811,7 @@
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 374,
+            "line": 376,
             "description": "<p>[resize description]</p>\n",
             "params": [
                 {
@@ -13819,7 +13834,7 @@
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 386,
+            "line": 388,
             "description": "<p>clears color and depth buffers\nwith r,g,b,a</p>\n",
             "params": [
                 {
@@ -13848,7 +13863,7 @@
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 403,
+            "line": 405,
             "description": "<p>[translate description]</p>\n",
             "params": [
                 {
@@ -13879,7 +13894,7 @@
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 420,
+            "line": 422,
             "description": "<p>Scales the Model View Matrix by a vector</p>\n",
             "params": [
                 {
@@ -13909,14 +13924,14 @@
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 453,
+            "line": 454,
             "description": "<p>pushes a copy of the model view matrix onto the\nMV Matrix stack.</p>\n",
             "class": "p5.RendererGL",
             "module": "Lights, Camera"
         },
         {
             "file": "src/webgl/p5.RendererGL.js",
-            "line": 461,
+            "line": 462,
             "description": "<p>[pop description]</p>\n",
             "return": {
                 "description": "[description]",
@@ -14050,7 +14065,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 228,
+            "line": 230,
             "access": "private",
             "tagname": "helper function for creating both cones and cyllinders",
             "class": "p5",
@@ -14059,7 +14074,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 306,
+            "line": 308,
             "description": "<p>Draw a cylinder with given radius and height</p>\n",
             "itemtype": "method",
             "name": "cylinder",
@@ -14100,7 +14115,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 365,
+            "line": 367,
             "description": "<p>Draw a cone with given radius and height</p>\n",
             "itemtype": "method",
             "name": "cone",
@@ -14141,7 +14156,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 425,
+            "line": 427,
             "description": "<p>Draw an ellipsoid with given raduis</p>\n",
             "itemtype": "method",
             "name": "ellipsoid",
@@ -14187,7 +14202,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 499,
+            "line": 501,
             "description": "<p>Draw a torus with given radius and tube radius</p>\n",
             "itemtype": "method",
             "name": "torus",
@@ -19464,23 +19479,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1340"
+            "line": " src/io/files.js:1346"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1363"
+            "line": " src/io/files.js:1369"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1399"
+            "line": " src/io/files.js:1405"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1431"
+            "line": " src/io/files.js:1437"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1443"
+            "line": " src/io/files.js:1449"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
@@ -19564,19 +19579,19 @@
         },
         {
             "message": "Missing item type\nTexture Util functions",
-            "line": " src/webgl/material.js:155"
+            "line": " src/webgl/material.js:157"
         },
         {
             "message": "Missing item type\nChecks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
-            "line": " src/webgl/material.js:176"
+            "line": " src/webgl/material.js:178"
         },
         {
             "message": "Missing item type\nreturns the next highest power of 2 value",
-            "line": " src/webgl/material.js:187"
+            "line": " src/webgl/material.js:189"
         },
         {
             "message": "Missing item type",
-            "line": " src/webgl/material.js:291"
+            "line": " src/webgl/material.js:293"
         },
         {
             "message": "Missing item type\np5 Geometry class",
@@ -19588,15 +19603,15 @@
         },
         {
             "message": "Missing item type\nAverages the vertex normals. Used in curved\nsurfaces",
-            "line": " src/webgl/p5.Geometry.js:94"
+            "line": " src/webgl/p5.Geometry.js:95"
         },
         {
             "message": "Missing item type\nAverages pole normals.  Used in spherical primitives",
-            "line": " src/webgl/p5.Geometry.js:113"
+            "line": " src/webgl/p5.Geometry.js:114"
         },
         {
             "message": "Missing item type\nModifies all vertices to be centered within the range -100 to 100.",
-            "line": " src/webgl/p5.Geometry.js:145"
+            "line": " src/webgl/p5.Geometry.js:146"
         },
         {
             "message": "Missing item type",
@@ -19732,35 +19747,35 @@
         },
         {
             "message": "Missing item type\n[strokeWeight description]",
-            "line": " src/webgl/p5.RendererGL.js:351"
+            "line": " src/webgl/p5.RendererGL.js:353"
         },
         {
             "message": "Missing item type\n[resize description]",
-            "line": " src/webgl/p5.RendererGL.js:374"
+            "line": " src/webgl/p5.RendererGL.js:376"
         },
         {
             "message": "Missing item type\nclears color and depth buffers\nwith r,g,b,a",
-            "line": " src/webgl/p5.RendererGL.js:386"
+            "line": " src/webgl/p5.RendererGL.js:388"
         },
         {
             "message": "Missing item type\n[translate description]",
-            "line": " src/webgl/p5.RendererGL.js:403"
+            "line": " src/webgl/p5.RendererGL.js:405"
         },
         {
             "message": "Missing item type\nScales the Model View Matrix by a vector",
-            "line": " src/webgl/p5.RendererGL.js:420"
+            "line": " src/webgl/p5.RendererGL.js:422"
         },
         {
             "message": "Missing item type\npushes a copy of the model view matrix onto the\nMV Matrix stack.",
-            "line": " src/webgl/p5.RendererGL.js:453"
+            "line": " src/webgl/p5.RendererGL.js:454"
         },
         {
             "message": "Missing item type\n[pop description]",
-            "line": " src/webgl/p5.RendererGL.js:461"
+            "line": " src/webgl/p5.RendererGL.js:462"
         },
         {
             "message": "Missing item type",
-            "line": " src/webgl/primitives.js:228"
+            "line": " src/webgl/primitives.js:230"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
