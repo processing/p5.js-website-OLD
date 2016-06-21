@@ -2576,14 +2576,14 @@
                         },
                         {
                             "name": "alpha",
-                            "description": "<p>alpha value relative to current color range</p>\n",
+                            "description": "<p>alpha value relative to current color range\n                                (default is 0-100)</p>\n",
                             "type": "Number",
                             "optional": true
                         }
                     ]
                 },
                 {
-                    "line": 241,
+                    "line": 242,
                     "params": [
                         {
                             "name": "v1",
@@ -2612,7 +2612,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 270,
+            "line": 271,
             "description": "<p>Extracts the green value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "green",
@@ -2632,7 +2632,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 297,
+            "line": 298,
             "description": "<p>Extracts the hue value from a color or pixel array.</p>\n<p>Hue exists in both HSB and HSL. This function will return the\nHSB-normalized hue when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL-normalized hue otherwise. (The values will only be different if the\nmaximum hue setting for each system is different.)</p>\n",
             "itemtype": "method",
             "name": "hue",
@@ -2652,7 +2652,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 330,
+            "line": 331,
             "description": "<p>Blends two colors to find a third color somewhere between them. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first color, 0.1 is very near the first color, 0.5 is halfway\nin between, etc. An amount below 0 will be treated as 0. Likewise, amounts\nabove 1 will be capped at 1. This is different from the behavior of lerp(),\nbut necessary because otherwise numbers outside the range will produce\nstrange and unexpected colors.\n<br><br>\nThe way that colours are interpolated depends on the current color mode.</p>\n",
             "itemtype": "method",
             "name": "lerpColor",
@@ -2686,7 +2686,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 413,
+            "line": 414,
             "description": "<p>Extracts the HSL lightness value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "lightness",
@@ -2706,7 +2706,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 440,
+            "line": 441,
             "description": "<p>Extracts the red value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "red",
@@ -2726,7 +2726,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 477,
+            "line": 478,
             "description": "<p>Extracts the saturation value from a color or pixel array.</p>\n<p>Saturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL saturation otherwise.</p>\n",
             "itemtype": "method",
             "name": "saturation",
@@ -2837,14 +2837,14 @@
                         },
                         {
                             "name": "a",
-                            "description": "<p>opacity of the background</p>\n",
+                            "description": "<p>opacity of the background relative to current\n                            color range (default is 0-100)</p>\n",
                             "type": "Number",
                             "optional": true
                         }
                     ]
                 },
                 {
-                    "line": 106,
+                    "line": 107,
                     "params": [
                         {
                             "name": "colorstring",
@@ -2860,7 +2860,7 @@
                     ]
                 },
                 {
-                    "line": 114,
+                    "line": 115,
                     "params": [
                         {
                             "name": "gray",
@@ -2876,7 +2876,7 @@
                     ]
                 },
                 {
-                    "line": 120,
+                    "line": 121,
                     "params": [
                         {
                             "name": "v1",
@@ -2902,7 +2902,7 @@
                     ]
                 },
                 {
-                    "line": 131,
+                    "line": 132,
                     "params": [
                         {
                             "name": "image",
@@ -2921,7 +2921,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 147,
+            "line": 148,
             "description": "<p>Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won&#39;t work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.</p>\n",
             "itemtype": "method",
             "name": "clear",
@@ -2934,7 +2934,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 179,
+            "line": 180,
             "description": "<p>colorMode() changes the way p5.js interprets color data. By default, the\nparameters for fill(), stroke(), background(), and color() are defined by\nvalues between 0 and 255 using the RGB color model. This is equivalent to\nsetting colorMode(RGB, 255). Setting colorMode(HSB) lets you use the HSB\nsystem instead. By default, this is colorMode(HSB, 360, 100, 100, 1). You\ncan also use HSL.\n<br><br>\nNote: existing color objects remember the mode that they were created in,\nso you can change modes as you like without affecting their appearance.</p>\n",
             "itemtype": "method",
             "name": "colorMode",
@@ -2978,7 +2978,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 282,
+            "line": 283,
             "description": "<p>Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color strings\nand all named color strings are supported. A p5 Color object can also be\nprovided to set the fill color.</p>\n",
             "itemtype": "method",
             "name": "fill",
@@ -3016,7 +3016,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 403,
+            "line": 404,
             "description": "<p>Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.</p>\n",
             "itemtype": "method",
             "name": "noFill",
@@ -3029,7 +3029,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 422,
+            "line": 423,
             "description": "<p>Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.</p>\n",
             "itemtype": "method",
             "name": "noStroke",
@@ -3042,7 +3042,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 440,
+            "line": 441,
             "description": "<p>Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color\nstrings and all named color strings are supported. A p5 Color object\ncan also be provided to set the stroke color.</p>\n",
             "itemtype": "method",
             "name": "stroke",
@@ -12928,7 +12928,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  img = loadImage(\"assets/laDefense.jpg\");\n}\n\nfunction draw(){\n  background(0);\n  rotateZ(frameCount * 0.01);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  //pass image as texture\n  texture(img);\n  box(200, 200, 200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar pg;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  pg = createGraphics(256,256);\n}\n\nfunction draw(){\n  background(0);\n  pg.background(255);\n  pg.text('hello world!');\n  //pass image as texture\n  texture(pg);\n  plane(200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar vid;\nfunction preload(){\n  vid = createVideo(\"assets/fingers.mov\");\n  vid.hide();\n  vid.loop();\n}\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(0);\n  //pass video frame as texture\n  texture(vid);\n  plane(200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar img;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  img = loadImage(\"assets/laDefense.jpg\");\n}\n\nfunction draw(){\n  background(0);\n  rotateZ(frameCount * 0.01);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  //pass image as texture\n  texture(img);\n  box(200, 200, 200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar pg;\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n  pg = createGraphics(200, 200);\n  pg.textSize(100);\n}\n\nfunction draw(){\n  background(0);\n  pg.background(255);\n  pg.text('hello!', 0, 100);\n  //pass image as texture\n  texture(pg);\n  plane(200);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar vid;\nfunction preload(){\n  vid = createVideo(\"assets/fingers.mov\");\n  vid.hide();\n  vid.loop();\n}\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(0);\n  //pass video frame as texture\n  texture(vid);\n  plane(200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Lights, Camera",
@@ -12936,7 +12936,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 157,
+            "line": 158,
             "description": "<p>Texture Util functions</p>\n",
             "class": "p5",
             "module": "Lights, Camera",
@@ -12944,7 +12944,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 178,
+            "line": 179,
             "description": "<p>Checks whether val is a pot\nmore info on power of 2 here:\n<a href=\"https://www.opengl.org/wiki/NPOT_Texture\">https://www.opengl.org/wiki/NPOT_Texture</a></p>\n",
             "params": [
                 {
@@ -12963,7 +12963,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 189,
+            "line": 190,
             "description": "<p>returns the next highest power of 2 value</p>\n",
             "params": [
                 {
@@ -12982,7 +12982,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 201,
+            "line": 202,
             "description": "<p>Ambient material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "ambientMaterial",
@@ -13024,7 +13024,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 249,
+            "line": 250,
             "description": "<p>Specular material for geometry with a given color</p>\n",
             "itemtype": "method",
             "name": "specularMaterial",
@@ -13066,7 +13066,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 293,
+            "line": 294,
             "access": "private",
             "tagname": "blends colors according to color components.\nIf alpha value is less than 1, we need to enable blending\non our gl context.  Otherwise opaque objects need to a depthMask.",
             "params": [
@@ -19579,19 +19579,19 @@
         },
         {
             "message": "Missing item type\nTexture Util functions",
-            "line": " src/webgl/material.js:157"
+            "line": " src/webgl/material.js:158"
         },
         {
             "message": "Missing item type\nChecks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
-            "line": " src/webgl/material.js:178"
+            "line": " src/webgl/material.js:179"
         },
         {
             "message": "Missing item type\nreturns the next highest power of 2 value",
-            "line": " src/webgl/material.js:189"
+            "line": " src/webgl/material.js:190"
         },
         {
             "message": "Missing item type",
-            "line": " src/webgl/material.js:293"
+            "line": " src/webgl/material.js:294"
         },
         {
             "message": "Missing item type\np5 Geometry class",
