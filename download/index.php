@@ -75,6 +75,13 @@
         <p>p5 Editor<br>Version <?php echo $p5jseditor_version; ?></p>
         </div>
         </a>
+        
+        <a href="https://github.com/processing/p5.js-editor/releases/download/v<?php echo $p5jseditor_version; ?>/p5-linux.zip">
+        <div class="download_box half_box">
+        <h4>Linux</h4>
+        <p>p5 Editor<br>Version <?php echo $p5jseditor_version; ?></p>
+        </div>
+        </a>
 
         <!--
         <a href="https://github.com/antiboredom/jside/releases/download/<?php echo $jside_version; ?>/p5.zip">
