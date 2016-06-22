@@ -59,8 +59,7 @@
         <div class="link_group">
         <a name="editor" class="anchor"><h3>Editor</h3></a>
         <p>The p5.js editor is currently in development, try out a beta version of it now. Help out by posting
-        <a href="https://github.com/processing/p5.js-editor/issues">feedback and bugs</a>. Support for Linux
-        coming soon, along with more <a href="https://github.com/processing/p5.js-editor/labels/enhancement">features</a>.</p>
+        <a href="https://github.com/processing/p5.js-editor/issues">feedback and bugs</a>.</p>
         
         <a href="https://github.com/processing/p5.js-editor/releases/download/v<?php echo $p5jseditor_version; ?>/p5-mac.zip">
         <div class="download_box half_box">
