@@ -3,7 +3,7 @@
   <p class="left"><a href="http://processing.org">Processing</a>
      <a class="here" href="<?php echo getRoot(); ?>">p5.js</a>
      <a href="http://py.processing.org/">Processing.py</a>
-     <a href="http://android.processing.org/test/">Processing for Android</a>
+     <a href="http://android.processing.org/">Processing for Android</a>
   </p>
   <form style='pointer-events:all;' name="search" method="get" action="https://www.google.com/search">
     <input type="hidden" name="as_sitesearch" value="p5js.org" />
