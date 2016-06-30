@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>FUTURE HOME</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
     <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
     <style> 
     body {
-      font: 21px Helvetica;
+      font: 21px 'Roboto', Helvetica;
       margin: 3em;
     }
     h3 {
@@ -24,7 +25,7 @@
       margin: 1.5em;
     }
     p {
-      width: 600px;
+      width: 800px;
     }
     a, a:visited {
       color: #2D7BB6;
@@ -36,6 +37,8 @@
     </style>
   </head>
   <body>
+
+  <h1>FUTURE HOME</h1>
 
   <h3>Intro</h3>
   <p>
@@ -72,7 +75,7 @@ function setup() {
 }
 
 function draw() {
-  background(255, 0, 0);
+  background(255, 0, 0)
 }
   </script>
 
@@ -85,11 +88,11 @@ function draw() {
 
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(100, 100);
+  createCanvas(100, 100)
 }
 
 function draw() {
-  background(255, 0, 0);
+  background(255, 0, 0)
 }
   </script>
 
@@ -105,12 +108,12 @@ function draw() {
 
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(300, 300)
 }
 
 function draw() {
-  background(255, 0, 255);
-  ellipse(150, 150, 100, 200);
+  background(255, 0, 255)
+  ellipse(150, 150, 100, 200)
 }
   </script>
 
@@ -123,12 +126,12 @@ function draw() {
 
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(300, 300)
 }
 
 function draw() {
-  background(55, 100, 255);
-  rect(10, 10, 50, 200);
+  background(55, 100, 255)
+  rect(10, 10, 50, 200)
 }
   </script>
 
@@ -141,27 +144,27 @@ function draw() {
 
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(300, 300)
 }
 
 function draw() {
-  background(255, 200, 255);
-  line(10, 10, 200, 200);
+  background(255, 200, 255)
+  line(10, 10, 200, 200)
 }
   </script>
 
   <h3>fill(red, green, blue)</h3>
-  <p>You can set the color of your shapes by using fill(). You give it three numbers -- the red, green, and blue mixture you want, just like background.
+  <p>You can set the color of your shapes by using fill(). You give it three numbers – the red, green, and blue mixture you want, just like background.
   </p>
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(300, 300)
 }
 
 function draw() {
-  background(0, 255, 255);
-  fill(255, 0, 0);
-  ellipse(150, 150, 50, 50);
+  background(0, 255, 255)
+  fill(255, 0, 0)
+  ellipse(150, 150, 50, 50)
 }
   </script>  
 
@@ -170,14 +173,29 @@ function draw() {
   </p>
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(300, 300)
 }
 
 function draw() {
-  background(0, 255, 255);
-  stroke(0, 150, 0);
-  fill(255, 0, 0);
-  ellipse(150, 150, 50, 50);
+  background(0, 255, 255)
+  stroke(0, 150, 0)
+  fill(255, 0, 0)
+  ellipse(150, 150, 50, 50)
+}
+  </script>
+
+  <h3>strokeWeight(weight)</h3>
+  <p>You can set the thickness of the outline for your shapes by using strokeWeight(). The default stroke weight is 1.
+  </p>
+  <script type="text/p5" data-height="400" data-preview-width="300">
+function setup() {
+  createCanvas(300, 300)
+}
+
+function draw() {
+  background(0, 255, 255)
+  strokeWeight(10)
+  ellipse(150, 150, 50, 50)
 }
   </script>
 
@@ -187,70 +205,49 @@ function draw() {
 
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(300, 300)
 }
 
 function draw() {
-  background(0, 255, 255);
-  ellipse(mouseX, mouseY, 50, 50);
+  background(0, 255, 255)
+  ellipse(mouseX, mouseY, 50, 50)
 }
   </script>
 
-  <h3>random(max);</h3>
+  <h3>random(max)</h3>
   <p>random() will choose a random number for you, anywhere from 0 - max.</p>
 
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(300, 300)
 }
 
 function draw() {
-  background(random(255), random(255), random(255));
-  ellipse(mouseX, mouseY, 50, 50);
+  background(random(255), random(255), random(255))
+  ellipse(mouseX, mouseY, 50, 50)
 }
   </script>
 
   <h3>Next</h3>
-  <p>Make a drawing of your room of the future. You can put many shapes and colors together to make your drawing.</p>
-  <p><a href='http://p5js.org/reference' target=_blank>Commands</a> – this is a list of other commands you can use.<br>
-  <a href='http://p5js.org/examples' target=_blank>Examples</a> – these are more code examples.</p>
+  <p>Open the p5 program and make a drawing of your room of the future. Set the canvas size to be <b>createCanvas(800, 800)</b> You can put many shapes and colors together to make your drawing. Use this starting code:</p>
+ 
 
   <script type="text/p5" data-height="400" data-preview-width="300">
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(800, 800)
 }
-  
+
 function draw() {
-  background(255);
-  
-  stroke(0, 200, 255);
-  strokeWeight(5);
-  line(0, 0, 20, 20);
-  line(20, 20, 70, 50);
-  line(70, 50, 120, 120);
-  line(120, 120, 150, 100);
-  line(150, 100, 200, 120);
-  line(150, 100, 200, 120);
-  line(200, 120, 210, 150);
-  line(210, 150, 250, 200);
-  line(250, 200, 270, 180);
-  line(270, 180, 260, 150);
-  line(260, 150, 300, 190);
-  
-  stroke(0);
-  strokeWeight(2);
-  line(0, 150, 210, 150);
-
-  line(0, 50, 170, 200);
-  line(170, 200, 300, 250);
-
-  fill(255, 0, 0);
-  ellipse(20, 100, 20, 20);
-  ellipse(mouseX, mouseY, 30, 30);
-
 
 }
   </script>
+
+
+  <h3>More Commands and Examples</h3>
+  <p><a href='http://p5js.org/reference' target=_blank>Commands</a> – this is a list of other commands you can use.<br>
+  <a href='http://p5js.org/examples' target=_blank>Examples</a> – these are more code examples.</p>
+
+
   
 
   </body>
