@@ -42,7 +42,7 @@
 
   <h3>Intro</h3>
   <p>
-  Today we are going to be learning how to write computer code using a tool called <a href='http://p5js.org' target=_blank>p5</a>. Code is a set of instructions for your computer, telling it something to do. In our case, we will tell it to make a drawing with shapes and colors.
+  Today we are going to be learning how to write computer code using a tool called <a href='http://p5js.org' target=_blank>p5</a>. Code is a set of instructions for the computer, telling it something to do. In our case, we will tell it to make a scene with shapes and colors.
   </p>
 
 
@@ -97,13 +97,10 @@ function draw() {
   </script>
 
 
-  <h3>ellipse(x, y, width, height)</h3>
+  <h3>line(x1, y1, x2, y2)</h3>
   <p>
-  To draw a shape, think of your canvas like a piece of graph paper. However, square (0, 0) is in the top left.
-  <br>
-  <img src='imgs/graph.svg'>
-  ellipse() draws an ellipse on your canvas. You give it four numbers – the x position, the y position, the width, and the height.<br>
-  <img src='imgs/ellipse.svg'>
+  line() draws a line on your canvas. You give it four numbers – the x and y position of one end, and the x and y position of the other end.<br>
+  <img src='imgs/line.svg'>
   </p>
 
   <script type="text/p5" data-height="400" data-preview-width="300">
@@ -112,10 +109,11 @@ function setup() {
 }
 
 function draw() {
-  background(255, 0, 255)
-  ellipse(150, 150, 100, 200)
+  background(255, 200, 255)
+  line(10, 10, 200, 200)
 }
   </script>
+
 
 
   <h3>rect(x, y, width, height)</h3>
@@ -135,11 +133,13 @@ function draw() {
 }
   </script>
 
-
-  <h3>line(x1, y1, x2, y2)</h3>
+  <h3>ellipse(x, y, width, height)</h3>
   <p>
-  line() draws a line on your canvas. You give it four numbers – the x and y position of one end, and the x and y position of the other end.<br>
-  <img src='imgs/line.svg'>
+  To draw a shape, think of your canvas like a piece of graph paper. However, square (0, 0) is in the top left.
+  <br>
+  <img src='imgs/graph.svg'>
+  ellipse() draws an ellipse on your canvas. You give it four numbers – the x position, the y position, the width, and the height.<br>
+  <img src='imgs/ellipse.svg'>
   </p>
 
   <script type="text/p5" data-height="400" data-preview-width="300">
@@ -148,8 +148,8 @@ function setup() {
 }
 
 function draw() {
-  background(255, 200, 255)
-  line(10, 10, 200, 200)
+  background(255, 0, 255)
+  ellipse(150, 150, 100, 200)
 }
   </script>
 
