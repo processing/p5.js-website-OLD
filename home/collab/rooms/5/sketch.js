@@ -4,11 +4,13 @@ var myImage3
 var myImage4
 
 function setup() {
+  
+  createCanvas(264, 264)
+  scale(0.33)
   myImage = loadImage("Garfield_the_Cat.svg.png")
   myImage2 = loadImage("summer_hoverboard_by_ask_debbie_starz-d6vexp0.png")
   myImage3 = loadImage("small-wood-table-hi.png")
   myImage4 = loadImage("cartoon-tv-4.png")
-  createCanvas(800,800)
   
 }
 function draw() {

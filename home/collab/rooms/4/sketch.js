@@ -4,7 +4,8 @@ var s ;
 var g ;
 
 function setup() {
-  createCanvas(1000, 1000)
+  createCanvas(264, 264)
+  scale(0.33)
   //load the s
 s = loadImage ( "sphere.png")
 //load the g

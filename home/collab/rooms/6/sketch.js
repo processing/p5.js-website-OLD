@@ -3,8 +3,8 @@ var myImage2
 
 function setup() {
 
-
-  createCanvas(800, 800)
+  createCanvas(264, 264)
+  scale(0.33)
 
   myImage = loadImage("h.jpg")
   myImage2 = loadImage("j.jpg")

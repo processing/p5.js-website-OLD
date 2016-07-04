@@ -4,8 +4,8 @@ var mothership
 function setup() {
 
 
-  createCanvas(800, 800)
-
+  createCanvas(264, 264)
+  scale(0.33)
   myImage = loadImage("h.jpg")
   mothership = loadImage("mothership.jpg")
 }

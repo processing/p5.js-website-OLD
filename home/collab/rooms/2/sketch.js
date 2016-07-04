@@ -1,6 +1,6 @@
  function setup() {
-   createCanvas(800, 800)
-   setInterval(setFrameRate, 3000)
+  createCanvas(264, 264)
+  scale(0.33)
  }
 
  function draw() {
@@ -16,9 +16,4 @@
    rect(600, 0, 200, 120)
    rect(350, 250, 300, 450)
    fill(26, 58, 97)
- }
-
- function setFrameRate() {
-
-   frameRate(random(30))
  }

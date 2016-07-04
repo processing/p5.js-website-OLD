@@ -2,7 +2,8 @@ var myImage
 var myImage2
 
 function setup(){
-createCanvas(800, 800)
+  createCanvas(264, 264)
+  scale(0.33)
 frameRate(5)
 myImage = loadImage("monitor.png")
 myImage2 = loadImage("chair.jpg")
