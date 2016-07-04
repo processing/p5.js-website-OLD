@@ -1,11 +1,15 @@
+
+
 function setup() {
-  createCanvas(800, 800);
-  stroke(0);
-  fill(255);
-  strokeWeight(20);
+  createCanvas(800, 800)
+  
+  
 }
 
 function draw() {
-  rect(0, 0, width, height)
+  strokeWeight(random(255))
+  fill(0, 0, 0)
+  fill(random(255), random(255), 0)
+  background(random(255), random(255), 0)
+  rect(10, 10, 200, 200)
 }
-

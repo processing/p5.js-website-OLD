@@ -1,36 +1,34 @@
-// Constants
-var Y_AXIS = 1, X_AXIS = 0;
-var c1, c2;
-
+var myImage
+var myImage2
+var mothership
 function setup() {
-  createCanvas(800, 800);
 
-  // Define colors
-  c2 = color(random(255), random(255), random(255));
-  c1 = color(random(255), random(255), random(255));
 
-  setGradient(0, 0, width, height, c1, c2, Y_AXIS);
+  createCanvas(800, 800)
 
+  myImage = loadImage("h.jpg")
+  mothership = loadImage("mothership.jpg")
 }
 
-function setGradient(x, y, w, h, c1, c2, axis) {
+function draw() {
+  background(255, 12, 89)
+  image(mothership, 0, 0, 800, 800)
+  ellipse(310, 550, random(100), 500)
+  ellipse(310, 550, random(1000), 100)
 
-  noFill();
 
-  if (axis == Y_AXIS) {  // Top to bottom gradient
-    for (var i = y; i <= y+h; i++) {
-      var inter = map(i, y, y+h, 0, 1);
-      var c = lerpColor(c1, c2, inter);
-      stroke(c);
-      line(x, i, x+w, i);
-    }
-  }  
-  else if (axis == X_AXIS) {  // Left to right gradient
-    for (var i = x; i <= x+w; i++) {
-      var inter = map(i, x, x+w, 0, 1);
-      var c = lerpColor(c1, c2, inter);
-      stroke(c);
-      line(i, y, i, y+h);
-    }
-  }
+  fill(0, 0, 0)
+  stroke(99, 99, 99)
+
+  ellipse(150, 150, 250, 50)
+
+  fill(0, 255, 0)
+  stroke(123, 99, 99)
+  ellipse(290, 150, 50, 50)
+
+
+  ellipse(740, 550, 100, 100)
+
+  image(myImage, 500, 50, 300, 400)
+  ellipse(650, 400, 20, random(798))
 }
