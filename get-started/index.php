@@ -157,8 +157,9 @@ function draw() {
       </div>
 
 
-      <p style="font-size: 1em; color:#AFAFAF">Parts of this tutorial were adapted from the book, Getting Started with Processing, by Casey Reas 
-      and Ben Fry, O&#8217;Reilly / Make 2010. Copyright &copy; 2010 Casey Reas and Ben Fry. All rights reserved.</p>
+      <p style="font-size: 1em; color:#AFAFAF">Parts of this tutorial were adapted from the book, <a href="https://www.amazon.com/Getting-Started-p5-js-Interactive-JavaScript/dp/1457186772
+      >Getting Started with p5.js</a>, by Lauren McCarthy, Casey Reas, 
+      and Ben Fry, O&#8217;Reilly / Make 2015. Copyright &copy; 2015 Lauren McCarthy, Casey Reas and Ben Fry. All rights reserved.</p>
     </section>
 
   
