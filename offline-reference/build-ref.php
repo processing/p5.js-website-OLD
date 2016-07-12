@@ -40,6 +40,7 @@ function zipDir($dir, $dst) {
 
   // Zip archive will be created only after closing object
   $zip->close();
+  echo $dst.' created<br>';
 }
 
 function copyDir($src, $dst) {
@@ -74,6 +75,7 @@ function copyFiles() {
   copy('../js/p5.min.js', 'copy/js/p5.min.js');
   copy('../js/p5.dom.min.js', 'copy/js/p5.dom.min.js');
   copy('../js/p5.sound.min.js', 'copy/js/p5.sound.min.js');
+  echo 'reference files copied<br>';
 }
 
 function buildData() {
@@ -87,6 +89,7 @@ function buildData() {
   $output = fopen('copy/js/data.js','w');
   fwrite($output, $content);
   fclose($output);
+  echo 'reference data built<br>';
 
 }
 
