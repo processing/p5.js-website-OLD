@@ -1,6 +1,7 @@
 <?php
 
 function rmdir_recursive($dir) {
+  if (!file_exists($dst)) return;
   foreach(scandir($dir) as $file) {
     if ('.' === $file || '..' === $file) continue;
     if (is_dir("$dir/$file")) rmdir_recursive("$dir/$file");
