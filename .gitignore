@@ -4,3 +4,4 @@ npm-debug.log
 src/*
 download/version.php
 js/p5.*
+offline-reference/copy/*
