@@ -1059,7 +1059,7 @@
             "module": "IO",
             "namespace": "",
             "file": "src/io/files.js",
-            "line": 895
+            "line": 897
         },
         "Table": {
             "name": "Table",
@@ -1427,7 +1427,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 2051,
+            "line": 2069,
             "description": "<p><p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p></p>\n<p><p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.</p>\n<p><p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p></p>\n<p><p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a></p>\n",
             "tag": "main",
             "itemtype": "main"
@@ -1704,7 +1704,7 @@
                 "type": "p5.XML"
             },
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var children = xml.getChildren(\"animal\");\n\n  for (var i = 0; i < children.length; i++) {\n    var id = children[i].getNumber(\"id\");\n    var coloring = children[i].getString(\"species\");\n    var name = children[i].getContent();\n    print(id + \", \" + coloring + \", \" + name);\n  }\n}\n\n// Sketch prints:\n// 0, Capra hircus, Goat\n// 1, Panthera pardus, Leopard\n// 2, Equus zebra, Zebra\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var children = xml.getChildren(\"animal\");\n\n  for (var i = 0; i < children.length; i++) {\n    var id = children[i].getNumber(\"id\");\n    var coloring = children[i].getString(\"species\");\n    var name = children[i].getContent();\n    println(id + \", \" + coloring + \", \" + name);\n  }\n}\n\n// Sketch prints:\n// 0, Capra hircus, Goat\n// 1, Panthera pardus, Leopard\n// 2, Equus zebra, Zebra\n</code></div>"
             ]
         },
         "p5.Vector": {
@@ -1811,7 +1811,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 1560,
+            "line": 1575,
             "description": "<p>Extends p5.Element to handle audio and video. In addition to the methods\nof p5.Element, it also contains methods for controlling media. It is not\ncalled directly, but p5.MediaElements are created by calling createVideo,\ncreateAudio, and createCapture.</p>\n",
             "is_constructor": 1,
             "params": [
@@ -1840,7 +1840,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 2051,
+            "line": 2069,
             "description": "<p>Base class for a file\nUsing this for createFileInput</p>\n",
             "is_constructor": 1,
             "params": [
@@ -2718,7 +2718,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nredValue = red(c);  // Get red in 'c'\nprintln(redValue);  // Print \"255.0\"\nfill(redValue, 0, 0);  // Use 'redValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\ncolorMode(RGB, 1);\nvar myColor = red(c);\nprint(myColor);\n</code>\n</div>"
+                "\n<div>\n<code>\nc = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nredValue = red(c);  // Get red in 'c'\nprintln(redValue);  // Print \"255.0\"\nfill(redValue, 0, 0);  // Use 'redValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>\n\n<div>\n<code>\ncolorMode(RGB, 255);\nvar c = color(127, 255, 0);\ncolorMode(RGB, 1);\nvar myColor = red(c);\nprintln(myColor);\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Color",
@@ -2941,31 +2941,31 @@
             "params": [
                 {
                     "name": "mode",
-                    "description": "<p>either RGB or HSB, corresponding to\n                                Red/Green/Blue and Hue/Saturation/Brightness\n                                (or Lightness)</p>\n",
-                    "type": "Number|Constant"
+                    "description": "<p>either RGB or HSB, corresponding to\n                         Red/Green/Blue and Hue/Saturation/Brightness\n                         (or Lightness)</p>\n",
+                    "type": "Constant"
                 },
                 {
                     "name": "max1",
-                    "description": "<p>range for the red or hue depending on the\n                                current color mode, or range for all values</p>\n",
-                    "type": "Number|Constant",
+                    "description": "<p>range for the red or hue depending on the\n                             current color mode, or range for all values</p>\n",
+                    "type": "Number",
                     "optional": true
                 },
                 {
                     "name": "max2",
-                    "description": "<p>range for the green or saturation depending\n                                on the current color mode</p>\n",
-                    "type": "Number|Constant",
+                    "description": "<p>range for the green or saturation depending\n                             on the current color mode</p>\n",
+                    "type": "Number",
                     "optional": true
                 },
                 {
                     "name": "max3",
-                    "description": "<p>range for the blue or brightness/lighntess\n                                depending on the current color mode</p>\n",
-                    "type": "Number|Constant",
+                    "description": "<p>range for the blue or brightness/lighntess\n                             depending on the current color mode</p>\n",
+                    "type": "Number",
                     "optional": true
                 },
                 {
                     "name": "maxA",
                     "description": "<p>range for the alpha</p>\n",
-                    "type": "Number|Constant",
+                    "type": "Number",
                     "optional": true
                 }
             ],
@@ -3118,7 +3118,7 @@
                 {
                     "name": "mode",
                     "description": "<p>optional parameter to determine the way of drawing\n                        the arc</p>\n",
-                    "type": "String",
+                    "type": "Constant",
                     "optional": true
                 }
             ],
@@ -3190,11 +3190,6 @@
                             "type": "Number"
                         },
                         {
-                            "name": "z",
-                            "description": "<p>z-coordinate of the ellipse</p>\n",
-                            "type": "Number"
-                        },
-                        {
                             "name": "w",
                             "description": "",
                             "type": "Number"
@@ -3211,7 +3206,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 183,
+            "line": 179,
             "description": "<p>Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.</p>\n",
             "itemtype": "method",
             "name": "line",
@@ -3250,7 +3245,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 251,
+            "line": 247,
             "description": "<p>Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point. The color of the point is\ndetermined by the current stroke.</p>\n",
             "itemtype": "method",
             "name": "point",
@@ -3279,7 +3274,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 296,
+            "line": 292,
             "description": "<p>Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.</p>\n",
             "itemtype": "method",
             "name": "quad",
@@ -3295,7 +3290,7 @@
             "submodule": "2D Primitives",
             "overloads": [
                 {
-                    "line": 296,
+                    "line": 292,
                     "params": [
                         {
                             "name": "x1",
@@ -3340,7 +3335,7 @@
                     ]
                 },
                 {
-                    "line": 320,
+                    "line": 316,
                     "params": [
                         {
                             "name": "x1",
@@ -3350,11 +3345,6 @@
                         {
                             "name": "y1",
                             "description": "",
-                            "type": "Number"
-                        },
-                        {
-                            "name": "z1",
-                            "description": "<p>the z-coordinate of the first point</p>\n",
                             "type": "Number"
                         },
                         {
@@ -3368,11 +3358,6 @@
                             "type": "Number"
                         },
                         {
-                            "name": "z2",
-                            "description": "<p>the z-coordinate of the second point</p>\n",
-                            "type": "Number"
-                        },
-                        {
                             "name": "x3",
                             "description": "",
                             "type": "Number"
@@ -3380,11 +3365,6 @@
                         {
                             "name": "y3",
                             "description": "",
-                            "type": "Number"
-                        },
-                        {
-                            "name": "z3",
-                            "description": "<p>the z-coordinate of the third point</p>\n",
                             "type": "Number"
                         },
                         {
@@ -3396,11 +3376,6 @@
                             "name": "y4",
                             "description": "",
                             "type": "Number"
-                        },
-                        {
-                            "name": "z4",
-                            "description": "<p>the z-coordinate of the fourth point</p>\n",
-                            "type": "Number"
                         }
                     ]
                 }
@@ -3408,7 +3383,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 374,
+            "line": 366,
             "description": "<p>Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.\n<br><br>\nThe fifth, sixth, seventh and eighth parameters, if specified,\ndetermine corner radius for the top-right, top-left, lower-right and\nlower-left corners, respectively. An omitted corner radius parameter is set\nto the value of the previously specified radius value in the parameter list.</p>\n",
             "itemtype": "method",
             "name": "rect",
@@ -3424,7 +3399,7 @@
             "submodule": "2D Primitives",
             "overloads": [
                 {
-                    "line": 374,
+                    "line": 366,
                     "params": [
                         {
                             "name": "x",
@@ -3473,7 +3448,7 @@
                     ]
                 },
                 {
-                    "line": 419,
+                    "line": 411,
                     "params": [
                         {
                             "name": "x",
@@ -3483,11 +3458,6 @@
                         {
                             "name": "y",
                             "description": "",
-                            "type": "Number"
-                        },
-                        {
-                            "name": "z",
-                            "description": "<p>z-coordinate of the rectangle.</p>\n",
                             "type": "Number"
                         },
                         {
@@ -3501,25 +3471,13 @@
                             "type": "Number"
                         },
                         {
-                            "name": "tl",
+                            "name": "detailX",
                             "description": "",
                             "type": "Number",
                             "optional": true
                         },
                         {
-                            "name": "tr",
-                            "description": "",
-                            "type": "Number",
-                            "optional": true
-                        },
-                        {
-                            "name": "br",
-                            "description": "",
-                            "type": "Number",
-                            "optional": true
-                        },
-                        {
-                            "name": "bl",
+                            "name": "detailY",
                             "description": "",
                             "type": "Number",
                             "optional": true
@@ -3530,7 +3488,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 453,
+            "line": 448,
             "description": "<p>A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.</p>\n",
             "itemtype": "method",
             "name": "triangle",
@@ -3587,7 +3545,7 @@
                 {
                     "name": "mode",
                     "description": "<p>either CENTER, RADIUS, CORNER, or CORNERS</p>\n",
-                    "type": "Number/Constant"
+                    "type": "Constant"
                 }
             ],
             "return": {
@@ -3628,7 +3586,7 @@
                 {
                     "name": "mode",
                     "description": "<p>either CORNER, CORNERS, CENTER, or RADIUS</p>\n",
-                    "type": "Number/Constant"
+                    "type": "Constant"
                 }
             ],
             "return": {
@@ -3817,8 +3775,9 @@
                 },
                 {
                     "name": "node",
-                    "description": "<p>element to attach canvas to, if a\n                                   boolean is passed in use it as sync</p>\n",
-                    "type": "HTMLElement|boolean"
+                    "description": "<p>element to attach canvas to, if a\n                                     boolean is passed in use it as sync</p>\n",
+                    "type": "HTMLElement|boolean",
+                    "optional": true
                 },
                 {
                     "name": "sync",
@@ -4312,9 +4271,9 @@
         {
             "file": "src/core/environment.js",
             "line": 22,
-            "description": "<p>The print() function writes to the console area of your browser.\nThis function is often helpful for looking at the data a program is\nproducing. This function creates a new line of text for each call to\nthe function. Individual elements can be\nseparated with quotes (&quot;&quot;) and joined with the addition operator (+).\n<br><br>\nWhile print() is similar to console.log(), it does not directly map to\nit in order to simulate easier to understand behavior than\nconsole.log(). Due to this, it is slower. For fastest results, use\nconsole.log().</p>\n",
+            "description": "<p>The println() function writes to the console area of your browser.\nThis function is often helpful for looking at the data a program is\nproducing. This function creates a new line of text for each call to\nthe function. Individual elements can be\nseparated with quotes (&quot;&quot;) and joined with the addition operator (+).\n<br><br>\nWhile println() is similar to console.log(), it does not directly map to\nit in order to simulate easier to understand behavior than\nconsole.log(). Due to this, it is slower. For fastest results, use\nconsole.log().</p>\n",
             "itemtype": "method",
-            "name": "print",
+            "name": "println",
             "params": [
                 {
                     "name": "contents",
@@ -4323,7 +4282,7 @@
                 }
             ],
             "example": [
-                "\n<div><code class='norender'>\nvar x = 10;\nprint(\"The value of x is \" + x);\n// prints \"The value of x is 10\"\n</code></div>"
+                "\n<div><code class='norender'>\nvar x = 10;\nprintln(\"The value of x is \" + x);\n// prints \"The value of x is 10\"\n</code></div>"
             ],
             "class": "p5",
             "module": "Environment",
@@ -4331,7 +4290,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 62,
+            "line": 65,
             "description": "<p>The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.</p>\n",
             "itemtype": "property",
             "name": "frameCount",
@@ -4344,7 +4303,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 85,
+            "line": 88,
             "description": "<p>Confirms if the window a p5.js program is in is &quot;focused,&quot; meaning that\nthe sketch will accept mouse or keyboard input. This variable is\n&quot;true&quot; if the window is focused and &quot;false&quot; if not.</p>\n",
             "itemtype": "property",
             "name": "focused",
@@ -4357,7 +4316,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 111,
+            "line": 114,
             "description": "<p>Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.</p>\n",
             "itemtype": "method",
             "name": "cursor",
@@ -4389,7 +4348,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 165,
+            "line": 168,
             "description": "<p>Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n<br><br>\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().\n<br><br>\nCalling frameRate() with arguments that are not of the type numbers\nor are non positive also returns current framerate.</p>\n",
             "itemtype": "method",
             "name": "frameRate",
@@ -4414,7 +4373,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 226,
+            "line": 229,
             "description": "<p>Returns the current framerate.</p>\n",
             "return": {
                 "description": "current frameRate",
@@ -4426,7 +4385,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 235,
+            "line": 238,
             "description": "<p>Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.</p>\n<p>Calling frameRate() with no arguments returns the current framerate.</p>\n",
             "params": [
                 {
@@ -4442,7 +4401,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 250,
+            "line": 253,
             "description": "<p>Hides the cursor from view.</p>\n",
             "itemtype": "method",
             "name": "noCursor",
@@ -4455,7 +4414,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 271,
+            "line": 274,
             "description": "<p>System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.</p>\n",
             "itemtype": "property",
             "name": "displayWidth",
@@ -4468,7 +4427,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 283,
+            "line": 286,
             "description": "<p>System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.</p>\n",
             "itemtype": "property",
             "name": "displayHeight",
@@ -4481,7 +4440,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 295,
+            "line": 298,
             "description": "<p>System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.</p>\n",
             "itemtype": "property",
             "name": "windowWidth",
@@ -4494,7 +4453,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 306,
+            "line": 309,
             "description": "<p>System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.</p>\n",
             "itemtype": "property",
             "name": "windowHeight",
@@ -4507,7 +4466,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 318,
+            "line": 321,
             "description": "<p>The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other\nadjustements to accomodate the new window size.</p>\n",
             "itemtype": "method",
             "name": "windowResized",
@@ -4520,7 +4479,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 352,
+            "line": 366,
             "description": "<p>System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.</p>\n",
             "itemtype": "property",
             "name": "width",
@@ -4530,7 +4489,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 363,
+            "line": 377,
             "description": "<p>System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.</p>\n",
             "itemtype": "property",
             "name": "height",
@@ -4540,7 +4499,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 374,
+            "line": 388,
             "description": "<p>If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.</p>\n",
             "itemtype": "method",
             "name": "fullscreen",
@@ -4565,7 +4524,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 417,
+            "line": 431,
             "description": "<p>Sets the pixel scaling for high pixel density displays. By default\npixel density is set to match display density, call pixelDensity(1)\nto turn this off. Calling pixelDensity() with no arguments returns\nthe current pixel density of the sketch.</p>\n",
             "itemtype": "method",
             "name": "pixelDensity",
@@ -4590,7 +4549,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 458,
+            "line": 472,
             "description": "<p>Returns the pixel density of the current display the sketch is running on.</p>\n",
             "itemtype": "method",
             "name": "displayDensity",
@@ -4607,7 +4566,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 512,
+            "line": 526,
             "description": "<p>Gets the current URL.</p>\n",
             "itemtype": "method",
             "name": "getURL",
@@ -4624,7 +4583,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 539,
+            "line": 553,
             "description": "<p>Gets the current URL path as an array.</p>\n",
             "itemtype": "method",
             "name": "getURLPath",
@@ -4641,7 +4600,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 556,
+            "line": 570,
             "description": "<p>Gets the current URL params as an Object.</p>\n",
             "itemtype": "method",
             "name": "getURLParams",
@@ -4770,40 +4729,45 @@
         {
             "file": "src/core/p5.Element.js",
             "line": 91,
-            "description": "<p>Sets the ID of the element</p>\n",
+            "description": "<p>Sets the ID of the element. If no ID argument is passed in, it instead\n returns the current ID of the element.</p>\n",
             "itemtype": "method",
             "name": "id",
             "params": [
                 {
                     "name": "id",
                     "description": "<p>ID of the element</p>\n",
-                    "type": "String"
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "p5.Element|String"
             },
+            "example": [
+                "\n <div><code class='norender'>\n function setup() {\n   var cnv = createCanvas(100, 100);\n   // Assigns a CSS selector ID to\n   // the canvas element.\n   cnv.id(\"mycanvas\");\n }\n </code></div>"
+            ],
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 110,
-            "description": "<p>Adds given class to the element</p>\n",
+            "line": 120,
+            "description": "<p>Adds given class to the element. If no class argument is passed in, it\n instead returns a string containing the current class(es) of the element.</p>\n",
             "itemtype": "method",
             "name": "class",
             "params": [
                 {
                     "name": "class",
                     "description": "<p>class to add</p>\n",
-                    "type": "String"
+                    "type": "String",
+                    "optional": true
                 }
             ],
             "return": {
                 "description": "",
-                "type": "p5.Element"
+                "type": "p5.Element|String"
             },
             "class": "p5.Element",
             "module": "DOM",
@@ -4811,7 +4775,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 127,
+            "line": 138,
             "description": "<p>The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mousePressed",
@@ -4835,7 +4799,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 172,
+            "line": 183,
             "description": "<p>The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with &quot;natural&quot; scrolling enabled, the values are\nopposite.</p>\n",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -4859,7 +4823,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 226,
+            "line": 237,
             "description": "<p>The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -4883,7 +4847,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 274,
+            "line": 285,
             "description": "<p>The .mouseClicked() function is called once after a mouse button is\npressed and released over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -4907,7 +4871,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 319,
+            "line": 330,
             "description": "<p>The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -4931,7 +4895,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 372,
+            "line": 383,
             "description": "<p>The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseOver",
@@ -4955,7 +4919,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 411,
+            "line": 422,
             "description": "<p>The .changed() function is called when the value of an\nelement is changed.\nThis can be used to attach an element specific event listener.</p>\n",
             "itemtype": "method",
             "name": "changed",
@@ -4979,7 +4943,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 472,
+            "line": 483,
             "description": "<p>The .input() function is called when any user input is\ndetected with an element. The input event is often used\nto detect keystrokes in a input element, or changes on a\nslider element. This can be used to attach an element specific\nevent listener.</p>\n",
             "itemtype": "method",
             "name": "input",
@@ -5003,7 +4967,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 501,
+            "line": 512,
             "description": "<p>The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseOut",
@@ -5027,7 +4991,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 539,
+            "line": 550,
             "description": "<p>The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchStarted",
@@ -5051,7 +5015,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 583,
+            "line": 594,
             "description": "<p>The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchMoved",
@@ -5075,7 +5039,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 619,
+            "line": 630,
             "description": "<p>The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchEnded",
@@ -5099,7 +5063,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 665,
+            "line": 676,
             "description": "<p>The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "dragOver",
@@ -5120,7 +5084,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 680,
+            "line": 691,
             "description": "<p>The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "dragLeave",
@@ -5141,7 +5105,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 695,
+            "line": 706,
             "description": "<p>The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can\noptionally pass two callbacks, the first one (required) is triggered\nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.</p>\n",
             "itemtype": "method",
             "name": "drop",
@@ -5170,7 +5134,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 799,
+            "line": 810,
             "description": "<p>Helper fxn for sharing pixel methods</p>\n",
             "class": "p5.Element",
             "module": "DOM",
@@ -5209,7 +5173,7 @@
         },
         {
             "file": "src/core/p5.Renderer2D.js",
-            "line": 353,
+            "line": 356,
             "description": "<p>Generate a cubic Bezier representing an arc on the unit circle of total\nangle <code>size</code> radians, beginning <code>start</code> radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.</p>\n<p>See www.joecridge.me/bezier.pdf for an explanation of the method.</p>\n",
             "class": "p5",
             "module": "Rendering"
@@ -5233,8 +5197,8 @@
                 },
                 {
                     "name": "renderer",
-                    "description": "<p>&#39;p2d&#39; | &#39;webgl&#39;</p>\n",
-                    "type": "String",
+                    "description": "<p>P2D or WEBGL</p>\n",
+                    "type": "Constant",
                     "optional": true
                 }
             ],
@@ -5294,8 +5258,9 @@
                 },
                 {
                     "name": "renderer",
-                    "description": "<p>either &#39;p2d&#39; or &#39;webgl&#39;.\nundefined defaults to p2d</p>\n",
-                    "type": "String"
+                    "description": "<p>P2D or WEBGL\nundefined defaults to p2d</p>\n",
+                    "type": "Constant",
+                    "optional": true
                 }
             ],
             "return": {
@@ -5319,7 +5284,7 @@
                 {
                     "name": "mode",
                     "description": "<p>blend mode to set for canvas</p>\n",
-                    "type": "String/Constant"
+                    "type": "Constant"
                 }
             ],
             "example": [
@@ -5391,11 +5356,19 @@
         {
             "file": "src/core/structure.js",
             "line": 247,
-            "description": "<p>Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs.\n <br><br>\n In structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n <br><br>\n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().</p>\n",
+            "description": "<p>Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs.\n <br><br>\n In structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n <br><br>\n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().\n <br><br>\n In addition you can set the number of redraws per method call. Just\n add an integer as single parameter for the number of redraws.</p>\n",
             "itemtype": "method",
             "name": "redraw",
+            "params": [
+                {
+                    "name": "n",
+                    "description": "<p>Redraw for n-times. The default value is 1.</p>\n",
+                    "type": "Integer",
+                    "optional": true
+                }
+            ],
             "example": [
-                "\n   <div><code>\n     var x = 0;\n    function setup() {\n       createCanvas(100, 100);\n       noLoop();\n     }\n    function draw() {\n       background(204);\n       line(x, 0, x, height);\n     }\n    function mousePressed() {\n       x += 1;\n       redraw();\n     }\n   </code></div>"
+                "\n <div><code>\n var x = 0;\nfunction setup() {\n   createCanvas(100, 100);\n   noLoop();\n }\nfunction draw() {\n   background(204);\n   line(x, 0, x, height);\n }\nfunction mousePressed() {\n   x += 1;\n   redraw();\n }\n </code></div>\n<div><code>\n var x = 0;\nfunction setup() {\n   createCanvas(100, 100);\n   noLoop();\n }\nfunction draw() {\n   background(204);\n   x += 1;\n   line(x, 0, x, height);\n }\nfunction mousePressed() {\n   redraw(5);\n }\n </code></div>"
             ],
             "class": "p5",
             "module": "Structure",
@@ -5719,8 +5692,8 @@
             "params": [
                 {
                     "name": "kind",
-                    "description": "<p>either POINTS, LINES, TRIANGLES,\n                               TRIANGLE_FAN, TRIANGLE_STRIP, QUADS,\n                               or QUAD_STRIP</p>\n",
-                    "type": "Number/Constant"
+                    "description": "<p>either POINTS, LINES, TRIANGLES, TRIANGLE_FAN\n                               TRIANGLE_STRIP, QUADS, or QUAD_STRIP</p>\n",
+                    "type": "Constant"
                 }
             ],
             "return": {
@@ -5736,7 +5709,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 251,
+            "line": 250,
             "description": "<p>Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape.\n<br><br>\nThe first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().</p>\n",
             "itemtype": "method",
             "name": "bezierVertex",
@@ -5785,7 +5758,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 311,
+            "line": 310,
             "description": "<p>Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape().\n<br><br>\nThe first and last points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.</p>\n",
             "itemtype": "method",
             "name": "curveVertex",
@@ -5814,7 +5787,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 349,
+            "line": 348,
             "description": "<p>Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter &#39;O&#39;. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must &quot;wind&quot; in the opposite\ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices\nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.</p>\n",
             "itemtype": "method",
             "name": "endContour",
@@ -5831,7 +5804,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 405,
+            "line": 404,
             "description": "<p>The endShape() function is the companion to beginShape() and may only be\ncalled after beginShape(). When endshape() is called, all of image data\ndefined since the previous call to beginShape() is written into the image\nbuffer. The constant CLOSE as the value for the MODE parameter to close\nthe shape (to connect the beginning and the end).</p>\n",
             "itemtype": "method",
             "name": "endShape",
@@ -5839,7 +5812,7 @@
                 {
                     "name": "mode",
                     "description": "<p>use CLOSE to close the shape</p>\n",
-                    "type": "Number/Constant"
+                    "type": "Constant"
                 }
             ],
             "return": {
@@ -5855,7 +5828,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 469,
+            "line": 468,
             "description": "<p>Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().</p>\n",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -5894,7 +5867,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 541,
+            "line": 540,
             "description": "<p>All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.</p>\n",
             "itemtype": "method",
             "name": "vertex",
@@ -6305,7 +6278,7 @@
             "itemtype": "property",
             "name": "pmouseX",
             "example": [
-                "\n<div>\n<code>\n// Move the mouse across the canvas to leave a trail\nfunction setup() {\n  //slow down the frameRate to make it more visible\n  frameRate(10);\n}\n\nfunction draw() {\n  background(244, 248, 252);\n  line(mouseX, mouseY, pmouseX, pmouseY);\n  print(pmouseX + \" -> \" + mouseX);\n}\n\n</code>\n</div>"
+                "\n<div>\n<code>\n// Move the mouse across the canvas to leave a trail\nfunction setup() {\n  //slow down the frameRate to make it more visible\n  frameRate(10);\n}\n\nfunction draw() {\n  background(244, 248, 252);\n  line(mouseX, mouseY, pmouseX, pmouseY);\n  println(pmouseX + \" -> \" + mouseX);\n}\n\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Events",
@@ -6318,7 +6291,7 @@
             "itemtype": "property",
             "name": "pmouseY",
             "example": [
-                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  //draw a square only if the mouse is not moving\n  if(mouseY == pmouseY && mouseX == pmouseX)\n    rect(20,20,60,60);\n\n  print(pmouseY + \" -> \" + mouseY);\n}\n\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  //draw a square only if the mouse is not moving\n  if(mouseY == pmouseY && mouseX == pmouseX)\n    rect(20,20,60,60);\n\n  println(pmouseY + \" -> \" + mouseY);\n}\n\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Events",
@@ -6383,7 +6356,7 @@
             "itemtype": "property",
             "name": "mouseButton",
             "example": [
-                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed) {\n    if (mouseButton == LEFT)\n      ellipse(50, 50, 50, 50);\n    if (mouseButton == RIGHT)\n      rect(25, 25, 50, 50);\n    if (mouseButton == CENTER)\n      triangle(23, 75, 50, 20, 78, 75);\n  }\n\n  print(mouseButton);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed) {\n    if (mouseButton == LEFT)\n      ellipse(50, 50, 50, 50);\n    if (mouseButton == RIGHT)\n      rect(25, 25, 50, 50);\n    if (mouseButton == CENTER)\n      triangle(23, 75, 50, 20, 78, 75);\n  }\n\n  println(mouseButton);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Events",
@@ -6396,7 +6369,7 @@
             "itemtype": "property",
             "name": "mouseIsPressed",
             "example": [
-                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed)\n    ellipse(50, 50, 50, 50);\n  else\n    rect(25, 25, 50, 50);\n\n  print(mouseIsPressed);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  if (mouseIsPressed)\n    ellipse(50, 50, 50, 50);\n  else\n    rect(25, 25, 50, 50);\n\n  println(mouseIsPressed);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Events",
@@ -6474,7 +6447,7 @@
             "itemtype": "method",
             "name": "mouseWheel",
             "example": [
-                "\n<div>\n<code>\nvar pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  print(event.delta);\n  //move the square according to the vertical scroll amount\n  pos += event.delta;\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>"
+                "\n<div>\n<code>\nvar pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  println(event.delta);\n  //move the square according to the vertical scroll amount\n  pos += event.delta;\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Events",
@@ -6935,7 +6908,7 @@
                 }
             ],
             "example": [
-                "\n<div><code>\nfunction draw() {\n  background(mouseX);\n}\n\nfunction mousePressed() {\n  saveFrames(\"out\", \"png\", 1, 25, function(data){\n    print(data);\n  });\n}\n</code></div>"
+                "\n<div><code>\nfunction draw() {\n  background(mouseX);\n}\n\nfunction mousePressed() {\n  saveFrames(\"out\", \"png\", 1, 25, function(data){\n    println(data);\n  });\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Image",
@@ -7155,9 +7128,9 @@
             "name": "imageMode",
             "params": [
                 {
-                    "name": "m",
-                    "description": "<p>The mode: either CORNER, CORNERS, or CENTER.</p>\n",
-                    "type": "String"
+                    "name": "mode",
+                    "description": "<p>either CORNER, CORNERS, or CENTER</p>\n",
+                    "type": "Constant"
                 }
             ],
             "example": [
@@ -7711,7 +7684,7 @@
                 {
                     "name": "filterType",
                     "description": "",
-                    "type": "String"
+                    "type": "Constant"
                 },
                 {
                     "name": "filterParam",
@@ -7989,7 +7962,7 @@
                 },
                 {
                     "name": "callback",
-                    "description": "<p>function to be executed after\n                                    loadTable() completes, Table object is\n                                    passed in as first argument</p>\n",
+                    "description": "<p>function to be executed after\n                                    loadTable() completes. On success, the\n                                    Table object is passed in as the\n                                    first argument; otherwise, false\n                                    is passed in.</p>\n",
                     "type": "Function",
                     "optional": true
                 }
@@ -7999,7 +7972,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the following CSV file called \"mammals.csv\"\n// located in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n  //the file can be remote\n  //table = loadTable(\"http://p5js.org/reference/assets/mammals.csv\",\n  //                  \"csv\", \"header\");\n}\n\nfunction setup() {\n  //count the columns\n  print(table.getRowCount() + \" total rows in table\");\n  print(table.getColumnCount() + \" total columns in table\");\n\n  print(table.getColumn(\"name\"));\n  //[\"Goat\", \"Leopard\", \"Zebra\"]\n\n  //cycle through the table\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++) {\n      print(table.getString(r, c));\n    }\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the following CSV file called \"mammals.csv\"\n// located in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n  //the file can be remote\n  //table = loadTable(\"http://p5js.org/reference/assets/mammals.csv\",\n  //                  \"csv\", \"header\");\n}\n\nfunction setup() {\n  //count the columns\n  println(table.getRowCount() + \" total rows in table\");\n  println(table.getColumnCount() + \" total columns in table\");\n\n  println(table.getColumn(\"name\"));\n  //[\"Goat\", \"Leopard\", \"Zebra\"]\n\n  //cycle through the table\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++) {\n      println(table.getString(r, c));\n    }\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "IO",
@@ -8007,7 +7980,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 682,
+            "line": 684,
             "description": "<p>Reads the contents of a file and creates an XML object with its values.\nIf the name of the file is used as the parameter, as in the above example,\nthe file must be located in the sketch directory/folder.</p>\n<p>Alternatively, the file maybe be loaded from anywhere on the local\ncomputer using an absolute path (something that starts with / on Unix and\nLinux, or a drive letter on Windows), or the filename parameter can be a\nURL for a file found on a network.</p>\n<p>This method is asynchronous, meaning it may not finish before the next\nline in your sketch is executed. Calling loadXML() inside preload()\nguarantees to complete the operation before setup() and draw() are called.</p>\n<p>Outside of preload(), you may supply a callback function to handle the\nobject:</p>",
             "itemtype": "method",
             "name": "loadXML",
@@ -8040,7 +8013,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 759,
+            "line": 761,
             "description": "<p>Method for executing an HTTP GET request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.</p>\n",
             "itemtype": "method",
             "name": "httpGet",
@@ -8081,7 +8054,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 783,
+            "line": 785,
             "description": "<p>Method for executing an HTTP POST request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.</p>\n",
             "itemtype": "method",
             "name": "httpPost",
@@ -8122,7 +8095,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 807,
+            "line": 809,
             "description": "<p>Method for executing an HTTP request. If data type is not specified,\np5 will try to guess based on the URL, defaulting to text.<br><br>\nYou may also pass a single object specifying all parameters for the\nrequest following the examples inside the reqwest() calls here:\n<a href='https://github.com/ded/reqwest#api'>\nhttps://github.com/ded/reqwest#api</a></p>\n",
             "itemtype": "method",
             "name": "httpDo",
@@ -8169,7 +8142,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 993,
+            "line": 995,
             "description": "<p>Save an image, text, json, csv, wav, or html. Prompts download to\nthe client&#39;s computer. <b>Note that it is not recommended to call save()\nwithin draw if it&#39;s looping, as the save() function will open a new save\ndialog every frame.</b></p>\n<p>The default behavior is to save the canvas as an image. You can\noptionally specify a filename.\nFor example:</p>\n<pre class='language-javascript'><code>\nsave();\nsave(&#39;myCanvas.jpg&#39;); // save a specific canvas with a filename\n</code></pre>\n\n<p>Alternately, the first parameter can be a pointer to a canvas\np5.Element, an Array of Strings,\nan Array of JSON, a JSON object, a p5.Table, a p5.Image, or a\np5.SoundFile (requires p5.sound). The second parameter is a filename\n(including extension). The third parameter is for options specific\nto this type of object. This method will save a file that fits the\ngiven paramaters. For example:</p>\n\n<pre class='language-javascript'><code>\n\nsave('myCanvas.jpg');           // Saves canvas as an image\n\nvar cnv = createCanvas(100, 100);\nsave(cnv, 'myCanvas.jpg');      // Saves canvas as an image\n\nvar gb = createGraphics(100, 100);\nsave(gb, 'myGraphics.jpg');      // Saves p5.Renderer object as an image\n\nsave(myTable, 'myTable.html');  // Saves table as html file\nsave(myTable, 'myTable.csv',);  // Comma Separated Values\nsave(myTable, 'myTable.tsv');   // Tab Separated Values\n\nsave(myJSON, 'my.json');        // Saves pretty JSON\nsave(myJSON, 'my.json', true);  // Optimizes JSON filesize\n\nsave(img, 'my.png');            // Saves pImage as a png image\n\nsave(arrayOfStrings, 'my.txt'); // Saves strings to a text file with line\n                                // breaks after each item in the array\n</code></pre>",
             "itemtype": "method",
             "name": "save",
@@ -8196,7 +8169,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1110,
+            "line": 1112,
             "description": "<p>Writes the contents of an Array or a JSON object to a .json file.\nThe file saving process and location of the saved file will\nvary between web browsers.</p>\n",
             "itemtype": "method",
             "name": "saveJSON",
@@ -8227,7 +8200,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1166,
+            "line": 1168,
             "description": "<p>Writes an array of Strings to a text file, one line per String.\nThe file saving process and location of the saved file will\nvary between web browsers.</p>\n",
             "itemtype": "method",
             "name": "saveStrings",
@@ -8252,7 +8225,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1231,
+            "line": 1233,
             "description": "<p>Writes the contents of a Table object to a file. Defaults to a\ntext file with comma-separated-values (&#39;csv&#39;) but can also\nuse tab separation (&#39;tsv&#39;), or generate an HTML table (&#39;html&#39;).\nThe file saving process and location of the saved file will\nvary between web browsers.</p>\n",
             "itemtype": "method",
             "name": "saveTable",
@@ -8283,7 +8256,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1346,
+            "line": 1348,
             "description": "<p>Generate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.</p>\n",
             "params": [
                 {
@@ -8310,7 +8283,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1369,
+            "line": 1371,
             "description": "<p>Forces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.</p>\n",
             "params": [
                 {
@@ -8335,7 +8308,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1405,
+            "line": 1407,
             "description": "<p>Returns a file extension, or another string\nif the provided parameter has no extension.</p>\n",
             "params": [
                 {
@@ -8356,7 +8329,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1437,
+            "line": 1439,
             "description": "<p>Returns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.</p>\n",
             "return": {
                 "description": "[description]",
@@ -8370,7 +8343,7 @@
         },
         {
             "file": "src/io/files.js",
-            "line": 1449,
+            "line": 1451,
             "description": "<p>Helper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.</p>\n",
             "access": "private",
             "tagname": "",
@@ -8421,7 +8394,7 @@
                 }
             ],
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //add a row\n var newRow = table.addRow();\n newRow.setString(\"id\", table.getRowCount() - 1);\n newRow.setString(\"species\", \"Canis Lupus\");\n newRow.setString(\"name\", \"Wolf\");\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //add a row\n var newRow = table.addRow();\n newRow.setString(\"id\", table.getRowCount() - 1);\n newRow.setString(\"species\", \"Canis Lupus\");\n newRow.setString(\"name\", \"Wolf\");\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     println(table.getString(r, c));\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8441,7 +8414,7 @@
                 }
             ],
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  //remove the first row\n  var r = table.removeRow(0);\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      print(table.getString(r, c));\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  //remove the first row\n  var r = table.removeRow(0);\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      println(table.getString(r, c));\n}\n</code>\n</div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8465,7 +8438,7 @@
                 "type": "TableRow"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  var row = table.getRow(1);\n  //print it column by column\n  //note: a row is an object, not an array\n  for (var c = 0; c < table.getColumnCount(); c++)\n    print(row.getString(c));\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  var row = table.getRow(1);\n  //print it column by column\n  //note: a row is an object, not an array\n  for (var c = 0; c < table.getColumnCount(); c++)\n    println(row.getString(c));\n}\n</code>\n</div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8482,7 +8455,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n var rows = table.getRows();\n\n //warning: rows is an array of objects\n for (var r = 0; r < rows.length; r++)\n   rows[r].set(\"name\", \"Unicorn\");\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n var rows = table.getRows();\n\n //warning: rows is an array of objects\n for (var r = 0; r < rows.length; r++)\n   rows[r].set(\"name\", \"Unicorn\");\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     println(table.getString(r, c));\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8511,7 +8484,7 @@
                 "type": "TableRow"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //find the animal named zebra\n var row = table.findRow(\"Zebra\", \"name\");\n //find the corresponding species\n print(row.getString(\"species\"));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //find the animal named zebra\n var row = table.findRow(\"Zebra\", \"name\");\n //find the corresponding species\n println(row.getString(\"species\"));\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8540,7 +8513,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //add another goat\n var newRow = table.addRow();\n newRow.setString(\"id\", table.getRowCount() - 1);\n newRow.setString(\"species\", \"Scape Goat\");\n newRow.setString(\"name\", \"Goat\");\n\n //find the rows containing animals named Goat\n var rows = table.findRows(\"Goat\", \"name\");\n print(rows.length + \" Goats found\");\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //add another goat\n var newRow = table.addRow();\n newRow.setString(\"id\", table.getRowCount() - 1);\n newRow.setString(\"species\", \"Scape Goat\");\n newRow.setString(\"name\", \"Goat\");\n\n //find the rows containing animals named Goat\n var rows = table.findRows(\"Goat\", \"name\");\n println(rows.length + \" Goats found\");\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8620,7 +8593,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //getColumn returns an array that can be printed directly\n print(table.getColumn(\"species\"));\n //outputs [\"Capra hircus\", \"Panthera pardus\", \"Equus zebra\"]\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n //getColumn returns an array that can be printed directly\n println(table.getColumn(\"species\"));\n //outputs [\"Capra hircus\", \"Panthera pardus\", \"Equus zebra\"]\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8633,7 +8606,7 @@
             "itemtype": "method",
             "name": "clearRows",
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n table.clearRows();\n print(table.getRowCount() + \" total rows in table\");\n print(table.getColumnCount() + \" total columns in table\");\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n table.clearRows();\n println(table.getRowCount() + \" total rows in table\");\n println(table.getColumnCount() + \" total columns in table\");\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8654,7 +8627,7 @@
                 }
             ],
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n table.addColumn(\"carnivore\");\n table.set(0, \"carnivore\", \"no\");\n table.set(1, \"carnivore\", \"yes\");\n table.set(2, \"carnivore\", \"no\");\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n table.addColumn(\"carnivore\");\n table.set(0, \"carnivore\", \"no\");\n table.set(1, \"carnivore\", \"yes\");\n table.set(2, \"carnivore\", \"no\");\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     println(table.getString(r, c));\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8740,7 +8713,7 @@
                 }
             ],
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n table.removeColumn(\"id\");\n print(table.getColumnCount());\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n }\n\n function setup() {\n table.removeColumn(\"id\");\n println(table.getColumnCount());\n }\n </code>\n </div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8765,7 +8738,7 @@
                 }
             ],
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  table.set(0, \"species\", \"Canis Lupus\");\n  table.set(0, \"name\", \"Wolf\");\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      print(table.getString(r, c));\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  table.set(0, \"species\", \"Canis Lupus\");\n  table.set(0, \"name\", \"Wolf\");\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      println(table.getString(r, c));\n}\n</code>\n</div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8795,7 +8768,7 @@
                 }
             ],
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  table.setNum(1, \"id\", 1);\n\n  print(table.getColumn(0));\n  //[\"0\", 1, \"2\"]\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  table.setNum(1, \"id\", 1);\n\n  println(table.getColumn(0));\n  //[\"0\", 1, \"2\"]\n}\n</code>\n</div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8851,7 +8824,7 @@
                 "type": "String|Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  print(table.get(0, 1));\n  //Capra hircus\n  print(table.get(0, \"species\"));\n  //Capra hircus\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  println(table.get(0, 1));\n  //Capra hircus\n  println(table.get(0, \"species\"));\n  //Capra hircus\n}\n</code>\n</div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8880,7 +8853,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  print(table.getNum(1, 0) + 100);\n  //id 1 + 100 = 101\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  println(table.getNum(1, 0) + 100);\n  //id 1 + 100 = 101\n}\n</code>\n</div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8909,7 +8882,7 @@
                 "type": "String"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  var tableArray = table.getArray();\n\n  //output each row as array\n  for (var i = 0; i < tableArray.length; i++)\n    print(tableArray[i]);\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  var tableArray = table.getArray();\n\n  //output each row as array\n  for (var i = 0; i < tableArray.length; i++)\n    println(tableArray[i]);\n}\n</code>\n</div>"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -8933,7 +8906,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  var tableObject = table.getObject();\n\n  print(tableObject);\n  //outputs an object\n}\n</code>\n</div>\n"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable(\"assets/mammals.csv\", \"csv\", \"header\");\n}\n\nfunction setup() {\n  var tableObject = table.getObject();\n\n  println(tableObject);\n  //outputs an object\n}\n</code>\n</div>\n"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -9093,7 +9066,7 @@
                 "type": "Object"
             },
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var children = xml.getChildren(\"animal\");\n  var parent = children[1].getParent();\n  print(parent.getName());\n}\n\n// Sketch prints:\n// mammals\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var children = xml.getChildren(\"animal\");\n  var parent = children[1].getParent();\n  println(parent.getName());\n}\n\n// Sketch prints:\n// mammals\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9130,7 +9103,7 @@
                 }
             ],
             "example": [
-                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  print(xml.getName());\n  xml.setName(\"fish\");\n  print(xml.getName());\n}\n\n// Sketch prints:\n// mammals\n// fish\n</code></div>"
+                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  println(xml.getName());\n  xml.setName(\"fish\");\n  println(xml.getName());\n}\n\n// Sketch prints:\n// mammals\n// fish\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9147,7 +9120,7 @@
                 "type": "Boolean"
             },
             "example": [
-                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  print(xml.hasChildren());\n}\n\n// Sketch prints:\n// true\n</code></div>"
+                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  println(xml.hasChildren());\n}\n\n// Sketch prints:\n// true\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9164,7 +9137,7 @@
                 "type": "Array"
             },
             "example": [
-                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  print(xml.listChildren());\n}\n\n// Sketch prints:\n// [\"animal\", \"animal\", \"animal\"]\n</code></div>"
+                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  println(xml.listChildren());\n}\n\n// Sketch prints:\n// [\"animal\", \"animal\", \"animal\"]\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9189,7 +9162,7 @@
                 "type": "Array"
             },
             "example": [
-                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var animals = xml.getChildren(\"animal\");\n\n  for (var i = 0; i < animals.length; i++) {\n    print(animals[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Leopard\"\n// \"Zebra\"\n</code></div>"
+                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var animals = xml.getChildren(\"animal\");\n\n  for (var i = 0; i < animals.length; i++) {\n    println(animals[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Leopard\"\n// \"Zebra\"\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9213,7 +9186,7 @@
                 "type": "p5.XML"
             },
             "example": [
-                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n</code></div>\n<div class='norender'><code>\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var secondChild = xml.getChild(1);\n  print(secondChild.getContent());\n}\n\n// Sketch prints:\n// \"Leopard\"\n</code></div>"
+                "&lt;animal\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n</code></div>\n<div class='norender'><code>\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var secondChild = xml.getChild(1);\n  println(secondChild.getContent());\n}\n\n// Sketch prints:\n// \"Leopard\"\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9250,7 +9223,7 @@
                 }
             ],
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  xml.removeChild(\"animal\");\n  var children = xml.getChildren();\n  for (var i=0; i<children.length; i++) {\n    print(children[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Leopard\"\n// \"Zebra\"\n</code></div>\n<div class='norender'><code>\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  xml.removeChild(1);\n  var children = xml.getChildren();\n  for (var i=0; i<children.length; i++) {\n    print(children[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Zebra\"\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  xml.removeChild(\"animal\");\n  var children = xml.getChildren();\n  for (var i=0; i<children.length; i++) {\n    println(children[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Leopard\"\n// \"Zebra\"\n</code></div>\n<div class='norender'><code>\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  xml.removeChild(1);\n  var children = xml.getChildren();\n  for (var i=0; i<children.length; i++) {\n    println(children[i].getContent());\n  }\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Zebra\"\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9267,7 +9240,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getAttributeCount());\n}\n\n// Sketch prints:\n// 2\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.getAttributeCount());\n}\n\n// Sketch prints:\n// 2\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9284,7 +9257,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.listAttributes());\n}\n\n// Sketch prints:\n// [\"id\", \"species\"]\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.listAttributes());\n}\n\n// Sketch prints:\n// [\"id\", \"species\"]\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9308,7 +9281,7 @@
                 "type": "Boolean"
             },
             "example": [
-                "\n <div class='norender'><code>\n // The following short XML file called \"mammals.xml\" is parsed\n // in the code below.\n //\n // <?xml version=\"1.0\"?>\n // &lt;mammals&gt;\n //   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n //   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n //   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n // &lt;/mammals&gt;\n\n var xml;\n\n function preload() {\n xml = loadXML(\"assets/mammals.xml\");\n }\n\n function setup() {\n var firstChild = xml.getChild(\"animal\");\n print(firstChild.hasAttribute(\"species\"));\n print(firstChild.hasAttribute(\"color\"));\n }\n\n // Sketch prints:\n // true\n // false\n </code></div>"
+                "\n <div class='norender'><code>\n // The following short XML file called \"mammals.xml\" is parsed\n // in the code below.\n //\n // <?xml version=\"1.0\"?>\n // &lt;mammals&gt;\n //   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n //   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n //   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n // &lt;/mammals&gt;\n\n var xml;\n\n function preload() {\n xml = loadXML(\"assets/mammals.xml\");\n }\n\n function setup() {\n var firstChild = xml.getChild(\"animal\");\n println(firstChild.hasAttribute(\"species\"));\n println(firstChild.hasAttribute(\"color\"));\n }\n\n // Sketch prints:\n // true\n // false\n </code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9338,7 +9311,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getNumber(\"id\"));\n}\n\n// Sketch prints:\n// 0\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.getNumber(\"id\"));\n}\n\n// Sketch prints:\n// 0\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9368,7 +9341,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getString(\"species\"));\n}\n\n// Sketch prints:\n// \"Capra hircus\"\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.getString(\"species\"));\n}\n\n// Sketch prints:\n// \"Capra hircus\"\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9393,7 +9366,7 @@
                 }
             ],
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getString(\"species\"));\n  firstChild.setAttribute(\"species\", \"Jamides zebra\");\n  print(firstChild.getString(\"species\"));\n}\n\n// Sketch prints:\n// \"Capra hircus\"\n// \"Jamides zebra\"\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.getString(\"species\"));\n  firstChild.setAttribute(\"species\", \"Jamides zebra\");\n  println(firstChild.getString(\"species\"));\n}\n\n// Sketch prints:\n// \"Capra hircus\"\n// \"Jamides zebra\"\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9418,7 +9391,7 @@
                 "type": "String"
             },
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9438,7 +9411,7 @@
                 }
             ],
             "example": [
-                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  print(firstChild.getContent());\n  firstChild.setContent(\"Mountain Goat\");\n  print(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Mountain Goat\"\n</code></div>"
+                "\n<div class='norender'><code>\n// The following short XML file called \"mammals.xml\" is parsed\n// in the code below.\n//\n// <?xml version=\"1.0\"?>\n// &lt;mammals&gt;\n//   &lt;animal id=\"0\" species=\"Capra hircus\">Goat&lt;/animal&gt;\n//   &lt;animal id=\"1\" species=\"Panthera pardus\">Leopard&lt;/animal&gt;\n//   &lt;animal id=\"2\" species=\"Equus zebra\">Zebra&lt;/animal&gt;\n// &lt;/mammals&gt;\n\nvar xml;\n\nfunction preload() {\n  xml = loadXML(\"assets/mammals.xml\");\n}\n\nfunction setup() {\n  var firstChild = xml.getChild(\"animal\");\n  println(firstChild.getContent());\n  firstChild.setContent(\"Mountain Goat\");\n  println(firstChild.getContent());\n}\n\n// Sketch prints:\n// \"Goat\"\n// \"Mountain Goat\"\n</code></div>"
             ],
             "class": "p5.XML",
             "module": "IO",
@@ -9478,7 +9451,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var x = -3;\n  var y = abs(x);\n\n  print(x); // -3\n  print(y); // 3\n}\n</code></div>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var x = -3;\n  var y = abs(x);\n\n  println(x); // -3\n  println(y); // 3\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Math",
@@ -9722,7 +9695,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  var x1 = 20;\n  var x2 = 80;\n  var y1 = 30;\n  var y2 = 70;\n\n  line(0, 0, x1, y1);\n  print(mag(x1, y1));  // Prints \"36.05551\"\n  line(0, 0, x2, y1);\n  print(mag(x2, y1));  // Prints \"85.44004\"\n  line(0, 0, x1, y2);\n  print(mag(x1, y2));  // Prints \"72.8011\"\n  line(0, 0, x2, y2);\n  print(mag(x2, y2));  // Prints \"106.30146\"\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  var x1 = 20;\n  var x2 = 80;\n  var y1 = 30;\n  var y2 = 70;\n\n  line(0, 0, x1, y1);\n  println(mag(x1, y1));  // Prints \"36.05551\"\n  line(0, 0, x2, y1);\n  println(mag(x2, y1));  // Prints \"85.44004\"\n  line(0, 0, x1, y2);\n  println(mag(x1, y2));  // Prints \"72.8011\"\n  line(0, 0, x2, y2);\n  println(mag(x2, y2));  // Prints \"106.30146\"\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Math",
@@ -10104,7 +10077,7 @@
             "itemtype": "method",
             "name": "toString",
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v = createVector(20,30);\n  print(String(v)); // prints \"p5.Vector Object : [20, 30, 0]\"\n}\n</div></code>\n"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v = createVector(20,30);\n  println(String(v)); // prints \"p5.Vector Object : [20, 30, 0]\"\n}\n</div></code>\n"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10154,7 +10127,7 @@
                 "type": "p5.Vector"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = v1.copy();\nprint(v1.x == v2.x && v1.y == v2.y && v1.z == v2.z);\n// Prints \"true\"\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = v1.copy();\nprintln(v1.x == v2.x && v1.y == v2.y && v1.z == v2.z);\n// Prints \"true\"\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10295,7 +10268,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v = createVector(20.0, 30.0, 40.0);\nvar m = v.mag();\nprint(m); // Prints \"53.85164807134504\"\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v = createVector(20.0, 30.0, 40.0);\nvar m = v.mag();\nprintln(m); // Prints \"53.85164807134504\"\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10312,7 +10285,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(6, 4, 2);\nprint(v1.magSq()); // Prints \"56\"\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Static method\nvar v1 = createVector(6, 4, 2);\nprintln(v1.magSq()); // Prints \"56\"\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10348,7 +10321,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(2, 3, 4);\n\nprint(v1.dot(v2)); // Prints \"20\"\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\n//Static method\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(3, 2, 1);\nprint (p5.Vector.dot(v1, v2)); // Prints \"10\"\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(2, 3, 4);\n\nprintln(v1.dot(v2)); // Prints \"20\"\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\n//Static method\nvar v1 = createVector(1, 2, 3);\nvar v2 = createVector(3, 2, 1);\nprint (p5.Vector.dot(v1, v2)); // Prints \"10\"\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10478,7 +10451,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v1 = createVector(30,50);\n  print(v1.heading()); // 1.0303768265243125\n\n  var v1 = createVector(40,50);\n  print(v1.heading()); // 0.8960553845713439\n\n  var v1 = createVector(30,70);\n  print(v1.heading()); // 1.1659045405098132\n}\n</div></code>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v1 = createVector(30,50);\n  println(v1.heading()); // 1.0303768265243125\n\n  var v1 = createVector(40,50);\n  println(v1.heading()); // 0.8960553845713439\n\n  var v1 = createVector(30,70);\n  println(v1.heading()); // 1.1659045405098132\n}\n</div></code>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10560,7 +10533,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v = createVector(20,30);\n  print(v.array()); // Prints : Array [20, 30, 0]\n}\n</div></code>\n<div class=\"norender\">\n<code>\nvar v = createVector(10.0, 20.0, 30.0);\nvar f = v.array();\nprint(f[0]); // Prints \"10.0\"\nprint(f[1]); // Prints \"20.0\"\nprint(f[2]); // Prints \"30.0\"\n</code>\n</div>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var v = createVector(20,30);\n  println(v.array()); // Prints : Array [20, 30, 0]\n}\n</div></code>\n<div class=\"norender\">\n<code>\nvar v = createVector(10.0, 20.0, 30.0);\nvar f = v.array();\nprintln(f[0]); // Prints \"10.0\"\nprintln(f[1]); // Prints \"20.0\"\nprintln(f[2]); // Prints \"30.0\"\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -10597,7 +10570,7 @@
                 "type": "Boolean"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nv1 = createVector(5,10,20);\nv2 = createVector(5,10,20);\nv3 = createVector(13,10,19);\n\nprint(v1.equals(v2.x,v2.y,v2.z)); // true\nprint(v1.equals(v3.x,v3.y,v3.z)); // false\n</div></code>\n<div class=\"norender\">\n<code>\nvar v1 = createVector(10.0, 20.0, 30.0);\nvar v2 = createVector(10.0, 20.0, 30.0);\nvar v3 = createVector(0.0, 0.0, 0.0);\nprint (v1.equals(v2)) // true\nprint (v1.equals(v3)) // false\n</code>\n</div>"
+                "\n<div class = \"norender\"><code>\nv1 = createVector(5,10,20);\nv2 = createVector(5,10,20);\nv3 = createVector(13,10,19);\n\nprintln(v1.equals(v2.x,v2.y,v2.z)); // true\nprintln(v1.equals(v3.x,v3.y,v3.z)); // false\n</div></code>\n<div class=\"norender\">\n<code>\nvar v1 = createVector(10.0, 20.0, 30.0);\nvar v2 = createVector(10.0, 20.0, 30.0);\nvar v3 = createVector(0.0, 0.0, 0.0);\nprint (v1.equals(v2)) // true\nprint (v1.equals(v3)) // false\n</code>\n</div>"
             ],
             "class": "p5.Vector",
             "module": "Math",
@@ -11209,7 +11182,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class= “norender\">\n<code>\nvar rad = PI/4;\nvar deg = degrees(rad);\nprintln(rad + \" radians is \" + deg + \" degrees\");\n// Prints: 45 degrees is 0.7853981633974483 radians\n</code>\n</div>\n"
+                "\n<div class= “norender\">\n<code>\nvar rad = PI/4;\nvar deg = degrees(rad);\nprintln(rad + \" radians is \" + deg + \" degrees\");\n// Prints: 0.7853981633974483 radians is 45 degrees\n</code>\n</div>\n"
             ],
             "class": "p5",
             "module": "Math",
@@ -11249,7 +11222,7 @@
                 {
                     "name": "mode",
                     "description": "<p>either RADIANS or DEGREES</p>\n",
-                    "type": "Number/Constant"
+                    "type": "Constant"
                 }
             ],
             "example": [
@@ -11269,12 +11242,12 @@
                 {
                     "name": "horizAlign",
                     "description": "<p>horizontal alignment, either LEFT,\n                           CENTER, or RIGHT</p>\n",
-                    "type": "Number/Constant"
+                    "type": "Constant"
                 },
                 {
                     "name": "vertAlign",
                     "description": "<p>vertical alignment, either TOP,\n                           BOTTOM, CENTER, or BASELINE</p>\n",
-                    "type": "Number/Constant"
+                    "type": "Constant"
                 }
             ],
             "return": {
@@ -11655,7 +11628,7 @@
                 }
             ],
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n\nvar myArray = new Array(\"Mango\", \"Apple\", \"Papaya\")\nprint(myArray) // [\"Mango\", \"Apple\", \"Papaya\"]\n\nappend(myArray, \"Peach\")\nprint(myArray) // [\"Mango\", \"Apple\", \"Papaya\", \"Peach\"]\n\n}\n</div></code>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n\nvar myArray = new Array(\"Mango\", \"Apple\", \"Papaya\")\nprintln(myArray) // [\"Mango\", \"Apple\", \"Papaya\"]\n\nappend(myArray, \"Peach\")\nprintln(myArray) // [\"Mango\", \"Apple\", \"Papaya\", \"Peach\"]\n\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11698,7 +11671,7 @@
                 }
             ],
             "example": [
-                "\n <div class=\"norender\"><code>\n function setup() {\n\n   var src = new Array(\"A\", \"B\", \"C\");\n   var dst = new Array( 1 ,  2 ,  3 );\n   var srcPosition = 1;\n   var dstPosition = 0;\n   var length = 2;\n\n   print(src); // [\"A\", \"B\", \"C\"]\n   print(dst); // [ 1 ,  2 ,  3 ]\n\n   arrayCopy(src, srcPosition, dst, dstPosition, length);\n   print(dst); // [\"B\", \"C\", 3]\n\n   }\n </div></code>"
+                "\n <div class=\"norender\"><code>\n function setup() {\n\n   var src = new Array(\"A\", \"B\", \"C\");\n   var dst = new Array( 1 ,  2 ,  3 );\n   var srcPosition = 1;\n   var dstPosition = 0;\n   var length = 2;\n\n   println(src); // [\"A\", \"B\", \"C\"]\n   println(dst); // [ 1 ,  2 ,  3 ]\n\n   arrayCopy(src, srcPosition, dst, dstPosition, length);\n   println(dst); // [\"B\", \"C\", 3]\n\n   }\n </div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11727,7 +11700,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var arr1 = new Array(\"A\", \"B\", \"C\");\n  var arr2 = new Array( 1 ,  2 ,  3 );\n\n  print(arr1); // [\"A\",\"B\",\"C\"]\n  print(arr2); // [1,2,3]\n\n  var arr3 = concat(arr1, arr2);\n\n  print(arr1); // [\"A\",\"B\",\"C\"]\n  print(arr2); // [1,2,3]\n  print(arr3); // [\"A\",\"B\",\"C\",1,2,3]\n\n}\n</div></code>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var arr1 = new Array(\"A\", \"B\", \"C\");\n  var arr2 = new Array( 1 ,  2 ,  3 );\n\n  println(arr1); // [\"A\",\"B\",\"C\"]\n  println(arr2); // [1,2,3]\n\n  var arr3 = concat(arr1, arr2);\n\n  println(arr1); // [\"A\",\"B\",\"C\"]\n  println(arr2); // [1,2,3]\n  println(arr3); // [\"A\",\"B\",\"C\",1,2,3]\n\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11747,7 +11720,7 @@
                 }
             ],
             "example": [
-                "\n<div class=\"norender\"><code>\nfunction setup() {\n  var myArray = new Array(\"A\", \"B\", \"C\");\n  print(myArray); // [\"A\",\"B\",\"C\"]\n\n  reverse(myArray);\n  print(myArray); // [\"C\",\"B\",\"A\"]\n}\n</div></code>"
+                "\n<div class=\"norender\"><code>\nfunction setup() {\n  var myArray = new Array(\"A\", \"B\", \"C\");\n  println(myArray); // [\"A\",\"B\",\"C\"]\n\n  reverse(myArray);\n  println(myArray); // [\"C\",\"B\",\"A\"]\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11771,7 +11744,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(\"A\", \"B\", \"C\");\n  print(myArray); // [\"A\",\"B\",\"C\"]\n\n  var newArray = shorten(myArray);\n  print(myArray); // [\"A\",\"B\",\"C\"]\n  print(newArray); // [\"A\",\"B\"]\n}\n</div></code>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(\"A\", \"B\", \"C\");\n  println(myArray); // [\"A\",\"B\",\"C\"]\n\n  var newArray = shorten(myArray);\n  println(myArray); // [\"A\",\"B\",\"C\"]\n  println(newArray); // [\"A\",\"B\"]\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11801,7 +11774,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div><code>\nfunction setup() {\n  var regularArr = ['ABC', 'def', createVector(), TAU, Math.E];\n  print(regularArr);\n  shuffle(regularArr, true); // force modifications to passed array\n  print(regularArr);\n\n  // By default shuffle() returns a shuffled cloned array:\n  var newArr = shuffle(regularArr);\n  print(regularArr);\n  print(newArr);\n}\n</code></div>"
+                "\n<div><code>\nfunction setup() {\n  var regularArr = ['ABC', 'def', createVector(), TAU, Math.E];\n  println(regularArr);\n  shuffle(regularArr, true); // force modifications to passed array\n  println(regularArr);\n\n  // By default shuffle() returns a shuffled cloned array:\n  var newArr = shuffle(regularArr);\n  println(regularArr);\n  println(newArr);\n}\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11827,7 +11800,7 @@
                 }
             ],
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var words = new Array(\"banana\", \"apple\", \"pear\",\"lime\");\n  print(words); // [\"banana\", \"apple\", \"pear\", \"lime\"]\n  var count = 4; // length of array\n\n  words = sort(words, count);\n  print(words); // [\"apple\", \"banana\", \"lime\", \"pear\"]\n}\n</div></code>\n<div class = \"norender\"><code>\nfunction setup() {\n  var numbers = new Array(2,6,1,5,14,9,8,12);\n  print(numbers); // [2,6,1,5,14,9,8,12]\n  var count = 5; // Less than the length of the array\n\n  numbers = sort(numbers, count);\n  print(numbers); // [1,2,5,6,14,9,8,12]\n}\n</div></code>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var words = new Array(\"banana\", \"apple\", \"pear\",\"lime\");\n  println(words); // [\"banana\", \"apple\", \"pear\", \"lime\"]\n  var count = 4; // length of array\n\n  words = sort(words, count);\n  println(words); // [\"apple\", \"banana\", \"lime\", \"pear\"]\n}\n</div></code>\n<div class = \"norender\"><code>\nfunction setup() {\n  var numbers = new Array(2,6,1,5,14,9,8,12);\n  println(numbers); // [2,6,1,5,14,9,8,12]\n  var count = 5; // Less than the length of the array\n\n  numbers = sort(numbers, count);\n  println(numbers); // [1,2,5,6,14,9,8,12]\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11857,7 +11830,7 @@
                 }
             ],
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(0,1,2,3,4);\n  var insArray = new Array(\"A\",\"B\",\"C\");\n  print(myArray); // [0,1,2,3,4]\n  print(insArray); // [\"A\",\"B\",\"C\"]\n\n  splice(myArray, insArray, 3);\n  print(myArray); // [0,1,2,\"A\",\"B\",\"C\",3,4]\n}\n</div></code>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(0,1,2,3,4);\n  var insArray = new Array(\"A\",\"B\",\"C\");\n  println(myArray); // [0,1,2,3,4]\n  println(insArray); // [\"A\",\"B\",\"C\"]\n\n  splice(myArray, insArray, 3);\n  println(myArray); // [0,1,2,\"A\",\"B\",\"C\",3,4]\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11892,7 +11865,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(1,2,3,4,5);\n  print(myArray); // [1,2,3,4,5]\n\n  var sub1 = subset(myArray, 0, 3);\n  var sub2 = subset(myArray, 2, 2);\n  print(sub1); // [1,2,3]\n  print(sub2); // [3,4]\n}\n</div></code>"
+                "\n<div class = \"norender\"><code>\nfunction setup() {\n  var myArray = new Array(1,2,3,4,5);\n  println(myArray); // [1,2,3,4,5]\n\n  var sub1 = subset(myArray, 0, 3);\n  var sub2 = subset(myArray, 2, 2);\n  println(sub1); // [1,2,3]\n  println(sub2); // [3,4]\n}\n</div></code>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11940,7 +11913,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(int(\"10\")); // 10\nprint(int(10.31)); // 10\nprint(int(-10)); // -10\nprint(int(true)); // 1\nprint(int(false)); // 0\nprint(int([false, true, \"10.3\", 9.8])); // [0, 1, 10, 9]\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(int(\"10\")); // 10\nprintln(int(10.31)); // 10\nprintln(int(-10)); // -10\nprintln(int(true)); // 1\nprintln(int(false)); // 0\nprintln(int([false, true, \"10.3\", 9.8])); // [0, 1, 10, 9]\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11964,7 +11937,7 @@
                 "type": "String"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(str(\"10\"));  // \"10\"\nprint(str(10.31)); // \"10.31\"\nprint(str(-10));   // \"-10\"\nprint(str(true));  // \"true\"\nprint(str(false)); // \"false\"\nprint(str([true, \"10.3\", 9.8])); // [ \"true\", \"10.3\", \"9.8\" ]\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(str(\"10\"));  // \"10\"\nprintln(str(10.31)); // \"10.31\"\nprintln(str(-10));   // \"-10\"\nprintln(str(true));  // \"true\"\nprintln(str(false)); // \"false\"\nprintln(str([true, \"10.3\", 9.8])); // [ \"true\", \"10.3\", \"9.8\" ]\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -11988,7 +11961,7 @@
                 "type": "Boolean"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(boolean(0));               // false\nprint(boolean(1));               // true\nprint(boolean(\"true\"));          // true\nprint(boolean(\"abcd\"));          // false\nprint(boolean([0, 12, \"true\"])); // [false, true, false]\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(boolean(0));               // false\nprintln(boolean(1));               // true\nprintln(boolean(\"true\"));          // true\nprintln(boolean(\"abcd\"));          // false\nprintln(boolean([0, 12, \"true\"])); // [false, true, false]\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12012,7 +11985,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(byte(127));               // 127\nprint(byte(128));               // -128\nprint(byte(23.4));              // 23\nprint(byte(\"23.4\"));            // 23\nprint(byte(true));              // 1\nprint(byte([0, 255, \"100\"]));   // [0, -1, 100]\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(byte(127));               // 127\nprintln(byte(128));               // -128\nprintln(byte(23.4));              // 23\nprintln(byte(\"23.4\"));            // 23\nprintln(byte(true));              // 1\nprintln(byte([0, 255, \"100\"]));   // [0, -1, 100]\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12036,7 +12009,7 @@
                 "type": "String"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(char(65));                     // \"A\"\nprint(char(\"65\"));                   // \"A\"\nprint(char([65, 66, 67]));           // [ \"A\", \"B\", \"C\" ]\nprint(join(char([65, 66, 67]), '')); // \"ABC\"\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(char(65));                     // \"A\"\nprintln(char(\"65\"));                   // \"A\"\nprintln(char([65, 66, 67]));           // [ \"A\", \"B\", \"C\" ]\nprintln(join(char([65, 66, 67]), '')); // \"ABC\"\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12060,7 +12033,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(unchar(\"A\"));               // 65\nprint(unchar([\"A\", \"B\", \"C\"]));   // [ 65, 66, 67 ]\nprint(unchar(split(\"ABC\", \"\")));  // [ 65, 66, 67 ]\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(unchar(\"A\"));               // 65\nprintln(unchar([\"A\", \"B\", \"C\"]));   // [ 65, 66, 67 ]\nprintln(unchar(split(\"ABC\", \"\")));  // [ 65, 66, 67 ]\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12084,7 +12057,7 @@
                 "type": "String"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(hex(255));               // \"000000FF\"\nprint(hex(255, 6));            // \"0000FF\"\nprint(hex([0, 127, 255], 6));  // [ \"000000\", \"00007F\", \"0000FF\" ]\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(hex(255));               // \"000000FF\"\nprintln(hex(255, 6));            // \"0000FF\"\nprintln(hex([0, 127, 255], 6));  // [ \"000000\", \"00007F\", \"0000FF\" ]\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12108,7 +12081,7 @@
                 "type": "Number"
             },
             "example": [
-                "\n<div class='norender'><code>\nprint(unhex(\"A\"));                // 10\nprint(unhex(\"FF\"));               // 255\nprint(unhex([\"FF\", \"AA\", \"00\"])); // [ 255, 170, 0 ]\n</code></div>"
+                "\n<div class='norender'><code>\nprintln(unhex(\"A\"));                // 10\nprintln(unhex(\"FF\"));               // 255\nprintln(unhex([\"FF\", \"AA\", \"00\"])); // [ 255, 170, 0 ]\n</code></div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12392,7 +12365,7 @@
                 "type": "Array"
             },
             "example": [
-                "\n<div class = \"norender\">\n<code>\nfunction setup() {\n  var myStr = \"Mango, Banana, Lime\";\n  var myStrArr = splitTokens(myStr, \",\");\n\n  print(myStrArr); // prints : [\"Mango\",\" Banana\",\" Lime\"]\n}\n</code>\n</div>"
+                "\n<div class = \"norender\">\n<code>\nfunction setup() {\n  var myStr = \"Mango, Banana, Lime\";\n  var myStrArr = splitTokens(myStr, \",\");\n\n  println(myStrArr); // prints : [\"Mango\",\" Banana\",\" Lime\"]\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Data",
@@ -12896,7 +12869,7 @@
         {
             "file": "src/webgl/material.js",
             "line": 13,
-            "description": "<p>Normal material for geometry</p>\n",
+            "description": "<p>Normal material for geometry. You can view all\npossible materials in this\n<a href=\"https://p5js.org/examples/examples/3D_Materials.php\">example</a>.</p>\n",
             "itemtype": "method",
             "name": "normalMaterial",
             "return": {
@@ -12912,8 +12885,8 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 37,
-            "description": "<p>Texture for geometry</p>\n",
+            "line": 39,
+            "description": "<p>Texture for geometry.  You can view other possible materials in this\n<a href=\"https://p5js.org/examples/examples/3D_Materials.php\">example</a>.</p>\n",
             "itemtype": "method",
             "name": "texture",
             "params": [
@@ -12936,7 +12909,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 158,
+            "line": 161,
             "description": "<p>Texture Util functions</p>\n",
             "class": "p5",
             "module": "Lights, Camera",
@@ -12944,7 +12917,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 179,
+            "line": 182,
             "description": "<p>Checks whether val is a pot\nmore info on power of 2 here:\n<a href=\"https://www.opengl.org/wiki/NPOT_Texture\">https://www.opengl.org/wiki/NPOT_Texture</a></p>\n",
             "params": [
                 {
@@ -12963,7 +12936,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 190,
+            "line": 193,
             "description": "<p>returns the next highest power of 2 value</p>\n",
             "params": [
                 {
@@ -12982,8 +12955,8 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 202,
-            "description": "<p>Ambient material for geometry with a given color</p>\n",
+            "line": 205,
+            "description": "<p>Ambient material for geometry with a given color. You can view all\npossible materials in this\n<a href=\"https://p5js.org/examples/examples/3D_Materials.php\">example</a>.</p>\n",
             "itemtype": "method",
             "name": "ambientMaterial",
             "params": [
@@ -13024,8 +12997,8 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 250,
-            "description": "<p>Specular material for geometry with a given color</p>\n",
+            "line": 255,
+            "description": "<p>Specular material for geometry with a given color. You can view all\npossible materials in this\n<a href=\"https://p5js.org/examples/examples/3D_Materials.php\">example</a>.</p>\n",
             "itemtype": "method",
             "name": "specularMaterial",
             "params": [
@@ -13066,7 +13039,7 @@
         },
         {
             "file": "src/webgl/material.js",
-            "line": 294,
+            "line": 301,
             "access": "private",
             "tagname": "blends colors according to color components.\nIf alpha value is less than 1, we need to enable blending\non our gl context.  Otherwise opaque objects need to a depthMask.",
             "params": [
@@ -14021,7 +13994,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining box with width, height and depth 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(200, 200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning box with width, height and depth 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  box(200, 200, 200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -14107,7 +14080,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining sylinder with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cylinder(200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning cylinder with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cylinder(200, 200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -14148,7 +14121,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning cone with radius 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateZ(frameCount * 0.01);\n  cone(200, 200);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -14235,7 +14208,7 @@
                 "type": "P5"
             },
             "example": [
-                "\n<div>\n<code>\n//draw a spining torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
+                "\n<div>\n<code>\n//draw a spinning torus with radius 200 and tube radius 60\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  torus(200, 60);\n}\n</code>\n</div>"
             ],
             "class": "p5",
             "module": "Shape",
@@ -15067,6 +15040,27 @@
         {
             "file": "lib/addons/p5.dom.js",
             "line": 1390,
+            "description": "<p>Removes an attibute on the specified element.</p>\n",
+            "itemtype": "method",
+            "name": "removeAttribute",
+            "params": [
+                {
+                    "name": "attr",
+                    "description": "<p>attribute to remove</p>\n",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object/p5.Element"
+            },
+            "class": "p5.Element",
+            "module": "p5.dom",
+            "submodule": "p5.dom"
+        },
+        {
+            "file": "lib/addons/p5.dom.js",
+            "line": 1405,
             "description": "<p>Either returns the value of the element if no arguments\ngiven, or sets the value of the element.</p>\n",
             "itemtype": "method",
             "name": "value",
@@ -15091,7 +15085,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1433,
+            "line": 1448,
             "description": "<p>Shows the current element. Essentially, setting display:block for the style.</p>\n",
             "itemtype": "method",
             "name": "show",
@@ -15108,7 +15102,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1451,
+            "line": 1466,
             "description": "<p>Hides the current element. Essentially, setting display:none for the style.</p>\n",
             "itemtype": "method",
             "name": "hide",
@@ -15125,7 +15119,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1467,
+            "line": 1482,
             "description": "<p>Sets the width and height of the element. AUTO can be used to\n only adjust one dimension. If no arguments given returns the width and height\n of the element in an object.</p>\n",
             "itemtype": "method",
             "name": "size",
@@ -15156,7 +15150,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1533,
+            "line": 1548,
             "description": "<p>Removes the element and deregisters all listeners.</p>\n",
             "itemtype": "method",
             "name": "remove",
@@ -15169,7 +15163,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1582,
+            "line": 1597,
             "description": "<p>Path to the media element source.</p>\n",
             "itemtype": "property",
             "name": "src",
@@ -15183,7 +15177,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1617,
+            "line": 1632,
             "description": "<p>Play an HTML5 media element.</p>\n",
             "itemtype": "method",
             "name": "play",
@@ -15197,7 +15191,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1638,
+            "line": 1653,
             "description": "<p>Stops an HTML5 media element (sets current time to zero).</p>\n",
             "itemtype": "method",
             "name": "stop",
@@ -15211,7 +15205,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1650,
+            "line": 1665,
             "description": "<p>Pauses an HTML5 media element.</p>\n",
             "itemtype": "method",
             "name": "pause",
@@ -15225,7 +15219,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1661,
+            "line": 1676,
             "description": "<p>Set &#39;loop&#39; to true for an HTML5 media element, and starts playing.</p>\n",
             "itemtype": "method",
             "name": "loop",
@@ -15239,7 +15233,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1672,
+            "line": 1687,
             "description": "<p>Set &#39;loop&#39; to false for an HTML5 media element. Element will stop\nwhen it reaches the end.</p>\n",
             "itemtype": "method",
             "name": "noLoop",
@@ -15253,7 +15247,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1685,
+            "line": 1700,
             "description": "<p>Set HTML5 media element to autoplay or not.</p>\n",
             "itemtype": "method",
             "name": "autoplay",
@@ -15274,7 +15268,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1697,
+            "line": 1712,
             "description": "<p>Sets volume for this HTML5 media element. If no argument is given,\nreturns the current volume.</p>\n",
             "params": [
                 {
@@ -15296,7 +15290,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1713,
+            "line": 1728,
             "description": "<p>If no arguments are given, returns the current playback speed of the\nelement. The speed parameter sets the speed where 2.0 will play the\nelement twice as fast, 0.5 will play at half the speed, and -1 will play\nthe element in normal speed in reverse.(Note that not all browsers support\nbackward playback and even if they do, playback might not be smooth.)</p>\n",
             "itemtype": "method",
             "name": "speed",
@@ -15318,7 +15312,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1732,
+            "line": 1747,
             "description": "<p>If no arguments are given, returns the current time of the element.\nIf an argument is given the current time of the element is set to it.</p>\n",
             "itemtype": "method",
             "name": "time",
@@ -15340,7 +15334,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1749,
+            "line": 1764,
             "description": "<p>Returns the duration of the HTML5 media element.</p>\n",
             "itemtype": "method",
             "name": "duration",
@@ -15354,7 +15348,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1796,
+            "line": 1814,
             "description": "<p>Schedule an event to be called when the audio or video\nelement reaches the end. If the element is looping,\nthis will not be called. The element is passed in\nas the argument to the onended callback.</p>\n",
             "itemtype": "method",
             "name": "onended",
@@ -15378,14 +15372,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1828,
+            "line": 1846,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1830,
+            "line": 1848,
             "description": "<p>Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5&#39;s master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.</p>\n<p>This method is meant to be used with the p5.sound.js addon library.</p>\n",
             "itemtype": "method",
             "name": "connect",
@@ -15402,7 +15396,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1882,
+            "line": 1900,
             "description": "<p>Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.</p>\n",
             "itemtype": "method",
             "name": "disconnect",
@@ -15412,14 +15406,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1898,
+            "line": 1916,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1900,
+            "line": 1918,
             "description": "<p>Show the default MediaElement controls, as determined by the web browser.</p>\n",
             "itemtype": "method",
             "name": "showControls",
@@ -15429,7 +15423,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1911,
+            "line": 1929,
             "description": "<p>Hide the default mediaElement controls.</p>\n",
             "itemtype": "method",
             "name": "hideControls",
@@ -15439,14 +15433,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1920,
+            "line": 1938,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1922,
+            "line": 1940,
             "description": "<p>Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.</p>\n<p>Accepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.</p>\n<p>Time will be passed as the first parameter to the callback function,\nand param will be the second parameter.</p>\n",
             "itemtype": "method",
             "name": "addCue",
@@ -15481,7 +15475,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1984,
+            "line": 2002,
             "description": "<p>Remove a callback based on its ID. The ID is returned by the\naddCue method.</p>\n",
             "itemtype": "method",
             "name": "removeCue",
@@ -15498,7 +15492,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2004,
+            "line": 2022,
             "description": "<p>Remove all of the callbacks that had originally been scheduled\nvia the addCue method.</p>\n",
             "itemtype": "method",
             "name": "clearCues",
@@ -15508,7 +15502,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2061,
+            "line": 2079,
             "description": "<p>Underlying File object. All normal File methods can be called on this.</p>\n",
             "itemtype": "property",
             "name": "file",
@@ -15518,7 +15512,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2073,
+            "line": 2091,
             "description": "<p>File type (image, text, etc.)</p>\n",
             "itemtype": "property",
             "name": "type",
@@ -15528,7 +15522,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2079,
+            "line": 2097,
             "description": "<p>File subtype (usually the file extension jpg, png, xml, etc.)</p>\n",
             "itemtype": "property",
             "name": "subtype",
@@ -15538,7 +15532,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2085,
+            "line": 2103,
             "description": "<p>File name</p>\n",
             "itemtype": "property",
             "name": "name",
@@ -15548,7 +15542,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2091,
+            "line": 2109,
             "description": "<p>File size</p>\n",
             "itemtype": "property",
             "name": "size",
@@ -15558,7 +15552,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2098,
+            "line": 2116,
             "description": "<p>URL string containing image data.</p>\n",
             "itemtype": "property",
             "name": "data",
@@ -19223,11 +19217,11 @@
     "warnings": [
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:417"
+            "line": " src/core/environment.js:431"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:458"
+            "line": " src/core/environment.js:472"
         },
         {
             "message": "param name missing: {Invert}",
@@ -19331,11 +19325,11 @@
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/core/environment.js:226"
+            "line": " src/core/environment.js:229"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/core/environment.js:235"
+            "line": " src/core/environment.js:238"
         },
         {
             "message": "Missing item type",
@@ -19359,7 +19353,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:799"
+            "line": " src/core/p5.Element.js:810"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
@@ -19379,7 +19373,7 @@
         },
         {
             "message": "Missing item type\nGenerate a cubic Bezier representing an arc on the unit circle of total\nangle `size` radians, beginning `start` radians above the x-axis. Up to\nfour of these curves are combined to make a full arc.\n\nSee www.joecridge.me/bezier.pdf for an explanation of the method.",
-            "line": " src/core/p5.Renderer2D.js:353"
+            "line": " src/core/p5.Renderer2D.js:356"
         },
         {
             "message": "Missing item type\nshim for Uint8ClampedArray.slice\n(allows arrayCopy to work with pixels[])\nwith thanks to http://halfpapstudios.com/blog/tag/html5-canvas/\nEnumerable set to false to protect for...in from\nUint8ClampedArray.prototype pollution.",
@@ -19479,23 +19473,23 @@
         },
         {
             "message": "Missing item type\nGenerate a blob of file data as a url to prepare for download.\nAccepts an array of data, a filename, and an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1346"
+            "line": " src/io/files.js:1348"
         },
         {
             "message": "Missing item type\nForces download. Accepts a url to filedata/blob, a filename,\nand an extension (optional).\nThis is a private function because it does not do any formatting,\nbut it is used by saveStrings, saveJSON, saveTable etc.",
-            "line": " src/io/files.js:1369"
+            "line": " src/io/files.js:1371"
         },
         {
             "message": "Missing item type\nReturns a file extension, or another string\nif the provided parameter has no extension.",
-            "line": " src/io/files.js:1405"
+            "line": " src/io/files.js:1407"
         },
         {
             "message": "Missing item type\nReturns true if the browser is Safari, false if not.\nSafari makes trouble for downloading files.",
-            "line": " src/io/files.js:1437"
+            "line": " src/io/files.js:1439"
         },
         {
             "message": "Missing item type\nHelper function, a callback for download that deletes\nan invisible anchor element from the DOM once the file\nhas been automatically downloaded.",
-            "line": " src/io/files.js:1449"
+            "line": " src/io/files.js:1451"
         },
         {
             "message": "Missing item type\nTable Options\n<p>Generic class for handling tabular data, typically from a\nCSV, TSV, or other sort of spreadsheet file.</p>\n<p>CSV files are\n<a href=\"http://en.wikipedia.org/wiki/Comma-separated_values\">\ncomma separated values</a>, often with the data in quotes. TSV\nfiles use tabs as separators, and usually don't bother with the\nquotes.</p>\n<p>File names should end with .csv if they're comma separated.</p>\n<p>A rough \"spec\" for CSV can be found\n<a href=\"http://tools.ietf.org/html/rfc4180\">here</a>.</p>\n<p>To load files, use the loadTable method.</p>\n<p>To save tables to your computer, use the save method\n or the saveTable method.</p>\n\nPossible options include:\n<ul>\n<li>csv - parse the table as comma-separated values\n<li>tsv - parse the table as tab-separated values\n<li>header - this table has a header (title) row\n</ul>",
@@ -19579,19 +19573,19 @@
         },
         {
             "message": "Missing item type\nTexture Util functions",
-            "line": " src/webgl/material.js:158"
+            "line": " src/webgl/material.js:161"
         },
         {
             "message": "Missing item type\nChecks whether val is a pot\nmore info on power of 2 here:\nhttps://www.opengl.org/wiki/NPOT_Texture",
-            "line": " src/webgl/material.js:179"
+            "line": " src/webgl/material.js:182"
         },
         {
             "message": "Missing item type\nreturns the next highest power of 2 value",
-            "line": " src/webgl/material.js:190"
+            "line": " src/webgl/material.js:193"
         },
         {
             "message": "Missing item type",
-            "line": " src/webgl/material.js:294"
+            "line": " src/webgl/material.js:301"
         },
         {
             "message": "Missing item type\np5 Geometry class",
@@ -19815,15 +19809,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1828"
+            "line": " lib/addons/p5.dom.js:1846"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1898"
+            "line": " lib/addons/p5.dom.js:1916"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1920"
+            "line": " lib/addons/p5.dom.js:1938"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",

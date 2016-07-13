@@ -6,3 +6,4 @@ download/version.php
 js/p5.*
 offline-reference/copy/*
 offline-reference/*.zip
+offline-reference/p5-reference/*
