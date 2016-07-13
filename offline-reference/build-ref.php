@@ -67,7 +67,9 @@ function copyDir($src, $dst) {
 
 function copyFiles() {
   rmdir_recursive('copy');
-  mkdir('copy');
+  if (!file_exists('copy')) {
+    mkdir('copy');
+  }
 
   copyDir('../reference/assets/', 'copy/assets/');
   copyDir('../js/', 'copy/js/');
