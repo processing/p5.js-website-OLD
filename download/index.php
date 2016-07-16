@@ -78,6 +78,7 @@
         <div class="download_box half_box">
         <h4>Windows</h4>
         <p>p5 Editor<br>Version <?php echo $p5jseditor_version; ?></p>
+        <p>64-bit</p>
         </div>
         </a>
         
@@ -85,6 +86,7 @@
         <div class="download_box half_box">
         <h4>Linux</h4>
         <p>p5 Editor<br>Version <?php echo $p5jseditor_version; ?></p>
+        <p>64-bit</p>
         </div>
         </a>
 
