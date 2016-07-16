@@ -77,15 +77,14 @@
         <a href="https://github.com/processing/p5.js-editor/releases/download/v<?php echo $p5jseditor_version; ?>/p5-win.zip">
         <div class="download_box half_box">
         <h4>Windows</h4>
-        <p>p5 Editor, 64-bit<br>Version <?php echo $p5jseditor_version; ?></p>
+        <p>p5 Editor<br>64-bit<br>Version <?php echo $p5jseditor_version; ?></p>
         </div>
         </a>
         
         <a href="https://github.com/processing/p5.js-editor/releases/download/v<?php echo $p5jseditor_version; ?>/p5-linux.zip">
         <div class="download_box half_box">
         <h4>Linux</h4>
-        <p>p5 Editor, 64-bit<br>Version <?php echo $p5jseditor_version; ?></p>
-        <p>64-bit</p>
+        <p>p5 Editor<br>64-bit<br>Version <?php echo $p5jseditor_version; ?></p>
         </div>
         </a>
 
