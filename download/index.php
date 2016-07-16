@@ -10,6 +10,12 @@
     <div class="column-span">
       <section id="about">
         <h2>Download</h2>
+        
+        <p>Processing is open source, free software. All donations fund the <a href="http://foundation.processing.org">Processing Foundation</a>,
+        a nonprofit organization devoted to advancing the role of programming within the visual arts through developing Processing.<br>
+        <a href="https://processingfoundation.org/support">DONATE HERE</a>
+        </p>
+        
         <h3>Complete Library</h3>
 
         <div class="link_group">
