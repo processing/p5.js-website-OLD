@@ -2,9 +2,9 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-<div id="credits">
+<!--<div id="credits">
     <em>Magnify</em> by <a target=_blank href='http://kylemcdonald.net'>Kyle McDonald</a>
-</div>
+</div>-->
  
   <?php include('heading.php'); ?>
 
@@ -63,7 +63,7 @@
 
   <?php include('end.php'); ?>
 
-<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/kylemcdonald_magnify'></iframe>
+<!--<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/kylemcdonald_magnify'></iframe>-->
   <!-- <div id='home-sketch-frame'></div> -->
   <!--<script src='./p5_featured/LeslieRuckman_RainbowPixelGrow/sketch.js'></script>-->
   <script type='text/javascript'>
