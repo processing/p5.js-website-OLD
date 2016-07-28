@@ -2,10 +2,10 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-<!--<div id="credits">
-    <em>Magnify</em> by <a target=_blank href='http://kylemcdonald.net'>Kyle McDonald</a>
-</div>-->
- 
+<div id="credits">
+    <em>Connections</em> by <a target=_blank href='http://xie-emily.com'>Emily Xie</a>
+</div>
+
   <?php include('heading.php'); ?>
 
   <!-- content sections -->
@@ -27,7 +27,7 @@
 
     <section id="home">
 
-      
+
 <!--       <div class='focus_blue'>
         <p><a href='http://goo.gl/forms/vJYdqTQVdS'>Call for artists and coders: help us make our community video!</a></p>
       </div> -->
@@ -63,8 +63,8 @@
 
   <?php include('end.php'); ?>
 
-<!--<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/kylemcdonald_magnify'></iframe>-->
-  <!-- <div id='home-sketch-frame'></div> -->
+<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/emily_xie_connections/index.html'></iframe>
+  <div id='home-sketch-frame'></div>
   <!--<script src='./p5_featured/LeslieRuckman_RainbowPixelGrow/sketch.js'></script>-->
   <script type='text/javascript'>
     $('#home-sketch-frame').width(window.innerWidth);
