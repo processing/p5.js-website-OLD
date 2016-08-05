@@ -11,7 +11,7 @@
           <p id="backlink"><a href="../#examples">< Back to Examples</a></p>
           <h2>Sine Wave</h2>
           <p>Render a simple sine wave.
- Original by Danial Shiffman.
+ Original by Daniel Shiffman :)
  </p>
 
           <div id="exampleDisplay">
