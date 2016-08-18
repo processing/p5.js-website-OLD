@@ -79,6 +79,15 @@
       <div class="spacer"></div>
 
       <div class="left-column">
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Optimizing-p5.js-Code-for-Performance">
+        <div class="label">
+        <img src="../img/learn/lib_placeholder.jpg"></a>
+        <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Optimizing-p5.js-Code-for-Performance"><h4>Optimizing p5.js code for performance</h4></a>
+        </div>
+        <p>A tutorial of tips and tricks for optimizing your code to make it run faster and smoother.</p>
+      </div>
+
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas">
         <div class="label">
         <img src="../img/learn/dom.jpg"></a>
@@ -89,7 +98,9 @@
       </div>
 
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Integrating-other-libraries">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -98,9 +109,7 @@
         <p>Finding, adding, and integrating other JS libraries.</p>
       </div>
 
-      <div class="spacer"></div>
-
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Local-server">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -109,7 +118,9 @@
         <p>How to set up a local server on Mac OSX, Windows, or Linux.</p>
       </div>
 
-      <div class="right-column">
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js,-node.js,-socket.io">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -118,9 +129,8 @@
         <p>Using a node.js server with p5.js, communcation via socket.io.</p>
       </div>
 
-      <div class="spacer"></div>
 
-      <div class="left-column">
+      <div class="right-column">
         <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Development">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -129,7 +139,10 @@
         <p>Getting started and overview for contributing to development.</p>
       </div>
 
-      <div class="right-column">
+
+      <div class="spacer"></div>
+
+      <div class="left-column">
         <a class="nounderline" href="http://www.luisapereira.net/teaching/looking-inside-p5/">
         <div class="label">
         <img src="../img/learn/lib_placeholder.jpg"></a>
@@ -137,8 +150,6 @@
         </div>
         <p>A friendly intro to the file structure and tools for p5.js development, by Luisa Pereira.</p>
       </div>
-
-      <div class="spacer"></div>
 
       <!--<li><a href="https://github.com/processing/p5.js/tree/master/examples/learningprocessing">Learning Processing examples</a> - port of the first 10 chapters of examples from Dan Shiffman's <a href="http://www.learningprocessing.com/examples/">Learning Processing book</a>.</li>
 
