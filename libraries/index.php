@@ -82,7 +82,7 @@
         <a class="nounderline" href="http://abilitylab.nyu.edu/p5.js-speech/">
         <div class="label">
         <img src="../img/libraries/p5.speech.jpg"></a>
-        <a class="nounderline" href="http://abilitylab.nyu.edu/p5.js-speech/"><h4>p5.speech</h4></a>
+        <a class="nounderline" href="https://github.com/IDMNYU/p5.js-speech"><h4>p5.speech</h4></a>
         </div>
         <p>p5.speech provides simple, clear access to the Web Speech and Speech
         Recognition APIs, allowing for the easy creation of sketches that can
