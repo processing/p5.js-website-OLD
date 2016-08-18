@@ -34,8 +34,9 @@ function setEnvironmentVariables() {
     10,
     140,
     10,
-    65
+    70
   );
+  immortalParticles = Math.min(immortalParticles, 70);
   connectRadius = map(
     immortalParticles,
     10,
