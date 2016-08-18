@@ -63,17 +63,7 @@
   <?php include('end.php'); ?>
 
   <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/emily_xie_connections/index.html'></iframe>
-  <style media="screen">
-    #home-sketch-frame {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      z-index: -2;
-      overflow: hidden;
-    }
-  </style>
+
   <!-- <div id='home-sketch-frame'></div> -->
   <!--<script src='./p5_featured/LeslieRuckman_RainbowPixelGrow/sketch.js'></script>-->
 
