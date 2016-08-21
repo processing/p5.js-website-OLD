@@ -2505,13 +2505,14 @@
             "example": [
                 "\n<div>\n<code>\nnoStroke();\nc = color(0, 126, 255, 102);\nfill(c);\nrect(15, 15, 35, 70);\nvalue = alpha(c);  // Sets 'value' to 102\nfill(value);\nrect(50, 15, 35, 70);\n</code>\n</div>"
             ],
+            "alt": "Left half of canvas light blue and right half light charcoal grey.\nLeft half of canvas light purple and right half a royal blue.\nLeft half of canvas salmon pink and the right half white.\nYellow rect in middle right of canvas, with 55 pixel width and height.\nYellow ellipse in top left of canvas, black ellipse in bottom right,both 80x80.\nBright fuschia rect in middle of canvas, 60 pixel width and height.\nTwo bright green rects on opposite sides of the canvas, both 45x80.\nFour blue rects in each corner of the canvas, each are 35x35.\nBright sea green rect on left and darker rect on right of canvas, both 45x80.\nDark green rect on left and lighter green rect on right of canvas, both 45x80.\nDark blue rect on left and light teal rect on right of canvas, both 45x80.\nblue rect on left and green on right, both with black outlines & 35x60.\nsalmon pink rect on left and black on right, both 35x60.\n4 rects one tan, brown, brownish purple and purple. Each with white outlines & 20x60.\nlight pastel green rect on left and dark grey rect on right, both 35x60.\nyellow rect on left and red rect on right, both with black outlines and 35x60.\ngrey canvas\ndeep pink rect on left and grey rect on right, both 35x60.",
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 41,
+            "line": 61,
             "description": "<p>Extracts the blue value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "blue",
@@ -2525,13 +2526,14 @@
             "example": [
                 "\n<div>\n<code>\nc = color(175, 100, 220);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(15, 20, 35, 60);  // Draw left rectangle\n\nblueValue = blue(c);  // Get blue in 'c'\nprintln(blueValue);  // Prints \"220.0\"\nfill(0, 0, blueValue);  // Use 'blueValue' in new fill\nrect(50, 20, 35, 60);  // Draw right rectangle\n</code>\n</div>"
             ],
+            "alt": "Left half of canvas light purple and right half a royal blue.",
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 68,
+            "line": 92,
             "description": "<p>Extracts the HSB brightness value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "brightness",
@@ -2545,13 +2547,14 @@
             "example": [
                 "\n<div>\n<code>\nnoStroke();\ncolorMode(HSB, 255);\nc = color(0, 126, 255);\nfill(c);\nrect(15, 20, 35, 60);\nvalue = brightness(c);  // Sets 'value' to 255\nfill(value);\nrect(50, 20, 35, 60);\n</code>\n</div>"
             ],
+            "alt": "Left half of canvas salmon pink and the right half white.",
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 95,
+            "line": 123,
             "description": "<p>Creates colors for storing in variables of the color datatype. The\nparameters are interpreted as RGB or HSB values depending on the\ncurrent colorMode(). The default mode is RGB values from 0 to 255\nand, therefore, the function call color(255, 204, 0) will return a\nbright yellow color.\n<br><br>\nNote that if only one value is provided to color(), it will be interpreted\nas a grayscale value. Add a second value, and it will be used for alpha\ntransparency. When three values are specified, they are interpreted as\neither RGB or HSB values. Adding a fourth value applies alpha\ntransparency. If a single string parameter is provided it will be\ninterpreted as a CSS-compatible color string.</p>\n<p>Colors are stored as Numbers or Arrays.</p>\n",
             "itemtype": "method",
             "name": "color",
@@ -2559,16 +2562,16 @@
                 "description": "resulting color",
                 "type": "Array"
             },
-            "alt": "This is alt text for example 1.\nThis is alt text for example 2.\nThis is alt text for example 3.",
             "example": [
                 "\n<div>\n<code>\nvar c = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(30, 20, 55, 55);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nvar c = color(255, 204, 0);  // Define color 'c'\nfill(c);  // Use color variable 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nellipse(25, 25, 80, 80);  // Draw left circle\n\n// Using only one value with color()\n// generates a grayscale value.\nvar c = color(65);  // Update 'c' with grayscale value\nfill(c);  // Use updated 'c' as fill color\nellipse(75, 75, 80, 80);  // Draw right circle\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG & CSS colors may be used,\nvar c = color('magenta');\nfill(c);  // Use 'c' as fill color\nnoStroke();  // Don't draw a stroke around shapes\nrect(20, 20, 60, 60);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// as can hex color codes:\nnoStroke();  // Don't draw a stroke around shapes\nvar c = color('#0f0');\nfill(c);  // Use 'c' as fill color\nrect(0, 10, 45, 80);  // Draw rectangle\n\nc = color('#00ff00');\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// RGB and RGBA color strings are also supported:\n// these all set to the same color (solid blue)\nvar c;\nnoStroke();  // Don't draw a stroke around shapes\nc = color('rgb(0,0,255)');\nfill(c); // Use 'c' as fill color\nrect(10, 10, 35, 35);  // Draw rectangle\n\nc = color('rgb(0%, 0%, 100%)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 35, 35);  // Draw rectangle\n\nc = color('rgba(0, 0, 255, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(10, 55, 35, 35);  // Draw rectangle\n\nc = color('rgba(0%, 0%, 100%, 1)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 55, 35, 35);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSL color is also supported and can be specified\n// by value\nvar c;\nnoStroke();  // Don't draw a stroke around shapes\nc = color('hsl(160, 100%, 50%)');\nfill(c);  // Use 'c' as fill color\nrect(0, 10, 45, 80);  // Draw rectangle\n\nc = color('hsla(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\n// HSB color is also supported and can be specified\n// by value\nvar c;\nnoStroke();  // Don't draw a stroke around shapes\nc = color('hsb(160, 100%, 50%)');\nfill(c);  // Use 'c' as fill color\nrect(0, 10, 45, 80);  // Draw rectangle\n\nc = color('hsba(160, 100%, 50%, 0.5)');\nfill(c); // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw rectangle\n</code>\n</div>\n\n<div>\n<code>\nvar c;  // Declare color 'c'\nnoStroke();  // Don't draw a stroke around shapes\n\n// If no colorMode is specified, then the\n// default of RGB with scale of 0-255 is used.\nc = color(50, 55, 100);  // Create a color for 'c'\nfill(c);  // Use color variable 'c' as fill color\nrect(0, 10, 45, 80);  // Draw left rect\n\ncolorMode(HSB, 100);  // Use HSB with scale of 0-100\nc = color(50, 55, 100);  // Update 'c' with new color\nfill(c);  // Use updated 'c' as fill color\nrect(55, 10, 45, 80);  // Draw right rect\n</code>\n</div>"
             ],
+            "alt": "Yellow rect in middle right of canvas, with 55 pixel width and height.\nYellow ellipse in top left of canvas, black ellipse in bottom right,both 80x80.\nBright fuschia rect in middle of canvas, 60 pixel width and height.\nTwo bright green rects on opposite sides of the canvas, both 45x80.\nFour blue rects in each corner of the canvas, each are 35x35.\nBright sea green rect on left and darker rect on right of canvas, both 45x80.\nDark green rect on left and lighter green rect on right of canvas, both 45x80.\nDark blue rect on left and light teal rect on right of canvas, both 45x80.",
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading",
             "overloads": [
                 {
-                    "line": 95,
+                    "line": 123,
                     "params": [
                         {
                             "name": "gray",
@@ -2584,7 +2587,7 @@
                     ]
                 },
                 {
-                    "line": 246,
+                    "line": 281,
                     "params": [
                         {
                             "name": "v1",
@@ -2613,7 +2616,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 275,
+            "line": 310,
             "description": "<p>Extracts the green value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "green",
@@ -2633,7 +2636,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 302,
+            "line": 338,
             "description": "<p>Extracts the hue value from a color or pixel array.</p>\n<p>Hue exists in both HSB and HSL. This function will return the\nHSB-normalized hue when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL-normalized hue otherwise. (The values will only be different if the\nmaximum hue setting for each system is different.)</p>\n",
             "itemtype": "method",
             "name": "hue",
@@ -2653,7 +2656,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 335,
+            "line": 372,
             "description": "<p>Blends two colors to find a third color somewhere between them. The amt\nparameter is the amount to interpolate between the two values where 0.0\nequal to the first color, 0.1 is very near the first color, 0.5 is halfway\nin between, etc. An amount below 0 will be treated as 0. Likewise, amounts\nabove 1 will be capped at 1. This is different from the behavior of lerp(),\nbut necessary because otherwise numbers outside the range will produce\nstrange and unexpected colors.\n<br><br>\nThe way that colours are interpolated depends on the current color mode.</p>\n",
             "itemtype": "method",
             "name": "lerpColor",
@@ -2687,7 +2690,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 418,
+            "line": 456,
             "description": "<p>Extracts the HSL lightness value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "lightness",
@@ -2707,7 +2710,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 445,
+            "line": 483,
             "description": "<p>Extracts the red value from a color or pixel array.</p>\n",
             "itemtype": "method",
             "name": "red",
@@ -2727,7 +2730,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 482,
+            "line": 520,
             "description": "<p>Extracts the saturation value from a color or pixel array.</p>\n<p>Saturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL saturation otherwise.</p>\n",
             "itemtype": "method",
             "name": "saturation",
@@ -2822,7 +2825,7 @@
             "itemtype": "method",
             "name": "background",
             "example": [
-                "\n<div>\n<code>\n// Grayscale integer value\nbackground(51);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nbackground(255, 204, 0);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nbackground(255, 204, 100);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nbackground('red');\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nbackground('#fae');\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nbackground('#222222');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nbackground('rgb(0,255,0)');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nbackground('rgba(0,255,0, 0.25)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nbackground('rgb(100%,0%,10%)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nbackground('rgba(100%,0%,100%,0.5)');\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nbackground(color(0, 0, 255));\n</code>\n</div>"
+                "\n<div>\n<code>\n// Grayscale integer value\nbackground(51);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nbackground(255, 204, 0);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nbackground(255, 204, 100);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nbackground('red');\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nbackground('#fae');\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nbackground('#222222');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nbackground('rgb(0,255,0)');\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nbackground('rgba(0,255,0, 0.25)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nbackground('rgb(100%,0%,10%)');\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nbackground('rgba(100%,0%,100%,0.5)');\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nbackground(color(0, 0, 255));\n</code>\n</div>\n\n* @alt\ncanvas with darkest charcoal grey background.\ncanvas with yellow background.\ncanvas with royal blue background.\ncanvas with red background.\ncanvas with pink background.\ncanvas with black background.\ncanvas with bright green background.\ncanvas with soft green background.\ncanvas with red background.\ncanvas with light purple background.\ncanvas with blue background.\n20x20 white ellipses are continually drawn at mouse x and y coordinates.\nGreen to red gradient from bottom L to top R. shading originates from top left.\nRainbow gradient from left to right. Brightness increasing to white at top.\nunknown image.\n50x50 ellipse at middle L & 40x40 ellipse at center. Transluscent pink outlines.\n60x60 dark charcoal grey rect with black outline in center of canvas. \n60x60 yellow rect with black outline in center of canvas.\n60x60 royal blue rect with black outline in center of canvas. \n60x60 red rect with black outline in center of canvas. \n60x60 pink rect with black outline in center of canvas. \n60x60 black rect with black outline in center of canvas. \n60x60 light green rect with black outline in center of canvas. \n60x60 soft green rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.  \n60x60 dark fushcia rect with black outline in center of canvas.\n60x60 blue rect with black outline in center of canvas.  \nwhite rect top middle and noFill rect center. Both 60x60 with black outlines. \n60x60 white rect at center. no outline.\n60x60 white rect at center. Dark charcoal grey outline.  \n60x60 white rect at center. Yellow outline.  \n60x60 white rect at center. Royal blue outline.  \n60x60 white rect at center. Red outline.  \n60x60 white rect at center. Pink outline.  \n60x60 white rect at center. Black outline.  \n60x60 white rect at center. Bright green outline.  \n60x60 white rect at center. Soft green outline.  \n60x60 white rect at center. Red outline.  \n60x60 white rect at center. Dark fushcia outline.  \n60x60 white rect at center. Blue outline."
             ],
             "class": "p5",
             "module": "Color",
@@ -2845,7 +2848,7 @@
                     ]
                 },
                 {
-                    "line": 107,
+                    "line": 149,
                     "params": [
                         {
                             "name": "colorstring",
@@ -2861,7 +2864,7 @@
                     ]
                 },
                 {
-                    "line": 115,
+                    "line": 157,
                     "params": [
                         {
                             "name": "gray",
@@ -2877,7 +2880,7 @@
                     ]
                 },
                 {
-                    "line": 121,
+                    "line": 163,
                     "params": [
                         {
                             "name": "v1",
@@ -2903,7 +2906,7 @@
                     ]
                 },
                 {
-                    "line": 132,
+                    "line": 174,
                     "params": [
                         {
                             "name": "image",
@@ -2922,7 +2925,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 148,
+            "line": 190,
             "description": "<p>Clears the pixels within a buffer. This function only works on p5.Canvas\nobjects created with the createCanvas() function; it won&#39;t work with the\nmain display window. Unlike the main graphics context, pixels in\nadditional graphics areas created with createGraphics() can be entirely\nor partially transparent. This function clears everything to make all of\nthe pixels 100% transparent.</p>\n",
             "itemtype": "method",
             "name": "clear",
@@ -2935,7 +2938,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 180,
+            "line": 223,
             "description": "<p>colorMode() changes the way p5.js interprets color data. By default, the\nparameters for fill(), stroke(), background(), and color() are defined by\nvalues between 0 and 255 using the RGB color model. This is equivalent to\nsetting colorMode(RGB, 255). Setting colorMode(HSB) lets you use the HSB\nsystem instead. By default, this is colorMode(HSB, 360, 100, 100, 1). You\ncan also use HSL.\n<br><br>\nNote: existing color objects remember the mode that they were created in,\nso you can change modes as you like without affecting their appearance.</p>\n",
             "itemtype": "method",
             "name": "colorMode",
@@ -2979,7 +2982,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 283,
+            "line": 326,
             "description": "<p>Sets the color used to fill shapes. For example, if you run\nfill(204, 102, 0), all subsequent shapes will be filled with orange. This\ncolor is either specified in terms of the RGB or HSB color depending on\nthe current colorMode(). (The default color space is RGB, with each value\nin the range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color strings\nand all named color strings are supported. A p5 Color object can also be\nprovided to set the fill color.</p>\n",
             "itemtype": "method",
             "name": "fill",
@@ -3017,12 +3020,12 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 404,
+            "line": 448,
             "description": "<p>Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.</p>\n",
             "itemtype": "method",
             "name": "noFill",
             "example": [
-                "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(20, 20, 60, 60);\n</code>\n</div>"
+                "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(20, 20, 60, 60);\n</code>\n</div>    "
             ],
             "class": "p5",
             "module": "Color",
@@ -3030,7 +3033,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 423,
+            "line": 467,
             "description": "<p>Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.</p>\n",
             "itemtype": "method",
             "name": "noStroke",
@@ -3043,7 +3046,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 441,
+            "line": 486,
             "description": "<p>Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color\nstrings and all named color strings are supported. A p5 Color object\ncan also be provided to set the stroke color.</p>\n",
             "itemtype": "method",
             "name": "stroke",
@@ -3073,7 +3076,7 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\n// Grayscale integer value\nstrokeWeight(4);\nstroke(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nstroke(255, 204, 0);\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nstrokeWeight(4);\nstroke(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nstroke('red');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nstroke('#fae');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nstroke('#222222');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nstroke('rgb(0,255,0)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nstroke('rgba(0,255,0,0.25)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nstroke('rgb(100%,0%,10%)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nstroke('rgba(100%,0%,100%,0.5)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nstroke(color(0, 0, 255));\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>"
+                "\n<div>\n<code>\n// Grayscale integer value\nstrokeWeight(4);\nstroke(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nstroke(255, 204, 0);\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nstrokeWeight(4);\nstroke(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nstroke('red');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nstroke('#fae');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nstroke('#222222');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nstroke('rgb(0,255,0)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nstroke('rgba(0,255,0,0.25)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nstroke('rgb(100%,0%,10%)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nstroke('rgba(100%,0%,100%,0.5)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nstroke(color(0, 0, 255));\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div> "
             ],
             "class": "p5",
             "module": "Color",
@@ -3130,13 +3133,14 @@
             "example": [
                 "\n<div>\n<code>\narc(50, 55, 50, 50, 0, HALF_PI);\nnoFill();\narc(50, 55, 60, 60, HALF_PI, PI);\narc(50, 55, 70, 70, PI, PI+QUARTER_PI);\narc(50, 55, 80, 80, PI+QUARTER_PI, TWO_PI);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI+QUARTER_PI, OPEN);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI+QUARTER_PI, CHORD);\n</code>\n</div>\n\n<div>\n<code>\narc(50, 50, 80, 80, 0, PI+QUARTER_PI, PIE);\n</code>\n</div>"
             ],
+            "alt": "shattered outline of an ellipse with a quarter of a white circle bottom-right.\nwhite ellipse with black outline with top right missing.\nwhite ellipse with top right missing with black outline around shape.\nwhite ellipse with top right quarter missing with black outline around the shape.\nwhite ellipse with black outline in middle-right of canvas that is 55x55.\nline 78 pixels long running from mid-top to bottom-right of canvas.\n3 lines of various stroke sizes. Form top, bottom and right sides of a square.\n4 points centered in the middle-right of the canvas.\nirregular white quadrilateral shape with black outline mid-right of canvas.\n55x55 white rect with black outline in mid-right of canvas. \n55x55 white rect with black outline and rounded edges in mid-right of canvas.\n55x55 white rect with black outline and rounded edges of different radii in mid-right of canvas.\nwhite triangle with black outline in mid-right of canvas.",
             "class": "p5",
             "module": "Shape",
             "submodule": "2D Primitives"
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 123,
+            "line": 138,
             "description": "<p>Draws an ellipse (oval) to the screen. An ellipse with equal width and\nheight is a circle. By default, the first two parameters set the location,\nand the third and fourth parameters set the shape&#39;s width and height. If\nno height is specified, the value of width is used for both the width and\nheight. The origin may be changed with the ellipseMode() function.</p>\n",
             "itemtype": "method",
             "name": "ellipse",
@@ -3152,7 +3156,7 @@
             "submodule": "2D Primitives",
             "overloads": [
                 {
-                    "line": 123,
+                    "line": 138,
                     "params": [
                         {
                             "name": "x",
@@ -3178,7 +3182,7 @@
                     ]
                 },
                 {
-                    "line": 143,
+                    "line": 158,
                     "params": [
                         {
                             "name": "x",
@@ -3207,7 +3211,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 179,
+            "line": 194,
             "description": "<p>Draws a line (a direct path between two points) to the screen. The version\nof line() with four parameters draws the line in 2D. To color a line, use\nthe stroke() function. A line cannot be filled, therefore the fill()\nfunction will not affect the color of a line. 2D lines are drawn with a\nwidth of one pixel by default, but this can be changed with the\nstrokeWeight() function.</p>\n",
             "itemtype": "method",
             "name": "line",
@@ -3246,7 +3250,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 247,
+            "line": 262,
             "description": "<p>Draws a point, a coordinate in space at the dimension of one pixel.\nThe first parameter is the horizontal value for the point, the second\nvalue is the vertical value for the point. The color of the point is\ndetermined by the current stroke.</p>\n",
             "itemtype": "method",
             "name": "point",
@@ -3275,7 +3279,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 292,
+            "line": 307,
             "description": "<p>Draw a quad. A quad is a quadrilateral, a four sided polygon. It is\nsimilar to a rectangle, but the angles between its edges are not\nconstrained to ninety degrees. The first pair of parameters (x1,y1)\nsets the first vertex and the subsequent pairs should proceed\nclockwise or counter-clockwise around the defined shape.</p>\n",
             "itemtype": "method",
             "name": "quad",
@@ -3291,7 +3295,7 @@
             "submodule": "2D Primitives",
             "overloads": [
                 {
-                    "line": 292,
+                    "line": 307,
                     "params": [
                         {
                             "name": "x1",
@@ -3336,7 +3340,7 @@
                     ]
                 },
                 {
-                    "line": 316,
+                    "line": 331,
                     "params": [
                         {
                             "name": "x1",
@@ -3384,7 +3388,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 366,
+            "line": 381,
             "description": "<p>Draws a rectangle to the screen. A rectangle is a four-sided shape with\nevery angle at ninety degrees. By default, the first two parameters set\nthe location of the upper-left corner, the third sets the width, and the\nfourth sets the height. The way these parameters are interpreted, however,\nmay be changed with the rectMode() function.\n<br><br>\nThe fifth, sixth, seventh and eighth parameters, if specified,\ndetermine corner radius for the top-right, top-left, lower-right and\nlower-left corners, respectively. An omitted corner radius parameter is set\nto the value of the previously specified radius value in the parameter list.</p>\n",
             "itemtype": "method",
             "name": "rect",
@@ -3400,7 +3404,7 @@
             "submodule": "2D Primitives",
             "overloads": [
                 {
-                    "line": 366,
+                    "line": 381,
                     "params": [
                         {
                             "name": "x",
@@ -3449,7 +3453,7 @@
                     ]
                 },
                 {
-                    "line": 411,
+                    "line": 426,
                     "params": [
                         {
                             "name": "x",
@@ -3489,7 +3493,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 448,
+            "line": 463,
             "description": "<p>A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.</p>\n",
             "itemtype": "method",
             "name": "triangle",
@@ -3556,13 +3560,14 @@
             "example": [
                 "\n<div>\n<code>\nellipseMode(RADIUS);  // Set ellipseMode to RADIUS\nfill(255);  // Set fill to white\nellipse(50, 50, 30, 30);  // Draw white ellipse using RADIUS mode\n\nellipseMode(CENTER);  // Set ellipseMode to CENTER\nfill(100);  // Set fill to gray\nellipse(50, 50, 30, 30);  // Draw gray ellipse using CENTER mode\n</code>\n</div>\n\n<div>\n<code>\nellipseMode(CORNER);  // Set ellipseMode is CORNER\nfill(255);  // Set fill to white\nellipse(25, 25, 50, 50);  // Draw white ellipse using CORNER mode\n\nellipseMode(CORNERS);  // Set ellipseMode to CORNERS\nfill(100);  // Set fill to gray\nellipse(25, 25, 50, 50);  // Draw gray ellipse using CORNERS mode\n</code>\n</div>"
             ],
+            "alt": "60x60 white ellipse and 30x30 grey ellipse with black outlines at center.\n60x60 white ellipse @center and 30x30 grey ellipse top-right, black outlines.\n2 pixelated 36x36 white ellipses to the left and right of center on black background.\n50x50 white rect at center and 25x25 grey rect in the top left corner of the other.\n50x50 white rect at center and 25x25 grey rect in the center of the other.\n2 pixelated 36x36 white ellipses one left one right of center. On black.\n3 lines. Top line: rounded ends, mid: squared, bottom:longer squared ends.\nRight-facing arrowhead shape with pointed tip in center of canvas.\nRight-facing arrowhead shape with flat tip in center of canvas.\nRight-facing arrowhead shape with rounded tip in center of canvas.\n3 horizontal black lines. Top line: thin, mid: medium, bottom:thick.",
             "class": "p5",
             "module": "Shape",
             "submodule": "Attributes"
         },
         {
             "file": "src/core/attributes.js",
-            "line": 75,
+            "line": 87,
             "description": "<p>Draws all geometry with jagged (aliased) edges. Note that smooth() is\nactive by default, so it is necessary to call noSmooth() to disable\nsmoothing of geometry, images, and fonts.</p>\n",
             "itemtype": "method",
             "name": "noSmooth",
@@ -3579,7 +3584,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 99,
+            "line": 111,
             "description": "<p>Modifies the location from which rectangles are drawn by changing the way\nin which parameters given to rect() are interpreted.\n<br><br>\nThe default mode is rectMode(CORNER), which interprets the first two\nparameters of rect() as the upper-left corner of the shape, while the\nthird and fourth parameters are its width and height.\n<br><br>\nrectMode(CORNERS) interprets the first two parameters of rect() as the\nlocation of one corner, and the third and fourth parameters as the\nlocation of the opposite corner.\n<br><br>\nrectMode(CENTER) interprets the first two parameters of rect() as the\nshape&#39;s center point, while the third and fourth parameters are its\nwidth and height.\n<br><br>\nrectMode(RADIUS) also uses the first two parameters of rect() as the\nshape&#39;s center point, but uses the third and fourth parameters to specify\nhalf of the shapes&#39;s width and height.\n<br><br>\nThe parameter must be written in ALL CAPS because Javascript is a\ncase-sensitive language.</p>\n",
             "itemtype": "method",
             "name": "rectMode",
@@ -3603,7 +3608,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 160,
+            "line": 172,
             "description": "<p>Draws all geometry with smooth (anti-aliased) edges. smooth() will also\nimprove image quality of resized images. Note that smooth() is active by\ndefault; noSmooth() can be used to disable smoothing of geometry,\nimages, and fonts.</p>\n",
             "itemtype": "method",
             "name": "smooth",
@@ -3620,7 +3625,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 185,
+            "line": 197,
             "description": "<p>Sets the style for rendering line endings. These ends are either squared,\nextended, or rounded, each of which specified with the corresponding\nparameters: SQUARE, PROJECT, and ROUND. The default cap is ROUND.</p>\n",
             "itemtype": "method",
             "name": "strokeCap",
@@ -3644,7 +3649,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 215,
+            "line": 227,
             "description": "<p>Sets the style of the joints which connect line segments. These joints\nare either mitered, beveled, or rounded and specified with the\ncorresponding parameters MITER, BEVEL, and ROUND. The default joint is\nMITER.</p>\n",
             "itemtype": "method",
             "name": "strokeJoin",
@@ -3668,7 +3673,7 @@
         },
         {
             "file": "src/core/attributes.js",
-            "line": 273,
+            "line": 285,
             "description": "<p>Sets the width of the stroke used for lines, points, and the border\naround shapes. All widths are set in units of pixels.</p>\n",
             "itemtype": "method",
             "name": "strokeWeight",
@@ -3706,15 +3711,16 @@
             "itemtype": "property",
             "name": "HALF_PI",
             "example": [
-                "\n<div><code>\narc(50, 50, 80, 80, 0, HALF_PI);\n</code></div>\n"
+                "\n<div><code>\narc(50, 50, 80, 80, 0, HALF_PI);\n</code></div>"
             ],
+            "alt": "80x80 white quarter-circle with curve toward bottom right of canvas.\nwhite half-circle with curve toward bottom of canvas.\nwhite eighth-circle rotated about 40 degrees with curve bottom right canvas.\n80x80 white ellipse shape in center of canvas.\n80x80 white ellipse shape in center of canvas.",
             "class": "p5",
             "module": "Constants",
             "submodule": "Constants"
         },
         {
             "file": "src/core/constants.js",
-            "line": 40,
+            "line": 46,
             "description": "<p>PI is a mathematical constant with the value\n3.14159265358979323846. It is the ratio of the circumference\nof a circle to its diameter. It is useful in combination with\nthe trigonometric functions sin() and cos().</p>\n",
             "itemtype": "property",
             "name": "PI",
@@ -3727,7 +3733,7 @@
         },
         {
             "file": "src/core/constants.js",
-            "line": 54,
+            "line": 60,
             "description": "<p>QUARTER_PI is a mathematical constant with the value 0.7853982.\nIt is one quarter the ratio of the circumference of a circle to\nits diameter. It is useful in combination with the trigonometric\nfunctions sin() and cos().</p>\n",
             "itemtype": "property",
             "name": "QUARTER_PI",
@@ -3740,7 +3746,7 @@
         },
         {
             "file": "src/core/constants.js",
-            "line": 69,
+            "line": 75,
             "description": "<p>TAU is an alias for TWO_PI, a mathematical constant with the\nvalue 6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().</p>\n",
             "itemtype": "property",
             "name": "TAU",
@@ -3753,7 +3759,7 @@
         },
         {
             "file": "src/core/constants.js",
-            "line": 84,
+            "line": 90,
             "description": "<p>TWO_PI is a mathematical constant with the value\n6.28318530717958647693. It is twice the ratio of the\ncircumference of a circle to its diameter. It is useful in\ncombination with the trigonometric functions sin() and cos().</p>\n",
             "itemtype": "property",
             "name": "TWO_PI",
@@ -3938,7 +3944,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 106,
+            "line": 116,
             "description": "<p>Sets the resolution at which Beziers display.</p>\n<p>The default value is 20.</p>\n",
             "params": [
                 {
@@ -3960,7 +3966,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 127,
+            "line": 137,
             "description": "<p>Evaluates the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a bezier curve at t.</p>\n",
             "itemtype": "method",
             "name": "bezierPoint",
@@ -4004,7 +4010,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 168,
+            "line": 178,
             "description": "<p>Evaluates the tangent to the Bezier at position t for points a, b, c, d.\nThe parameters a and d are the first and last points\non the curve, and b and c are the control points.\nThe final parameter t varies between 0 and 1.</p>\n",
             "itemtype": "method",
             "name": "bezierTangent",
@@ -4048,7 +4054,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 239,
+            "line": 249,
             "description": "<p>Draws a curved line on the screen between two points, given as the\nmiddle four parameters. The first two parameters are a control point, as\nif the curve came from this point even though it&#39;s not drawn. The last\ntwo parameters similarly describe the other control point. <br /><br />\nLonger curves can be created by putting a series of curve() functions\ntogether or using curveVertex(). An additional function called\ncurveTightness() provides control for the visual quality of the curve.\nThe curve() function is an implementation of Catmull-Rom splines.</p>\n",
             "itemtype": "method",
             "name": "curve",
@@ -4064,7 +4070,7 @@
             "submodule": "Curves",
             "overloads": [
                 {
-                    "line": 239,
+                    "line": 249,
                     "params": [
                         {
                             "name": "x1",
@@ -4109,7 +4115,7 @@
                     ]
                 },
                 {
-                    "line": 286,
+                    "line": 296,
                     "params": [
                         {
                             "name": "z1",
@@ -4137,7 +4143,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 344,
+            "line": 354,
             "description": "<p>Sets the resolution at which curves display.</p>\n<p>The default value is 20.</p>\n",
             "params": [
                 {
@@ -4159,7 +4165,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 365,
+            "line": 375,
             "description": "<p>Modifies the quality of forms created with curve() and curveVertex().\nThe parameter tightness determines how the curve fits to the vertex\npoints. The value 0.0 is the default value for tightness (this value\ndefines the curves to be Catmull-Rom splines) and the value 1.0 connects\nall the points with straight lines. Values within the range -5.0 and 5.0\nwill deform the curves but will leave them recognizable and as values\nincrease in magnitude, they will continue to deform.</p>\n",
             "itemtype": "method",
             "name": "curveTightness",
@@ -4183,7 +4189,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 407,
+            "line": 417,
             "description": "<p>Evaluates the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points\non the curve, and b and c are the control points.\nThis can be done once with the x coordinates and a second time\nwith the y coordinates to get the location of a curve at t.</p>\n",
             "itemtype": "method",
             "name": "curvePoint",
@@ -4227,7 +4233,7 @@
         },
         {
             "file": "src/core/curves.js",
-            "line": 452,
+            "line": 462,
             "description": "<p>Evaluates the tangent to the curve at position t for points a, b, c, d.\nThe parameter t varies between 0 and 1, a and d are points on the curve,\nand b and c are the control points.</p>\n",
             "itemtype": "method",
             "name": "curveTangent",
@@ -4285,13 +4291,14 @@
             "example": [
                 "\n<div><code class='norender'>\nvar x = 10;\nprintln(\"The value of x is \" + x);\n// prints \"The value of x is 10\"\n</code></div>"
             ],
+            "alt": "default grey canvas\nnumbers rapidly counting upward with frame count set to 30.\ngreen 50x50 ellipse at top left. Red X covers canvas when page focus changes\nhorizontal line divides canvas. cursor on left is a cross, right is hand.\nblue rect moves left to right, followed by red rect moving faster. Loops.\ncursor becomes 10x 10 white ellipse the moves with mouse x and y.\nno display.\nno display.\nno display.\nno display.\nno display.\nno display.\nno display.\ngrey canvas.\nfuzzy 50x50 white ellipse with black outline in center of canvas.\nsharp 50x50 white ellipse with black outline in center of canvas.\n50x50 white ellipse with black outline in center of canvas.\ncurrent url (http://p5js.org/reference/#/p5/getURL) moves right to left.\nno display.\nno display.",
             "class": "p5",
             "module": "Environment",
             "submodule": "Environment"
         },
         {
             "file": "src/core/environment.js",
-            "line": 65,
+            "line": 87,
             "description": "<p>The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.</p>\n",
             "itemtype": "property",
             "name": "frameCount",
@@ -4304,7 +4311,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 88,
+            "line": 110,
             "description": "<p>Confirms if the window a p5.js program is in is &quot;focused,&quot; meaning that\nthe sketch will accept mouse or keyboard input. This variable is\n&quot;true&quot; if the window is focused and &quot;false&quot; if not.</p>\n",
             "itemtype": "property",
             "name": "focused",
@@ -4317,7 +4324,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 114,
+            "line": 136,
             "description": "<p>Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.</p>\n",
             "itemtype": "method",
             "name": "cursor",
@@ -4349,7 +4356,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 168,
+            "line": 190,
             "description": "<p>Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n<br><br>\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().\n<br><br>\nCalling frameRate() with arguments that are not of the type numbers\nor are non positive also returns current framerate.</p>\n",
             "itemtype": "method",
             "name": "frameRate",
@@ -4374,7 +4381,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 229,
+            "line": 251,
             "description": "<p>Returns the current framerate.</p>\n",
             "return": {
                 "description": "current frameRate",
@@ -4386,7 +4393,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 238,
+            "line": 260,
             "description": "<p>Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.</p>\n<p>Calling frameRate() with no arguments returns the current framerate.</p>\n",
             "params": [
                 {
@@ -4402,7 +4409,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 253,
+            "line": 275,
             "description": "<p>Hides the cursor from view.</p>\n",
             "itemtype": "method",
             "name": "noCursor",
@@ -4415,7 +4422,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 274,
+            "line": 296,
             "description": "<p>System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.</p>\n",
             "itemtype": "property",
             "name": "displayWidth",
@@ -4428,7 +4435,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 286,
+            "line": 308,
             "description": "<p>System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.</p>\n",
             "itemtype": "property",
             "name": "displayHeight",
@@ -4441,7 +4448,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 298,
+            "line": 320,
             "description": "<p>System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.</p>\n",
             "itemtype": "property",
             "name": "windowWidth",
@@ -4454,7 +4461,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 309,
+            "line": 331,
             "description": "<p>System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.</p>\n",
             "itemtype": "property",
             "name": "windowHeight",
@@ -4467,7 +4474,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 321,
+            "line": 343,
             "description": "<p>The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other\nadjustements to accomodate the new window size.</p>\n",
             "itemtype": "method",
             "name": "windowResized",
@@ -4480,7 +4487,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 366,
+            "line": 388,
             "description": "<p>System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.</p>\n",
             "itemtype": "property",
             "name": "width",
@@ -4490,7 +4497,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 377,
+            "line": 399,
             "description": "<p>System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.</p>\n",
             "itemtype": "property",
             "name": "height",
@@ -4500,7 +4507,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 388,
+            "line": 410,
             "description": "<p>If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.</p>\n",
             "itemtype": "method",
             "name": "fullscreen",
@@ -4525,7 +4532,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 431,
+            "line": 453,
             "description": "<p>Sets the pixel scaling for high pixel density displays. By default\npixel density is set to match display density, call pixelDensity(1)\nto turn this off. Calling pixelDensity() with no arguments returns\nthe current pixel density of the sketch.</p>\n",
             "itemtype": "method",
             "name": "pixelDensity",
@@ -4550,7 +4557,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 472,
+            "line": 494,
             "description": "<p>Returns the pixel density of the current display the sketch is running on.</p>\n",
             "itemtype": "method",
             "name": "displayDensity",
@@ -4567,7 +4574,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 526,
+            "line": 548,
             "description": "<p>Gets the current URL.</p>\n",
             "itemtype": "method",
             "name": "getURL",
@@ -4584,7 +4591,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 553,
+            "line": 575,
             "description": "<p>Gets the current URL path as an array.</p>\n",
             "itemtype": "method",
             "name": "getURLPath",
@@ -4601,7 +4608,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 570,
+            "line": 592,
             "description": "<p>Gets the current URL params as an Object.</p>\n",
             "itemtype": "method",
             "name": "getURLParams",
@@ -4723,13 +4730,14 @@
             "example": [
                 "\n <div class=\"norender\"><code>\n // in the html file:\n &lt;div id=\"myContainer\">&lt;/div>\n // in the js file:\n var cnv = createCanvas(100, 100);\n cnv.parent(\"myContainer\");\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n var div1 = createDiv('this is the child');\n div1.parent(div0); // use p5.Element\n </code></div>\n <div class='norender'><code>\n var div0 = createDiv('this is the parent');\n div0.id('apples');\n var div1 = createDiv('this is the child');\n div1.parent('apples'); // use id\n </code></div>\n <div class='norender'><code>\n var elt = document.getElementById('myParentDiv');\n var div1 = createDiv('this is the child');\n div1.parent(elt); // use element from page\n </code></div>"
             ],
+            "alt": "no display.\n no display.\n no display.\n no display.\n no display.\n no display.\n no display.\n no display.\n no display.\n dropdown: pear, kiwi, grape. When selected text \"its a\" + selection shown.\n no display.\n no display.\n no display.\n no display.\n no display.\n no display.\n no display.\n Canvas turns into whatever image is dragged onto it.",
             "class": "p5.Element",
             "module": "DOM",
             "submodule": "DOM"
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 92,
+            "line": 113,
             "description": "<p>Sets the ID of the element. If no ID argument is passed in, it instead\n returns the current ID of the element.</p>\n",
             "itemtype": "method",
             "name": "id",
@@ -4754,7 +4762,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 121,
+            "line": 142,
             "description": "<p>Adds given class to the element. If no class argument is passed in, it\n instead returns a string containing the current class(es) of the element.</p>\n",
             "itemtype": "method",
             "name": "class",
@@ -4776,7 +4784,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 139,
+            "line": 160,
             "description": "<p>The .mousePressed() function is called once after every time a\nmouse button is pressed over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mousePressed",
@@ -4800,7 +4808,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 184,
+            "line": 205,
             "description": "<p>The .mouseWheel() function is called once after every time a\nmouse wheel is scrolled over the element. This can be used to\nattach element specific event listeners.<br><br>\nThe event.wheelDelta or event.detail property returns negative values if\nthe mouse wheel if rotated up or away from the user and positive in the\nother direction. On OS X with &quot;natural&quot; scrolling enabled, the values are\nopposite.</p>\n",
             "itemtype": "method",
             "name": "mouseWheel",
@@ -4824,7 +4832,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 238,
+            "line": 259,
             "description": "<p>The .mouseReleased() function is called once after every time a\nmouse button is released over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mouseReleased",
@@ -4848,7 +4856,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 286,
+            "line": 307,
             "description": "<p>The .mouseClicked() function is called once after a mouse button is\npressed and released over the element. This can be used to\nattach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "mouseClicked",
@@ -4872,7 +4880,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 331,
+            "line": 352,
             "description": "<p>The .mouseMoved() function is called once every time a\nmouse moves over the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseMoved",
@@ -4896,7 +4904,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 384,
+            "line": 405,
             "description": "<p>The .mouseOver() function is called once after every time a\nmouse moves onto the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseOver",
@@ -4920,7 +4928,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 423,
+            "line": 444,
             "description": "<p>The .changed() function is called when the value of an\nelement is changed.\nThis can be used to attach an element specific event listener.</p>\n",
             "itemtype": "method",
             "name": "changed",
@@ -4944,7 +4952,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 484,
+            "line": 505,
             "description": "<p>The .input() function is called when any user input is\ndetected with an element. The input event is often used\nto detect keystrokes in a input element, or changes on a\nslider element. This can be used to attach an element specific\nevent listener.</p>\n",
             "itemtype": "method",
             "name": "input",
@@ -4968,7 +4976,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 513,
+            "line": 534,
             "description": "<p>The .mouseOut() function is called once after every time a\nmouse moves off the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "mouseOut",
@@ -4992,7 +5000,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 551,
+            "line": 572,
             "description": "<p>The .touchStarted() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchStarted",
@@ -5016,7 +5024,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 595,
+            "line": 616,
             "description": "<p>The .touchMoved() function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchMoved",
@@ -5040,7 +5048,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 631,
+            "line": 652,
             "description": "<p>The .touchEnded() function is called once after every time a touch is\nregistered. This can be used to attach element specific event listeners.</p>\n",
             "itemtype": "method",
             "name": "touchEnded",
@@ -5064,7 +5072,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 677,
+            "line": 698,
             "description": "<p>The .dragOver() function is called once after every time a\nfile is dragged over the element. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "dragOver",
@@ -5085,7 +5093,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 692,
+            "line": 713,
             "description": "<p>The .dragLeave() function is called once after every time a\ndragged file leaves the element area. This can be used to attach an\nelement specific event listener.</p>\n",
             "itemtype": "method",
             "name": "dragLeave",
@@ -5106,7 +5114,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 707,
+            "line": 728,
             "description": "<p>The .drop() function is called for each file dropped on the element.\nIt requires a callback that is passed a p5.File object.  You can\noptionally pass two callbacks, the first one (required) is triggered\nfor each file dropped when the file is loaded.  The second (optional)\nis triggered just once when a file (or files) are dropped.</p>\n",
             "itemtype": "method",
             "name": "drop",
@@ -5135,7 +5143,7 @@
         },
         {
             "file": "src/core/p5.Element.js",
-            "line": 811,
+            "line": 832,
             "description": "<p>Helper fxn for sharing pixel methods</p>\n",
             "class": "p5.Element",
             "module": "DOM",
@@ -5210,13 +5218,14 @@
             "example": [
                 "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 50);\n  background(153);\n  line(0, 0, width, height);\n}\n</code>\n</div>"
             ],
+            "alt": "Black line extending from top-left of canvas to bottom right. \nNo image displayed.\nNo image displayed.\n4 grey squares alternating light and dark grey. White quarter circle mid-left.\ntranslucent image thick red & blue diagonal rounded lines intersecting center\nThick red & blue diagonal rounded lines intersecting center. dark at overlap",
             "class": "p5",
             "module": "Rendering",
             "submodule": "Rendering"
         },
         {
             "file": "src/core/rendering.js",
-            "line": 115,
+            "line": 124,
             "description": "<p>Resizes the canvas to given width and height. The canvas will be cleared\nand draw will be called immediately, allowing the sketch to re-render itself\nin the resized canvas.</p>\n",
             "itemtype": "method",
             "name": "resizeCanvas",
@@ -5229,7 +5238,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 158,
+            "line": 167,
             "description": "<p>Removes the default canvas for a p5 sketch that doesn&#39;t\nrequire a canvas</p>\n",
             "itemtype": "method",
             "name": "noCanvas",
@@ -5242,7 +5251,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 177,
+            "line": 186,
             "description": "<p>Creates and returns a new p5.Renderer object. Use this class if you need\nto draw into an off-screen graphics buffer. The two parameters define the\nwidth and height in pixels.</p>\n",
             "itemtype": "method",
             "name": "createGraphics",
@@ -5277,7 +5286,7 @@
         },
         {
             "file": "src/core/rendering.js",
-            "line": 211,
+            "line": 220,
             "description": "<p>Blends the pixels in the display window according to the defined mode.\nThere is a choice of the following modes to blend the source pixels (A)\nwith the ones of pixels already in the display window (B):</p>\n<ul>\n<li><code>BLEND</code> - linear interpolation of colours: C =\nA<em>factor + B. This is the default blending mode.</li>\n<li><code>ADD</code> - sum of A and B</li>\n<li><code>DARKEST</code> - only the darkest colour succeeds: C =\nmin(A</em>factor, B).</li>\n<li><code>LIGHTEST</code> - only the lightest colour succeeds: C =\nmax(A*factor, B).</li>\n<li><code>DIFFERENCE</code> - subtract colors from underlying image.</li>\n<li><code>EXCLUSION</code> - similar to <code>DIFFERENCE</code>, but less\nextreme.</li>\n<li><code>MULTIPLY</code> - multiply the colors, result will always be\ndarker.</li>\n<li><code>SCREEN</code> - opposite multiply, uses inverse values of the\ncolors.</li>\n<li><code>REPLACE</code> - the pixels entirely replace the others and\ndon&#39;t utilize alpha (transparency) values.</li>\n<li><code>OVERLAY</code> - mix of <code>MULTIPLY</code> and <code>SCREEN\n</code>. Multiplies dark values, and screens light values.</li>\n<li><code>HARD_LIGHT</code> - <code>SCREEN</code> when greater than 50%\ngray, <code>MULTIPLY</code> when lower.</li>\n<li><code>SOFT_LIGHT</code> - mix of <code>DARKEST</code> and\n<code>LIGHTEST</code>. Works like <code>OVERLAY</code>, but not as harsh.\n</li>\n<li><code>DODGE</code> - lightens light tones and increases contrast,\nignores darks.</li>\n<li><code>BURN</code> - darker areas are applied, increasing contrast,\nignores lights.</li>\n</ul>",
             "itemtype": "method",
             "name": "blendMode",
@@ -5311,13 +5320,14 @@
             "example": [
                 "\n<div><code>\nfunction setup() {\n  createCanvas(100, 100);\n  background(200);\n  noLoop();\n}\n\nfunction draw() {\n  line(10, 10, 90, 90);\n}\n</code></div>\n\n<div><code>\nvar x = 0;\nfunction setup() {\n  createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(204);\n  x = x + 0.1;\n  if (x > width) {\n    x = 0;\n  }\n  line(x, 0, x, height);\n}\n\nfunction mousePressed() {\n  noLoop();\n}\n\nfunction mouseReleased() {\n  loop();\n}\n</code></div>"
             ],
+            "alt": "113 pixel long line extending from top-left to bottom right of canvas. \nhorizontal line moves slowly from left. Loops but stops on mouse press. //no loop\nhorizontal line moves slowly from left. Loops but stops on mouse press. //loop\nGold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.\nGold ellipse + thick black outline @center 2 white ellipses on left and right.\n2 Gold ellipses left black right blue stroke. 2 white ellipses on left+right.\nblack line on far left of canvas //redraw\nblack line on far left of canvas //redraw",
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
         },
         {
             "file": "src/core/structure.js",
-            "line": 72,
+            "line": 83,
             "description": "<p>By default, p5.js loops through draw() continuously, executing the code\nwithin it. However, the draw() loop may be stopped by calling noLoop().\nIn that case, the draw() loop can be resumed with loop().</p>\n",
             "itemtype": "method",
             "name": "loop",
@@ -5330,7 +5340,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 110,
+            "line": 121,
             "description": "<p>The push() function saves the current drawing style settings and\ntransformations, while pop() restores these settings. Note that these\nfunctions are always used together. They allow you to change the style\nand transformation settings and later return to what you had. When a new\nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide\nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(),\nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(),\nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(),\ntextFont(), textMode(), textSize(), textLeading().</p>\n",
             "itemtype": "method",
             "name": "push",
@@ -5343,7 +5353,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 180,
+            "line": 191,
             "description": "<p>The push() function saves the current drawing style settings and\ntransformations, while pop() restores these settings. Note that these\nfunctions are always used together. They allow you to change the style\nand transformation settings and later return to what you had. When a new\nstate is started with push(), it builds on the current style and transform\ninformation. The push() and pop() functions can be embedded to provide\nmore control. (See the second example for a demonstration.)\n<br><br>\npush() stores information related to the current transformation state\nand style settings controlled by the following functions: fill(),\nstroke(), tint(), strokeWeight(), strokeCap(), strokeJoin(),\nimageMode(), rectMode(), ellipseMode(), colorMode(), textAlign(),\ntextFont(), textMode(), textSize(), textLeading().</p>\n",
             "itemtype": "method",
             "name": "pop",
@@ -5356,7 +5366,7 @@
         },
         {
             "file": "src/core/structure.js",
-            "line": 247,
+            "line": 258,
             "description": "<p>Executes the code within draw() one time. This functions allows the\n program to update the display window only when necessary, for example\n when an event registered by mousePressed() or keyPressed() occurs.\n <br><br>\n In structuring a program, it only makes sense to call redraw() within\n events such as mousePressed(). This is because redraw() does not run\n draw() immediately (it only sets a flag that indicates an update is\n needed).\n <br><br>\n The redraw() function does not work properly when called inside draw().\n To enable/disable animations, use loop() and noLoop().\n <br><br>\n In addition you can set the number of redraws per method call. Just\n add an integer as single parameter for the number of redraws.</p>\n",
             "itemtype": "method",
             "name": "redraw",
@@ -5420,13 +5430,14 @@
             "example": [
                 "\n<div>\n<code>\n// Example in the works.\n</code>\n</div>"
             ],
+            "alt": "no image diplayed\nno image diplayed\nwhite 52x52 rect with black outline at center rotated counter 45 degrees\nno image diplayed\nno image diplayed\nno image diplayed\nwhite 52x52 rect with black outline at center rotated counter 45 degrees\n2 white rects with black outline- 1 50x50 at center. other 25x65 bottom left\nwhite irregular quadrilateral with black outline at top middle.\nwhite irregular quadrilateral with black outline at middle bottom.\nwhite 55x55 rect with black outline at center right.\n3 white 55x55 rects with black outlines at top-l, center-r and bottom-r.",
             "class": "p5",
             "module": "Transform",
             "submodule": "Transform"
         },
         {
             "file": "src/core/transform.js",
-            "line": 52,
+            "line": 67,
             "description": "<p>Replaces the current matrix with the identity matrix.</p>\n",
             "itemtype": "method",
             "name": "resetMatrix",
@@ -5443,7 +5454,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 69,
+            "line": 84,
             "description": "<p>Rotates a shape the amount specified by the angle parameter. This\nfunction accounts for angleMode, so angles can be entered in either\nRADIANS or DEGREES.\n<br><br>\nObjects are always rotated around their relative position to the\norigin and positive numbers rotate objects in a clockwise direction.\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nrotate(HALF_PI) and then rotate(HALF_PI) is the same as rotate(PI).\nAll tranformations are reset when draw() begins again.\n<br><br>\nTechnically, rotate() multiplies the current transformation matrix\nby a rotation matrix. This function can be further controlled by\nthe push() and pop().</p>\n",
             "itemtype": "method",
             "name": "rotate",
@@ -5459,7 +5470,7 @@
             "submodule": "Transform",
             "overloads": [
                 {
-                    "line": 69,
+                    "line": 84,
                     "params": [
                         {
                             "name": "angle",
@@ -5469,7 +5480,7 @@
                     ]
                 },
                 {
-                    "line": 98,
+                    "line": 113,
                     "params": [
                         {
                             "name": "rad",
@@ -5487,7 +5498,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 125,
+            "line": 140,
             "description": "<p>Rotates around X axis.</p>\n",
             "itemtype": "method",
             "name": "rotateX",
@@ -5508,7 +5519,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 151,
+            "line": 166,
             "description": "<p>Rotates around Y axis.</p>\n",
             "itemtype": "method",
             "name": "rotateY",
@@ -5529,7 +5540,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 177,
+            "line": 192,
             "description": "<p>Rotates around Z axis.  Webgl mode only.</p>\n",
             "itemtype": "method",
             "name": "rotateZ",
@@ -5550,7 +5561,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 203,
+            "line": 218,
             "description": "<p>Increases or decreases the size of a shape by expanding and contracting\nvertices. Objects always scale from their relative origin to the\ncoordinate system. Scale values are specified as decimal percentages.\nFor example, the function call scale(2.0) increases the dimension of a\nshape by 200%.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function multiply the effect. For example, calling scale(2.0)\nand then scale(1.5) is the same as scale(3.0). If scale() is called\nwithin draw(), the transformation is reset when the loop begins again.\n<br><br>\nUsing this function with the z parameter is only available in WEBGL mode.\nThis function can be further controlled with push() and pop().</p>\n",
             "itemtype": "method",
             "name": "scale",
@@ -5586,7 +5597,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 279,
+            "line": 294,
             "description": "<p>Shears a shape around the x-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode.\nObjects are always sheared around their relative position to the origin\nand positive numbers shear objects in a clockwise direction.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearX(PI/2) and then shearX(PI/2) is the same as shearX(PI).\nIf shearX() is called within the draw(), the transformation is reset when\nthe loop begins again.\n<br><br>\nTechnically, shearX() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.</p>\n",
             "itemtype": "method",
             "name": "shearX",
@@ -5610,7 +5621,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 316,
+            "line": 331,
             "description": "<p>Shears a shape around the y-axis the amount specified by the angle\nparameter. Angles should be specified in the current angleMode. Objects\nare always sheared around their relative position to the origin and\npositive numbers shear objects in a clockwise direction.\n<br><br>\nTransformations apply to everything that happens after and subsequent\ncalls to the function accumulates the effect. For example, calling\nshearY(PI/2) and then shearY(PI/2) is the same as shearY(PI). If\nshearY() is called within the draw(), the transformation is reset when\nthe loop begins again.\n<br><br>\nTechnically, shearY() multiplies the current transformation matrix by a\nrotation matrix. This function can be further controlled by the\npush() and pop() functions.</p>\n",
             "itemtype": "method",
             "name": "shearY",
@@ -5634,7 +5645,7 @@
         },
         {
             "file": "src/core/transform.js",
-            "line": 353,
+            "line": 368,
             "description": "<p>Specifies an amount to displace objects within the display window.\nThe x parameter specifies left/right translation, the y parameter\nspecifies up/down translation.\n<br><br>\nTransformations are cumulative and apply to everything that happens after\nand subsequent calls to the function accumulates the effect. For example,\ncalling translate(50, 0) and then translate(20, 0) is the same as\ntranslate(70, 0). If translate() is called within draw(), the\ntransformation is reset when the loop begins again. This function can be\nfurther controlled by using push() and pop().</p>\n",
             "itemtype": "method",
             "name": "translate",
@@ -5680,13 +5691,14 @@
             "example": [
                 "\n<div>\n<code>\ntranslate(50, 50);\nstroke(255, 0, 0);\nbeginShape();\n// Exterior part of shape, clockwise winding\nvertex(-40, -40);\nvertex(40, -40);\nvertex(40, 40);\nvertex(-40, 40);\n// Interior part of shape, counter-clockwise winding\nbeginContour();\nvertex(-20, -20);\nvertex(-20, 20);\nvertex(20, 20);\nvertex(20, -20);\nendContour();\nendShape(CLOSE);\n</code>\n</div>"
             ],
+            "alt": "white rect and smaller grey rect with red outlines in center of canvas.\nwhite square-shape with black outline in middle-right of canvas. \n4 black points in a square shape in middle-right of canvas.\n2 horizontal black lines. In the top-right and bottom-right of canvas.\n3 line shape with horizontal on top, vertical in middle and horizontal bottom.\nsquare line shape in middle-right of canvas.\n2 white triangle shapes mid-right canvas. left one pointing up and right down.\n5 horizontal interlocking and alternating white triangles in mid-right canvas.\n4 interlocking white triangles in 45 degree rotated square-shape.\n2 white rectangle shapes in mid-right canvas. Both 20x55.\n3 side-by-side white rectangles center rect is smaller in mid-right canvas.\nThick white l-shape with black outline mid-top-left of canvas.\ncrescent-shaped line in middle of canvas. Points facing left.\nwhite crescent shape in middle of canvas. Points facing left.\nUpside-down u-shape line, mid canvas. left point extends beyond canvas view.\nwhite rect and smaller grey rect with red outlines in center of canvas.\nTriangle line shape with smallest interior angle on bottom and upside-down L.\narched-shaped black line with 4 pixel thick stroke weight.\nbackwards s-shaped black line with 4 pixel thick stroke weight.\n4 black points in a square shape in middle-right of canvas.",
             "class": "p5",
             "module": "Shape",
             "submodule": "Vertex"
         },
         {
             "file": "src/core/vertex.js",
-            "line": 66,
+            "line": 88,
             "description": "<p>Using the beginShape() and endShape() functions allow creating more\ncomplex forms. beginShape() begins recording vertices for a shape and\nendShape() stops recording. The value of the kind parameter tells it which\ntypes of shapes to create from the provided vertices. With no mode\nspecified, the shape can be any irregular polygon.\n<br><br>\nThe parameters available for beginShape() are POINTS, LINES, TRIANGLES,\nTRIANGLE_FAN, TRIANGLE_STRIP, QUADS, and QUAD_STRIP. After calling the\nbeginShape() function, a series of vertex() commands must follow. To stop\ndrawing the shape, call endShape(). Each shape will be outlined with the\ncurrent stroke color and filled with the fill color.\n<br><br>\nTransformations such as translate(), rotate(), and scale() do not work\nwithin beginShape(). It is also not possible to use other shapes, such as\nellipse() or rect() within beginShape().</p>\n",
             "itemtype": "method",
             "name": "beginShape",
@@ -5710,7 +5722,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 250,
+            "line": 272,
             "description": "<p>Specifies vertex coordinates for Bezier curves. Each call to\nbezierVertex() defines the position of two control points and\none anchor point of a Bezier curve, adding a new segment to a\nline or shape.\n<br><br>\nThe first time bezierVertex() is used within a\nbeginShape() call, it must be prefaced with a call to vertex()\nto set the first anchor point. This function must be used between\nbeginShape() and endShape() and only when there is no MODE\nparameter specified to beginShape().</p>\n",
             "itemtype": "method",
             "name": "bezierVertex",
@@ -5759,7 +5771,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 310,
+            "line": 332,
             "description": "<p>Specifies vertex coordinates for curves. This function may only\nbe used between beginShape() and endShape() and only when there\nis no MODE parameter specified to beginShape().\n<br><br>\nThe first and last points in a series of curveVertex() lines will be used to\nguide the beginning and end of a the curve. A minimum of four\npoints is required to draw a tiny curve between the second and\nthird points. Adding a fifth point with curveVertex() will draw\nthe curve between the second, third, and fourth points. The\ncurveVertex() function is an implementation of Catmull-Rom\nsplines.</p>\n",
             "itemtype": "method",
             "name": "curveVertex",
@@ -5788,7 +5800,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 348,
+            "line": 370,
             "description": "<p>Use the beginContour() and endContour() functions to create negative\nshapes within shapes such as the center of the letter &#39;O&#39;. beginContour()\nbegins recording vertices for the shape and endContour() stops recording.\nThe vertices that define a negative shape must &quot;wind&quot; in the opposite\ndirection from the exterior shape. First draw vertices for the exterior\nclockwise order, then for internal shapes, draw vertices\nshape in counter-clockwise.\n<br><br>\nThese functions can only be used within a beginShape()/endShape() pair and\ntransformations such as translate(), rotate(), and scale() do not work\nwithin a beginContour()/endContour() pair. It is also not possible to use\nother shapes, such as ellipse() or rect() within.</p>\n",
             "itemtype": "method",
             "name": "endContour",
@@ -5805,7 +5817,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 404,
+            "line": 426,
             "description": "<p>The endShape() function is the companion to beginShape() and may only be\ncalled after beginShape(). When endshape() is called, all of image data\ndefined since the previous call to beginShape() is written into the image\nbuffer. The constant CLOSE as the value for the MODE parameter to close\nthe shape (to connect the beginning and the end).</p>\n",
             "itemtype": "method",
             "name": "endShape",
@@ -5829,7 +5841,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 468,
+            "line": 490,
             "description": "<p>Specifies vertex coordinates for quadratic Bezier curves. Each call to\nquadraticVertex() defines the position of one control points and one\nanchor point of a Bezier curve, adding a new segment to a line or shape.\nThe first time quadraticVertex() is used within a beginShape() call, it\nmust be prefaced with a call to vertex() to set the first anchor point.\nThis function must be used between beginShape() and endShape() and only\nwhen there is no MODE parameter specified to beginShape().</p>\n",
             "itemtype": "method",
             "name": "quadraticVertex",
@@ -5868,7 +5880,7 @@
         },
         {
             "file": "src/core/vertex.js",
-            "line": 540,
+            "line": 562,
             "description": "<p>All shapes are constructed by connecting a series of vertices. vertex()\nis used to specify the vertex coordinates for points, lines, triangles,\nquads, and polygons. It is used exclusively within the beginShape() and\nendShape() functions.</p>\n",
             "itemtype": "method",
             "name": "vertex",
@@ -5984,39 +5996,42 @@
             ],
             "itemtype": "property",
             "name": "rotationX",
+            "alt": "red horizontal line right, green vertical line bottom. black background.\nred horizontal line right, green vertical line bottom. black background.\nred horizontal line right, green vertical line bottom. black background.",
             "class": "p5",
             "module": "Events",
             "submodule": "Acceleration"
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 112,
+            "line": 117,
             "description": "<p>The system variable rotationY always contains the rotation of the\ndevice along the y axis. Value is represented as 0 to +/-90 degrees.\n<br><br>\nNote: The order the rotations are called is important, ie. if used\ntogether, it must be called in the order Z-X-Y or there might be\nunexpected behaviour.</p>\n",
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  //rotateZ(radians(rotationZ));\n  //rotateX(radians(rotationX));\n  rotateY(radians(rotationY));\n  box(200, 200, 200);\n}\n</code>\n</div>"
             ],
             "itemtype": "property",
             "name": "rotationY",
+            "alt": "red horizontal line right, green vertical line bottom. black background.",
             "class": "p5",
             "module": "Events",
             "submodule": "Acceleration"
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 141,
+            "line": 149,
             "description": "<p>The system variable rotationZ always contains the rotation of the\ndevice along the z axis. Value is represented as 0 to 359 degrees.\n<br><br>\nUnlike rotationX and rotationY, this variable is available for devices\nwith a built-in compass only.\n<br><br>\nNote: The order the rotations are called is important, ie. if used\ntogether, it must be called in the order Z-X-Y or there might be\nunexpected behaviour.</p>\n",
             "example": [
                 "\n<div>\n<code>\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  rotateZ(radians(rotationZ));\n  //rotateX(radians(rotationX));\n  //rotateY(radians(rotationY));\n  box(200, 200, 200);\n}\n</code>\n</div>"
             ],
             "itemtype": "property",
             "name": "rotationZ",
+            "alt": "red horizontal line right, green vertical line bottom. black background.",
             "class": "p5",
             "module": "Events",
             "submodule": "Acceleration"
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 173,
+            "line": 184,
             "description": "<p>The system variable pRotationX always contains the rotation of the\ndevice along the x axis in the frame previous to the current frame. Value\nis represented as 0 to +/-180 degrees.\n<br><br>\npRotationX can also be used with rotationX to determine the rotate\ndirection of the device along the X-axis.</p>\n",
             "example": [
                 "\n<div class='norender'>\n<code>\n// A simple if statement looking at whether\n// rotationX - pRotationX < 0 is true or not will be\n// sufficient for determining the rotate direction\n// in most cases.\n\n// Some extra logic is needed to account for cases where\n// the angles wrap around.\nvar rotateDirection = 'clockwise';\n\n// Simple range conversion to make things simpler.\n// This is not absolutely neccessary but the logic\n// will be different in that case.\n\nvar rX = rotationX + 180;\nvar pRX = pRotationX + 180;\n\nif ((rX - pRX > 0 && rX - pRX < 270)|| rX - pRX < -270){\n  rotateDirection = 'clockwise';\n} else if (rX - pRX < 0 || rX - pRX > 270){\n  rotateDirection = 'counter-clockwise';\n}\n</code>\n</div>"
@@ -6029,7 +6044,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 211,
+            "line": 222,
             "description": "<p>The system variable pRotationY always contains the rotation of the\ndevice along the y axis in the frame previous to the current frame. Value\nis represented as 0 to +/-90 degrees.\n<br><br>\npRotationY can also be used with rotationY to determine the rotate\ndirection of the device along the Y-axis.</p>\n",
             "example": [
                 "\n<div class='norender'>\n<code>\n// A simple if statement looking at whether\n// rotationY - pRotationY < 0 is true or not will be\n// sufficient for determining the rotate direction\n// in most cases.\n\n// Some extra logic is needed to account for cases where\n// the angles wrap around.\nvar rotateDirection = 'clockwise';\n\n// Simple range conversion to make things simpler.\n// This is not absolutely neccessary but the logic\n// will be different in that case.\n\nvar rY = rotationY + 180;\nvar pRY = pRotationY + 180;\n\nif ((rY - pRY > 0 && rY - pRY < 270)|| rY - pRY < -270){\n  rotateDirection = 'clockwise';\n} else if (rY - pRY < 0 || rY - pRY > 270){\n  rotateDirection = 'counter-clockwise';\n}\n</code>\n</div>"
@@ -6042,7 +6057,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 249,
+            "line": 260,
             "description": "<p>The system variable pRotationZ always contains the rotation of the\ndevice along the z axis in the frame previous to the current frame. Value\nis represented as 0 to 359 degrees.\n<br><br>\npRotationZ can also be used with rotationZ to determine the rotate\ndirection of the device along the Z-axis.</p>\n",
             "example": [
                 "\n<div class='norender'>\n<code>\n// A simple if statement looking at whether\n// rotationZ - pRotationZ < 0 is true or not will be\n// sufficient for determining the rotate direction\n// in most cases.\n\n// Some extra logic is needed to account for cases where\n// the angles wrap around.\nvar rotateDirection = 'clockwise';\n\nif ((rotationZ - pRotationZ > 0 &&\n  rotationZ - pRotationZ < 270)||\n  rotationZ - pRotationZ < -270){\n\n  rotateDirection = 'clockwise';\n\n} else if (rotationZ - pRotationZ < 0 ||\n  rotationZ - pRotationZ > 270){\n\n  rotateDirection = 'counter-clockwise';\n\n}\n</code>\n</div>"
@@ -6055,7 +6070,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 310,
+            "line": 321,
             "description": "<p>The setMoveThreshold() function is used to set the movement threshold for\nthe deviceMoved() function. The default threshold is set to 0.5.</p>\n",
             "itemtype": "method",
             "name": "setMoveThreshold",
@@ -6072,7 +6087,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 323,
+            "line": 334,
             "description": "<p>The setShakeThreshold() function is used to set the movement threshold for\nthe deviceShaken() function. The default threshold is set to 30.</p>\n",
             "itemtype": "method",
             "name": "setShakeThreshold",
@@ -6089,7 +6104,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 336,
+            "line": 347,
             "description": "<p>The deviceMoved() function is called when the device is moved by more than\nthe threshold value along X, Y or Z axis. The default threshold is set to\n0.5.</p>\n",
             "itemtype": "method",
             "name": "deviceMoved",
@@ -6102,7 +6117,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 363,
+            "line": 374,
             "description": "<p>The deviceTurned() function is called when the device rotates by\nmore than 90 degrees continuously.\n<br><br>\nThe axis that triggers the deviceTurned() method is stored in the turnAxis\nvariable. The deviceTurned() method can be locked to trigger on any axis:\nX, Y or Z by comparing the turnAxis variable to &#39;X&#39;, &#39;Y&#39; or &#39;Z&#39;.</p>\n",
             "itemtype": "method",
             "name": "deviceTurned",
@@ -6115,7 +6130,7 @@
         },
         {
             "file": "src/events/acceleration.js",
-            "line": 417,
+            "line": 428,
             "description": "<p>The deviceShaken() function is called when the device total acceleration\nchanges of accelerationX and accelerationY values is more than\nthe threshold value. The default threshold is set to 30.</p>\n",
             "itemtype": "method",
             "name": "deviceShaken",
@@ -12841,13 +12856,14 @@
             "example": [
                 "\n<div>\n<code>\n//draw a spinning teapot\nvar teapot;\n\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n\n  teapot = loadModel('assets/teapot.obj');\n}\n\nfunction draw(){\n  background(200);\n  rotateX(frameCount * 0.01);\n  rotateY(frameCount * 0.01);\n  model(teapot);\n}\n</code>\n</div>"
             ],
+            "alt": "Vertically rotating 3-d teapot with red, green and blue gradient.",
             "class": "p5",
             "module": "Shape",
             "submodule": "3D Models"
         },
         {
             "file": "src/webgl/loading.js",
-            "line": 87,
+            "line": 91,
             "description": "<p>Parse OBJ lines into model. For reference, this is what a simple model of a\nsquare might look like:</p>\n<p>v -0.5 -0.5 0.5\nv -0.5 -0.5 -0.5\nv -0.5 0.5 -0.5\nv -0.5 0.5 0.5</p>\n<p>f 4 3 2 1</p>\n",
             "class": "p5",
             "module": "Shape",
@@ -12855,7 +12871,7 @@
         },
         {
             "file": "src/webgl/loading.js",
-            "line": 187,
+            "line": 191,
             "description": "<p>Render a 3d model to the screen.</p>\n",
             "itemtype": "method",
             "name": "model",
@@ -13957,13 +13973,14 @@
             "example": [
                 "\n<div>\n<code>\n//draw a plane with width 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  plane(200, 200);\n}\n</code>\n</div>"
             ],
+            "alt": "Nothing displayed on canvas\nRotating interior view of a box with sides that change color.\n3d red and green gradient. \nRotating interior view of a cylinder with sides that change color.\nRotating view of a cylinder with sides that change color.\n3d red and green gradient. \nrotating view of a multi-colored cylinder with concave sides.",
             "class": "p5",
             "module": "Shape",
             "submodule": "3D Primitives"
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 77,
+            "line": 86,
             "description": "<p>Draw a box with given width, height and depth</p>\n",
             "itemtype": "method",
             "name": "box",
@@ -14009,7 +14026,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 162,
+            "line": 171,
             "description": "<p>Draw a sphere with given radius</p>\n",
             "itemtype": "method",
             "name": "sphere",
@@ -14045,7 +14062,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 230,
+            "line": 239,
             "access": "private",
             "tagname": "helper function for creating both cones and cyllinders",
             "class": "p5",
@@ -14054,7 +14071,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 308,
+            "line": 317,
             "description": "<p>Draw a cylinder with given radius and height</p>\n",
             "itemtype": "method",
             "name": "cylinder",
@@ -14095,7 +14112,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 367,
+            "line": 376,
             "description": "<p>Draw a cone with given radius and height</p>\n",
             "itemtype": "method",
             "name": "cone",
@@ -14136,7 +14153,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 427,
+            "line": 436,
             "description": "<p>Draw an ellipsoid with given raduis</p>\n",
             "itemtype": "method",
             "name": "ellipsoid",
@@ -14182,7 +14199,7 @@
         },
         {
             "file": "src/webgl/primitives.js",
-            "line": 501,
+            "line": 510,
             "description": "<p>Draw a torus with given radius and tube radius</p>\n",
             "itemtype": "method",
             "name": "torus",
@@ -19227,15 +19244,79 @@
     "warnings": [
         {
             "message": "unknown tag: alt",
-            "line": " src/color/creating_reading.js:95"
+            "line": " src/color/creating_reading.js:15"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/color/creating_reading.js:61"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/color/creating_reading.js:92"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/color/creating_reading.js:123"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/2d_primitives.js:16"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/attributes.js:14"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/constants.js:25"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/curves.js:50"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/environment.js:22"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:431"
+            "line": " src/core/environment.js:453"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:472"
+            "line": " src/core/environment.js:494"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/p5.Element.js:37"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/rendering.js:14"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/structure.js:15"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/transform.js:15"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/core/vertex.js:22"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/events/acceleration.js:83"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/events/acceleration.js:117"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/events/acceleration.js:149"
         },
         {
             "message": "param name missing: {Invert}",
@@ -19246,8 +19327,16 @@
             "line": " src/image/loading_displaying.js:104"
         },
         {
+            "message": "unknown tag: alt",
+            "line": " src/webgl/loading.js:14"
+        },
+        {
             "message": "param name missing: {p5.Vector | Array }\n                     vector to scale by",
             "line": " src/webgl/p5.Matrix.js:439"
+        },
+        {
+            "message": "unknown tag: alt",
+            "line": " src/webgl/primitives.js:13"
         },
         {
             "message": "replacing incorrect tag: params with param",
@@ -19331,19 +19420,19 @@
         },
         {
             "message": "Missing item type\nSets the resolution at which Beziers display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:106"
+            "line": " src/core/curves.js:116"
         },
         {
             "message": "Missing item type\nSets the resolution at which curves display.\n\nThe default value is 20.",
-            "line": " src/core/curves.js:344"
+            "line": " src/core/curves.js:354"
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/core/environment.js:229"
+            "line": " src/core/environment.js:251"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/core/environment.js:238"
+            "line": " src/core/environment.js:260"
         },
         {
             "message": "Missing item type",
@@ -19367,7 +19456,7 @@
         },
         {
             "message": "Missing item type\nHelper fxn for sharing pixel methods",
-            "line": " src/core/p5.Element.js:811"
+            "line": " src/core/p5.Element.js:832"
         },
         {
             "message": "Missing item type\nResize our canvas element.",
@@ -19583,7 +19672,7 @@
         },
         {
             "message": "Missing item type\nParse OBJ lines into model. For reference, this is what a simple model of a\nsquare might look like:\n\nv -0.5 -0.5 0.5\nv -0.5 -0.5 -0.5\nv -0.5 0.5 -0.5\nv -0.5 0.5 0.5\n\nf 4 3 2 1",
-            "line": " src/webgl/loading.js:87"
+            "line": " src/webgl/loading.js:91"
         },
         {
             "message": "Missing item type\nTexture Util functions",
@@ -19783,7 +19872,7 @@
         },
         {
             "message": "Missing item type",
-            "line": " src/webgl/primitives.js:230"
+            "line": " src/webgl/primitives.js:239"
         },
         {
             "message": "Missing item type\n_globalInit\n\nTODO: ???\nif sketch is on window\nassume \"global\" mode\nand instantiate p5 automatically\notherwise do nothing",
