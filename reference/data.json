@@ -1427,7 +1427,7 @@
             "namespaces": {},
             "module": "p5.dom",
             "file": "lib/addons/p5.dom.js",
-            "line": 2090,
+            "line": 2094,
             "description": "<p><p>The web is much more than just canvas and p5.dom makes it easy to interact\nwith other HTML5 objects, including text, hyperlink, image, input, video,\naudio, and webcam.</p></p>\n<p><p>There is a set of creation methods, DOM manipulation methods, and\nan extended p5.Element that supports a range of HTML elements. See the\n<a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">\nbeyond the canvas tutorial</a> for a full overview of how this addon works.</p>\n<p><p>Methods and properties shown in black are part of the p5.js core, items in\nblue are part of the p5.dom library. You will need to include an extra file\nin order to access the blue functions. See the\n<a href=\"http://p5js.org/libraries/#using-a-library\">using a library</a>\nsection for information on how to include this library. p5.dom comes with\n<a href=\"http://p5js.org/download\">p5 complete</a> or you can download the single file\n<a href=\"https://raw.githubusercontent.com/lmccart/p5.js/master/lib/addons/p5.dom.js\">\nhere</a>.</p></p>\n<p><p>See <a href=\"https://github.com/processing/p5.js/wiki/Beyond-the-canvas\">tutorial: beyond the canvas</a>\nfor more info on how to use this libary.</a></p>\n",
             "tag": "main",
             "itemtype": "main"
@@ -1842,7 +1842,7 @@
             "submodule": "p5.dom",
             "namespace": "",
             "file": "lib/addons/p5.dom.js",
-            "line": 2090,
+            "line": 2094,
             "description": "<p>Base class for a file\nUsing this for createFileInput</p>\n",
             "is_constructor": 1,
             "params": [
@@ -15620,7 +15620,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1835,
+            "line": 1839,
             "description": "<p>Schedule an event to be called when the audio or video\nelement reaches the end. If the element is looping,\nthis will not be called. The element is passed in\nas the argument to the onended callback.</p>\n",
             "itemtype": "method",
             "name": "onended",
@@ -15644,14 +15644,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1867,
+            "line": 1871,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1869,
+            "line": 1873,
             "description": "<p>Send the audio output of this element to a specified audioNode or\np5.sound object. If no element is provided, connects to p5&#39;s master\noutput. That connection is established when this method is first called.\nAll connections are removed by the .disconnect() method.</p>\n<p>This method is meant to be used with the p5.sound.js addon library.</p>\n",
             "itemtype": "method",
             "name": "connect",
@@ -15668,7 +15668,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1921,
+            "line": 1925,
             "description": "<p>Disconnect all Web Audio routing, including to master output.\nThis is useful if you want to re-route the output through\naudio effects, for example.</p>\n",
             "itemtype": "method",
             "name": "disconnect",
@@ -15678,14 +15678,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1937,
+            "line": 1941,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1939,
+            "line": 1943,
             "description": "<p>Show the default MediaElement controls, as determined by the web browser.</p>\n",
             "itemtype": "method",
             "name": "showControls",
@@ -15695,7 +15695,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1950,
+            "line": 1954,
             "description": "<p>Hide the default mediaElement controls.</p>\n",
             "itemtype": "method",
             "name": "hideControls",
@@ -15705,14 +15705,14 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1959,
+            "line": 1963,
             "class": "p5.MediaElement",
             "module": "p5.dom",
             "submodule": "p5.dom"
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 1961,
+            "line": 1965,
             "description": "<p>Schedule events to trigger every time a MediaElement\n(audio/video) reaches a playback cue point.</p>\n<p>Accepts a callback function, a time (in seconds) at which to trigger\nthe callback, and an optional parameter for the callback.</p>\n<p>Time will be passed as the first parameter to the callback function,\nand param will be the second parameter.</p>\n",
             "itemtype": "method",
             "name": "addCue",
@@ -15747,7 +15747,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2023,
+            "line": 2027,
             "description": "<p>Remove a callback based on its ID. The ID is returned by the\naddCue method.</p>\n",
             "itemtype": "method",
             "name": "removeCue",
@@ -15764,7 +15764,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2043,
+            "line": 2047,
             "description": "<p>Remove all of the callbacks that had originally been scheduled\nvia the addCue method.</p>\n",
             "itemtype": "method",
             "name": "clearCues",
@@ -15774,7 +15774,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2100,
+            "line": 2104,
             "description": "<p>Underlying File object. All normal File methods can be called on this.</p>\n",
             "itemtype": "property",
             "name": "file",
@@ -15784,7 +15784,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2112,
+            "line": 2116,
             "description": "<p>File type (image, text, etc.)</p>\n",
             "itemtype": "property",
             "name": "type",
@@ -15794,7 +15794,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2118,
+            "line": 2122,
             "description": "<p>File subtype (usually the file extension jpg, png, xml, etc.)</p>\n",
             "itemtype": "property",
             "name": "subtype",
@@ -15804,7 +15804,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2124,
+            "line": 2128,
             "description": "<p>File name</p>\n",
             "itemtype": "property",
             "name": "name",
@@ -15814,7 +15814,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2130,
+            "line": 2134,
             "description": "<p>File size</p>\n",
             "itemtype": "property",
             "name": "size",
@@ -15824,7 +15824,7 @@
         },
         {
             "file": "lib/addons/p5.dom.js",
-            "line": 2137,
+            "line": 2141,
             "description": "<p>URL string containing image data.</p>\n",
             "itemtype": "property",
             "name": "data",
@@ -21137,15 +21137,15 @@
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1867"
+            "line": " lib/addons/p5.dom.js:1871"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1937"
+            "line": " lib/addons/p5.dom.js:1941"
         },
         {
             "message": "Missing item type",
-            "line": " lib/addons/p5.dom.js:1959"
+            "line": " lib/addons/p5.dom.js:1963"
         },
         {
             "message": "Missing item type\np5.sound developed by Jason Sigal for the Processing Foundation, Google Summer of Code 2014. The MIT License (MIT).\n\nhttp://github.com/therewasaguy/p5.sound\n\nSome of the many audio libraries & resources that inspire p5.sound:\n - TONE.js (c) Yotam Mann, 2014. Licensed under The MIT License (MIT). https://github.com/TONEnoTONE/Tone.js\n - buzz.js (c) Jay Salvat, 2013. Licensed under The MIT License (MIT). http://buzz.jaysalvat.com/\n - Boris Smus Web Audio API book, 2013. Licensed under the Apache License http://www.apache.org/licenses/LICENSE-2.0\n - wavesurfer.js https://github.com/katspaugh/wavesurfer.js\n - Web Audio Components by Jordan Santell https://github.com/web-audio-components\n - Wilm Thoben's Sound library for Processing https://github.com/processing/processing/tree/master/java/libraries/sound\n \n Web Audio API: http://w3.org/TR/webaudio/",
