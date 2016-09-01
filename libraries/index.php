@@ -160,6 +160,17 @@
       </div>
 
 
+      <div class="right-column">
+        <a class="nounderline" href="https://github.com/generative-light/p5.scribble.js">
+        <div class="label">
+        <img src="../img/libraries/p5.scribble.png"></a>
+        <a class="nounderline" href="https://github.com/generative-light/p5.scribble.js"><h4>p5.scribble</h4></a>
+        </div>
+        <p>Draw 2D primitives in a sketchy look.
+        Created by Janneck Wullschleger, based on a port of the <a href='https://github.com/gicentre/handy'>handy</a>library for Processing.</p>
+      </div>
+
+
       <div class="spacer"></div>
 
       <a name="using-a-library" class="anchor"><h3>Using a library</h3></a>
