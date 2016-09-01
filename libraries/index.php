@@ -167,7 +167,7 @@
         <a class="nounderline" href="https://github.com/generative-light/p5.scribble.js"><h4>p5.scribble</h4></a>
         </div>
         <p>Draw 2D primitives in a sketchy look.
-        Created by Janneck Wullschleger, based on a port of the <a href='https://github.com/gicentre/handy'>handy</a>library for Processing.</p>
+        Created by Janneck Wullschleger, based on a port of the <a href='https://github.com/gicentre/handy'>handy</a> library for Processing.</p>
       </div>
 
 
