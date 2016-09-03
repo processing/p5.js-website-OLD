@@ -447,7 +447,7 @@ define('text',['module'], function (module) {
 });
 
 
-define('text!tpl/search.html',[],function () { return '<input type="text" class="<%=className%>" value="" placeholder="<%=placeholder%>">';});
+define('text!tpl/search.html',[],function () { return '<input type="text" class="<%=className%>" value="" placeholder="<%=placeholder%>" title="search reference" aria-label="search text field"  aria-haspopup="false">';});
 
 
 define('text!tpl/search_suggestion.html',[],function () { return '<p id="index-<%=idx%>" class="search-suggestion">\n\n  <strong><%=name%></strong>\n\n  <span class="small">\n    <% if (final) { %>\n    constant\n    <% } else if (itemtype) { %>\n    <%=itemtype%> \n    <% } %>\n\n    <% if (className) { %>\n    in <strong><%=className%></strong>\n    <% } %>\n\n    <% if (is_constructor) { %>\n    <strong><span class="glyphicon glyphicon-star"></span> constructor</strong>\n    <% } %>\n  </span>\n\n</p>';});

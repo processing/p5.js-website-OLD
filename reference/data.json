@@ -2688,7 +2688,7 @@
             "example": [
                 "\n<div>\n<code>\ncolorMode(RGB);\nstroke(255);\nbackground(51);\nfrom = color(218, 165, 32);\nto = color(72, 61, 139);\ncolorMode(RGB);  // Try changing to HSB.\ninterA = lerpColor(from, to, .33);\ninterB = lerpColor(from, to, .66);\nfill(from);\nrect(10, 20, 20, 60);\nfill(interA);\nrect(30, 20, 20, 60);\nfill(interB);\nrect(50, 20, 20, 60);\nfill(to);\nrect(70, 20, 20, 60);\n</code>\n</div>"
             ],
-            "alt": "4 rects one tan, brown, brownish purple and purple. Each with white outlines & 20x60.",
+            "alt": "4 rects one tan, brown, brownish purple, purple, with white outlines & 20x60",
             "class": "p5",
             "module": "Color",
             "submodule": "Creating & Reading"
@@ -2737,7 +2737,7 @@
         },
         {
             "file": "src/color/creating_reading.js",
-            "line": 541,
+            "line": 540,
             "description": "<p>Extracts the saturation value from a color or pixel array.</p>\n<p>Saturation is scaled differently in HSB and HSL. This function will return\nthe HSB saturation when supplied with an HSB color object (or when supplied\nwith a pixel array while the color mode is HSB), but will default to the\nHSL saturation otherwise.</p>\n",
             "itemtype": "method",
             "name": "saturation",
@@ -3026,19 +3026,19 @@
             "example": [
                 "\n<div>\n<code>\n// Grayscale integer value\nfill(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nfill(255, 204, 0);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nfill(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nfill('red');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nfill('#fae');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nfill('#222222');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nfill('rgb(0,255,0)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nfill('rgba(0,255,0, 0.25)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nfill('rgb(100%,0%,10%)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nfill('rgba(100%,0%,100%,0.5)');\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nfill(color(0, 0, 255));\nrect(20, 20, 60, 60);\n</code>\n</div>"
             ],
-            "alt": "60x60 dark charcoal grey rect with black outline in center of canvas. \n60x60 yellow rect with black outline in center of canvas.\n60x60 royal blue rect with black outline in center of canvas. \n60x60 red rect with black outline in center of canvas. \n60x60 pink rect with black outline in center of canvas. \n60x60 black rect with black outline in center of canvas. \n60x60 light green rect with black outline in center of canvas. \n60x60 soft green rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.  \n60x60 dark fushcia rect with black outline in center of canvas.\n60x60 blue rect with black outline in center of canvas.",
+            "alt": "60x60 dark charcoal grey rect with black outline in center of canvas.\n60x60 yellow rect with black outline in center of canvas.\n60x60 royal blue rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.\n60x60 pink rect with black outline in center of canvas.\n60x60 black rect with black outline in center of canvas.\n60x60 light green rect with black outline in center of canvas.\n60x60 soft green rect with black outline in center of canvas.\n60x60 red rect with black outline in center of canvas.\n60x60 dark fushcia rect with black outline in center of canvas.\n60x60 blue rect with black outline in center of canvas.",
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
         },
         {
             "file": "src/color/setting.js",
-            "line": 444,
+            "line": 442,
             "description": "<p>Disables filling geometry. If both noStroke() and noFill() are called,\nnothing will be drawn to the screen.</p>\n",
             "itemtype": "method",
             "name": "noFill",
             "example": [
-                "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(20, 20, 60, 60);\n</code>\n</div>  "
+                "\n<div>\n<code>\nrect(15, 10, 55, 55);\nnoFill();\nrect(20, 20, 60, 60);\n</code>\n</div>"
             ],
             "alt": "white rect top middle and noFill rect center. Both 60x60 with black outlines.",
             "class": "p5",
@@ -3047,7 +3047,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 467,
+            "line": 463,
             "description": "<p>Disables drawing the stroke (outline). If both noStroke() and noFill()\nare called, nothing will be drawn to the screen.</p>\n",
             "itemtype": "method",
             "name": "noStroke",
@@ -3061,7 +3061,7 @@
         },
         {
             "file": "src/color/setting.js",
-            "line": 491,
+            "line": 487,
             "description": "<p>Sets the color used to draw lines and borders around shapes. This color\nis either specified in terms of the RGB or HSB color depending on the\ncurrent colorMode() (the default color space is RGB, with each value in\nthe range from 0 to 255).\n<br><br>\nIf a single string argument is provided, RGB, RGBA and Hex CSS color\nstrings and all named color strings are supported. A p5 Color object\ncan also be provided to set the stroke color.</p>\n",
             "itemtype": "method",
             "name": "stroke",
@@ -3091,9 +3091,9 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\n// Grayscale integer value\nstrokeWeight(4);\nstroke(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nstroke(255, 204, 0);\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nstrokeWeight(4);\nstroke(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nstroke('red');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nstroke('#fae');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nstroke('#222222');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nstroke('rgb(0,255,0)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nstroke('rgba(0,255,0,0.25)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nstroke('rgb(100%,0%,10%)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nstroke('rgba(100%,0%,100%,0.5)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nstroke(color(0, 0, 255));\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div> "
+                "\n<div>\n<code>\n// Grayscale integer value\nstrokeWeight(4);\nstroke(51);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// R, G & B integer values\nstroke(255, 204, 0);\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// H, S & B integer values\ncolorMode(HSB);\nstrokeWeight(4);\nstroke(255, 204, 100);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// Named SVG/CSS color string\nstroke('red');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// three-digit hexadecimal RGB notation\nstroke('#fae');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// six-digit hexadecimal RGB notation\nstroke('#222222');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGB notation\nstroke('rgb(0,255,0)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// integer RGBA notation\nstroke('rgba(0,255,0,0.25)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGB notation\nstroke('rgb(100%,0%,10%)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// percentage RGBA notation\nstroke('rgba(100%,0%,100%,0.5)');\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>\n\n<div>\n<code>\n// p5 Color object\nstroke(color(0, 0, 255));\nstrokeWeight(4);\nrect(20, 20, 60, 60);\n</code>\n</div>"
             ],
-            "alt": "60x60 white rect at center. Dark charcoal grey outline.  \n60x60 white rect at center. Yellow outline.  \n60x60 white rect at center. Royal blue outline.  \n60x60 white rect at center. Red outline.  \n60x60 white rect at center. Pink outline.  \n60x60 white rect at center. Black outline.  \n60x60 white rect at center. Bright green outline.  \n60x60 white rect at center. Soft green outline.  \n60x60 white rect at center. Red outline.  \n60x60 white rect at center. Dark fushcia outline.  \n60x60 white rect at center. Blue outline.",
+            "alt": "60x60 white rect at center. Dark charcoal grey outline.\n60x60 white rect at center. Yellow outline.\n60x60 white rect at center. Royal blue outline.\n60x60 white rect at center. Red outline.\n60x60 white rect at center. Pink outline.\n60x60 white rect at center. Black outline.\n60x60 white rect at center. Bright green outline.\n60x60 white rect at center. Soft green outline.\n60x60 white rect at center. Red outline.\n60x60 white rect at center. Dark fushcia outline.\n60x60 white rect at center. Blue outline.",
             "class": "p5",
             "module": "Color",
             "submodule": "Setting"
@@ -3419,7 +3419,7 @@
             "example": [
                 "\n<div>\n<code>\n// Draw a rectangle at location (30, 20) with a width and height of 55.\nrect(30, 20, 55, 55);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners, each having a radius of 20.\nrect(30, 20, 55, 55, 20);\n</code>\n</div>\n\n<div>\n<code>\n// Draw a rectangle with rounded corners having the following radii:\n// top-left = 20, top-right = 15, bottom-right = 10, bottom-left = 5.\nrect(30, 20, 55, 55, 20, 15, 10, 5);\n</code>\n</div>"
             ],
-            "alt": "55x55 white rect with black outline in mid-right of canvas. \n55x55 white rect with black outline and rounded edges in mid-right of canvas.\n55x55 white rect with black outline and rounded edges of different radii in mid-right of canvas.",
+            "alt": "55x55 white rect with black outline in mid-right of canvas.\n55x55 white rect with black outline and rounded edges in mid-right of canvas.\n55x55 white rect with black outline and rounded edges of different radii.",
             "class": "p5",
             "module": "Shape",
             "submodule": "2D Primitives",
@@ -3474,7 +3474,7 @@
                     ]
                 },
                 {
-                    "line": 441,
+                    "line": 440,
                     "params": [
                         {
                             "name": "x",
@@ -3514,7 +3514,7 @@
         },
         {
             "file": "src/core/2d_primitives.js",
-            "line": 478,
+            "line": 472,
             "description": "<p>A triangle is a plane created by connecting three points. The first two\narguments specify the first point, the middle two arguments specify the\nsecond point, and the last two arguments specify the third point.</p>\n",
             "itemtype": "method",
             "name": "triangle",
@@ -3600,7 +3600,7 @@
             "example": [
                 "\n<div>\n<code>\nbackground(0);\nnoStroke();\nsmooth();\nellipse(30, 48, 36, 36);\nnoSmooth();\nellipse(70, 48, 36, 36);\n</code>\n</div>"
             ],
-            "alt": "2 pixelated 36x36 white ellipses to the left and right of center on black background.",
+            "alt": "2 pixelated 36x36 white ellipses to left & right of center, black background",
             "class": "p5",
             "module": "Shape",
             "submodule": "Attributes"
@@ -3625,7 +3625,7 @@
             "example": [
                 "\n<div>\n<code>\nrectMode(CORNER);  // Default rectMode is CORNER\nfill(255);  // Set fill to white\nrect(25, 25, 50, 50);  // Draw white rect using CORNER mode\n\nrectMode(CORNERS);  // Set rectMode to CORNERS\nfill(100);  // Set fill to gray\nrect(25, 25, 50, 50);  // Draw gray rect using CORNERS mode\n</code>\n</div>\n\n<div>\n<code>\nrectMode(RADIUS);  // Set rectMode to RADIUS\nfill(255);  // Set fill to white\nrect(50, 50, 30, 30);  // Draw white rect using RADIUS mode\n\nrectMode(CENTER);  // Set rectMode to CENTER\nfill(100);  // Set fill to gray\nrect(50, 50, 30, 30);  // Draw gray rect using CENTER mode\n</code>\n</div>"
             ],
-            "alt": "50x50 white rect at center and 25x25 grey rect in the top left corner of the other.\n50x50 white rect at center and 25x25 grey rect in the center of the other.",
+            "alt": "50x50 white rect at center and 25x25 grey rect in the top left of the other.\n50x50 white rect at center and 25x25 grey rect in the center of the other.",
             "class": "p5",
             "module": "Shape",
             "submodule": "Attributes"
@@ -4342,7 +4342,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 68,
+            "line": 67,
             "description": "<p>The system variable frameCount contains the number of frames that have\nbeen displayed since the program started. Inside setup() the value is 0,\nafter the first iteration of draw it is 1, etc.</p>\n",
             "itemtype": "property",
             "name": "frameCount",
@@ -4356,7 +4356,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 95,
+            "line": 94,
             "description": "<p>Confirms if the window a p5.js program is in is &quot;focused,&quot; meaning that\nthe sketch will accept mouse or keyboard input. This variable is\n&quot;true&quot; if the window is focused and &quot;false&quot; if not.</p>\n",
             "itemtype": "property",
             "name": "focused",
@@ -4370,7 +4370,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 125,
+            "line": 124,
             "description": "<p>Sets the cursor to a predefined symbol or an image, or makes it visible\nif already hidden. If you are trying to set an image as the cursor, the\nrecommended size is 16x16 or 32x32 pixels. It is not possible to load an\nimage as the cursor if you are exporting your program for the Web, and not\nall MODES work with all browsers. The values for parameters x and y must\nbe less than the dimensions of the image.</p>\n",
             "itemtype": "method",
             "name": "cursor",
@@ -4403,7 +4403,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 183,
+            "line": 182,
             "description": "<p>Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second. This is the same as\nsetFrameRate(val).\n<br><br>\nCalling frameRate() with no arguments returns the current framerate. This\nis the same as getFrameRate().\n<br><br>\nCalling frameRate() with arguments that are not of the type numbers\nor are non positive also returns current framerate.</p>\n",
             "itemtype": "method",
             "name": "frameRate",
@@ -4429,7 +4429,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 247,
+            "line": 246,
             "description": "<p>Returns the current framerate.</p>\n",
             "return": {
                 "description": "current frameRate",
@@ -4441,7 +4441,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 256,
+            "line": 255,
             "description": "<p>Specifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.</p>\n<p>Calling frameRate() with no arguments returns the current framerate.</p>\n",
             "params": [
                 {
@@ -4457,7 +4457,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 271,
+            "line": 270,
             "description": "<p>Hides the cursor from view.</p>\n",
             "itemtype": "method",
             "name": "noCursor",
@@ -4471,7 +4471,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 297,
+            "line": 296,
             "description": "<p>System variable that stores the width of the entire screen display. This\nis used to run a full-screen program on any display size.</p>\n",
             "itemtype": "property",
             "name": "displayWidth",
@@ -4485,7 +4485,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 313,
+            "line": 312,
             "description": "<p>System variable that stores the height of the entire screen display. This\nis used to run a full-screen program on any display size.</p>\n",
             "itemtype": "property",
             "name": "displayHeight",
@@ -4499,7 +4499,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 329,
+            "line": 328,
             "description": "<p>System variable that stores the width of the inner window, it maps to\nwindow.innerWidth.</p>\n",
             "itemtype": "property",
             "name": "windowWidth",
@@ -4513,7 +4513,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 344,
+            "line": 343,
             "description": "<p>System variable that stores the height of the inner window, it maps to\nwindow.innerHeight.</p>\n",
             "itemtype": "property",
             "name": "windowHeight",
@@ -4527,21 +4527,21 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 359,
+            "line": 358,
             "description": "<p>The windowResized() function is called once every time the browser window\nis resized. This is a good place to resize the canvas or do any other\nadjustements to accomodate the new window size.</p>\n",
             "itemtype": "method",
             "name": "windowResized",
             "example": [
-                "\n<div class=\"norender\"><code>\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);\n}\n\nfunction draw() {\n background(0, 100, 200);\n}\n\nfunction windowResized() {\n  resizeCanvas(windowWidth, windowHeight);\n}"
+                "\n<div class=\"norender\"><code>\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);\n}\n\nfunction draw() {\n background(0, 100, 200);\n}\n\nfunction windowResized() {\n  resizeCanvas(windowWidth, windowHeight);\n}\n</code></div>"
             ],
-            "alt": "no display.\n\n</code></div>",
+            "alt": "no display.",
             "class": "p5",
             "module": "Environment",
             "submodule": "Environment"
         },
         {
             "file": "src/core/environment.js",
-            "line": 407,
+            "line": 405,
             "description": "<p>System variable that stores the width of the drawing canvas. This value\nis set by the first parameter of the createCanvas() function.\nFor example, the function call createCanvas(320, 240) sets the width\nvariable to the value 320. The value of width defaults to 100 if\ncreateCanvas() is not used in a program.</p>\n",
             "itemtype": "property",
             "name": "width",
@@ -4551,7 +4551,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 418,
+            "line": 416,
             "description": "<p>System variable that stores the height of the drawing canvas. This value\nis set by the second parameter of the createCanvas() function. For\nexample, the function call createCanvas(320, 240) sets the height\nvariable to the value 240. The value of height defaults to 100 if\ncreateCanvas() is not used in a program.</p>\n",
             "itemtype": "property",
             "name": "height",
@@ -4561,7 +4561,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 429,
+            "line": 427,
             "description": "<p>If argument is given, sets the sketch to fullscreen or not based on the\nvalue of the argument. If no argument is given, returns the current\nfullscreen state. Note that due to browser restrictions this can only\nbe called on user input, for example, on mouse press like the example\nbelow.</p>\n",
             "itemtype": "method",
             "name": "fullscreen",
@@ -4587,7 +4587,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 476,
+            "line": 474,
             "description": "<p>Sets the pixel scaling for high pixel density displays. By default\npixel density is set to match display density, call pixelDensity(1)\nto turn this off. Calling pixelDensity() with no arguments returns\nthe current pixel density of the sketch.</p>\n",
             "itemtype": "method",
             "name": "pixelDensity",
@@ -4613,7 +4613,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 521,
+            "line": 519,
             "description": "<p>Returns the pixel density of the current display the sketch is running on.</p>\n",
             "itemtype": "method",
             "name": "displayDensity",
@@ -4631,7 +4631,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 578,
+            "line": 576,
             "description": "<p>Gets the current URL.</p>\n",
             "itemtype": "method",
             "name": "getURL",
@@ -4649,7 +4649,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 609,
+            "line": 607,
             "description": "<p>Gets the current URL path as an array.</p>\n",
             "itemtype": "method",
             "name": "getURLPath",
@@ -4667,7 +4667,7 @@
         },
         {
             "file": "src/core/environment.js",
-            "line": 630,
+            "line": 628,
             "description": "<p>Gets the current URL params as an Object.</p>\n",
             "itemtype": "method",
             "name": "getURLParams",
@@ -5398,7 +5398,7 @@
             "example": [
                 "\n<div><code>\nfunction setup() {\n  createCanvas(100, 100);\n  background(200);\n  noLoop();\n}\n\nfunction draw() {\n  line(10, 10, 90, 90);\n}\n</code></div>\n\n<div><code>\nvar x = 0;\nfunction setup() {\n  createCanvas(100, 100);\n}\n\nfunction draw() {\n  background(204);\n  x = x + 0.1;\n  if (x > width) {\n    x = 0;\n  }\n  line(x, 0, x, height);\n}\n\nfunction mousePressed() {\n  noLoop();\n}\n\nfunction mouseReleased() {\n  loop();\n}\n</code></div>"
             ],
-            "alt": "113 pixel long line extending from top-left to bottom right of canvas. \nhorizontal line moves slowly from left. Loops but stops on mouse press. //no loop",
+            "alt": "113 pixel long line extending from top-left to bottom right of canvas.\nhorizontal line moves slowly from left. Loops but stops on mouse press.",
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
@@ -5462,7 +5462,7 @@
             "example": [
                 "\n <div><code>\n var x = 0;\nfunction setup() {\n   createCanvas(100, 100);\n   noLoop();\n }\nfunction draw() {\n   background(204);\n   line(x, 0, x, height);\n }\nfunction mousePressed() {\n   x += 1;\n   redraw();\n }\n </code></div>\n<div class='norender'><code>\n var x = 0;\nfunction setup() {\n   createCanvas(100, 100);\n   noLoop();\n }\nfunction draw() {\n   background(204);\n   x += 1;\n   line(x, 0, x, height);\n }\nfunction mousePressed() {\n   redraw(5);\n }\n </code></div>"
             ],
-            "alt": "black line on far left of canvas \n black line on far left of canvas",
+            "alt": "black line on far left of canvas\n black line on far left of canvas",
             "class": "p5",
             "module": "Structure",
             "submodule": "Structure"
@@ -5804,7 +5804,7 @@
             "example": [
                 "\n<div>\n<code>\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\n// currently not working\nbeginShape(POINTS);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(LINES);\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nnoFill();\nbeginShape();\nvertex(30, 20);\nvertex(85, 20);\nvertex(85, 75);\nvertex(30, 75);\nendShape(CLOSE);\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLES);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_STRIP);\nvertex(30, 75);\nvertex(40, 20);\nvertex(50, 75);\nvertex(60, 20);\nvertex(70, 75);\nvertex(80, 20);\nvertex(90, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(TRIANGLE_FAN);\nvertex(57.5, 50);\nvertex(57.5, 15);\nvertex(92, 50);\nvertex(57.5, 85);\nvertex(22, 50);\nvertex(57.5, 15);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUADS);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 75);\nvertex(50, 20);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 75);\nvertex(85, 20);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape(QUAD_STRIP);\nvertex(30, 20);\nvertex(30, 75);\nvertex(50, 20);\nvertex(50, 75);\nvertex(65, 20);\nvertex(65, 75);\nvertex(85, 20);\nvertex(85, 75);\nendShape();\n</code>\n</div>\n\n<div>\n<code>\nbeginShape();\nvertex(20, 20);\nvertex(40, 20);\nvertex(40, 40);\nvertex(60, 40);\nvertex(60, 60);\nvertex(20, 60);\nendShape(CLOSE);\n</code>\n</div>"
             ],
-            "alt": "white square-shape with black outline in middle-right of canvas. \n4 black points in a square shape in middle-right of canvas.\n2 horizontal black lines. In the top-right and bottom-right of canvas.\n3 line shape with horizontal on top, vertical in middle and horizontal bottom.\nsquare line shape in middle-right of canvas.\n2 white triangle shapes mid-right canvas. left one pointing up and right down.\n5 horizontal interlocking and alternating white triangles in mid-right canvas.\n4 interlocking white triangles in 45 degree rotated square-shape.\n2 white rectangle shapes in mid-right canvas. Both 20x55.\n3 side-by-side white rectangles center rect is smaller in mid-right canvas.\nThick white l-shape with black outline mid-top-left of canvas.",
+            "alt": "white square-shape with black outline in middle-right of canvas.\n4 black points in a square shape in middle-right of canvas.\n2 horizontal black lines. In the top-right and bottom-right of canvas.\n3 line shape with horizontal on top, vertical in middle and horizontal bottom.\nsquare line shape in middle-right of canvas.\n2 white triangle shapes mid-right canvas. left one pointing up and right down.\n5 horizontal interlocking and alternating white triangles in mid-right canvas.\n4 interlocking white triangles in 45 degree rotated square-shape.\n2 white rectangle shapes in mid-right canvas. Both 20x55.\n3 side-by-side white rectangles center rect is smaller in mid-right canvas.\nThick white l-shape with black outline mid-top-left of canvas.",
             "class": "p5",
             "module": "Shape",
             "submodule": "Vertex"
@@ -6698,7 +6698,7 @@
             "example": [
                 "\n<div>\n<code>\n// Release touch within the image to\n// change the value of the rectangle\n\nvar value = 0;\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction touchEnded() {\n  if (value == 0) {\n    value = 255;\n  } else {\n    value = 0;\n  }\n}\n</code>\n</div>\n\n<div class=\"norender\">\n<code>\nfunction touchEnded() {\n  ellipse(touchX, touchY, 5, 5);\n  // prevent default\n  return false;\n}\n</code>\n</div>"
             ],
-            "alt": "50x50 black rect turns white with touch. \nno image displayed",
+            "alt": "50x50 black rect turns white with touch.\nno image displayed",
             "class": "p5",
             "module": "Events",
             "submodule": "Touch"
@@ -7240,7 +7240,7 @@
             "example": [
                 "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/laDefense.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n  tint(0, 153, 204);  // Tint blue\n  image(img, 50, 0);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/laDefense.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n  tint(0, 153, 204, 126);  // Tint blue and set transparency\n  image(img, 50, 0);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/laDefense.jpg\");\n}\nfunction setup() {\n  image(img, 0, 0);\n  tint(255, 126);  // Apply transparency without changing color\n  image(img, 50, 0);\n}\n</code>\n</div>"
             ],
-            "alt": "2 side by side images of umbrella and ceiling, one image with blue tint \nImages of umbrella and ceiling, one half of image with blue tint\n2 side by side images of umbrella and ceiling, one image translucent",
+            "alt": "2 side by side images of umbrella and ceiling, one image with blue tint\nImages of umbrella and ceiling, one half of image with blue tint\n2 side by side images of umbrella and ceiling, one image translucent",
             "class": "p5",
             "module": "Image",
             "submodule": "Loading & Displaying"
@@ -7294,7 +7294,7 @@
             "example": [
                 "\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/bricks.jpg\");\n}\nfunction setup() {\n  imageMode(CORNER);\n  image(img, 10, 10, 50, 50);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/bricks.jpg\");\n}\nfunction setup() {\n  imageMode(CORNERS);\n  image(img, 10, 10, 90, 40);\n}\n</code>\n</div>\n\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/bricks.jpg\");\n}\nfunction setup() {\n  imageMode(CENTER);\n  image(img, 50, 50, 80, 80);\n}\n</code>\n</div>"
             ],
-            "alt": "small square image of bricks \nhorizontal rectangle image of bricks\nlarge square image of bricks",
+            "alt": "small square image of bricks\nhorizontal rectangle image of bricks\nlarge square image of bricks",
             "class": "p5",
             "module": "Image",
             "submodule": "Loading & Displaying"
@@ -7966,7 +7966,7 @@
         },
         {
             "file": "src/image/pixels.js",
-            "line": 566,
+            "line": 564,
             "description": "<p>Updates the display window with the data in the pixels[] array.\nUse in conjunction with loadPixels(). If you&#39;re only reading pixels from\nthe array, there&#39;s no need to call updatePixels() — updating is only\nnecessary to apply changes. updatePixels() should be called anytime the\npixels array is manipulated or set() is called.</p>\n",
             "itemtype": "method",
             "name": "updatePixels",
@@ -7997,9 +7997,9 @@
                 }
             ],
             "example": [
-                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  image(img, 0, 0);\n  var halfImage = 4 * (img.width * pixelDensity()) *\n    (img.height * pixelDensity()/2);\n  loadPixels();\n  for (var i = 0; i < halfImage; i++) {\n    pixels[i+halfImage] = pixels[i];\n  }\n  updatePixels();\n}\n</code>"
+                "\n<div>\n<code>\nvar img;\nfunction preload() {\n  img = loadImage(\"assets/rockies.jpg\");\n}\n\nfunction setup() {\n  image(img, 0, 0);\n  var halfImage = 4 * (img.width * pixelDensity()) *\n    (img.height * pixelDensity()/2);\n  loadPixels();\n  for (var i = 0; i < halfImage; i++) {\n    pixels[i+halfImage] = pixels[i];\n  }\n  updatePixels();\n}\n</code>\n</div>"
             ],
-            "alt": "two images of the rocky mountains. one on top, one on bottom of canvas. \n\n</div>",
+            "alt": "two images of the rocky mountains. one on top, one on bottom of canvas.",
             "class": "p5",
             "module": "Image",
             "submodule": "Pixels"
@@ -11153,7 +11153,7 @@
             "example": [
                 "\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(50);\n  stroke(r*5);\n  line(50, i, 50+r, i);\n}\n</code>\n</div>\n<div>\n<code>\nfor (var i = 0; i < 100; i++) {\n  var r = random(-50, 50);\n  line(50,i,50+r,i);\n}\n</code>\n</div>\n<div>\n<code>\n// Get a random element from an array using the random(Array) syntax\nvar words = [ \"apple\", \"bear\", \"cat\", \"dog\" ];\nvar word = random(words);  // select random word\ntext(word,10,50);  // draw the word\n</code>\n</div>"
             ],
-            "alt": "100 horizontal lines from center canvas to right. size+fill change each time \n100 horizontal lines from center of canvas. height & side change each render\nword displayed at random. Either apple, bear, cat, or dog",
+            "alt": "100 horizontal lines from center canvas to right. size+fill change each time\n100 horizontal lines from center of canvas. height & side change each render\nword displayed at random. Either apple, bear, cat, or dog",
             "class": "p5",
             "module": "Math",
             "submodule": "Random",
@@ -11595,7 +11595,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 177,
+            "line": 180,
             "description": "<p>Returns the ascent of the current font at its current size. The ascent\nrepresents the distance, in pixels, of the tallest character above\nthe baseline.</p>\n",
             "return": {
                 "description": "",
@@ -11610,7 +11610,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 205,
+            "line": 208,
             "description": "<p>Returns the descent of the current font at its current size. The descent\nrepresents the distance, in pixels, of the character with the longest\ndescender below the baseline.</p>\n",
             "return": {
                 "description": "",
@@ -11625,7 +11625,7 @@
         },
         {
             "file": "src/typography/attributes.js",
-            "line": 233,
+            "line": 236,
             "description": "<p>Helper function to measure ascent and descent.</p>\n",
             "class": "p5",
             "module": "Typography",
@@ -14218,7 +14218,7 @@
             "example": [
                 "\n<div>\n<code>\n//draw a plane with width 200 and height 200\nfunction setup(){\n  createCanvas(100, 100, WEBGL);\n}\n\nfunction draw(){\n  background(200);\n  plane(200, 200);\n}\n</code>\n</div>"
             ],
-            "alt": "Nothing displayed on canvas\nRotating interior view of a box with sides that change color.\n3d red and green gradient. \nRotating interior view of a cylinder with sides that change color.\nRotating view of a cylinder with sides that change color.\n3d red and green gradient. \nrotating view of a multi-colored cylinder with concave sides.",
+            "alt": "Nothing displayed on canvas\nRotating interior view of a box with sides that change color.\n3d red and green gradient.\nRotating interior view of a cylinder with sides that change color.\nRotating view of a cylinder with sides that change color.\n3d red and green gradient.\nrotating view of a multi-colored cylinder with concave sides.",
             "class": "p5",
             "module": "Shape",
             "submodule": "3D Primitives"
@@ -19525,7 +19525,7 @@
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/color/creating_reading.js:541"
+            "line": " src/color/creating_reading.js:540"
         },
         {
             "message": "unknown tag: alt",
@@ -19549,15 +19549,15 @@
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/color/setting.js:444"
+            "line": " src/color/setting.js:442"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/color/setting.js:467"
+            "line": " src/color/setting.js:463"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/color/setting.js:491"
+            "line": " src/color/setting.js:487"
         },
         {
             "message": "unknown tag: alt",
@@ -19585,7 +19585,7 @@
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/2d_primitives.js:478"
+            "line": " src/core/2d_primitives.js:472"
         },
         {
             "message": "unknown tag: alt",
@@ -19693,75 +19693,75 @@
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:68"
+            "line": " src/core/environment.js:67"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:95"
+            "line": " src/core/environment.js:94"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:125"
+            "line": " src/core/environment.js:124"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:183"
+            "line": " src/core/environment.js:182"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:271"
+            "line": " src/core/environment.js:270"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:297"
+            "line": " src/core/environment.js:296"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:313"
+            "line": " src/core/environment.js:312"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:329"
+            "line": " src/core/environment.js:328"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:344"
+            "line": " src/core/environment.js:343"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:359"
+            "line": " src/core/environment.js:358"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:429"
+            "line": " src/core/environment.js:427"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:476"
+            "line": " src/core/environment.js:474"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:476"
+            "line": " src/core/environment.js:474"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/core/environment.js:521"
+            "line": " src/core/environment.js:519"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:521"
+            "line": " src/core/environment.js:519"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:578"
+            "line": " src/core/environment.js:576"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:609"
+            "line": " src/core/environment.js:607"
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/core/environment.js:630"
+            "line": " src/core/environment.js:628"
         },
         {
             "message": "unknown tag: alt",
@@ -20193,7 +20193,7 @@
         },
         {
             "message": "unknown tag: alt",
-            "line": " src/image/pixels.js:566"
+            "line": " src/image/pixels.js:564"
         },
         {
             "message": "unknown tag: alt",
@@ -20653,11 +20653,11 @@
         },
         {
             "message": "Missing item type\nReturns the current framerate.",
-            "line": " src/core/environment.js:247"
+            "line": " src/core/environment.js:246"
         },
         {
             "message": "Missing item type\nSpecifies the number of frames to be displayed every second. For example,\nthe function call frameRate(30) will attempt to refresh 30 times a second.\nIf the processor is not fast enough to maintain the specified rate, the\nframe rate will not be achieved. Setting the frame rate within setup() is\nrecommended. The default rate is 60 frames per second.\n\nCalling frameRate() with no arguments returns the current framerate.",
-            "line": " src/core/environment.js:256"
+            "line": " src/core/environment.js:255"
         },
         {
             "message": "Missing item type",
@@ -20873,15 +20873,15 @@
         },
         {
             "message": "Missing item type\nReturns the ascent of the current font at its current size. The ascent\nrepresents the distance, in pixels, of the tallest character above\nthe baseline.",
-            "line": " src/typography/attributes.js:177"
+            "line": " src/typography/attributes.js:180"
         },
         {
             "message": "Missing item type\nReturns the descent of the current font at its current size. The descent\nrepresents the distance, in pixels, of the character with the longest\ndescender below the baseline.",
-            "line": " src/typography/attributes.js:205"
+            "line": " src/typography/attributes.js:208"
         },
         {
             "message": "Missing item type\nHelper function to measure ascent and descent.",
-            "line": " src/typography/attributes.js:233"
+            "line": " src/typography/attributes.js:236"
         },
         {
             "message": "Missing item type\nComputes an array of points following the path for specified text",
