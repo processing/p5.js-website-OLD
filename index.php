@@ -2,9 +2,9 @@
 
 <?php include('header.php'); ?>
 <body id="home-page">
-<div id="credits">
+<!--<div id="credits">
     <em>Connections</em> by <a target=_blank href='http://xie-emily.com'>Emily Xie</a>
-</div>
+</div>-->
 
   <?php include('heading.php'); ?>
 
@@ -62,7 +62,7 @@
 
   <?php include('end.php'); ?>
 
-  <iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/emily_xie_connections/index.html'></iframe>
+  <!--<iframe frameBorder='0' id='home-sketch-frame' src='./p5_featured/emily_xie_connections/index.html'></iframe>-->
 
   <!-- <div id='home-sketch-frame'></div> -->
   <!--<script src='./p5_featured/LeslieRuckman_RainbowPixelGrow/sketch.js'></script>-->
