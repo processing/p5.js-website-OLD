@@ -1,4 +1,3 @@
-<?php include('version.php'); ?>
 <?php
 
 $lib_version;
