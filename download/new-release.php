@@ -75,8 +75,10 @@ function updateP5JSEDITOR($lib_v, $lib_d) {
   download($r.'package.json', 'package.json');
   $v = getPackageVersion('package.json');
   unlink('package.json');
-  $contents = '<?php $version = "'.$lib_v.'"; $date = "'.$lib_d.'"; $p5jseditor_version = "'.$v.'"; ?>';
-  file_put_contents('version.php', $contents);
+  
+  
+  $contents = array("version"=>$lib_v,"editor_version"=>$v,"date"=>$lib_d);
+  file_put_contents('version.json', json_encode($contents));
   echo 'updating p5.js editor version to '.$v;
 }
 
