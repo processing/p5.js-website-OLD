@@ -59,14 +59,12 @@ function updateFiles() {
 }
 
 function updateLib($p5jseditor_v) {
-
   global $lib_version;
-  
   updateFiles();
   $v = getLibVersion('../js/p5.min.js');
   $lib_version = $v[0];
   echo 'updated library version to v'.$lib_version.' ('.$v[1].')';
-  $contents = array($lib_version, $v[1], $p5jseditor_v);
+  $contents = array("version"=>$lib_version,"editor_version"=>$p5jseditor_v,"date"=>$v[1]);
   file_put_contents('version.json', json_encode($contents));
 }
 
