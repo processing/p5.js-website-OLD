@@ -40,6 +40,9 @@
           <a href="examples/Structure_Recursion.php">Recursion</a><br>
           
         
+          <a href="examples/Structure_Create_Graphics.php">Create Graphics</a><br>
+          
+        
         </p>
         
       
@@ -263,6 +266,9 @@
           
         
           <a href="examples/Simulate_SmokeParticles.php">SmokeParticles</a><br>
+          
+        
+          <a href="examples/Simulate_Brownian_Motion.php">Brownian Motion</a><br>
           
         
         </p>
