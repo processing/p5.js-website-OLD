@@ -1,8 +1,8 @@
-## This repository is outdated. You can find the current repository for the p5js.org website here: https://github.com/processing/p5.js-website
+# This repository is outdated. You can find the current repository for the p5js.org website here: https://github.com/processing/p5.js-website
 
 
-p5.js-website
-========
+## p5.js-website
+
 
 This repository holds the website for p5.js, which is located at [p5js.org](http://p5js.org).
 
