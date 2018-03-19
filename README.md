@@ -1,3 +1,6 @@
+# This repository is outdated. You can find the current repository for the p5js.org website here: https://github.com/processing/p5.js-website
+
+
 p5.js-website
 ========
 
